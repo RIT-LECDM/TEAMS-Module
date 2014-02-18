@@ -24,7 +24,7 @@ namespace WindowsApplication1
         /// <summary>
         /// A array of the menu items for this plugin
         /// </summary>
-        /// //This can add as many menu items as we want
+        //This can add as many menu items as we want
         ToolStripMenuItem[] items = new ToolStripMenuItem[2];
 
         #region APlugin
@@ -33,7 +33,7 @@ namespace WindowsApplication1
         /// </summary>
         /// <param name="controler"></param>
         /// <returns></returns>
-        /// //This is where the plugin actually gets called into GREET, so you make things that you can call here and they will show up
+        //This is where the plugin actually gets called into GREET, so you make things that you can call here and they will show up
         public override bool InitializePlugin(IGREETController controler)
         {
             //init the controller that is used to send action and data requests to GREET
@@ -41,28 +41,15 @@ namespace WindowsApplication1
 
             //init menu items collection for this example (The text here is what will come up in the GREET model itself)
             ToolStripMenuItem read = new ToolStripMenuItem("TEAMS");
-            //Second tool strip button, adds a second tool strip button to the menu of GREET
-            //ToolStripMenuItem item1 = new ToolStripMenuItem("Slightly Blue Spreadsheet Boat");
+            
             read.Click += (s, e) =>
             {
-                //ResultsSelectionForm form = new ResultsSelectionForm();
-                //form.InitializeControls();
-                // form.Show();
+                //generates and displays the splashpage form when the plugin is opened.
                 SplashPage te = new SplashPage();
                 te.Show();
             };
             this.items[0] = read;
 
-            //this.items[1] = item1;
-            //item1.Click += (s, e) =>
-            //{
-            //    //ResultsSelectionForm form = new ResultsSelectionForm();
-            //    //form.InitializeControls();
-            //    // form.Show();
-            //    ReaderApp rb = new ReaderApp();
-            //    rb.BackColor = Color.AliceBlue;
-            //    rb.Show();
-            //};
             return true;
         }
 
