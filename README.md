@@ -18,6 +18,8 @@ The basic workflow for this project is as such:
 
 6) Once all tabs are submitted you are eligible to run the simulation, and get your results.
 
+Some of the important reasons for creating this module instead of maintaining the TEAMS spreadsheet model that has been a highly functioal tool for a number of years at this point, is that integration with GREET would make the lifespan of a given distribution of TEAMS would be drastically improved, since there would no longer need to be updates every time GREET updated their database of values, since the values would be taken directly from the database, and not hard coded as in the Spreadsheet.
+
 Also Includes
 
 GREET-API
