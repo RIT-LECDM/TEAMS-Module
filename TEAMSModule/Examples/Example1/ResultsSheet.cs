@@ -12,19 +12,24 @@ namespace TEAMSModule
 {
     public partial class ResultsSheet : Form
     {
-        double percent;
         public ResultsSheet(TEAMS t)
         {
-            percent = t.EfficiencyForPetroleumRecovery;
             InitializeComponent();
         }
-
+        //This is the sheet that will display all of the numeric results from the simulation, as opposed to the graphical ones which will be on another sheet that comes up at the same time
         private void ResultsSheet_Load(object sender, EventArgs e)
         {
-            percent = percent * 5;
-            int cent = (int)percent;
-            button2.Height = cent;
-            button2.Location = new Point(button1.Location.X + button1.Width + 10, button1.Location.Y + (button1.Height - button2.Height));
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

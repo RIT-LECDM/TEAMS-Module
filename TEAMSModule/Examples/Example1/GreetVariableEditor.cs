@@ -20,6 +20,7 @@ namespace TEAMSModule
             InitializeComponent();
         }
 
+        //Method that makes it such that the values in the numeric up downs, are the ones being presented by GREET
         public void variableSetter()
         {
             this.numericUpDown3.Value = (decimal)te.crudeOilBTUperGal;

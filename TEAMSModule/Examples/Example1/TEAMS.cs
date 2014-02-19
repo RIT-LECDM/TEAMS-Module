@@ -484,6 +484,7 @@ namespace WindowsApplication1
 
         Update u;
         Fuel_Specs GVE;
+        ResultsSheet rs;
         public TEAMS()
         {
             InitializeComponent();
