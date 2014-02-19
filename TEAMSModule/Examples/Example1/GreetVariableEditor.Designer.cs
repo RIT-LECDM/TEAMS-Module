@@ -101,6 +101,23 @@
             this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.numericUpDown42 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown51 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown52 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown53 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown54 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown55 = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.numericUpDown57 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown58 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown59 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown60 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown61 = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
@@ -151,13 +168,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown51)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown55)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown57)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown58)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown59)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown60)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown61)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 16);
+            this.label1.Location = new System.Drawing.Point(7, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 19);
@@ -180,7 +210,7 @@
             // 
             this.numericUpDown3.DecimalPlaces = 2;
             this.numericUpDown3.Location = new System.Drawing.Point(179, 41);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -206,7 +236,7 @@
             // 
             this.numericUpDown4.DecimalPlaces = 2;
             this.numericUpDown4.Location = new System.Drawing.Point(179, 137);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown4.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -232,7 +262,7 @@
             // 
             this.numericUpDown5.DecimalPlaces = 2;
             this.numericUpDown5.Location = new System.Drawing.Point(179, 105);
-            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown5.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -258,7 +288,7 @@
             // 
             this.numericUpDown6.DecimalPlaces = 2;
             this.numericUpDown6.Location = new System.Drawing.Point(179, 73);
-            this.numericUpDown6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown6.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown6.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -284,7 +314,7 @@
             // 
             this.numericUpDown7.DecimalPlaces = 2;
             this.numericUpDown7.Location = new System.Drawing.Point(179, 233);
-            this.numericUpDown7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown7.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown7.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -310,7 +340,7 @@
             // 
             this.numericUpDown8.DecimalPlaces = 2;
             this.numericUpDown8.Location = new System.Drawing.Point(179, 201);
-            this.numericUpDown8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown8.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown8.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -336,7 +366,7 @@
             // 
             this.numericUpDown9.DecimalPlaces = 2;
             this.numericUpDown9.Location = new System.Drawing.Point(179, 169);
-            this.numericUpDown9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown9.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown9.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -362,7 +392,7 @@
             // 
             this.numericUpDown10.DecimalPlaces = 2;
             this.numericUpDown10.Location = new System.Drawing.Point(179, 384);
-            this.numericUpDown10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown10.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown10.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -388,7 +418,7 @@
             // 
             this.numericUpDown11.DecimalPlaces = 2;
             this.numericUpDown11.Location = new System.Drawing.Point(179, 326);
-            this.numericUpDown11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown11.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown11.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -414,7 +444,7 @@
             // 
             this.numericUpDown12.DecimalPlaces = 2;
             this.numericUpDown12.Location = new System.Drawing.Point(179, 265);
-            this.numericUpDown12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown12.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown12.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -520,9 +550,9 @@
             this.panel1.Controls.Add(this.numericUpDown30);
             this.panel1.Controls.Add(this.numericUpDown15);
             this.panel1.Location = new System.Drawing.Point(11, 39);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(892, 442);
+            this.panel1.Size = new System.Drawing.Size(867, 442);
             this.panel1.TabIndex = 25;
             // 
             // label20
@@ -577,7 +607,7 @@
             // 
             this.numericUpDown41.DecimalPlaces = 2;
             this.numericUpDown41.Location = new System.Drawing.Point(347, 41);
-            this.numericUpDown41.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown41.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown41.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -591,7 +621,7 @@
             // 
             this.numericUpDown43.DecimalPlaces = 2;
             this.numericUpDown43.Location = new System.Drawing.Point(347, 73);
-            this.numericUpDown43.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown43.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown43.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -605,7 +635,7 @@
             // 
             this.numericUpDown44.DecimalPlaces = 2;
             this.numericUpDown44.Location = new System.Drawing.Point(347, 326);
-            this.numericUpDown44.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown44.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown44.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -619,7 +649,7 @@
             // 
             this.numericUpDown45.DecimalPlaces = 2;
             this.numericUpDown45.Location = new System.Drawing.Point(347, 105);
-            this.numericUpDown45.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown45.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown45.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -633,7 +663,7 @@
             // 
             this.numericUpDown46.DecimalPlaces = 2;
             this.numericUpDown46.Location = new System.Drawing.Point(347, 265);
-            this.numericUpDown46.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown46.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown46.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -647,7 +677,7 @@
             // 
             this.numericUpDown47.DecimalPlaces = 2;
             this.numericUpDown47.Location = new System.Drawing.Point(347, 137);
-            this.numericUpDown47.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown47.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown47.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -661,7 +691,7 @@
             // 
             this.numericUpDown48.DecimalPlaces = 2;
             this.numericUpDown48.Location = new System.Drawing.Point(347, 233);
-            this.numericUpDown48.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown48.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown48.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -675,7 +705,7 @@
             // 
             this.numericUpDown49.DecimalPlaces = 2;
             this.numericUpDown49.Location = new System.Drawing.Point(347, 169);
-            this.numericUpDown49.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown49.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown49.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -689,7 +719,7 @@
             // 
             this.numericUpDown50.DecimalPlaces = 2;
             this.numericUpDown50.Location = new System.Drawing.Point(347, 201);
-            this.numericUpDown50.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown50.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown50.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -716,140 +746,140 @@
             // 
             this.numericUpDown31.DecimalPlaces = 10;
             this.numericUpDown31.Location = new System.Drawing.Point(719, 384);
-            this.numericUpDown31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown31.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown31.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown31.Name = "numericUpDown31";
-            this.numericUpDown31.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown31.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown31.TabIndex = 46;
             // 
             // numericUpDown32
             // 
             this.numericUpDown32.DecimalPlaces = 10;
             this.numericUpDown32.Location = new System.Drawing.Point(719, 326);
-            this.numericUpDown32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown32.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown32.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown32.Name = "numericUpDown32";
-            this.numericUpDown32.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown32.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown32.TabIndex = 45;
             // 
             // numericUpDown33
             // 
             this.numericUpDown33.DecimalPlaces = 10;
             this.numericUpDown33.Location = new System.Drawing.Point(719, 265);
-            this.numericUpDown33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown33.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown33.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown33.Name = "numericUpDown33";
-            this.numericUpDown33.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown33.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown33.TabIndex = 44;
             // 
             // numericUpDown34
             // 
             this.numericUpDown34.DecimalPlaces = 10;
             this.numericUpDown34.Location = new System.Drawing.Point(719, 233);
-            this.numericUpDown34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown34.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown34.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown34.Name = "numericUpDown34";
-            this.numericUpDown34.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown34.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown34.TabIndex = 43;
             // 
             // numericUpDown35
             // 
             this.numericUpDown35.DecimalPlaces = 10;
             this.numericUpDown35.Location = new System.Drawing.Point(719, 201);
-            this.numericUpDown35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown35.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown35.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown35.Name = "numericUpDown35";
-            this.numericUpDown35.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown35.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown35.TabIndex = 42;
             // 
             // numericUpDown36
             // 
             this.numericUpDown36.DecimalPlaces = 10;
             this.numericUpDown36.Location = new System.Drawing.Point(719, 169);
-            this.numericUpDown36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown36.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown36.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown36.Name = "numericUpDown36";
-            this.numericUpDown36.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown36.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown36.TabIndex = 41;
             // 
             // numericUpDown37
             // 
             this.numericUpDown37.DecimalPlaces = 10;
             this.numericUpDown37.Location = new System.Drawing.Point(719, 137);
-            this.numericUpDown37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown37.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown37.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown37.Name = "numericUpDown37";
-            this.numericUpDown37.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown37.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown37.TabIndex = 40;
             // 
             // numericUpDown38
             // 
             this.numericUpDown38.DecimalPlaces = 10;
             this.numericUpDown38.Location = new System.Drawing.Point(719, 105);
-            this.numericUpDown38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown38.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown38.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown38.Name = "numericUpDown38";
-            this.numericUpDown38.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown38.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown38.TabIndex = 39;
             // 
             // numericUpDown39
             // 
             this.numericUpDown39.DecimalPlaces = 10;
             this.numericUpDown39.Location = new System.Drawing.Point(719, 73);
-            this.numericUpDown39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown39.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown39.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown39.Name = "numericUpDown39";
-            this.numericUpDown39.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown39.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown39.TabIndex = 38;
             // 
             // numericUpDown40
             // 
             this.numericUpDown40.DecimalPlaces = 10;
             this.numericUpDown40.Location = new System.Drawing.Point(719, 41);
-            this.numericUpDown40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown40.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown40.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
             542101086,
             0});
             this.numericUpDown40.Name = "numericUpDown40";
-            this.numericUpDown40.Size = new System.Drawing.Size(160, 22);
+            this.numericUpDown40.Size = new System.Drawing.Size(126, 22);
             this.numericUpDown40.TabIndex = 37;
             // 
             // label15
@@ -880,7 +910,7 @@
             // 
             this.numericUpDown21.DecimalPlaces = 2;
             this.numericUpDown21.Location = new System.Drawing.Point(551, 384);
-            this.numericUpDown21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown21.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown21.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -894,7 +924,7 @@
             // 
             this.numericUpDown20.DecimalPlaces = 2;
             this.numericUpDown20.Location = new System.Drawing.Point(452, 41);
-            this.numericUpDown20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown20.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown20.Name = "numericUpDown20";
             this.numericUpDown20.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown20.TabIndex = 26;
@@ -903,7 +933,7 @@
             // 
             this.numericUpDown22.DecimalPlaces = 2;
             this.numericUpDown22.Location = new System.Drawing.Point(551, 326);
-            this.numericUpDown22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown22.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown22.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -917,7 +947,7 @@
             // 
             this.numericUpDown1.DecimalPlaces = 2;
             this.numericUpDown1.Location = new System.Drawing.Point(452, 384);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -931,7 +961,7 @@
             // 
             this.numericUpDown23.DecimalPlaces = 2;
             this.numericUpDown23.Location = new System.Drawing.Point(551, 265);
-            this.numericUpDown23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown23.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown23.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -945,7 +975,7 @@
             // 
             this.numericUpDown19.DecimalPlaces = 2;
             this.numericUpDown19.Location = new System.Drawing.Point(452, 73);
-            this.numericUpDown19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown19.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown19.Name = "numericUpDown19";
             this.numericUpDown19.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown19.TabIndex = 27;
@@ -954,7 +984,7 @@
             // 
             this.numericUpDown24.DecimalPlaces = 2;
             this.numericUpDown24.Location = new System.Drawing.Point(551, 233);
-            this.numericUpDown24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown24.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown24.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -968,7 +998,7 @@
             // 
             this.numericUpDown2.DecimalPlaces = 2;
             this.numericUpDown2.Location = new System.Drawing.Point(452, 326);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -982,7 +1012,7 @@
             // 
             this.numericUpDown25.DecimalPlaces = 2;
             this.numericUpDown25.Location = new System.Drawing.Point(551, 201);
-            this.numericUpDown25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown25.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown25.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -996,7 +1026,7 @@
             // 
             this.numericUpDown18.DecimalPlaces = 2;
             this.numericUpDown18.Location = new System.Drawing.Point(452, 105);
-            this.numericUpDown18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown18.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown18.Name = "numericUpDown18";
             this.numericUpDown18.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown18.TabIndex = 28;
@@ -1005,7 +1035,7 @@
             // 
             this.numericUpDown26.DecimalPlaces = 2;
             this.numericUpDown26.Location = new System.Drawing.Point(551, 169);
-            this.numericUpDown26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown26.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown26.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -1019,7 +1049,7 @@
             // 
             this.numericUpDown13.DecimalPlaces = 2;
             this.numericUpDown13.Location = new System.Drawing.Point(452, 265);
-            this.numericUpDown13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown13.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown13.Name = "numericUpDown13";
             this.numericUpDown13.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown13.TabIndex = 33;
@@ -1028,7 +1058,7 @@
             // 
             this.numericUpDown27.DecimalPlaces = 2;
             this.numericUpDown27.Location = new System.Drawing.Point(551, 137);
-            this.numericUpDown27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown27.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown27.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -1042,7 +1072,7 @@
             // 
             this.numericUpDown17.DecimalPlaces = 2;
             this.numericUpDown17.Location = new System.Drawing.Point(452, 137);
-            this.numericUpDown17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown17.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown17.Name = "numericUpDown17";
             this.numericUpDown17.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown17.TabIndex = 29;
@@ -1051,7 +1081,7 @@
             // 
             this.numericUpDown28.DecimalPlaces = 2;
             this.numericUpDown28.Location = new System.Drawing.Point(551, 105);
-            this.numericUpDown28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown28.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown28.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -1065,7 +1095,7 @@
             // 
             this.numericUpDown14.DecimalPlaces = 2;
             this.numericUpDown14.Location = new System.Drawing.Point(452, 233);
-            this.numericUpDown14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown14.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown14.Name = "numericUpDown14";
             this.numericUpDown14.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown14.TabIndex = 32;
@@ -1074,7 +1104,7 @@
             // 
             this.numericUpDown29.DecimalPlaces = 2;
             this.numericUpDown29.Location = new System.Drawing.Point(551, 73);
-            this.numericUpDown29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown29.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown29.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -1088,7 +1118,7 @@
             // 
             this.numericUpDown16.DecimalPlaces = 2;
             this.numericUpDown16.Location = new System.Drawing.Point(452, 169);
-            this.numericUpDown16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown16.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown16.Name = "numericUpDown16";
             this.numericUpDown16.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown16.TabIndex = 30;
@@ -1097,7 +1127,7 @@
             // 
             this.numericUpDown30.DecimalPlaces = 2;
             this.numericUpDown30.Location = new System.Drawing.Point(551, 41);
-            this.numericUpDown30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown30.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown30.Maximum = new decimal(new int[] {
             268435456,
             1042612833,
@@ -1111,7 +1141,7 @@
             // 
             this.numericUpDown15.DecimalPlaces = 2;
             this.numericUpDown15.Location = new System.Drawing.Point(452, 201);
-            this.numericUpDown15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown15.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown15.Name = "numericUpDown15";
             this.numericUpDown15.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown15.TabIndex = 31;
@@ -1119,10 +1149,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(16, 692);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(11, 1096);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(885, 55);
+            this.button1.Size = new System.Drawing.Size(867, 55);
             this.button1.TabIndex = 26;
             this.button1.Text = "Change Values (Warning: Doing this could cause a program crash)\r\n";
             this.button1.UseVisualStyleBackColor = true;
@@ -1131,26 +1161,266 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(16, 754);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(11, 1159);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(885, 55);
+            this.button2.Size = new System.Drawing.Size(867, 55);
             this.button2.TabIndex = 27;
             this.button2.Text = "Reset To GREET Supplied Data";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel2.Controls.Add(this.numericUpDown55);
+            this.panel2.Controls.Add(this.numericUpDown54);
+            this.panel2.Controls.Add(this.numericUpDown53);
+            this.panel2.Controls.Add(this.numericUpDown52);
+            this.panel2.Controls.Add(this.numericUpDown51);
+            this.panel2.Controls.Add(this.numericUpDown42);
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Location = new System.Drawing.Point(11, 539);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(187, 262);
+            this.panel2.TabIndex = 28;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(7, 517);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(494, 19);
+            this.label21.TabIndex = 29;
+            this.label21.Text = "Global Warming Potentials of Greenhouse Gasses: Relative to CO2\r\n";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(8, 23);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(44, 247);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "CO2\r\n\r\nCH4\r\n\t\t\r\nN2O\r\n\t\t\r\nVOC\r\n\t\r\nCO\r\n\t\r\nNO2\r\n\t\r\n\r\n";
+            // 
+            // numericUpDown42
+            // 
+            this.numericUpDown42.Location = new System.Drawing.Point(86, 23);
+            this.numericUpDown42.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown42.Maximum = new decimal(new int[] {
+            268435456,
+            1042612833,
+            542101086,
+            0});
+            this.numericUpDown42.Name = "numericUpDown42";
+            this.numericUpDown42.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown42.TabIndex = 62;
+            this.numericUpDown42.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown51
+            // 
+            this.numericUpDown51.Location = new System.Drawing.Point(86, 61);
+            this.numericUpDown51.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown51.Maximum = new decimal(new int[] {
+            268435456,
+            1042612833,
+            542101086,
+            0});
+            this.numericUpDown51.Name = "numericUpDown51";
+            this.numericUpDown51.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown51.TabIndex = 63;
+            this.numericUpDown51.Value = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown52
+            // 
+            this.numericUpDown52.Location = new System.Drawing.Point(86, 99);
+            this.numericUpDown52.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown52.Maximum = new decimal(new int[] {
+            268435456,
+            1042612833,
+            542101086,
+            0});
+            this.numericUpDown52.Name = "numericUpDown52";
+            this.numericUpDown52.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown52.TabIndex = 64;
+            this.numericUpDown52.Value = new decimal(new int[] {
+            296,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown53
+            // 
+            this.numericUpDown53.Location = new System.Drawing.Point(86, 138);
+            this.numericUpDown53.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown53.Maximum = new decimal(new int[] {
+            268435456,
+            1042612833,
+            542101086,
+            0});
+            this.numericUpDown53.Name = "numericUpDown53";
+            this.numericUpDown53.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown53.TabIndex = 65;
+            // 
+            // numericUpDown54
+            // 
+            this.numericUpDown54.Location = new System.Drawing.Point(86, 172);
+            this.numericUpDown54.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown54.Maximum = new decimal(new int[] {
+            268435456,
+            1042612833,
+            542101086,
+            0});
+            this.numericUpDown54.Name = "numericUpDown54";
+            this.numericUpDown54.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown54.TabIndex = 66;
+            // 
+            // numericUpDown55
+            // 
+            this.numericUpDown55.Location = new System.Drawing.Point(86, 212);
+            this.numericUpDown55.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown55.Maximum = new decimal(new int[] {
+            268435456,
+            1042612833,
+            542101086,
+            0});
+            this.numericUpDown55.Name = "numericUpDown55";
+            this.numericUpDown55.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown55.TabIndex = 67;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(7, 838);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(286, 19);
+            this.label23.TabIndex = 31;
+            this.label23.Text = "Carbon and Sulfur Ratios of Pollutants";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel3.Controls.Add(this.numericUpDown57);
+            this.panel3.Controls.Add(this.numericUpDown58);
+            this.panel3.Controls.Add(this.numericUpDown59);
+            this.panel3.Controls.Add(this.numericUpDown60);
+            this.panel3.Controls.Add(this.numericUpDown61);
+            this.panel3.Controls.Add(this.label24);
+            this.panel3.Location = new System.Drawing.Point(11, 860);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(298, 212);
+            this.panel3.TabIndex = 30;
+            // 
+            // numericUpDown57
+            // 
+            this.numericUpDown57.DecimalPlaces = 2;
+            this.numericUpDown57.Location = new System.Drawing.Point(204, 176);
+            this.numericUpDown57.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown57.Name = "numericUpDown57";
+            this.numericUpDown57.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown57.TabIndex = 66;
+            this.numericUpDown57.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown58
+            // 
+            this.numericUpDown58.DecimalPlaces = 2;
+            this.numericUpDown58.Location = new System.Drawing.Point(204, 136);
+            this.numericUpDown58.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown58.Name = "numericUpDown58";
+            this.numericUpDown58.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown58.TabIndex = 65;
+            this.numericUpDown58.Value = new decimal(new int[] {
+            27,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown59
+            // 
+            this.numericUpDown59.DecimalPlaces = 2;
+            this.numericUpDown59.Location = new System.Drawing.Point(204, 96);
+            this.numericUpDown59.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown59.Name = "numericUpDown59";
+            this.numericUpDown59.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown59.TabIndex = 64;
+            this.numericUpDown59.Value = new decimal(new int[] {
+            75,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown60
+            // 
+            this.numericUpDown60.DecimalPlaces = 2;
+            this.numericUpDown60.Location = new System.Drawing.Point(204, 59);
+            this.numericUpDown60.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown60.Name = "numericUpDown60";
+            this.numericUpDown60.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown60.TabIndex = 63;
+            this.numericUpDown60.Value = new decimal(new int[] {
+            43,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDown61
+            // 
+            this.numericUpDown61.DecimalPlaces = 2;
+            this.numericUpDown61.Location = new System.Drawing.Point(204, 23);
+            this.numericUpDown61.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown61.Name = "numericUpDown61";
+            this.numericUpDown61.Size = new System.Drawing.Size(79, 22);
+            this.numericUpDown61.TabIndex = 62;
+            this.numericUpDown61.Value = new decimal(new int[] {
+            85,
+            0,
+            0,
+            0});
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(8, 23);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(164, 209);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Carbon Ratio of VOC\r\n\r\nCarbon Ratio of CO\r\n\t\t\r\nCarbon Ratio of CH4\r\n\t\r\nCarbon Rat" +
+    "io of CO2\r\n\t\r\nCarbon Ratio of SO2\r\n\t\r\n\r\n";
+            // 
             // Fuel_Specs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(912, 815);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Fuel_Specs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1207,6 +1477,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown51)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown55)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown57)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown58)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown59)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown60)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown61)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1286,5 +1571,22 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.NumericUpDown numericUpDown55;
+        private System.Windows.Forms.NumericUpDown numericUpDown54;
+        private System.Windows.Forms.NumericUpDown numericUpDown53;
+        private System.Windows.Forms.NumericUpDown numericUpDown52;
+        private System.Windows.Forms.NumericUpDown numericUpDown51;
+        private System.Windows.Forms.NumericUpDown numericUpDown42;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.NumericUpDown numericUpDown57;
+        private System.Windows.Forms.NumericUpDown numericUpDown58;
+        private System.Windows.Forms.NumericUpDown numericUpDown59;
+        private System.Windows.Forms.NumericUpDown numericUpDown60;
+        private System.Windows.Forms.NumericUpDown numericUpDown61;
+        private System.Windows.Forms.Label label24;
     }
 }

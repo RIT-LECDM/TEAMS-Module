@@ -136,6 +136,19 @@ namespace TEAMSModule
             te.fischerTropschCarbonRatio = (double)numericUpDown13.Value;
             te.fischerTropschSulfurRatio = (double)numericUpDown23.Value;
             te.fischerTropschSulfurRatioActual = (double)numericUpDown33.Value;
+
+            te.GHPCO2 = (int)numericUpDown42.Value;
+            te.GHPCH4 = (int)numericUpDown51.Value;
+            te.GHPN2O = (int)numericUpDown52.Value;
+            te.GHPVOC = (int)numericUpDown53.Value;
+            te.GHPCO = (int)numericUpDown54.Value;
+            te.GHPNO2 = (int)numericUpDown55.Value;
+
+            te.CarbonRatioVOC = (double)numericUpDown61.Value;
+            te.CarbonRatioCO = (double)numericUpDown60.Value;
+            te.CarbonRatioCH4 = (double)numericUpDown59.Value;
+            te.CarbonRatioCO2 = (double)numericUpDown58.Value;
+            te.CarbonRatioSO2 = (double)numericUpDown57.Value;
         }
         //Reset Button
         private void button2_Click(object sender, EventArgs e)
