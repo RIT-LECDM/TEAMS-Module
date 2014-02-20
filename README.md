@@ -35,12 +35,7 @@ Notes: If you are interested in developing for this platform, there are a few th
 
 2) You will also need to be aware of the greet database file that is located in the same folder as the plugins, but under the subfolder of database and will be named either default, or whatever the user is currently using (Since you can change the database and make your own forked versions of it). This is important because it is how you will find the ID numbers for all of the pathways, which results in being able to access all of the GREET data. These numbers are the primary keys for getting at the database information, which needs to be examined in a code editor to most basically view the data. Personally, I've been using NP++ and recommend it for this purpose.
 
-Also Includes
-=======
-Also Includes:
->>>>>>> 6836a9ad96987abd12b3eebe176fa24d56166098
-
-GREET-API
+Also Includes GREET-API
 =========
 
 Public interface for GREET project
