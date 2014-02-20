@@ -157,5 +157,10 @@ namespace TEAMSModule
             te.pullFromGREET();
             variableSetter();
         }
+
+        private void Fuel_Specs_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            te.GVE = new Fuel_Specs(te);
+        }
     }
 }

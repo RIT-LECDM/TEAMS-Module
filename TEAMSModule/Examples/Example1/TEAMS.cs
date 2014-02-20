@@ -482,9 +482,9 @@ namespace WindowsApplication1
         public const int NATGAS_PATH_ID = 1;
         public const int COAL_PATH_ID = 17;
 
-        Update u;
-        Fuel_Specs GVE;
-        ResultsSheet rs;
+        public Update u;
+        public Fuel_Specs GVE;
+        public ResultsSheet rs;
         public TEAMS()
         {
             InitializeComponent();
