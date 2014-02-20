@@ -306,36 +306,36 @@ namespace WindowsApplication1
 
         #endregion
         #region Teams 6.1 - 6.4d
-        //6.1 Auxillary Engine Fuel Type to Present On Results Sheet;
+        //6.1 Auxiliary Engine Fuel Type to Present On Results Sheet;
         //1 = Conventional Diesel 2 = Residual Oil 3 = Low Sulfur Diesel 4 = Natural gas 5 = Biodiesel 6 = Fischer Tropsch Diesel
-        public int AuxillaryEngineFuelType = 1;
+        public int AuxiliaryEngineFuelType = 1;
 
-        //6.2 Auxillary Engine Variables
-        public int NumberOfOnBoarAuxillaryEngines;
-        public int NumberOfAuxillaryEnginesInUse;
-        public int AuxillaryEnginesRatedHPperEngine;
+        //6.2 Auxiliary Engine Variables
+        public int NumberOfOnBoarAuxiliaryEngines;
+        public int NumberOfAuxiliaryEnginesInUse;
+        public int AuxiliaryEnginesRatedHPperEngine;
         public int TotalOnboardAUxHP;
 
-        //6.3 Auxillary Engine Characterization (Conventional Diesel as Baseline Fuel)
-        public double PercentOfTripAuxillaryIsActive;
+        //6.3 Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
+        public double PercentOfTripAuxiliaryIsActive;
         public double TimeAuxActiveHours;
         public double HPLoadFactorSingleEngine;
         public double ActiveHPPerAuxEngine;
         public double TotalAuxEnergyProduction;
 
         //6.4a Selection of Medel Calculated or User Input Fuel Consumption Values Conventional Diesel as Baseline Fuel
-        //1 = Simlate using GPH derived from User-Entered Auxillary engine specifications 2 = Simlate using user entered GPH
+        //1 = Simlate using GPH derived from User-Entered Auxiliary engine specifications 2 = Simlate using user entered GPH
         public int SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = 1;
 
-        //6.4b Calculation of Auxillary Engine Fuel use Using Conventional Diesel as Baseline Fuel
-        public double AuxillaryEngineEfficiency;
+        //6.4b Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
+        public double AuxiliaryEngineEfficiency;
         public double AuxEngineKWHoutperTrip;
         public double AuxEngineMMBTUoutperTrip;
         public double AuxEngineMMBTUinperTrip;
         public double AuxEngineGALLONperTrip;
 
-        //6.4c Calculation of Auxillary Engine Fuel Use Using Alternative Fuels
-        //EE = Engine Efficiency AuxMMBTU = Auxillary MMTBUin/Trip EAFC = Auxillary Engine Alternativee Fuel Consumption
+        //6.4c Calculation of Auxiliary Engine Fuel Use Using Alternative Fuels
+        //EE = Engine Efficiency AuxMMBTU = Auxiliary MMTBUin/Trip EAFC = Auxiliary Engine Alternativee Fuel Consumption
         public double AuxResidualOilEE;
         public double AuxResidualOilMMBTU;
         public double AuxResidualOilEAFC;
@@ -352,7 +352,7 @@ namespace WindowsApplication1
         public double AuxFischerTropschMMBTU;
         public double AuxFischerTropschEAFC;
 
-        //6.4d  Auxillary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
+        //6.4d  Auxiliary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
         //FC = Fuel Consumption 
         public int AuxConventionalDieselFC;
         public double AuxConventionalDieselTotal;
@@ -839,13 +839,13 @@ namespace WindowsApplication1
             NaturalGasTotal = (int)((NaturalGasIdle * TimeInIdle * NumberOfEngines) + (NaturalGasManeuvering * TimeInManeuvering * NumberOfEngines) + (NaturalGasPrecautionary * TimeInPrecautionary * NumberOfEngines) + (NaturalGasSlowCruise * TimeInSlowCruise * NumberOfEngines) + (NaturalGasFullCruise * TimeInFullCruise * NumberOfEngines));
             BioDieselTotal = (int)((BioDieselIdle * TimeInIdle * NumberOfEngines) + (BioDieselManeuvering * TimeInManeuvering * NumberOfEngines) + (BioDieselPrecautionary * TimeInPrecautionary * NumberOfEngines) + (BioDieselSlowCruise * TimeInSlowCruise * NumberOfEngines) + (BioDieselFullCruise * TimeInFullCruise * NumberOfEngines));
             FischerTropschTotal = (int)(( FischerTropschIdle * TimeInIdle * NumberOfEngines) + ( FischerTropschManeuvering * TimeInManeuvering * NumberOfEngines) + ( FischerTropschPrecautionary * TimeInPrecautionary * NumberOfEngines) + ( FischerTropschSlowCruise * TimeInSlowCruise * NumberOfEngines) + (FischerTropschFullCruise * TimeInFullCruise * NumberOfEngines));
-            TotalOnboardAUxHP = NumberOfAuxillaryEnginesInUse * AuxillaryEnginesRatedHPperEngine;
-            TimeAuxActiveHours = (PercentOfTripAuxillaryIsActive / 100) * TotalTripTimeHours;
-            ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxillaryEnginesRatedHPperEngine;
-            TotalAuxEnergyProduction = NumberOfAuxillaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
+            TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
+            TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
+            ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
+            TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
             AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
             AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / 1000000;
-            AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxillaryEngineEfficiency);
+            AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
             AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
             AuxResidualOilEE = ResidualOilEE;
             AuxResidualOilMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxResidualOilEE);
@@ -862,12 +862,12 @@ namespace WindowsApplication1
             AuxNaturalGasEAFC = (1 / natGasBTUperSCF) * 1000000 * AuxNaturalGasMMBTU;
             AuxBiodieselEAFC = (1 / bioDieselBTUperGal) * 1000000 * AuxBiodieselMMBTU;
             AuxFischerTropschEAFC = (1 / fischerTropschBTUperGal) * 1000000 * AuxFischerTropschMMBTU;
-            AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+            AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
         }
         #endregion
         #region This will make it so that all the values shown are consistent with the code values of the variables
@@ -1065,14 +1065,14 @@ namespace WindowsApplication1
             numericUpDown216.Value = (decimal)FischerTropschFullCruise;
 
             //6
-            numericUpDown227.Value = (decimal)AuxillaryEngineFuelType;
-            numericUpDown228.Value = (decimal)NumberOfOnBoarAuxillaryEngines;
-            numericUpDown229.Value = (decimal)NumberOfAuxillaryEnginesInUse;
-            numericUpDown230.Value = (decimal)AuxillaryEnginesRatedHPperEngine;
-            numericUpDown232.Value = (decimal)PercentOfTripAuxillaryIsActive;
+            numericUpDown227.Value = (decimal)AuxiliaryEngineFuelType;
+            numericUpDown228.Value = (decimal)NumberOfOnBoarAuxiliaryEngines;
+            numericUpDown229.Value = (decimal)NumberOfAuxiliaryEnginesInUse;
+            numericUpDown230.Value = (decimal)AuxiliaryEnginesRatedHPperEngine;
+            numericUpDown232.Value = (decimal)PercentOfTripAuxiliaryIsActive;
             numericUpDown234.Value = (decimal)HPLoadFactorSingleEngine;
             numericUpDown237.Value = (decimal)SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6;
-            numericUpDown242.Value = (decimal)AuxillaryEngineEfficiency;
+            numericUpDown242.Value = (decimal)AuxiliaryEngineEfficiency;
             numericUpDown293.Value = (decimal)AuxConventionalDieselFC;
             numericUpDown292.Value = (decimal)AuxResidualOilFC;
             numericUpDown291.Value = (decimal)AuxLowSulfurDieselFC;
@@ -1407,30 +1407,30 @@ namespace WindowsApplication1
 
             #endregion
             #region Teams 6.1 - 6.4d
-            //6.1 Auxillary Engine Fuel Type to Present On Results Sheet;
+            //6.1 Auxiliary Engine Fuel Type to Present On Results Sheet;
             //1 = Conventional Diesel 2 = Residual Oil 3 = Low Sulfur Diesel 4 = Natural gas 5 = Biodiesel 6 = Fischer Tropsch Diesel
-            AuxillaryEngineFuelType = 1;
+            AuxiliaryEngineFuelType = 1;
 
-            //6.2 Auxillary Engine Variables
-            NumberOfOnBoarAuxillaryEngines = 4;
-            NumberOfAuxillaryEnginesInUse = 2;
-            AuxillaryEnginesRatedHPperEngine = 1400;
+            //6.2 Auxiliary Engine Variables
+            NumberOfOnBoarAuxiliaryEngines = 4;
+            NumberOfAuxiliaryEnginesInUse = 2;
+            AuxiliaryEnginesRatedHPperEngine = 1400;
 
-            //6.3 Auxillary Engine Characterization (Conventional Diesel as Baseline Fuel)
-            PercentOfTripAuxillaryIsActive = 50.00;
+            //6.3 Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
+            PercentOfTripAuxiliaryIsActive = 50.00;
             HPLoadFactorSingleEngine = 80.00;
 
             //6.4a Selection of Medel Calculated or User Input Fuel Consumption Values Conventional Diesel as Baseline Fuel
-            //1 = Simlate using GPH derived from User-Entered Auxillary engine specifications 2 = Simlate using user entered GPH
+            //1 = Simlate using GPH derived from User-Entered Auxiliary engine specifications 2 = Simlate using user entered GPH
             SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = 1;
 
-            //6.4b Calculation of Auxillary Engine Fuel use Using Conventional Diesel as Baseline Fuel
-            AuxillaryEngineEfficiency = 40.00;
+            //6.4b Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
+            AuxiliaryEngineEfficiency = 40.00;
 
-            //6.4c Calculation of Auxillary Engine Fuel Use Using Alternative Fuels
-            //EE = Engine Efficiency AuxMMBTU = Auxillary MMTBUin/Trip EAFC = Auxillary Engine Alternativee Fuel Consumption
+            //6.4c Calculation of Auxiliary Engine Fuel Use Using Alternative Fuels
+            //EE = Engine Efficiency AuxMMBTU = Auxiliary MMTBUin/Trip EAFC = Auxiliary Engine Alternativee Fuel Consumption
 
-            //6.4d  Auxillary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
+            //6.4d  Auxiliary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
             //FC = Fuel Consumption 
             AuxConventionalDieselFC = 9;
             AuxResidualOilFC = 10;
@@ -1867,36 +1867,36 @@ namespace WindowsApplication1
                 six_complete = true;
                 button6.BackColor = Color.Green;
                 //6.1
-                AuxillaryEngineFuelType = (int)numericUpDown227.Value;
+                AuxiliaryEngineFuelType = (int)numericUpDown227.Value;
 
                 //6.2
-                NumberOfOnBoarAuxillaryEngines = (int)numericUpDown228.Value;
-                NumberOfAuxillaryEnginesInUse = (int)numericUpDown229.Value;
-                AuxillaryEnginesRatedHPperEngine = (int)numericUpDown230.Value;
-                TotalOnboardAUxHP = NumberOfAuxillaryEnginesInUse * AuxillaryEnginesRatedHPperEngine;
+                NumberOfOnBoarAuxiliaryEngines = (int)numericUpDown228.Value;
+                NumberOfAuxiliaryEnginesInUse = (int)numericUpDown229.Value;
+                AuxiliaryEnginesRatedHPperEngine = (int)numericUpDown230.Value;
+                TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
                 numericUpDown231.Value = (decimal)TotalOnboardAUxHP;
 
                 //6.3
-                PercentOfTripAuxillaryIsActive = (double)numericUpDown232.Value;
-                TimeAuxActiveHours = (PercentOfTripAuxillaryIsActive / 100) * TotalTripTimeHours;
+                PercentOfTripAuxiliaryIsActive = (double)numericUpDown232.Value;
+                TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
                 numericUpDown233.Value = (decimal)TimeAuxActiveHours;
                 HPLoadFactorSingleEngine = (double)numericUpDown234.Value;
-                ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxillaryEnginesRatedHPperEngine;
+                ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
                 numericUpDown235.Value = (decimal)ActiveHPPerAuxEngine;
-                TotalAuxEnergyProduction = NumberOfAuxillaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
+                TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
                 numericUpDown236.Value = (decimal)TotalAuxEnergyProduction;
 
                 //6.4a 
                 SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = (int)numericUpDown237.Value;
 
                 //6.4b
-                AuxillaryEngineEfficiency = (double)numericUpDown242.Value;
+                AuxiliaryEngineEfficiency = (double)numericUpDown242.Value;
                 AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
                 numericUpDown241.Value = (decimal)AuxEngineKWHoutperTrip;
                 AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / 1000000;
 
                 numericUpDown240.Value = (decimal)AuxEngineMMBTUoutperTrip;
-                AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxillaryEngineEfficiency);
+                AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
                 numericUpDown239.Value = (decimal)AuxEngineMMBTUinperTrip;
                 //This one requires fuel specs from GREET
                 AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
@@ -1945,22 +1945,22 @@ namespace WindowsApplication1
 
                 //6.4d
                 AuxConventionalDieselFC = (int)numericUpDown293.Value;
-                AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown263.Value = (decimal)AuxConventionalDieselTotal;
                 AuxResidualOilFC = (int)numericUpDown292.Value;
-                AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown262.Value = (decimal)AuxResidualOilTotal;
                 AuxLowSulfurDieselFC = (int)numericUpDown291.Value;
-                AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown261.Value = (decimal)AuxLowSulfurDieselTotal;
                 AuxNaturalGasFC = (int)numericUpDown290.Value;
-                AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown260.Value = (decimal)AuxNaturalGasTotal;
                 AuxBiodieselFC = (int)numericUpDown289.Value;
-                AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown259.Value = (decimal)AuxBioDieselTotal;
                 AuxFischerTropschFC = (int)numericUpDown268.Value;
-                AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown258.Value = (decimal)AuxFischerTropschTotal;
             }
             else
@@ -2195,14 +2195,14 @@ namespace WindowsApplication1
                 FischerTropschSlowCruise = Convert.ToInt32(sr.ReadLine());
                 FischerTropschFullCruise = Convert.ToInt32(sr.ReadLine());
                 //6
-                AuxillaryEngineFuelType = Convert.ToInt32(sr.ReadLine());
-                NumberOfOnBoarAuxillaryEngines = Convert.ToInt32(sr.ReadLine());
-                NumberOfAuxillaryEnginesInUse = Convert.ToInt32(sr.ReadLine());
-                AuxillaryEnginesRatedHPperEngine = Convert.ToInt32(sr.ReadLine());
-                PercentOfTripAuxillaryIsActive = Convert.ToDouble( sr.ReadLine());
+                AuxiliaryEngineFuelType = Convert.ToInt32(sr.ReadLine());
+                NumberOfOnBoarAuxiliaryEngines = Convert.ToInt32(sr.ReadLine());
+                NumberOfAuxiliaryEnginesInUse = Convert.ToInt32(sr.ReadLine());
+                AuxiliaryEnginesRatedHPperEngine = Convert.ToInt32(sr.ReadLine());
+                PercentOfTripAuxiliaryIsActive = Convert.ToDouble( sr.ReadLine());
                 HPLoadFactorSingleEngine =  Convert.ToDouble(sr.ReadLine());
                 SelectionOfModelCalculatedOrUserInputFuelConsumptionValues = Convert.ToInt32(sr.ReadLine());
-                AuxillaryEngineEfficiency =  Convert.ToDouble(sr.ReadLine());
+                AuxiliaryEngineEfficiency =  Convert.ToDouble(sr.ReadLine());
                 AuxConventionalDieselFC = Convert.ToInt32(sr.ReadLine());
                 AuxResidualOilFC = Convert.ToInt32(sr.ReadLine());
                 AuxLowSulfurDieselFC = Convert.ToInt32(sr.ReadLine());
@@ -2416,14 +2416,14 @@ namespace WindowsApplication1
                 sr.WriteLine(FischerTropschSlowCruise);
                 sr.WriteLine(FischerTropschFullCruise);
                 //6
-                sr.WriteLine(AuxillaryEngineFuelType);
-                sr.WriteLine(NumberOfOnBoarAuxillaryEngines);
-                sr.WriteLine(NumberOfAuxillaryEnginesInUse);
-                sr.WriteLine(AuxillaryEnginesRatedHPperEngine);
-                sr.WriteLine(PercentOfTripAuxillaryIsActive);
+                sr.WriteLine(AuxiliaryEngineFuelType);
+                sr.WriteLine(NumberOfOnBoarAuxiliaryEngines);
+                sr.WriteLine(NumberOfAuxiliaryEnginesInUse);
+                sr.WriteLine(AuxiliaryEnginesRatedHPperEngine);
+                sr.WriteLine(PercentOfTripAuxiliaryIsActive);
                 sr.WriteLine(HPLoadFactorSingleEngine);
                 sr.WriteLine(SelectionOfModelCalculatedOrUserInputFuelConsumptionValues);
-                sr.WriteLine(AuxillaryEngineEfficiency);
+                sr.WriteLine(AuxiliaryEngineEfficiency);
                 sr.WriteLine(AuxConventionalDieselFC);
                 sr.WriteLine(AuxResidualOilFC);
                 sr.WriteLine(AuxLowSulfurDieselFC);
