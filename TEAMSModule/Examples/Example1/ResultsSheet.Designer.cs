@@ -30,6 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResultsSheet));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label197 = new System.Windows.Forms.Label();
+            this.label196 = new System.Windows.Forms.Label();
+            this.label195 = new System.Windows.Forms.Label();
+            this.label194 = new System.Windows.Forms.Label();
+            this.label193 = new System.Windows.Forms.Label();
+            this.label192 = new System.Windows.Forms.Label();
+            this.label191 = new System.Windows.Forms.Label();
+            this.label190 = new System.Windows.Forms.Label();
+            this.label189 = new System.Windows.Forms.Label();
+            this.label188 = new System.Windows.Forms.Label();
+            this.label187 = new System.Windows.Forms.Label();
+            this.label186 = new System.Windows.Forms.Label();
+            this.label185 = new System.Windows.Forms.Label();
             this.numericUpDown73 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown74 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown77 = new System.Windows.Forms.NumericUpDown();
@@ -77,7 +90,6 @@
             this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -117,9 +129,23 @@
             this.numericUpDown51 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown58 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown57 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label198 = new System.Windows.Forms.Label();
+            this.label199 = new System.Windows.Forms.Label();
+            this.label200 = new System.Windows.Forms.Label();
+            this.label201 = new System.Windows.Forms.Label();
+            this.label202 = new System.Windows.Forms.Label();
+            this.label203 = new System.Windows.Forms.Label();
+            this.label204 = new System.Windows.Forms.Label();
+            this.label205 = new System.Windows.Forms.Label();
+            this.label206 = new System.Windows.Forms.Label();
+            this.label207 = new System.Windows.Forms.Label();
+            this.label208 = new System.Windows.Forms.Label();
             this.numericUpDown79 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown80 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown81 = new System.Windows.Forms.NumericUpDown();
@@ -169,6 +195,19 @@
             this.label41 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label269 = new System.Windows.Forms.Label();
+            this.label270 = new System.Windows.Forms.Label();
+            this.label271 = new System.Windows.Forms.Label();
+            this.label272 = new System.Windows.Forms.Label();
+            this.label273 = new System.Windows.Forms.Label();
+            this.label274 = new System.Windows.Forms.Label();
+            this.label275 = new System.Windows.Forms.Label();
+            this.label276 = new System.Windows.Forms.Label();
+            this.label277 = new System.Windows.Forms.Label();
+            this.label278 = new System.Windows.Forms.Label();
+            this.label279 = new System.Windows.Forms.Label();
+            this.label280 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label63 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
@@ -332,6 +371,19 @@
             this.label176 = new System.Windows.Forms.Label();
             this.label175 = new System.Windows.Forms.Label();
             this.panel71 = new System.Windows.Forms.Panel();
+            this.label180 = new System.Windows.Forms.Label();
+            this.label340 = new System.Windows.Forms.Label();
+            this.label341 = new System.Windows.Forms.Label();
+            this.label342 = new System.Windows.Forms.Label();
+            this.label343 = new System.Windows.Forms.Label();
+            this.label344 = new System.Windows.Forms.Label();
+            this.label345 = new System.Windows.Forms.Label();
+            this.label346 = new System.Windows.Forms.Label();
+            this.label347 = new System.Windows.Forms.Label();
+            this.label348 = new System.Windows.Forms.Label();
+            this.label349 = new System.Windows.Forms.Label();
+            this.label350 = new System.Windows.Forms.Label();
+            this.label351 = new System.Windows.Forms.Label();
             this.numericUpDown1100 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1104 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1108 = new System.Windows.Forms.NumericUpDown();
@@ -405,32 +457,6 @@
             this.numericUpDown1141 = new System.Windows.Forms.NumericUpDown();
             this.label181 = new System.Windows.Forms.Label();
             this.label183 = new System.Windows.Forms.Label();
-            this.label185 = new System.Windows.Forms.Label();
-            this.label186 = new System.Windows.Forms.Label();
-            this.label187 = new System.Windows.Forms.Label();
-            this.label188 = new System.Windows.Forms.Label();
-            this.label189 = new System.Windows.Forms.Label();
-            this.label190 = new System.Windows.Forms.Label();
-            this.label191 = new System.Windows.Forms.Label();
-            this.label192 = new System.Windows.Forms.Label();
-            this.label193 = new System.Windows.Forms.Label();
-            this.label194 = new System.Windows.Forms.Label();
-            this.label195 = new System.Windows.Forms.Label();
-            this.label196 = new System.Windows.Forms.Label();
-            this.label197 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label198 = new System.Windows.Forms.Label();
-            this.label199 = new System.Windows.Forms.Label();
-            this.label200 = new System.Windows.Forms.Label();
-            this.label201 = new System.Windows.Forms.Label();
-            this.label202 = new System.Windows.Forms.Label();
-            this.label203 = new System.Windows.Forms.Label();
-            this.label204 = new System.Windows.Forms.Label();
-            this.label205 = new System.Windows.Forms.Label();
-            this.label206 = new System.Windows.Forms.Label();
-            this.label207 = new System.Windows.Forms.Label();
-            this.label208 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -721,19 +747,6 @@
             this.label267 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label268 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label269 = new System.Windows.Forms.Label();
-            this.label270 = new System.Windows.Forms.Label();
-            this.label271 = new System.Windows.Forms.Label();
-            this.label272 = new System.Windows.Forms.Label();
-            this.label273 = new System.Windows.Forms.Label();
-            this.label274 = new System.Windows.Forms.Label();
-            this.label275 = new System.Windows.Forms.Label();
-            this.label276 = new System.Windows.Forms.Label();
-            this.label277 = new System.Windows.Forms.Label();
-            this.label278 = new System.Windows.Forms.Label();
-            this.label279 = new System.Windows.Forms.Label();
-            this.label280 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
@@ -1599,19 +1612,6 @@
             this.label338 = new System.Windows.Forms.Label();
             this.label339 = new System.Windows.Forms.Label();
             this.panel68 = new System.Windows.Forms.Panel();
-            this.label180 = new System.Windows.Forms.Label();
-            this.label340 = new System.Windows.Forms.Label();
-            this.label341 = new System.Windows.Forms.Label();
-            this.label342 = new System.Windows.Forms.Label();
-            this.label343 = new System.Windows.Forms.Label();
-            this.label344 = new System.Windows.Forms.Label();
-            this.label345 = new System.Windows.Forms.Label();
-            this.label346 = new System.Windows.Forms.Label();
-            this.label347 = new System.Windows.Forms.Label();
-            this.label348 = new System.Windows.Forms.Label();
-            this.label349 = new System.Windows.Forms.Label();
-            this.label350 = new System.Windows.Forms.Label();
-            this.label351 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown73)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown74)).BeginInit();
@@ -1660,7 +1660,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -1693,6 +1692,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown51)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown58)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown57)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown79)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown80)).BeginInit();
@@ -2917,6 +2917,150 @@
             this.panel1.Size = new System.Drawing.Size(1227, 573);
             this.panel1.TabIndex = 1;
             // 
+            // label197
+            // 
+            this.label197.AutoSize = true;
+            this.label197.BackColor = System.Drawing.Color.Silver;
+            this.label197.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label197.Location = new System.Drawing.Point(109, 485);
+            this.label197.Name = "label197";
+            this.label197.Size = new System.Drawing.Size(37, 21);
+            this.label197.TabIndex = 99;
+            this.label197.Text = "SOX";
+            // 
+            // label196
+            // 
+            this.label196.AutoSize = true;
+            this.label196.BackColor = System.Drawing.Color.Silver;
+            this.label196.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label196.Location = new System.Drawing.Point(104, 446);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(42, 21);
+            this.label196.TabIndex = 98;
+            this.label196.Text = "PM10";
+            // 
+            // label195
+            // 
+            this.label195.AutoSize = true;
+            this.label195.BackColor = System.Drawing.Color.Silver;
+            this.label195.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label195.Location = new System.Drawing.Point(106, 409);
+            this.label195.Name = "label195";
+            this.label195.Size = new System.Drawing.Size(40, 21);
+            this.label195.TabIndex = 97;
+            this.label195.Text = "NOX";
+            // 
+            // label194
+            // 
+            this.label194.AutoSize = true;
+            this.label194.BackColor = System.Drawing.Color.Silver;
+            this.label194.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label194.Location = new System.Drawing.Point(116, 369);
+            this.label194.Name = "label194";
+            this.label194.Size = new System.Drawing.Size(30, 21);
+            this.label194.TabIndex = 96;
+            this.label194.Text = "CO";
+            // 
+            // label193
+            // 
+            this.label193.AutoSize = true;
+            this.label193.BackColor = System.Drawing.Color.Silver;
+            this.label193.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label193.Location = new System.Drawing.Point(108, 335);
+            this.label193.Name = "label193";
+            this.label193.Size = new System.Drawing.Size(38, 21);
+            this.label193.TabIndex = 95;
+            this.label193.Text = "VOC";
+            // 
+            // label192
+            // 
+            this.label192.AutoSize = true;
+            this.label192.BackColor = System.Drawing.Color.Silver;
+            this.label192.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label192.Location = new System.Drawing.Point(101, 295);
+            this.label192.Name = "label192";
+            this.label192.Size = new System.Drawing.Size(46, 21);
+            this.label192.TabIndex = 94;
+            this.label192.Text = "GHGs";
+            // 
+            // label191
+            // 
+            this.label191.AutoSize = true;
+            this.label191.BackColor = System.Drawing.Color.Silver;
+            this.label191.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label191.Location = new System.Drawing.Point(112, 259);
+            this.label191.Name = "label191";
+            this.label191.Size = new System.Drawing.Size(34, 21);
+            this.label191.TabIndex = 93;
+            this.label191.Text = "N20";
+            this.label191.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label190
+            // 
+            this.label190.AutoSize = true;
+            this.label190.BackColor = System.Drawing.Color.Silver;
+            this.label190.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label190.Location = new System.Drawing.Point(112, 218);
+            this.label190.Name = "label190";
+            this.label190.Size = new System.Drawing.Size(36, 21);
+            this.label190.TabIndex = 92;
+            this.label190.Text = "CH4";
+            // 
+            // label189
+            // 
+            this.label189.AutoSize = true;
+            this.label189.BackColor = System.Drawing.Color.Silver;
+            this.label189.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label189.Location = new System.Drawing.Point(112, 179);
+            this.label189.Name = "label189";
+            this.label189.Size = new System.Drawing.Size(37, 21);
+            this.label189.TabIndex = 91;
+            this.label189.Text = "CO2";
+            // 
+            // label188
+            // 
+            this.label188.AutoSize = true;
+            this.label188.BackColor = System.Drawing.Color.Silver;
+            this.label188.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label188.Location = new System.Drawing.Point(77, 142);
+            this.label188.Name = "label188";
+            this.label188.Size = new System.Drawing.Size(72, 21);
+            this.label188.TabIndex = 90;
+            this.label188.Text = "Petroleum";
+            // 
+            // label187
+            // 
+            this.label187.AutoSize = true;
+            this.label187.BackColor = System.Drawing.Color.Silver;
+            this.label187.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label187.Location = new System.Drawing.Point(68, 103);
+            this.label187.Name = "label187";
+            this.label187.Size = new System.Drawing.Size(81, 21);
+            this.label187.TabIndex = 89;
+            this.label187.Text = "Fossil Fuels";
+            // 
+            // label186
+            // 
+            this.label186.AutoSize = true;
+            this.label186.BackColor = System.Drawing.Color.Silver;
+            this.label186.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label186.Location = new System.Drawing.Point(51, 76);
+            this.label186.Name = "label186";
+            this.label186.Size = new System.Drawing.Size(98, 21);
+            this.label186.TabIndex = 88;
+            this.label186.Text = "WTP Efficiency";
+            // 
+            // label185
+            // 
+            this.label185.AutoSize = true;
+            this.label185.BackColor = System.Drawing.Color.Silver;
+            this.label185.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label185.Location = new System.Drawing.Point(64, 35);
+            this.label185.Name = "label185";
+            this.label185.Size = new System.Drawing.Size(85, 21);
+            this.label185.TabIndex = 87;
+            this.label185.Text = "Total Energy";
+            // 
             // numericUpDown73
             // 
             this.numericUpDown73.DecimalPlaces = 2;
@@ -3622,21 +3766,6 @@
             this.numericUpDown11.Size = new System.Drawing.Size(148, 25);
             this.numericUpDown11.TabIndex = 14;
             // 
-            // numericUpDown12
-            // 
-            this.numericUpDown12.DecimalPlaces = 2;
-            this.numericUpDown12.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown12.Location = new System.Drawing.Point(6, 71);
-            this.numericUpDown12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown12.Maximum = new decimal(new int[] {
-            1661992960,
-            1808227885,
-            5,
-            0});
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(111, 25);
-            this.numericUpDown12.TabIndex = 13;
-            // 
             // numericUpDown6
             // 
             this.numericUpDown6.DecimalPlaces = 2;
@@ -3704,7 +3833,7 @@
             this.label8.Font = new System.Drawing.Font("Apple Garamond", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(983, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(178, 22);
+            this.label8.Size = new System.Drawing.Size(184, 23);
             this.label8.TabIndex = 6;
             this.label8.Text = "Fischer Tropsch Diesel";
             // 
@@ -3715,7 +3844,7 @@
             this.label7.Font = new System.Drawing.Font("Apple Garamond", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(808, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 22);
+            this.label7.Size = new System.Drawing.Size(83, 23);
             this.label7.TabIndex = 5;
             this.label7.Text = "BioDiesel";
             // 
@@ -3726,7 +3855,7 @@
             this.label3.Font = new System.Drawing.Font("Apple Garamond", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(159, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 22);
+            this.label3.Size = new System.Drawing.Size(102, 23);
             this.label3.TabIndex = 1;
             this.label3.Text = "Residual Oil";
             // 
@@ -3768,7 +3897,7 @@
             this.panel69.Controls.Add(this.numericUpDown12);
             this.panel69.Font = new System.Drawing.Font("Apple Garamond", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel69.Location = new System.Drawing.Point(156, 4);
-            this.panel69.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel69.Margin = new System.Windows.Forms.Padding(4);
             this.panel69.Name = "panel69";
             this.panel69.Size = new System.Drawing.Size(1053, 547);
             this.panel69.TabIndex = 86;
@@ -3794,7 +3923,7 @@
             this.label4.Font = new System.Drawing.Font("Apple Garamond", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(125, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 22);
+            this.label4.Size = new System.Drawing.Size(164, 23);
             this.label4.TabIndex = 2;
             this.label4.Text = "Conventional Diesel";
             // 
@@ -3804,7 +3933,7 @@
             this.label6.Font = new System.Drawing.Font("Apple Garamond", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(459, 7);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 22);
+            this.label6.Size = new System.Drawing.Size(172, 23);
             this.label6.TabIndex = 4;
             this.label6.Text = "Liquified Natural Gas";
             // 
@@ -3824,7 +3953,7 @@
             this.label5.Font = new System.Drawing.Font("Apple Garamond", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(305, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 22);
+            this.label5.Size = new System.Drawing.Size(146, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "Low Sulfur Diesel";
             // 
@@ -4218,6 +4347,21 @@
             this.numericUpDown57.Size = new System.Drawing.Size(157, 25);
             this.numericUpDown57.TabIndex = 64;
             // 
+            // numericUpDown12
+            // 
+            this.numericUpDown12.DecimalPlaces = 2;
+            this.numericUpDown12.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown12.Location = new System.Drawing.Point(6, 71);
+            this.numericUpDown12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.numericUpDown12.Maximum = new decimal(new int[] {
+            1661992960,
+            1808227885,
+            5,
+            0});
+            this.numericUpDown12.Name = "numericUpDown12";
+            this.numericUpDown12.Size = new System.Drawing.Size(111, 25);
+            this.numericUpDown12.TabIndex = 13;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -4304,6 +4448,150 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(594, 593);
             this.panel2.TabIndex = 47;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(97, 558);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 21);
+            this.label1.TabIndex = 112;
+            this.label1.Text = "SOX";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Silver;
+            this.label14.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(95, 516);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(42, 21);
+            this.label14.TabIndex = 111;
+            this.label14.Text = "PM10";
+            // 
+            // label198
+            // 
+            this.label198.AutoSize = true;
+            this.label198.BackColor = System.Drawing.Color.Silver;
+            this.label198.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label198.Location = new System.Drawing.Point(96, 474);
+            this.label198.Name = "label198";
+            this.label198.Size = new System.Drawing.Size(40, 21);
+            this.label198.TabIndex = 110;
+            this.label198.Text = "NOX";
+            // 
+            // label199
+            // 
+            this.label199.AutoSize = true;
+            this.label199.BackColor = System.Drawing.Color.Silver;
+            this.label199.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label199.Location = new System.Drawing.Point(104, 436);
+            this.label199.Name = "label199";
+            this.label199.Size = new System.Drawing.Size(30, 21);
+            this.label199.TabIndex = 109;
+            this.label199.Text = "CO";
+            // 
+            // label200
+            // 
+            this.label200.AutoSize = true;
+            this.label200.BackColor = System.Drawing.Color.Silver;
+            this.label200.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label200.Location = new System.Drawing.Point(96, 395);
+            this.label200.Name = "label200";
+            this.label200.Size = new System.Drawing.Size(38, 21);
+            this.label200.TabIndex = 108;
+            this.label200.Text = "VOC";
+            // 
+            // label201
+            // 
+            this.label201.AutoSize = true;
+            this.label201.BackColor = System.Drawing.Color.Silver;
+            this.label201.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label201.Location = new System.Drawing.Point(88, 355);
+            this.label201.Name = "label201";
+            this.label201.Size = new System.Drawing.Size(46, 21);
+            this.label201.TabIndex = 107;
+            this.label201.Text = "GHGs";
+            // 
+            // label202
+            // 
+            this.label202.AutoSize = true;
+            this.label202.BackColor = System.Drawing.Color.Silver;
+            this.label202.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label202.Location = new System.Drawing.Point(98, 317);
+            this.label202.Name = "label202";
+            this.label202.Size = new System.Drawing.Size(34, 21);
+            this.label202.TabIndex = 106;
+            this.label202.Text = "N20";
+            this.label202.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label203
+            // 
+            this.label203.AutoSize = true;
+            this.label203.BackColor = System.Drawing.Color.Silver;
+            this.label203.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label203.Location = new System.Drawing.Point(98, 278);
+            this.label203.Name = "label203";
+            this.label203.Size = new System.Drawing.Size(36, 21);
+            this.label203.TabIndex = 105;
+            this.label203.Text = "CH4";
+            // 
+            // label204
+            // 
+            this.label204.AutoSize = true;
+            this.label204.BackColor = System.Drawing.Color.Silver;
+            this.label204.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label204.Location = new System.Drawing.Point(99, 241);
+            this.label204.Name = "label204";
+            this.label204.Size = new System.Drawing.Size(37, 21);
+            this.label204.TabIndex = 104;
+            this.label204.Text = "CO2";
+            // 
+            // label205
+            // 
+            this.label205.AutoSize = true;
+            this.label205.BackColor = System.Drawing.Color.Silver;
+            this.label205.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label205.Location = new System.Drawing.Point(65, 205);
+            this.label205.Name = "label205";
+            this.label205.Size = new System.Drawing.Size(72, 21);
+            this.label205.TabIndex = 103;
+            this.label205.Text = "Petroleum";
+            // 
+            // label206
+            // 
+            this.label206.AutoSize = true;
+            this.label206.BackColor = System.Drawing.Color.Silver;
+            this.label206.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label206.Location = new System.Drawing.Point(55, 166);
+            this.label206.Name = "label206";
+            this.label206.Size = new System.Drawing.Size(81, 21);
+            this.label206.TabIndex = 102;
+            this.label206.Text = "Fossil Fuels";
+            // 
+            // label207
+            // 
+            this.label207.AutoSize = true;
+            this.label207.BackColor = System.Drawing.Color.Silver;
+            this.label207.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label207.Location = new System.Drawing.Point(38, 127);
+            this.label207.Name = "label207";
+            this.label207.Size = new System.Drawing.Size(98, 21);
+            this.label207.TabIndex = 101;
+            this.label207.Text = "WTP Efficiency";
+            // 
+            // label208
+            // 
+            this.label208.AutoSize = true;
+            this.label208.BackColor = System.Drawing.Color.Silver;
+            this.label208.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label208.Location = new System.Drawing.Point(51, 93);
+            this.label208.Name = "label208";
+            this.label208.Size = new System.Drawing.Size(85, 21);
+            this.label208.TabIndex = 100;
+            this.label208.Text = "Total Energy";
             // 
             // numericUpDown79
             // 
@@ -4930,7 +5218,7 @@
             this.panel17.Controls.Add(this.label10);
             this.panel17.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel17.Location = new System.Drawing.Point(143, 17);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel17.Margin = new System.Windows.Forms.Padding(4);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(439, 572);
             this.panel17.TabIndex = 79;
@@ -4977,7 +5265,7 @@
             this.panel8.BackColor = System.Drawing.Color.Silver;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Location = new System.Drawing.Point(465, 1941);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(310, 51);
             this.panel8.TabIndex = 88;
@@ -5123,13 +5411,157 @@
             this.panel9.Size = new System.Drawing.Size(1689, 727);
             this.panel9.TabIndex = 89;
             // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.Color.Silver;
+            this.label46.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(101, 660);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(37, 21);
+            this.label46.TabIndex = 125;
+            this.label46.Text = "SOX";
+            // 
+            // label269
+            // 
+            this.label269.AutoSize = true;
+            this.label269.BackColor = System.Drawing.Color.Silver;
+            this.label269.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label269.Location = new System.Drawing.Point(99, 618);
+            this.label269.Name = "label269";
+            this.label269.Size = new System.Drawing.Size(42, 21);
+            this.label269.TabIndex = 124;
+            this.label269.Text = "PM10";
+            // 
+            // label270
+            // 
+            this.label270.AutoSize = true;
+            this.label270.BackColor = System.Drawing.Color.Silver;
+            this.label270.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label270.Location = new System.Drawing.Point(100, 576);
+            this.label270.Name = "label270";
+            this.label270.Size = new System.Drawing.Size(40, 21);
+            this.label270.TabIndex = 123;
+            this.label270.Text = "NOX";
+            // 
+            // label271
+            // 
+            this.label271.AutoSize = true;
+            this.label271.BackColor = System.Drawing.Color.Silver;
+            this.label271.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label271.Location = new System.Drawing.Point(108, 538);
+            this.label271.Name = "label271";
+            this.label271.Size = new System.Drawing.Size(30, 21);
+            this.label271.TabIndex = 122;
+            this.label271.Text = "CO";
+            // 
+            // label272
+            // 
+            this.label272.AutoSize = true;
+            this.label272.BackColor = System.Drawing.Color.Silver;
+            this.label272.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label272.Location = new System.Drawing.Point(100, 497);
+            this.label272.Name = "label272";
+            this.label272.Size = new System.Drawing.Size(38, 21);
+            this.label272.TabIndex = 121;
+            this.label272.Text = "VOC";
+            // 
+            // label273
+            // 
+            this.label273.AutoSize = true;
+            this.label273.BackColor = System.Drawing.Color.Silver;
+            this.label273.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label273.Location = new System.Drawing.Point(92, 457);
+            this.label273.Name = "label273";
+            this.label273.Size = new System.Drawing.Size(46, 21);
+            this.label273.TabIndex = 120;
+            this.label273.Text = "GHGs";
+            // 
+            // label274
+            // 
+            this.label274.AutoSize = true;
+            this.label274.BackColor = System.Drawing.Color.Silver;
+            this.label274.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label274.Location = new System.Drawing.Point(102, 419);
+            this.label274.Name = "label274";
+            this.label274.Size = new System.Drawing.Size(34, 21);
+            this.label274.TabIndex = 119;
+            this.label274.Text = "N20";
+            this.label274.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label275
+            // 
+            this.label275.AutoSize = true;
+            this.label275.BackColor = System.Drawing.Color.Silver;
+            this.label275.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label275.Location = new System.Drawing.Point(102, 380);
+            this.label275.Name = "label275";
+            this.label275.Size = new System.Drawing.Size(36, 21);
+            this.label275.TabIndex = 118;
+            this.label275.Text = "CH4";
+            // 
+            // label276
+            // 
+            this.label276.AutoSize = true;
+            this.label276.BackColor = System.Drawing.Color.Silver;
+            this.label276.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label276.Location = new System.Drawing.Point(103, 343);
+            this.label276.Name = "label276";
+            this.label276.Size = new System.Drawing.Size(37, 21);
+            this.label276.TabIndex = 117;
+            this.label276.Text = "CO2";
+            // 
+            // label277
+            // 
+            this.label277.AutoSize = true;
+            this.label277.BackColor = System.Drawing.Color.Silver;
+            this.label277.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label277.Location = new System.Drawing.Point(69, 307);
+            this.label277.Name = "label277";
+            this.label277.Size = new System.Drawing.Size(72, 21);
+            this.label277.TabIndex = 116;
+            this.label277.Text = "Petroleum";
+            // 
+            // label278
+            // 
+            this.label278.AutoSize = true;
+            this.label278.BackColor = System.Drawing.Color.Silver;
+            this.label278.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label278.Location = new System.Drawing.Point(59, 268);
+            this.label278.Name = "label278";
+            this.label278.Size = new System.Drawing.Size(81, 21);
+            this.label278.TabIndex = 115;
+            this.label278.Text = "Fossil Fuels";
+            // 
+            // label279
+            // 
+            this.label279.AutoSize = true;
+            this.label279.BackColor = System.Drawing.Color.Silver;
+            this.label279.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label279.Location = new System.Drawing.Point(42, 229);
+            this.label279.Name = "label279";
+            this.label279.Size = new System.Drawing.Size(98, 21);
+            this.label279.TabIndex = 114;
+            this.label279.Text = "WTP Efficiency";
+            // 
+            // label280
+            // 
+            this.label280.AutoSize = true;
+            this.label280.BackColor = System.Drawing.Color.Silver;
+            this.label280.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label280.Location = new System.Drawing.Point(55, 195);
+            this.label280.Name = "label280";
+            this.label280.Size = new System.Drawing.Size(85, 21);
+            this.label280.TabIndex = 113;
+            this.label280.Text = "Total Energy";
+            // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel23.Controls.Add(this.label63);
             this.panel23.Location = new System.Drawing.Point(1224, 106);
-            this.panel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel23.Margin = new System.Windows.Forms.Padding(4);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(439, 32);
             this.panel23.TabIndex = 79;
@@ -5152,7 +5584,7 @@
             this.panel22.Controls.Add(this.label55);
             this.panel22.Controls.Add(this.label62);
             this.panel22.Location = new System.Drawing.Point(147, 106);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(1081, 32);
             this.panel22.TabIndex = 78;
@@ -5791,7 +6223,7 @@
             this.panel14.Controls.Add(this.numericUpDown452);
             this.panel14.Controls.Add(this.label56);
             this.panel14.Location = new System.Drawing.Point(1224, 127);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(439, 572);
             this.panel14.TabIndex = 77;
@@ -6257,7 +6689,7 @@
             this.panel13.Controls.Add(this.numericUpDown399);
             this.panel13.Controls.Add(this.numericUpDown397);
             this.panel13.Location = new System.Drawing.Point(1055, 127);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(155, 572);
             this.panel13.TabIndex = 77;
@@ -6871,7 +7303,7 @@
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Controls.Add(this.label50);
             this.panel12.Location = new System.Drawing.Point(752, 127);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(294, 572);
             this.panel12.TabIndex = 77;
@@ -6894,7 +7326,7 @@
             this.panel11.Controls.Add(this.label43);
             this.panel11.Controls.Add(this.label47);
             this.panel11.Location = new System.Drawing.Point(449, 127);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(294, 572);
             this.panel11.TabIndex = 77;
@@ -7349,7 +7781,7 @@
             this.panel10.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Location = new System.Drawing.Point(147, 127);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(294, 572);
             this.panel10.TabIndex = 47;
@@ -7364,7 +7796,7 @@
             this.panel21.Controls.Add(this.label54);
             this.panel21.Controls.Add(this.label53);
             this.panel21.Location = new System.Drawing.Point(12, 2087);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(1689, 83);
             this.panel21.TabIndex = 78;
@@ -7431,7 +7863,7 @@
             this.panel70.Controls.Add(this.label176);
             this.panel70.Controls.Add(this.label175);
             this.panel70.Location = new System.Drawing.Point(12, 1995);
-            this.panel70.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel70.Margin = new System.Windows.Forms.Padding(4);
             this.panel70.Name = "panel70";
             this.panel70.Size = new System.Drawing.Size(433, 45);
             this.panel70.TabIndex = 99;
@@ -7495,6 +7927,150 @@
             this.panel71.Name = "panel71";
             this.panel71.Size = new System.Drawing.Size(1087, 589);
             this.panel71.TabIndex = 100;
+            // 
+            // label180
+            // 
+            this.label180.AutoSize = true;
+            this.label180.BackColor = System.Drawing.Color.Silver;
+            this.label180.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label180.Location = new System.Drawing.Point(103, 501);
+            this.label180.Name = "label180";
+            this.label180.Size = new System.Drawing.Size(37, 21);
+            this.label180.TabIndex = 138;
+            this.label180.Text = "SOX";
+            // 
+            // label340
+            // 
+            this.label340.AutoSize = true;
+            this.label340.BackColor = System.Drawing.Color.Silver;
+            this.label340.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label340.Location = new System.Drawing.Point(99, 462);
+            this.label340.Name = "label340";
+            this.label340.Size = new System.Drawing.Size(42, 21);
+            this.label340.TabIndex = 137;
+            this.label340.Text = "PM10";
+            // 
+            // label341
+            // 
+            this.label341.AutoSize = true;
+            this.label341.BackColor = System.Drawing.Color.Silver;
+            this.label341.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label341.Location = new System.Drawing.Point(101, 425);
+            this.label341.Name = "label341";
+            this.label341.Size = new System.Drawing.Size(40, 21);
+            this.label341.TabIndex = 136;
+            this.label341.Text = "NOX";
+            // 
+            // label342
+            // 
+            this.label342.AutoSize = true;
+            this.label342.BackColor = System.Drawing.Color.Silver;
+            this.label342.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label342.Location = new System.Drawing.Point(110, 385);
+            this.label342.Name = "label342";
+            this.label342.Size = new System.Drawing.Size(30, 21);
+            this.label342.TabIndex = 135;
+            this.label342.Text = "CO";
+            // 
+            // label343
+            // 
+            this.label343.AutoSize = true;
+            this.label343.BackColor = System.Drawing.Color.Silver;
+            this.label343.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label343.Location = new System.Drawing.Point(103, 351);
+            this.label343.Name = "label343";
+            this.label343.Size = new System.Drawing.Size(38, 21);
+            this.label343.TabIndex = 134;
+            this.label343.Text = "VOC";
+            // 
+            // label344
+            // 
+            this.label344.AutoSize = true;
+            this.label344.BackColor = System.Drawing.Color.Silver;
+            this.label344.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label344.Location = new System.Drawing.Point(95, 311);
+            this.label344.Name = "label344";
+            this.label344.Size = new System.Drawing.Size(46, 21);
+            this.label344.TabIndex = 133;
+            this.label344.Text = "GHGs";
+            // 
+            // label345
+            // 
+            this.label345.AutoSize = true;
+            this.label345.BackColor = System.Drawing.Color.Silver;
+            this.label345.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label345.Location = new System.Drawing.Point(108, 274);
+            this.label345.Name = "label345";
+            this.label345.Size = new System.Drawing.Size(34, 21);
+            this.label345.TabIndex = 132;
+            this.label345.Text = "N20";
+            this.label345.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label346
+            // 
+            this.label346.AutoSize = true;
+            this.label346.BackColor = System.Drawing.Color.Silver;
+            this.label346.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label346.Location = new System.Drawing.Point(107, 234);
+            this.label346.Name = "label346";
+            this.label346.Size = new System.Drawing.Size(36, 21);
+            this.label346.TabIndex = 131;
+            this.label346.Text = "CH4";
+            // 
+            // label347
+            // 
+            this.label347.AutoSize = true;
+            this.label347.BackColor = System.Drawing.Color.Silver;
+            this.label347.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label347.Location = new System.Drawing.Point(105, 194);
+            this.label347.Name = "label347";
+            this.label347.Size = new System.Drawing.Size(37, 21);
+            this.label347.TabIndex = 130;
+            this.label347.Text = "CO2";
+            // 
+            // label348
+            // 
+            this.label348.AutoSize = true;
+            this.label348.BackColor = System.Drawing.Color.Silver;
+            this.label348.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label348.Location = new System.Drawing.Point(70, 158);
+            this.label348.Name = "label348";
+            this.label348.Size = new System.Drawing.Size(72, 21);
+            this.label348.TabIndex = 129;
+            this.label348.Text = "Petroleum";
+            // 
+            // label349
+            // 
+            this.label349.AutoSize = true;
+            this.label349.BackColor = System.Drawing.Color.Silver;
+            this.label349.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label349.Location = new System.Drawing.Point(60, 119);
+            this.label349.Name = "label349";
+            this.label349.Size = new System.Drawing.Size(81, 21);
+            this.label349.TabIndex = 128;
+            this.label349.Text = "Fossil Fuels";
+            // 
+            // label350
+            // 
+            this.label350.AutoSize = true;
+            this.label350.BackColor = System.Drawing.Color.Silver;
+            this.label350.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label350.Location = new System.Drawing.Point(44, 92);
+            this.label350.Name = "label350";
+            this.label350.Size = new System.Drawing.Size(98, 21);
+            this.label350.TabIndex = 127;
+            this.label350.Text = "WTP Efficiency";
+            // 
+            // label351
+            // 
+            this.label351.AutoSize = true;
+            this.label351.BackColor = System.Drawing.Color.Silver;
+            this.label351.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label351.Location = new System.Drawing.Point(56, 50);
+            this.label351.Name = "label351";
+            this.label351.Size = new System.Drawing.Size(85, 21);
+            this.label351.TabIndex = 126;
+            this.label351.Text = "Total Energy";
             // 
             // numericUpDown1100
             // 
@@ -7763,7 +8339,7 @@
             this.panel72.Controls.Add(this.numericUpDown1142);
             this.panel72.Controls.Add(this.numericUpDown1141);
             this.panel72.Location = new System.Drawing.Point(156, 20);
-            this.panel72.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel72.Margin = new System.Windows.Forms.Padding(4);
             this.panel72.Name = "panel72";
             this.panel72.Size = new System.Drawing.Size(882, 547);
             this.panel72.TabIndex = 86;
@@ -8594,7 +9170,7 @@
             // 
             this.label181.AutoSize = true;
             this.label181.Font = new System.Drawing.Font("Bebas Neue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label181.Location = new System.Drawing.Point(8, 6766);
+            this.label181.Location = new System.Drawing.Point(8, 6763);
             this.label181.Name = "label181";
             this.label181.Size = new System.Drawing.Size(743, 24);
             this.label181.TabIndex = 101;
@@ -8611,294 +9187,6 @@
             this.label183.TabIndex = 102;
             this.label183.Text = "Main and Auxiliary Engine Well To Hull Energy Consumption and Emissions: Per Trip" +
     "";
-            // 
-            // label185
-            // 
-            this.label185.AutoSize = true;
-            this.label185.BackColor = System.Drawing.Color.Silver;
-            this.label185.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label185.Location = new System.Drawing.Point(64, 35);
-            this.label185.Name = "label185";
-            this.label185.Size = new System.Drawing.Size(85, 21);
-            this.label185.TabIndex = 87;
-            this.label185.Text = "Total Energy";
-            // 
-            // label186
-            // 
-            this.label186.AutoSize = true;
-            this.label186.BackColor = System.Drawing.Color.Silver;
-            this.label186.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label186.Location = new System.Drawing.Point(51, 76);
-            this.label186.Name = "label186";
-            this.label186.Size = new System.Drawing.Size(98, 21);
-            this.label186.TabIndex = 88;
-            this.label186.Text = "WTP Efficiency";
-            // 
-            // label187
-            // 
-            this.label187.AutoSize = true;
-            this.label187.BackColor = System.Drawing.Color.Silver;
-            this.label187.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label187.Location = new System.Drawing.Point(68, 103);
-            this.label187.Name = "label187";
-            this.label187.Size = new System.Drawing.Size(81, 21);
-            this.label187.TabIndex = 89;
-            this.label187.Text = "Fossil Fuels";
-            // 
-            // label188
-            // 
-            this.label188.AutoSize = true;
-            this.label188.BackColor = System.Drawing.Color.Silver;
-            this.label188.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label188.Location = new System.Drawing.Point(77, 142);
-            this.label188.Name = "label188";
-            this.label188.Size = new System.Drawing.Size(72, 21);
-            this.label188.TabIndex = 90;
-            this.label188.Text = "Petroleum";
-            // 
-            // label189
-            // 
-            this.label189.AutoSize = true;
-            this.label189.BackColor = System.Drawing.Color.Silver;
-            this.label189.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label189.Location = new System.Drawing.Point(112, 179);
-            this.label189.Name = "label189";
-            this.label189.Size = new System.Drawing.Size(37, 21);
-            this.label189.TabIndex = 91;
-            this.label189.Text = "CO2";
-            // 
-            // label190
-            // 
-            this.label190.AutoSize = true;
-            this.label190.BackColor = System.Drawing.Color.Silver;
-            this.label190.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label190.Location = new System.Drawing.Point(112, 218);
-            this.label190.Name = "label190";
-            this.label190.Size = new System.Drawing.Size(36, 21);
-            this.label190.TabIndex = 92;
-            this.label190.Text = "CH4";
-            // 
-            // label191
-            // 
-            this.label191.AutoSize = true;
-            this.label191.BackColor = System.Drawing.Color.Silver;
-            this.label191.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label191.Location = new System.Drawing.Point(112, 259);
-            this.label191.Name = "label191";
-            this.label191.Size = new System.Drawing.Size(34, 21);
-            this.label191.TabIndex = 93;
-            this.label191.Text = "N20";
-            this.label191.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label192
-            // 
-            this.label192.AutoSize = true;
-            this.label192.BackColor = System.Drawing.Color.Silver;
-            this.label192.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label192.Location = new System.Drawing.Point(101, 295);
-            this.label192.Name = "label192";
-            this.label192.Size = new System.Drawing.Size(46, 21);
-            this.label192.TabIndex = 94;
-            this.label192.Text = "GHGs";
-            // 
-            // label193
-            // 
-            this.label193.AutoSize = true;
-            this.label193.BackColor = System.Drawing.Color.Silver;
-            this.label193.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label193.Location = new System.Drawing.Point(108, 335);
-            this.label193.Name = "label193";
-            this.label193.Size = new System.Drawing.Size(38, 21);
-            this.label193.TabIndex = 95;
-            this.label193.Text = "VOC";
-            // 
-            // label194
-            // 
-            this.label194.AutoSize = true;
-            this.label194.BackColor = System.Drawing.Color.Silver;
-            this.label194.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label194.Location = new System.Drawing.Point(116, 369);
-            this.label194.Name = "label194";
-            this.label194.Size = new System.Drawing.Size(30, 21);
-            this.label194.TabIndex = 96;
-            this.label194.Text = "CO";
-            // 
-            // label195
-            // 
-            this.label195.AutoSize = true;
-            this.label195.BackColor = System.Drawing.Color.Silver;
-            this.label195.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label195.Location = new System.Drawing.Point(106, 409);
-            this.label195.Name = "label195";
-            this.label195.Size = new System.Drawing.Size(40, 21);
-            this.label195.TabIndex = 97;
-            this.label195.Text = "NOX";
-            // 
-            // label196
-            // 
-            this.label196.AutoSize = true;
-            this.label196.BackColor = System.Drawing.Color.Silver;
-            this.label196.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label196.Location = new System.Drawing.Point(104, 446);
-            this.label196.Name = "label196";
-            this.label196.Size = new System.Drawing.Size(42, 21);
-            this.label196.TabIndex = 98;
-            this.label196.Text = "PM10";
-            // 
-            // label197
-            // 
-            this.label197.AutoSize = true;
-            this.label197.BackColor = System.Drawing.Color.Silver;
-            this.label197.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label197.Location = new System.Drawing.Point(109, 485);
-            this.label197.Name = "label197";
-            this.label197.Size = new System.Drawing.Size(37, 21);
-            this.label197.TabIndex = 99;
-            this.label197.Text = "SOX";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 558);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 21);
-            this.label1.TabIndex = 112;
-            this.label1.Text = "SOX";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Silver;
-            this.label14.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(95, 516);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 21);
-            this.label14.TabIndex = 111;
-            this.label14.Text = "PM10";
-            // 
-            // label198
-            // 
-            this.label198.AutoSize = true;
-            this.label198.BackColor = System.Drawing.Color.Silver;
-            this.label198.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label198.Location = new System.Drawing.Point(96, 474);
-            this.label198.Name = "label198";
-            this.label198.Size = new System.Drawing.Size(40, 21);
-            this.label198.TabIndex = 110;
-            this.label198.Text = "NOX";
-            // 
-            // label199
-            // 
-            this.label199.AutoSize = true;
-            this.label199.BackColor = System.Drawing.Color.Silver;
-            this.label199.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label199.Location = new System.Drawing.Point(104, 436);
-            this.label199.Name = "label199";
-            this.label199.Size = new System.Drawing.Size(30, 21);
-            this.label199.TabIndex = 109;
-            this.label199.Text = "CO";
-            // 
-            // label200
-            // 
-            this.label200.AutoSize = true;
-            this.label200.BackColor = System.Drawing.Color.Silver;
-            this.label200.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label200.Location = new System.Drawing.Point(96, 395);
-            this.label200.Name = "label200";
-            this.label200.Size = new System.Drawing.Size(38, 21);
-            this.label200.TabIndex = 108;
-            this.label200.Text = "VOC";
-            // 
-            // label201
-            // 
-            this.label201.AutoSize = true;
-            this.label201.BackColor = System.Drawing.Color.Silver;
-            this.label201.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label201.Location = new System.Drawing.Point(88, 355);
-            this.label201.Name = "label201";
-            this.label201.Size = new System.Drawing.Size(46, 21);
-            this.label201.TabIndex = 107;
-            this.label201.Text = "GHGs";
-            // 
-            // label202
-            // 
-            this.label202.AutoSize = true;
-            this.label202.BackColor = System.Drawing.Color.Silver;
-            this.label202.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label202.Location = new System.Drawing.Point(98, 317);
-            this.label202.Name = "label202";
-            this.label202.Size = new System.Drawing.Size(34, 21);
-            this.label202.TabIndex = 106;
-            this.label202.Text = "N20";
-            this.label202.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label203
-            // 
-            this.label203.AutoSize = true;
-            this.label203.BackColor = System.Drawing.Color.Silver;
-            this.label203.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label203.Location = new System.Drawing.Point(98, 278);
-            this.label203.Name = "label203";
-            this.label203.Size = new System.Drawing.Size(36, 21);
-            this.label203.TabIndex = 105;
-            this.label203.Text = "CH4";
-            // 
-            // label204
-            // 
-            this.label204.AutoSize = true;
-            this.label204.BackColor = System.Drawing.Color.Silver;
-            this.label204.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label204.Location = new System.Drawing.Point(99, 241);
-            this.label204.Name = "label204";
-            this.label204.Size = new System.Drawing.Size(37, 21);
-            this.label204.TabIndex = 104;
-            this.label204.Text = "CO2";
-            // 
-            // label205
-            // 
-            this.label205.AutoSize = true;
-            this.label205.BackColor = System.Drawing.Color.Silver;
-            this.label205.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label205.Location = new System.Drawing.Point(65, 205);
-            this.label205.Name = "label205";
-            this.label205.Size = new System.Drawing.Size(72, 21);
-            this.label205.TabIndex = 103;
-            this.label205.Text = "Petroleum";
-            // 
-            // label206
-            // 
-            this.label206.AutoSize = true;
-            this.label206.BackColor = System.Drawing.Color.Silver;
-            this.label206.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label206.Location = new System.Drawing.Point(55, 166);
-            this.label206.Name = "label206";
-            this.label206.Size = new System.Drawing.Size(81, 21);
-            this.label206.TabIndex = 102;
-            this.label206.Text = "Fossil Fuels";
-            // 
-            // label207
-            // 
-            this.label207.AutoSize = true;
-            this.label207.BackColor = System.Drawing.Color.Silver;
-            this.label207.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label207.Location = new System.Drawing.Point(38, 127);
-            this.label207.Name = "label207";
-            this.label207.Size = new System.Drawing.Size(98, 21);
-            this.label207.TabIndex = 101;
-            this.label207.Text = "WTP Efficiency";
-            // 
-            // label208
-            // 
-            this.label208.AutoSize = true;
-            this.label208.BackColor = System.Drawing.Color.Silver;
-            this.label208.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label208.Location = new System.Drawing.Point(51, 93);
-            this.label208.Name = "label208";
-            this.label208.Size = new System.Drawing.Size(85, 21);
-            this.label208.TabIndex = 100;
-            this.label208.Text = "Total Energy";
             // 
             // panel3
             // 
@@ -13154,150 +13442,6 @@
             this.label268.Size = new System.Drawing.Size(170, 21);
             this.label268.TabIndex = 46;
             this.label268.Text = "Fischer Tropsch Diesel";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.Color.Silver;
-            this.label46.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(101, 660);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(37, 21);
-            this.label46.TabIndex = 125;
-            this.label46.Text = "SOX";
-            // 
-            // label269
-            // 
-            this.label269.AutoSize = true;
-            this.label269.BackColor = System.Drawing.Color.Silver;
-            this.label269.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label269.Location = new System.Drawing.Point(99, 618);
-            this.label269.Name = "label269";
-            this.label269.Size = new System.Drawing.Size(42, 21);
-            this.label269.TabIndex = 124;
-            this.label269.Text = "PM10";
-            // 
-            // label270
-            // 
-            this.label270.AutoSize = true;
-            this.label270.BackColor = System.Drawing.Color.Silver;
-            this.label270.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label270.Location = new System.Drawing.Point(100, 576);
-            this.label270.Name = "label270";
-            this.label270.Size = new System.Drawing.Size(40, 21);
-            this.label270.TabIndex = 123;
-            this.label270.Text = "NOX";
-            // 
-            // label271
-            // 
-            this.label271.AutoSize = true;
-            this.label271.BackColor = System.Drawing.Color.Silver;
-            this.label271.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label271.Location = new System.Drawing.Point(108, 538);
-            this.label271.Name = "label271";
-            this.label271.Size = new System.Drawing.Size(30, 21);
-            this.label271.TabIndex = 122;
-            this.label271.Text = "CO";
-            // 
-            // label272
-            // 
-            this.label272.AutoSize = true;
-            this.label272.BackColor = System.Drawing.Color.Silver;
-            this.label272.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label272.Location = new System.Drawing.Point(100, 497);
-            this.label272.Name = "label272";
-            this.label272.Size = new System.Drawing.Size(38, 21);
-            this.label272.TabIndex = 121;
-            this.label272.Text = "VOC";
-            // 
-            // label273
-            // 
-            this.label273.AutoSize = true;
-            this.label273.BackColor = System.Drawing.Color.Silver;
-            this.label273.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label273.Location = new System.Drawing.Point(92, 457);
-            this.label273.Name = "label273";
-            this.label273.Size = new System.Drawing.Size(46, 21);
-            this.label273.TabIndex = 120;
-            this.label273.Text = "GHGs";
-            // 
-            // label274
-            // 
-            this.label274.AutoSize = true;
-            this.label274.BackColor = System.Drawing.Color.Silver;
-            this.label274.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label274.Location = new System.Drawing.Point(102, 419);
-            this.label274.Name = "label274";
-            this.label274.Size = new System.Drawing.Size(34, 21);
-            this.label274.TabIndex = 119;
-            this.label274.Text = "N20";
-            this.label274.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label275
-            // 
-            this.label275.AutoSize = true;
-            this.label275.BackColor = System.Drawing.Color.Silver;
-            this.label275.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label275.Location = new System.Drawing.Point(102, 380);
-            this.label275.Name = "label275";
-            this.label275.Size = new System.Drawing.Size(36, 21);
-            this.label275.TabIndex = 118;
-            this.label275.Text = "CH4";
-            // 
-            // label276
-            // 
-            this.label276.AutoSize = true;
-            this.label276.BackColor = System.Drawing.Color.Silver;
-            this.label276.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label276.Location = new System.Drawing.Point(103, 343);
-            this.label276.Name = "label276";
-            this.label276.Size = new System.Drawing.Size(37, 21);
-            this.label276.TabIndex = 117;
-            this.label276.Text = "CO2";
-            // 
-            // label277
-            // 
-            this.label277.AutoSize = true;
-            this.label277.BackColor = System.Drawing.Color.Silver;
-            this.label277.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label277.Location = new System.Drawing.Point(69, 307);
-            this.label277.Name = "label277";
-            this.label277.Size = new System.Drawing.Size(72, 21);
-            this.label277.TabIndex = 116;
-            this.label277.Text = "Petroleum";
-            // 
-            // label278
-            // 
-            this.label278.AutoSize = true;
-            this.label278.BackColor = System.Drawing.Color.Silver;
-            this.label278.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label278.Location = new System.Drawing.Point(59, 268);
-            this.label278.Name = "label278";
-            this.label278.Size = new System.Drawing.Size(81, 21);
-            this.label278.TabIndex = 115;
-            this.label278.Text = "Fossil Fuels";
-            // 
-            // label279
-            // 
-            this.label279.AutoSize = true;
-            this.label279.BackColor = System.Drawing.Color.Silver;
-            this.label279.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label279.Location = new System.Drawing.Point(42, 229);
-            this.label279.Name = "label279";
-            this.label279.Size = new System.Drawing.Size(98, 21);
-            this.label279.TabIndex = 114;
-            this.label279.Text = "WTP Efficiency";
-            // 
-            // label280
-            // 
-            this.label280.AutoSize = true;
-            this.label280.BackColor = System.Drawing.Color.Silver;
-            this.label280.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label280.Location = new System.Drawing.Point(55, 195);
-            this.label280.Name = "label280";
-            this.label280.Size = new System.Drawing.Size(85, 21);
-            this.label280.TabIndex = 113;
-            this.label280.Text = "Total Energy";
             // 
             // panel24
             // 
@@ -26229,150 +26373,6 @@
             this.panel68.Size = new System.Drawing.Size(294, 572);
             this.panel68.TabIndex = 47;
             // 
-            // label180
-            // 
-            this.label180.AutoSize = true;
-            this.label180.BackColor = System.Drawing.Color.Silver;
-            this.label180.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label180.Location = new System.Drawing.Point(103, 501);
-            this.label180.Name = "label180";
-            this.label180.Size = new System.Drawing.Size(37, 21);
-            this.label180.TabIndex = 138;
-            this.label180.Text = "SOX";
-            // 
-            // label340
-            // 
-            this.label340.AutoSize = true;
-            this.label340.BackColor = System.Drawing.Color.Silver;
-            this.label340.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label340.Location = new System.Drawing.Point(99, 462);
-            this.label340.Name = "label340";
-            this.label340.Size = new System.Drawing.Size(42, 21);
-            this.label340.TabIndex = 137;
-            this.label340.Text = "PM10";
-            // 
-            // label341
-            // 
-            this.label341.AutoSize = true;
-            this.label341.BackColor = System.Drawing.Color.Silver;
-            this.label341.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label341.Location = new System.Drawing.Point(101, 425);
-            this.label341.Name = "label341";
-            this.label341.Size = new System.Drawing.Size(40, 21);
-            this.label341.TabIndex = 136;
-            this.label341.Text = "NOX";
-            // 
-            // label342
-            // 
-            this.label342.AutoSize = true;
-            this.label342.BackColor = System.Drawing.Color.Silver;
-            this.label342.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label342.Location = new System.Drawing.Point(110, 385);
-            this.label342.Name = "label342";
-            this.label342.Size = new System.Drawing.Size(30, 21);
-            this.label342.TabIndex = 135;
-            this.label342.Text = "CO";
-            // 
-            // label343
-            // 
-            this.label343.AutoSize = true;
-            this.label343.BackColor = System.Drawing.Color.Silver;
-            this.label343.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label343.Location = new System.Drawing.Point(103, 351);
-            this.label343.Name = "label343";
-            this.label343.Size = new System.Drawing.Size(38, 21);
-            this.label343.TabIndex = 134;
-            this.label343.Text = "VOC";
-            // 
-            // label344
-            // 
-            this.label344.AutoSize = true;
-            this.label344.BackColor = System.Drawing.Color.Silver;
-            this.label344.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label344.Location = new System.Drawing.Point(95, 311);
-            this.label344.Name = "label344";
-            this.label344.Size = new System.Drawing.Size(46, 21);
-            this.label344.TabIndex = 133;
-            this.label344.Text = "GHGs";
-            // 
-            // label345
-            // 
-            this.label345.AutoSize = true;
-            this.label345.BackColor = System.Drawing.Color.Silver;
-            this.label345.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label345.Location = new System.Drawing.Point(108, 274);
-            this.label345.Name = "label345";
-            this.label345.Size = new System.Drawing.Size(34, 21);
-            this.label345.TabIndex = 132;
-            this.label345.Text = "N20";
-            this.label345.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label346
-            // 
-            this.label346.AutoSize = true;
-            this.label346.BackColor = System.Drawing.Color.Silver;
-            this.label346.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label346.Location = new System.Drawing.Point(107, 234);
-            this.label346.Name = "label346";
-            this.label346.Size = new System.Drawing.Size(36, 21);
-            this.label346.TabIndex = 131;
-            this.label346.Text = "CH4";
-            // 
-            // label347
-            // 
-            this.label347.AutoSize = true;
-            this.label347.BackColor = System.Drawing.Color.Silver;
-            this.label347.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label347.Location = new System.Drawing.Point(105, 194);
-            this.label347.Name = "label347";
-            this.label347.Size = new System.Drawing.Size(37, 21);
-            this.label347.TabIndex = 130;
-            this.label347.Text = "CO2";
-            // 
-            // label348
-            // 
-            this.label348.AutoSize = true;
-            this.label348.BackColor = System.Drawing.Color.Silver;
-            this.label348.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label348.Location = new System.Drawing.Point(70, 158);
-            this.label348.Name = "label348";
-            this.label348.Size = new System.Drawing.Size(72, 21);
-            this.label348.TabIndex = 129;
-            this.label348.Text = "Petroleum";
-            // 
-            // label349
-            // 
-            this.label349.AutoSize = true;
-            this.label349.BackColor = System.Drawing.Color.Silver;
-            this.label349.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label349.Location = new System.Drawing.Point(60, 119);
-            this.label349.Name = "label349";
-            this.label349.Size = new System.Drawing.Size(81, 21);
-            this.label349.TabIndex = 128;
-            this.label349.Text = "Fossil Fuels";
-            // 
-            // label350
-            // 
-            this.label350.AutoSize = true;
-            this.label350.BackColor = System.Drawing.Color.Silver;
-            this.label350.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label350.Location = new System.Drawing.Point(44, 92);
-            this.label350.Name = "label350";
-            this.label350.Size = new System.Drawing.Size(98, 21);
-            this.label350.TabIndex = 127;
-            this.label350.Text = "WTP Efficiency";
-            // 
-            // label351
-            // 
-            this.label351.AutoSize = true;
-            this.label351.BackColor = System.Drawing.Color.Silver;
-            this.label351.Font = new System.Drawing.Font("Apple Garamond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label351.Location = new System.Drawing.Point(56, 50);
-            this.label351.Name = "label351";
-            this.label351.Size = new System.Drawing.Size(85, 21);
-            this.label351.TabIndex = 126;
-            this.label351.Text = "Total Energy";
-            // 
             // ResultsSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -26408,7 +26408,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel8);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(2661, 2451);
             this.MinimumSize = new System.Drawing.Size(1914, 851);
             this.Name = "ResultsSheet";
@@ -26463,7 +26463,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -26497,6 +26496,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown51)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown58)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown57)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown79)).EndInit();
