@@ -5,16 +5,26 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace TestingGraphGeneration
+using System.IO;
+using PlugInsInterfaces.DataTypes.Resource;
+using PlugInsInterfaces.DataTypes;
+using PlugInsInterfaces.DataTypes.Pathway;
+using PlugInsInterfaces.DataTypes.Mix;
+using PlugInsInterfaces.ResultTypes;
+using TEAMSModule;
+namespace TEAMSModule
 {
-    public partial class Form1 : Form
+    public partial class GraphSheet : Form
     {
-        public Form1()
+        public ResultsSheet res;
+        public GraphSheet(ResultsSheet rs)
         {
+            res = rs;
             InitializeComponent();
         }
+
         /// <summary>
         /// This sets up the data for Generate_Graph() to use.
         /// </summary>

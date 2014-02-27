@@ -485,6 +485,7 @@ namespace WindowsApplication1
         public Update u;
         public Fuel_Specs GVE;
         public ResultsSheet rs;
+        public GraphSheet gs;
         public TEAMS()
         {
             InitializeComponent();
@@ -1481,6 +1482,8 @@ namespace WindowsApplication1
                 runSimulationToolStripMenuItem.BackColor = Color.Green;
                 ResultsSheet rs = new ResultsSheet(this);
                 rs.Show();
+                gs = new GraphSheet(rs);
+                gs.Show();
             }
         }
         //This will set all variables to their default value, as is present in the TEAMS spreadsheet model

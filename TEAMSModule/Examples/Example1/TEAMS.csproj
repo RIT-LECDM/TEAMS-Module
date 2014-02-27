@@ -38,6 +38,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,7 +52,13 @@
     <Compile Include="CopyrightPage.Designer.cs">
       <DependentUpon>CopyrightPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Example1.cs" />
+    <Compile Include="GraphSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphSheet.Designer.cs">
+      <DependentUpon>GraphSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TEAMSPlugin.cs" />
     <Compile Include="Update.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +108,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CopyrightPage.resx">
       <DependentUpon>CopyrightPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphSheet.resx">
+      <DependentUpon>GraphSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update.resx">
       <DependentUpon>Update.cs</DependentUpon>

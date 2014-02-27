@@ -1,6 +1,6 @@
-﻿namespace TestingGraphGeneration
+﻿namespace TEAMSModule
 {
-    partial class Form1
+    partial class GraphSheet
     {
         /// <summary>
         /// Required designer variable.
