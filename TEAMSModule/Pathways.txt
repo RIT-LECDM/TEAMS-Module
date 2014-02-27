@@ -1,0 +1,483 @@
+id="1" name="Natural Gas as Stationary Fuels" notes="" help=""> 
+id="1001" name="North American Natural Gas for Refueling Station Gaseous H2 Production" notes="" help="">
+id="1002" name="North American Natural Gas for Central Plant Gaseous H2 Production" notes="" help="">
+id="1003" name="North American Natural Gas for Liquid H2 Production" notes="" help="">
+id="2" name="Natural Gas for Electricity generation" notes="" help="">
+id="3" name="Liquefied Natural Gas (as an intermediate fuel) from Non-North American Natural Gas" notes="" help="">
+id="4" name="Liquefied Natural Gas (As an Intermediate Fuel) from Flared Gas" notes="" help="">
+id="6" name="Liquefied Natural Gas (As a Transportation Fuel) from North American Natural Gas" notes="" help="">
+id="25" name="Liquefied Natural Gas (As a Transportation Fuel) from Non-North American Natural Gas" notes="" help="">
+id="7" name="Liquefied Natural Gas (As a Transportation Fuel) from Flared Gas" notes="" help="">
+id="15" name="Dimethyl Ether from Non-North American Natural Gas" notes="" help="">
+id="11" name="Dimethyl Ether from North American Natural Gas" notes="" help="">
+id="16" name="Dimethyl Ether from Flared Gas" notes="" help="">
+id="111" name="Dimethyl Ether from Landfill Gas" notes="" help="">
+id="20" name="Liquefied Petroleum Gas from North American Natural Gas" notes="" help="">
+id="12" name="Liquefied Petroleum Gas from Non-North American Natural Gas" notes="" help="">
+id="191" name="Fischer-Tropsch Diesel from Landfill Gas" notes="" help="">
+id="75" name="Fischer-Tropsch Diesel from North American Natural Gas" notes="" help="">
+id="22" name="Fischer-Tropsch Diesel from Non-North American Natural Gas" notes="" help="">
+id="24" name="Fischer-Tropsch Diesel from Non-North American Flared Gas" notes="" help="">
+id="29" name="Naphtha from Non-North American Natural Gas" notes="" help="">
+id="13" name="Naphtha from North American Natural Gas" notes="" help="">
+id="131" name="Naphtha from Landfill Gas" notes="" help="">
+id="30" name="Naphtha from Flared Gas" notes="" help="">
+id="34" name="Conventional Crude for U.S. Refineries" notes="" help="">
+id="340" name="Conventional Crude for Use in CA Refineries" notes="" help="">
+id="341" name="Conventional Crude Recovery" notes="" help="">
+id="35" name="Crude from Oil Sands by Surface Mining" notes="" help="">
+id="36" name="Crude from Oil Sands by In Situ Production" notes="" help="">
+id="5" name="Compressed Natural Gas from North American Natural Gas" notes="" help="">
+id="8" name="Compressed Natural Gas from Non-North American Liquified Natural Gas" notes="" help="">
+id="14" name="Compressed Natural Gas from Flared Gas" notes="" help="">
+id="9" name="Methanol from North American Natural Gas" notes="" help="">
+id="122" name="Landfill Gas to Methanol" notes="This pathway should work perfectly with the GREET1_2012_base, in which the input for MeOH production is the NG produced from LFG as an intermediate fuel.  However, in Excel, there is an equivalent of 1mmbtu energy credit in the LFT to NG production pathway while .Net does not have this feature to handle energy credit.  If the amount of energy of LFG is creditted back, then the .Net results should match with Excel.  In GREET1_2011_base, the input part is replaced with Renewable NG by Dane to simplify the calculation.  Dane also hard-codedly input the emission credits into .Net in the previous version of this pathway via process &quot;MeOH Production from LFG&quot;." help="">
+id="23" name="NNA Natural Gas to Methanol" notes="" help="">
+id="2301" name="Methanol from NNA Flared Gas" notes="" help="">
+id="37" name="Gasoline Blendstock from Crude Oil-Crude Recovery for US Refineries" notes="" help="">
+id="57" name="Reformulated Gasoline from Crude Oil" notes="" help="">
+id="58" name="California Gasoline Blendstock from Crude Oil" notes="" help="">
+id="40" name="Conventional Diesel US Refineries Average" notes="" help="">
+id="61" name="Low-Sulfur Diesel from Crude Oil" notes="" help="">
+id="610" name="Low-Sulfur Diesel Production California" notes="" help="">
+id="41" name="Conventional Diesel from California Refineries" notes="" help="">
+id="400" name="Conventional Diesel from Crude Oil" notes="" help="">
+id="401" name="Conventional Diesel from Oil Sands Products (Surface Mining)" notes="" help="">
+id="402" name="Conventional Diesel from Oil Sands Products (SITU Production)" notes="" help="">
+id="17" name="Coal for Power Plants" notes="" help="">
+id="170" name="Coal Mining and Cleaning" notes="" help="">
+id="171" name="Bituminous Coal Mining and Cleaning" notes="" help="">
+id="18" name="Coal for H2 Central Plants or Fischer-Tropsch Diesel Plants" notes="" help="">
+id="21" name="Coal for Coking Plants" notes="" help="">
+id="66" name="Oil-Fired Power Plant" notes="" help="">
+id="67" name="North American NG Power Production (Steam Turbine)" notes="" help="">
+id="68" name="North American NG Power Production (Simple Cycle)" notes="" help="">
+id="69" name="North American NG Power Production (Combined Cycle)" notes="" help="">
+id="690" name="NG-Fired Combined-Cycle Gas Turbine Plant with Distribution" notes="" help="">
+id="70" name="Coal Power Production (Steam Turbine)" notes="" help="">
+id="701" name="Coal Power Production (IGCC) with Distribution" notes="" help="">
+id="7011" name="Hydroelectric Power" notes="" help="">
+id="70110" name="Hydroelectric Power with Distribution" notes="" help="">
+id="71" name="Biomass-Fired Power Plant (Steam Turbine) with Distribution" notes="" help="">
+id="73" name="Other Power Plants" notes="" help="">
+id="28" name="Compressed Gaseous Hydrogen via Pipeline from Natural Gas" notes="" help="">
+id="2800" name="Compressed Gaseous Hydrogen via Tube Trailer from Natural Gas" notes="" help="">
+id="281" name="Gaseous Hydrogen from NA NG (H2A) for Process Fuels" notes="" help="">
+id="2801" name="Gaseous Hydrogen from NA NG Transported By Tube Trailer" notes="" help="">
+id="31" name="Compressed Gaseous Hydrogen via Pipeline from Solar Energy" notes="" help="">
+id="3100" name="Compressed Gaseous Hydrogen via Tube Trailer from Solar Energy" notes="" help="">
+id="32" name="Compressed Gaseous Hydrogen via Pipeline from Nuclear" notes="" help="">
+id="3200" name="Compressed Gaseous Hydrogenvia Tube Trailer from Nuclear" notes="" help="">
+id="33" name="Compressed Gaseous Hydrogen via Pipeline from Electrolysis (HTGR)" notes="" help="">
+id="3300" name="Compressed Gaseous Hydrogen via Tube Trailer from Electrolysis (HTGR)" notes="" help="">
+id="43" name="Compressed Gaseous Hydrogen from Coal via Pipeline" notes="" help="">
+id="4300" name="Compressed Gaseous Hydrogen via Tube Trailer from Coal" notes="" help="">
+id="44" name="Compressed Gaseous Hydrogen via Pipeline from Coke Oven Gas" notes="" help="">
+id="4400" name="Compressed Gaseous Hydrogen via Tube Trailer from Coke Oven Gas" notes="" help="">
+id="4401" name="Compressed Gaseous Hydrogen from Coke Oven Gas" notes="" help="">
+id="4402" name="Compressed Gaseous Hydrogen from Biomass" notes="" help="">
+id="4403" name="Liquid Hydrogen from Biomass (Farmed Trees)" notes="" help="">
+id="44033" name="Liquid Hydrogen from Biomass (Switchgrass)" notes="" help="">
+id="45" name="Compressed Refueling Station Gaseous Hydrogen Produced from Natural Gas" notes="" help="">
+id="46" name="Compressed Gaseous Hydrogen from Methanol" notes="" help="">
+id="461" name="Compressed Gaseous Hydrogen from Ethanol" notes="" help="">
+id="47" name="Liquid Hydrogen from North American Natural Gas" notes="" help="">
+id="48" name="Liquid Hydrogen from Solar Power" notes="" help="">
+id="49" name="Liquid Hydrogen (Thermo-Chemical Cracking of Water) from Nuclear" notes="" help="">
+id="50" name="Liquid Hydrogen from Electrolysis (HTGR)" notes="" help="">
+id="51" name="Liquid Hydrogen from Coke Oven Gas Central Plants" notes="" help="">
+id="52" name="Liquid Hydrogen from Coal" notes="" help="">
+id="53" name="Liquid Hydrogen from Natural Gas" notes="" help="">
+id="54" name="LWR Fuel from Uranium Ore" notes="" help="">
+id="56" name="LWR Plant from Uranium Fuel" notes="" help="">
+id="112" name="HTGR Plant from Uranium Fuel" notes="" help="">
+id="83" name="HTGR Fuel from Uranium Ore" notes="" help="">
+id="55" name="Uranium Dioxide from Uranium Ore" notes="" help="">
+id="59" name="Liquefied Petroleum Gas from LFG" notes="" help="">
+id="60" name="Residual Oil (Petroleum) from Crude Oil" notes="" help="">
+id="62" name="Crude Naphtha from Crude Oil" notes="" help="">
+id="63" name="Pet Coke from Bituminous Oil Surface Mining" notes="" help="">
+id="630" name="Pet Coke from Bituminous Oil in Situ" notes="" help="">
+id="64" name="Compressed Gaseous Hydrogen from Electricity" notes="" help="">
+id="65" name="Liquid Hydrogen from U.S. Electricity" notes="" help="">
+id="26" name="Non-North American Natural Gas Feedstock Production" notes="NNA NG assumes the same parameters as NA NG, so we prefer to use the NA NG upstream and limit the maintenance on cloned NNA NG processes" help="">
+id="27" name="Non-North American Flared Gas Feedstock Production" notes="" help="">
+id="2001" name="Ammonia Production" notes="" help="">
+id="20010" name="Ammonia Production as Intermediate Fertilizer" notes="" help="">
+id="2002" name="Urea Production" notes="" help="">
+id="2003" name="Nitric Acid Production" notes="" help="">
+id="2004" name="Ammonium Nitrate Production" notes="" help="">
+id="2005" name="Sulfuric Acid Production" notes="" help="">
+id="2006" name="Phosphoric rock Production" notes="" help="">
+id="2007" name="Phosphoric acid Production" notes="" help="">
+id="2008" name="Potassium Oxide Production" notes="" help="">
+id="2009" name="Calcium Carbonate Production" notes="" help="">
+id="2010" name="Atrazine Production" notes="" help="">
+id="2011" name="Matolachlor Production" notes="" help="">
+id="2012" name="Acetochlor Production" notes="" help="">
+id="2013" name="Cyanazine Production" notes="" help="">
+id="2014" name="Insecticides Production" notes="" help="">
+id="2016" name="US Average Corn Production for Ethanol Plant" notes="" help="">
+id="20136" name="Sugar Cane for Brazil Ethanol Plant" notes="" help="">
+id="2017" name="Steam Production from North American Natural Gas" notes="" help="">
+id="93" name="Steam Production via Small Boiler from North American Natural Gas" notes="" help="">
+id="96" name="Steam Production from Liquefied Petroleum Gas" notes="" help="">
+id="2018" name="Soybean Production" notes="" help="">
+id="2019" name="Soyoil from Soybeans (for other uses)" notes="" help="">
+id="2020" name="Biodiesel Production from Soybeans" notes="" help="">
+id="2021" name="Renewable Diesel I from Soybeans" notes="" help="">
+id="2022" name="Renewable Diesel II from Soybeans" notes="" help="">
+id="2023" name="Renewable Gasoline from Soybeans" notes="" help="">
+id="2024" name="Ethanol from Dry Mill Corn" notes="" help="">
+id="20241" name="Butanol from Corn" notes="" help="">
+id="20242" name="Acetone from Corn" notes="" help="">
+id="2025" name="Ethanol from Wet Mill Corn" notes="" help="">
+id="87" name="Switchgrass for Ethanol Plant" notes="" help="">
+id="8710" name="Switchgrass Ethanol: Fermentation" notes="" help="">
+id="871" name="Corn Stover for Ethanol Production" notes="" help="">
+id="8711" name="Corn Stover Ethanol: Fermentation" notes="" help="">
+id="2026" name="Forest Residue Production" notes="" help="">
+id="20261" name="Forest Residue Ethanol: Fermentation" notes="" help="">
+id="2028" name="Tree Farming for Ethanol Production" notes="" help="">
+id="20281" name="Ethanol via Fermentation from Farmed Trees" notes="" help="">
+id="20282" name="Ethanol from Sugar Cane Bagasse Produced and Used in Brazil " notes="" help="">
+id="20283" name="Ethanol from Sugarcane Produced in Brazil and Used in US" notes="" help="">
+id="2031" name="Dimethyl Ether (no export) from Biomass Gasification" notes="" help="">
+id="2032" name="Dimethyl Ether (with Steam/Electricity Export) from Biomass Gasification" notes="" help="">
+id="78" name="Fischer-Tropsch Diesel  from Bituminous Coal" notes="" help="">
+id="82" name="Dimethyl Ether from Bituminous Coal" notes="" help="">
+id="84" name="Methanol from Coal" notes="" help="">
+id="85" name="Methanol (no export) from Biomass" notes="" help="">
+id="86" name="Methanol (with export) from Biomass" notes="" help="">
+id="88" name="Liquid Hydrogen (no export) from Biomass" notes="" help="">
+id="89" name="Liquid Hydrogen (with export) from Biomass" notes="" help="">
+id="90" name="Compressed Gaseous Hydrogen from Pet Coke" notes="" help="">
+id="901" name="Compressed Gaseous Hydrogen from Pet Coke via Gasification" notes="" help="">
+id="91" name="Compressed Gaseous Hydrogen from Pet Coke with Tube Trailers Loading" notes="" help="">
+id="92" name="Liquefied Petroleum Gas from Crude Oil" notes="" help="">
+id="94" name="Isobutene from Natural Gas LPG" notes="" help="">
+id="97" name="Isobutene from Crude Oil LPG" notes="" help="">
+id="95" name="Methyl tert-butyl Produced Offsite" notes="" help="">
+id="98" name="Methyl tert-butyl Produced Onsite" notes="" help="">
+id="99" name="Tert-Amyl Methyl Ether Produced Offsite" notes="" help="">
+id="100" name="Tert-Amyl Methyl Ether Produced Onsite" notes="" help="">
+id="101" name="Ethyl Tert-Butyl Produced Offsite" notes="" help="">
+id="102" name="Ethyl Tert-Butyl Produced Onsite" notes="" help="">
+id="103" name="Steam from Natural Gas Boiler" notes="" help="">
+id="104" name="Steam from Liquified Natural Gas Boiler" notes="" help="">
+id="38" name="Nuclear-LWR Power Plant" notes="" help="">
+id="113" name="Nuclear-HTGR Power Plant" notes="" help="">
+id="81" name="Uranium Dioxide" notes="No transportation and distribution lines are included here because this is used to produce Hydrogen on site." help="">
+id="39" name="PV Power Plant" notes="" help="">
+id="42" name="Soy Meal from Soybean" notes="" help="">
+id="5555" name="Transported Electricity for U.S." notes="" help="">
+id="5556" name="Liquid Hydrogen from Methanol" notes="" help="">
+id="5557" name="Liquid Hydrogen from Ethanol" notes="" help="">
+id="105" name="Switchgrass IGCC Power Plant" notes="" help="">
+id="106" name="Electricty from Farmed Trees Power Production (IGCC)" notes="" help="">
+id="107" name="Farmed Trees Power Production (Steam Cycle)" notes="" help="">
+id="108" name="Switchgrass Power Production (Steam Turbine)" notes="" help="">
+id="109" name="Electricity Forest Residue IGCC Generation" notes="" help="">
+id="110" name="Forest Residue Power Production (Utility Boiler)" notes="" help="">
+id="1007" name="Transported Electricity from Farmed Trees" notes="" help="">
+id="1008" name="Transported Electricity from Herbaceous" notes="" help="">
+id="1009" name="Transported Electricity from Forest Residue" notes="" help="">
+id="7001" name="Transported Electricity from Coal Fired Plants" notes="" help="">
+id="6900" name="Transportated Electricity from NG Fired Plant" notes="" help="">
+id="6666" name="Transportated Electricity from Oil Fired Plant" notes="" help="">
+id="3333" name="Transportated Electricity from Other Power Plants" notes="" help="">
+id="3800" name="Transported Electricity from Nuclear LWR Plants" notes="" help="">
+id="7200" name="Transported Electricity from Nuclear HTGR Plants" notes="" help="">
+id="9876" name="Geothermal Power" notes="" help="">
+id="9875" name="Transported Electricity from Geothermal Power" notes="" help="">
+id="39001" name="Transported Electricity from Solar Power" notes="" help="">
+id="10000" name="Wind Power" notes="" help="">
+id="100011" name="Transported Electricity from Wind Power" notes="" help="">
+id="10002" name="Biogenic Waste, Pumped Storage, and etc." notes="" help="">
+id="10003" name="Transported Electricity from Biogenic Waste, Pumped Storage, and etc." notes="" help="">
+id="10004" name="Fischer-Tropsch Diesel from Forest Residue" notes="" help="">
+id="10005" name="Dimethyl Ether from Forest Residue" notes="" help="">
+id="10006" name="Dimethyl Ether from Farmed Trees" notes="" help="">
+id="10007" name="Dimethyl Ether  from Herbaceous Biomass" notes="" help="">
+id="10008" name="Dimethyl Ether  from Corn Stover" notes="" help="">
+id="10009" name="Fischer-Tropsch Diesel from Farmed Trees" notes="" help="">
+id="10010" name="Fischer-Tropsch Diesel from Switchgrass" notes="" help="">
+id="10011" name="Fischer-Tropsch Diesel from Corn Stover" notes="" help="">
+id="10500" name="Switchgrass IGCC Power Plant with distribution" notes="" help="">
+id="114" name="U235 from U02 3.5% enriched UO2 " notes="" help="">
+id="115" name="U235 from 10% enriched UO2" notes="" help="">
+id="10" name="Nitrogen from Ammonia" notes="" help="">
+id="116" name="Nitrogen from Urea " notes="" help="">
+id="117" name="Nitrogen from Ammonium Nitrate" notes="" help="">
+id="118" name="Renewable Diesel II from Corn Stover" notes="" help="">
+id="119" name="North American Shale Gas Recovery" notes="Added from GREET1_2011 Excel data" help="">
+id="120" name="North American Natural Gas Regular Recovery" notes="Used only with shale gas recovery pathway mix." help="">
+id="121" name="North American Natural Gas from Shale and Regular Processed" notes="" help="">
+id="124" name="Palm FFB for Biodiesel Plant" notes="" help="">
+id="1220" name="Transported Electricity from Biomass Fired Power Plants" notes="" help="">
+id="125" name="Rapeseed for Biodiesel Plant" notes="" help="">
+id="126" name="Jatropha Farming for Biodiesel Plant" notes="" help="">
+id="127" name="Camelina Farming for Biodiesel Plant" notes="" help="">
+id="128" name="North American Shale Gas Feedstock Production" notes="From GREET1_2011 data" help="">
+id="130" name="NA NG from Shale and Regular Recovery for Electricity generation" notes="" help="">
+id="132" name="NG-Fired Power Plant with Distribution" notes="" help="">
+id="133" name="Oil-Fired Power Plant with Distribution" notes="" help="">
+id="134" name="Coal Power Production (IGCC)" notes="" help="">
+id="135" name="Coal Power Production (Steam Turbine) with Distribution" notes="" help="">
+id="136" name="Forest Residue Power Production (Utility Boiler) with Transmission and Distribution" notes="" help="">
+id="137" name="Biomass (Herbaceous)-Fired power Plant (IGCC) with Distribution" notes="" help="">
+id="138" name="Nuclear-LWR Power Plant with Distribution" notes="" help="">
+id="139" name="Miscanthus Farming and Transportation for Ethanol" notes="" help="">
+id="140" name="Miscanthus Ethanol: Fermentation" notes="" help="">
+id="141" name="North American NG Power Production (Simple Cycle) with Distribution" notes="" help="">
+id="142" name="North American NG Power Production (Steam Turbine) with Distribution" notes="" help="">
+id="143" name="Biomass (woody)-Fired IGCC Power Plant with Distribution" notes="" help="">
+id="144" name="Biomass (Farmed Trees)-Fired Power Plant (Steam Turbine) with Distribution" notes="" help="">
+id="145" name="Biomass (Herbaceous)-Fired Steam Turbine Power Plant with Distribution" notes="" help="">
+id="146" name="Biomass (Forest Residue)-Fired Power Plant (Steam Turbine) with Distribution" notes="" help="">
+id="147" name="Biomass (Forest Residue)-Fired power Plant (IGCC) with Distribution" notes="" help="">
+id="148" name="Soyoil from Soybeans (unallocated)" notes="" help="">
+id="72" name="Production of n-Hexane from n-Hexane" notes="" help="">
+id="149" name="Soyoil from Soybeans (for BD)" notes="" help="">
+id="150000" name="Landfill Gas to LNG" notes="According to GREET excel default, there is no Landfill to LNG Plant transportation phase." help="">
+id="150" name="Conventional Jet Fuel from Crude Oil" notes="" help="">
+id="2991238" name="North American NG Power Production (Combined Cycle) with Distribution" notes="" help="">
+id="4184480" name="Ultra Low-Sulfur Jet Fuel from Crude Oil" notes="" help="">
+id="4198668" name="Corn Stover for Integrated Pyrolisis Plant" notes="" help="">
+id="4207104" name="Renewable Gasoline from Corn Stover" notes="" help="">
+id="6617378" name="Alberta Transported Electricity" notes="" help="">
+id="8329287" name="Animal Waste Anaerobic Digestion to Natural Gas as an Intermediate Fuel" notes="Manure to Renewable Natural Gas (RNG), then upgraded to NG Intermediate Fuel" help="">
+id="8346094" name="Animal Waste Anaerobic Digestion to Off-site CNG Refueling" notes="Manure to Renewable Natural Gas (RNG), then upgraded to NG Intermediate Fuel, then compressed off-site to CNG" help="">
+id="8351581" name="Animal Waste Anaerobic Digestion to Compressed Natural Gas (CNG)" notes="On-site CNG compression" help="">
+id="8353922" name="LNG: Animal Waste Anaerobic Digestion to Liquefied Natural Gas" notes="" help="">
+id="9649500" name="Sugarcane for Brazil Ethanol Plant" notes="" help="">
+id="9651358" name="Ethanol from Sugarcane Produced and Used in Brazil " notes="" help="">
+id="9651848" name="Sugarcane Produced and Transported  in Brazil " notes="" help="">
+id="9719909" name="Ammonia Production in Brazil" notes="" help="">
+id="9720423" name="Ammonium Nitrate Production in Brazil" notes="" help="">
+id="9720500" name="Urea Production in Brazil" notes="" help="">
+id="9720594" name="Brazil Nitrogen from Ammonia" notes="" help="">
+id="9720757" name="Brazil Nitrogen from Ammonium Nitrate" notes="" help="">
+id="9720776" name="Brazil Nitrogen from Urea " notes="" help="">
+id="9727378" name="Brazil Nitric Acid Production" notes="" help="">
+id="11284469" name="Wastewater Treatment to Natural Gas" notes="Anaerobic Digestion of waste water to renewable natural gas (RNG), upgraded to NG as an intermediate fuel" help="">
+id="11288674" name="Wastewater Sludge to CNG (Off-site Refueling)" notes="" help="">
+id="11292105" name="Wastewater Sludge to CNG (On-site Refueling)" notes="Anaerobic digestion of waste water to renewable natural gas that is upgraded and compressed to CNG on-site." help="">
+id="11362094" name="Wastewater Treatment to Liquefied Natural Gas (LNG)" notes="RNG produced from the anaerobic digestion of waste wate sludge, then upgraded and liquefied to LNG." help="">
+id="12133951" name="Ammonia as an Intermediate Product  in Brazil" notes="" help="">
+id="13106425" name="Corn Stover for Standalone Bio-refinery" notes="" help="">
+id="13106724" name="Corn Stover for Distributed Pyrolysis Plant" notes="" help="">
+id="13356055" name="Corn Stover to Pyrolysis Liquid Fuel Renewable Gasoline (Integrated System)" notes="" help="">
+id="13773932" name="Fischer-Tropsch Jet Fuel from North American Natural Gas" notes="" help="">
+id="13774999" name="Fischer-Tropsch Jet Fuel from Biomass" notes="" help="">
+id="13881220" name="Fischer-Tropsch Jet Fuel from Landfill Gas" notes="" help="">
+id="13970892" name="Dimethyl Ether from Landfill Gas/Renewable Gas" notes="" help="">
+id="14483517" name="Landfill Gas to NG as an intermediate fuel" notes="I have completely recreated this single process pathway by recalculating the process fuel share and adding the emission credit. It is essential to make this pathway work first, because it is used for several other pathways (including LFG to CNG, LFG to MeOH, LFG to DME, LFG to FTD and LFG to FT Napththa).~QZ" help="">
+id="17578897" name="Stream produced from NNA Flared Gas at the MeOH plant" notes="" help="">
+id="17581148" name="Stream produced from NNA Flared Gas at the DME plant" notes="" help="">
+id="17581206" name="Stream produced from NNA Flared Gas at the FT plant" notes="" help="">
+id="17581226" name="Stream produced from NNA Flared Gas at the CNG plant" notes="" help="">
+id="17581282" name="Stream produced from NNA Flared Gas at the LNG plant" notes="" help="">
+id="18548805" name="Corn Stover Collection" notes="" help="">
+id="18704629" name="Corn Stover to Liquid Fuel Renewable Gasoline via Pyrolysis (Distributed System)" notes="" help="">
+id="18796478" name="Landfill Gas to CNG (Off-Site Refueling)" notes="Changed by QZ to directly use &quot;LFG to NG as an intermediate fuel&quot; as the pathway input." help="">
+id="18800521" name="Fischer-Tropsch Jet Fuel from Landfill Gas-using NG from LFG as input" notes="" help="">
+id="19311014" name="Bio-char to soil (40 miles)" notes="80 miles is used for Pyrolysis Renewable Gasoline (Integrated System)&#xD;&#xA;40 miles is used for Pyrolysis Renewable Gasoline (Distributed System)" help="">
+id="19391067" name="Stable Bio-crude via Corn Stover Pyrolysis and Stabilization (Distributed System)" notes="" help="">
+id="19402285" name="Pyrolysis Conventional Jet Fuel from Corn Stover Stable Bio-crude Oil" notes="" help="">
+id="19409071" name="Ultra Low-Sulfur Jet Fuel from Corn Stover Stable Bio-crude Oil" notes="" help="">
+id="19410155" name="Forest Residue Production for Integrated Pyrolysis Plant" notes="" help="">
+id="19411381" name="Stable Bio-crude via Forest Residue Pyrolysis and Stabilization (Distributed System)" notes="" help="">
+id="19411521" name="Pyrolysis Conventional Jet Fuel from Forest Residue Stable Bio-crude Oil" notes="" help="">
+id="19412589" name="Ultra Low-Sulfur Jet Fuel from Forest Residue Stable Bio-crude Oil" notes="" help="">
+id="20007870" name="Soy Oil-based Renewable Jet Fuel" notes="" help="">
+id="19927692" name="Fischer-Tropsch Jet Fuel from Flared Gas" notes="" help="">
+id="20017564" name="Palm Oil-based Renewable Jet Fuel" notes="" help="">
+id="19918404" name="Corn Stover to Pyrolysis Liquid Fuel Renewable Diesel (Integrated System)" notes="" help="">
+id="19919356" name="Corn Stover to Liquid Fuel Renewable Diesel via Pyrolysis (Distributed System)" notes="" help="">
+id="19922044" name="Renewable Gasoline from Forest Residue Pyrolysis - Integrated System" notes="" help="">
+id="19925520" name="Forest Residue Production for Distributed Pyrolysis Plant" notes="" help="">
+id="19926422" name="Renewable Gasoline from Forest Residue Pyrolysis - Distributed System and Standalone Bio-Refinery" notes="" help="">
+id="19932872" name="Renewable Diesel from Forest Residue Pyrolysis - Integrated System" notes="" help="">
+id="19933528" name="Renewable Diesel from Forest Residue Pyrolysis - Distributed System and Standalone Bio-Refinery" notes="" help="">
+id="20099895" name="Sodium Brine with Transportation in U.S." notes="" help="">
+id="20099918" name="Starch" notes="" help="">
+id="20099958" name="Corn Steep Liquor" notes="" help="">
+id="20100009" name="Molasses" notes="" help="">
+id="20101350" name="Sodium Hydroxide" notes="" help="">
+id="20101508" name="Glucose" notes="" help="">
+id="20101733" name="Gluco Amylase" notes="" help="">
+id="20101894" name="Cellulase" notes="" help="">
+id="20102033" name="Yeast" notes="" help="">
+id="20102370" name="Alpha Amylase" notes="" help="">
+id="20109095" name="Grain sorghum" notes="" help="">
+id="20109854" name="Grain Sorghum Ethanol" notes="" help="">
+id="20177844" name="Grain sorghum ethanol using RNG as process fuel" notes="" help="">
+id="20179506" name="Sweet sorghum" notes="" help="">
+id="20181452" name="Sweet Sorghum Ethanol Production (Conventional)" notes="" help="">
+id="20185412" name="Forage Sorghum Farming and Transportation" notes="" help="">
+id="20187620" name="Forage Sorghum Ethanol Production			" notes="" help="">
+id="20188501" name="Sweet Sorghum Ethanol (Integrated)" notes="" help="">
+id="20347656" name="Bio-char to soil (80 miles)" notes="80 miles is used for Pyrolysis Renewable Gasoline (Integrated System)&#xD;&#xA;40 miles is used for Pyrolysis Renewable Gasoline (Distributed System)" help="">
+id="20440577" name="Rapeseed Oil-based Renewable Jet Fuel" notes="" help="">
+id="21215885" name="Jatropha Oil-based Renewable Jet Fuel" notes="" help="">
+id="21215991" name="Camelina Oil-based Renewable Jet Fuel" notes="" help="">
+id="21473894" name="Landfill Gas to CNG (On-Site Refueling)" notes="Changed by QZ to directly use &quot;LFG to NG as an intermediate fuel&quot; as the pathway input." help="">
+id="23884365" name="Fischer-Tropsch Jet Fuel from Coal" notes="" help="">
+id="23907624" name="Chlorine Production in U.S." notes="" help="">
+id="23907735" name="Hydrochloric Acid Production in U.S." notes="" help="">
+id="23969702" name="Sodium Brine in U.S." notes="" help="">
+id="31938147" name="Gaseous Hydrogen from Electrolysis (HTGR) for Process Fuels" notes="" help="">
+id="24247191" name="Total: Poplar Farming and Transportation for Ethanol" notes="" help="">
+id="24248753" name="Poplar Ethanol: Fermentation" notes="" help="">
+id="26658796" name="Distilled water production" notes="" help="">
+id="26658813" name="Ethylene glycol production" notes="" help="">
+id="34862483" name="EPDM Production and Compression Molding" notes="" help="">
+id="34863856" name="HDPE Fabrication and Extrusion" notes="" help="">
+id="26668133" name="Liquid Epoxy Resin" notes="" help="">
+id="26668625" name="GPPS Resin" notes="" help="">
+id="26670503" name="HIPS production" notes="" help="">
+id="26674677" name="Copper production" notes="" help="">
+id="25805715" name="On-site Electricity Generation using RNG-Fired Turbine" notes="" help="">
+id="25805751" name="On-site Electricity Generation using RNG-Fired ICE" notes="" help="">
+id="25897836" name="Algae oil production from lipid extraction pathway (LE)" notes="" help="">
+id="25978760" name="Media water to algae farm" notes="" help="">
+id="26654100" name="Diammonium Phosphate" notes="" help="">
+id="26654388" name="Phosphoric acid Production (as intermediate fertilizer inputs)" notes="" help="">
+id="26658867" name="Triple Superphosphate" notes="" help="">
+id="26660665" name="AD Residue" notes="" help="">
+id="28469396" name="Monoammonium Phosphate" notes="" help="">
+id="28807373" name="Iron Ore Production" notes="" help="">
+id="28831398" name="Coke From Coal Production for Steel manufacturing" notes="" help="">
+id="28833949" name="Lime Production from LimeStone" notes="" help="">
+id="29005069" name="Virgin Lead Production" notes="" help="">
+id="29006064" name="Recycled Lead" notes="" help="">
+id="29006971" name="Virgin Nickel Production" notes="" help="">
+id="29002911" name="Limestone Mining" notes="" help="">
+id="29003632" name="Lime (CaO) production" notes="" help="">
+id="29071503" name="Sodium Chloride Production" notes="" help="">
+id="29071974" name="Sodium Nitride production" notes="" help="">
+id="29072513" name="Potassium Chloride production" notes="" help="">
+id="29072876" name="Potassium Hydroxide production" notes="" help="">
+id="29073147" name="Langbeinite (K2SO4.2MgSO4) production" notes="" help="">
+id="29066294" name="Recycled Nickel" notes="" help="">
+id="29066315" name="Nickel Hydroxyde Production" notes="" help="">
+id="29066334" name="Nickel Hydroxyde Recycling" notes="" help="">
+id="29068180" name="Final Shape Cast Virgin Aluminum Product: Combined" notes="" help="">
+id="29080610" name="Copper Wire" notes="" help="">
+id="29086071" name="Glass Production" notes="" help="">
+id="29086084" name="Glass Fiber Production" notes="" help="">
+id="34869687" name="LDPE Fabrication and Injection Molding" notes="" help="">
+id="34873086" name="Nylon 6 Fabrication and Blow Molding" notes="" help="">
+id="34876013" name="Nylon 66 Fabrication and Compression Molding" notes="" help="">
+id="34946083" name="Polyurethane (PUR) Flexible Foam" notes="" help="">
+id="29092899" name="Polyurethane (PUR) Rigid Foam Production" notes="" help="">
+id="29092934" name="Inert Filter Production" notes="" help="">
+id="29092956" name="Carbon Fiber Production" notes="" help="">
+id="29092981" name="Glass Fiber-Reinforced Plastic (GFRP) Production" notes="" help="">
+id="29092998" name="Carbon Fiber-Reinforced Plastic (CFRP) Production" notes="" help="">
+id="29086268" name="Urea-Ammonium Nitrate Solution production  (per ton N product)" notes="" help="">
+id="29088770" name="Nitrogen from Urea-Ammonium Nitrate Solution" notes="The urea-ammonium nitrate solution production has already converted to per unit of N.&#xD;&#xA;" help="">
+id="29089532" name="Nitrogen from Monoammonium phosphate" notes="" help="">
+id="29089581" name="Nitrogen from Diammonium Phosphate" notes="" help="">
+id="29096217" name="Final Compression Molded Rubber Product" notes="" help="">
+id="29096241" name="Final Injection Molded Rubber Product" notes="" help="">
+id="29098075" name="Platinum Production" notes="" help="">
+id="29422449" name="Concrete Production" notes="" help="">
+id="29433186" name="Cobalt Oxide production (Virgin)" notes="" help="">
+id="29433205" name="Cobalt Oxide production (Recycled)" notes="" help="">
+id="29587519" name="Coal in Chile" notes="Added according to GREET1_2013 on Nov. 14, 2013." help="">
+id="29685976" name="North American NG Power Production (Internal Combustion Engine)" notes="" help="">
+id="29671686" name=" Electric Generation for Alumina Reduction Hall-Heroult Process" notes="" help="">
+id="29686993" name="North American NG Power Production (Internal Combustion Engine) with Distribution" notes="" help="">
+id="29687838" name="Oil-Fired (Stream Turbine) Power Plant with Distribution" notes="" help="">
+id="29687963" name="Oil-Fired (Internal Combustion Engine) Power Plant with Distribution" notes="" help="">
+id="29688010" name="Oil-Fired (Internal Combustion Engine) Power Plant" notes="" help="">
+id="29688220" name="Oil-Fired (Gas Turbine) Power Plant" notes="" help="">
+id="29688334" name="Oil-Fired (Gas Turbine) Power Plant wtih Distribution" notes="" help="">
+id="29688577" name="Oil-Fired (Stream Turbine) Power Plant" notes="" help="">
+id="30023874" name="Zirconium Production (Virgin)" notes="" help="">
+id="30025228" name="Rare Earth Minerals Production (Virgin)" notes="" help="">
+id="30033184" name="Manganese Production" notes="" help="">
+id="30039807" name="Nafion 117 Sheet Production" notes="" help="">
+id="30039822" name="Nafion Dry Polymer Production" notes="" help="">
+id="30039835" name="PTFE Production" notes="" help="">
+id="30041113" name="Silicon Production" notes="" help="">
+id="30041128" name="Silicon Solar Array" notes="" help="">
+id="30102894" name="Pet Coke from Crude for Use in U.S. Refineries" notes="" help="">
+id="30538102" name="Graphite Production (Battery Materials)" notes="" help="">
+id="30538119" name="PVDF Production (Battery Materials)" notes="" help="">
+id="30538138" name="LiPF6 Production (Battery Materials)" notes="" help="">
+id="30538160" name="Ethylene Production (Battery Materials)" notes="" help="">
+id="30538179" name="Ethylene Oxide Production (Battery Materials)" notes="" help="">
+id="30538192" name="Ethylene Carbonate Production (Battery Materials)" notes="" help="">
+id="30538210" name="Dimethyl Carbonate Production (Battery Materials)" notes="" help="">
+id="30538244" name="Battery Management System Production (Battery Materials)" notes="" help="">
+id="30538416" name="N-Methyl-2-pyrrolidone Production (Battery Materials)" notes="" help="">
+id="30108742" name="Windshield Fluid (Methanol) Production and Use" notes="" help="">
+id="30111284" name="Lead-Acid (Battery Assembly)" notes="" help="">
+id="30111320" name="Nickel Metal Hydride (Battery Assembly)" notes="" help="">
+id="30111334" name="Lithium Ion (Battery Assembly)" notes="" help="">
+id="30120194" name="Vehicle Assembly, Disposal and Recycling" notes="A dummy unit of 1 ton Vehicle is used. This is not meant to signify that a mass of 1 ton is produced, only that the processes are performed per one Vehicle unit." help="">
+id="31403591" name="Renewable Diesel from Forest Residue Pyrolysis - Distributed System and Conventional Petroleum Refinery" notes="" help="">
+id="31483961" name="P from Monoammonium Phosphate" notes="" help="">
+id="31483990" name="P from Diammonium Phosphate" notes="" help="">
+id="31932377" name="Willow Farming and Transportation" notes="" help="">
+id="31936639" name="Willow Ethanol: Fermentation" notes="" help="">
+id="31936690" name="Willow Ethanol: Gasification" notes="" help="">
+id="32001833" name="Poplar Ethanol: Gasification" notes="" help="">
+id="32002120" name="Switchgrass Ethanol: Gasification" notes="" help="">
+id="32002488" name="Miscanthus Ethanol: Gasification" notes="" help="">
+id="31937745" name="Gaseous Hydrogen from Nuclear for Process Fuels" notes="" help="">
+id="31931581" name="G.H2 Produced from NA NG  (H2A-Current) without co-products" notes="" help="">
+id="31938538" name="Gaseous Hydrogen from Coal (H2A-Current Scenario) for Process Fuels" notes="" help="">
+id="31939274" name="Gaseous Hydrogen from Pet Coke via Gasification for Process Fuels" notes="" help="">
+id="32006006" name="Forest Residue Ethanol: Gasification" notes="" help="">
+id="32006349" name="Corn Stover Ethanol: Gasification" notes="" help="">
+id="32027490" name="Gaseous Hydrogen from Coal (H2A-Future Scenario) for Process Fuels" notes="" help="">
+id="32027528" name="Gaseous Hydrogen from Coal (User Defined) for Process Fuels" notes="" help="">
+id="32621186" name="G.H2 Produced from NA NG (User Defined) without co-products" notes="" help="">
+id="32621643" name="Gaseous Hydrogen from NA NG (User Definedl) for Process Fuels" notes="" help="">
+id="32622275" name="G.H2 Produced from NA NG  (H2A-Future) without co-products" notes="" help="">
+id="34861754" name="ABS Production and Compression Molding" notes="" help="">
+id="34861764" name="ABS Production and Extrusion" notes="" help="">
+id="34861782" name="ABS Production and Injection Molding" notes="" help="">
+id="34862492" name="EPDM Production and Extrusion" notes="" help="">
+id="34862502" name="EPDM Production and Injection Molding" notes="" help="">
+id="34863868" name="HDPE Fabrication and Injection Molding" notes="" help="">
+id="34863903" name="HDPE Fabrication and Compression Molding" notes="" help="">
+id="34869061" name="LDPE Fabrication and Compression Molding" notes="" help="">
+id="34869082" name="LDPE Fabrication and Extrusion" notes="" help="">
+id="34870262" name="LLDPE Production and Compression Molding" notes="" help="">
+id="34870270" name="LLDPE Production and Extrusion" notes="" help="">
+id="34870281" name="LLDPE Production and Injection Molding" notes="" help="">
+id="34873194" name="Nylon 6 Fabrication and Injection Molding" notes="" help="">
+id="34873208" name="Nylon 6 Fabrication and Compression Molding" notes="" help="">
+id="34876022" name="Nylon 66 Fabrication and Extrusion" notes="" help="">
+id="34876032" name="Nylon 66 Fabrication and Injection Molding" notes="" help="">
+id="34878941" name="PC Fabrication and Compression Molding" notes="" help="">
+id="34878951" name="PC Fabrication and Injection Molding" notes="" help="">
+id="34879582" name="PET Production and Compression Molding" notes="" help="">
+id="34879596" name="PET Production and Injection Molding" notes="" help="">
+id="34944636" name="PP Fabrication and Compression Molding" notes="" help="">
+id="34944643" name="PP Fabrication and Blow Molding" notes="" help="">
+id="34944652" name="PP Fabrication and Extrusion" notes="" help="">
+id="34944663" name="PP Fabrication and Injection Molding" notes="" help="">
+id="34946564" name="PVC Fabrication and Compression Molding" notes="" help="">
+id="34946576" name="PVC Fabrication and Calendaring" notes="" help="">
+id="34946587" name="PVC Fabrication and Extrusion" notes="" help="">
+id="34946595" name="PVC Fabrication and Injection Molding" notes="" help="">
+id="34957095" name="Adhesives Fabrication" notes="" help="">
+id="34958636" name="Final Shape Cast Recycled Aluminum Product: Combined" notes="" help="">
+id="34962993" name="Wrought Aluminium Hot Rolling and Stamping" notes="" help="">
+id="34963012" name="Wrought Aluminium Extruded" notes="" help="">
+id="34963108" name="Wrought Aluminium Cold Rolling and Stamping" notes="" help="">
+id="34963416" name="Recycled Wrought Aluminum Hot Rolling and Stamping" notes="" help="">
+id="34963429" name="Recycled Wrought Aluminum Extrusion" notes="" help="">
+id="34963580" name="Recycled Wrought Aluminum Cold Rolling and Stamping" notes="" help="">
+id="35039157" name="Engine Oil Fabrication" notes="" help="">
+id="35039715" name="Power Steering Oil Fabrication" notes="" help="">
+id="35039747" name="Brake Fluid Fabrication" notes="" help="">
+id="35039765" name="Transmission Fluid Fabrication" notes="" help="">
+id="35048142" name="Soda Ash Production for use in Chile" notes="" help="">
+id="35052393" name="Soda Ash Production for use in US" notes="" help="">

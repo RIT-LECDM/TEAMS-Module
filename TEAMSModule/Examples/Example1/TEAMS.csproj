@@ -123,7 +123,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ship.png" />
     <Content Include="SpreaderIcon.ico" />
     <Content Include="TEAMS.jpg" />
   </ItemGroup>

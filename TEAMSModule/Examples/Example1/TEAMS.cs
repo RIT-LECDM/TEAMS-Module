@@ -25,368 +25,368 @@ namespace WindowsApplication1
         public double EfficiencyForPetroleumRecovery;
 
         //1.2 (SL = Sulfur Level, RE = Refining Efficiency in %)
-        int ConventionalDieselSL;
-        double ConventionalDieselRE;
-        int LowSulfurDiesellSL;
-        double LowSulfurDieselRE;
-        int CrudeOilSL;
-        int ResidualOilSL;
-        double ResidualOilRE;
+        public int ConventionalDieselSL;
+        public double ConventionalDieselRE;
+        public int LowSulfurDiesellSL;
+        public double LowSulfurDieselRE;
+        public int CrudeOilSL;
+        public int ResidualOilSL;
+        public double ResidualOilRE;
         #endregion
         #region Teams 2.1 - 2.5
         //2.1 (FS = Feedstock Source PDNG = Plant Design When Natural Gas is Feedstock PDFG = Plant Design When Flared Gas is Feedstock)
         //Feedstocks 1 = North American Natural Gas 2 = Non North American Natural Gas
         //Plant Designs 0 = No Co-Products 1 = Steam Co-Products 2 = Electricity Co-Products
-        int CompressedNaturalGasFS = 1;
-        int LiquifiedNaturalGasFS = 1;
-        int FistcherTropschDieselFS = 1;
-        int FischerTropschDieselPDNG;
-        int FischerTopschDieselPDFG;
-        int NANGSteamProductionCredit;
-        int NNANGSteamProductionCredit;
-        int NNAFGSteamProductionCredit;
+        public int CompressedNaturalGasFS = 1;
+        public int LiquifiedNaturalGasFS = 1;
+        public int FistcherTropschDieselFS = 1;
+        public int FischerTropschDieselPDNG;
+        public int FischerTopschDieselPDFG;
+        public int NANGSteamProductionCredit;
+        public int NNANGSteamProductionCredit;
+        public int NNAFGSteamProductionCredit;
 
         //2.2 (NG = Natural Gas FG = Flared Gas, values are being given as percent shares of energy feedstock EFP = Energy Feedstock Percentage)
-        double LiquifiedNaturalGasNGEFP;
-        double LiquifiedNaturalGasFGEFP;
-        double FischerTropschDieselNGEFP;
-        double FischerTropschDieselFGEFP;
+        public double LiquifiedNaturalGasNGEFP;
+        public double LiquifiedNaturalGasFGEFP;
+        public double FischerTropschDieselNGEFP;
+        public double FischerTropschDieselFGEFP;
 
         //2.3 Boiling ff Effects PP = Storage At Production Plant TPB = Transportation From Plant To Bulk Terminal BS = Bulk Terminal Storage DBR = Distribution From Bulk Terminal to Refueling Station RSCP = Refueling Station Storage for Central Plant
         //BoilingOffRatePerDay is a percentage, as is RateOfBoilingGasRecovered
-        double BoilingOffRatePerDayPP;
-        double BoilingOffRatePerDayTPB;
-        double BoilingOffRatePerDayBS;
-        double BoilingOffRatePerDayDBR;
-        double BoilingOffRatePerDayRSCP;
-        double DurationOfStageDaysPP;
-        double DurationOfStageDaysTPB;
-        double DurationOfStageDaysBS;
-        double DurationOfStageDaysDBR;
-        double DurationOfStageDaysRSCP;
-        double RateOfBoilingGasRecoveredPP;
-        double RateOfBoilingGasRecoveredTPB;
-        double RateOfBoilingGasRecoveredBS;
-        double RateOfBoilingGasRecoveredDBR;
-        double RateOfBoilingGasRecoveredRSCP;
+        public double BoilingOffRatePerDayPP;
+        public double BoilingOffRatePerDayTPB;
+        public double BoilingOffRatePerDayBS;
+        public double BoilingOffRatePerDayDBR;
+        public double BoilingOffRatePerDayRSCP;
+        public double DurationOfStageDaysPP;
+        public double DurationOfStageDaysTPB;
+        public double DurationOfStageDaysBS;
+        public double DurationOfStageDaysDBR;
+        public double DurationOfStageDaysRSCP;
+        public double RateOfBoilingGasRecoveredPP;
+        public double RateOfBoilingGasRecoveredTPB;
+        public double RateOfBoilingGasRecoveredBS;
+        public double RateOfBoilingGasRecoveredDBR;
+        public double RateOfBoilingGasRecoveredRSCP;
 
         //2.4 Transportation Distances of Moving Feedstock or Fuel: In Miles(One Way Distance)
         //Petroleum based
         //CO = Crude Oil RO = Residual Oil USD = US Diesel USLSD = US Low Sulfur Diesel
-        int OceanTankerCO;
-        int OceanTankerRO;
-        int OceanTankerUSD;
-        int OceanTankerUSLSD;
-        int BargeCO;
-        int BargeRO;
-        int BargeUSD;
-        int BargeUSLSD;
-        int PipelineCO;
-        int PipelineRO;
-        int PipelineUSD;
-        int PipelineUSLSD;
-        int RailCO;
-        int RailRO;
-        int RailUSD;
-        int RailUSLSD;
-        int TruckCO;
-        int TruckRO;
-        int TruckUSD;
-        int TruckUSLSD;
+        public int OceanTankerCO;
+        public int OceanTankerRO;
+        public int OceanTankerUSD;
+        public int OceanTankerUSLSD;
+        public int BargeCO;
+        public int BargeRO;
+        public int BargeUSD;
+        public int BargeUSLSD;
+        public int PipelineCO;
+        public int PipelineRO;
+        public int PipelineUSD;
+        public int PipelineUSLSD;
+        public int RailCO;
+        public int RailRO;
+        public int RailUSD;
+        public int RailUSLSD;
+        public int TruckCO;
+        public int TruckRO;
+        public int TruckUSD;
+        public int TruckUSLSD;
         //Natural Gas Based
         //NA = North American Natural Gas //NNA = Non North American Natural Gas
-        int OceanTankerNA;
-        int OceanTankerNNA;
-        int BargeNA;
-        int BargeNNA;
-        int PipelineNA;
-        int PipelineNNA;
-        int RailNA;
-        int RailNNA;
-        int TruckNA;
-        int TruckNNA;
+        public int OceanTankerNA;
+        public int OceanTankerNNA;
+        public int BargeNA;
+        public int BargeNNA;
+        public int PipelineNA;
+        public int PipelineNNA;
+        public int RailNA;
+        public int RailNNA;
+        public int TruckNA;
+        public int TruckNNA;
         //Fischer Tropsch Diesel Based
         //NAFTD = North American Natural Gas for Fischer Tropsch Diesel NNAFTD = Non North American Natural Gas for Fischer Tropsch Diesel NNAFGFTD = Non North American Flared Gas for Fischer Tropsch Diesel
-        int OceanTankerNAFTD;
-        int OceanTankerNNAFTD;
-        int OceanTankerNNAFGFTD;
-        int BargeNAFTD;
-        int BargeNNAFTD;
-        int BargeNNAFGFTD;
-        int PipelineNAFTD;
-        int PipelineNNAFTD;
-        int PipelineNNAFGFTD;
-        int RailNAFTD;
-        int RailNNAFTD;
-        int RailNNAFGFTD;
-        int TruckNAFTD;
-        int TruckNNAFTD;
-        int TruckNNAFGFTD;
+        public int OceanTankerNAFTD;
+        public int OceanTankerNNAFTD;
+        public int OceanTankerNNAFGFTD;
+        public int BargeNAFTD;
+        public int BargeNNAFTD;
+        public int BargeNNAFGFTD;
+        public int PipelineNAFTD;
+        public int PipelineNNAFTD;
+        public int PipelineNNAFGFTD;
+        public int RailNAFTD;
+        public int RailNNAFTD;
+        public int RailNNAFGFTD;
+        public int TruckNAFTD;
+        public int TruckNNAFTD;
+        public int TruckNNAFGFTD;
         //BioDiesel based
         //AGC = Ag Chemicals SB = Soybeans BD = Biodiesel
-        int BargeAGC;
-        int BargeSB;
-        int BargeBD;
-        int PipelineAGC;
-        int PipelineSB;
-        int PipelineBD;
-        int RailAGC;
-        int RailSB;
-        int RailBD;
-        int TruckTransitAGC;
-        int TruckTransitSB;
-        int TruckTransitBD;
-        int TruckDistributionAGC;
-        int TruckDistributionSB;
-        int TruckDistributionBD;
+        public int BargeAGC;
+        public int BargeSB;
+        public int BargeBD;
+        public int PipelineAGC;
+        public int PipelineSB;
+        public int PipelineBD;
+        public int RailAGC;
+        public int RailSB;
+        public int RailBD;
+        public int TruckTransitAGC;
+        public int TruckTransitSB;
+        public int TruckTransitBD;
+        public int TruckDistributionAGC;
+        public int TruckDistributionSB;
+        public int TruckDistributionBD;
         //Electricity Based
         //UO = Uranium Ore EU = Enriched Uranium
-        int OceanTankerCoal;
-        int OceanTankerUO;
-        int OceanTankerEU;
-        int BargeCoal;
-        int BargeUO;
-        int BargeEU;
-        int PipelineCoal;
-        int PipelineUO;
-        int PipelineEU;
-        int RailCoal;
-        int RailUO;
-        int RailEU;
-        int TruckCoal;
-        int TruckUO;
-        int TruckEU;
+        public int OceanTankerCoal;
+        public int OceanTankerUO;
+        public int OceanTankerEU;
+        public int BargeCoal;
+        public int BargeUO;
+        public int BargeEU;
+        public int PipelineCoal;
+        public int PipelineUO;
+        public int PipelineEU;
+        public int RailCoal;
+        public int RailUO;
+        public int RailEU;
+        public int TruckCoal;
+        public int TruckUO;
+        public int TruckEU;
 
         //2.5 Distance From Gas Fields to Production plants: Miles
         //These are in miles, and describe what the useage of NG or the production of Transportation Fuels is
-        int NGStationaryCombustion;
-        int LiquifiedNaturalGasPlant;
-        int FTDieselPlant;
-        int NGElectricPowerPlant;
-        int RefuelingStationUseofNorthAmericanNaturalGasForCNG;
-        int RefuelingStationUseOfNonNorthAmericanNaturalGasForCNG;
+        public int NGStationaryCombustion;
+        public int LiquifiedNaturalGasPlant;
+        public int FTDieselPlant;
+        public int NGElectricPowerPlant;
+        public int RefuelingStationUseofNorthAmericanNaturalGasForCNG;
+        public int RefuelingStationUseOfNonNorthAmericanNaturalGasForCNG;
 
         #endregion
         #region Teams 3
         //3 Simulation of Biodiesel: Allocation of Upstream Energy Use and Emissions Between Biodiesel and Co-Products
         //SD = Soydiesel CP = Co-Products
-        double SoybeanFarmingSD;
-        double SoybeanFarmingCP;
-        double SoyoilExtractionSD;
-        double SoyoilExtractionCP;
-        double SoyoilTransestrificationSD;
-        double SoyoilTransestrificationCP;
+        public double SoybeanFarmingSD;
+        public double SoybeanFarmingCP;
+        public double SoyoilExtractionSD;
+        public double SoyoilExtractionCP;
+        public double SoyoilTransestrificationSD;
+        public double SoyoilTransestrificationCP;
         #endregion
         #region Teams 4.1 - 4.2
         //4.1 Selection of Model Calculated or user-Input Emission Factors for Power Plants
         //1 = Model Calculated Emissions Factors 2 = user Input Emissions Factors
-        int SelectionOfModelCalculatedOrUserInput = 1;
+        public int SelectionOfModelCalculatedOrUserInput = 1;
 
         //4.2 Electricity Generation Mix
         //USAM = US Average Mis in percent
-        double ResidualOilUSAM;
-        double NaturalGasUSAM;
-        double CoalUSAM;
-        double NuclearPowerUSAM;
-        double BiomassAndOtherUSAM;
+        public double ResidualOilUSAM;
+        public double NaturalGasUSAM;
+        public double CoalUSAM;
+        public double NuclearPowerUSAM;
+        public double BiomassAndOtherUSAM;
         #endregion
         #region Teams 5.1 - 5.4d
         //5.1 Main Engine Variables
-        string VesselTypeID;
-        int NumberOfEngines;
-        int SingleEngineHP;
-        int TotalOnboardHP;
+        public string VesselTypeID;
+        public int NumberOfEngines;
+        public int SingleEngineHP;
+        public int TotalOnboardHP;
         //Constants (These are units of measurement)
-        double KWperHP;
-        double GALperBBL;
-        double BBLperTONNE;
-        double BTUperKWH;
+        public double KWperHP;
+        public double GALperBBL;
+        public double BBLperTONNE;
+        public double BTUperKWH;
 
         //5.2 Trip Distance and Time
-        double TotalTripDistanceInMiles;
-        double TripTimeHours;
-        double TripTimeMinutes;
-        double TotalTripTimeHours;
+        public double TotalTripDistanceInMiles;
+        public double TripTimeHours;
+        public double TripTimeMinutes;
+        public double TotalTripTimeHours;
 
         //5.3 Engine Charicterization Per Mode
         //POT - Percent Of Trip, Time in mode is measured in hours HPLF - Horse Power Load Factor (Single engine). HPPE = Horse Power Per Engine EP = Energy Production in KWH for all engines
-        double POTIdle;
-        double POTManeuvering;
-        double POTPrecautionary;
-        double POTSlowCruise;
-        double POTFullCruise;
-        double TimeInIdle;
-        double TimeInManeuvering;
-        double TimeInPrecautionary;
-        double TimeInSlowCruise;
-        double TimeInFullCruise;
-        double HPLFIdle;
-        double HPLFManeuvering;
-        double HPLFPrecautionary;
-        double HPLFSlowCruise;
-        double HPLFFullCruise;
-        double HPPEIdle;
-        double HPPEManeuvering;
-        double HPPEPrecautionary;
-        double HPPESlowCruise;
-        double HPPEFullCruise;
-        double EPIdle;
-        double EPManeuvering;
-        double EPPrecautionary;
-        double EPSlowCruise;
-        double EPFullCruise;
-        double EPTotal;
+        public double POTIdle;
+        public double POTManeuvering;
+        public double POTPrecautionary;
+        public double POTSlowCruise;
+        public double POTFullCruise;
+        public double TimeInIdle;
+        public double TimeInManeuvering;
+        public double TimeInPrecautionary;
+        public double TimeInSlowCruise;
+        public double TimeInFullCruise;
+        public double HPLFIdle;
+        public double HPLFManeuvering;
+        public double HPLFPrecautionary;
+        public double HPLFSlowCruise;
+        public double HPLFFullCruise;
+        public double HPPEIdle;
+        public double HPPEManeuvering;
+        public double HPPEPrecautionary;
+        public double HPPESlowCruise;
+        public double HPPEFullCruise;
+        public double EPIdle;
+        public double EPManeuvering;
+        public double EPPrecautionary;
+        public double EPSlowCruise;
+        public double EPFullCruise;
+        public double EPTotal;
 
         //5.4a Selection of Model Calculated or User Input Fuel Consumption Values (Conventional Diesel as Baseline Fuel)
         //1 = Simulate using GPH derived from user-entered engine specifications 2 = Simulate using User - Entered GPH
-        int SelectionOfModelCalculatedOrUserInputFuelConsumptionValues;
+        public int SelectionOfModelCalculatedOrUserInputFuelConsumptionValues;
 
         //5.4b Calculation of Fuel Use Using Conventional Diesel as Baseline Fuel
-        double EngineEfficiency;
-        double KWHOutperTrip;
-        double MMBTUoutperTrip;
-        double MMBTUinperTrip;
-        double GALLONperTrip;
+        public double EngineEfficiency;
+        public double KWHOutperTrip;
+        public double MMBTUoutperTrip;
+        public double MMBTUinperTrip;
+        public double GALLONperTrip;
 
         //5.4c Calculation of Fuel Use Using Alternative Fuels (Conventional Diesel as Baseline Fuel)
         //EE = Engine Efficiency in percent MMBTU = million BTUs in per trip AFC = alternative Fuel Consumption in Gallons per trip
-        double ResidualOilEE;
-        double ResidualOilMMBTU;
-        double ResidualOilAFC;
-        double LowSulfurDieselEE;
-        double LowSulfurDieselMMBTU;
-        double LowSulfurDieselAFC;
-        double NaturalGasEE;
-        double NaturalGasMMBTU;
-        double NaturalGasAFC;
-        double BiodieselEE;
-        double BiodieselMMBTU;
-        double BiodieselAFC;
-        double FischerTropschEE;
-        double FischerTropschMMBTU;
-        double FischerTropschAFC;
+        public double ResidualOilEE;
+        public double ResidualOilMMBTU;
+        public double ResidualOilAFC;
+        public double LowSulfurDieselEE;
+        public double LowSulfurDieselMMBTU;
+        public double LowSulfurDieselAFC;
+        public double NaturalGasEE;
+        public double NaturalGasMMBTU;
+        public double NaturalGasAFC;
+        public double BiodieselEE;
+        public double BiodieselMMBTU;
+        public double BiodieselAFC;
+        public double FischerTropschEE;
+        public double FischerTropschMMBTU;
+        public double FischerTropschAFC;
 
         //5.4d Fuel Consumption (Only needed if you are simulating using user - entered GPH) Total is in Gallons/Trip
-        int ConventionalDieselIdle;
-        int ConventionalDieselManeuvering;
-        int ConventionalDieselPrecautionary;
-        int ConventionalDieselSlowCruise;
-        int ConventionalDieselFullCruise;
-        int ConventionalDieselTotal;
-        int ResidualOilIdle;
-        int ResidualOilManeuvering;
-        int ResidualOilPrecautionary;
-        int ResidualOilSlowCruise;
-        int ResidualOilFullCruise;
-        int ResidualOilTotal;
-        int LowSulfurDieselIdle;
-        int LowSulfurDieselManeuvering;
-        int LowSulfurDieselPrecautionary;
-        int LowSulfurDieselSlowCruise;
-        int LowSulfurDieselFullCruise;
-        int LowSulfurDieselTotal;
-        int NaturalGasIdle;
-        int NaturalGasManeuvering;
-        int NaturalGasPrecautionary;
-        int NaturalGasSlowCruise;
-        int NaturalGasFullCruise;
-        int NaturalGasTotal;
-        int BioDieselIdle;
-        int BioDieselManeuvering;
-        int BioDieselPrecautionary;
-        int BioDieselSlowCruise;
-        int BioDieselFullCruise;
-        int BioDieselTotal;
-        int FischerTropschIdle;
-        int FischerTropschManeuvering;
-        int FischerTropschPrecautionary;
-        int FischerTropschSlowCruise;
-        int FischerTropschFullCruise;
-        int FischerTropschTotal;
+        public int ConventionalDieselIdle;
+        public int ConventionalDieselManeuvering;
+        public int ConventionalDieselPrecautionary;
+        public int ConventionalDieselSlowCruise;
+        public int ConventionalDieselFullCruise;
+        public int ConventionalDieselTotal;
+        public int ResidualOilIdle;
+        public int ResidualOilManeuvering;
+        public int ResidualOilPrecautionary;
+        public int ResidualOilSlowCruise;
+        public int ResidualOilFullCruise;
+        public int ResidualOilTotal;
+        public int LowSulfurDieselIdle;
+        public int LowSulfurDieselManeuvering;
+        public int LowSulfurDieselPrecautionary;
+        public int LowSulfurDieselSlowCruise;
+        public int LowSulfurDieselFullCruise;
+        public int LowSulfurDieselTotal;
+        public int NaturalGasIdle;
+        public int NaturalGasManeuvering;
+        public int NaturalGasPrecautionary;
+        public int NaturalGasSlowCruise;
+        public int NaturalGasFullCruise;
+        public int NaturalGasTotal;
+        public int BioDieselIdle;
+        public int BioDieselManeuvering;
+        public int BioDieselPrecautionary;
+        public int BioDieselSlowCruise;
+        public int BioDieselFullCruise;
+        public int BioDieselTotal;
+        public int FischerTropschIdle;
+        public int FischerTropschManeuvering;
+        public int FischerTropschPrecautionary;
+        public int FischerTropschSlowCruise;
+        public int FischerTropschFullCruise;
+        public int FischerTropschTotal;
 
         #endregion
         #region Teams 6.1 - 6.4d
-        //6.1 Auxillary Engine Fuel Type to Present On Results Sheet;
+        //6.1 Auxiliary Engine Fuel Type to Present On Results Sheet;
         //1 = Conventional Diesel 2 = Residual Oil 3 = Low Sulfur Diesel 4 = Natural gas 5 = Biodiesel 6 = Fischer Tropsch Diesel
-        int AuxillaryEngineFuelType = 1;
+        public int AuxiliaryEngineFuelType = 1;
 
-        //6.2 Auxillary Engine Variables
-        int NumberOfOnBoarAuxillaryEngines;
-        int NumberOfAuxillaryEnginesInUse;
-        int AuxillaryEnginesRatedHPperEngine;
-        int TotalOnboardAUxHP;
+        //6.2 Auxiliary Engine Variables
+        public int NumberOfOnBoarAuxiliaryEngines;
+        public int NumberOfAuxiliaryEnginesInUse;
+        public int AuxiliaryEnginesRatedHPperEngine;
+        public int TotalOnboardAUxHP;
 
-        //6.3 Auxillary Engine Characterization (Conventional Diesel as Baseline Fuel)
-        double PercentOfTripAuxillaryIsActive;
-        double TimeAuxActiveHours;
-        double HPLoadFactorSingleEngine;
-        double ActiveHPPerAuxEngine;
-        double TotalAuxEnergyProduction;
+        //6.3 Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
+        public double PercentOfTripAuxiliaryIsActive;
+        public double TimeAuxActiveHours;
+        public double HPLoadFactorSingleEngine;
+        public double ActiveHPPerAuxEngine;
+        public double TotalAuxEnergyProduction;
 
         //6.4a Selection of Medel Calculated or User Input Fuel Consumption Values Conventional Diesel as Baseline Fuel
-        //1 = Simlate using GPH derived from User-Entered Auxillary engine specifications 2 = Simlate using user entered GPH
-        int SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = 1;
+        //1 = Simlate using GPH derived from User-Entered Auxiliary engine specifications 2 = Simlate using user entered GPH
+        public int SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = 1;
 
-        //6.4b Calculation of Auxillary Engine Fuel use Using Conventional Diesel as Baseline Fuel
-        double AuxillaryEngineEfficiency;
-        double AuxEngineKWHoutperTrip;
-        double AuxEngineMMBTUoutperTrip;
-        double AuxEngineMMBTUinperTrip;
-        double AuxEngineGALLONperTrip;
+        //6.4b Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
+        public double AuxiliaryEngineEfficiency;
+        public double AuxEngineKWHoutperTrip;
+        public double AuxEngineMMBTUoutperTrip;
+        public double AuxEngineMMBTUinperTrip;
+        public double AuxEngineGALLONperTrip;
 
-        //6.4c Calculation of Auxillary Engine Fuel Use Using Alternative Fuels
-        //EE = Engine Efficiency AuxMMBTU = Auxillary MMTBUin/Trip EAFC = Auxillary Engine Alternativee Fuel Consumption
-        double AuxResidualOilEE;
-        double AuxResidualOilMMBTU;
-        double AuxResidualOilEAFC;
-        double AuxLowSulfurDieselEE;
-        double AuxLowSulfurDieselMMBTU;
-        double AuxLowSulfurDieselEAFC;
-        double AuxNaturalGasEE;
-        double AuxNaturalGasMMBTU;
-        double AuxNaturalGasEAFC;
-        double AuxBiodieselEE;
-        double AuxBiodieselMMBTU;
-        double AuxBiodieselEAFC;
-        double AuxFischerTropschEE;
-        double AuxFischerTropschMMBTU;
-        double AuxFischerTropschEAFC;
+        //6.4c Calculation of Auxiliary Engine Fuel Use Using Alternative Fuels
+        //EE = Engine Efficiency AuxMMBTU = Auxiliary MMTBUin/Trip EAFC = Auxiliary Engine Alternativee Fuel Consumption
+        public double AuxResidualOilEE;
+        public double AuxResidualOilMMBTU;
+        public double AuxResidualOilEAFC;
+        public double AuxLowSulfurDieselEE;
+        public double AuxLowSulfurDieselMMBTU;
+        public double AuxLowSulfurDieselEAFC;
+        public double AuxNaturalGasEE;
+        public double AuxNaturalGasMMBTU;
+        public double AuxNaturalGasEAFC;
+        public double AuxBiodieselEE;
+        public double AuxBiodieselMMBTU;
+        public double AuxBiodieselEAFC;
+        public double AuxFischerTropschEE;
+        public double AuxFischerTropschMMBTU;
+        public double AuxFischerTropschEAFC;
 
-        //6.4d  Auxillary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
+        //6.4d  Auxiliary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
         //FC = Fuel Consumption 
-        int AuxConventionalDieselFC;
-        double AuxConventionalDieselTotal;
-        int AuxResidualOilFC;
-        double AuxResidualOilTotal;
-        int AuxLowSulfurDieselFC;
-        double AuxLowSulfurDieselTotal;
-        int AuxNaturalGasFC;
-        double AuxNaturalGasTotal;
-        int AuxBiodieselFC;
-        double AuxBioDieselTotal;
-        int AuxFischerTropschFC;
-        double AuxFischerTropschTotal;
+        public int AuxConventionalDieselFC;
+        public double AuxConventionalDieselTotal;
+        public int AuxResidualOilFC;
+        public double AuxResidualOilTotal;
+        public int AuxLowSulfurDieselFC;
+        public double AuxLowSulfurDieselTotal;
+        public int AuxNaturalGasFC;
+        public double AuxNaturalGasTotal;
+        public int AuxBiodieselFC;
+        public double AuxBioDieselTotal;
+        public int AuxFischerTropschFC;
+        public double AuxFischerTropschTotal;
         #endregion
         #region Teams 7.2 - 7.2
         //7.1 Share of an Alternative Fuel in an Alternative Fuel Bleng Volumetric Percentage
-        double VolumetricPercentageOfFTDieselinFTDBlend;
-        double VolumetricPercentageOfBiodieselInBiodieselBlend;
+        public double VolumetricPercentageOfFTDieselinFTDBlend;
+        public double VolumetricPercentageOfBiodieselInBiodieselBlend;
 
         //7.2 Type of Diesel for Alternative Fuel Blends
         //1 = Conventional Diesel 2 = Low Sulfur Diesel
-        int DieselForFischerTropschBlend = 1;
-        int DieselForBiodieselBlend = 1;
+        public int DieselForFischerTropschBlend = 1;
+        public int DieselForBiodieselBlend = 1;
         #endregion
 
         //Program Variables
-        bool one_complete;
-        bool two_complete;
-        bool three_complete;
-        bool four_complete;
-        bool five_complete;
-        bool six_complete;
-        bool seven_complete;
-        bool runSimActive;
+        public bool one_complete;
+        public bool two_complete;
+        public bool three_complete;
+        public bool four_complete;
+        public bool five_complete;
+        public bool six_complete;
+        public bool seven_complete;
+        public bool runSimActive;
         #region Greet Variables
         //GREET Variables
         //btu/Gal
@@ -449,14 +449,42 @@ namespace WindowsApplication1
         public double fischerTropschSulfurRatioActual;
         public double natGasSulfurRatioActual;
         public double coalSulfurRatioActual;
+
+        public int GHPCO2 = 1;
+        public int GHPCH4 = 23;
+        public int GHPN2O = 296;
+        public int GHPVOC = 0;
+        public int GHPCO = 0;
+        public int GHPNO2 = 0;
+
+        public double CarbonRatioVOC = 85.0;
+        public double CarbonRatioCO = 43.0;
+        public double CarbonRatioCH4 = 75.0;
+        public double CarbonRatioCO2 = 27.0;
+        public double CarbonRatioSO2 = 50.0;
+	
+
+
         #endregion
 
-        string openedFile;
+        public string openedFile;
 
-        bool advanced;
+        public bool advanced;
 
-        Update u;
-        Fuel_Specs GVE;
+        public const int CRUDE_PATH_ID = 34;
+        public const int CD_PATH_ID = 40;
+        public const int LSD_PATH_ID = 61;
+        public const int LIQ_PETROL_PATH_ID = 20;
+        public const int RO_PATH_ID = 60;
+        public const int LIQ_NATGAS_PATH_ID = 150000;
+        public const int BIODIESEL_PATH_ID = 2020;
+        public const int FTD_PATH_ID = 75;
+        public const int NATGAS_PATH_ID = 1;
+        public const int COAL_PATH_ID = 17;
+
+        public Update u;
+        public Fuel_Specs GVE;
+        public ResultsSheet rs;
         public TEAMS()
         {
             InitializeComponent();
@@ -477,7 +505,7 @@ namespace WindowsApplication1
                 #region Liquid Fuels
                 // Grab the pathway from greet for the resource you are looking for.
                 //IPathway myPathway = pathways.ValueForKey((int)numericUpDown264.Value);
-                IPathway myPathway = pathways.ValueForKey(34);
+                IPathway myPathway = pathways.ValueForKey(CRUDE_PATH_ID);
                 // Grab the int id for the resource (the water)
                 int productID = myPathway.MainOutputResourceID;
                 IResource CrudeOil = resources.ValueForKey(productID);
@@ -492,7 +520,7 @@ namespace WindowsApplication1
                 //this.label251.Text = CrudeOil.Name + " Sulfur Ratio " + crudeOilSulfurRatio;
 
                 //This is where you do the above process, but for conventional diesel
-                myPathway = pathways.ValueForKey(40);
+                myPathway = pathways.ValueForKey(CD_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource ConvDiesel = resources.ValueForKey(productID);
@@ -506,7 +534,7 @@ namespace WindowsApplication1
                 // this.label258.Text = ConvDiesel.Name + " Energy Value " + conventionalDieselBTUperGal + " Btu/Gal " + " Density: " + conventionalDieselDensity + " grams/gallon CR " + ConvDiesel.CarbonRatio.GreetValue;
 
                 //This is where you do the above process, but for low sulfur diesel
-                myPathway = pathways.ValueForKey(61);
+                myPathway = pathways.ValueForKey(LSD_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource LSDiesel = resources.ValueForKey(productID);
@@ -519,7 +547,7 @@ namespace WindowsApplication1
                 lowSulfurDieselSulfurRatioActual = LSDiesel.SulfurRatio.GreetValue;
 
                 //This is where you do the above process, but for liquified petroleum gas
-                myPathway = pathways.ValueForKey(20);
+                myPathway = pathways.ValueForKey(LIQ_PETROL_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource LPG = resources.ValueForKey(productID);
@@ -532,7 +560,7 @@ namespace WindowsApplication1
                 liquifiedPetroleumGasSulfurRatioActual = LPG.SulfurRatio.GreetValue;
 
                 //This is where you do the above process, but for residual oil
-                myPathway = pathways.ValueForKey(60);
+                myPathway = pathways.ValueForKey(RO_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource RO = resources.ValueForKey(productID);
@@ -545,7 +573,7 @@ namespace WindowsApplication1
                 residualOilSulfurRatioActual = RO.SulfurRatio.GreetValue;
 
                 //This is where you do the above process, but for liquified natural gas
-                myPathway = pathways.ValueForKey(150000);
+                myPathway = pathways.ValueForKey(LIQ_NATGAS_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource LNG = resources.ValueForKey(productID);
@@ -558,7 +586,7 @@ namespace WindowsApplication1
                 liquifiedNaturalGasSulfurRatioActual = LNG.SulfurRatio.GreetValue;
 
                 //This is where you do the above process, but for biodiesel
-                myPathway = pathways.ValueForKey(2020);
+                myPathway = pathways.ValueForKey(BIODIESEL_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource BD = resources.ValueForKey(productID);
@@ -571,7 +599,7 @@ namespace WindowsApplication1
                 bioDieselSulfurRatioActual = BD.SulfurRatio.GreetValue;
 
                 //This is where you do the above process, but for fischer tropsch diesel
-                myPathway = pathways.ValueForKey(75);
+                myPathway = pathways.ValueForKey(FTD_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource FTD = resources.ValueForKey(productID);
@@ -585,7 +613,7 @@ namespace WindowsApplication1
                 #endregion
                 #region Solid and Gaseous Fuels
                 //This is where you do the above process, but for Gaseous Natural Gas
-                myPathway = pathways.ValueForKey(1);
+                myPathway = pathways.ValueForKey(NATGAS_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource NG = resources.ValueForKey(productID);
@@ -598,7 +626,7 @@ namespace WindowsApplication1
                 natGasSulfurRatioActual = NG.SulfurRatio.GreetValue;
 
                 //This is where you do the above process, but for Gaseous Natural Gas
-                myPathway = pathways.ValueForKey(17);
+                myPathway = pathways.ValueForKey(COAL_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource Coal = resources.ValueForKey(productID);
@@ -616,7 +644,7 @@ namespace WindowsApplication1
                 #region Liquid Fuels
                 // Grab the pathway from greet for the resource you are looking for.
                 //IPathway myPathway = pathways.ValueForKey((int)numericUpDown264.Value);
-                IPathway myPathway = pathways.ValueForKey(34);
+                IPathway myPathway = pathways.ValueForKey(CRUDE_PATH_ID);
                 // Grab the int id for the resource (the water)
                 int productID = myPathway.MainOutputResourceID;
                 IResource CrudeOil = resources.ValueForKey(productID);
@@ -631,7 +659,7 @@ namespace WindowsApplication1
                 //this.label251.Text = CrudeOil.Name + " Sulfur Ratio " + crudeOilSulfurRatio;
 
                 //This is where you do the above process, but for conventional diesel
-                myPathway = pathways.ValueForKey(40);
+                myPathway = pathways.ValueForKey(CD_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource ConvDiesel = resources.ValueForKey(productID);
@@ -645,7 +673,7 @@ namespace WindowsApplication1
                 // this.label258.Text = ConvDiesel.Name + " Energy Value " + conventionalDieselBTUperGal + " Btu/Gal " + " Density: " + conventionalDieselDensity + " grams/gallon CR " + ConvDiesel.CarbonRatio.UserValue;
 
                 //This is where you do the above process, but for low sulfur diesel
-                myPathway = pathways.ValueForKey(61);
+                myPathway = pathways.ValueForKey(LSD_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource LSDiesel = resources.ValueForKey(productID);
@@ -658,7 +686,7 @@ namespace WindowsApplication1
                 lowSulfurDieselSulfurRatioActual = LSDiesel.SulfurRatio.UserValue;
 
                 //This is where you do the above process, but for liquified petroleum gas
-                myPathway = pathways.ValueForKey(20);
+                myPathway = pathways.ValueForKey(LIQ_PETROL_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource LPG = resources.ValueForKey(productID);
@@ -671,7 +699,7 @@ namespace WindowsApplication1
                 liquifiedPetroleumGasSulfurRatioActual = LPG.SulfurRatio.UserValue;
 
                 //This is where you do the above process, but for residual oil
-                myPathway = pathways.ValueForKey(60);
+                myPathway = pathways.ValueForKey(RO_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource RO = resources.ValueForKey(productID);
@@ -684,7 +712,7 @@ namespace WindowsApplication1
                 residualOilSulfurRatioActual = RO.SulfurRatio.UserValue;
 
                 //This is where you do the above process, but for liquified natural gas
-                myPathway = pathways.ValueForKey(150000);
+                myPathway = pathways.ValueForKey(LIQ_NATGAS_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource LNG = resources.ValueForKey(productID);
@@ -697,7 +725,7 @@ namespace WindowsApplication1
                 liquifiedNaturalGasSulfurRatioActual = LNG.SulfurRatio.UserValue;
 
                 //This is where you do the above process, but for biodiesel
-                myPathway = pathways.ValueForKey(2020);
+                myPathway = pathways.ValueForKey(BIODIESEL_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource BD = resources.ValueForKey(productID);
@@ -710,7 +738,7 @@ namespace WindowsApplication1
                 bioDieselSulfurRatioActual = BD.SulfurRatio.UserValue;
 
                 //This is where you do the above process, but for fischer tropsch diesel
-                myPathway = pathways.ValueForKey(75);
+                myPathway = pathways.ValueForKey(FTD_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource FTD = resources.ValueForKey(productID);
@@ -724,7 +752,7 @@ namespace WindowsApplication1
                 #endregion
                 #region Solid and Gaseous Fuels
                 //This is where you do the above process, but for Gaseous Natural Gas
-                myPathway = pathways.ValueForKey(1);
+                myPathway = pathways.ValueForKey(NATGAS_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource NG = resources.ValueForKey(productID);
@@ -737,7 +765,7 @@ namespace WindowsApplication1
                 natGasSulfurRatioActual = NG.SulfurRatio.UserValue;
 
                 //This is where you do the above process, but for Gaseous Natural Gas
-                myPathway = pathways.ValueForKey(17);
+                myPathway = pathways.ValueForKey(COAL_PATH_ID);
                 // Grab the int id for the resource (the water)
                 productID = myPathway.MainOutputResourceID;
                 IResource Coal = resources.ValueForKey(productID);
@@ -811,13 +839,13 @@ namespace WindowsApplication1
             NaturalGasTotal = (int)((NaturalGasIdle * TimeInIdle * NumberOfEngines) + (NaturalGasManeuvering * TimeInManeuvering * NumberOfEngines) + (NaturalGasPrecautionary * TimeInPrecautionary * NumberOfEngines) + (NaturalGasSlowCruise * TimeInSlowCruise * NumberOfEngines) + (NaturalGasFullCruise * TimeInFullCruise * NumberOfEngines));
             BioDieselTotal = (int)((BioDieselIdle * TimeInIdle * NumberOfEngines) + (BioDieselManeuvering * TimeInManeuvering * NumberOfEngines) + (BioDieselPrecautionary * TimeInPrecautionary * NumberOfEngines) + (BioDieselSlowCruise * TimeInSlowCruise * NumberOfEngines) + (BioDieselFullCruise * TimeInFullCruise * NumberOfEngines));
             FischerTropschTotal = (int)(( FischerTropschIdle * TimeInIdle * NumberOfEngines) + ( FischerTropschManeuvering * TimeInManeuvering * NumberOfEngines) + ( FischerTropschPrecautionary * TimeInPrecautionary * NumberOfEngines) + ( FischerTropschSlowCruise * TimeInSlowCruise * NumberOfEngines) + (FischerTropschFullCruise * TimeInFullCruise * NumberOfEngines));
-            TotalOnboardAUxHP = NumberOfAuxillaryEnginesInUse * AuxillaryEnginesRatedHPperEngine;
-            TimeAuxActiveHours = (PercentOfTripAuxillaryIsActive / 100) * TotalTripTimeHours;
-            ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxillaryEnginesRatedHPperEngine;
-            TotalAuxEnergyProduction = NumberOfAuxillaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
+            TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
+            TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
+            ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
+            TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
             AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
             AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / 1000000;
-            AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxillaryEngineEfficiency);
+            AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
             AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
             AuxResidualOilEE = ResidualOilEE;
             AuxResidualOilMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxResidualOilEE);
@@ -834,12 +862,12 @@ namespace WindowsApplication1
             AuxNaturalGasEAFC = (1 / natGasBTUperSCF) * 1000000 * AuxNaturalGasMMBTU;
             AuxBiodieselEAFC = (1 / bioDieselBTUperGal) * 1000000 * AuxBiodieselMMBTU;
             AuxFischerTropschEAFC = (1 / fischerTropschBTUperGal) * 1000000 * AuxFischerTropschMMBTU;
-            AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
-            AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+            AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+            AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
         }
         #endregion
         #region This will make it so that all the values shown are consistent with the code values of the variables
@@ -1037,14 +1065,14 @@ namespace WindowsApplication1
             numericUpDown216.Value = (decimal)FischerTropschFullCruise;
 
             //6
-            numericUpDown227.Value = (decimal)AuxillaryEngineFuelType;
-            numericUpDown228.Value = (decimal)NumberOfOnBoarAuxillaryEngines;
-            numericUpDown229.Value = (decimal)NumberOfAuxillaryEnginesInUse;
-            numericUpDown230.Value = (decimal)AuxillaryEnginesRatedHPperEngine;
-            numericUpDown232.Value = (decimal)PercentOfTripAuxillaryIsActive;
+            numericUpDown227.Value = (decimal)AuxiliaryEngineFuelType;
+            numericUpDown228.Value = (decimal)NumberOfOnBoarAuxiliaryEngines;
+            numericUpDown229.Value = (decimal)NumberOfAuxiliaryEnginesInUse;
+            numericUpDown230.Value = (decimal)AuxiliaryEnginesRatedHPperEngine;
+            numericUpDown232.Value = (decimal)PercentOfTripAuxiliaryIsActive;
             numericUpDown234.Value = (decimal)HPLoadFactorSingleEngine;
             numericUpDown237.Value = (decimal)SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6;
-            numericUpDown242.Value = (decimal)AuxillaryEngineEfficiency;
+            numericUpDown242.Value = (decimal)AuxiliaryEngineEfficiency;
             numericUpDown293.Value = (decimal)AuxConventionalDieselFC;
             numericUpDown292.Value = (decimal)AuxResidualOilFC;
             numericUpDown291.Value = (decimal)AuxLowSulfurDieselFC;
@@ -1379,30 +1407,30 @@ namespace WindowsApplication1
 
             #endregion
             #region Teams 6.1 - 6.4d
-            //6.1 Auxillary Engine Fuel Type to Present On Results Sheet;
+            //6.1 Auxiliary Engine Fuel Type to Present On Results Sheet;
             //1 = Conventional Diesel 2 = Residual Oil 3 = Low Sulfur Diesel 4 = Natural gas 5 = Biodiesel 6 = Fischer Tropsch Diesel
-            AuxillaryEngineFuelType = 1;
+            AuxiliaryEngineFuelType = 1;
 
-            //6.2 Auxillary Engine Variables
-            NumberOfOnBoarAuxillaryEngines = 4;
-            NumberOfAuxillaryEnginesInUse = 2;
-            AuxillaryEnginesRatedHPperEngine = 1400;
+            //6.2 Auxiliary Engine Variables
+            NumberOfOnBoarAuxiliaryEngines = 4;
+            NumberOfAuxiliaryEnginesInUse = 2;
+            AuxiliaryEnginesRatedHPperEngine = 1400;
 
-            //6.3 Auxillary Engine Characterization (Conventional Diesel as Baseline Fuel)
-            PercentOfTripAuxillaryIsActive = 50.00;
+            //6.3 Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
+            PercentOfTripAuxiliaryIsActive = 50.00;
             HPLoadFactorSingleEngine = 80.00;
 
             //6.4a Selection of Medel Calculated or User Input Fuel Consumption Values Conventional Diesel as Baseline Fuel
-            //1 = Simlate using GPH derived from User-Entered Auxillary engine specifications 2 = Simlate using user entered GPH
+            //1 = Simlate using GPH derived from User-Entered Auxiliary engine specifications 2 = Simlate using user entered GPH
             SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = 1;
 
-            //6.4b Calculation of Auxillary Engine Fuel use Using Conventional Diesel as Baseline Fuel
-            AuxillaryEngineEfficiency = 40.00;
+            //6.4b Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
+            AuxiliaryEngineEfficiency = 40.00;
 
-            //6.4c Calculation of Auxillary Engine Fuel Use Using Alternative Fuels
-            //EE = Engine Efficiency AuxMMBTU = Auxillary MMTBUin/Trip EAFC = Auxillary Engine Alternativee Fuel Consumption
+            //6.4c Calculation of Auxiliary Engine Fuel Use Using Alternative Fuels
+            //EE = Engine Efficiency AuxMMBTU = Auxiliary MMTBUin/Trip EAFC = Auxiliary Engine Alternativee Fuel Consumption
 
-            //6.4d  Auxillary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
+            //6.4d  Auxiliary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
             //FC = Fuel Consumption 
             AuxConventionalDieselFC = 9;
             AuxResidualOilFC = 10;
@@ -1839,36 +1867,36 @@ namespace WindowsApplication1
                 six_complete = true;
                 button6.BackColor = Color.Green;
                 //6.1
-                AuxillaryEngineFuelType = (int)numericUpDown227.Value;
+                AuxiliaryEngineFuelType = (int)numericUpDown227.Value;
 
                 //6.2
-                NumberOfOnBoarAuxillaryEngines = (int)numericUpDown228.Value;
-                NumberOfAuxillaryEnginesInUse = (int)numericUpDown229.Value;
-                AuxillaryEnginesRatedHPperEngine = (int)numericUpDown230.Value;
-                TotalOnboardAUxHP = NumberOfAuxillaryEnginesInUse * AuxillaryEnginesRatedHPperEngine;
+                NumberOfOnBoarAuxiliaryEngines = (int)numericUpDown228.Value;
+                NumberOfAuxiliaryEnginesInUse = (int)numericUpDown229.Value;
+                AuxiliaryEnginesRatedHPperEngine = (int)numericUpDown230.Value;
+                TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
                 numericUpDown231.Value = (decimal)TotalOnboardAUxHP;
 
                 //6.3
-                PercentOfTripAuxillaryIsActive = (double)numericUpDown232.Value;
-                TimeAuxActiveHours = (PercentOfTripAuxillaryIsActive / 100) * TotalTripTimeHours;
+                PercentOfTripAuxiliaryIsActive = (double)numericUpDown232.Value;
+                TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
                 numericUpDown233.Value = (decimal)TimeAuxActiveHours;
                 HPLoadFactorSingleEngine = (double)numericUpDown234.Value;
-                ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxillaryEnginesRatedHPperEngine;
+                ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
                 numericUpDown235.Value = (decimal)ActiveHPPerAuxEngine;
-                TotalAuxEnergyProduction = NumberOfAuxillaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
+                TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
                 numericUpDown236.Value = (decimal)TotalAuxEnergyProduction;
 
                 //6.4a 
                 SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = (int)numericUpDown237.Value;
 
                 //6.4b
-                AuxillaryEngineEfficiency = (double)numericUpDown242.Value;
+                AuxiliaryEngineEfficiency = (double)numericUpDown242.Value;
                 AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
                 numericUpDown241.Value = (decimal)AuxEngineKWHoutperTrip;
                 AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / 1000000;
 
                 numericUpDown240.Value = (decimal)AuxEngineMMBTUoutperTrip;
-                AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxillaryEngineEfficiency);
+                AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
                 numericUpDown239.Value = (decimal)AuxEngineMMBTUinperTrip;
                 //This one requires fuel specs from GREET
                 AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
@@ -1917,22 +1945,22 @@ namespace WindowsApplication1
 
                 //6.4d
                 AuxConventionalDieselFC = (int)numericUpDown293.Value;
-                AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown263.Value = (decimal)AuxConventionalDieselTotal;
                 AuxResidualOilFC = (int)numericUpDown292.Value;
-                AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown262.Value = (decimal)AuxResidualOilTotal;
                 AuxLowSulfurDieselFC = (int)numericUpDown291.Value;
-                AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown261.Value = (decimal)AuxLowSulfurDieselTotal;
                 AuxNaturalGasFC = (int)numericUpDown290.Value;
-                AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown260.Value = (decimal)AuxNaturalGasTotal;
                 AuxBiodieselFC = (int)numericUpDown289.Value;
-                AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown259.Value = (decimal)AuxBioDieselTotal;
                 AuxFischerTropschFC = (int)numericUpDown268.Value;
-                AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxillaryEnginesInUse;
+                AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown258.Value = (decimal)AuxFischerTropschTotal;
             }
             else
@@ -2167,14 +2195,14 @@ namespace WindowsApplication1
                 FischerTropschSlowCruise = Convert.ToInt32(sr.ReadLine());
                 FischerTropschFullCruise = Convert.ToInt32(sr.ReadLine());
                 //6
-                AuxillaryEngineFuelType = Convert.ToInt32(sr.ReadLine());
-                NumberOfOnBoarAuxillaryEngines = Convert.ToInt32(sr.ReadLine());
-                NumberOfAuxillaryEnginesInUse = Convert.ToInt32(sr.ReadLine());
-                AuxillaryEnginesRatedHPperEngine = Convert.ToInt32(sr.ReadLine());
-                PercentOfTripAuxillaryIsActive = Convert.ToDouble( sr.ReadLine());
+                AuxiliaryEngineFuelType = Convert.ToInt32(sr.ReadLine());
+                NumberOfOnBoarAuxiliaryEngines = Convert.ToInt32(sr.ReadLine());
+                NumberOfAuxiliaryEnginesInUse = Convert.ToInt32(sr.ReadLine());
+                AuxiliaryEnginesRatedHPperEngine = Convert.ToInt32(sr.ReadLine());
+                PercentOfTripAuxiliaryIsActive = Convert.ToDouble( sr.ReadLine());
                 HPLoadFactorSingleEngine =  Convert.ToDouble(sr.ReadLine());
                 SelectionOfModelCalculatedOrUserInputFuelConsumptionValues = Convert.ToInt32(sr.ReadLine());
-                AuxillaryEngineEfficiency =  Convert.ToDouble(sr.ReadLine());
+                AuxiliaryEngineEfficiency =  Convert.ToDouble(sr.ReadLine());
                 AuxConventionalDieselFC = Convert.ToInt32(sr.ReadLine());
                 AuxResidualOilFC = Convert.ToInt32(sr.ReadLine());
                 AuxLowSulfurDieselFC = Convert.ToInt32(sr.ReadLine());
@@ -2388,14 +2416,14 @@ namespace WindowsApplication1
                 sr.WriteLine(FischerTropschSlowCruise);
                 sr.WriteLine(FischerTropschFullCruise);
                 //6
-                sr.WriteLine(AuxillaryEngineFuelType);
-                sr.WriteLine(NumberOfOnBoarAuxillaryEngines);
-                sr.WriteLine(NumberOfAuxillaryEnginesInUse);
-                sr.WriteLine(AuxillaryEnginesRatedHPperEngine);
-                sr.WriteLine(PercentOfTripAuxillaryIsActive);
+                sr.WriteLine(AuxiliaryEngineFuelType);
+                sr.WriteLine(NumberOfOnBoarAuxiliaryEngines);
+                sr.WriteLine(NumberOfAuxiliaryEnginesInUse);
+                sr.WriteLine(AuxiliaryEnginesRatedHPperEngine);
+                sr.WriteLine(PercentOfTripAuxiliaryIsActive);
                 sr.WriteLine(HPLoadFactorSingleEngine);
                 sr.WriteLine(SelectionOfModelCalculatedOrUserInputFuelConsumptionValues);
-                sr.WriteLine(AuxillaryEngineEfficiency);
+                sr.WriteLine(AuxiliaryEngineEfficiency);
                 sr.WriteLine(AuxConventionalDieselFC);
                 sr.WriteLine(AuxResidualOilFC);
                 sr.WriteLine(AuxLowSulfurDieselFC);
