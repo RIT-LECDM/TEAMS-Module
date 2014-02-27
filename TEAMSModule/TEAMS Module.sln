@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEAMS", "Examples\Example1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlugInsInterfaces", "Interfaces\PlugInsInterfaces.csproj", "{E9F76280-130B-4699-9F1B-768ED383B730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingGraphGeneration", "..\..\..\Visual Studio 2010\Projects\TestingGraphGeneration\TestingGraphGeneration\TestingGraphGeneration.csproj", "{36E4F70F-6903-4ED9-9D61-5F742629163C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingGraphGeneration", "Examples\TestingGraphGeneration\TestingGraphGeneration.csproj", "{36E4F70F-6903-4ED9-9D61-5F742629163C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
