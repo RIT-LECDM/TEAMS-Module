@@ -130,6 +130,9 @@ namespace TEAMSModule
         public List<double> T14_FTD = new List<double>();
 
         #endregion
+        public double T1Credit;
+        public double T5and6Credit;
+
         public ResultsSheet(TEAMS t)
         {
             te = t;
@@ -1403,6 +1406,8 @@ namespace TEAMSModule
             T14_FTD.Add(11);
             T14_FTD.Add(12);
             #endregion
+            T1Credit = 100;
+            T5and6Credit = 100;
         }
         public void correctNumbersDisplayed()
         {
@@ -2667,6 +2672,8 @@ namespace TEAMSModule
             numericUpDown1101.Value = (decimal)T14_FTD.ElementAt(11);
             numericUpDown1097.Value = (decimal)T14_FTD.ElementAt(12);
             #endregion
+            numericUpDown313.Value = (decimal)T1Credit;
+            numericUpDown314.Value = (decimal)T5and6Credit;
         }
         public string selectFuelType()
         {
