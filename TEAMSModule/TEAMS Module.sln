@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEAMS", "Examples\Example1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlugInsInterfaces", "Interfaces\PlugInsInterfaces.csproj", "{E9F76280-130B-4699-9F1B-768ED383B730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingGraphGeneration", "Examples\TestingGraphGeneration\TestingGraphGeneration.csproj", "{36E4F70F-6903-4ED9-9D61-5F742629163C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,16 +37,6 @@ Global
 		{E9F76280-130B-4699-9F1B-768ED383B730}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{E9F76280-130B-4699-9F1B-768ED383B730}.Release|x86.ActiveCfg = Release|x86
 		{E9F76280-130B-4699-9F1B-768ED383B730}.Release|x86.Build.0 = Release|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Debug|x86.ActiveCfg = Debug|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Debug|x86.Build.0 = Debug|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Release|Any CPU.ActiveCfg = Release|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Release|Mixed Platforms.Build.0 = Release|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Release|x86.ActiveCfg = Release|x86
-		{36E4F70F-6903-4ED9-9D61-5F742629163C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -52,6 +52,12 @@
     <Compile Include="CopyrightPage.Designer.cs">
       <DependentUpon>CopyrightPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="BarGraphSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarGraphSheet.Designer.cs">
+      <DependentUpon>BarGraphSheet.cs</DependentUpon>
+    </Compile>
     <Compile Include="GraphSheet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CopyrightPage.resx">
       <DependentUpon>CopyrightPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarGraphSheet.resx">
+      <DependentUpon>BarGraphSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GraphSheet.resx">
       <DependentUpon>GraphSheet.cs</DependentUpon>
