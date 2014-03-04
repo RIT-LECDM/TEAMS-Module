@@ -122,7 +122,7 @@ namespace TEAMSModule
         public List<double> T13_CentF = new List<double>();
         public List<double> T13_CentO = new List<double>();
         #endregion
-        #region Table 15 Variable Lists
+        #region Table 14 Variable Lists
         public List<double> T14_RO = new List<double>();
         public List<double> T14_LSD = new List<double>();
         public List<double> T14_NG = new List<double>();
@@ -130,6 +130,9 @@ namespace TEAMSModule
         public List<double> T14_FTD = new List<double>();
 
         #endregion
+        public double T1Credit;
+        public double T5and6Credit;
+
         public ResultsSheet(TEAMS t)
         {
             te = t;
@@ -1403,6 +1406,8 @@ namespace TEAMSModule
             T14_FTD.Add(11);
             T14_FTD.Add(12);
             #endregion
+            T1Credit = 100;
+            T5and6Credit = 100;
         }
         public void correctNumbersDisplayed()
         {
@@ -2455,7 +2460,6 @@ namespace TEAMSModule
             numericUpDown874.Value = (decimal)T12_CentO.ElementAt(11);
             numericUpDown873.Value = (decimal)T12_CentO.ElementAt(12);
             #endregion
-
             #region Table 13 numericUpDown assignments
             numericUpDown1094.Value = (decimal)T13_FSM.ElementAt(0);
             numericUpDown1092.Value = (decimal)T13_FSM.ElementAt(1);
@@ -2597,7 +2601,6 @@ namespace TEAMSModule
             numericUpDown1004.Value = (decimal)T13_CentO.ElementAt(11);
             numericUpDown1003.Value = (decimal)T13_CentO.ElementAt(12);
             #endregion
-
             #region Table 14 numericUpDown assignments
             numericUpDown1148.Value = (decimal)T14_RO.ElementAt(0);
             numericUpDown1144.Value = (decimal)T14_RO.ElementAt(1);
@@ -2669,6 +2672,8 @@ namespace TEAMSModule
             numericUpDown1101.Value = (decimal)T14_FTD.ElementAt(11);
             numericUpDown1097.Value = (decimal)T14_FTD.ElementAt(12);
             #endregion
+            numericUpDown313.Value = (decimal)T1Credit;
+            numericUpDown314.Value = (decimal)T5and6Credit;
         }
         public string selectFuelType()
         {
