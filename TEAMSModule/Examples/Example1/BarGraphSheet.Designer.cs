@@ -81,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(847, 702);
             this.Controls.Add(this.chart1);
             this.Name = "BarGraphSheet";
-            this.Text = "Form1";
+            this.Text = "Bar Graph ";
             this.Load += new System.EventHandler(this.BarGraphSheet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);

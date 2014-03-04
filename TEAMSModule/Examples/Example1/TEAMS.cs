@@ -486,6 +486,7 @@ namespace WindowsApplication1
         public Fuel_Specs GVE;
         public ResultsSheet rs;
         public GraphSheet gs;
+        public BarGraphSheet bg;
         public TEAMS()
         {
             InitializeComponent();
@@ -572,6 +573,23 @@ namespace WindowsApplication1
                 residualOilCarbonRatio = RO.CarbonRatio.GreetValue;
                 residualOilSulfurRatio = RO.SulfurRatio.GreetValue * 1000000;
                 residualOilSulfurRatioActual = RO.SulfurRatio.GreetValue;
+                IData data = ResultsAccess.controler.CurrentProject.Data;
+                IResults path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(0).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(1).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(2).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(3).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(4).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(5).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(6).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(7).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(8).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(9).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(10).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(11).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(12).Value.Value.ToString());
+                //MessageBox.Show(path.LifeCycleResources().ElementAt(13).Value.Value.ToString());
+                MessageBox.Show(((path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value)).ToString());
 
                 //This is where you do the above process, but for liquified natural gas
                 myPathway = pathways.ValueForKey(LIQ_NATGAS_PATH_ID);
@@ -1484,6 +1502,8 @@ namespace WindowsApplication1
                 rs.Show();
                 gs = new GraphSheet(rs);
                 gs.Show();
+                bg = new BarGraphSheet(rs);
+                bg.Show();
             }
         }
         //This will set all variables to their default value, as is present in the TEAMS spreadsheet model
