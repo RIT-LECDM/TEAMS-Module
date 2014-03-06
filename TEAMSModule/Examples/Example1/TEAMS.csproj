@@ -52,17 +52,17 @@
     <Compile Include="CopyrightPage.Designer.cs">
       <DependentUpon>CopyrightPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="BarGraphSheet.cs">
+    <Compile Include="ReductionsGraph.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BarGraphSheet.Designer.cs">
-      <DependentUpon>BarGraphSheet.cs</DependentUpon>
+    <Compile Include="ReductionsGraph.Designer.cs">
+      <DependentUpon>ReductionsGraph.cs</DependentUpon>
     </Compile>
-    <Compile Include="GraphSheet.cs">
+    <Compile Include="StackedColumnGraph.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GraphSheet.Designer.cs">
-      <DependentUpon>GraphSheet.cs</DependentUpon>
+    <Compile Include="StackedColumnGraph.Designer.cs">
+      <DependentUpon>StackedColumnGraph.cs</DependentUpon>
     </Compile>
     <Compile Include="GREETFormattedResults.cs">
       <SubType>Form</SubType>
@@ -121,11 +121,11 @@
     <EmbeddedResource Include="CopyrightPage.resx">
       <DependentUpon>CopyrightPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BarGraphSheet.resx">
-      <DependentUpon>BarGraphSheet.cs</DependentUpon>
+    <EmbeddedResource Include="ReductionsGraph.resx">
+      <DependentUpon>ReductionsGraph.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GraphSheet.resx">
-      <DependentUpon>GraphSheet.cs</DependentUpon>
+    <EmbeddedResource Include="StackedColumnGraph.resx">
+      <DependentUpon>StackedColumnGraph.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GREETFormattedResults.resx">
       <DependentUpon>GREETFormattedResults.cs</DependentUpon>
