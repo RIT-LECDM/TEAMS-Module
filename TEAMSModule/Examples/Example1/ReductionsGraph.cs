@@ -10,10 +10,8 @@ namespace TEAMSModule
 {
     public partial class ReductionsGraph : Form
     {
-        public ResultsSheet res;
-        public ReductionsGraph(ResultsSheet rs)
+        public ReductionsGraph()
         {
-            res = rs;
             InitializeComponent();
         }
 

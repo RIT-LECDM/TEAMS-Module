@@ -18,10 +18,8 @@ namespace TEAMSModule
 {
     public partial class StackedColumnGraph : Form
     {
-        public ResultsSheet res;
-        public StackedColumnGraph(ResultsSheet rs)
+        public StackedColumnGraph()
         {
-            res = rs;
             InitializeComponent();
         }
 
