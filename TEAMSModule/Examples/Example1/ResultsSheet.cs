@@ -2702,7 +2702,7 @@ namespace TEAMSModule
                 return "Fischer Tropsch Diesel";
             }
             else
-                return " You must have broken it somewhere";
+                return "You must have broken it somewhere";
         }
 
         public void correctTextForInputs()

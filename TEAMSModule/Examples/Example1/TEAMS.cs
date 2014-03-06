@@ -822,6 +822,9 @@ namespace WindowsApplication1
             GVE = new Fuel_Specs(this);
             u = new Update(this);
         }
+        /// <summary>
+        /// Grabs all of the data needed to do calculations from GREET resources, pathways, and mixes.
+        /// </summary>
         public void pullFromGREET()
         {
             IGDataDictionary<int, IResource> resources = ResultsAccess.controler.CurrentProject.Data.Resources;
