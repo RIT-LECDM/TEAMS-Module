@@ -1508,6 +1508,8 @@ namespace WindowsApplication1
                 gs.Show();
                 bg = new BarGraphSheet(rs);
                 bg.Show();
+                GREETFormattedResults gfr = new GREETFormattedResults();
+                gfr.Show();
             }
         }
         //This will set all variables to their default value, as is present in the TEAMS spreadsheet model
