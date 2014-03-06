@@ -27,10 +27,6 @@ namespace TEAMSModule
             {
                 //Row 1
                 label24.Text = (te.MMBTUinperTrip * te.CD_WTP_TE).ToString("#.##") + " mmbtu/trip";
-                label25.Text = "Conventional Diesel";
-                label26.Text = "Conventional Diesel";
-                label27.Text = "Conventional Diesel";
-                label28.Text = "Conventional Diesel";
                 label30.Text = "Conventional Diesel";
                 label31.Text = "Conventional Diesel";
                 label32.Text = "Conventional Diesel";
@@ -45,10 +41,6 @@ namespace TEAMSModule
                 label41.Text = "Conventional Diesel";
                 //Row 2
                 label42.Text = (te.MMBTUinperTrip * te.CD_VO_TE).ToString("#.##") + " mmbtu/trip";
-                label43.Text = "Conventional Diesel";
-                label44.Text = "Conventional Diesel";
-                label45.Text = "Conventional Diesel";
-                label46.Text = "Conventional Diesel";
                 label48.Text = "Conventional Diesel";
                 label49.Text = "Conventional Diesel";
                 label50.Text = "Conventional Diesel";
@@ -86,11 +78,7 @@ namespace TEAMSModule
             else if (e.Node.Text == "Residual Oil")
             {
                 //Row 1
-                label24.Text = te.RO_WTP_TE.ToString("#.##") + " mmbtu/trip";
-                label25.Text = "Residual OIl";
-                label26.Text = "Residual OIl";
-                label27.Text = "Residual OIl";
-                label28.Text = "Residual OIl";
+                label24.Text = (te.MMBTUinperTrip * te.RO_WTP_TE).ToString("#.##") + " mmbtu/trip";
                 label30.Text = "Residual OIl";
                 label31.Text = "Residual OIl";
                 label32.Text = "Residual OIl";
@@ -104,11 +92,7 @@ namespace TEAMSModule
                 label40.Text = "Residual OIl";
                 label41.Text = "Residual OIl";
                 //Row 2
-                label42.Text = te.RO_VO_TE.ToString("#.##") + " mmbtu/trip";
-                label43.Text = "Residual OIl";
-                label44.Text = "Residual OIl";
-                label45.Text = "Residual OIl";
-                label46.Text = "Residual OIl";
+                label42.Text = (te.MMBTUinperTrip * te.RO_VO_TE).ToString("#.##") + " mmbtu/trip";
                 label48.Text = "Residual OIl";
                 label49.Text = "Residual OIl";
                 label50.Text = "Residual OIl";
@@ -122,7 +106,7 @@ namespace TEAMSModule
                 label58.Text = "Residual OIl";
                 label59.Text = "Residual OIl";
                 //Row 3
-                label60.Text = te.RO_Total_TE.ToString("#.##") + " mmbtu/trip";
+                label60.Text = (te.MMBTUinperTrip * te.RO_Total_TE).ToString("#.##") + " mmbtu/trip";
                 label61.Text = "Residual OIl";
                 label62.Text = "Residual OIl";
                 label63.Text = "Residual OIl";
@@ -146,11 +130,7 @@ namespace TEAMSModule
             else if (e.Node.Text == "Low Sulfur Diesel")
             {
                 //Row 1
-                label24.Text = te.LSD_WTP_TE.ToString("#.##") + " mmbtu/trip";
-                label25.Text = "Low Sulfur Diesel";
-                label26.Text = "Low Sulfur Diesel";
-                label27.Text = "Low Sulfur Diesel";
-                label28.Text = "Low Sulfur Diesel";
+                label24.Text = (te.MMBTUinperTrip * te.LSD_WTP_TE).ToString("#.##") + " mmbtu/trip";
                 label30.Text = "Low Sulfur Diesel";
                 label31.Text = "Low Sulfur Diesel";
                 label32.Text = "Low Sulfur Diesel";
@@ -164,11 +144,7 @@ namespace TEAMSModule
                 label40.Text = "Low Sulfur Diesel";
                 label41.Text = "Low Sulfur Diesel";
                 //Row 2
-                label42.Text = te.LSD_VO_TE.ToString("#.##") + " mmbtu/trip";
-                label43.Text = "Low Sulfur Diesel";
-                label44.Text = "Low Sulfur Diesel";
-                label45.Text = "Low Sulfur Diesel";
-                label46.Text = "Low Sulfur Diesel";
+                label42.Text = (te.MMBTUinperTrip * te.LSD_VO_TE).ToString("#.##") + " mmbtu/trip";
                 label48.Text = "Low Sulfur Diesel";
                 label49.Text = "Low Sulfur Diesel";
                 label50.Text = "Low Sulfur Diesel";
@@ -182,7 +158,7 @@ namespace TEAMSModule
                 label58.Text = "Low Sulfur Diesel";
                 label59.Text = "Low Sulfur Diesel";
                 //Row 3
-                label60.Text = te.LSD_Total_TE.ToString("#.##") + " mmbtu/trip";
+                label60.Text = (te.MMBTUinperTrip * te.LSD_Total_TE).ToString("#.##") + " mmbtu/trip";
                 label61.Text = "Low Sulfur Diesel";
                 label62.Text = "Low Sulfur Diesel";
                 label63.Text = "Low Sulfur Diesel";
@@ -206,11 +182,7 @@ namespace TEAMSModule
             else if (e.Node.Text == "Natural Gas")
             {
                 //Row 1
-                label24.Text = te.NG_WTP_TE.ToString("#.##") + " mmbtu/trip";
-                label25.Text = "Natural Gas";
-                label26.Text = "Natural Gas";
-                label27.Text = "Natural Gas";
-                label28.Text = "Natural Gas";
+                label24.Text = (te.MMBTUinperTrip * te.NG_WTP_TE).ToString("#.##") + " mmbtu/trip";
                 label30.Text = "Natural Gas";
                 label31.Text = "Natural Gas";
                 label32.Text = "Natural Gas";
@@ -224,11 +196,7 @@ namespace TEAMSModule
                 label40.Text = "Natural Gas";
                 label41.Text = "Natural Gas";
                 //Row 2
-                label42.Text = te.NG_VO_TE.ToString("#.##") + " mmbtu/trip";
-                label43.Text = "Natural Gas";
-                label44.Text = "Natural Gas";
-                label45.Text = "Natural Gas";
-                label46.Text = "Natural Gas";
+                label42.Text = (te.MMBTUinperTrip * te.NG_VO_TE).ToString("#.##") + " mmbtu/trip";
                 label48.Text = "Natural Gas";
                 label49.Text = "Natural Gas";
                 label50.Text = "Natural Gas";
@@ -242,7 +210,7 @@ namespace TEAMSModule
                 label58.Text = "Natural Gas";
                 label59.Text = "Natural Gas";
                 //Row 3
-                label60.Text = te.NG_Total_TE.ToString("#.##") + " mmbtu/trip";
+                label60.Text = (te.MMBTUinperTrip * te.NG_Total_TE).ToString("#.##") + " mmbtu/trip";
                 label61.Text = "Natural Gas";
                 label62.Text = "Natural Gas";
                 label63.Text = "Natural Gas";
@@ -266,11 +234,7 @@ namespace TEAMSModule
             else if (e.Node.Text == "Biodiesel")
             {
                 //Row 1
-                label24.Text = te.BD_WTP_TE.ToString("#.##") + " mmbtu/trip";
-                label25.Text = "Biodiesel";
-                label26.Text = "Biodiesel";
-                label27.Text = "Biodiesel";
-                label28.Text = "Biodiesel";
+                label24.Text = (-1 *((te.MMBTUinperTrip * te.BD_WTP_TE) - (te.MMBTUinperTrip * te.BD_VO_TE))).ToString("#.##") + " mmbtu/trip";
                 label30.Text = "Biodiesel";
                 label31.Text = "Biodiesel";
                 label32.Text = "Biodiesel";
@@ -284,11 +248,7 @@ namespace TEAMSModule
                 label40.Text = "Biodiesel";
                 label41.Text = "Biodiesel";
                 //Row 2
-                label42.Text = te.BD_VO_TE.ToString("#.##") + " mmbtu/trip";
-                label43.Text = "Biodiesel";
-                label44.Text = "Biodiesel";
-                label45.Text = "Biodiesel";
-                label46.Text = "Biodiesel";
+                label42.Text = (te.MMBTUinperTrip * te.BD_VO_TE).ToString("#.##") + " mmbtu/trip";
                 label48.Text = "Biodiesel";
                 label49.Text = "Biodiesel";
                 label50.Text = "Biodiesel";
@@ -302,7 +262,7 @@ namespace TEAMSModule
                 label58.Text = "Biodiesel";
                 label59.Text = "Biodiesel";
                 //Row 3
-                label60.Text = te.BD_Total_TE.ToString("#.##") + " mmbtu/trip";
+                label60.Text = ((te.MMBTUinperTrip * te.BD_Total_TE) + (-2 * ((te.MMBTUinperTrip * te.BD_WTP_TE) - (te.MMBTUinperTrip * te.BD_VO_TE)))).ToString("#.##") + " mmbtu/trip";
                 label61.Text = "Biodiesel";
                 label62.Text = "Biodiesel";
                 label63.Text = "Biodiesel";
@@ -326,11 +286,7 @@ namespace TEAMSModule
             else if (e.Node.Text == "Fischer Tropsch Diesel")
             {
                 //Row 1
-                label24.Text = te.FTD_WTP_TE.ToString("#.##") + " mmbtu/trip";
-                label25.Text = "Fischer Tropsch Diesel";
-                label26.Text = "Fischer Tropsch Diesel";
-                label27.Text = "Fischer Tropsch Diesel";
-                label28.Text = "Fischer Tropsch Diesel";
+                label24.Text = (te.MMBTUinperTrip * te.FTD_WTP_TE).ToString("#.##") + " mmbtu/trip";
                 label30.Text = "Fischer Tropsch Diesel";
                 label31.Text = "Fischer Tropsch Diesel";
                 label32.Text = "Fischer Tropsch Diesel";
@@ -344,11 +300,7 @@ namespace TEAMSModule
                 label40.Text = "Fischer Tropsch Diesel";
                 label41.Text = "Fischer Tropsch Diesel";
                 //Row 2
-                label42.Text = te.FTD_VO_TE.ToString("#.##") + " mmbtu/trip";
-                label43.Text = "Fischer Tropsch Diesel";
-                label44.Text = "Fischer Tropsch Diesel";
-                label45.Text = "Fischer Tropsch Diesel";
-                label46.Text = "Fischer Tropsch Diesel";
+                label42.Text = (te.MMBTUinperTrip * te.FTD_VO_TE).ToString("#.##") + " mmbtu/trip";
                 label48.Text = "Fischer Tropsch Diesel";
                 label49.Text = "Fischer Tropsch Diesel";
                 label50.Text = "Fischer Tropsch Diesel";
@@ -362,7 +314,7 @@ namespace TEAMSModule
                 label58.Text = "Fischer Tropsch Diesel";
                 label59.Text = "Fischer Tropsch Diesel";
                 //Row 3
-                label60.Text = te.FTD_Total_TE.ToString("#.##") + " mmbtu/trip";
+                label60.Text = (te.MMBTUinperTrip * te.FTD_Total_TE).ToString("#.##") + " mmbtu/trip";
                 label61.Text = "Fischer Tropsch Diesel";
                 label62.Text = "Fischer Tropsch Diesel";
                 label63.Text = "Fischer Tropsch Diesel";

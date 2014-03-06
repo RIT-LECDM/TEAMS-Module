@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Conventional Diesel");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Residual Oil");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Low Sulfur Diesel");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Natural Gas");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Biodiesel");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Fischer Tropsch Diesel");
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Conventional Diesel");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Residual Oil");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Low Sulfur Diesel");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Natural Gas");
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Biodiesel");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Fischer Tropsch Diesel");
             this.panel1 = new System.Windows.Forms.Panel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -80,10 +80,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
@@ -102,10 +98,6 @@
             this.label52 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
@@ -140,25 +132,25 @@
             this.treeView1.Location = new System.Drawing.Point(-1, 242);
             this.treeView1.Margin = new System.Windows.Forms.Padding(2);
             this.treeView1.Name = "treeView1";
-            treeNode19.Name = "Node0";
-            treeNode19.Text = "Conventional Diesel";
-            treeNode20.Name = "Node1";
-            treeNode20.Text = "Residual Oil";
-            treeNode21.Name = "Node2";
-            treeNode21.Text = "Low Sulfur Diesel";
-            treeNode22.Name = "Node3";
-            treeNode22.Text = "Natural Gas";
-            treeNode23.Name = "Node4";
-            treeNode23.Text = "Biodiesel";
-            treeNode24.Name = "Node6";
-            treeNode24.Text = "Fischer Tropsch Diesel";
+            treeNode31.Name = "Node0";
+            treeNode31.Text = "Conventional Diesel";
+            treeNode32.Name = "Node1";
+            treeNode32.Text = "Residual Oil";
+            treeNode33.Name = "Node2";
+            treeNode33.Text = "Low Sulfur Diesel";
+            treeNode34.Name = "Node3";
+            treeNode34.Text = "Natural Gas";
+            treeNode35.Name = "Node4";
+            treeNode35.Text = "Biodiesel";
+            treeNode36.Name = "Node6";
+            treeNode36.Text = "Fischer Tropsch Diesel";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode19,
-            treeNode20,
-            treeNode21,
-            treeNode22,
-            treeNode23,
-            treeNode24});
+            treeNode31,
+            treeNode32,
+            treeNode33,
+            treeNode34,
+            treeNode35,
+            treeNode36});
             this.treeView1.Size = new System.Drawing.Size(167, 143);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -219,7 +211,7 @@
             this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(214, 15);
+            this.label21.Location = new System.Drawing.Point(203, 15);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(94, 17);
@@ -286,10 +278,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label18, 0, 16);
             this.tableLayoutPanel1.Controls.Add(this.label19, 0, 17);
             this.tableLayoutPanel1.Controls.Add(this.label24, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label25, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label26, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label27, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label28, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label30, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.label31, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.label32, 1, 8);
@@ -308,10 +296,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label52, 2, 10);
             this.tableLayoutPanel1.Controls.Add(this.label50, 2, 8);
             this.tableLayoutPanel1.Controls.Add(this.label48, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.label46, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label44, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label43, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label45, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.label49, 2, 7);
             this.tableLayoutPanel1.Controls.Add(this.label51, 2, 9);
             this.tableLayoutPanel1.Controls.Add(this.label53, 2, 11);
@@ -826,58 +810,6 @@
             this.label24.TabIndex = 18;
             this.label24.Text = "label24";
             // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label25.Location = new System.Drawing.Point(205, 56);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(56, 15);
-            this.label25.TabIndex = 19;
-            this.label25.Text = "label25";
-            // 
-            // label26
-            // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label26.Location = new System.Drawing.Point(205, 88);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(56, 15);
-            this.label26.TabIndex = 20;
-            this.label26.Text = "label26";
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label27.Location = new System.Drawing.Point(205, 121);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(56, 15);
-            this.label27.TabIndex = 21;
-            this.label27.Text = "label27";
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label28.Location = new System.Drawing.Point(205, 154);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(56, 15);
-            this.label28.TabIndex = 22;
-            this.label28.Text = "label28";
-            // 
             // label30
             // 
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1112,58 +1044,6 @@
             this.label48.TabIndex = 42;
             this.label48.Text = "label48";
             // 
-            // label46
-            // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label46.Location = new System.Drawing.Point(407, 154);
-            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(56, 15);
-            this.label46.TabIndex = 40;
-            this.label46.Text = "label46";
-            // 
-            // label44
-            // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label44.Location = new System.Drawing.Point(407, 88);
-            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(56, 15);
-            this.label44.TabIndex = 38;
-            this.label44.Text = "label44";
-            // 
-            // label43
-            // 
-            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label43.Location = new System.Drawing.Point(407, 56);
-            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(56, 15);
-            this.label43.TabIndex = 37;
-            this.label43.Text = "label43";
-            // 
-            // label45
-            // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label45.Location = new System.Drawing.Point(407, 121);
-            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(56, 15);
-            this.label45.TabIndex = 39;
-            this.label45.Text = "label45";
-            // 
             // label49
             // 
             this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1337,10 +1217,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
@@ -1359,10 +1235,6 @@
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label53;
