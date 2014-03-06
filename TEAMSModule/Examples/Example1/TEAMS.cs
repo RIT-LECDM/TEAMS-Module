@@ -485,8 +485,8 @@ namespace WindowsApplication1
         public Update u;
         public Fuel_Specs GVE;
         public ResultsSheet rs;
-        public GraphSheet gs;
-        public BarGraphSheet bg;
+        public StackedColumnGraph gs;
+        public ReductionsGraph bg;
         public TEAMS()
         {
             InitializeComponent();
@@ -1504,9 +1504,9 @@ namespace WindowsApplication1
                 runSimulationToolStripMenuItem.BackColor = Color.Green;
                 ResultsSheet rs = new ResultsSheet(this);
                 rs.Show();
-                gs = new GraphSheet(rs);
+                gs = new StackedColumnGraph(rs);
                 gs.Show();
-                bg = new BarGraphSheet(rs);
+                bg = new ReductionsGraph(rs);
                 bg.Show();
                 GREETFormattedResults gfr = new GREETFormattedResults();
                 gfr.Show();
