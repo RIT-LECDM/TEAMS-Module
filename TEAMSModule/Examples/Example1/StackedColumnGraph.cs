@@ -31,9 +31,14 @@ namespace TEAMSModule
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
+            example_conv_diesel_graph();
+        }
+
+        private void example_conv_diesel_graph()
+        {
             //This is just demonstrating the expected contents of each resource set.
             //Actual resource arrays/sets will be filled using calculations from GREET
-            string[] seriesArray = { "Upstream", "VesselOperation" };
+            
 
             // resourceType = { %upstream%, %vesseloperation% }
             double[] total_energy = { 50, 25 }; //Resource 0
@@ -53,8 +58,10 @@ namespace TEAMSModule
             double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
             string title = "Your Vessel using Conventional Diesel\nContribution of Each Stage";
             //Generate the graph using the resources set and seriesArray.
-            Generate_Graph(resources, seriesArray, stacked_graph, title);
+            Generate_Graph(resources, stacked_graph, title);
         }
+
+
         /// <summary>
         /// Generate graph displays the appropriate results in a 100StackedColumn graph.
         /// </summary>
@@ -62,8 +69,9 @@ namespace TEAMSModule
         ///                         Each resource is a set of three values: { %feedstock, %fuel, %engineoperation }</param>
         /// <param name="seriesArray">seriesArray holds the string values of the series we are acting on. In this case,
         ///                           it should contain: { "Feedstock", "Fuel", "EngineOperation" }</param>
-        private void Generate_Graph(double[][] resources, string[] seriesArray, Chart graph, string title)
+        private void Generate_Graph(double[][] resources, Chart graph, string title)
         {
+            string[] seriesArray = { "Upstream", "VesselOperation" };
             graph.Titles[0].Text = title;
             //Iterate through each of the three series.
             for (int i = 0; i < seriesArray.Length; i++)
