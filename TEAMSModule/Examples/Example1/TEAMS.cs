@@ -872,7 +872,8 @@ namespace WindowsApplication1
                 CD_VO_TE = 1;
 
                 CD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
-                MessageBox.Show(CD_Total_FF.ToString());
+                CD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
+
                 // this.label258.Text = ConvDiesel.Name + " Energy Value " + conventionalDieselBTUperGal + " Btu/Gal " + " Density: " + conventionalDieselDensity + " grams/gallon CR " + ConvDiesel.CarbonRatio.GreetValue;
 
                 //This is where you do the above process, but for low sulfur diesel
@@ -895,6 +896,8 @@ namespace WindowsApplication1
                 LSD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 LSD_WTP_TE = (LSD_Total_TE - 1);
                 LSD_VO_TE = 1;
+                LSD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
+                LSD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
 
                 //This is where you do the above process, but for liquified petroleum gas
                 myPathway = pathways.ValueForKey(LIQ_PETROL_PATH_ID);
@@ -929,6 +932,9 @@ namespace WindowsApplication1
                 RO_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 RO_WTP_TE = (RO_Total_TE - 1);
                 RO_VO_TE = 1;
+                RO_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
+                RO_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
+
                 //This is where you do the above process, but for liquified natural gas
                 myPathway = pathways.ValueForKey(LIQ_NATGAS_PATH_ID);
                 // Grab the int id for the resource (the water)
@@ -949,6 +955,9 @@ namespace WindowsApplication1
                 NG_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 NG_WTP_TE = (NG_Total_TE - 1);
                 NG_VO_TE = 1;
+                NG_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
+                NG_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+
                 //This is where you do the above process, but for biodiesel
                 myPathway = pathways.ValueForKey(BIODIESEL_PATH_ID);
                 // Grab the int id for the resource (the water)
@@ -969,6 +978,9 @@ namespace WindowsApplication1
                 BD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 BD_WTP_TE = BD_Total_TE;
                 BD_VO_TE = 1;
+                BD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
+                BD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
+
                 //This is where you do the above process, but for fischer tropsch diesel
                 myPathway = pathways.ValueForKey(FTD_PATH_ID);
                 // Grab the int id for the resource (the water)
@@ -989,6 +1001,8 @@ namespace WindowsApplication1
                 FTD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 FTD_WTP_TE = (FTD_Total_TE - 1);
                 FTD_VO_TE = 1;
+                FTD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
+                FTD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 #endregion
                 #region Solid and Gaseous Fuels
                 //This is where you do the above process, but for Gaseous Natural Gas

@@ -55,8 +55,8 @@ namespace TEAMSModule
                 label59.Text = "Conventional Diesel";
                 //Row 3
                 label60.Text = (te.MMBTUinperTrip * te.CD_Total_TE).ToString("#.##") + " mmbtu/trip";
-                label61.Text = "Conventional Diesel";
-                label62.Text = "Conventional Diesel";
+                label61.Text = (te.MMBTUinperTrip * te.CD_Total_FF).ToString("#.##") + " mmbtu/trip";
+                label62.Text = (te.MMBTUinperTrip * te.CD_Total_CF).ToString("#.##") + " mmbtu/trip";
                 label63.Text = "Conventional Diesel";
                 label64.Text = "Conventional Diesel";
                 label66.Text = "Conventional Diesel";
@@ -107,8 +107,8 @@ namespace TEAMSModule
                 label59.Text = "Residual OIl";
                 //Row 3
                 label60.Text = (te.MMBTUinperTrip * te.RO_Total_TE).ToString("#.##") + " mmbtu/trip";
-                label61.Text = "Residual OIl";
-                label62.Text = "Residual OIl";
+                label61.Text = (te.MMBTUinperTrip * te.RO_Total_FF).ToString("#.##") + " mmbtu/trip";
+                label62.Text = (te.MMBTUinperTrip * te.RO_Total_CF).ToString("#.##") + " mmbtu/trip";
                 label63.Text = "Residual OIl";
                 label64.Text = "Residual OIl";
                 label66.Text = "Residual OIl";
@@ -159,8 +159,8 @@ namespace TEAMSModule
                 label59.Text = "Low Sulfur Diesel";
                 //Row 3
                 label60.Text = (te.MMBTUinperTrip * te.LSD_Total_TE).ToString("#.##") + " mmbtu/trip";
-                label61.Text = "Low Sulfur Diesel";
-                label62.Text = "Low Sulfur Diesel";
+                label61.Text = (te.MMBTUinperTrip * te.LSD_Total_FF).ToString("#.##") + " mmbtu/trip";
+                label62.Text = (te.MMBTUinperTrip * te.LSD_Total_CF).ToString("#.##") + " mmbtu/trip";
                 label63.Text = "Low Sulfur Diesel";
                 label64.Text = "Low Sulfur Diesel";
                 label66.Text = "Low Sulfur Diesel";
@@ -211,8 +211,8 @@ namespace TEAMSModule
                 label59.Text = "Natural Gas";
                 //Row 3
                 label60.Text = (te.MMBTUinperTrip * te.NG_Total_TE).ToString("#.##") + " mmbtu/trip";
-                label61.Text = "Natural Gas";
-                label62.Text = "Natural Gas";
+                label61.Text = (te.MMBTUinperTrip * te.NG_Total_FF).ToString("#.##") + " mmbtu/trip";
+                label62.Text = (te.MMBTUinperTrip * te.NG_Total_CF).ToString("#.##") + " mmbtu/trip";
                 label63.Text = "Natural Gas";
                 label64.Text = "Natural Gas";
                 label66.Text = "Natural Gas";
@@ -263,8 +263,8 @@ namespace TEAMSModule
                 label59.Text = "Biodiesel";
                 //Row 3
                 label60.Text = ((te.MMBTUinperTrip * te.BD_Total_TE) + (-2 * ((te.MMBTUinperTrip * te.BD_WTP_TE) - (te.MMBTUinperTrip * te.BD_VO_TE)))).ToString("#.##") + " mmbtu/trip";
-                label61.Text = "Biodiesel";
-                label62.Text = "Biodiesel";
+                label61.Text = (te.MMBTUinperTrip * te.BD_Total_FF).ToString("#.##") + " mmbtu/trip";
+                label62.Text = (te.MMBTUinperTrip * te.BD_Total_CF).ToString("#.##") + " mmbtu/trip";
                 label63.Text = "Biodiesel";
                 label64.Text = "Biodiesel";
                 label66.Text = "Biodiesel";
@@ -315,8 +315,8 @@ namespace TEAMSModule
                 label59.Text = "Fischer Tropsch Diesel";
                 //Row 3
                 label60.Text = (te.MMBTUinperTrip * te.FTD_Total_TE).ToString("#.##") + " mmbtu/trip";
-                label61.Text = "Fischer Tropsch Diesel";
-                label62.Text = "Fischer Tropsch Diesel";
+                label61.Text = (te.MMBTUinperTrip * te.FTD_Total_FF).ToString("#.##") + " mmbtu/trip";
+                label62.Text = (te.MMBTUinperTrip * te.FTD_Total_CF).ToString("#.##") + " mmbtu/trip";
                 label63.Text = "Fischer Tropsch Diesel";
                 label64.Text = "Fischer Tropsch Diesel";
                 label66.Text = "Fischer Tropsch Diesel";
