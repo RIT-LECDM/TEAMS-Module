@@ -34,12 +34,14 @@
             System.Windows.Forms.DataVisualization.Charting.CustomLabel customLabel3 = new System.Windows.Forms.DataVisualization.Charting.CustomLabel();
             System.Windows.Forms.DataVisualization.Charting.CustomLabel customLabel4 = new System.Windows.Forms.DataVisualization.Charting.CustomLabel();
             System.Windows.Forms.DataVisualization.Charting.CustomLabel customLabel5 = new System.Windows.Forms.DataVisualization.Charting.CustomLabel();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.reduction_graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.reduction_graph)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // reduction_graph
             // 
             customLabel1.Text = "IFO 380 (A)";
             customLabel1.ToPosition = 2D;
@@ -62,34 +64,42 @@
             chartArea1.AxisX.CustomLabels.Add(customLabel5);
             chartArea1.AxisY.LabelStyle.Format = "#%";
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Location = new System.Drawing.Point(42, 47);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            this.reduction_graph.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend";
+            this.reduction_graph.Legends.Add(legend1);
+            this.reduction_graph.Location = new System.Drawing.Point(12, 12);
+            this.reduction_graph.Name = "reduction_graph";
+            this.reduction_graph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Name = "total_energy";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(664, 477);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            series1.Legend = "Legend";
+            series1.LegendText = "Percent Change";
+            series1.Name = "percent_change";
+            this.reduction_graph.Series.Add(series1);
+            this.reduction_graph.Size = new System.Drawing.Size(823, 452);
+            this.reduction_graph.TabIndex = 0;
+            this.reduction_graph.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title";
+            title1.Text = "Title";
+            this.reduction_graph.Titles.Add(title1);
             // 
-            // BarGraphSheet
+            // ReductionsGraph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 702);
-            this.Controls.Add(this.chart1);
-            this.Name = "BarGraphSheet";
+            this.ClientSize = new System.Drawing.Size(847, 476);
+            this.Controls.Add(this.reduction_graph);
+            this.Name = "ReductionsGraph";
             this.Text = "Bar Graph ";
             this.Load += new System.EventHandler(this.BarGraphSheet_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reduction_graph)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart reduction_graph;
     }
 }
