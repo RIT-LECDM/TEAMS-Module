@@ -79,8 +79,8 @@ namespace TEAMSModule
                 label60.Text = (te.MMBTUinperTrip * te.CD_Total_TE).ToString("#.##") + " mmbtu/trip";   // Total Energy
                 label61.Text = (te.MMBTUinperTrip * te.CD_Total_FF).ToString("#.##") + " mmbtu/trip";   // Fossil Fuel
                 label62.Text = (te.MMBTUinperTrip * te.CD_Total_CF).ToString("#.##") + " mmbtu/trip";   // Coal Fuel
-                label63.Text = "Conventional Diesel";   // Natural Gas Fuel
-                label64.Text = "Conventional Diesel";   // Petroleum Fuel
+                label63.Text = (te.MMBTUinperTrip * te.CD_Total_NG).ToString("#.##") + " mmbtu/trip";   // Natural Gas Fuel
+                label64.Text = (te.MMBTUinperTrip * te.CD_Total_PF).ToString("#.##") + " mmbtu/trip";   // Petroleum Fuel
 
                 /***************
                  * EMISSIONS
