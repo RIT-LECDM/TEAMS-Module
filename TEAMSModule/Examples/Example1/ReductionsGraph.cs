@@ -16,12 +16,17 @@ namespace TEAMSModule
             InitializeComponent();
         }
 
+
         private void BarGraphSheet_Load(object sender, EventArgs e)
         {
-            total_energy_consumption();
+            example_total_energy_consumption();
         }
 
-        private void total_energy_consumption()
+        /// <summary>
+        /// Example of setting up the values to be used by Generate_Graph().
+        /// These values will be grabbed from the GREETFormattedResults in production.
+        /// </summary>
+        private void example_total_energy_consumption()
         {
 
             // All values formatted as **percentages**, with 1.0 being 100%
