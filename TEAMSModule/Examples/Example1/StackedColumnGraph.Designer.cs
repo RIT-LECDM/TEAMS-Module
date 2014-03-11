@@ -44,11 +44,12 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.stacked_graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.stacked_graph)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // stacked_graph
             // 
             customLabel1.Text = "Total \nEnergy";
             customLabel1.ToPosition = 2D;
@@ -101,12 +102,12 @@
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.LabelStyle.Angle = 90;
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.stacked_graph.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(10, 11);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
+            this.stacked_graph.Legends.Add(legend1);
+            this.stacked_graph.Location = new System.Drawing.Point(10, 11);
+            this.stacked_graph.Name = "stacked_graph";
+            this.stacked_graph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn100;
             series1.Legend = "Legend1";
@@ -116,30 +117,33 @@
             series2.Legend = "Legend1";
             series2.LegendText = "Vessel Operation";
             series2.Name = "VesselOperation";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(832, 513);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
+            this.stacked_graph.Series.Add(series1);
+            this.stacked_graph.Series.Add(series2);
+            this.stacked_graph.Size = new System.Drawing.Size(832, 513);
+            this.stacked_graph.TabIndex = 3;
+            this.stacked_graph.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "title";
+            title1.Text = "Title";
+            this.stacked_graph.Titles.Add(title1);
             // 
-            // GraphSheet
+            // StackedColumnGraph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 534);
-            this.Controls.Add(this.chart1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "GraphSheet";
+            this.ClientSize = new System.Drawing.Size(868, 553);
+            this.Controls.Add(this.stacked_graph);
+            this.Name = "StackedColumnGraph";
             this.Text = "Graphs";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stacked_graph)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart stacked_graph;
 
     }
 }

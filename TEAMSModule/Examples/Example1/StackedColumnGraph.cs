@@ -14,6 +14,7 @@ using PlugInsInterfaces.DataTypes.Pathway;
 using PlugInsInterfaces.DataTypes.Mix;
 using PlugInsInterfaces.ResultTypes;
 using TEAMSModule;
+using System.Windows.Forms.DataVisualization.Charting;
 namespace TEAMSModule
 {
     public partial class StackedColumnGraph : Form
@@ -50,9 +51,9 @@ namespace TEAMSModule
 
             //Compilation of all resources into one set.
             double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
-
+            string title = "Your Vessel using Conventional Diesel\nContribution of Each Stage";
             //Generate the graph using the resources set and seriesArray.
-            Generate_Graph(resources, seriesArray);
+            Generate_Graph(resources, seriesArray, stacked_graph, title);
         }
         /// <summary>
         /// Generate graph displays the appropriate results in a 100StackedColumn graph.
@@ -61,15 +62,16 @@ namespace TEAMSModule
         ///                         Each resource is a set of three values: { %feedstock, %fuel, %engineoperation }</param>
         /// <param name="seriesArray">seriesArray holds the string values of the series we are acting on. In this case,
         ///                           it should contain: { "Feedstock", "Fuel", "EngineOperation" }</param>
-        private void Generate_Graph(double[][] resources, string[] seriesArray)
+        private void Generate_Graph(double[][] resources, string[] seriesArray, Chart graph, string title)
         {
+            graph.Titles[0].Text = title;
             //Iterate through each of the three series.
             for (int i = 0; i < seriesArray.Length; i++)
             {
                 //Add each resource value to the respective series from the parent loop.
                 for (int r = 0; r < resources.Length; r++)
                 {
-                    chart1.Series[seriesArray[i]].Points.AddY(resources[r][i]);
+                    graph.Series[seriesArray[i]].Points.AddY(resources[r][i]);
                 }
             }
         }
