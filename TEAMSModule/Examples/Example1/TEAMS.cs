@@ -972,20 +972,6 @@ namespace WindowsApplication1
                 BD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 BD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
 
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(0).ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(1).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(2).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(3).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(4).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(5).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(6).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(7).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(8).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(9).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(10).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(11).Value.Value.ToString());
-                MessageBox.Show(path.LifeCycleEmissions().ElementAt(12).Value.Value.ToString());
-
                 //This is where you do the above process, but for fischer tropsch diesel
                 myPathway = pathways.ValueForKey(FTD_PATH_ID);
                 // Grab the int id for the resource (the water)
