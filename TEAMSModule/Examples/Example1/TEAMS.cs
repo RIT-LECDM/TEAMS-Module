@@ -848,7 +848,6 @@ namespace WindowsApplication1
                 crudeOilCarbonRatio = CrudeOil.CarbonRatio.GreetValue;
                 crudeOilSulfurRatio = CrudeOil.SulfurRatio.GreetValue * 1000000;
                 crudeOilSulfurRatioActual = CrudeOil.SulfurRatio.GreetValue;
-                //this.label251.Text = CrudeOil.Name + " Sulfur Ratio " + crudeOilSulfurRatio;
 
                 //This is where you do the above process, but for conventional diesel
                 myPathway = pathways.ValueForKey(CD_PATH_ID);
@@ -864,19 +863,13 @@ namespace WindowsApplication1
                 conventionalDieselSulfurRatioActual = ConvDiesel.SulfurRatio.GreetValue;
                 IData data = ResultsAccess.controler.CurrentProject.Data;
                 IResults path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-
-                //The below will give you a message box that displays the 1.14 million btu TOTAL resources of the Residual oil pathway
-                //MessageBox.Show(((path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value)).ToString());
                 CD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 CD_WTP_TE = (CD_Total_TE - 1);
                 CD_VO_TE = 1;
-
                 CD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 CD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 CD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
                 CD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-
-                // this.label258.Text = ConvDiesel.Name + " Energy Value " + conventionalDieselBTUperGal + " Btu/Gal " + " Density: " + conventionalDieselDensity + " grams/gallon CR " + ConvDiesel.CarbonRatio.GreetValue;
 
                 //This is where you do the above process, but for low sulfur diesel
                 myPathway = pathways.ValueForKey(LSD_PATH_ID);
@@ -892,16 +885,13 @@ namespace WindowsApplication1
                 lowSulfurDieselSulfurRatioActual = LSDiesel.SulfurRatio.GreetValue;
                 data = ResultsAccess.controler.CurrentProject.Data;
                 path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-
-                //The below will give you a message box that displays the 1.14 million btu TOTAL resources of the Residual oil pathway
-                //MessageBox.Show(((path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value)).ToString());
                 LSD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 LSD_WTP_TE = (LSD_Total_TE - 1);
                 LSD_VO_TE = 1;
                 LSD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 LSD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 LSD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
-
+                LSD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 //This is where you do the above process, but for liquified petroleum gas
                 myPathway = pathways.ValueForKey(LIQ_PETROL_PATH_ID);
                 // Grab the int id for the resource (the water)
@@ -914,11 +904,6 @@ namespace WindowsApplication1
                 liquifiedPetroleumGasCarbonRatio = LPG.CarbonRatio.GreetValue;
                 liquifiedPetroleumGasSulfurRatio = LPG.SulfurRatio.GreetValue * 1000000;
                 liquifiedPetroleumGasSulfurRatioActual = LPG.SulfurRatio.GreetValue;
-                NG_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
-                NG_WTP_TE = (NG_Total_TE - 1);
-                NG_VO_TE = 1;
-                NG_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
-                NG_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
 
                 //This is where you do the above process, but for residual oil
                 myPathway = pathways.ValueForKey(RO_PATH_ID);
@@ -934,15 +919,13 @@ namespace WindowsApplication1
                 residualOilSulfurRatioActual = RO.SulfurRatio.GreetValue;
                 data = ResultsAccess.controler.CurrentProject.Data;
                 path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-
-                //The below will give you a message box that displays the 1.14 million btu TOTAL resources of the Residual oil pathway
-                //MessageBox.Show(((path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value)).ToString());
                 RO_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 RO_WTP_TE = (RO_Total_TE - 1);
                 RO_VO_TE = 1;
                 RO_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 RO_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 RO_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
+                RO_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
 
                 //This is where you do the above process, but for liquified natural gas
                 myPathway = pathways.ValueForKey(LIQ_NATGAS_PATH_ID);
@@ -959,9 +942,13 @@ namespace WindowsApplication1
                 data = ResultsAccess.controler.CurrentProject.Data;
                 path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
 
-                //The below will give you a message box that displays the 1.14 million btu TOTAL resources of the Residual oil pathway
-                //MessageBox.Show(((path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value)).ToString());
-
+                NG_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
+                NG_WTP_TE = (NG_Total_TE - 1);
+                NG_VO_TE = 1;
+                NG_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+                NG_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
+                NG_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(4).Value.Value;
+                NG_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
 
                 //This is where you do the above process, but for biodiesel
                 myPathway = pathways.ValueForKey(BIODIESEL_PATH_ID);
@@ -977,14 +964,27 @@ namespace WindowsApplication1
                 bioDieselSulfurRatioActual = BD.SulfurRatio.GreetValue;
                 data = ResultsAccess.controler.CurrentProject.Data;
                 path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-
-                //The below will give you a message box that displays the 1.14 million btu TOTAL resources of the Residual oil pathway
-                //MessageBox.Show(((path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value)).ToString());
                 BD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 BD_WTP_TE = BD_Total_TE;
                 BD_VO_TE = 1;
                 BD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 BD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
+                BD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+                BD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
+
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(0).ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(1).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(2).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(3).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(4).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(5).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(6).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(7).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(8).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(9).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(10).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(11).Value.Value.ToString());
+                MessageBox.Show(path.LifeCycleEmissions().ElementAt(12).Value.Value.ToString());
 
                 //This is where you do the above process, but for fischer tropsch diesel
                 myPathway = pathways.ValueForKey(FTD_PATH_ID);
@@ -1000,14 +1000,13 @@ namespace WindowsApplication1
                 fischerTropschSulfurRatioActual = FTD.SulfurRatio.GreetValue;
                 data = ResultsAccess.controler.CurrentProject.Data;
                 path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-
-                //The below will give you a message box that displays the 1.14 million btu TOTAL resources of the Residual oil pathway
-                //MessageBox.Show(((path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value)).ToString());
                 FTD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
                 FTD_WTP_TE = (FTD_Total_TE - 1);
                 FTD_VO_TE = 1;
-                FTD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
+                FTD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 FTD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
+                FTD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+                FTD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
                 #endregion
                 #region Solid and Gaseous Fuels
                 //This is where you do the above process, but for Gaseous Natural Gas
@@ -1022,6 +1021,8 @@ namespace WindowsApplication1
                 natGasCarbonRatio = NG.CarbonRatio.GreetValue;
                 natGasSulfurRatio = NG.SulfurRatio.GreetValue * 1000000;
                 natGasSulfurRatioActual = NG.SulfurRatio.GreetValue;
+                data = ResultsAccess.controler.CurrentProject.Data;
+                path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
 
                 //This is where you do the above process, but for Gaseous Natural Gas
                 myPathway = pathways.ValueForKey(COAL_PATH_ID);
@@ -1033,6 +1034,8 @@ namespace WindowsApplication1
                 coalCarbonRatio = Coal.CarbonRatio.GreetValue;
                 coalSulfurRatio = Coal.SulfurRatio.GreetValue * 1000000;
                 coalSulfurRatioActual = Coal.SulfurRatio.GreetValue;
+                data = ResultsAccess.controler.CurrentProject.Data;
+
                 //label251.Text = coalBTuperTON.ToString();
                 #endregion
             }

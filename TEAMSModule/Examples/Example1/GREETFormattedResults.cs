@@ -157,8 +157,8 @@ namespace TEAMSModule
                 label60.Text = (te.MMBTUinperTrip * te.RO_Total_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
                 label61.Text = (te.MMBTUinperTrip * te.RO_Total_FF).ToString("#.##") + " mmbtu/trip";  // Fossil Fuel
                 label62.Text = (te.MMBTUinperTrip * te.RO_Total_CF).ToString("#.##") + " mmbtu/trip";  // Coal Fuel
-                label63.Text = "Residual Oil";  // Natural Gas Fuel
-                label64.Text = "Residual Oil";  // Petroleum Fuel
+                label63.Text = (te.MMBTUinperTrip * te.RO_Total_NG).ToString("#.##") + " mmbtu/trip";  // Natural Gas Fuel
+                label64.Text = (te.MMBTUinperTrip * te.RO_Total_PF).ToString("#.##") + " mmbtu/trip";  // Petroleum Fuel
 
                 /***************
                  * EMISSIONS
@@ -235,8 +235,8 @@ namespace TEAMSModule
                 label60.Text = (te.MMBTUinperTrip * te.LSD_Total_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
                 label61.Text = (te.MMBTUinperTrip * te.LSD_Total_FF).ToString("#.##") + " mmbtu/trip";  // Fossil Fuel
                 label62.Text = (te.MMBTUinperTrip * te.LSD_Total_CF).ToString("#.##") + " mmbtu/trip";  // Coal Fuel
-                label63.Text = "Low Sulfur Diesel";  // Natural Gas Fuel
-                label64.Text = "Low Sulfur Diesel";  // Petroleum Fuel
+                label63.Text = (te.MMBTUinperTrip * te.LSD_Total_NG).ToString("#.##") + " mmbtu/trip";  // Natural Gas Fuel
+                label64.Text = (te.MMBTUinperTrip * te.LSD_Total_PF).ToString("#.##") + " mmbtu/trip";  // Petroleum Fuel
 
                 /***************
                  * EMISSIONS
@@ -313,8 +313,8 @@ namespace TEAMSModule
                 label60.Text = (te.MMBTUinperTrip * te.NG_Total_TE).ToString("#.##") + " mmbtu/trip";   // Total Energy
                 label61.Text = (te.MMBTUinperTrip * te.NG_Total_FF).ToString("#.##") + " mmbtu/trip";   // Fossil Fuel
                 label62.Text = (te.MMBTUinperTrip * te.NG_Total_CF).ToString("#.##") + " mmbtu/trip";   // Coal Fuel
-                label63.Text = "Natural Gas";   // Natural Gas Fuel
-                label64.Text = "Natural Gas";   // Petroleum Fuel
+                label63.Text = (te.MMBTUinperTrip * te.NG_Total_NG).ToString("#.##") + " mmbtu/trip";   // Natural Gas Fuel
+                label64.Text = (te.MMBTUinperTrip * te.NG_Total_PF).ToString("#.##") + " mmbtu/trip";   // Petroleum Fuel
 
                 /***************
                  * EMISSIONS
@@ -391,8 +391,8 @@ namespace TEAMSModule
                 label60.Text = ((te.MMBTUinperTrip * te.BD_Total_TE) + (-2 * ((te.MMBTUinperTrip * te.BD_WTP_TE) - (te.MMBTUinperTrip * te.BD_VO_TE)))).ToString("#.##") + " mmbtu/trip";   // Total Energy
                 label61.Text = (te.MMBTUinperTrip * te.BD_Total_FF).ToString("#.##") + " mmbtu/trip";   // Fossil Fuel
                 label62.Text = (te.MMBTUinperTrip * te.BD_Total_CF).ToString("#.##") + " mmbtu/trip";   // Coal Fuel
-                label63.Text = "Biodiesel"; // Natural Gas Fuel
-                label64.Text = "Biodiesel"; // Petroleum Fuel
+                label63.Text = (te.MMBTUinperTrip * te.BD_Total_NG).ToString("#.##") + " mmbtu/trip"; // Natural Gas Fuel
+                label64.Text = (te.MMBTUinperTrip * te.BD_Total_PF).ToString("#.##") + " mmbtu/trip"; // Petroleum Fuel
 
                 /***************
                  * EMISSIONS
@@ -469,8 +469,8 @@ namespace TEAMSModule
                 label60.Text = (te.MMBTUinperTrip * te.FTD_Total_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
                 label61.Text = (te.MMBTUinperTrip * te.FTD_Total_FF).ToString("#.##") + " mmbtu/trip";  // Fossil Fuel
                 label62.Text = (te.MMBTUinperTrip * te.FTD_Total_CF).ToString("#.##") + " mmbtu/trip";  // Coal Fuel
-                label63.Text = "Fischer Tropsch Diesel";    // Natural Gas Fuel
-                label64.Text = "Fischer Tropsch Diesel";    // Petroleum Fuel
+                label63.Text = (te.MMBTUinperTrip * te.FTD_Total_NG).ToString("#.##") + " mmbtu/trip";    // Natural Gas Fuel
+                label64.Text = (te.MMBTUinperTrip * te.FTD_Total_PF).ToString("#.##") + " mmbtu/trip";    // Petroleum Fuel
 
                 /***************
                  * EMISSIONS
