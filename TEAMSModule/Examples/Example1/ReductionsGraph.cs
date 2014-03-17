@@ -11,14 +11,23 @@ namespace TEAMSModule
 {
     public partial class ReductionsGraph : Form
     {
-        public ReductionsGraph()
+            // All values formatted as **percentages**, with 1.0 being 100%
+            public double residual_oil;
+            public double low_sulfur;
+            public double biodiesel;
+            public double natural_gas;
+            public double fischer_tropsch;
+            public string title;
+
+        public ReductionsGraph(double RO, double LSD, double BD, double NG, double FTD, string graphTitle)
         {
             InitializeComponent();
-        }
-
-
-        private void BarGraphSheet_Load(object sender, EventArgs e)
-        {
+            residual_oil = RO;
+            low_sulfur = LSD;
+            biodiesel = BD;
+            natural_gas = NG;
+            fischer_tropsch = FTD;
+            title = graphTitle;
             example_total_energy_consumption();
         }
 
@@ -28,19 +37,10 @@ namespace TEAMSModule
         /// </summary>
         private void example_total_energy_consumption()
         {
-
-            // All values formatted as **percentages**, with 1.0 being 100%
-            double natural_gas = .245;
-            double biodiesel = .173;
-            double dmb = -.035;
-            double dma = -.045;
-            double ifo = .0645;
-
             // Set containing all resources
-            double[] resources = { natural_gas, biodiesel, dmb, dma, ifo };
+            double[] resources = {residual_oil, low_sulfur, biodiesel, natural_gas, fischer_tropsch};
 
             // Title to display on the graph.
-            string title = "Percent Change in Total Energy Consumption";
             Generate_Graph(resources, reduction_graph, title);
         }
 

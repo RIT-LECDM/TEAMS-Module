@@ -58,12 +58,6 @@
     <Compile Include="ReductionsGraph.Designer.cs">
       <DependentUpon>ReductionsGraph.cs</DependentUpon>
     </Compile>
-    <Compile Include="StackedColumnGraph.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StackedColumnGraph.Designer.cs">
-      <DependentUpon>StackedColumnGraph.cs</DependentUpon>
-    </Compile>
     <Compile Include="GREETFormattedResults.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,9 +117,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReductionsGraph.resx">
       <DependentUpon>ReductionsGraph.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="StackedColumnGraph.resx">
-      <DependentUpon>StackedColumnGraph.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GREETFormattedResults.resx">
       <DependentUpon>GREETFormattedResults.cs</DependentUpon>
