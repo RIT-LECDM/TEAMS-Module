@@ -555,6 +555,9 @@ namespace TEAMSModule
             //Iterate through each of the three series.
             for (int i = 0; i < seriesArray.Length; i++)
             {
+                // Clears points to ensure working with a new graph.
+                graph.Series[i].Points.Clear();
+
                 //Add each resource value to the respective series from the parent loop.
                 for (int r = 0; r < resources.Length; r++)
                 {
@@ -562,5 +565,6 @@ namespace TEAMSModule
                 }
             }
         }
+
     }
 }
