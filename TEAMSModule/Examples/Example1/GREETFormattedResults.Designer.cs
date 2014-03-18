@@ -1214,6 +1214,7 @@
             chartArea1.AxisX.Enabled = System.Windows.Forms.DataVisualization.Charting.AxisEnabled.True;
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.LabelStyle.Angle = 90;
+            chartArea1.AxisY.LabelStyle.Format = "#\'%\'";
             chartArea1.Name = "ChartArea1";
             this.stacked_graph.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";

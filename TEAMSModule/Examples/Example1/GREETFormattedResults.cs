@@ -37,7 +37,7 @@ namespace TEAMSModule
             //We will use this teams object to pull the GREET values into the TEAMS class, and then reference them here so they can be displayed
             te = t;
             InitializeComponent();
-            example_conv_diesel_graph();
+            graph_setup();
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -125,7 +125,7 @@ namespace TEAMSModule
                 fuelUsed = "Conventional Diesel";
                 double[] total_energy = new double[] { (te.MMBTUinperTrip * te.CD_WTP_TE), (te.MMBTUinperTrip * te.CD_VO_TE) }; //Resource 0
 
-                example_conv_diesel_graph();
+                graph_setup();
             }
             else if (e.Node.Text == "Residual Oil")
             {
@@ -208,8 +208,8 @@ namespace TEAMSModule
                 //Setting the stacked bar chart information
                 fuelUsed = "Residual Oil";
                 double[] total_energy = new double[]{ (te.MMBTUinperTrip * te.RO_WTP_TE), (te.MMBTUinperTrip * te.RO_VO_TE) }; //Resource 0
-
-                example_conv_diesel_graph();
+                
+                graph_setup();
             }
             else if (e.Node.Text == "Low Sulfur Diesel")
             {
@@ -288,6 +288,12 @@ namespace TEAMSModule
 
                 //Title
                 label1.Text = "Low Sulfur Diesel";
+
+                //Setting the stacked bar chart information
+                fuelUsed = "Low Sulfur Diesel";
+                double[] total_energy = new double[] { (te.MMBTUinperTrip * te.LSD_WTP_TE), (te.MMBTUinperTrip * te.LSD_VO_TE) }; //Resource 0
+
+                graph_setup();
             }
             else if (e.Node.Text == "Natural Gas")
             {
@@ -366,6 +372,12 @@ namespace TEAMSModule
 
                 //Title
                 label1.Text = "Natural Gas";
+
+                //Setting the stacked bar chart information
+                fuelUsed = "Natural Gas";
+                double[] total_energy = new double[] { (te.MMBTUinperTrip * te.NG_WTP_TE), (te.MMBTUinperTrip * te.NG_VO_TE) }; //Resource 0
+
+                graph_setup();
             }
             else if (e.Node.Text == "Biodiesel")
             {
@@ -444,6 +456,12 @@ namespace TEAMSModule
 
                 //Title
                 label1.Text = "Biodiesel";
+
+                //Setting the stacked bar chart information
+                fuelUsed = "Bio Diesel";
+                double[] total_energy = new double[] { (te.MMBTUinperTrip * te.BD_WTP_TE), (te.MMBTUinperTrip * te.BD_VO_TE) }; //Resource 0
+
+                graph_setup();
             }
             else if (e.Node.Text == "Fischer Tropsch Diesel")
             {
@@ -522,13 +540,19 @@ namespace TEAMSModule
 
                 //Title
                 label1.Text = "Fischer Tropsch Diesel";
+
+                //Setting the stacked bar chart information
+                fuelUsed = "Fischer Tropsch Diesel";
+                double[] total_energy = new double[] { (te.MMBTUinperTrip * te.FTD_WTP_TE), (te.MMBTUinperTrip * te.FTD_VO_TE) }; //Resource 0
+
+                graph_setup();
             }
         }
         /// <summary>
         /// An example generation of a chart using sample values for the conventional diesel graph.
         /// Other graphs can be constructed similarly.
         /// </summary>
-        private void example_conv_diesel_graph()
+        private void graph_setup()
         {
             //This is just demonstrating the expected contents of each resource set.
             //Compilation of all resources into one set.
