@@ -869,7 +869,16 @@ namespace WindowsApplication1
                 CD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 CD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
                 CD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-
+                CD_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
+                CD_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
+                CD_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
+                CD_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
+                CD_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
+                CD_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
+                CD_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
+                CD_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
+                CD_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
+                CD_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
                 //This is where you do the above process, but for low sulfur diesel
                 myPathway = pathways.ValueForKey(LSD_PATH_ID);
                 // Grab the int id for the resource (the water)
@@ -891,7 +900,16 @@ namespace WindowsApplication1
                 LSD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 LSD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
                 LSD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-
+                LSD_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
+                LSD_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
+                LSD_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
+                LSD_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
+                LSD_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
+                LSD_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
+                LSD_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
+                LSD_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
+                LSD_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
+                LSD_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
                 //This is where you do the above process, but for liquified petroleum gas
                 myPathway = pathways.ValueForKey(LIQ_PETROL_PATH_ID);
                 // Grab the int id for the resource (the water)
@@ -926,6 +944,16 @@ namespace WindowsApplication1
                 RO_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 RO_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
                 RO_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+                RO_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
+                RO_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
+                RO_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
+                RO_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
+                RO_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
+                RO_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
+                RO_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
+                RO_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
+                RO_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
+                RO_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
 
                 //This is where you do the above process, but for liquified natural gas
                 myPathway = pathways.ValueForKey(LIQ_NATGAS_PATH_ID);
@@ -949,6 +977,16 @@ namespace WindowsApplication1
                 NG_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
                 NG_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(4).Value.Value;
                 NG_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
+                NG_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
+                NG_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
+                NG_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
+                NG_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
+                NG_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
+                NG_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
+                NG_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
+                NG_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
+                NG_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
+                NG_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
 
                 //This is where you do the above process, but for biodiesel
                 myPathway = pathways.ValueForKey(BIODIESEL_PATH_ID);
@@ -971,6 +1009,16 @@ namespace WindowsApplication1
                 BD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 BD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 BD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
+                BD_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
+                BD_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
+                BD_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
+                BD_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
+                BD_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
+                BD_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
+                BD_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
+                BD_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
+                BD_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
+                BD_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
                 //MessageBox.Show(path.LifeCycleEmissions().ElementAt(0).Value.Value.ToString());
                 //This is where you do the above process, but for fischer tropsch diesel
                 myPathway = pathways.ValueForKey(FTD_PATH_ID);
@@ -993,6 +1041,16 @@ namespace WindowsApplication1
                 FTD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 FTD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 FTD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
+                FTD_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
+                FTD_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
+                FTD_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
+                FTD_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
+                FTD_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
+                FTD_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
+                FTD_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
+                FTD_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
+                FTD_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
+                FTD_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
                 #endregion
                 #region Solid and Gaseous Fuels
                 //This is where you do the above process, but for Gaseous Natural Gas

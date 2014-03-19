@@ -54,19 +54,19 @@ namespace TEAMSModule
                 /***************
                  * EMISSIONS
                  ***************/
-                
-                label30.Text = "Conventional Diesel";   // VOC
-                label31.Text = "Conventional Diesel";   // CO
-                label32.Text = "Conventional Diesel";   // NOx
-                label33.Text = "Conventional Diesel";   // PM10
-                label34.Text = "Conventional Diesel";   // PM2.5
-                label35.Text = "Conventional Diesel";   // SOx
-                label36.Text = "Conventional Diesel";   // CH4
-                label37.Text = "Conventional Diesel";   // CO2
-                label38.Text = "Conventional Diesel";   // N2O
-                label39.Text = "Conventional Diesel";   // PM10_TBW
-                label40.Text = "Conventional Diesel";   // PM2.5_TBW
-                label41.Text = "Conventional Diesel";   // CO2Biogenic
+
+                label30.Text = (te.CD_WTP_VOC * 1000000000000).ToString("#.##") + " g/mmbtu";   // VOC
+                label31.Text = (te.CD_WTP_CO * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO
+                label32.Text = (te.CD_WTP_NOX * 1000000000000).ToString("#.##") + " g/mmbtu";   // NOx
+                label33.Text = (te.CD_WTP_PM10 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM10
+                label34.Text = (te.CD_WTP_PM25 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM2.5
+                label35.Text = (te.CD_WTP_SOX * 1000000000000).ToString("#.##") + " g/mmbtu";  // SOx
+                label36.Text = (te.CD_WTP_CH4 * 1000000000000).ToString("#.##") + " g/mmbtu";  // CH4
+                label37.Text = (te.CD_WTP_CO2 * 1000000000).ToString("#.##") + " kg/mmbtu";  // CO2
+                label38.Text = (te.CD_WTP_N2O * 1000000000000).ToString("#.##") + " g/mmbtu";  // N2O
+                label39.Text = "PM10 TBW";  // PM10_TBW
+                label40.Text = "PM2.5 TBW";  // PM2.5_TBW
+                label41.Text = (te.CD_WTP_PM25_CO2Biogenic * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO2Biogenic
 
                 /*
                  * Column 2 -- Vessel Operation
@@ -117,7 +117,7 @@ namespace TEAMSModule
                 label75.Text = "Conventional Diesel";   // PM10_TBW
                 label76.Text = "Conventional Diesel";   // PM2.5_TBW
                 label77.Text = "Conventional Diesel";   // CO2Biogenic
-
+                
                 //Title
                 label1.Text = "Conventional Diesel";
 
@@ -139,18 +139,18 @@ namespace TEAMSModule
                  * EMISSIONS
                  ***************/
 
-                label30.Text = "Residual Oil";  // VOC
-                label31.Text = "Residual Oil";  // CO
-                label32.Text = "Residual Oil";  // NOx
-                label33.Text = "Residual Oil";  // PM10
-                label34.Text = "Residual Oil";  // PM2.5
-                label35.Text = "Residual Oil";  // SOx
-                label36.Text = "Residual Oil";  // CH4
-                label37.Text = "Residual Oil";  // CO2
-                label38.Text = "Residual Oil";  // N20
-                label39.Text = "Residual Oil";  // PM10_TBW
-                label40.Text = "Residual Oil";  // PM2.5_TBW
-                label41.Text = "Residual Oil";  // CO2Biogenic
+                label30.Text = (te.RO_WTP_VOC * 1000000000000).ToString("#.##") + " g/mmbtu";   // VOC
+                label31.Text = (te.RO_WTP_CO * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO
+                label32.Text = (te.RO_WTP_NOX * 1000000000000).ToString("#.##") + " g/mmbtu";   // NOx
+                label33.Text = (te.RO_WTP_PM10 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM10
+                label34.Text = (te.RO_WTP_PM25 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM2.5
+                label35.Text = (te.RO_WTP_SOX * 1000000000000).ToString("#.##") + " g/mmbtu";  // SOx
+                label36.Text = (te.RO_WTP_CH4 * 1000000000000).ToString("#.##") + " g/mmbtu";  // CH4
+                label37.Text = (te.RO_WTP_CO2 * 10000000000).ToString("#.##") + " g/mmbtu";  // CO2
+                label38.Text = (te.RO_WTP_N2O * 1000000000000).ToString("#.##") + " g/mmbtu";  // N2O
+                label39.Text = "PM10 TBW";  // PM10_TBW
+                label40.Text = "PM2.5 TBW";  // PM2.5_TBW
+                label41.Text = (te.RO_WTP_PM25_CO2Biogenic * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO2Biogenic
 
                 /*
                  * Column 2 -- Vessel Operation
@@ -223,18 +223,18 @@ namespace TEAMSModule
                  * EMISSIONS
                  ***************/
 
-                label30.Text = "Low Sulfur Diesel"; // VOC
-                label31.Text = "Low Sulfur Diesel"; // CO
-                label32.Text = "Low Sulfur Diesel"; // NOx
-                label33.Text = "Low Sulfur Diesel"; // PM10
-                label34.Text = "Low Sulfur Diesel"; // PM2.5
-                label35.Text = "Low Sulfur Diesel"; // SOx
-                label36.Text = "Low Sulfur Diesel"; // CH4
-                label37.Text = "Low Sulfur Diesel"; // CO2
-                label38.Text = "Low Sulfur Diesel"; // N2O
-                label39.Text = "Low Sulfur Diesel"; // PM10_TBW
-                label40.Text = "Low Sulfur Diesel"; // PM2.5_TBW
-                label41.Text = "Low Sulfur Diesel"; // CO2Biogenic
+                label30.Text = (te.LSD_WTP_VOC * 1000000000000).ToString("#.##") + " g/mmbtu";   // VOC
+                label31.Text = (te.LSD_WTP_CO * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO
+                label32.Text = (te.LSD_WTP_NOX * 1000000000000).ToString("#.##") + " g/mmbtu";   // NOx
+                label33.Text = (te.LSD_WTP_PM10 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM10
+                label34.Text = (te.LSD_WTP_PM25 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM2.5
+                label35.Text = (te.LSD_WTP_SOX * 1000000000000).ToString("#.##") + " g/mmbtu";  // SOx
+                label36.Text = (te.LSD_WTP_CH4 * 1000000000000).ToString("#.##") + " g/mmbtu";  // CH4
+                label37.Text = (te.LSD_WTP_CO2 * 10000000000).ToString("#.##") + " g/mmbtu";  // CO2
+                label38.Text = (te.LSD_WTP_N2O * 1000000000000).ToString("#.##") + " g/mmbtu";  // N2O
+                label39.Text = "PM10 TBW";  // PM10_TBW
+                label40.Text = "PM2.5 TBW";  // PM2.5_TBW
+                label41.Text = (te.LSD_WTP_PM25_CO2Biogenic * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO2Biogenic
 
                 /*
                  * Column 2 -- Vessel Operation
@@ -307,18 +307,18 @@ namespace TEAMSModule
                  * EMISSIONS
                  ***************/
 
-                label30.Text = "Natural Gas";   // VOC
-                label31.Text = "Natural Gas";   // CO
-                label32.Text = "Natural Gas";   // NOx
-                label33.Text = "Natural Gas";   // PM10
-                label34.Text = "Natural Gas";   // PM2.5
-                label35.Text = "Natural Gas";   // SOx
-                label36.Text = "Natural Gas";   // CH4
-                label37.Text = "Natural Gas";   // CO2
-                label38.Text = "Natural Gas";   // N2O
-                label39.Text = "Natural Gas";   // PM10_TBW
-                label40.Text = "Natural Gas";   // PM2.5_TBW
-                label41.Text = "Natural Gas";   // CO2Biogenic
+                label30.Text = (te.NG_WTP_VOC * 1000000000000).ToString("#.##") + " g/mmbtu";   // VOC
+                label31.Text = (te.NG_WTP_CO * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO
+                label32.Text = (te.NG_WTP_NOX * 1000000000000).ToString("#.##") + " g/mmbtu";   // NOx
+                label33.Text = (te.NG_WTP_PM10 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM10
+                label34.Text = (te.NG_WTP_PM25 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM2.5
+                label35.Text = (te.NG_WTP_SOX * 1000000000000).ToString("#.##") + " g/mmbtu";  // SOx
+                label36.Text = (te.NG_WTP_CH4 * 1000000000000).ToString("#.##") + " g/mmbtu";  // CH4
+                label37.Text = (te.NG_WTP_CO2 * 10000000000).ToString("#.##") + " g/mmbtu";  // CO2
+                label38.Text = (te.NG_WTP_N2O * 1000000000000).ToString("#.##") + " g/mmbtu";  // N2O
+                label39.Text = "PM10 TBW";  // PM10_TBW
+                label40.Text = "PM2.5 TBW";  // PM2.5_TBW
+                label41.Text = (te.NG_WTP_PM25_CO2Biogenic * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO2Biogenic
 
                 /*
                  * Column 2 -- Vessel Operation
@@ -391,18 +391,18 @@ namespace TEAMSModule
                  * EMISSIONS
                  ***************/
 
-                label30.Text = "Biodiesel"; // VOC
-                label31.Text = "Biodiesel"; // CO
-                label32.Text = "Biodiesel"; // NOx
-                label33.Text = "Biodiesel"; // PM10
-                label34.Text = "Biodiesel"; // PM2.5
-                label35.Text = "Biodiesel"; // SOx
-                label36.Text = "Biodiesel"; // CH4
-                label37.Text = "Biodiesel"; // CO2
-                label38.Text = "Biodiesel"; // N2O
-                label39.Text = "Biodiesel"; // PM10_TBW
-                label40.Text = "Biodiesel"; // PM2.5_TBW
-                label41.Text = "Biodiesel"; // CO2Biogenic
+                label30.Text = (te.BD_WTP_VOC * 1000000000000).ToString("#.##") + " g/mmbtu";   // VOC
+                label31.Text = (te.BD_WTP_CO * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO
+                label32.Text = (te.BD_WTP_NOX * 1000000000000).ToString("#.##") + " g/mmbtu";   // NOx
+                label33.Text = (te.BD_WTP_PM10 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM10
+                label34.Text = (te.BD_WTP_PM25 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM2.5
+                label35.Text = (te.BD_WTP_SOX * 1000000000000).ToString("#.##") + " g/mmbtu";  // SOx
+                label36.Text = (te.BD_WTP_CH4 * 1000000000000).ToString("#.##") + " g/mmbtu";  // CH4
+                label37.Text = (te.BD_WTP_CO2 * 10000000000).ToString("#.##") + " g/mmbtu";  // CO2
+                label38.Text = (te.BD_WTP_N2O * 1000000000000).ToString("#.##") + " g/mmbtu";  // N2O
+                label39.Text = "PM10 TBW";  // PM10_TBW
+                label40.Text = "PM2.5 TBW";  // PM2.5_TBW
+                label41.Text = (te.BD_WTP_PM25_CO2Biogenic * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO2Biogenic
 
                 /*
                  * Column 2 -- Vessel Operation
@@ -458,7 +458,7 @@ namespace TEAMSModule
                 label1.Text = "Biodiesel";
 
                 //Setting the stacked bar chart information
-                fuelUsed = "Bio Diesel";
+                fuelUsed = "Biodiesel";
                 double[] total_energy = new double[] { (te.MMBTUinperTrip * te.BD_WTP_TE), (te.MMBTUinperTrip * te.BD_VO_TE) }; //Resource 0
 
                 graph_setup();
@@ -475,18 +475,18 @@ namespace TEAMSModule
                  * EMISSIONS
                  ***************/
 
-                label30.Text = "Fischer Tropsch Diesel";    // VOC
-                label31.Text = "Fischer Tropsch Diesel";    // CO
-                label32.Text = "Fischer Tropsch Diesel";    // NOx
-                label33.Text = "Fischer Tropsch Diesel";    // PM10
-                label34.Text = "Fischer Tropsch Diesel";    // PM2.5
-                label35.Text = "Fischer Tropsch Diesel";    // SOx
-                label36.Text = "Fischer Tropsch Diesel";    // CH4
-                label37.Text = "Fischer Tropsch Diesel";    // CO2
-                label38.Text = "Fischer Tropsch Diesel";    // N2O
-                label39.Text = "Fischer Tropsch Diesel";    // PM10_TBW
-                label40.Text = "Fischer Tropsch Diesel";    // PM2.5_TBW
-                label41.Text = "Fischer Tropsch Diesel";    // CO2Biogenic
+                label30.Text = (te.FTD_WTP_VOC * 1000000000000).ToString("#.##") + " g/mmbtu";   // VOC
+                label31.Text = (te.FTD_WTP_CO * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO
+                label32.Text = (te.FTD_WTP_NOX * 1000000000000).ToString("#.##") + " g/mmbtu";   // NOx
+                label33.Text = (te.FTD_WTP_PM10 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM10
+                label34.Text = (te.FTD_WTP_PM25 * 1000000000000).ToString("#.##") + " g/mmbtu";   // PM2.5
+                label35.Text = (te.FTD_WTP_SOX * 1000000000000).ToString("#.##") + " g/mmbtu";  // SOx
+                label36.Text = (te.FTD_WTP_CH4 * 1000000000000).ToString("#.##") + " g/mmbtu";  // CH4
+                label37.Text = (te.FTD_WTP_CO2 * 10000000000).ToString("#.##") + " g/mmbtu";  // CO2
+                label38.Text = (te.FTD_WTP_N2O * 1000000000000).ToString("#.##") + " g/mmbtu";  // N2O
+                label39.Text = "PM10 TBW";  // PM10_TBW
+                label40.Text = "PM2.5 TBW";  // PM2.5_TBW
+                label41.Text = (te.FTD_WTP_PM25_CO2Biogenic * 1000000000000).ToString("#.##") + " g/mmbtu";  // CO2Biogenic
 
                 /*
                  * Column 2 -- Vessel Operation
