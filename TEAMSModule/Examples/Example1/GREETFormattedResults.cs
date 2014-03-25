@@ -100,18 +100,18 @@ namespace TEAMSModule
 
                 //Setting the stacked bar chart information
                 fuelUsed = "Conventional Diesel";
-                double[] total_energy = { (te.MMBTUinperTrip * te.LSD_WTP_TE), (te.MMBTUinperTrip * te.LSD_VO_TE) }; //Resource 0
+                double[] total_energy = { (te.MMBTUinperTrip * te.CD_WTP_TE), (te.MMBTUinperTrip * te.CD_VO_TE) }; //Resource 0
                 double[] fossil_fuels = { 10, 20 }; //Resource 1
                 double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { 12, 53 };          //Resource 3
-                double[] ch4 = { 44, 22 };          //Resource 4
-                double[] n2o = { 40, 20 };          //Resource 5
+                double[] co2 = { (te.CD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.CD_CO2_EF * te.MMBTUinperTrip)};          //Resource 3
+                double[] ch4 = { (te.CD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.CD_CH4_EF * te.MMBTUinperTrip)};          //Resource 4
+                double[] n2o = { (te.CD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.CD_N2O_EF * te.MMBTUinperTrip)};          //Resource 5
                 double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { 20, 55 };          //Resource 7
-                double[] co = { 60, 10 };           //Resource 8
-                double[] nox = { 14, 21 };          //Resource 9
-                double[] pm10 = { 50, 25 };         //Resource 10
-                double[] sox = { 22, 33 };          //Resource 11
+                double[] voc = { (te.CD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.CD_VOC_EF *te.MMBTUinperTrip)};          //Resource 7
+                double[] co = { (te.CD_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.CD_CO_EF * te.MMBTUinperTrip) };           //Resource 8
+                double[] nox = { (te.CD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.CD_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
+                double[] pm10 = { (te.CD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.CD_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
+                double[] sox = { (te.CD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.CD_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
                 double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
                 //Generate the graph using the resources set and seriesArray.
                 Generate_Graph(resources, stacked_graph);
@@ -193,15 +193,15 @@ namespace TEAMSModule
                 double[] total_energy = { (te.MMBTUinperTrip * te.RO_WTP_TE), (te.MMBTUinperTrip * te.RO_VO_TE) }; //Resource 0
                 double[] fossil_fuels = { 10, 20 }; //Resource 1
                 double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { 12, 53 };          //Resource 3
-                double[] ch4 = { 44, 22 };          //Resource 4
-                double[] n2o = { 40, 20 };          //Resource 5
+                double[] co2 = { (te.RO_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.RO_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
+                double[] ch4 = { (te.RO_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.RO_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
+                double[] n2o = { (te.RO_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.RO_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
                 double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { 20, 55 };          //Resource 7
-                double[] co = { 60, 10 };           //Resource 8
-                double[] nox = { 14, 21 };          //Resource 9
-                double[] pm10 = { 50, 25 };         //Resource 10
-                double[] sox = { 22, 33 };          //Resource 11
+                double[] voc = { (te.RO_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.RO_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
+                double[] co = { (te.RO_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.RO_CO_EF * te.MMBTUinperTrip) };           //Resource 8
+                double[] nox = { (te.RO_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.RO_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
+                double[] pm10 = { (te.RO_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.RO_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
+                double[] sox = { (te.RO_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.RO_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
                 double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
                 //Generate the graph using the resources set and seriesArray.
                 Generate_Graph(resources, stacked_graph);
@@ -283,15 +283,15 @@ namespace TEAMSModule
                 double[] total_energy = { (te.MMBTUinperTrip * te.LSD_WTP_TE), (te.MMBTUinperTrip * te.LSD_VO_TE) }; //Resource 0
                 double[] fossil_fuels = { 10, 20 }; //Resource 1
                 double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { 12, 53 };          //Resource 3
-                double[] ch4 = { 44, 22 };          //Resource 4
-                double[] n2o = { 40, 20 };          //Resource 5
+                double[] co2 = { (te.LSD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.LSD_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
+                double[] ch4 = { (te.LSD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.LSD_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
+                double[] n2o = { (te.LSD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.LSD_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
                 double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { 20, 55 };          //Resource 7
-                double[] co = { 60, 10 };           //Resource 8
-                double[] nox = { 14, 21 };          //Resource 9
-                double[] pm10 = { 50, 25 };         //Resource 10
-                double[] sox = { 22, 33 };          //Resource 11
+                double[] voc = { (te.LSD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.LSD_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
+                double[] co = { (te.LSD_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.LSD_CO_EF * te.MMBTUinperTrip) };           //Resource 8
+                double[] nox = { (te.LSD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.LSD_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
+                double[] pm10 = { (te.LSD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.LSD_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
+                double[] sox = { (te.LSD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.LSD_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
                 double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
                 //Generate the graph using the resources set and seriesArray.
                 Generate_Graph(resources, stacked_graph);
@@ -373,15 +373,15 @@ namespace TEAMSModule
                 double[] total_energy = { (te.MMBTUinperTrip * te.NG_WTP_TE), (te.MMBTUinperTrip * te.NG_VO_TE) }; //Resource 0
                 double[] fossil_fuels = { 10, 20 }; //Resource 1
                 double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { 12, 53 };          //Resource 3
-                double[] ch4 = { 44, 22 };          //Resource 4
-                double[] n2o = { 40, 20 };          //Resource 5
+                double[] co2 = { (te.NG_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.NG_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
+                double[] ch4 = { (te.NG_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.NG_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
+                double[] n2o = { (te.NG_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.NG_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
                 double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { 20, 55 };          //Resource 7
-                double[] co = { 60, 10 };           //Resource 8
-                double[] nox = { 14, 21 };          //Resource 9
-                double[] pm10 = { 50, 25 };         //Resource 10
-                double[] sox = { 22, 33 };          //Resource 11
+                double[] voc = { (te.NG_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.NG_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
+                double[] co = { (te.NG_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.NG_CO_EF * te.MMBTUinperTrip) };           //Resource 8
+                double[] nox = { (te.NG_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.NG_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
+                double[] pm10 = { (te.NG_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.NG_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
+                double[] sox = { (te.NG_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.NG_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
                 double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
                 //Generate the graph using the resources set and seriesArray.
                 Generate_Graph(resources, stacked_graph);
@@ -462,15 +462,15 @@ namespace TEAMSModule
                 double[] total_energy = { (te.MMBTUinperTrip * te.BD_WTP_TE), (te.MMBTUinperTrip * te.BD_VO_TE) }; //Resource 0
                 double[] fossil_fuels = { 10, 20 }; //Resource 1
                 double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { 12, 53 };          //Resource 3
-                double[] ch4 = { 44, 22 };          //Resource 4
-                double[] n2o = { 40, 20 };          //Resource 5
+                double[] co2 = { (te.BD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.BD_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
+                double[] ch4 = { (te.BD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.BD_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
+                double[] n2o = { (te.BD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.BD_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
                 double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { 20, 55 };          //Resource 7
-                double[] co = { 60, 10 };           //Resource 8
-                double[] nox = { 14, 21 };          //Resource 9
-                double[] pm10 = { 50, 25 };         //Resource 10
-                double[] sox = { 22, 33 };          //Resource 11
+                double[] voc = { (te.BD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.BD_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
+                double[] co = { (te.BD_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.BD_CO_EF * te.MMBTUinperTrip) };           //Resource 8
+                double[] nox = { (te.BD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.BD_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
+                double[] pm10 = { (te.BD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.BD_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
+                double[] sox = { (te.BD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.BD_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
                 double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
                 //Generate the graph using the resources set and seriesArray.
                 Generate_Graph(resources, stacked_graph);
@@ -552,15 +552,15 @@ namespace TEAMSModule
                 double[] total_energy = { (te.MMBTUinperTrip * te.FTD_WTP_TE), (te.MMBTUinperTrip * te.FTD_VO_TE) }; //Resource 0
                 double[] fossil_fuels = { 10, 20 }; //Resource 1
                 double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { 12, 53 };          //Resource 3
-                double[] ch4 = { 44, 22 };          //Resource 4
-                double[] n2o = { 40, 20 };          //Resource 5
+                double[] co2 = { (te.FTD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.FTD_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
+                double[] ch4 = { (te.FTD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.FTD_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
+                double[] n2o = { (te.FTD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.FTD_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
                 double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { 20, 55 };          //Resource 7
-                double[] co = { 60, 10 };           //Resource 8
-                double[] nox = { 14, 21 };          //Resource 9
-                double[] pm10 = { 50, 25 };         //Resource 10
-                double[] sox = { 22, 33 };          //Resource 11
+                double[] voc = { (te.FTD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.FTD_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
+                double[] co = { (te.FTD_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.FTD_CO_EF * te.MMBTUinperTrip) };           //Resource 8
+                double[] nox = { (te.FTD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.FTD_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
+                double[] pm10 = { (te.FTD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.FTD_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
+                double[] sox = { (te.FTD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.FTD_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
                 double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
                 //Generate the graph using the resources set and seriesArray.
                 Generate_Graph(resources, stacked_graph);
