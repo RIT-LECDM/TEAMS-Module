@@ -828,14 +828,14 @@ namespace WindowsApplication1
         public double RO_N2O_EF = 2.0;
         public double RO_CO2_EF = 84.101;
 
-        public double LSD_VOC_EF = 0;
-        public double LSD_CO_EF = 0;
-        public double LSD_NOx_EF = 0;
-        public double LSD_PM10_EF = 0;
-        public double LSD_SOx_EF = 0;
-        public double LSD_CH4_EF = 0;
-        public double LSD_N2O_EF = 0;
-        public double LSD_CO2_EF = 0;
+        public double LSD_VOC_EF = 93.485;
+        public double LSD_CO_EF = 430.006;
+        public double LSD_NOx_EF = 2480.468;
+        public double LSD_PM10_EF = 73.450;
+        public double LSD_SOx_EF = 0.001;
+        public double LSD_CH4_EF = 4.581;
+        public double LSD_N2O_EF = 2.0;
+        public double LSD_CO2_EF = 75.322;
 
         public double NG_VOC_EF = 54.446;
         public double NG_CO_EF = 223.603;
