@@ -258,7 +258,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
@@ -272,6 +271,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label24 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -318,13 +318,13 @@
             this.label123 = new System.Windows.Forms.Label();
             this.label121 = new System.Windows.Forms.Label();
             this.label122 = new System.Windows.Forms.Label();
-            this.numericUpDown96 = new System.Windows.Forms.NumericUpDown();
             this.label120 = new System.Windows.Forms.Label();
             this.label119 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label129 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.numericUpDown96 = new System.Windows.Forms.NumericUpDown();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.numericUpDown221 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown222 = new System.Windows.Forms.NumericUpDown();
@@ -493,13 +493,6 @@
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label247 = new System.Windows.Forms.Label();
-            this.numericUpDown258 = new System.Windows.Forms.NumericUpDown();
-            this.label245 = new System.Windows.Forms.Label();
-            this.numericUpDown259 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown260 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown261 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown262 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown263 = new System.Windows.Forms.NumericUpDown();
             this.label246 = new System.Windows.Forms.Label();
             this.numericUpDown268 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown289 = new System.Windows.Forms.NumericUpDown();
@@ -513,18 +506,6 @@
             this.label255 = new System.Windows.Forms.Label();
             this.label256 = new System.Windows.Forms.Label();
             this.label257 = new System.Windows.Forms.Label();
-            this.label236 = new System.Windows.Forms.Label();
-            this.numericUpDown243 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown244 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown245 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown246 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown247 = new System.Windows.Forms.NumericUpDown();
-            this.label237 = new System.Windows.Forms.Label();
-            this.numericUpDown248 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown249 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown250 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown251 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown252 = new System.Windows.Forms.NumericUpDown();
             this.label238 = new System.Windows.Forms.Label();
             this.label239 = new System.Windows.Forms.Label();
             this.numericUpDown253 = new System.Windows.Forms.NumericUpDown();
@@ -589,7 +570,26 @@
             this.panel23 = new System.Windows.Forms.Panel();
             this.label229 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.label236 = new System.Windows.Forms.Label();
+            this.numericUpDown247 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown246 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown245 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown244 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown243 = new System.Windows.Forms.NumericUpDown();
+            this.label237 = new System.Windows.Forms.Label();
+            this.numericUpDown252 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown251 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown250 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown249 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown248 = new System.Windows.Forms.NumericUpDown();
             this.panel25 = new System.Windows.Forms.Panel();
+            this.label245 = new System.Windows.Forms.Label();
+            this.numericUpDown258 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown262 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown259 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown263 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown260 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown261 = new System.Windows.Forms.NumericUpDown();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.label140 = new System.Windows.Forms.Label();
             this.label142 = new System.Windows.Forms.Label();
@@ -598,7 +598,6 @@
             this.numericUpDown120 = new System.Windows.Forms.NumericUpDown();
             this.label143 = new System.Windows.Forms.Label();
             this.label144 = new System.Windows.Forms.Label();
-            this.numericUpDown114 = new System.Windows.Forms.NumericUpDown();
             this.label137 = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -607,6 +606,7 @@
             this.label138 = new System.Windows.Forms.Label();
             this.label139 = new System.Windows.Forms.Label();
             this.numericUpDown115 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown114 = new System.Windows.Forms.NumericUpDown();
             this.panel27 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -724,12 +724,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
             this.panel4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown88)).BeginInit();
@@ -745,9 +745,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown96)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown96)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown221)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown222)).BeginInit();
@@ -848,28 +848,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown190)).BeginInit();
             this.panel18.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown258)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown259)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown262)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown268)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown289)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown290)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown291)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown292)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown293)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown243)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown244)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown245)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown246)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown247)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown248)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown249)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown250)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown251)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown252)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown253)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown254)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown255)).BeginInit();
@@ -893,13 +877,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown227)).BeginInit();
             this.panel23.SuspendLayout();
             this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown247)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown246)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown245)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown244)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown243)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown252)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown251)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown250)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown249)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown248)).BeginInit();
             this.panel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown258)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown262)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown259)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).BeginInit();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown116)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown120)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).BeginInit();
             this.panel26.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown115)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1030,7 +1030,7 @@
             this.tabPage1.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(676, 610);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Simulating Petroleum";
@@ -1039,10 +1039,10 @@
             // 
             this.label250.AutoSize = true;
             this.label250.BackColor = System.Drawing.Color.Silver;
-            this.label250.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label250.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label250.Location = new System.Drawing.Point(347, 183);
             this.label250.Name = "label250";
-            this.label250.Size = new System.Drawing.Size(20, 17);
+            this.label250.Size = new System.Drawing.Size(16, 18);
             this.label250.TabIndex = 32;
             this.label250.Text = "%";
             // 
@@ -1173,7 +1173,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(6, 562);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(664, 45);
@@ -1186,10 +1186,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Silver;
-            this.label9.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(6, 179);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 17);
+            this.label9.Size = new System.Drawing.Size(79, 17);
             this.label9.TabIndex = 17;
             this.label9.Text = "Residual Oil";
             // 
@@ -1197,10 +1197,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Silver;
-            this.label8.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(6, 153);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 17);
+            this.label8.Size = new System.Drawing.Size(65, 17);
             this.label8.TabIndex = 14;
             this.label8.Text = "Crude Oil";
             // 
@@ -1208,20 +1208,20 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Silver;
-            this.label7.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(6, 127);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 17);
+            this.label7.Size = new System.Drawing.Size(115, 17);
             this.label7.TabIndex = 11;
             this.label7.Text = "Low Sulfur Diesel";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(286, 19);
+            this.label4.Size = new System.Drawing.Size(305, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "1.2 - Petroleum Based Efficiency Options";
             // 
@@ -1229,31 +1229,32 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Silver;
-            this.label6.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 101);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 17);
+            this.label6.Size = new System.Drawing.Size(125, 17);
             this.label6.TabIndex = 4;
             this.label6.Text = "Conventional Diesel";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 2);
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(276, 19);
+            this.label3.Size = new System.Drawing.Size(298, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "1.1 - Efficiency For Petroleum Recovery";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Silver;
-            this.label2.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(104, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 17);
+            this.label2.Size = new System.Drawing.Size(16, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "%";
             // 
@@ -1264,19 +1265,19 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(2, 71);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 145);
+            this.panel1.Size = new System.Drawing.Size(377, 145);
             this.panel1.TabIndex = 33;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Silver;
-            this.label5.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(243, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 17);
+            this.label5.Size = new System.Drawing.Size(130, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Refining Efficiency";
             // 
@@ -1284,10 +1285,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(127, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.Size = new System.Drawing.Size(88, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Sulfur Level";
             // 
@@ -1296,7 +1297,7 @@
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Location = new System.Drawing.Point(2, 21);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(128, 27);
             this.panel2.TabIndex = 34;
@@ -1516,7 +1517,7 @@
             this.tabPage2.Font = new System.Drawing.Font("Garamond", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(676, 610);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Simulating Natural Gas";
@@ -1582,10 +1583,10 @@
             // 
             this.label102.AutoSize = true;
             this.label102.BackColor = System.Drawing.Color.Silver;
-            this.label102.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label102.Location = new System.Drawing.Point(5, 1810);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(269, 17);
+            this.label102.Size = new System.Drawing.Size(265, 17);
             this.label102.TabIndex = 361;
             this.label102.Text = "Refueling Station use of NNA NG for CNG";
             // 
@@ -1606,10 +1607,10 @@
             // 
             this.label101.AutoSize = true;
             this.label101.BackColor = System.Drawing.Color.Silver;
-            this.label101.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label101.Location = new System.Drawing.Point(5, 1784);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(261, 17);
+            this.label101.Size = new System.Drawing.Size(258, 17);
             this.label101.TabIndex = 359;
             this.label101.Text = "Refueling Station Use of NA NG for CNG";
             // 
@@ -1630,10 +1631,10 @@
             // 
             this.label83.AutoSize = true;
             this.label83.BackColor = System.Drawing.Color.Silver;
-            this.label83.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label83.Location = new System.Drawing.Point(5, 1758);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(153, 17);
+            this.label83.Size = new System.Drawing.Size(155, 17);
             this.label83.TabIndex = 357;
             this.label83.Text = "NG Electric Power Plant";
             // 
@@ -1654,10 +1655,10 @@
             // 
             this.label73.AutoSize = true;
             this.label73.BackColor = System.Drawing.Color.Silver;
-            this.label73.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.Location = new System.Drawing.Point(5, 1732);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(96, 17);
+            this.label73.Size = new System.Drawing.Size(100, 17);
             this.label73.TabIndex = 355;
             this.label73.Text = "FT Diesel Plant";
             // 
@@ -1678,10 +1679,10 @@
             // 
             this.label65.AutoSize = true;
             this.label65.BackColor = System.Drawing.Color.Silver;
-            this.label65.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label65.Location = new System.Drawing.Point(5, 1706);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(160, 17);
+            this.label65.Size = new System.Drawing.Size(164, 17);
             this.label65.TabIndex = 353;
             this.label65.Text = "Liquified natural Gas Plant";
             // 
@@ -1702,10 +1703,10 @@
             // 
             this.label100.AutoSize = true;
             this.label100.BackColor = System.Drawing.Color.Silver;
-            this.label100.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label100.Location = new System.Drawing.Point(5, 1661);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(318, 17);
+            this.label100.Size = new System.Drawing.Size(316, 17);
             this.label100.TabIndex = 351;
             this.label100.Text = "Useage of NG or Production of Transportation Fuels";
             // 
@@ -1713,10 +1714,10 @@
             // 
             this.label88.AutoSize = true;
             this.label88.BackColor = System.Drawing.Color.Silver;
-            this.label88.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label88.Location = new System.Drawing.Point(330, 1661);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(113, 17);
+            this.label88.Size = new System.Drawing.Size(117, 17);
             this.label88.TabIndex = 344;
             this.label88.Text = "Distance (Miles)";
             this.label88.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1724,22 +1725,22 @@
             // label93
             // 
             this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label93.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label93.Location = new System.Drawing.Point(2, 1627);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(665, 19);
+            this.label93.Size = new System.Drawing.Size(634, 17);
             this.label93.TabIndex = 343;
-            this.label93.Text = "2.5 - Distances From Gas Fields To Production Plants: Miles (To Use For NG pipeli" +
-    "ne Calculations)";
+            this.label93.Text = "2.5 - Distances From Gas Fields To  Plants: Miles (To Use For NG pipeline Calcula" +
+    "tions)";
             // 
             // label99
             // 
             this.label99.AutoSize = true;
             this.label99.BackColor = System.Drawing.Color.Silver;
-            this.label99.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label99.Location = new System.Drawing.Point(5, 1680);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(168, 17);
+            this.label99.Size = new System.Drawing.Size(165, 17);
             this.label99.TabIndex = 342;
             this.label99.Text = "NG Stationary Combustion";
             // 
@@ -1786,10 +1787,10 @@
             // 
             this.label64.AutoSize = true;
             this.label64.BackColor = System.Drawing.Color.Silver;
-            this.label64.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.Location = new System.Drawing.Point(3, 1392);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(140, 17);
+            this.label64.Size = new System.Drawing.Size(137, 17);
             this.label64.TabIndex = 338;
             this.label64.Text = "Truck For Distribution";
             // 
@@ -1797,10 +1798,10 @@
             // 
             this.label63.AutoSize = true;
             this.label63.BackColor = System.Drawing.Color.Silver;
-            this.label63.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.Location = new System.Drawing.Point(286, 934);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(144, 17);
+            this.label63.Size = new System.Drawing.Size(143, 17);
             this.label63.TabIndex = 337;
             this.label63.Text = "Non North American";
             this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1848,10 +1849,10 @@
             // 
             this.label89.AutoSize = true;
             this.label89.BackColor = System.Drawing.Color.Silver;
-            this.label89.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label89.Location = new System.Drawing.Point(3, 1559);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(140, 17);
+            this.label89.Size = new System.Drawing.Size(137, 17);
             this.label89.TabIndex = 332;
             this.label89.Text = "Truck For Distribution";
             // 
@@ -1898,10 +1899,10 @@
             // 
             this.label90.AutoSize = true;
             this.label90.BackColor = System.Drawing.Color.Silver;
-            this.label90.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label90.Location = new System.Drawing.Point(3, 1533);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(29, 17);
+            this.label90.Size = new System.Drawing.Size(31, 17);
             this.label90.TabIndex = 327;
             this.label90.Text = "Rail";
             // 
@@ -1948,10 +1949,10 @@
             // 
             this.label91.AutoSize = true;
             this.label91.BackColor = System.Drawing.Color.Silver;
-            this.label91.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label91.Location = new System.Drawing.Point(3, 1507);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(52, 17);
+            this.label91.Size = new System.Drawing.Size(54, 17);
             this.label91.TabIndex = 322;
             this.label91.Text = "Pipeline";
             // 
@@ -1998,10 +1999,10 @@
             // 
             this.label92.AutoSize = true;
             this.label92.BackColor = System.Drawing.Color.Silver;
-            this.label92.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label92.Location = new System.Drawing.Point(3, 1481);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(41, 17);
+            this.label92.Size = new System.Drawing.Size(44, 17);
             this.label92.TabIndex = 317;
             this.label92.Text = "Barge";
             // 
@@ -2009,10 +2010,10 @@
             // 
             this.label94.AutoSize = true;
             this.label94.BackColor = System.Drawing.Color.Silver;
-            this.label94.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.Location = new System.Drawing.Point(367, 1433);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(125, 17);
+            this.label94.Size = new System.Drawing.Size(127, 17);
             this.label94.TabIndex = 315;
             this.label94.Text = "Enriched Uranium";
             this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2021,10 +2022,10 @@
             // 
             this.label95.AutoSize = true;
             this.label95.BackColor = System.Drawing.Color.Silver;
-            this.label95.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label95.Location = new System.Drawing.Point(270, 1433);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(92, 17);
+            this.label95.Size = new System.Drawing.Size(94, 17);
             this.label95.TabIndex = 314;
             this.label95.Text = "Uranium Ore";
             this.label95.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2033,10 +2034,10 @@
             // 
             this.label96.AutoSize = true;
             this.label96.BackColor = System.Drawing.Color.Silver;
-            this.label96.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label96.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label96.Location = new System.Drawing.Point(3, 1433);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(74, 17);
+            this.label96.Size = new System.Drawing.Size(75, 17);
             this.label96.TabIndex = 313;
             this.label96.Text = "Electricity";
             this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2058,10 +2059,10 @@
             // 
             this.label97.AutoSize = true;
             this.label97.BackColor = System.Drawing.Color.Silver;
-            this.label97.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label97.Location = new System.Drawing.Point(171, 1433);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(37, 17);
+            this.label97.Size = new System.Drawing.Size(38, 17);
             this.label97.TabIndex = 310;
             this.label97.Text = "Coal";
             this.label97.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2096,10 +2097,10 @@
             // 
             this.label98.AutoSize = true;
             this.label98.BackColor = System.Drawing.Color.Silver;
-            this.label98.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label98.Location = new System.Drawing.Point(3, 1456);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(89, 17);
+            this.label98.Size = new System.Drawing.Size(92, 17);
             this.label98.TabIndex = 307;
             this.label98.Text = "Ocean Tanker";
             // 
@@ -2146,10 +2147,10 @@
             // 
             this.label79.AutoSize = true;
             this.label79.BackColor = System.Drawing.Color.Silver;
-            this.label79.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label79.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label79.Location = new System.Drawing.Point(3, 1366);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(156, 17);
+            this.label79.Size = new System.Drawing.Size(154, 17);
             this.label79.TabIndex = 302;
             this.label79.Text = "Truck For Transportation";
             // 
@@ -2196,10 +2197,10 @@
             // 
             this.label80.AutoSize = true;
             this.label80.BackColor = System.Drawing.Color.Silver;
-            this.label80.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label80.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label80.Location = new System.Drawing.Point(3, 1340);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(29, 17);
+            this.label80.Size = new System.Drawing.Size(31, 17);
             this.label80.TabIndex = 297;
             this.label80.Text = "Rail";
             // 
@@ -2246,10 +2247,10 @@
             // 
             this.label81.AutoSize = true;
             this.label81.BackColor = System.Drawing.Color.Silver;
-            this.label81.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label81.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label81.Location = new System.Drawing.Point(3, 1314);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(52, 17);
+            this.label81.Size = new System.Drawing.Size(54, 17);
             this.label81.TabIndex = 292;
             this.label81.Text = "Pipeline";
             // 
@@ -2296,10 +2297,10 @@
             // 
             this.label82.AutoSize = true;
             this.label82.BackColor = System.Drawing.Color.Silver;
-            this.label82.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.Location = new System.Drawing.Point(3, 1288);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(41, 17);
+            this.label82.Size = new System.Drawing.Size(44, 17);
             this.label82.TabIndex = 287;
             this.label82.Text = "Barge";
             // 
@@ -2307,10 +2308,10 @@
             // 
             this.label84.AutoSize = true;
             this.label84.BackColor = System.Drawing.Color.Silver;
-            this.label84.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.Location = new System.Drawing.Point(367, 1261);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(66, 17);
+            this.label84.Size = new System.Drawing.Size(70, 17);
             this.label84.TabIndex = 285;
             this.label84.Text = "Biodiesel";
             this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2319,10 +2320,10 @@
             // 
             this.label85.AutoSize = true;
             this.label85.BackColor = System.Drawing.Color.Silver;
-            this.label85.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label85.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label85.Location = new System.Drawing.Point(270, 1261);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(67, 17);
+            this.label85.Size = new System.Drawing.Size(69, 17);
             this.label85.TabIndex = 284;
             this.label85.Text = "Soybeans";
             this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2331,10 +2332,10 @@
             // 
             this.label86.AutoSize = true;
             this.label86.BackColor = System.Drawing.Color.Silver;
-            this.label86.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label86.Location = new System.Drawing.Point(3, 1261);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(66, 17);
+            this.label86.Size = new System.Drawing.Size(70, 17);
             this.label86.TabIndex = 283;
             this.label86.Text = "Biodiesel";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2343,10 +2344,10 @@
             // 
             this.label87.AutoSize = true;
             this.label87.BackColor = System.Drawing.Color.Silver;
-            this.label87.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label87.Location = new System.Drawing.Point(171, 1261);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(95, 17);
+            this.label87.Size = new System.Drawing.Size(99, 17);
             this.label87.TabIndex = 280;
             this.label87.Text = "Ag Chemicals";
             this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2394,10 +2395,10 @@
             // 
             this.label69.AutoSize = true;
             this.label69.BackColor = System.Drawing.Color.Silver;
-            this.label69.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.Location = new System.Drawing.Point(3, 1225);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(140, 17);
+            this.label69.Size = new System.Drawing.Size(137, 17);
             this.label69.TabIndex = 272;
             this.label69.Text = "Truck For Distribution";
             // 
@@ -2444,10 +2445,10 @@
             // 
             this.label70.AutoSize = true;
             this.label70.BackColor = System.Drawing.Color.Silver;
-            this.label70.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.Location = new System.Drawing.Point(3, 1199);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(29, 17);
+            this.label70.Size = new System.Drawing.Size(31, 17);
             this.label70.TabIndex = 267;
             this.label70.Text = "Rail";
             // 
@@ -2494,10 +2495,10 @@
             // 
             this.label71.AutoSize = true;
             this.label71.BackColor = System.Drawing.Color.Silver;
-            this.label71.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.Location = new System.Drawing.Point(3, 1173);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(52, 17);
+            this.label71.Size = new System.Drawing.Size(54, 17);
             this.label71.TabIndex = 262;
             this.label71.Text = "Pipeline";
             // 
@@ -2544,10 +2545,10 @@
             // 
             this.label72.AutoSize = true;
             this.label72.BackColor = System.Drawing.Color.Silver;
-            this.label72.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.Location = new System.Drawing.Point(3, 1147);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(41, 17);
+            this.label72.Size = new System.Drawing.Size(44, 17);
             this.label72.TabIndex = 257;
             this.label72.Text = "Barge";
             // 
@@ -2555,10 +2556,10 @@
             // 
             this.label74.AutoSize = true;
             this.label74.BackColor = System.Drawing.Color.Silver;
-            this.label74.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.Location = new System.Drawing.Point(367, 1099);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(68, 17);
+            this.label74.Size = new System.Drawing.Size(64, 17);
             this.label74.TabIndex = 255;
             this.label74.Text = "NNA FG";
             this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2567,10 +2568,10 @@
             // 
             this.label75.AutoSize = true;
             this.label75.BackColor = System.Drawing.Color.Silver;
-            this.label75.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label75.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.Location = new System.Drawing.Point(270, 1099);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(72, 17);
+            this.label75.Size = new System.Drawing.Size(66, 17);
             this.label75.TabIndex = 254;
             this.label75.Text = "NNA NG";
             this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2579,10 +2580,10 @@
             // 
             this.label76.AutoSize = true;
             this.label76.BackColor = System.Drawing.Color.Silver;
-            this.label76.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label76.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label76.Location = new System.Drawing.Point(3, 1099);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(154, 17);
+            this.label76.Size = new System.Drawing.Size(160, 17);
             this.label76.TabIndex = 253;
             this.label76.Text = "Fischer Tropsch Diesel";
             this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2604,10 +2605,10 @@
             // 
             this.label77.AutoSize = true;
             this.label77.BackColor = System.Drawing.Color.Silver;
-            this.label77.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label77.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label77.Location = new System.Drawing.Point(171, 1099);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(59, 17);
+            this.label77.Size = new System.Drawing.Size(55, 17);
             this.label77.TabIndex = 250;
             this.label77.Text = "NA NG";
             this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2642,10 +2643,10 @@
             // 
             this.label78.AutoSize = true;
             this.label78.BackColor = System.Drawing.Color.Silver;
-            this.label78.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.Location = new System.Drawing.Point(3, 1122);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(89, 17);
+            this.label78.Size = new System.Drawing.Size(92, 17);
             this.label78.TabIndex = 247;
             this.label78.Text = "Ocean Tanker";
             // 
@@ -2679,10 +2680,10 @@
             // 
             this.label56.AutoSize = true;
             this.label56.BackColor = System.Drawing.Color.Silver;
-            this.label56.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label56.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.Location = new System.Drawing.Point(5, 1060);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(140, 17);
+            this.label56.Size = new System.Drawing.Size(137, 17);
             this.label56.TabIndex = 242;
             this.label56.Text = "Truck For Distribution";
             // 
@@ -2716,10 +2717,10 @@
             // 
             this.label58.AutoSize = true;
             this.label58.BackColor = System.Drawing.Color.Silver;
-            this.label58.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.Location = new System.Drawing.Point(5, 1034);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(29, 17);
+            this.label58.Size = new System.Drawing.Size(31, 17);
             this.label58.TabIndex = 237;
             this.label58.Text = "Rail";
             // 
@@ -2753,10 +2754,10 @@
             // 
             this.label59.AutoSize = true;
             this.label59.BackColor = System.Drawing.Color.Silver;
-            this.label59.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.Location = new System.Drawing.Point(5, 1008);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(52, 17);
+            this.label59.Size = new System.Drawing.Size(54, 17);
             this.label59.TabIndex = 232;
             this.label59.Text = "Pipeline";
             // 
@@ -2790,10 +2791,10 @@
             // 
             this.label62.AutoSize = true;
             this.label62.BackColor = System.Drawing.Color.Silver;
-            this.label62.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.Location = new System.Drawing.Point(5, 982);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(41, 17);
+            this.label62.Size = new System.Drawing.Size(44, 17);
             this.label62.TabIndex = 227;
             this.label62.Text = "Barge";
             // 
@@ -2801,7 +2802,7 @@
             // 
             this.label66.AutoSize = true;
             this.label66.BackColor = System.Drawing.Color.Silver;
-            this.label66.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label66.Location = new System.Drawing.Point(5, 934);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(131, 17);
@@ -2813,10 +2814,10 @@
             // 
             this.label67.AutoSize = true;
             this.label67.BackColor = System.Drawing.Color.Silver;
-            this.label67.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label67.Location = new System.Drawing.Point(173, 934);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(111, 17);
+            this.label67.Size = new System.Drawing.Size(112, 17);
             this.label67.TabIndex = 220;
             this.label67.Text = "North American";
             this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2851,10 +2852,10 @@
             // 
             this.label68.AutoSize = true;
             this.label68.BackColor = System.Drawing.Color.Silver;
-            this.label68.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.Location = new System.Drawing.Point(5, 957);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(89, 17);
+            this.label68.Size = new System.Drawing.Size(92, 17);
             this.label68.TabIndex = 217;
             this.label68.Text = "Ocean Tanker";
             // 
@@ -2914,10 +2915,10 @@
             // 
             this.label55.AutoSize = true;
             this.label55.BackColor = System.Drawing.Color.Silver;
-            this.label55.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.Location = new System.Drawing.Point(3, 896);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(140, 17);
+            this.label55.Size = new System.Drawing.Size(137, 17);
             this.label55.TabIndex = 212;
             this.label55.Text = "Truck For Distribution";
             // 
@@ -2977,10 +2978,10 @@
             // 
             this.label54.AutoSize = true;
             this.label54.BackColor = System.Drawing.Color.Silver;
-            this.label54.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.Location = new System.Drawing.Point(3, 870);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(29, 17);
+            this.label54.Size = new System.Drawing.Size(31, 17);
             this.label54.TabIndex = 207;
             this.label54.Text = "Rail";
             // 
@@ -3040,10 +3041,10 @@
             // 
             this.label53.AutoSize = true;
             this.label53.BackColor = System.Drawing.Color.Silver;
-            this.label53.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.Location = new System.Drawing.Point(3, 844);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(52, 17);
+            this.label53.Size = new System.Drawing.Size(54, 17);
             this.label53.TabIndex = 202;
             this.label53.Text = "Pipeline";
             // 
@@ -3103,10 +3104,10 @@
             // 
             this.label48.AutoSize = true;
             this.label48.BackColor = System.Drawing.Color.Silver;
-            this.label48.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.Location = new System.Drawing.Point(3, 818);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(41, 17);
+            this.label48.Size = new System.Drawing.Size(44, 17);
             this.label48.TabIndex = 197;
             this.label48.Text = "Barge";
             // 
@@ -3114,10 +3115,10 @@
             // 
             this.label52.AutoSize = true;
             this.label52.BackColor = System.Drawing.Color.Silver;
-            this.label52.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.Location = new System.Drawing.Point(466, 770);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(146, 17);
+            this.label52.Size = new System.Drawing.Size(147, 17);
             this.label52.TabIndex = 196;
             this.label52.Text = "US Low Sulfur Diesel";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3126,10 +3127,10 @@
             // 
             this.label51.AutoSize = true;
             this.label51.BackColor = System.Drawing.Color.Silver;
-            this.label51.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.Location = new System.Drawing.Point(367, 770);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(71, 17);
+            this.label51.Size = new System.Drawing.Size(73, 17);
             this.label51.TabIndex = 195;
             this.label51.Text = "US Diesel";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3138,10 +3139,10 @@
             // 
             this.label49.AutoSize = true;
             this.label49.BackColor = System.Drawing.Color.Silver;
-            this.label49.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.Location = new System.Drawing.Point(270, 770);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(87, 17);
+            this.label49.Size = new System.Drawing.Size(89, 17);
             this.label49.TabIndex = 194;
             this.label49.Text = "Residual Oil";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3150,10 +3151,10 @@
             // 
             this.label50.AutoSize = true;
             this.label50.BackColor = System.Drawing.Color.Silver;
-            this.label50.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.Location = new System.Drawing.Point(3, 770);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(115, 17);
+            this.label50.Size = new System.Drawing.Size(121, 17);
             this.label50.TabIndex = 193;
             this.label50.Text = "Petroleum Based";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3188,10 +3189,10 @@
             // 
             this.label57.AutoSize = true;
             this.label57.BackColor = System.Drawing.Color.Silver;
-            this.label57.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.Location = new System.Drawing.Point(171, 770);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(71, 17);
+            this.label57.Size = new System.Drawing.Size(73, 17);
             this.label57.TabIndex = 174;
             this.label57.Text = "Crude Oil";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3225,10 +3226,10 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.Location = new System.Drawing.Point(3, 741);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(590, 19);
+            this.label60.Size = new System.Drawing.Size(629, 17);
             this.label60.TabIndex = 168;
             this.label60.Text = "2.4 - Transportation Distances of Moving Feedstock or Fuel: Miles (One Way Distan" +
     "ce)";
@@ -3237,10 +3238,10 @@
             // 
             this.label61.AutoSize = true;
             this.label61.BackColor = System.Drawing.Color.Silver;
-            this.label61.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.Location = new System.Drawing.Point(3, 793);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(89, 17);
+            this.label61.Size = new System.Drawing.Size(92, 17);
             this.label61.TabIndex = 167;
             this.label61.Text = "Ocean Tanker";
             // 
@@ -3275,7 +3276,7 @@
             // 
             this.numericUpDown34.DecimalPlaces = 2;
             this.numericUpDown34.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown34.Location = new System.Drawing.Point(275, 672);
+            this.numericUpDown34.Location = new System.Drawing.Point(273, 672);
             this.numericUpDown34.Name = "numericUpDown34";
             this.numericUpDown34.Size = new System.Drawing.Size(92, 22);
             this.numericUpDown34.TabIndex = 163;
@@ -3284,7 +3285,7 @@
             // 
             this.numericUpDown35.DecimalPlaces = 2;
             this.numericUpDown35.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown35.Location = new System.Drawing.Point(176, 672);
+            this.numericUpDown35.Location = new System.Drawing.Point(178, 672);
             this.numericUpDown35.Name = "numericUpDown35";
             this.numericUpDown35.Size = new System.Drawing.Size(92, 22);
             this.numericUpDown35.TabIndex = 162;
@@ -3293,10 +3294,10 @@
             // 
             this.label47.AutoSize = true;
             this.label47.BackColor = System.Drawing.Color.Silver;
-            this.label47.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(5, 676);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(164, 17);
+            this.label47.Size = new System.Drawing.Size(168, 17);
             this.label47.TabIndex = 161;
             this.label47.Text = "Rate of Boil off Recovered";
             // 
@@ -3304,10 +3305,10 @@
             // 
             this.label46.AutoSize = true;
             this.label46.BackColor = System.Drawing.Color.Silver;
-            this.label46.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Location = new System.Drawing.Point(569, 596);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(69, 17);
+            this.label46.Size = new System.Drawing.Size(71, 17);
             this.label46.TabIndex = 160;
             this.label46.Text = "Refueling";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3316,10 +3317,10 @@
             // 
             this.label45.AutoSize = true;
             this.label45.BackColor = System.Drawing.Color.Silver;
-            this.label45.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Location = new System.Drawing.Point(569, 580);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(56, 17);
+            this.label45.Size = new System.Drawing.Size(58, 17);
             this.label45.TabIndex = 159;
             this.label45.Text = "Storage";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3328,10 +3329,10 @@
             // 
             this.label44.AutoSize = true;
             this.label44.BackColor = System.Drawing.Color.Silver;
-            this.label44.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.Location = new System.Drawing.Point(468, 596);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(69, 17);
+            this.label44.Size = new System.Drawing.Size(71, 17);
             this.label44.TabIndex = 158;
             this.label44.Text = "Refueling";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3340,10 +3341,10 @@
             // 
             this.label42.AutoSize = true;
             this.label42.BackColor = System.Drawing.Color.Silver;
-            this.label42.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(468, 580);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(118, 17);
+            this.label42.Size = new System.Drawing.Size(120, 17);
             this.label42.TabIndex = 157;
             this.label42.Text = "Bulk Terminal ->";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3352,10 +3353,10 @@
             // 
             this.label43.AutoSize = true;
             this.label43.BackColor = System.Drawing.Color.Silver;
-            this.label43.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.Location = new System.Drawing.Point(468, 563);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(85, 17);
+            this.label43.Size = new System.Drawing.Size(86, 17);
             this.label43.TabIndex = 156;
             this.label43.Text = "Distribution";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3406,7 +3407,7 @@
             // 
             this.numericUpDown21.DecimalPlaces = 2;
             this.numericUpDown21.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown21.Location = new System.Drawing.Point(275, 645);
+            this.numericUpDown21.Location = new System.Drawing.Point(273, 645);
             this.numericUpDown21.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -3420,10 +3421,10 @@
             // 
             this.label41.AutoSize = true;
             this.label41.BackColor = System.Drawing.Color.Silver;
-            this.label41.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.Location = new System.Drawing.Point(369, 579);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(56, 17);
+            this.label41.Size = new System.Drawing.Size(58, 17);
             this.label41.TabIndex = 151;
             this.label41.Text = "Storage";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3432,10 +3433,10 @@
             // 
             this.label40.AutoSize = true;
             this.label40.BackColor = System.Drawing.Color.Silver;
-            this.label40.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.Location = new System.Drawing.Point(369, 595);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(99, 17);
+            this.label40.Size = new System.Drawing.Size(102, 17);
             this.label40.TabIndex = 150;
             this.label40.Text = "Bulk Terminal";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3453,10 +3454,10 @@
             // 
             this.label39.AutoSize = true;
             this.label39.BackColor = System.Drawing.Color.Silver;
-            this.label39.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(273, 596);
+            this.label39.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(271, 596);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(99, 17);
+            this.label39.Size = new System.Drawing.Size(102, 17);
             this.label39.TabIndex = 145;
             this.label39.Text = "Bulk Terminal";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3465,10 +3466,10 @@
             // 
             this.label38.AutoSize = true;
             this.label38.BackColor = System.Drawing.Color.Silver;
-            this.label38.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(273, 580);
+            this.label38.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(271, 580);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(60, 17);
+            this.label38.Size = new System.Drawing.Size(59, 17);
             this.label38.TabIndex = 144;
             this.label38.Text = "Plant ->";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3477,10 +3478,10 @@
             // 
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.Color.Silver;
-            this.label33.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(272, 563);
+            this.label33.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(270, 563);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(102, 17);
+            this.label33.Size = new System.Drawing.Size(104, 17);
             this.label33.TabIndex = 143;
             this.label33.Text = "Transportation";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3507,19 +3508,19 @@
             // 
             this.label37.AutoSize = true;
             this.label37.BackColor = System.Drawing.Color.Silver;
-            this.label37.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(173, 596);
+            this.label37.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(175, 596);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(115, 17);
+            this.label37.Size = new System.Drawing.Size(41, 17);
             this.label37.TabIndex = 138;
-            this.label37.Text = "Production Plant";
+            this.label37.Text = "Plant";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // numericUpDown22
             // 
             this.numericUpDown22.DecimalPlaces = 2;
             this.numericUpDown22.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown22.Location = new System.Drawing.Point(275, 615);
+            this.numericUpDown22.Location = new System.Drawing.Point(273, 615);
             this.numericUpDown22.Name = "numericUpDown22";
             this.numericUpDown22.Size = new System.Drawing.Size(92, 22);
             this.numericUpDown22.TabIndex = 136;
@@ -3528,7 +3529,7 @@
             // 
             this.numericUpDown23.DecimalPlaces = 2;
             this.numericUpDown23.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown23.Location = new System.Drawing.Point(176, 645);
+            this.numericUpDown23.Location = new System.Drawing.Point(178, 645);
             this.numericUpDown23.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -3542,7 +3543,7 @@
             // 
             this.numericUpDown24.DecimalPlaces = 2;
             this.numericUpDown24.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown24.Location = new System.Drawing.Point(176, 615);
+            this.numericUpDown24.Location = new System.Drawing.Point(178, 615);
             this.numericUpDown24.Name = "numericUpDown24";
             this.numericUpDown24.Size = new System.Drawing.Size(92, 22);
             this.numericUpDown24.TabIndex = 134;
@@ -3551,10 +3552,10 @@
             // 
             this.label32.AutoSize = true;
             this.label32.BackColor = System.Drawing.Color.Silver;
-            this.label32.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(5, 645);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(107, 17);
+            this.label32.Size = new System.Drawing.Size(108, 17);
             this.label32.TabIndex = 133;
             this.label32.Text = "Duration in Days";
             // 
@@ -3562,10 +3563,10 @@
             // 
             this.label34.AutoSize = true;
             this.label34.BackColor = System.Drawing.Color.Silver;
-            this.label34.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(173, 579);
+            this.label34.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(175, 579);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(60, 17);
+            this.label34.Size = new System.Drawing.Size(62, 17);
             this.label34.TabIndex = 131;
             this.label34.Text = "Storage ";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -3573,21 +3574,21 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(3, 533);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(486, 19);
+            this.label35.Size = new System.Drawing.Size(525, 17);
             this.label35.TabIndex = 130;
-            this.label35.Text = "2.3 - Assumptions Rearding Boiling Off Effects of Liquified natural Gas";
+            this.label35.Text = "2.3 - Assumptions Regarding Boiling Off Effects of Liquified natural Gas";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Silver;
-            this.label36.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(5, 619);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(170, 17);
+            this.label36.Size = new System.Drawing.Size(176, 17);
             this.label36.TabIndex = 129;
             this.label36.Text = "Boiling Off Rate % Per Day";
             // 
@@ -3635,10 +3636,10 @@
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Silver;
-            this.label27.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(6, 480);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(139, 17);
+            this.label27.Size = new System.Drawing.Size(143, 17);
             this.label27.TabIndex = 124;
             this.label27.Text = "Fischer Tropsch Diesel";
             // 
@@ -3667,22 +3668,21 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Location = new System.Drawing.Point(3, 401);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(643, 19);
+            this.label30.Size = new System.Drawing.Size(335, 17);
             this.label30.TabIndex = 121;
-            this.label30.Text = "2.2 - Selection of LNG and FTD Production Pathways: Share of NG or FG as Energy F" +
-    "eedstock";
+            this.label30.Text = "2.2 - Share of NG or FG as Energy Feedstock";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.BackColor = System.Drawing.Color.Silver;
-            this.label31.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(6, 454);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(128, 17);
+            this.label31.Size = new System.Drawing.Size(130, 17);
             this.label31.TabIndex = 120;
             this.label31.Text = "Liquified natural Gas";
             // 
@@ -3690,10 +3690,10 @@
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Silver;
-            this.label26.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(5, 329);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(640, 17);
+            this.label26.Size = new System.Drawing.Size(641, 17);
             this.label26.TabIndex = 119;
             this.label26.Text = "Non North American Flared Gas;  Steam Production Credit: Btu of steam per mmBtu o" +
     "f FT diesel produced";
@@ -3702,10 +3702,10 @@
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Silver;
-            this.label25.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(5, 287);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(647, 17);
+            this.label25.Size = new System.Drawing.Size(648, 17);
             this.label25.TabIndex = 118;
             this.label25.Text = "Non North American Natural Gas;  Steam Production Credit: Btu of steam per mmBtu " +
     "of FT diesel produced";
@@ -3752,85 +3752,72 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(269, 91);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(185, 17);
+            this.label23.Size = new System.Drawing.Size(184, 17);
             this.label23.TabIndex = 113;
             this.label23.Text = "2 -> Electricity Co-Production";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(269, 75);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(164, 17);
+            this.label20.Size = new System.Drawing.Size(162, 17);
             this.label20.TabIndex = 112;
             this.label20.Text = "1 -> Steam Co-Production";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(269, 59);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(136, 17);
+            this.label21.Size = new System.Drawing.Size(132, 17);
             this.label21.TabIndex = 111;
             this.label21.Text = "0 -> No Co-Products";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(269, 34);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(90, 17);
+            this.label22.Size = new System.Drawing.Size(91, 17);
             this.label22.TabIndex = 110;
             this.label22.Text = "Plant Design";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(3, 75);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(238, 17);
+            this.label19.Size = new System.Drawing.Size(235, 17);
             this.label19.TabIndex = 109;
             this.label19.Text = "2 -> Non North American Natural Gas";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(3, 59);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(207, 17);
+            this.label18.Size = new System.Drawing.Size(206, 17);
             this.label18.TabIndex = 108;
             this.label18.Text = "1 -> North American Natural Gas";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(3, 34);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(79, 17);
+            this.label17.Size = new System.Drawing.Size(84, 17);
             this.label17.TabIndex = 107;
             this.label17.Text = "Feedstocks";
-            // 
-            // numericUpDown12
-            // 
-            this.numericUpDown12.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown12.Location = new System.Drawing.Point(457, 70);
-            this.numericUpDown12.Maximum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown12.TabIndex = 106;
             // 
             // numericUpDown11
             // 
@@ -3918,10 +3905,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Silver;
-            this.label11.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(3, 194);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(139, 17);
+            this.label11.Size = new System.Drawing.Size(143, 17);
             this.label11.TabIndex = 37;
             this.label11.Text = "Fischer Tropsch Diesel";
             // 
@@ -3929,38 +3916,37 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Silver;
-            this.label12.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(3, 168);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(133, 17);
+            this.label12.Size = new System.Drawing.Size(134, 17);
             this.label12.TabIndex = 36;
             this.label12.Text = "Liquified Natural Gas";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(3, 3);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(673, 19);
+            this.label15.Size = new System.Drawing.Size(550, 17);
             this.label15.TabIndex = 33;
-            this.label15.Text = "2.1 - Simulation Scenarios: Key Assumptions for Simulations of Natural Gas Based " +
-    "Fuel Pathways";
+            this.label15.Text = "2.1 - Key Assumptions for Simulations of Natural Gas Based Fuel Pathways";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Silver;
-            this.label16.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(3, 142);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(155, 17);
+            this.label16.Size = new System.Drawing.Size(156, 17);
             this.label16.TabIndex = 32;
             this.label16.Text = "Compressed Natural Gas";
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(7, 1857);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(645, 45);
@@ -3978,7 +3964,7 @@
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.numericUpDown12);
             this.panel3.Location = new System.Drawing.Point(2, 118);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(638, 109);
             this.panel3.TabIndex = 367;
@@ -3987,10 +3973,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Silver;
-            this.label14.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(157, 3);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(120, 17);
+            this.label14.Size = new System.Drawing.Size(126, 17);
             this.label14.TabIndex = 34;
             this.label14.Text = "Feedstock Source";
             // 
@@ -3998,10 +3984,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Silver;
-            this.label10.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(284, 3);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(164, 17);
+            this.label10.Size = new System.Drawing.Size(163, 17);
             this.label10.TabIndex = 101;
             this.label10.Text = "Plant Design Type (NG)";
             // 
@@ -4009,12 +3995,25 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Silver;
-            this.label13.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(454, 3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(160, 17);
+            this.label13.Size = new System.Drawing.Size(161, 17);
             this.label13.TabIndex = 105;
             this.label13.Text = "Plant Design Type (FG)";
+            // 
+            // numericUpDown12
+            // 
+            this.numericUpDown12.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown12.Location = new System.Drawing.Point(457, 70);
+            this.numericUpDown12.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numericUpDown12.Name = "numericUpDown12";
+            this.numericUpDown12.Size = new System.Drawing.Size(92, 22);
+            this.numericUpDown12.TabIndex = 106;
             // 
             // panel4
             // 
@@ -4022,7 +4021,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label24);
             this.panel4.Location = new System.Drawing.Point(2, 240);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(650, 131);
             this.panel4.TabIndex = 368;
@@ -4031,10 +4030,10 @@
             // 
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Silver;
-            this.label24.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(3, 6);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(616, 17);
+            this.label24.Size = new System.Drawing.Size(619, 17);
             this.label24.TabIndex = 117;
             this.label24.Text = "North American Natural Gas;  Steam Production Credit: Btu of steam per mmBtu of F" +
     "T diesel produced";
@@ -4044,7 +4043,7 @@
             this.panel5.BackColor = System.Drawing.Color.Silver;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Location = new System.Drawing.Point(2, 421);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(534, 86);
             this.panel5.TabIndex = 369;
@@ -4054,7 +4053,7 @@
             this.panel6.BackColor = System.Drawing.Color.Silver;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Location = new System.Drawing.Point(2, 553);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(646, 148);
             this.panel6.TabIndex = 370;
@@ -4064,7 +4063,7 @@
             this.panel7.BackColor = System.Drawing.Color.Silver;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Location = new System.Drawing.Point(2, 763);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(630, 823);
             this.panel7.TabIndex = 371;
@@ -4074,7 +4073,7 @@
             this.panel8.BackColor = System.Drawing.Color.Silver;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Location = new System.Drawing.Point(2, 1648);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(449, 204);
             this.panel8.TabIndex = 372;
@@ -4112,10 +4111,10 @@
             // 
             this.label116.AutoSize = true;
             this.label116.BackColor = System.Drawing.Color.Silver;
-            this.label116.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label116.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label116.Location = new System.Drawing.Point(263, 140);
             this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(20, 17);
+            this.label116.Size = new System.Drawing.Size(16, 18);
             this.label116.TabIndex = 383;
             this.label116.Text = "%";
             // 
@@ -4123,10 +4122,10 @@
             // 
             this.label117.AutoSize = true;
             this.label117.BackColor = System.Drawing.Color.Silver;
-            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label117.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label117.Location = new System.Drawing.Point(384, 140);
             this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(20, 17);
+            this.label117.Size = new System.Drawing.Size(16, 18);
             this.label117.TabIndex = 382;
             this.label117.Text = "%";
             // 
@@ -4154,10 +4153,10 @@
             // 
             this.label118.AutoSize = true;
             this.label118.BackColor = System.Drawing.Color.Silver;
-            this.label118.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label118.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label118.Location = new System.Drawing.Point(10, 140);
             this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(147, 17);
+            this.label118.Size = new System.Drawing.Size(152, 17);
             this.label118.TabIndex = 379;
             this.label118.Text = "Soyoil Transesterfication";
             // 
@@ -4165,10 +4164,10 @@
             // 
             this.label113.AutoSize = true;
             this.label113.BackColor = System.Drawing.Color.Silver;
-            this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label113.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label113.Location = new System.Drawing.Point(263, 116);
             this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(20, 17);
+            this.label113.Size = new System.Drawing.Size(16, 18);
             this.label113.TabIndex = 378;
             this.label113.Text = "%";
             // 
@@ -4176,10 +4175,10 @@
             // 
             this.label114.AutoSize = true;
             this.label114.BackColor = System.Drawing.Color.Silver;
-            this.label114.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label114.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label114.Location = new System.Drawing.Point(384, 116);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(20, 17);
+            this.label114.Size = new System.Drawing.Size(16, 18);
             this.label114.TabIndex = 377;
             this.label114.Text = "%";
             // 
@@ -4207,7 +4206,7 @@
             // 
             this.label115.AutoSize = true;
             this.label115.BackColor = System.Drawing.Color.Silver;
-            this.label115.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label115.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label115.Location = new System.Drawing.Point(10, 116);
             this.label115.Name = "label115";
             this.label115.Size = new System.Drawing.Size(107, 17);
@@ -4218,10 +4217,10 @@
             // 
             this.label107.AutoSize = true;
             this.label107.BackColor = System.Drawing.Color.Silver;
-            this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label107.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label107.Location = new System.Drawing.Point(263, 91);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(20, 17);
+            this.label107.Size = new System.Drawing.Size(16, 18);
             this.label107.TabIndex = 373;
             this.label107.Text = "%";
             // 
@@ -4229,10 +4228,10 @@
             // 
             this.label108.AutoSize = true;
             this.label108.BackColor = System.Drawing.Color.Silver;
-            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label108.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label108.Location = new System.Drawing.Point(384, 91);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(20, 17);
+            this.label108.Size = new System.Drawing.Size(16, 18);
             this.label108.TabIndex = 372;
             this.label108.Text = "%";
             // 
@@ -4259,10 +4258,10 @@
             // label111
             // 
             this.label111.AutoSize = true;
-            this.label111.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label111.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label111.Location = new System.Drawing.Point(3, 7);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(604, 38);
+            this.label111.Size = new System.Drawing.Size(638, 34);
             this.label111.TabIndex = 367;
             this.label111.Text = "3 - Simulation of Biodiesel: Allocation of Upstream Energy Use and Emissions Betw" +
     "een \r\nBiodiesel and Co-Products ";
@@ -4271,16 +4270,16 @@
             // 
             this.label112.AutoSize = true;
             this.label112.BackColor = System.Drawing.Color.Silver;
-            this.label112.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label112.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label112.Location = new System.Drawing.Point(10, 91);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(108, 17);
+            this.label112.Size = new System.Drawing.Size(110, 17);
             this.label112.TabIndex = 366;
             this.label112.Text = "Soybean Farming";
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(6, 562);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(664, 45);
@@ -4296,7 +4295,7 @@
             this.panel9.Controls.Add(this.label109);
             this.panel9.Controls.Add(this.label110);
             this.panel9.Location = new System.Drawing.Point(7, 61);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(401, 115);
             this.panel9.TabIndex = 384;
@@ -4305,10 +4304,10 @@
             // 
             this.label109.AutoSize = true;
             this.label109.BackColor = System.Drawing.Color.Silver;
-            this.label109.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label109.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label109.Location = new System.Drawing.Point(275, 6);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(87, 17);
+            this.label109.Size = new System.Drawing.Size(90, 17);
             this.label109.TabIndex = 369;
             this.label109.Text = "Co-Products";
             // 
@@ -4316,10 +4315,10 @@
             // 
             this.label110.AutoSize = true;
             this.label110.BackColor = System.Drawing.Color.Silver;
-            this.label110.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label110.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label110.Location = new System.Drawing.Point(158, 6);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(67, 17);
+            this.label110.Size = new System.Drawing.Size(70, 17);
             this.label110.TabIndex = 368;
             this.label110.Text = "Soydiesel";
             // 
@@ -4361,10 +4360,10 @@
             // 
             this.label133.AutoSize = true;
             this.label133.BackColor = System.Drawing.Color.Silver;
-            this.label133.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label133.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label133.Location = new System.Drawing.Point(278, 257);
             this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(20, 17);
+            this.label133.Size = new System.Drawing.Size(16, 18);
             this.label133.TabIndex = 399;
             this.label133.Text = "%";
             // 
@@ -4381,10 +4380,10 @@
             // 
             this.label134.AutoSize = true;
             this.label134.BackColor = System.Drawing.Color.Silver;
-            this.label134.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label134.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label134.Location = new System.Drawing.Point(7, 257);
             this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(119, 17);
+            this.label134.Size = new System.Drawing.Size(121, 17);
             this.label134.TabIndex = 397;
             this.label134.Text = "Biomass and Other";
             // 
@@ -4392,10 +4391,10 @@
             // 
             this.label131.AutoSize = true;
             this.label131.BackColor = System.Drawing.Color.Silver;
-            this.label131.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label131.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label131.Location = new System.Drawing.Point(278, 232);
             this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(20, 17);
+            this.label131.Size = new System.Drawing.Size(16, 18);
             this.label131.TabIndex = 396;
             this.label131.Text = "%";
             // 
@@ -4412,10 +4411,10 @@
             // 
             this.label132.AutoSize = true;
             this.label132.BackColor = System.Drawing.Color.Silver;
-            this.label132.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label132.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label132.Location = new System.Drawing.Point(7, 232);
             this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(95, 17);
+            this.label132.Size = new System.Drawing.Size(98, 17);
             this.label132.TabIndex = 394;
             this.label132.Text = "Nuclear Power";
             // 
@@ -4423,10 +4422,10 @@
             // 
             this.label124.AutoSize = true;
             this.label124.BackColor = System.Drawing.Color.Silver;
-            this.label124.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label124.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label124.Location = new System.Drawing.Point(278, 207);
             this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(20, 17);
+            this.label124.Size = new System.Drawing.Size(16, 18);
             this.label124.TabIndex = 393;
             this.label124.Text = "%";
             // 
@@ -4443,7 +4442,7 @@
             // 
             this.label125.AutoSize = true;
             this.label125.BackColor = System.Drawing.Color.Silver;
-            this.label125.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label125.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label125.Location = new System.Drawing.Point(7, 207);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(35, 17);
@@ -4454,10 +4453,10 @@
             // 
             this.label126.AutoSize = true;
             this.label126.BackColor = System.Drawing.Color.Silver;
-            this.label126.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label126.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label126.Location = new System.Drawing.Point(278, 183);
             this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(20, 17);
+            this.label126.Size = new System.Drawing.Size(16, 18);
             this.label126.TabIndex = 390;
             this.label126.Text = "%";
             // 
@@ -4474,10 +4473,10 @@
             // 
             this.label127.AutoSize = true;
             this.label127.BackColor = System.Drawing.Color.Silver;
-            this.label127.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label127.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label127.Location = new System.Drawing.Point(7, 183);
             this.label127.Name = "label127";
-            this.label127.Size = new System.Drawing.Size(78, 17);
+            this.label127.Size = new System.Drawing.Size(79, 17);
             this.label127.TabIndex = 388;
             this.label127.Text = "Natural Gas";
             // 
@@ -4485,10 +4484,10 @@
             // 
             this.label128.AutoSize = true;
             this.label128.BackColor = System.Drawing.Color.Silver;
-            this.label128.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label128.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label128.Location = new System.Drawing.Point(278, 158);
             this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(20, 17);
+            this.label128.Size = new System.Drawing.Size(16, 18);
             this.label128.TabIndex = 387;
             this.label128.Text = "%";
             // 
@@ -4505,47 +4504,113 @@
             // 
             this.label130.AutoSize = true;
             this.label130.BackColor = System.Drawing.Color.Silver;
-            this.label130.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label130.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label130.Location = new System.Drawing.Point(7, 158);
             this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(77, 17);
+            this.label130.Size = new System.Drawing.Size(79, 17);
             this.label130.TabIndex = 384;
             this.label130.Text = "Residual Oil";
             // 
             // label123
             // 
             this.label123.AutoSize = true;
-            this.label123.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label123.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label123.Location = new System.Drawing.Point(3, 105);
             this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(214, 19);
+            this.label123.Size = new System.Drawing.Size(228, 17);
             this.label123.TabIndex = 116;
             this.label123.Text = "4.2 - Electricty Generation Mix";
             // 
             // label121
             // 
             this.label121.AutoSize = true;
-            this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label121.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label121.Location = new System.Drawing.Point(7, 46);
             this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(220, 17);
+            this.label121.Size = new System.Drawing.Size(209, 17);
             this.label121.TabIndex = 115;
             this.label121.Text = "2 -> User Input Emissions Factors";
             // 
             // label122
             // 
             this.label122.AutoSize = true;
-            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label122.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label122.Location = new System.Drawing.Point(7, 29);
             this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(263, 17);
+            this.label122.Size = new System.Drawing.Size(249, 17);
             this.label122.TabIndex = 114;
             this.label122.Text = "1 -> Model Calculated Emissions Factors";
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.BackColor = System.Drawing.Color.Silver;
+            this.label120.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label120.Location = new System.Drawing.Point(4, 72);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(165, 17);
+            this.label120.TabIndex = 41;
+            this.label120.Text = "Selection From The Above";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label119.Location = new System.Drawing.Point(3, 4);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(652, 17);
+            this.label119.TabIndex = 34;
+            this.label119.Text = "4.1 - Selection of Model Calculated, or User Inputted Emissions Factors For power" +
+    " Plants";
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(6, 562);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(664, 45);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Do Calculations and Submit Data";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Silver;
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.label129);
+            this.panel10.Location = new System.Drawing.Point(3, 126);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(298, 157);
+            this.panel10.TabIndex = 400;
+            // 
+            // label129
+            // 
+            this.label129.AutoSize = true;
+            this.label129.BackColor = System.Drawing.Color.Silver;
+            this.label129.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label129.Location = new System.Drawing.Point(159, 7);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(120, 17);
+            this.label129.TabIndex = 385;
+            this.label129.Text = "U.S Average Mix";
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Silver;
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.numericUpDown96);
+            this.panel11.Location = new System.Drawing.Point(2, 64);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(268, 32);
+            this.panel11.TabIndex = 401;
             // 
             // numericUpDown96
             // 
             this.numericUpDown96.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown96.Location = new System.Drawing.Point(163, 5);
+            this.numericUpDown96.Location = new System.Drawing.Point(169, 5);
             this.numericUpDown96.Maximum = new decimal(new int[] {
             2,
             0,
@@ -4564,72 +4629,6 @@
             0,
             0,
             0});
-            // 
-            // label120
-            // 
-            this.label120.AutoSize = true;
-            this.label120.BackColor = System.Drawing.Color.Silver;
-            this.label120.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label120.Location = new System.Drawing.Point(4, 72);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(164, 17);
-            this.label120.TabIndex = 41;
-            this.label120.Text = "Selection From The Above";
-            // 
-            // label119
-            // 
-            this.label119.AutoSize = true;
-            this.label119.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label119.Location = new System.Drawing.Point(3, 4);
-            this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(610, 19);
-            this.label119.TabIndex = 34;
-            this.label119.Text = "4.1 - Selection of Model Calculated, or User Inputted Emissions Factors For power" +
-    " Plants";
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(6, 562);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(664, 45);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Do Calculations and Submit Data";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Silver;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.label129);
-            this.panel10.Location = new System.Drawing.Point(3, 126);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(298, 157);
-            this.panel10.TabIndex = 400;
-            // 
-            // label129
-            // 
-            this.label129.AutoSize = true;
-            this.label129.BackColor = System.Drawing.Color.Silver;
-            this.label129.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label129.Location = new System.Drawing.Point(159, 7);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(116, 17);
-            this.label129.TabIndex = 385;
-            this.label129.Text = "U.S Average Mix";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Silver;
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel11.Controls.Add(this.numericUpDown96);
-            this.panel11.Location = new System.Drawing.Point(2, 64);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(268, 32);
-            this.panel11.TabIndex = 401;
             // 
             // tabPage5
             // 
@@ -4873,10 +4872,10 @@
             // 
             this.label205.AutoSize = true;
             this.label205.BackColor = System.Drawing.Color.Silver;
-            this.label205.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label205.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label205.Location = new System.Drawing.Point(12, 1210);
             this.label205.Name = "label205";
-            this.label205.Size = new System.Drawing.Size(123, 17);
+            this.label205.Size = new System.Drawing.Size(125, 17);
             this.label205.TabIndex = 259;
             this.label205.Text = "Conventional Diesel";
             // 
@@ -5304,10 +5303,10 @@
             // 
             this.label197.AutoSize = true;
             this.label197.BackColor = System.Drawing.Color.Silver;
-            this.label197.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label197.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label197.Location = new System.Drawing.Point(12, 1336);
             this.label197.Name = "label197";
-            this.label197.Size = new System.Drawing.Size(139, 17);
+            this.label197.Size = new System.Drawing.Size(143, 17);
             this.label197.TabIndex = 223;
             this.label197.Text = "Fischer Tropsch Diesel";
             // 
@@ -5315,10 +5314,10 @@
             // 
             this.label198.AutoSize = true;
             this.label198.BackColor = System.Drawing.Color.Silver;
-            this.label198.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label198.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label198.Location = new System.Drawing.Point(12, 1310);
             this.label198.Name = "label198";
-            this.label198.Size = new System.Drawing.Size(59, 17);
+            this.label198.Size = new System.Drawing.Size(61, 17);
             this.label198.TabIndex = 221;
             this.label198.Text = "Biodiesel";
             // 
@@ -5326,10 +5325,10 @@
             // 
             this.label199.AutoSize = true;
             this.label199.BackColor = System.Drawing.Color.Silver;
-            this.label199.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label199.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label199.Location = new System.Drawing.Point(12, 1285);
             this.label199.Name = "label199";
-            this.label199.Size = new System.Drawing.Size(115, 17);
+            this.label199.Size = new System.Drawing.Size(119, 17);
             this.label199.TabIndex = 216;
             this.label199.Text = "Natural Gas (SCF)";
             // 
@@ -5337,10 +5336,10 @@
             // 
             this.label200.AutoSize = true;
             this.label200.BackColor = System.Drawing.Color.Silver;
-            this.label200.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label200.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label200.Location = new System.Drawing.Point(12, 1259);
             this.label200.Name = "label200";
-            this.label200.Size = new System.Drawing.Size(113, 17);
+            this.label200.Size = new System.Drawing.Size(115, 17);
             this.label200.TabIndex = 215;
             this.label200.Text = "Low Sulfur Diesel";
             // 
@@ -5348,30 +5347,30 @@
             // 
             this.label201.AutoSize = true;
             this.label201.BackColor = System.Drawing.Color.Silver;
-            this.label201.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label201.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label201.Location = new System.Drawing.Point(12, 1233);
             this.label201.Name = "label201";
-            this.label201.Size = new System.Drawing.Size(77, 17);
+            this.label201.Size = new System.Drawing.Size(79, 17);
             this.label201.TabIndex = 214;
             this.label201.Text = "Residual Oil";
             // 
             // label202
             // 
             this.label202.AutoSize = true;
-            this.label202.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label202.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label202.Location = new System.Drawing.Point(3, 1164);
             this.label202.Name = "label202";
-            this.label202.Size = new System.Drawing.Size(521, 19);
+            this.label202.Size = new System.Drawing.Size(554, 17);
             this.label202.TabIndex = 213;
             this.label202.Text = "5.4d - Fuel Consumption (Only needed if using User data)(Gallons Per Hour)";
             // 
             // label191
             // 
             this.label191.AutoSize = true;
-            this.label191.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label191.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label191.Location = new System.Drawing.Point(3, 958);
             this.label191.Name = "label191";
-            this.label191.Size = new System.Drawing.Size(592, 19);
+            this.label191.Size = new System.Drawing.Size(638, 17);
             this.label191.TabIndex = 189;
             this.label191.Text = "5.4c - Calculation of Fuel Use Using Alternative Fuels (Conventional Diesel as Ba" +
     "seline)";
@@ -5380,10 +5379,10 @@
             // 
             this.label179.AutoSize = true;
             this.label179.BackColor = System.Drawing.Color.Silver;
-            this.label179.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label179.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label179.Location = new System.Drawing.Point(127, 791);
             this.label179.Name = "label179";
-            this.label179.Size = new System.Drawing.Size(182, 17);
+            this.label179.Size = new System.Drawing.Size(189, 17);
             this.label179.TabIndex = 188;
             this.label179.Text = "Baseline Fuel Consumption";
             // 
@@ -5391,10 +5390,10 @@
             // 
             this.label180.AutoSize = true;
             this.label180.BackColor = System.Drawing.Color.Silver;
-            this.label180.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label180.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label180.Location = new System.Drawing.Point(12, 912);
             this.label180.Name = "label180";
-            this.label180.Size = new System.Drawing.Size(70, 17);
+            this.label180.Size = new System.Drawing.Size(65, 17);
             this.label180.TabIndex = 187;
             this.label180.Text = "gallon/trip";
             // 
@@ -5418,10 +5417,10 @@
             // 
             this.label181.AutoSize = true;
             this.label181.BackColor = System.Drawing.Color.Silver;
-            this.label181.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label181.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label181.Location = new System.Drawing.Point(12, 886);
             this.label181.Name = "label181";
-            this.label181.Size = new System.Drawing.Size(93, 17);
+            this.label181.Size = new System.Drawing.Size(85, 17);
             this.label181.TabIndex = 185;
             this.label181.Text = "mmbtu in/trip";
             // 
@@ -5491,10 +5490,10 @@
             // 
             this.label182.AutoSize = true;
             this.label182.BackColor = System.Drawing.Color.Silver;
-            this.label182.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label182.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label182.Location = new System.Drawing.Point(12, 860);
             this.label182.Name = "label182";
-            this.label182.Size = new System.Drawing.Size(102, 17);
+            this.label182.Size = new System.Drawing.Size(93, 17);
             this.label182.TabIndex = 180;
             this.label182.Text = "mmbtu out/trip";
             // 
@@ -5502,10 +5501,10 @@
             // 
             this.label183.AutoSize = true;
             this.label183.BackColor = System.Drawing.Color.Silver;
-            this.label183.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label183.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label183.Location = new System.Drawing.Point(12, 834);
             this.label183.Name = "label183";
-            this.label183.Size = new System.Drawing.Size(90, 17);
+            this.label183.Size = new System.Drawing.Size(85, 17);
             this.label183.TabIndex = 179;
             this.label183.Text = "KWh out/trip";
             // 
@@ -5513,71 +5512,70 @@
             // 
             this.label184.AutoSize = true;
             this.label184.BackColor = System.Drawing.Color.Silver;
-            this.label184.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label184.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label184.Location = new System.Drawing.Point(12, 808);
             this.label184.Name = "label184";
-            this.label184.Size = new System.Drawing.Size(109, 17);
+            this.label184.Size = new System.Drawing.Size(112, 17);
             this.label184.TabIndex = 178;
             this.label184.Text = "Engine Efficiency";
             // 
             // label178
             // 
             this.label178.AutoSize = true;
-            this.label178.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label178.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label178.Location = new System.Drawing.Point(3, 769);
             this.label178.Name = "label178";
-            this.label178.Size = new System.Drawing.Size(468, 19);
+            this.label178.Size = new System.Drawing.Size(504, 17);
             this.label178.TabIndex = 177;
             this.label178.Text = "5.4b - Calculation of Fuel Using Conventional Diesel as Baseline Fuel";
             // 
             // label177
             // 
             this.label177.AutoSize = true;
-            this.label177.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label177.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label177.Location = new System.Drawing.Point(3, 618);
             this.label177.Name = "label177";
-            this.label177.Size = new System.Drawing.Size(756, 19);
+            this.label177.Size = new System.Drawing.Size(564, 17);
             this.label177.TabIndex = 176;
-            this.label177.Text = "5.4a - Selection of Model Calculated or User Input Fuel Conspumption Values (Conv" +
-    "entional Diesel as Baseline)";
+            this.label177.Text = "5.4a - Selection of Model Calculated or User Input Fuel Conspumption Values";
             // 
             // label176
             // 
             this.label176.AutoSize = true;
-            this.label176.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label176.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label176.Location = new System.Drawing.Point(3, 572);
             this.label176.Name = "label176";
-            this.label176.Size = new System.Drawing.Size(338, 19);
+            this.label176.Size = new System.Drawing.Size(361, 17);
             this.label176.TabIndex = 173;
             this.label176.Text = "5.4 - Fuel and Energy Consumption of Fuel Types";
             // 
             // label173
             // 
             this.label173.AutoSize = true;
-            this.label173.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label173.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label173.Location = new System.Drawing.Point(3, 691);
             this.label173.Name = "label173";
-            this.label173.Size = new System.Drawing.Size(239, 17);
+            this.label173.Size = new System.Drawing.Size(241, 17);
             this.label173.TabIndex = 172;
             this.label173.Text = "2 -> Simulate Using User Entered GPH";
             // 
             // label174
             // 
             this.label174.AutoSize = true;
-            this.label174.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label174.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label174.Location = new System.Drawing.Point(3, 675);
             this.label174.Name = "label174";
-            this.label174.Size = new System.Drawing.Size(452, 17);
+            this.label174.Size = new System.Drawing.Size(456, 17);
             this.label174.TabIndex = 171;
             this.label174.Text = "1 -> Simulate Using GPH Derived From User Entered Engine Specifications";
             // 
             // label175
             // 
             this.label175.AutoSize = true;
-            this.label175.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label175.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label175.Location = new System.Drawing.Point(3, 650);
             this.label175.Name = "label175";
-            this.label175.Size = new System.Drawing.Size(214, 17);
+            this.label175.Size = new System.Drawing.Size(221, 17);
             this.label175.TabIndex = 170;
             this.label175.Text = "Model Calculated VS User Input";
             // 
@@ -5585,10 +5583,10 @@
             // 
             this.label172.AutoSize = true;
             this.label172.BackColor = System.Drawing.Color.Silver;
-            this.label172.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label172.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label172.Location = new System.Drawing.Point(8, 508);
             this.label172.Name = "label172";
-            this.label172.Size = new System.Drawing.Size(149, 17);
+            this.label172.Size = new System.Drawing.Size(151, 17);
             this.label172.TabIndex = 168;
             this.label172.Text = "Energy Total (KWh out)";
             // 
@@ -5912,10 +5910,10 @@
             // 
             this.label166.AutoSize = true;
             this.label166.BackColor = System.Drawing.Color.Silver;
-            this.label166.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label166.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label166.Location = new System.Drawing.Point(7, 486);
             this.label166.Name = "label166";
-            this.label166.Size = new System.Drawing.Size(233, 17);
+            this.label166.Size = new System.Drawing.Size(240, 17);
             this.label166.TabIndex = 141;
             this.label166.Text = "Energy Production (KWh)(All Engines)";
             // 
@@ -5939,10 +5937,10 @@
             // 
             this.label165.AutoSize = true;
             this.label165.BackColor = System.Drawing.Color.Silver;
-            this.label165.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label165.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label165.Location = new System.Drawing.Point(7, 460);
             this.label165.Name = "label165";
-            this.label165.Size = new System.Drawing.Size(94, 17);
+            this.label165.Size = new System.Drawing.Size(96, 17);
             this.label165.TabIndex = 139;
             this.label165.Text = "HP Per Engine";
             // 
@@ -6018,10 +6016,10 @@
             // 
             this.label161.AutoSize = true;
             this.label161.BackColor = System.Drawing.Color.Silver;
-            this.label161.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label161.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label161.Location = new System.Drawing.Point(7, 435);
             this.label161.Name = "label161";
-            this.label161.Size = new System.Drawing.Size(186, 17);
+            this.label161.Size = new System.Drawing.Size(192, 17);
             this.label161.TabIndex = 133;
             this.label161.Text = "HP Load Factor (single engine)";
             // 
@@ -6029,7 +6027,7 @@
             // 
             this.label162.AutoSize = true;
             this.label162.BackColor = System.Drawing.Color.Silver;
-            this.label162.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label162.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label162.Location = new System.Drawing.Point(7, 409);
             this.label162.Name = "label162";
             this.label162.Size = new System.Drawing.Size(100, 17);
@@ -6040,20 +6038,20 @@
             // 
             this.label163.AutoSize = true;
             this.label163.BackColor = System.Drawing.Color.Silver;
-            this.label163.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label163.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label163.Location = new System.Drawing.Point(7, 383);
             this.label163.Name = "label163";
-            this.label163.Size = new System.Drawing.Size(188, 17);
+            this.label163.Size = new System.Drawing.Size(190, 17);
             this.label163.TabIndex = 131;
             this.label163.Text = "Percent of Trip In Mode (time)";
             // 
             // label164
             // 
             this.label164.AutoSize = true;
-            this.label164.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label164.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label164.Location = new System.Drawing.Point(3, 337);
             this.label164.Name = "label164";
-            this.label164.Size = new System.Drawing.Size(273, 19);
+            this.label164.Size = new System.Drawing.Size(294, 17);
             this.label164.TabIndex = 130;
             this.label164.Text = "5.3 - Engine Characterization Per Mode";
             // 
@@ -6077,10 +6075,10 @@
             // 
             this.label155.AutoSize = true;
             this.label155.BackColor = System.Drawing.Color.Silver;
-            this.label155.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label155.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label155.Location = new System.Drawing.Point(7, 279);
             this.label155.Name = "label155";
-            this.label155.Size = new System.Drawing.Size(145, 17);
+            this.label155.Size = new System.Drawing.Size(143, 17);
             this.label155.TabIndex = 128;
             this.label155.Text = "Total Trip Time (hours)";
             // 
@@ -6130,7 +6128,7 @@
             // 
             this.label157.AutoSize = true;
             this.label157.BackColor = System.Drawing.Color.Silver;
-            this.label157.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label157.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label157.Location = new System.Drawing.Point(7, 256);
             this.label157.Name = "label157";
             this.label157.Size = new System.Drawing.Size(123, 17);
@@ -6141,10 +6139,10 @@
             // 
             this.label158.AutoSize = true;
             this.label158.BackColor = System.Drawing.Color.Silver;
-            this.label158.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label158.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label158.Location = new System.Drawing.Point(7, 230);
             this.label158.Name = "label158";
-            this.label158.Size = new System.Drawing.Size(111, 17);
+            this.label158.Size = new System.Drawing.Size(110, 17);
             this.label158.TabIndex = 123;
             this.label158.Text = "Trip Time (hours)";
             // 
@@ -6152,20 +6150,20 @@
             // 
             this.label159.AutoSize = true;
             this.label159.BackColor = System.Drawing.Color.Silver;
-            this.label159.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label159.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label159.Location = new System.Drawing.Point(7, 204);
             this.label159.Name = "label159";
-            this.label159.Size = new System.Drawing.Size(161, 17);
+            this.label159.Size = new System.Drawing.Size(164, 17);
             this.label159.TabIndex = 122;
             this.label159.Text = "Total Trip Distance (miles)";
             // 
             // label150
             // 
             this.label150.AutoSize = true;
-            this.label150.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label150.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label150.Location = new System.Drawing.Point(3, 168);
             this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(196, 19);
+            this.label150.Size = new System.Drawing.Size(211, 17);
             this.label150.TabIndex = 121;
             this.label150.Text = "5.2 - Trip Distance and Time";
             // 
@@ -6187,10 +6185,10 @@
             // 
             this.label156.AutoSize = true;
             this.label156.BackColor = System.Drawing.Color.Silver;
-            this.label156.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label156.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label156.Location = new System.Drawing.Point(280, 132);
             this.label156.Name = "label156";
-            this.label156.Size = new System.Drawing.Size(66, 17);
+            this.label156.Size = new System.Drawing.Size(62, 17);
             this.label156.TabIndex = 117;
             this.label156.Text = "btu/KWh";
             // 
@@ -6240,10 +6238,10 @@
             // 
             this.label151.AutoSize = true;
             this.label151.BackColor = System.Drawing.Color.Silver;
-            this.label151.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label151.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label151.Location = new System.Drawing.Point(280, 110);
             this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(67, 17);
+            this.label151.Size = new System.Drawing.Size(61, 17);
             this.label151.TabIndex = 113;
             this.label151.Text = "bbl/tonne";
             // 
@@ -6251,10 +6249,10 @@
             // 
             this.label152.AutoSize = true;
             this.label152.BackColor = System.Drawing.Color.Silver;
-            this.label152.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label152.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label152.Location = new System.Drawing.Point(280, 84);
             this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(51, 17);
+            this.label152.Size = new System.Drawing.Size(46, 17);
             this.label152.TabIndex = 112;
             this.label152.Text = "gal/bbl";
             // 
@@ -6262,10 +6260,10 @@
             // 
             this.label153.AutoSize = true;
             this.label153.BackColor = System.Drawing.Color.Silver;
-            this.label153.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label153.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label153.Location = new System.Drawing.Point(280, 58);
             this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(59, 17);
+            this.label153.Size = new System.Drawing.Size(57, 17);
             this.label153.TabIndex = 111;
             this.label153.Text = "KW/HP";
             // 
@@ -6273,10 +6271,10 @@
             // 
             this.label154.AutoSize = true;
             this.label154.BackColor = System.Drawing.Color.Silver;
-            this.label154.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label154.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label154.Location = new System.Drawing.Point(280, 32);
             this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(187, 17);
+            this.label154.Size = new System.Drawing.Size(197, 17);
             this.label154.TabIndex = 110;
             this.label154.Text = "Constants For Measurement";
             // 
@@ -6284,7 +6282,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(166, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(93, 23);
             this.textBox1.TabIndex = 109;
@@ -6293,10 +6291,10 @@
             // 
             this.label148.AutoSize = true;
             this.label148.BackColor = System.Drawing.Color.Silver;
-            this.label148.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label148.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label148.Location = new System.Drawing.Point(7, 32);
             this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(97, 17);
+            this.label148.Size = new System.Drawing.Size(99, 17);
             this.label148.TabIndex = 108;
             this.label148.Text = "Vessel Type ID";
             // 
@@ -6345,10 +6343,10 @@
             // 
             this.label146.AutoSize = true;
             this.label146.BackColor = System.Drawing.Color.Silver;
-            this.label146.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label146.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label146.Location = new System.Drawing.Point(7, 107);
             this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(124, 17);
+            this.label146.Size = new System.Drawing.Size(123, 17);
             this.label146.TabIndex = 104;
             this.label146.Text = "Total On Board HP";
             // 
@@ -6356,10 +6354,10 @@
             // 
             this.label147.AutoSize = true;
             this.label147.BackColor = System.Drawing.Color.Silver;
-            this.label147.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label147.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label147.Location = new System.Drawing.Point(7, 81);
             this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(109, 17);
+            this.label147.Size = new System.Drawing.Size(111, 17);
             this.label147.TabIndex = 103;
             this.label147.Text = "Single Enging HP";
             // 
@@ -6367,26 +6365,26 @@
             // 
             this.label149.AutoSize = true;
             this.label149.BackColor = System.Drawing.Color.Silver;
-            this.label149.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label149.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label149.Location = new System.Drawing.Point(7, 55);
             this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(124, 17);
+            this.label149.Size = new System.Drawing.Size(122, 17);
             this.label149.TabIndex = 101;
             this.label149.Text = "Number of Engines";
             // 
             // label145
             // 
             this.label145.AutoSize = true;
-            this.label145.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label145.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label145.Location = new System.Drawing.Point(3, 6);
             this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(195, 19);
+            this.label145.Size = new System.Drawing.Size(209, 17);
             this.label145.TabIndex = 34;
             this.label145.Text = "5.1 - Main Engine Variables ";
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(3, 1370);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(654, 45);
@@ -6400,9 +6398,9 @@
             this.panel12.BackColor = System.Drawing.Color.Silver;
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Location = new System.Drawing.Point(6, 26);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(461, 133);
+            this.panel12.Size = new System.Drawing.Size(480, 133);
             this.panel12.TabIndex = 267;
             // 
             // panel13
@@ -6410,7 +6408,7 @@
             this.panel13.BackColor = System.Drawing.Color.Silver;
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Location = new System.Drawing.Point(6, 189);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(266, 124);
             this.panel13.TabIndex = 268;
@@ -6425,20 +6423,20 @@
             this.panel14.Controls.Add(this.textBox3);
             this.panel14.Controls.Add(this.textBox2);
             this.panel14.Location = new System.Drawing.Point(6, 358);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(654, 183);
+            this.panel14.Size = new System.Drawing.Size(649, 183);
             this.panel14.TabIndex = 269;
             // 
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.Silver;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(567, 8);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(68, 17);
+            this.textBox6.Size = new System.Drawing.Size(68, 18);
             this.textBox6.TabIndex = 278;
             this.textBox6.Text = "Mode 5";
             // 
@@ -6446,11 +6444,11 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.Silver;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(479, 8);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(68, 17);
+            this.textBox5.Size = new System.Drawing.Size(68, 18);
             this.textBox5.TabIndex = 277;
             this.textBox5.Text = "Mode 4";
             // 
@@ -6458,11 +6456,11 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.Silver;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(392, 8);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(68, 17);
+            this.textBox4.Size = new System.Drawing.Size(68, 18);
             this.textBox4.TabIndex = 276;
             this.textBox4.Text = "Mode 3";
             // 
@@ -6470,11 +6468,11 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.Silver;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(312, 8);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(68, 17);
+            this.textBox3.Size = new System.Drawing.Size(68, 18);
             this.textBox3.TabIndex = 275;
             this.textBox3.Text = "Mode 2";
             // 
@@ -6482,11 +6480,11 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.Silver;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(242, 8);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(68, 17);
+            this.textBox2.Size = new System.Drawing.Size(68, 18);
             this.textBox2.TabIndex = 274;
             this.textBox2.Text = "Mode 1";
             // 
@@ -6496,7 +6494,7 @@
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.Controls.Add(this.numericUpDown170);
             this.panel15.Location = new System.Drawing.Point(6, 714);
-            this.panel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel15.Margin = new System.Windows.Forms.Padding(2);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(107, 31);
             this.panel15.TabIndex = 270;
@@ -6529,7 +6527,7 @@
             this.panel16.BackColor = System.Drawing.Color.Silver;
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.Location = new System.Drawing.Point(4, 788);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(313, 148);
             this.panel16.TabIndex = 271;
@@ -6562,7 +6560,7 @@
             this.panel17.Controls.Add(this.label193);
             this.panel17.Controls.Add(this.numericUpDown190);
             this.panel17.Location = new System.Drawing.Point(6, 979);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel17.Margin = new System.Windows.Forms.Padding(2);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(614, 164);
             this.panel17.TabIndex = 272;
@@ -6571,10 +6569,10 @@
             // 
             this.label189.AutoSize = true;
             this.label189.BackColor = System.Drawing.Color.Silver;
-            this.label189.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label189.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label189.Location = new System.Drawing.Point(8, 58);
             this.label189.Name = "label189";
-            this.label189.Size = new System.Drawing.Size(113, 17);
+            this.label189.Size = new System.Drawing.Size(115, 17);
             this.label189.TabIndex = 191;
             this.label189.Text = "Low Sulfur Diesel";
             // 
@@ -6582,10 +6580,10 @@
             // 
             this.label190.AutoSize = true;
             this.label190.BackColor = System.Drawing.Color.Silver;
-            this.label190.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label190.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label190.Location = new System.Drawing.Point(8, 32);
             this.label190.Name = "label190";
-            this.label190.Size = new System.Drawing.Size(77, 17);
+            this.label190.Size = new System.Drawing.Size(79, 17);
             this.label190.TabIndex = 190;
             this.label190.Text = "Residual Oil";
             // 
@@ -6593,10 +6591,10 @@
             // 
             this.label188.AutoSize = true;
             this.label188.BackColor = System.Drawing.Color.Silver;
-            this.label188.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label188.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label188.Location = new System.Drawing.Point(8, 84);
             this.label188.Name = "label188";
-            this.label188.Size = new System.Drawing.Size(78, 17);
+            this.label188.Size = new System.Drawing.Size(79, 17);
             this.label188.TabIndex = 192;
             this.label188.Text = "Natural Gas";
             // 
@@ -6604,10 +6602,10 @@
             // 
             this.label187.AutoSize = true;
             this.label187.BackColor = System.Drawing.Color.Silver;
-            this.label187.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label187.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label187.Location = new System.Drawing.Point(8, 109);
             this.label187.Name = "label187";
-            this.label187.Size = new System.Drawing.Size(59, 17);
+            this.label187.Size = new System.Drawing.Size(61, 17);
             this.label187.TabIndex = 197;
             this.label187.Text = "Biodiesel";
             // 
@@ -6615,10 +6613,10 @@
             // 
             this.label186.AutoSize = true;
             this.label186.BackColor = System.Drawing.Color.Silver;
-            this.label186.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label186.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label186.Location = new System.Drawing.Point(8, 135);
             this.label186.Name = "label186";
-            this.label186.Size = new System.Drawing.Size(139, 17);
+            this.label186.Size = new System.Drawing.Size(143, 17);
             this.label186.TabIndex = 199;
             this.label186.Text = "Fischer Tropsch Diesel";
             // 
@@ -6626,10 +6624,10 @@
             // 
             this.label185.AutoSize = true;
             this.label185.BackColor = System.Drawing.Color.Silver;
-            this.label185.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label185.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label185.Location = new System.Drawing.Point(163, 12);
             this.label185.Name = "label185";
-            this.label185.Size = new System.Drawing.Size(123, 17);
+            this.label185.Size = new System.Drawing.Size(121, 17);
             this.label185.TabIndex = 200;
             this.label185.Text = "Engine Efficiency";
             // 
@@ -6787,10 +6785,10 @@
             // 
             this.label192.AutoSize = true;
             this.label192.BackColor = System.Drawing.Color.Silver;
-            this.label192.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label192.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label192.Location = new System.Drawing.Point(296, 12);
             this.label192.Name = "label192";
-            this.label192.Size = new System.Drawing.Size(99, 17);
+            this.label192.Size = new System.Drawing.Size(96, 17);
             this.label192.TabIndex = 206;
             this.label192.Text = "mmbtu in/trip";
             // 
@@ -6862,10 +6860,10 @@
             // 
             this.label193.AutoSize = true;
             this.label193.BackColor = System.Drawing.Color.Silver;
-            this.label193.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label193.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label193.Location = new System.Drawing.Point(405, 11);
             this.label193.Name = "label193";
-            this.label193.Size = new System.Drawing.Size(198, 17);
+            this.label193.Size = new System.Drawing.Size(206, 17);
             this.label193.TabIndex = 212;
             this.label193.Text = "Alternative Fuel Consumption";
             // 
@@ -6896,7 +6894,7 @@
             this.panel18.Controls.Add(this.textBox11);
             this.panel18.Controls.Add(this.textBox9);
             this.panel18.Location = new System.Drawing.Point(4, 1185);
-            this.panel18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(616, 179);
             this.panel18.TabIndex = 273;
@@ -6905,11 +6903,11 @@
             // 
             this.textBox7.BackColor = System.Drawing.Color.Silver;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.Location = new System.Drawing.Point(461, 2);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(68, 17);
+            this.textBox7.Size = new System.Drawing.Size(68, 18);
             this.textBox7.TabIndex = 283;
             this.textBox7.Text = "Mode 5";
             // 
@@ -6917,10 +6915,10 @@
             // 
             this.label206.AutoSize = true;
             this.label206.BackColor = System.Drawing.Color.Silver;
-            this.label206.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label206.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label206.Location = new System.Drawing.Point(533, 2);
             this.label206.Name = "label206";
-            this.label206.Size = new System.Drawing.Size(42, 17);
+            this.label206.Size = new System.Drawing.Size(41, 17);
             this.label206.TabIndex = 265;
             this.label206.Text = "Total";
             // 
@@ -6928,11 +6926,11 @@
             // 
             this.textBox10.BackColor = System.Drawing.Color.Silver;
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox10.Location = new System.Drawing.Point(217, 2);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(68, 17);
+            this.textBox10.Size = new System.Drawing.Size(68, 18);
             this.textBox10.TabIndex = 280;
             this.textBox10.Text = "Mode 2";
             // 
@@ -6940,11 +6938,11 @@
             // 
             this.textBox8.BackColor = System.Drawing.Color.Silver;
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox8.Location = new System.Drawing.Point(383, 2);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(68, 17);
+            this.textBox8.Size = new System.Drawing.Size(68, 18);
             this.textBox8.TabIndex = 282;
             this.textBox8.Text = "Mode 4";
             // 
@@ -6952,11 +6950,11 @@
             // 
             this.textBox11.BackColor = System.Drawing.Color.Silver;
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox11.Location = new System.Drawing.Point(154, 2);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(68, 17);
+            this.textBox11.Size = new System.Drawing.Size(68, 18);
             this.textBox11.TabIndex = 279;
             this.textBox11.Text = "Mode 1";
             // 
@@ -6964,11 +6962,11 @@
             // 
             this.textBox9.BackColor = System.Drawing.Color.Silver;
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(296, 2);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(68, 17);
+            this.textBox9.Size = new System.Drawing.Size(68, 18);
             this.textBox9.TabIndex = 281;
             this.textBox9.Text = "Mode 3";
             // 
@@ -7066,128 +7064,21 @@
             // 
             this.label247.AutoSize = true;
             this.label247.BackColor = System.Drawing.Color.Silver;
-            this.label247.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label247.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label247.Location = new System.Drawing.Point(154, 1041);
             this.label247.Name = "label247";
-            this.label247.Size = new System.Drawing.Size(145, 17);
+            this.label247.Size = new System.Drawing.Size(146, 17);
             this.label247.TabIndex = 316;
             this.label247.Text = "GPH per Aux Engine";
-            // 
-            // numericUpDown258
-            // 
-            this.numericUpDown258.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown258.DecimalPlaces = 2;
-            this.numericUpDown258.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown258.Location = new System.Drawing.Point(304, 154);
-            this.numericUpDown258.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown258.Name = "numericUpDown258";
-            this.numericUpDown258.ReadOnly = true;
-            this.numericUpDown258.Size = new System.Drawing.Size(101, 22);
-            this.numericUpDown258.TabIndex = 315;
-            // 
-            // label245
-            // 
-            this.label245.AutoSize = true;
-            this.label245.BackColor = System.Drawing.Color.Silver;
-            this.label245.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label245.Location = new System.Drawing.Point(301, 7);
-            this.label245.Name = "label245";
-            this.label245.Size = new System.Drawing.Size(104, 17);
-            this.label245.TabIndex = 314;
-            this.label245.Text = "Total (Gallons)";
-            // 
-            // numericUpDown259
-            // 
-            this.numericUpDown259.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown259.DecimalPlaces = 2;
-            this.numericUpDown259.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown259.Location = new System.Drawing.Point(304, 125);
-            this.numericUpDown259.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown259.Name = "numericUpDown259";
-            this.numericUpDown259.ReadOnly = true;
-            this.numericUpDown259.Size = new System.Drawing.Size(101, 22);
-            this.numericUpDown259.TabIndex = 313;
-            // 
-            // numericUpDown260
-            // 
-            this.numericUpDown260.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown260.DecimalPlaces = 2;
-            this.numericUpDown260.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown260.Location = new System.Drawing.Point(304, 99);
-            this.numericUpDown260.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown260.Name = "numericUpDown260";
-            this.numericUpDown260.ReadOnly = true;
-            this.numericUpDown260.Size = new System.Drawing.Size(101, 22);
-            this.numericUpDown260.TabIndex = 312;
-            // 
-            // numericUpDown261
-            // 
-            this.numericUpDown261.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown261.DecimalPlaces = 2;
-            this.numericUpDown261.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown261.Location = new System.Drawing.Point(304, 76);
-            this.numericUpDown261.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown261.Name = "numericUpDown261";
-            this.numericUpDown261.ReadOnly = true;
-            this.numericUpDown261.Size = new System.Drawing.Size(101, 22);
-            this.numericUpDown261.TabIndex = 311;
-            // 
-            // numericUpDown262
-            // 
-            this.numericUpDown262.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown262.DecimalPlaces = 2;
-            this.numericUpDown262.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown262.Location = new System.Drawing.Point(304, 51);
-            this.numericUpDown262.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown262.Name = "numericUpDown262";
-            this.numericUpDown262.ReadOnly = true;
-            this.numericUpDown262.Size = new System.Drawing.Size(101, 22);
-            this.numericUpDown262.TabIndex = 310;
-            // 
-            // numericUpDown263
-            // 
-            this.numericUpDown263.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown263.DecimalPlaces = 2;
-            this.numericUpDown263.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown263.Location = new System.Drawing.Point(304, 25);
-            this.numericUpDown263.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown263.Name = "numericUpDown263";
-            this.numericUpDown263.ReadOnly = true;
-            this.numericUpDown263.Size = new System.Drawing.Size(101, 22);
-            this.numericUpDown263.TabIndex = 309;
             // 
             // label246
             // 
             this.label246.AutoSize = true;
             this.label246.BackColor = System.Drawing.Color.Silver;
-            this.label246.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label246.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label246.Location = new System.Drawing.Point(11, 1061);
             this.label246.Name = "label246";
-            this.label246.Size = new System.Drawing.Size(123, 17);
+            this.label246.Size = new System.Drawing.Size(125, 17);
             this.label246.TabIndex = 308;
             this.label246.Text = "Conventional Diesel";
             // 
@@ -7273,10 +7164,10 @@
             // 
             this.label252.AutoSize = true;
             this.label252.BackColor = System.Drawing.Color.Silver;
-            this.label252.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label252.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label252.Location = new System.Drawing.Point(11, 1188);
             this.label252.Name = "label252";
-            this.label252.Size = new System.Drawing.Size(139, 17);
+            this.label252.Size = new System.Drawing.Size(143, 17);
             this.label252.TabIndex = 272;
             this.label252.Text = "Fischer Tropsch Diesel";
             // 
@@ -7284,10 +7175,10 @@
             // 
             this.label253.AutoSize = true;
             this.label253.BackColor = System.Drawing.Color.Silver;
-            this.label253.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label253.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label253.Location = new System.Drawing.Point(11, 1162);
             this.label253.Name = "label253";
-            this.label253.Size = new System.Drawing.Size(59, 17);
+            this.label253.Size = new System.Drawing.Size(61, 17);
             this.label253.TabIndex = 271;
             this.label253.Text = "Biodiesel";
             // 
@@ -7295,10 +7186,10 @@
             // 
             this.label254.AutoSize = true;
             this.label254.BackColor = System.Drawing.Color.Silver;
-            this.label254.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label254.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label254.Location = new System.Drawing.Point(11, 1137);
             this.label254.Name = "label254";
-            this.label254.Size = new System.Drawing.Size(115, 17);
+            this.label254.Size = new System.Drawing.Size(119, 17);
             this.label254.TabIndex = 270;
             this.label254.Text = "Natural Gas (SCF)";
             // 
@@ -7306,10 +7197,10 @@
             // 
             this.label255.AutoSize = true;
             this.label255.BackColor = System.Drawing.Color.Silver;
-            this.label255.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label255.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label255.Location = new System.Drawing.Point(11, 1111);
             this.label255.Name = "label255";
-            this.label255.Size = new System.Drawing.Size(113, 17);
+            this.label255.Size = new System.Drawing.Size(115, 17);
             this.label255.TabIndex = 269;
             this.label255.Text = "Low Sulfur Diesel";
             // 
@@ -7317,214 +7208,32 @@
             // 
             this.label256.AutoSize = true;
             this.label256.BackColor = System.Drawing.Color.Silver;
-            this.label256.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label256.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label256.Location = new System.Drawing.Point(11, 1085);
             this.label256.Name = "label256";
-            this.label256.Size = new System.Drawing.Size(77, 17);
+            this.label256.Size = new System.Drawing.Size(79, 17);
             this.label256.TabIndex = 268;
             this.label256.Text = "Residual Oil";
             // 
             // label257
             // 
             this.label257.AutoSize = true;
-            this.label257.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label257.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label257.Location = new System.Drawing.Point(0, 1012);
             this.label257.Name = "label257";
-            this.label257.Size = new System.Drawing.Size(586, 19);
+            this.label257.Size = new System.Drawing.Size(622, 17);
             this.label257.TabIndex = 267;
             this.label257.Text = "6.4d - Auxiliary Fuel Consumption (Only needed if using User data)(Gallons Per Ho" +
     "ur)";
-            // 
-            // label236
-            // 
-            this.label236.AutoSize = true;
-            this.label236.BackColor = System.Drawing.Color.Silver;
-            this.label236.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label236.Location = new System.Drawing.Point(421, 9);
-            this.label236.Name = "label236";
-            this.label236.Size = new System.Drawing.Size(228, 17);
-            this.label236.TabIndex = 236;
-            this.label236.Text = "Aux Alternative Fuel Consumption";
-            // 
-            // numericUpDown243
-            // 
-            this.numericUpDown243.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown243.DecimalPlaces = 2;
-            this.numericUpDown243.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown243.Location = new System.Drawing.Point(423, 129);
-            this.numericUpDown243.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown243.Name = "numericUpDown243";
-            this.numericUpDown243.ReadOnly = true;
-            this.numericUpDown243.Size = new System.Drawing.Size(226, 22);
-            this.numericUpDown243.TabIndex = 235;
-            // 
-            // numericUpDown244
-            // 
-            this.numericUpDown244.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown244.DecimalPlaces = 2;
-            this.numericUpDown244.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown244.Location = new System.Drawing.Point(423, 103);
-            this.numericUpDown244.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown244.Name = "numericUpDown244";
-            this.numericUpDown244.ReadOnly = true;
-            this.numericUpDown244.Size = new System.Drawing.Size(226, 22);
-            this.numericUpDown244.TabIndex = 234;
-            // 
-            // numericUpDown245
-            // 
-            this.numericUpDown245.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown245.DecimalPlaces = 2;
-            this.numericUpDown245.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown245.Location = new System.Drawing.Point(423, 78);
-            this.numericUpDown245.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown245.Name = "numericUpDown245";
-            this.numericUpDown245.ReadOnly = true;
-            this.numericUpDown245.Size = new System.Drawing.Size(226, 22);
-            this.numericUpDown245.TabIndex = 233;
-            // 
-            // numericUpDown246
-            // 
-            this.numericUpDown246.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown246.DecimalPlaces = 2;
-            this.numericUpDown246.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown246.Location = new System.Drawing.Point(423, 54);
-            this.numericUpDown246.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown246.Name = "numericUpDown246";
-            this.numericUpDown246.ReadOnly = true;
-            this.numericUpDown246.Size = new System.Drawing.Size(226, 22);
-            this.numericUpDown246.TabIndex = 232;
-            // 
-            // numericUpDown247
-            // 
-            this.numericUpDown247.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown247.DecimalPlaces = 2;
-            this.numericUpDown247.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown247.Location = new System.Drawing.Point(423, 28);
-            this.numericUpDown247.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown247.Name = "numericUpDown247";
-            this.numericUpDown247.ReadOnly = true;
-            this.numericUpDown247.Size = new System.Drawing.Size(226, 22);
-            this.numericUpDown247.TabIndex = 231;
-            // 
-            // label237
-            // 
-            this.label237.AutoSize = true;
-            this.label237.BackColor = System.Drawing.Color.Silver;
-            this.label237.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label237.Location = new System.Drawing.Point(279, 9);
-            this.label237.Name = "label237";
-            this.label237.Size = new System.Drawing.Size(129, 17);
-            this.label237.TabIndex = 230;
-            this.label237.Text = "Aux mmbtu in/trip";
-            // 
-            // numericUpDown248
-            // 
-            this.numericUpDown248.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown248.DecimalPlaces = 2;
-            this.numericUpDown248.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown248.Location = new System.Drawing.Point(282, 129);
-            this.numericUpDown248.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown248.Name = "numericUpDown248";
-            this.numericUpDown248.ReadOnly = true;
-            this.numericUpDown248.Size = new System.Drawing.Size(123, 22);
-            this.numericUpDown248.TabIndex = 229;
-            // 
-            // numericUpDown249
-            // 
-            this.numericUpDown249.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown249.DecimalPlaces = 2;
-            this.numericUpDown249.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown249.Location = new System.Drawing.Point(282, 103);
-            this.numericUpDown249.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown249.Name = "numericUpDown249";
-            this.numericUpDown249.ReadOnly = true;
-            this.numericUpDown249.Size = new System.Drawing.Size(123, 22);
-            this.numericUpDown249.TabIndex = 228;
-            // 
-            // numericUpDown250
-            // 
-            this.numericUpDown250.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown250.DecimalPlaces = 2;
-            this.numericUpDown250.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown250.Location = new System.Drawing.Point(282, 78);
-            this.numericUpDown250.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown250.Name = "numericUpDown250";
-            this.numericUpDown250.ReadOnly = true;
-            this.numericUpDown250.Size = new System.Drawing.Size(123, 22);
-            this.numericUpDown250.TabIndex = 227;
-            // 
-            // numericUpDown251
-            // 
-            this.numericUpDown251.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown251.DecimalPlaces = 2;
-            this.numericUpDown251.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown251.Location = new System.Drawing.Point(282, 54);
-            this.numericUpDown251.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown251.Name = "numericUpDown251";
-            this.numericUpDown251.ReadOnly = true;
-            this.numericUpDown251.Size = new System.Drawing.Size(123, 22);
-            this.numericUpDown251.TabIndex = 226;
-            // 
-            // numericUpDown252
-            // 
-            this.numericUpDown252.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.numericUpDown252.DecimalPlaces = 2;
-            this.numericUpDown252.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown252.Location = new System.Drawing.Point(282, 28);
-            this.numericUpDown252.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown252.Name = "numericUpDown252";
-            this.numericUpDown252.ReadOnly = true;
-            this.numericUpDown252.Size = new System.Drawing.Size(123, 22);
-            this.numericUpDown252.TabIndex = 225;
             // 
             // label238
             // 
             this.label238.AutoSize = true;
             this.label238.BackColor = System.Drawing.Color.Silver;
-            this.label238.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label238.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label238.Location = new System.Drawing.Point(154, 835);
             this.label238.Name = "label238";
-            this.label238.Size = new System.Drawing.Size(123, 17);
+            this.label238.Size = new System.Drawing.Size(121, 17);
             this.label238.TabIndex = 224;
             this.label238.Text = "Engine Efficiency";
             // 
@@ -7532,10 +7241,10 @@
             // 
             this.label239.AutoSize = true;
             this.label239.BackColor = System.Drawing.Color.Silver;
-            this.label239.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label239.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label239.Location = new System.Drawing.Point(11, 957);
             this.label239.Name = "label239";
-            this.label239.Size = new System.Drawing.Size(139, 17);
+            this.label239.Size = new System.Drawing.Size(143, 17);
             this.label239.TabIndex = 223;
             this.label239.Text = "Fischer Tropsch Diesel";
             // 
@@ -7559,10 +7268,10 @@
             // 
             this.label240.AutoSize = true;
             this.label240.BackColor = System.Drawing.Color.Silver;
-            this.label240.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label240.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label240.Location = new System.Drawing.Point(11, 931);
             this.label240.Name = "label240";
-            this.label240.Size = new System.Drawing.Size(59, 17);
+            this.label240.Size = new System.Drawing.Size(61, 17);
             this.label240.TabIndex = 221;
             this.label240.Text = "Biodiesel";
             // 
@@ -7634,10 +7343,10 @@
             // 
             this.label241.AutoSize = true;
             this.label241.BackColor = System.Drawing.Color.Silver;
-            this.label241.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label241.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label241.Location = new System.Drawing.Point(11, 906);
             this.label241.Name = "label241";
-            this.label241.Size = new System.Drawing.Size(78, 17);
+            this.label241.Size = new System.Drawing.Size(79, 17);
             this.label241.TabIndex = 216;
             this.label241.Text = "Natural Gas";
             // 
@@ -7645,10 +7354,10 @@
             // 
             this.label242.AutoSize = true;
             this.label242.BackColor = System.Drawing.Color.Silver;
-            this.label242.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label242.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label242.Location = new System.Drawing.Point(11, 880);
             this.label242.Name = "label242";
-            this.label242.Size = new System.Drawing.Size(113, 17);
+            this.label242.Size = new System.Drawing.Size(115, 17);
             this.label242.TabIndex = 215;
             this.label242.Text = "Low Sulfur Diesel";
             // 
@@ -7656,32 +7365,32 @@
             // 
             this.label243.AutoSize = true;
             this.label243.BackColor = System.Drawing.Color.Silver;
-            this.label243.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label243.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label243.Location = new System.Drawing.Point(11, 854);
             this.label243.Name = "label243";
-            this.label243.Size = new System.Drawing.Size(77, 17);
+            this.label243.Size = new System.Drawing.Size(79, 17);
             this.label243.TabIndex = 214;
             this.label243.Text = "Residual Oil";
             // 
             // label244
             // 
             this.label244.AutoSize = true;
-            this.label244.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label244.Location = new System.Drawing.Point(0, 804);
+            this.label244.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label244.Location = new System.Drawing.Point(0, 789);
             this.label244.Name = "label244";
-            this.label244.Size = new System.Drawing.Size(657, 19);
+            this.label244.Size = new System.Drawing.Size(460, 34);
             this.label244.TabIndex = 213;
-            this.label244.Text = "6.4c - Auxiliary Calculation of Fuel Use Using Alternative Fuels (Conventional Di" +
-    "esel as Baseline)";
+            this.label244.Text = "6.4c - Auxiliary Calculation of Fuel Use Using Alternative Fuels\r\n (Conventional " +
+    "Diesel as Baseline)";
             // 
             // label230
             // 
             this.label230.AutoSize = true;
             this.label230.BackColor = System.Drawing.Color.Silver;
-            this.label230.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label230.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label230.Location = new System.Drawing.Point(11, 748);
             this.label230.Name = "label230";
-            this.label230.Size = new System.Drawing.Size(70, 17);
+            this.label230.Size = new System.Drawing.Size(65, 17);
             this.label230.TabIndex = 199;
             this.label230.Text = "gallon/trip";
             // 
@@ -7705,10 +7414,10 @@
             // 
             this.label231.AutoSize = true;
             this.label231.BackColor = System.Drawing.Color.Silver;
-            this.label231.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label231.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label231.Location = new System.Drawing.Point(11, 722);
             this.label231.Name = "label231";
-            this.label231.Size = new System.Drawing.Size(93, 17);
+            this.label231.Size = new System.Drawing.Size(85, 17);
             this.label231.TabIndex = 197;
             this.label231.Text = "mmbtu in/trip";
             // 
@@ -7788,10 +7497,10 @@
             // 
             this.label232.AutoSize = true;
             this.label232.BackColor = System.Drawing.Color.Silver;
-            this.label232.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label232.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label232.Location = new System.Drawing.Point(11, 696);
             this.label232.Name = "label232";
-            this.label232.Size = new System.Drawing.Size(102, 17);
+            this.label232.Size = new System.Drawing.Size(93, 17);
             this.label232.TabIndex = 192;
             this.label232.Text = "mmbtu out/trip";
             // 
@@ -7799,10 +7508,10 @@
             // 
             this.label233.AutoSize = true;
             this.label233.BackColor = System.Drawing.Color.Silver;
-            this.label233.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label233.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label233.Location = new System.Drawing.Point(11, 670);
             this.label233.Name = "label233";
-            this.label233.Size = new System.Drawing.Size(90, 17);
+            this.label233.Size = new System.Drawing.Size(85, 17);
             this.label233.TabIndex = 191;
             this.label233.Text = "KWh out/trip";
             // 
@@ -7810,33 +7519,33 @@
             // 
             this.label234.AutoSize = true;
             this.label234.BackColor = System.Drawing.Color.Silver;
-            this.label234.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label234.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label234.Location = new System.Drawing.Point(11, 644);
             this.label234.Name = "label234";
-            this.label234.Size = new System.Drawing.Size(137, 17);
+            this.label234.Size = new System.Drawing.Size(141, 17);
             this.label234.TabIndex = 190;
             this.label234.Text = "Aux Engine Efficiency";
             // 
             // label235
             // 
             this.label235.AutoSize = true;
-            this.label235.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label235.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label235.Location = new System.Drawing.Point(11, 604);
             this.label235.Name = "label235";
-            this.label235.Size = new System.Drawing.Size(533, 19);
+            this.label235.Size = new System.Drawing.Size(572, 17);
             this.label235.TabIndex = 189;
             this.label235.Text = "6.4b - Calculation of Auxiliary Fuel Using Conventional Diesel as Baseline Fuel";
             // 
             // label225
             // 
             this.label225.AutoSize = true;
-            this.label225.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label225.Location = new System.Drawing.Point(11, 448);
+            this.label225.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label225.Location = new System.Drawing.Point(11, 446);
             this.label225.Name = "label225";
-            this.label225.Size = new System.Drawing.Size(787, 19);
+            this.label225.Size = new System.Drawing.Size(600, 34);
             this.label225.TabIndex = 181;
-            this.label225.Text = "6.4a - Aux Selection of Model Calculated or User Input Fuel Conspumption Values (" +
-    "Conventional Diesel as Baseline)";
+            this.label225.Text = "6.4a - Aux Selection of Model Calculated or User Input Fuel Conspumption Values \r" +
+    "\n(Conventional Diesel as Baseline)";
             // 
             // numericUpDown237
             // 
@@ -7864,30 +7573,30 @@
             // label226
             // 
             this.label226.AutoSize = true;
-            this.label226.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label226.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label226.Location = new System.Drawing.Point(11, 521);
             this.label226.Name = "label226";
-            this.label226.Size = new System.Drawing.Size(239, 17);
+            this.label226.Size = new System.Drawing.Size(241, 17);
             this.label226.TabIndex = 179;
             this.label226.Text = "2 -> Simulate Using User Entered GPH";
             // 
             // label227
             // 
             this.label227.AutoSize = true;
-            this.label227.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label227.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label227.Location = new System.Drawing.Point(11, 505);
             this.label227.Name = "label227";
-            this.label227.Size = new System.Drawing.Size(452, 17);
+            this.label227.Size = new System.Drawing.Size(456, 17);
             this.label227.TabIndex = 178;
             this.label227.Text = "1 -> Simulate Using GPH Derived From User Entered Engine Specifications";
             // 
             // label228
             // 
             this.label228.AutoSize = true;
-            this.label228.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label228.Location = new System.Drawing.Point(11, 480);
+            this.label228.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label228.Location = new System.Drawing.Point(11, 484);
             this.label228.Name = "label228";
-            this.label228.Size = new System.Drawing.Size(237, 17);
+            this.label228.Size = new System.Drawing.Size(221, 17);
             this.label228.TabIndex = 177;
             this.label228.Text = "Model Calculated VS User Input";
             // 
@@ -7895,10 +7604,10 @@
             // 
             this.label224.AutoSize = true;
             this.label224.BackColor = System.Drawing.Color.Silver;
-            this.label224.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label224.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label224.Location = new System.Drawing.Point(11, 408);
             this.label224.Name = "label224";
-            this.label224.Size = new System.Drawing.Size(248, 17);
+            this.label224.Size = new System.Drawing.Size(252, 17);
             this.label224.TabIndex = 141;
             this.label224.Text = "Total Auxiliary Energy Production (KWh)";
             // 
@@ -7922,10 +7631,10 @@
             // 
             this.label223.AutoSize = true;
             this.label223.BackColor = System.Drawing.Color.Silver;
-            this.label223.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label223.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label223.Location = new System.Drawing.Point(11, 384);
             this.label223.Name = "label223";
-            this.label223.Size = new System.Drawing.Size(188, 17);
+            this.label223.Size = new System.Drawing.Size(193, 17);
             this.label223.TabIndex = 139;
             this.label223.Text = "Active HP per Auxiliary Engine";
             // 
@@ -7949,10 +7658,10 @@
             // 
             this.label222.AutoSize = true;
             this.label222.BackColor = System.Drawing.Color.Silver;
-            this.label222.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label222.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label222.Location = new System.Drawing.Point(11, 359);
             this.label222.Name = "label222";
-            this.label222.Size = new System.Drawing.Size(192, 17);
+            this.label222.Size = new System.Drawing.Size(196, 17);
             this.label222.TabIndex = 137;
             this.label222.Text = "HP Load Factor (Single Engine)";
             // 
@@ -7974,10 +7683,10 @@
             // 
             this.label221.AutoSize = true;
             this.label221.BackColor = System.Drawing.Color.Silver;
-            this.label221.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label221.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label221.Location = new System.Drawing.Point(11, 335);
             this.label221.Name = "label221";
-            this.label221.Size = new System.Drawing.Size(118, 17);
+            this.label221.Size = new System.Drawing.Size(122, 17);
             this.label221.TabIndex = 135;
             this.label221.Text = "Time active (hours)";
             // 
@@ -8001,10 +7710,10 @@
             // 
             this.label220.AutoSize = true;
             this.label220.BackColor = System.Drawing.Color.Silver;
-            this.label220.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label220.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label220.Location = new System.Drawing.Point(11, 310);
             this.label220.Name = "label220";
-            this.label220.Size = new System.Drawing.Size(337, 17);
+            this.label220.Size = new System.Drawing.Size(344, 17);
             this.label220.TabIndex = 133;
             this.label220.Text = "Percent of Trip Auxillary Engine is Active Based on Time";
             // 
@@ -8025,10 +7734,10 @@
             // label219
             // 
             this.label219.AutoSize = true;
-            this.label219.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label219.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label219.Location = new System.Drawing.Point(7, 280);
             this.label219.Name = "label219";
-            this.label219.Size = new System.Drawing.Size(530, 19);
+            this.label219.Size = new System.Drawing.Size(570, 17);
             this.label219.TabIndex = 131;
             this.label219.Text = "6.3 - Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)";
             // 
@@ -8036,10 +7745,10 @@
             // 
             this.label218.AutoSize = true;
             this.label218.BackColor = System.Drawing.Color.Silver;
-            this.label218.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label218.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label218.Location = new System.Drawing.Point(7, 225);
             this.label218.Name = "label218";
-            this.label218.Size = new System.Drawing.Size(242, 17);
+            this.label218.Size = new System.Drawing.Size(244, 17);
             this.label218.TabIndex = 130;
             this.label218.Text = "Total OnBoard Aux Engine HP (In Use)";
             // 
@@ -8047,10 +7756,10 @@
             // 
             this.label217.AutoSize = true;
             this.label217.BackColor = System.Drawing.Color.Silver;
-            this.label217.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label217.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label217.Location = new System.Drawing.Point(7, 201);
             this.label217.Name = "label217";
-            this.label217.Size = new System.Drawing.Size(233, 17);
+            this.label217.Size = new System.Drawing.Size(242, 17);
             this.label217.TabIndex = 129;
             this.label217.Text = "Auxillary Engine Rated HP (per engine)";
             // 
@@ -8058,10 +7767,10 @@
             // 
             this.label216.AutoSize = true;
             this.label216.BackColor = System.Drawing.Color.Silver;
-            this.label216.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label216.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label216.Location = new System.Drawing.Point(7, 176);
             this.label216.Name = "label216";
-            this.label216.Size = new System.Drawing.Size(214, 17);
+            this.label216.Size = new System.Drawing.Size(216, 17);
             this.label216.TabIndex = 128;
             this.label216.Text = "Number of Auxillary Engines in use";
             // 
@@ -8069,10 +7778,10 @@
             // 
             this.label215.AutoSize = true;
             this.label215.BackColor = System.Drawing.Color.Silver;
-            this.label215.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label215.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label215.Location = new System.Drawing.Point(7, 150);
             this.label215.Name = "label215";
-            this.label215.Size = new System.Drawing.Size(237, 17);
+            this.label215.Size = new System.Drawing.Size(236, 17);
             this.label215.TabIndex = 127;
             this.label215.Text = "Number of OnBoard Auxillary Engines";
             // 
@@ -8133,10 +7842,10 @@
             // label214
             // 
             this.label214.AutoSize = true;
-            this.label214.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label214.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label214.Location = new System.Drawing.Point(0, 122);
             this.label214.Name = "label214";
-            this.label214.Size = new System.Drawing.Size(220, 19);
+            this.label214.Size = new System.Drawing.Size(235, 17);
             this.label214.TabIndex = 122;
             this.label214.Text = "6.2 - Auxiliary Engine Variables";
             // 
@@ -8166,17 +7875,17 @@
             // label212
             // 
             this.label212.AutoSize = true;
-            this.label212.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label212.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label212.Location = new System.Drawing.Point(158, 70);
             this.label212.Name = "label212";
-            this.label212.Size = new System.Drawing.Size(169, 17);
+            this.label212.Size = new System.Drawing.Size(171, 17);
             this.label212.TabIndex = 120;
             this.label212.Text = "6 -> Fischer Tropsch Diesel";
             // 
             // label213
             // 
             this.label213.AutoSize = true;
-            this.label213.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label213.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label213.Location = new System.Drawing.Point(158, 54);
             this.label213.Name = "label213";
             this.label213.Size = new System.Drawing.Size(89, 17);
@@ -8186,17 +7895,17 @@
             // label210
             // 
             this.label210.AutoSize = true;
-            this.label210.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label210.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label210.Location = new System.Drawing.Point(158, 38);
             this.label210.Name = "label210";
-            this.label210.Size = new System.Drawing.Size(108, 17);
+            this.label210.Size = new System.Drawing.Size(107, 17);
             this.label210.TabIndex = 118;
             this.label210.Text = "4 -> Natural Gas";
             // 
             // label211
             // 
             this.label211.AutoSize = true;
-            this.label211.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label211.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label211.Location = new System.Drawing.Point(7, 69);
             this.label211.Name = "label211";
             this.label211.Size = new System.Drawing.Size(143, 17);
@@ -8206,7 +7915,7 @@
             // label208
             // 
             this.label208.AutoSize = true;
-            this.label208.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label208.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label208.Location = new System.Drawing.Point(7, 54);
             this.label208.Name = "label208";
             this.label208.Size = new System.Drawing.Size(107, 17);
@@ -8216,7 +7925,7 @@
             // label209
             // 
             this.label209.AutoSize = true;
-            this.label209.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label209.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label209.Location = new System.Drawing.Point(7, 37);
             this.label209.Name = "label209";
             this.label209.Size = new System.Drawing.Size(153, 17);
@@ -8226,16 +7935,16 @@
             // label207
             // 
             this.label207.AutoSize = true;
-            this.label207.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label207.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label207.Location = new System.Drawing.Point(0, 18);
             this.label207.Name = "label207";
-            this.label207.Size = new System.Drawing.Size(288, 19);
+            this.label207.Size = new System.Drawing.Size(308, 17);
             this.label207.TabIndex = 34;
             this.label207.Text = "6.1 - Auxiliary Engine Fuel Type Selection";
             // 
             // button6
             // 
-            this.button6.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(3, 1232);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(656, 45);
@@ -8249,7 +7958,7 @@
             this.panel19.BackColor = System.Drawing.Color.Silver;
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Location = new System.Drawing.Point(336, 63);
-            this.panel19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel19.Margin = new System.Windows.Forms.Padding(2);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(98, 27);
             this.panel19.TabIndex = 317;
@@ -8259,7 +7968,7 @@
             this.panel20.BackColor = System.Drawing.Color.Silver;
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Location = new System.Drawing.Point(3, 143);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(360, 109);
             this.panel20.TabIndex = 318;
@@ -8269,7 +7978,7 @@
             this.panel21.BackColor = System.Drawing.Color.Silver;
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel21.Location = new System.Drawing.Point(7, 303);
-            this.panel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel21.Margin = new System.Windows.Forms.Padding(2);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(460, 132);
             this.panel21.TabIndex = 319;
@@ -8279,7 +7988,7 @@
             this.panel22.BackColor = System.Drawing.Color.Silver;
             this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel22.Location = new System.Drawing.Point(11, 542);
-            this.panel22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel22.Margin = new System.Windows.Forms.Padding(2);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(97, 24);
             this.panel22.TabIndex = 320;
@@ -8290,7 +7999,7 @@
             this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel23.Controls.Add(this.label229);
             this.panel23.Location = new System.Drawing.Point(3, 622);
-            this.panel23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(340, 154);
             this.panel23.TabIndex = 321;
@@ -8299,10 +8008,10 @@
             // 
             this.label229.AutoSize = true;
             this.label229.BackColor = System.Drawing.Color.Silver;
-            this.label229.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label229.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label229.Location = new System.Drawing.Point(146, 1);
             this.label229.Name = "label229";
-            this.label229.Size = new System.Drawing.Size(182, 17);
+            this.label229.Size = new System.Drawing.Size(189, 17);
             this.label229.TabIndex = 200;
             this.label229.Text = "Baseline Fuel Consumption";
             // 
@@ -8323,10 +8032,192 @@
             this.panel24.Controls.Add(this.numericUpDown249);
             this.panel24.Controls.Add(this.numericUpDown248);
             this.panel24.Location = new System.Drawing.Point(3, 825);
-            this.panel24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel24.Margin = new System.Windows.Forms.Padding(2);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(654, 162);
             this.panel24.TabIndex = 322;
+            // 
+            // label236
+            // 
+            this.label236.AutoSize = true;
+            this.label236.BackColor = System.Drawing.Color.Silver;
+            this.label236.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label236.Location = new System.Drawing.Point(421, 9);
+            this.label236.Name = "label236";
+            this.label236.Size = new System.Drawing.Size(182, 17);
+            this.label236.TabIndex = 236;
+            this.label236.Text = "Aux Alt Fuel Consumption";
+            // 
+            // numericUpDown247
+            // 
+            this.numericUpDown247.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown247.DecimalPlaces = 2;
+            this.numericUpDown247.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown247.Location = new System.Drawing.Point(423, 28);
+            this.numericUpDown247.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown247.Name = "numericUpDown247";
+            this.numericUpDown247.ReadOnly = true;
+            this.numericUpDown247.Size = new System.Drawing.Size(226, 22);
+            this.numericUpDown247.TabIndex = 231;
+            // 
+            // numericUpDown246
+            // 
+            this.numericUpDown246.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown246.DecimalPlaces = 2;
+            this.numericUpDown246.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown246.Location = new System.Drawing.Point(423, 54);
+            this.numericUpDown246.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown246.Name = "numericUpDown246";
+            this.numericUpDown246.ReadOnly = true;
+            this.numericUpDown246.Size = new System.Drawing.Size(226, 22);
+            this.numericUpDown246.TabIndex = 232;
+            // 
+            // numericUpDown245
+            // 
+            this.numericUpDown245.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown245.DecimalPlaces = 2;
+            this.numericUpDown245.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown245.Location = new System.Drawing.Point(423, 78);
+            this.numericUpDown245.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown245.Name = "numericUpDown245";
+            this.numericUpDown245.ReadOnly = true;
+            this.numericUpDown245.Size = new System.Drawing.Size(226, 22);
+            this.numericUpDown245.TabIndex = 233;
+            // 
+            // numericUpDown244
+            // 
+            this.numericUpDown244.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown244.DecimalPlaces = 2;
+            this.numericUpDown244.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown244.Location = new System.Drawing.Point(423, 103);
+            this.numericUpDown244.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown244.Name = "numericUpDown244";
+            this.numericUpDown244.ReadOnly = true;
+            this.numericUpDown244.Size = new System.Drawing.Size(226, 22);
+            this.numericUpDown244.TabIndex = 234;
+            // 
+            // numericUpDown243
+            // 
+            this.numericUpDown243.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown243.DecimalPlaces = 2;
+            this.numericUpDown243.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown243.Location = new System.Drawing.Point(423, 129);
+            this.numericUpDown243.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown243.Name = "numericUpDown243";
+            this.numericUpDown243.ReadOnly = true;
+            this.numericUpDown243.Size = new System.Drawing.Size(226, 22);
+            this.numericUpDown243.TabIndex = 235;
+            // 
+            // label237
+            // 
+            this.label237.AutoSize = true;
+            this.label237.BackColor = System.Drawing.Color.Silver;
+            this.label237.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label237.Location = new System.Drawing.Point(279, 9);
+            this.label237.Name = "label237";
+            this.label237.Size = new System.Drawing.Size(127, 17);
+            this.label237.TabIndex = 230;
+            this.label237.Text = "Aux mmbtu in/trip";
+            // 
+            // numericUpDown252
+            // 
+            this.numericUpDown252.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown252.DecimalPlaces = 2;
+            this.numericUpDown252.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown252.Location = new System.Drawing.Point(282, 28);
+            this.numericUpDown252.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown252.Name = "numericUpDown252";
+            this.numericUpDown252.ReadOnly = true;
+            this.numericUpDown252.Size = new System.Drawing.Size(123, 22);
+            this.numericUpDown252.TabIndex = 225;
+            // 
+            // numericUpDown251
+            // 
+            this.numericUpDown251.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown251.DecimalPlaces = 2;
+            this.numericUpDown251.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown251.Location = new System.Drawing.Point(282, 54);
+            this.numericUpDown251.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown251.Name = "numericUpDown251";
+            this.numericUpDown251.ReadOnly = true;
+            this.numericUpDown251.Size = new System.Drawing.Size(123, 22);
+            this.numericUpDown251.TabIndex = 226;
+            // 
+            // numericUpDown250
+            // 
+            this.numericUpDown250.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown250.DecimalPlaces = 2;
+            this.numericUpDown250.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown250.Location = new System.Drawing.Point(282, 78);
+            this.numericUpDown250.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown250.Name = "numericUpDown250";
+            this.numericUpDown250.ReadOnly = true;
+            this.numericUpDown250.Size = new System.Drawing.Size(123, 22);
+            this.numericUpDown250.TabIndex = 227;
+            // 
+            // numericUpDown249
+            // 
+            this.numericUpDown249.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown249.DecimalPlaces = 2;
+            this.numericUpDown249.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown249.Location = new System.Drawing.Point(282, 103);
+            this.numericUpDown249.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown249.Name = "numericUpDown249";
+            this.numericUpDown249.ReadOnly = true;
+            this.numericUpDown249.Size = new System.Drawing.Size(123, 22);
+            this.numericUpDown249.TabIndex = 228;
+            // 
+            // numericUpDown248
+            // 
+            this.numericUpDown248.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown248.DecimalPlaces = 2;
+            this.numericUpDown248.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown248.Location = new System.Drawing.Point(282, 129);
+            this.numericUpDown248.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown248.Name = "numericUpDown248";
+            this.numericUpDown248.ReadOnly = true;
+            this.numericUpDown248.Size = new System.Drawing.Size(123, 22);
+            this.numericUpDown248.TabIndex = 229;
             // 
             // panel25
             // 
@@ -8340,10 +8231,117 @@
             this.panel25.Controls.Add(this.numericUpDown260);
             this.panel25.Controls.Add(this.numericUpDown261);
             this.panel25.Location = new System.Drawing.Point(3, 1033);
-            this.panel25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel25.Margin = new System.Windows.Forms.Padding(2);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(418, 182);
             this.panel25.TabIndex = 323;
+            // 
+            // label245
+            // 
+            this.label245.AutoSize = true;
+            this.label245.BackColor = System.Drawing.Color.Silver;
+            this.label245.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label245.Location = new System.Drawing.Point(301, 7);
+            this.label245.Name = "label245";
+            this.label245.Size = new System.Drawing.Size(104, 17);
+            this.label245.TabIndex = 314;
+            this.label245.Text = "Total (Gallons)";
+            // 
+            // numericUpDown258
+            // 
+            this.numericUpDown258.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown258.DecimalPlaces = 2;
+            this.numericUpDown258.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown258.Location = new System.Drawing.Point(304, 154);
+            this.numericUpDown258.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown258.Name = "numericUpDown258";
+            this.numericUpDown258.ReadOnly = true;
+            this.numericUpDown258.Size = new System.Drawing.Size(101, 22);
+            this.numericUpDown258.TabIndex = 315;
+            // 
+            // numericUpDown262
+            // 
+            this.numericUpDown262.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown262.DecimalPlaces = 2;
+            this.numericUpDown262.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown262.Location = new System.Drawing.Point(304, 51);
+            this.numericUpDown262.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown262.Name = "numericUpDown262";
+            this.numericUpDown262.ReadOnly = true;
+            this.numericUpDown262.Size = new System.Drawing.Size(101, 22);
+            this.numericUpDown262.TabIndex = 310;
+            // 
+            // numericUpDown259
+            // 
+            this.numericUpDown259.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown259.DecimalPlaces = 2;
+            this.numericUpDown259.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown259.Location = new System.Drawing.Point(304, 125);
+            this.numericUpDown259.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown259.Name = "numericUpDown259";
+            this.numericUpDown259.ReadOnly = true;
+            this.numericUpDown259.Size = new System.Drawing.Size(101, 22);
+            this.numericUpDown259.TabIndex = 313;
+            // 
+            // numericUpDown263
+            // 
+            this.numericUpDown263.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown263.DecimalPlaces = 2;
+            this.numericUpDown263.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown263.Location = new System.Drawing.Point(304, 25);
+            this.numericUpDown263.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown263.Name = "numericUpDown263";
+            this.numericUpDown263.ReadOnly = true;
+            this.numericUpDown263.Size = new System.Drawing.Size(101, 22);
+            this.numericUpDown263.TabIndex = 309;
+            // 
+            // numericUpDown260
+            // 
+            this.numericUpDown260.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown260.DecimalPlaces = 2;
+            this.numericUpDown260.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown260.Location = new System.Drawing.Point(304, 99);
+            this.numericUpDown260.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown260.Name = "numericUpDown260";
+            this.numericUpDown260.ReadOnly = true;
+            this.numericUpDown260.Size = new System.Drawing.Size(101, 22);
+            this.numericUpDown260.TabIndex = 312;
+            // 
+            // numericUpDown261
+            // 
+            this.numericUpDown261.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.numericUpDown261.DecimalPlaces = 2;
+            this.numericUpDown261.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown261.Location = new System.Drawing.Point(304, 76);
+            this.numericUpDown261.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown261.Name = "numericUpDown261";
+            this.numericUpDown261.ReadOnly = true;
+            this.numericUpDown261.Size = new System.Drawing.Size(101, 22);
+            this.numericUpDown261.TabIndex = 311;
             // 
             // tabPage7
             // 
@@ -8371,7 +8369,7 @@
             // label140
             // 
             this.label140.AutoSize = true;
-            this.label140.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label140.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label140.Location = new System.Drawing.Point(3, 175);
             this.label140.Name = "label140";
             this.label140.Size = new System.Drawing.Size(143, 17);
@@ -8381,7 +8379,7 @@
             // label142
             // 
             this.label142.AutoSize = true;
-            this.label142.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label142.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label142.Location = new System.Drawing.Point(3, 158);
             this.label142.Name = "label142";
             this.label142.Size = new System.Drawing.Size(153, 17);
@@ -8415,10 +8413,10 @@
             // 
             this.label141.AutoSize = true;
             this.label141.BackColor = System.Drawing.Color.Silver;
-            this.label141.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label141.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label141.Location = new System.Drawing.Point(9, 227);
             this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(157, 17);
+            this.label141.Size = new System.Drawing.Size(161, 17);
             this.label141.TabIndex = 398;
             this.label141.Text = "Diesel for Biodiesel Blend";
             // 
@@ -8449,37 +8447,28 @@
             // 
             this.label143.AutoSize = true;
             this.label143.BackColor = System.Drawing.Color.Silver;
-            this.label143.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label143.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label143.Location = new System.Drawing.Point(8, 202);
             this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(201, 17);
+            this.label143.Size = new System.Drawing.Size(205, 17);
             this.label143.TabIndex = 395;
             this.label143.Text = "Diesel For Fischer Tropsch Blend";
             // 
             // label144
             // 
             this.label144.AutoSize = true;
-            this.label144.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label144.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label144.Location = new System.Drawing.Point(1, 138);
             this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(323, 19);
+            this.label144.Size = new System.Drawing.Size(348, 17);
             this.label144.TabIndex = 394;
             this.label144.Text = "7.2 - Type of Diesel For Alternative Fuel Blends";
-            // 
-            // numericUpDown114
-            // 
-            this.numericUpDown114.DecimalPlaces = 2;
-            this.numericUpDown114.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown114.Location = new System.Drawing.Point(306, 5);
-            this.numericUpDown114.Name = "numericUpDown114";
-            this.numericUpDown114.Size = new System.Drawing.Size(106, 22);
-            this.numericUpDown114.TabIndex = 389;
             // 
             // label137
             // 
             this.label137.AutoSize = true;
             this.label137.BackColor = System.Drawing.Color.Silver;
-            this.label137.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label137.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label137.Location = new System.Drawing.Point(7, 35);
             this.label137.Name = "label137";
             this.label137.Size = new System.Drawing.Size(283, 17);
@@ -8489,17 +8478,17 @@
             // label135
             // 
             this.label135.AutoSize = true;
-            this.label135.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label135.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label135.Location = new System.Drawing.Point(3, 5);
             this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(580, 19);
+            this.label135.Size = new System.Drawing.Size(623, 17);
             this.label135.TabIndex = 35;
             this.label135.Text = "7.1 - Share of an Alternative Fuel in an Alternative Fuel Blend Volumetric Percen" +
     "tage\r\n";
             // 
             // button7
             // 
-            this.button7.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(6, 562);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(664, 45);
@@ -8518,7 +8507,7 @@
             this.panel26.Controls.Add(this.numericUpDown115);
             this.panel26.Controls.Add(this.numericUpDown114);
             this.panel26.Location = new System.Drawing.Point(4, 25);
-            this.panel26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel26.Margin = new System.Windows.Forms.Padding(2);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(457, 60);
             this.panel26.TabIndex = 402;
@@ -8527,10 +8516,10 @@
             // 
             this.label136.AutoSize = true;
             this.label136.BackColor = System.Drawing.Color.Silver;
-            this.label136.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label136.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label136.Location = new System.Drawing.Point(418, 11);
             this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(20, 17);
+            this.label136.Size = new System.Drawing.Size(16, 18);
             this.label136.TabIndex = 390;
             this.label136.Text = "%";
             // 
@@ -8538,10 +8527,10 @@
             // 
             this.label138.AutoSize = true;
             this.label138.BackColor = System.Drawing.Color.Silver;
-            this.label138.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label138.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label138.Location = new System.Drawing.Point(418, 33);
             this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(20, 17);
+            this.label138.Size = new System.Drawing.Size(16, 18);
             this.label138.TabIndex = 393;
             this.label138.Text = "%";
             // 
@@ -8549,10 +8538,10 @@
             // 
             this.label139.AutoSize = true;
             this.label139.BackColor = System.Drawing.Color.Silver;
-            this.label139.Font = new System.Drawing.Font("Garamond", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label139.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label139.Location = new System.Drawing.Point(2, 33);
             this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(300, 17);
+            this.label139.Size = new System.Drawing.Size(303, 17);
             this.label139.TabIndex = 391;
             this.label139.Text = "Volumetric Content of Biodiesel in Biodiesel Blend";
             // 
@@ -8565,12 +8554,21 @@
             this.numericUpDown115.Size = new System.Drawing.Size(106, 22);
             this.numericUpDown115.TabIndex = 392;
             // 
+            // numericUpDown114
+            // 
+            this.numericUpDown114.DecimalPlaces = 2;
+            this.numericUpDown114.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown114.Location = new System.Drawing.Point(306, 5);
+            this.numericUpDown114.Name = "numericUpDown114";
+            this.numericUpDown114.Size = new System.Drawing.Size(106, 22);
+            this.numericUpDown114.TabIndex = 389;
+            // 
             // panel27
             // 
             this.panel27.BackColor = System.Drawing.Color.Silver;
             this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel27.Location = new System.Drawing.Point(4, 193);
-            this.panel27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel27.Margin = new System.Windows.Forms.Padding(2);
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(301, 60);
             this.panel27.TabIndex = 403;
@@ -8715,13 +8713,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
@@ -8741,10 +8739,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown100)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown104)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown108)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown96)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown96)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown221)).EndInit();
@@ -8850,28 +8848,12 @@
             this.panel18.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown258)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown259)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown262)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown268)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown289)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown290)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown291)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown292)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown293)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown243)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown244)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown245)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown246)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown247)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown248)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown249)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown250)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown251)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown252)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown253)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown254)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown255)).EndInit();
@@ -8897,16 +8879,32 @@
             this.panel23.PerformLayout();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown247)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown246)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown245)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown244)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown243)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown252)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown251)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown250)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown249)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown248)).EndInit();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown258)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown262)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown259)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown116)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown120)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).EndInit();
             this.panel26.ResumeLayout(false);
             this.panel26.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown115)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown114)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

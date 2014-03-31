@@ -867,7 +867,6 @@ namespace WindowsApplication1
         #endregion
         public Update u;
         public Fuel_Specs GVE;
-        public ReductionsGraph bg;
         public GREETFormattedResults gfr;
         public TEAMS()
         {
@@ -1981,8 +1980,6 @@ namespace WindowsApplication1
             if (runSimActive == true)
             {
                 runSimulationToolStripMenuItem.BackColor = Color.Green;
-                bg = new ReductionsGraph(.245, .173, .035, .045, .0645, "Percent Change in Total Energy");
-                bg.Show();
                 gfr = new GREETFormattedResults(this);
                 gfr.Show();
             }
@@ -2982,6 +2979,11 @@ namespace WindowsApplication1
         {
             u.Close();
             GVE.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

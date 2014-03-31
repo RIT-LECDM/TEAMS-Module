@@ -52,12 +52,6 @@
     <Compile Include="CopyrightPage.Designer.cs">
       <DependentUpon>CopyrightPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReductionsGraph.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReductionsGraph.Designer.cs">
-      <DependentUpon>ReductionsGraph.cs</DependentUpon>
-    </Compile>
     <Compile Include="GREETFormattedResults.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,9 +108,6 @@
   <ItemGroup>
     <EmbeddedResource Include="CopyrightPage.resx">
       <DependentUpon>CopyrightPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReductionsGraph.resx">
-      <DependentUpon>ReductionsGraph.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GREETFormattedResults.resx">
       <DependentUpon>GREETFormattedResults.cs</DependentUpon>

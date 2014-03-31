@@ -15,6 +15,13 @@ namespace TEAMSModule
     {
         string fuelUsed;
         public TEAMS te;
+        // All values formatted as **percentages**, with 1.0 being 100%
+        public double RG_residual_oil = .245;
+        public double RG_low_sulfur = .173;
+        public double RG_biodiesel = .035;
+        public double RG_natural_gas = .045;
+        public double RG_fischer_tropsch = .0645;
+        public string RG_title = "Percent Change in Total Energy";
         //Actual resource arrays/sets will be filled using calculations from GREET
 
         public GREETFormattedResults(TEAMS t)
@@ -22,8 +29,33 @@ namespace TEAMSModule
             //We will use this teams object to pull the GREET values into the TEAMS class, and then reference them here so they can be displayed
             te = t;
             InitializeComponent();
+            example_total_energy_consumption();
         }
 
+        #region Reduction Graph
+        private void example_total_energy_consumption()
+        {
+            // Set containing all resources
+            double[] resources = { RG_residual_oil, RG_low_sulfur, RG_biodiesel, RG_natural_gas, RG_fischer_tropsch };
+
+            // Title to display on the graph.
+            Generate_Graph(resources, reduction_graph, RG_title);
+        }
+        private void Generate_Graph(double[] resources, Chart graph, string title)
+        {
+            // The series that you are working with
+            string series = "percent_change";
+
+            // Sets and displays the title for the graph.
+            graph.Titles[0].Text = title;
+
+            // Adds value to the specified graph (reduction_graph)
+            for (int r = 0; r < resources.Length; r++)
+            {
+                graph.Series[series].Points.AddY(resources[r]);
+            }
+        }
+        #endregion
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (e.Node.Text == "Conventional Diesel")
