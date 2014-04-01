@@ -16,27 +16,42 @@ namespace TEAMSModule
         string fuelUsed;
         public TEAMS te;
         // All values formatted as **percentages**, with 1.0 being 100%
-        public double RG_residual_oil = .245;
-        public double RG_low_sulfur = .173;
-        public double RG_biodiesel = .035;
-        public double RG_natural_gas = .045;
-        public double RG_fischer_tropsch = .0645;
-        public string RG_title = "Percent Change in Total Energy";
-        //Actual resource arrays/sets will be filled using calculations from GREET
-
+        public double RG_residual_oil;
+        public double RG_low_sulfur;
+        public double RG_biodiesel;
+        public double RG_natural_gas;
+        public double RG_fischer_tropsch;
+        public string RG_title;
+        public double RG_DieselTE;
         public GREETFormattedResults(TEAMS t)
         {
             //We will use this teams object to pull the GREET values into the TEAMS class, and then reference them here so they can be displayed
             te = t;
             InitializeComponent();
+            setValues();
             example_total_energy_consumption();
         }
-
+        public void setValues()
+        {
+            RG_DieselTE = (te.MMBTUinperTrip * te.CD_Total_TE);
+            RG_residual_oil = (te.MMBTUinperTrip * te.RO_Total_TE);
+            RG_residual_oil = ((RG_residual_oil - RG_DieselTE) / RG_DieselTE);
+            RG_low_sulfur = (te.MMBTUinperTrip * te.LSD_Total_TE);
+            RG_low_sulfur = ((RG_low_sulfur - RG_DieselTE) / RG_DieselTE);
+            RG_biodiesel = ((te.MMBTUinperTrip * te.BD_Total_TE) + (-2 * ((te.MMBTUinperTrip * te.BD_WTP_TE) - (te.MMBTUinperTrip * te.BD_VO_TE))));
+            RG_biodiesel = ((RG_biodiesel - RG_DieselTE) / RG_DieselTE);
+            RG_natural_gas = (te.MMBTUinperTrip * te.NG_Total_TE);
+            RG_natural_gas = ((RG_natural_gas - RG_DieselTE) / RG_DieselTE);
+            RG_fischer_tropsch = (te.MMBTUinperTrip * te.FTD_Total_TE);
+            RG_fischer_tropsch = ((RG_fischer_tropsch - RG_DieselTE) / RG_DieselTE);
+            RG_title = "Percent Change in Total Energy";
+            treeView1.Select();
+        }
         #region Reduction Graph
         private void example_total_energy_consumption()
         {
             // Set containing all resources
-            double[] resources = { RG_residual_oil, RG_low_sulfur, RG_biodiesel, RG_natural_gas, RG_fischer_tropsch };
+            double[] resources = { RG_fischer_tropsch, RG_natural_gas, RG_biodiesel, RG_low_sulfur, RG_residual_oil };
 
             // Title to display on the graph.
             Generate_Graph(resources, reduction_graph, RG_title);
