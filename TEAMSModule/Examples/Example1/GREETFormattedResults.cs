@@ -8,611 +8,323 @@ using System.Text;
 using System.Windows.Forms;
 using TEAMSModule;
 using WindowsApplication1;
+using PlugInsInterfaces.DataTypes.Resource;
+using PlugInsInterfaces.DataTypes;
+using PlugInsInterfaces.DataTypes.Pathway;
+using PlugInsInterfaces.DataTypes.Mix;
+using PlugInsInterfaces.ResultTypes;
+using PlugInsInterfaces.DataTypes.Technology;
 using System.Windows.Forms.DataVisualization.Charting;
 namespace TEAMSModule
 {
     public partial class GREETFormattedResults : Form
     {
-        string fuelUsed;
+        public string fuelUsed = "Conventional Diesel";
         public TEAMS te;
-        // All values formatted as **percentages**, with 1.0 being 100%
-        public double RG_residual_oil;
-        public double RG_low_sulfur;
-        public double RG_biodiesel;
-        public double RG_natural_gas;
-        public double RG_fischer_tropsch;
-        public string RG_title;
-        public double RG_DieselTE;
+
+        #region All Needed Results Variables
+        public double TE_WTP = 101;
+        public double TE_VO = 101;
+        public double TE_Total = 101;
+        public double FF_Total = 101;
+        public double CF_Total = 101;
+        public double NGF_Total = 101;
+        public double PF_Total = 101;
+        public double VOC_WTP = 101;
+        public double VOC_VO = 101;
+        public double VOC_Total = 101;
+        public double CO_WTP = 101;
+        public double CO_VO = 101;
+        public double CO_Total = 101;
+        public double NOx_WTP = 101;
+        public double NOx_VO = 101;
+        public double NOx_Total = 101;
+        public double PM10_WTP = 101;
+        public double PM10_VO = 101;
+        public double PM10_Total = 101;
+        public double PM25_WTP = 101;
+        public double PM25_VO = 101;
+        public double PM25_Total = 101;
+        public double SOx_WTP = 101;
+        public double SOx_VO = 101;
+        public double SOx_Total = 101;
+        public double CH4_WTP = 101;
+        public double CH4_VO = 101;
+        public double CH4_Total = 101;
+        public double CO2_WTP = 101;
+        public double CO2_VO = 101;
+        public double CO2_Total = 101;
+        public double N2O_WTP = 101;
+        public double N2O_VO = 101;
+        public double N2O_Total = 101;
+        #endregion
         public GREETFormattedResults(TEAMS t)
         {
             //We will use this teams object to pull the GREET values into the TEAMS class, and then reference them here so they can be displayed
             te = t;
             InitializeComponent();
             setValues();
-            example_total_energy_consumption();
         }
         public void setValues()
         {
-            RG_DieselTE = (te.MMBTUinperTrip * te.CD_Total_TE);
-            RG_residual_oil = (te.MMBTUinperTrip * te.RO_Total_TE);
-            RG_residual_oil = ((RG_residual_oil - RG_DieselTE) / RG_DieselTE);
-            RG_low_sulfur = (te.MMBTUinperTrip * te.LSD_Total_TE);
-            RG_low_sulfur = ((RG_low_sulfur - RG_DieselTE) / RG_DieselTE);
-            RG_biodiesel = ((te.MMBTUinperTrip * te.BD_Total_TE) + (-2 * ((te.MMBTUinperTrip * te.BD_WTP_TE) - (te.MMBTUinperTrip * te.BD_VO_TE))));
-            RG_biodiesel = ((RG_biodiesel - RG_DieselTE) / RG_DieselTE);
-            RG_natural_gas = (te.MMBTUinperTrip * te.NG_Total_TE);
-            RG_natural_gas = ((RG_natural_gas - RG_DieselTE) / RG_DieselTE);
-            RG_fischer_tropsch = (te.MMBTUinperTrip * te.FTD_Total_TE);
-            RG_fischer_tropsch = ((RG_fischer_tropsch - RG_DieselTE) / RG_DieselTE);
-            RG_title = "Percent Change in Total Energy";
             treeView1.Select();
+            BuildingTreeView1();
         }
-        #region Reduction Graph
-        private void example_total_energy_consumption()
-        {
-            // Set containing all resources
-            double[] resources = { RG_fischer_tropsch, RG_natural_gas, RG_biodiesel, RG_low_sulfur, RG_residual_oil };
 
-            // Title to display on the graph.
-            Generate_Graph(resources, reduction_graph, RG_title);
-        }
-        private void Generate_Graph(double[] resources, Chart graph, string title)
-        {
-            // The series that you are working with
-            string series = "percent_change";
-
-            // Sets and displays the title for the graph.
-            graph.Titles[0].Text = title;
-
-            // Adds value to the specified graph (reduction_graph)
-            for (int r = 0; r < resources.Length; r++)
-            {
-                graph.Series[series].Points.AddY(resources[r]);
-            }
-        }
-        #endregion
+        #region treeView1 After Select function
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            if (e.Node.Text == "Conventional Diesel")
+            Object tag = this.treeView1.SelectedNode.Tag;
+            if (tag is IPathway)
             {
-                /* 
+                IGDataDictionary<int, IResource> resources = ResultsAccess.controler.CurrentProject.Data.Resources;
+                IGDataDictionary<int, IPathway> pathways = ResultsAccess.controler.CurrentProject.Data.Pathways;
+
+                IPathway path = tag as IPathway;
+                foreach (IResource resource in resources.AllValues.Where(item => item.Id == path.MainOutputResourceID))
+                {
+                    fuelUsed = resource.Name;
+                }
+                    TE_WTP = 101;
+                    TE_VO = 101;
+                    TE_Total = 101;
+
+                    FF_Total = 101;
+                    CF_Total = 101;
+                    NGF_Total = 101;
+                    PF_Total = 101;
+
+                    VOC_WTP = 101;
+                    VOC_VO = 101;
+                    VOC_Total = 101;
+
+                    CO_WTP = 101;
+                    CO_VO = 101;
+                    CO_Total = 101;
+
+                    NOx_WTP = 101;
+                    NOx_VO = 101;
+                    NOx_Total = 101;
+
+                    PM10_WTP = 101;
+                    PM10_VO = 101;
+                    PM10_Total = 101;
+
+                    PM25_WTP = 101;
+                    PM25_VO = 101;
+                    PM25_Total = 101;
+
+                    SOx_WTP = 101;
+                    SOx_VO = 101;
+                    SOx_Total = 101;
+
+                    CH4_WTP = 101;
+                    CH4_VO = 101;
+                    CH4_Total = 101;
+
+                    CO2_WTP = 101;
+                    CO2_VO = 101;
+                    CO2_Total = 101;
+
+                    N2O_WTP = 101;
+                    N2O_VO = 101;
+                    N2O_Total = 101;
+            }
+
+            setLabels();
+        }
+        #endregion
+
+        #region Setting Labels, and Generating new Graph
+        public void setLabels()
+    {
+                 /* 
                  * Column 1 -- Well to Pump
                  */
                 // Total Energy
-                label24.Text = (te.MMBTUinperTrip * te.CD_WTP_TE).ToString("#.##") + " mmbtu/trip";
+                label24.Text = (TE_WTP).ToString("#.##") + " mmbtu/trip";
 
                 /***************
                  * EMISSIONS
                  ***************/
 
-                label30.Text = (te.CD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // VOC
-                label31.Text = (te.CD_WTP_CO * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO
-                label32.Text = (te.CD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // NOx
-                label33.Text = (te.CD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM10
-                label34.Text = (te.CD_WTP_PM25 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM2.5
-                label35.Text = (te.CD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // SOx
-                label36.Text = (te.CD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CH4
-                label37.Text = (te.CD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2
-                label38.Text = (te.CD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // N2O
-                label41.Text = (te.CD_WTP_PM25_CO2Biogenic * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2Biogenic
+                label30.Text = (VOC_WTP).ToString("#.##") + " g/trip";   // VOC
+                label31.Text = (CO_WTP).ToString("#.##") + " g/trip";  // CO
+                label32.Text = (NOx_WTP).ToString("#.##") + " g/trip";   // NOx
+                label33.Text = (PM10_WTP).ToString("#.##") + " g/trip";   // PM10
+                label34.Text = (PM25_WTP).ToString("#.##") + " g/trip";   // PM2.5
+                label35.Text = (SOx_WTP).ToString("#.##") + " g/trip";  // SOx
+                label36.Text = (CH4_WTP).ToString("#.##") + " g/trip";  // CH4
+                label37.Text = (CO2_WTP).ToString("#.##") + " g/trip";  // CO2
+                label38.Text = (N2O_WTP).ToString("#.##") + " g/trip";  // N2O
 
                 /*
                  * Column 2 -- Vessel Operation
                  */
 
-                label42.Text = (te.MMBTUinperTrip * te.CD_VO_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
+                label42.Text = (TE_VO).ToString("#.##") + " mmbtu/trip";  // Total Energy
 
                 /***************
                  * EMISSIONS
                  ***************/
 
-                label48.Text = (te.CD_VOC_EF *te.MMBTUinperTrip).ToString();   // VOC
-                label49.Text = (te.CD_CO_EF * te.MMBTUinperTrip).ToString();   // CO
-                label50.Text = (te.CD_NOx_EF * te.MMBTUinperTrip).ToString();   // NOx
-                label51.Text = (te.CD_PM10_EF * te.MMBTUinperTrip).ToString();   // PM10
-                label52.Text = "PM2.5";  // PM2.5
-                label53.Text = (te.CD_SOx_EF * te.MMBTUinperTrip).ToString();   // SOx
-                label54.Text = (te.CD_CH4_EF * te.MMBTUinperTrip).ToString();   // CH4
-                label55.Text = (te.CD_CO2_EF * te.MMBTUinperTrip).ToString();   // CO2
-                label56.Text = (te.CD_N2O_EF * te.MMBTUinperTrip).ToString();   // N2O
-                label59.Text = "CO2 Biogenic";   // CO2Biogenic
+                label48.Text = (VOC_VO).ToString();   // VOC
+                label49.Text = (CO_VO).ToString();   // CO
+                label50.Text = (NOx_VO).ToString();   // NOx
+                label51.Text = (PM10_VO).ToString();   // PM10
+                label52.Text = (PM25_VO).ToString();   // PM2.5
+                label53.Text = (SOx_VO).ToString();   // SOx
+                label54.Text = (CH4_VO).ToString();   // CH4
+                label55.Text = (CO2_VO).ToString();   // CO2
+                label56.Text = (N2O_VO).ToString();   // N2O
 
                 /*
                  * Column 3 -- Total
                  */
 
-                label60.Text = (te.MMBTUinperTrip * te.CD_Total_TE).ToString("#.##") + " mmbtu/trip";   // Total Energy
-                label61.Text = (te.MMBTUinperTrip * te.CD_Total_FF).ToString("#.##") + " mmbtu/trip";   // Fossil Fuel
-                label62.Text = (te.MMBTUinperTrip * te.CD_Total_CF).ToString("#.##") + " mmbtu/trip";   // Coal Fuel
-                label63.Text = (te.MMBTUinperTrip * te.CD_Total_NG).ToString("#.##") + " mmbtu/trip";   // Natural Gas Fuel
-                label64.Text = (te.MMBTUinperTrip * te.CD_Total_PF).ToString("#.##") + " mmbtu/trip";   // Petroleum Fuel
+                label60.Text = (TE_Total).ToString("#.##") + " mmbtu/trip";   // Total Energy
+                label61.Text = (FF_Total).ToString("#.##") + " mmbtu/trip";   // Fossil Fuel
+                label62.Text = (CF_Total).ToString("#.##") + " mmbtu/trip";   // Coal Fuel
+                label63.Text = (NGF_Total).ToString("#.##") + " mmbtu/trip";   // Natural Gas Fuel
+                label64.Text = (PF_Total).ToString("#.##") + " mmbtu/trip";   // Petroleum Fuel
 
                 /***************
                  * EMISSIONS
                  ***************/
 
-                label66.Text = ((te.CD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip) + (te.CD_VOC_EF * te.MMBTUinperTrip)).ToString();   // VOC
-                label67.Text = ((te.CD_WTP_CO * 1000000000000 * te.MMBTUinperTrip) + (te.CD_CO_EF * te.MMBTUinperTrip)).ToString();   // CO
-                label68.Text = ((te.CD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip) + (te.CD_NOx_EF * te.MMBTUinperTrip)).ToString();   // NOx
-                label69.Text = ((te.CD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip) + (te.CD_PM10_EF * te.MMBTUinperTrip)).ToString();   // PM10
-                label70.Text = "PM2.5";  // PM2.5
-                label71.Text = ((te.CD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip) + (te.CD_SOx_EF * te.MMBTUinperTrip)).ToString();   // SOx
-                label72.Text = ((te.CD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip) + (te.CD_CH4_EF * te.MMBTUinperTrip)).ToString();   // CH4
-                label73.Text = ((te.CD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip) + (te.CD_CO2_EF * te.MMBTUinperTrip)).ToString();   // CO2
-                label74.Text = ((te.CD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip) + (te.CD_N2O_EF * te.MMBTUinperTrip)).ToString();   // N2O
-                label77.Text = "CO2 biogenic";   // CO2Biogenic
+                label66.Text = (VOC_Total).ToString();   // VOC
+                label67.Text = (CO_Total).ToString();   // CO
+                label68.Text = (NOx_Total).ToString();   // NOx
+                label69.Text = (PM10_Total).ToString();   // PM10
+                label70.Text = (PM25_Total).ToString();   // PM2.5
+                label71.Text = (SOx_Total).ToString();   // SOx
+                label72.Text = (CH4_Total).ToString();   // CH4
+                label73.Text = (CO2_Total).ToString();   // CO2
+                label74.Text = (N2O_Total).ToString();   // N2O
 
                 //Title
-                label1.Text = "Conventional Diesel";
+                label1.Text = fuelUsed;
 
                 //Setting the stacked bar chart information
-                fuelUsed = "Conventional Diesel";
-                double[] total_energy = { (te.MMBTUinperTrip * te.CD_WTP_TE), (te.MMBTUinperTrip * te.CD_VO_TE) }; //Resource 0
+                double[] total_energy = { (TE_WTP), (TE_VO) }; //Resource 0
                 double[] fossil_fuels = { 10, 20 }; //Resource 1
                 double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { (te.CD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.CD_CO2_EF * te.MMBTUinperTrip)};          //Resource 3
-                double[] ch4 = { (te.CD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.CD_CH4_EF * te.MMBTUinperTrip)};          //Resource 4
-                double[] n2o = { (te.CD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.CD_N2O_EF * te.MMBTUinperTrip)};          //Resource 5
+                double[] co2 = { (CO2_WTP), (CO2_VO) };          //Resource 3
+                double[] ch4 = { (CH4_WTP), (CH4_VO) };          //Resource 4
+                double[] n2o = { (N2O_WTP), (N2O_VO) };          //Resource 5
                 double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { (te.CD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.CD_VOC_EF *te.MMBTUinperTrip)};          //Resource 7
-                double[] co = { (te.CD_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.CD_CO_EF * te.MMBTUinperTrip) };           //Resource 8
-                double[] nox = { (te.CD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.CD_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
-                double[] pm10 = { (te.CD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.CD_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
-                double[] sox = { (te.CD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.CD_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
+                double[] voc = { (VOC_WTP), (VOC_VO) };          //Resource 7
+                double[] co = { (CO_WTP), (CO_VO) };           //Resource 8
+                double[] nox = { (NOx_WTP), (NOx_VO) };          //Resource 9
+                double[] pm10 = { (PM10_WTP), (PM10_VO) };         //Resource 10
+                double[] sox = { (SOx_WTP), (SOx_VO) };          //Resource 11
                 double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
                 //Generate the graph using the resources set and seriesArray.
                 Generate_Graph(resources, stacked_graph);
-            }
-            else if (e.Node.Text == "Residual Oil")
+    }
+        #endregion
+        #region TreeView 1 Setup
+        public void BuildingTreeView1()
+        {
+            treeView1.Nodes.Clear();
+            IGDataDictionary<int, IResource> resources = ResultsAccess.controler.CurrentProject.Data.Resources;
+            IGDataDictionary<int, IPathway> pathways = ResultsAccess.controler.CurrentProject.Data.Pathways;
+            IGDataDictionary<int, IMix> mixes = ResultsAccess.controler.CurrentProject.Data.Mixes;
+            //Adds pathways and mixes to the list so the user can select one
+            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 27))
             {
-                /*
-                 * Column 1 -- Well to Pump
-                 */
+                TreeNode resourceTreeNode = new TreeNode(resource.Name);
+                resourceTreeNode.Tag = resource;
 
-                label24.Text = (te.MMBTUinperTrip * te.RO_WTP_TE).ToString("#.##") + " mmbtu/trip"; // Total Energy
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label30.Text = (te.RO_WTP_VOC * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // VOC
-                label31.Text = (te.RO_WTP_CO * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO
-                label32.Text = (te.RO_WTP_NOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // NOx
-                label33.Text = (te.RO_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM10
-                label34.Text = (te.RO_WTP_PM25 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM2.5
-                label35.Text = (te.RO_WTP_SOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // SOx
-                label36.Text = (te.RO_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CH4
-                label37.Text = (te.RO_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2
-                label38.Text = (te.RO_WTP_N2O * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // N2O
-                label41.Text = (te.RO_WTP_PM25_CO2Biogenic * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2Biogenic
-
-                /*
-                 * Column 2 -- Vessel Operation
-                 */
-
-                label42.Text = (te.MMBTUinperTrip * te.RO_VO_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label48.Text = (te.RO_VOC_EF * te.MMBTUinperTrip).ToString();   // VOC
-                label49.Text = (te.RO_CO_EF * te.MMBTUinperTrip).ToString();   // CO
-                label50.Text = (te.RO_NOx_EF * te.MMBTUinperTrip).ToString();   // NOx
-                label51.Text = (te.RO_PM10_EF * te.MMBTUinperTrip).ToString();   // PM10
-                label52.Text = "PM2.5";  // PM2.5
-                label53.Text = (te.RO_SOx_EF * te.MMBTUinperTrip).ToString();   // SOx
-                label54.Text = (te.RO_CH4_EF * te.MMBTUinperTrip).ToString();   // CH4
-                label55.Text = (te.RO_CO2_EF * te.MMBTUinperTrip).ToString();   // CO2
-                label56.Text = (te.RO_N2O_EF * te.MMBTUinperTrip).ToString();   // N2O
-                label59.Text = "CO2 Biogenic";   // CO2Biogenic
-
-                /*
-                 * Column 3 -- Total
-                 */
-
-                label60.Text = (te.MMBTUinperTrip * te.RO_Total_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
-                label61.Text = (te.MMBTUinperTrip * te.RO_Total_FF).ToString("#.##") + " mmbtu/trip";  // Fossil Fuel
-                label62.Text = (te.MMBTUinperTrip * te.RO_Total_CF).ToString("#.##") + " mmbtu/trip";  // Coal Fuel
-                label63.Text = (te.MMBTUinperTrip * te.RO_Total_NG).ToString("#.##") + " mmbtu/trip";  // Natural Gas Fuel
-                label64.Text = (te.MMBTUinperTrip * te.RO_Total_PF).ToString("#.##") + " mmbtu/trip";  // Petroleum Fuel
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label66.Text = ((te.RO_WTP_VOC * 1000000000000 * te.MMBTUinperTrip) + (te.RO_VOC_EF * te.MMBTUinperTrip)).ToString();   // VOC
-                label67.Text = ((te.RO_WTP_CO * 1000000000000 * te.MMBTUinperTrip) + (te.RO_CO_EF * te.MMBTUinperTrip)).ToString();   // CO
-                label68.Text = ((te.RO_WTP_NOX * 1000000000000 * te.MMBTUinperTrip) + (te.RO_NOx_EF * te.MMBTUinperTrip)).ToString();   // NOx
-                label69.Text = ((te.RO_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip) + (te.RO_PM10_EF * te.MMBTUinperTrip)).ToString();   // PM10
-                label70.Text = "PM2.5";  // PM2.5
-                label71.Text = ((te.RO_WTP_SOX * 1000000000000 * te.MMBTUinperTrip) + (te.RO_SOx_EF * te.MMBTUinperTrip)).ToString();   // SOx
-                label72.Text = ((te.RO_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip) + (te.RO_CH4_EF * te.MMBTUinperTrip)).ToString();   // CH4
-                label73.Text = ((te.RO_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip) + (te.RO_CO2_EF * te.MMBTUinperTrip)).ToString();   // CO2
-                label74.Text = ((te.RO_WTP_N2O * 1000000000000 * te.MMBTUinperTrip) + (te.RO_N2O_EF * te.MMBTUinperTrip)).ToString();   // N2O
-                label77.Text = "CO2 biogenic";   // CO2Biogenic
-
-                //Title
-                label1.Text = "Residual Oil";
-
-                //Setting the stacked bar chart information
-                fuelUsed = "Residual Oil";
-                double[] total_energy = { (te.MMBTUinperTrip * te.RO_WTP_TE), (te.MMBTUinperTrip * te.RO_VO_TE) }; //Resource 0
-                double[] fossil_fuels = { 10, 20 }; //Resource 1
-                double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { (te.RO_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.RO_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
-                double[] ch4 = { (te.RO_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.RO_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
-                double[] n2o = { (te.RO_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.RO_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
-                double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { (te.RO_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.RO_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
-                double[] co = { (te.RO_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.RO_CO_EF * te.MMBTUinperTrip) };           //Resource 8
-                double[] nox = { (te.RO_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.RO_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
-                double[] pm10 = { (te.RO_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.RO_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
-                double[] sox = { (te.RO_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.RO_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
-                double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
-                //Generate the graph using the resources set and seriesArray.
-                Generate_Graph(resources, stacked_graph);
+                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
+                {
+                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    pathwayNode.Tag = pathway;
+                    resourceTreeNode.Nodes.Add(pathwayNode);
+                }
+                if (resourceTreeNode.Nodes.Count > 0)
+                    this.treeView1.Nodes.Add(resourceTreeNode);
             }
-            else if (e.Node.Text == "Low Sulfur Diesel")
+
+            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 33))
             {
-                /*
-                 * Column 1 -- Well to Pump
-                 */
+                TreeNode resourceTreeNode = new TreeNode(resource.Name);
+                resourceTreeNode.Tag = resource;
 
-                label24.Text = (te.MMBTUinperTrip * te.LSD_WTP_TE).ToString("#.##") + " mmbtu/trip";    // Total Energy
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label30.Text = (te.LSD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // VOC
-                label31.Text = (te.LSD_WTP_CO * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO
-                label32.Text = (te.LSD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // NOx
-                label33.Text = (te.LSD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM10
-                label34.Text = (te.LSD_WTP_PM25 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM2.5
-                label35.Text = (te.LSD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // SOx
-                label36.Text = (te.LSD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CH4
-                label37.Text = (te.LSD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2
-                label38.Text = (te.LSD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // N2O
-                label41.Text = (te.LSD_WTP_PM25_CO2Biogenic * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2Biogenic
-
-                /*
-                 * Column 2 -- Vessel Operation
-                 */
-
-                label42.Text = (te.MMBTUinperTrip * te.LSD_VO_TE).ToString("#.##") + " mmbtu/trip"; // Total Energy
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label48.Text = (te.LSD_VOC_EF * te.MMBTUinperTrip).ToString();   // VOC
-                label49.Text = (te.LSD_CO_EF * te.MMBTUinperTrip).ToString();   // CO
-                label50.Text = (te.LSD_NOx_EF * te.MMBTUinperTrip).ToString();   // NOx
-                label51.Text = (te.LSD_PM10_EF * te.MMBTUinperTrip).ToString();   // PM10
-                label52.Text = "PM2.5";  // PM2.5
-                label53.Text = (te.LSD_SOx_EF * te.MMBTUinperTrip).ToString();   // SOx
-                label54.Text = (te.LSD_CH4_EF * te.MMBTUinperTrip).ToString();   // CH4
-                label55.Text = (te.LSD_CO2_EF * te.MMBTUinperTrip).ToString();   // CO2
-                label56.Text = (te.LSD_N2O_EF * te.MMBTUinperTrip).ToString();   // N2O
-                label59.Text = "CO2 Biogenic";   // CO2Biogenic
-
-                /*
-                 * Column 3 -- Total
-                 */
-
-                label60.Text = (te.MMBTUinperTrip * te.LSD_Total_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
-                label61.Text = (te.MMBTUinperTrip * te.LSD_Total_FF).ToString("#.##") + " mmbtu/trip";  // Fossil Fuel
-                label62.Text = (te.MMBTUinperTrip * te.LSD_Total_CF).ToString("#.##") + " mmbtu/trip";  // Coal Fuel
-                label63.Text = (te.MMBTUinperTrip * te.LSD_Total_NG).ToString("#.##") + " mmbtu/trip";  // Natural Gas Fuel
-                label64.Text = (te.MMBTUinperTrip * te.LSD_Total_PF).ToString("#.##") + " mmbtu/trip";  // Petroleum Fuel
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label66.Text = ((te.LSD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip) + (te.LSD_VOC_EF * te.MMBTUinperTrip)).ToString();   // VOC
-                label67.Text = ((te.LSD_WTP_CO * 1000000000000 * te.MMBTUinperTrip) + (te.LSD_CO_EF * te.MMBTUinperTrip)).ToString();   // CO
-                label68.Text = ((te.LSD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip) + (te.LSD_NOx_EF * te.MMBTUinperTrip)).ToString();   // NOx
-                label69.Text = ((te.LSD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip) + (te.LSD_PM10_EF * te.MMBTUinperTrip)).ToString();   // PM10
-                label70.Text = "PM2.5";  // PM2.5
-                label71.Text = ((te.LSD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip) + (te.LSD_SOx_EF * te.MMBTUinperTrip)).ToString();   // SOx
-                label72.Text = ((te.LSD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip) + (te.LSD_CH4_EF * te.MMBTUinperTrip)).ToString();   // CH4
-                label73.Text = ((te.LSD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip) + (te.LSD_CO2_EF * te.MMBTUinperTrip)).ToString();   // CO2
-                label74.Text = ((te.LSD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip) + (te.LSD_N2O_EF * te.MMBTUinperTrip)).ToString();   // N2O
-                label77.Text = "CO2 biogenic";   // CO2Biogenic
-
-                //Title
-                label1.Text = "Low Sulfur Diesel";
-
-                //Setting the stacked bar chart information
-                fuelUsed = "Low Sulfur Diesel";
-                double[] total_energy = { (te.MMBTUinperTrip * te.LSD_WTP_TE), (te.MMBTUinperTrip * te.LSD_VO_TE) }; //Resource 0
-                double[] fossil_fuels = { 10, 20 }; //Resource 1
-                double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { (te.LSD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.LSD_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
-                double[] ch4 = { (te.LSD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.LSD_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
-                double[] n2o = { (te.LSD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.LSD_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
-                double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { (te.LSD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.LSD_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
-                double[] co = { (te.LSD_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.LSD_CO_EF * te.MMBTUinperTrip) };           //Resource 8
-                double[] nox = { (te.LSD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.LSD_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
-                double[] pm10 = { (te.LSD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.LSD_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
-                double[] sox = { (te.LSD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.LSD_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
-                double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
-                //Generate the graph using the resources set and seriesArray.
-                Generate_Graph(resources, stacked_graph);
+                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
+                {
+                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    pathwayNode.Tag = pathway;
+                    resourceTreeNode.Nodes.Add(pathwayNode);
+                }
+                if (resourceTreeNode.Nodes.Count > 0)
+                    this.treeView1.Nodes.Add(resourceTreeNode);
             }
-            else if (e.Node.Text == "Natural Gas")
+
+            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 30))
             {
-                /*
-                 * Column 1 -- Well to Pump
-                 */
+                TreeNode resourceTreeNode = new TreeNode(resource.Name);
+                resourceTreeNode.Tag = resource;
 
-                label24.Text = (te.MMBTUinperTrip * te.NG_WTP_TE).ToString("#.##") + " mmbtu/trip"; // Total energy
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label30.Text = (te.NG_WTP_VOC * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // VOC
-                label31.Text = (te.NG_WTP_CO * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO
-                label32.Text = (te.NG_WTP_NOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // NOx
-                label33.Text = (te.NG_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM10
-                label34.Text = (te.NG_WTP_PM25 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM2.5
-                label35.Text = (te.NG_WTP_SOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // SOx
-                label36.Text = (te.NG_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CH4
-                label37.Text = (te.NG_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2
-                label38.Text = (te.NG_WTP_N2O * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // N2O
-                label41.Text = (te.NG_WTP_PM25_CO2Biogenic * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2Biogenic
-
-                /*
-                 * Column 2 -- Vessel Operation
-                 */
-
-                label42.Text = (te.MMBTUinperTrip * te.NG_VO_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label48.Text = (te.NG_VOC_EF * te.MMBTUinperTrip).ToString();   // VOC
-                label49.Text = (te.NG_CO_EF * te.MMBTUinperTrip).ToString();   // CO
-                label50.Text = (te.NG_NOx_EF * te.MMBTUinperTrip).ToString();   // NOx
-                label51.Text = (te.NG_PM10_EF * te.MMBTUinperTrip).ToString();   // PM10
-                label52.Text = "PM2.5";  // PM2.5
-                label53.Text = (te.NG_SOx_EF * te.MMBTUinperTrip).ToString();   // SOx
-                label54.Text = (te.NG_CH4_EF * te.MMBTUinperTrip).ToString();   // CH4
-                label55.Text = (te.NG_CO2_EF * te.MMBTUinperTrip).ToString();   // CO2
-                label56.Text = (te.NG_N2O_EF * te.MMBTUinperTrip).ToString();   // N2O
-                label59.Text = "CO2 Biogenic";   // CO2Biogenic
-
-                /*
-                 * Column 3 -- Total
-                 */
-
-                label60.Text = (te.MMBTUinperTrip * te.NG_Total_TE).ToString("#.##") + " mmbtu/trip";   // Total Energy
-                label61.Text = (te.MMBTUinperTrip * te.NG_Total_FF).ToString("#.##") + " mmbtu/trip";   // Fossil Fuel
-                label62.Text = (te.MMBTUinperTrip * te.NG_Total_CF).ToString("#.##") + " mmbtu/trip";   // Coal Fuel
-                label63.Text = (te.MMBTUinperTrip * te.NG_Total_NG).ToString("#.##") + " mmbtu/trip";   // Natural Gas Fuel
-                label64.Text = (te.MMBTUinperTrip * te.NG_Total_PF).ToString("#.##") + " mmbtu/trip";   // Petroleum Fuel
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label66.Text = ((te.NG_WTP_VOC * 1000000000000 * te.MMBTUinperTrip) + (te.NG_VOC_EF * te.MMBTUinperTrip)).ToString();   // VOC
-                label67.Text = ((te.NG_WTP_CO * 1000000000000 * te.MMBTUinperTrip) + (te.NG_CO_EF * te.MMBTUinperTrip)).ToString();   // CO
-                label68.Text = ((te.NG_WTP_NOX * 1000000000000 * te.MMBTUinperTrip) + (te.NG_NOx_EF * te.MMBTUinperTrip)).ToString();   // NOx
-                label69.Text = ((te.NG_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip) + (te.NG_PM10_EF * te.MMBTUinperTrip)).ToString();   // PM10
-                label70.Text = "PM2.5";  // PM2.5
-                label71.Text = ((te.NG_WTP_SOX * 1000000000000 * te.MMBTUinperTrip) + (te.NG_SOx_EF * te.MMBTUinperTrip)).ToString();   // SOx
-                label72.Text = ((te.NG_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip) + (te.NG_CH4_EF * te.MMBTUinperTrip)).ToString();   // CH4
-                label73.Text = ((te.NG_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip) + (te.NG_CO2_EF * te.MMBTUinperTrip)).ToString();   // CO2
-                label74.Text = ((te.NG_WTP_N2O * 1000000000000 * te.MMBTUinperTrip) + (te.NG_N2O_EF * te.MMBTUinperTrip)).ToString();   // N2O
-                label77.Text = "CO2 biogenic";   // CO2Biogenic
-
-                //Title
-                label1.Text = "Natural Gas";
-
-                //Setting the stacked bar chart information
-                fuelUsed = "Natural Gas";
-                double[] total_energy = { (te.MMBTUinperTrip * te.NG_WTP_TE), (te.MMBTUinperTrip * te.NG_VO_TE) }; //Resource 0
-                double[] fossil_fuels = { 10, 20 }; //Resource 1
-                double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { (te.NG_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.NG_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
-                double[] ch4 = { (te.NG_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.NG_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
-                double[] n2o = { (te.NG_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.NG_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
-                double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { (te.NG_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.NG_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
-                double[] co = { (te.NG_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.NG_CO_EF * te.MMBTUinperTrip) };           //Resource 8
-                double[] nox = { (te.NG_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.NG_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
-                double[] pm10 = { (te.NG_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.NG_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
-                double[] sox = { (te.NG_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.NG_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
-                double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
-                //Generate the graph using the resources set and seriesArray.
-                Generate_Graph(resources, stacked_graph);
+                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
+                {
+                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    pathwayNode.Tag = pathway;
+                    resourceTreeNode.Nodes.Add(pathwayNode);
+                }
+                if (resourceTreeNode.Nodes.Count > 0)
+                    this.treeView1.Nodes.Add(resourceTreeNode);
             }
-            else if (e.Node.Text == "Biodiesel")
+
+            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 59))
             {
-                /*
-                 * Column 1 -- Well to Pump
-                 */
+                TreeNode resourceTreeNode = new TreeNode(resource.Name);
+                resourceTreeNode.Tag = resource;
 
-                label24.Text = (-1 * ((te.MMBTUinperTrip * te.BD_WTP_TE) - (te.MMBTUinperTrip * te.BD_VO_TE))).ToString("#.##") + " mmbtu/trip"; // Total Energy
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label30.Text = (te.BD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // VOC
-                label31.Text = (te.BD_WTP_CO * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO
-                label32.Text = (te.BD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // NOx
-                label33.Text = (te.BD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM10
-                label34.Text = (te.BD_WTP_PM25 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM2.5
-                label35.Text = (te.BD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // SOx
-                label36.Text = (te.BD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CH4
-                label37.Text = (te.BD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2
-                label38.Text = (te.BD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // N2O
-                label41.Text = (te.BD_WTP_PM25_CO2Biogenic * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2Biogenic
-
-                /*
-                 * Column 2 -- Vessel Operation
-                 */
-
-                label42.Text = (te.MMBTUinperTrip * te.BD_VO_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label48.Text = (te.BD_VOC_EF * te.MMBTUinperTrip).ToString();   // VOC
-                label49.Text = (te.BD_CO_EF * te.MMBTUinperTrip).ToString();   // CO
-                label50.Text = (te.BD_NOx_EF * te.MMBTUinperTrip).ToString();   // NOx
-                label51.Text = (te.BD_PM10_EF * te.MMBTUinperTrip).ToString();   // PM10
-                label52.Text = "PM2.5";  // PM2.5
-                label53.Text = (te.BD_SOx_EF * te.MMBTUinperTrip).ToString();   // SOx
-                label54.Text = (te.BD_CH4_EF * te.MMBTUinperTrip).ToString();   // CH4
-                label55.Text = (te.BD_CO2_EF * te.MMBTUinperTrip).ToString();   // CO2
-                label56.Text = (te.BD_N2O_EF * te.MMBTUinperTrip).ToString();   // N2O
-                label59.Text = "CO2 Biogenic";   // CO2Biogenic
-
-                /*
-                 * Column 3 -- Total
-                 */
-
-                label60.Text = ((te.MMBTUinperTrip * te.BD_Total_TE) + (-2 * ((te.MMBTUinperTrip * te.BD_WTP_TE) - (te.MMBTUinperTrip * te.BD_VO_TE)))).ToString("#.##") + " mmbtu/trip";   // Total Energy
-                label61.Text = (te.MMBTUinperTrip * te.BD_Total_FF).ToString("#.##") + " mmbtu/trip";   // Fossil Fuel
-                label62.Text = (te.MMBTUinperTrip * te.BD_Total_CF).ToString("#.##") + " mmbtu/trip";   // Coal Fuel
-                label63.Text = (te.MMBTUinperTrip * te.BD_Total_NG).ToString("#.##") + " mmbtu/trip"; // Natural Gas Fuel
-                label64.Text = (te.MMBTUinperTrip * te.BD_Total_PF).ToString("#.##") + " mmbtu/trip"; // Petroleum Fuel
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-                label66.Text = ((te.BD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip) + (te.BD_VOC_EF * te.MMBTUinperTrip)).ToString();   // VOC
-                label67.Text = ((te.BD_WTP_CO * 1000000000000 * te.MMBTUinperTrip) + (te.BD_CO_EF * te.MMBTUinperTrip)).ToString();   // CO
-                label68.Text = ((te.BD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip) + (te.BD_NOx_EF * te.MMBTUinperTrip)).ToString();   // NOx
-                label69.Text = ((te.BD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip) + (te.BD_PM10_EF * te.MMBTUinperTrip)).ToString();   // PM10
-                label70.Text = "PM2.5";  // PM2.5
-                label71.Text = ((te.BD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip) + (te.BD_SOx_EF * te.MMBTUinperTrip)).ToString();   // SOx
-                label72.Text = ((te.BD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip) + (te.BD_CH4_EF * te.MMBTUinperTrip)).ToString();   // CH4
-                label73.Text = ((te.BD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip) + (te.BD_CO2_EF * te.MMBTUinperTrip)).ToString();   // CO2
-                label74.Text = ((te.BD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip) + (te.BD_N2O_EF * te.MMBTUinperTrip)).ToString();   // N2O
-                label77.Text = "CO2 biogenic";   // CO2Biogenic
-
-                //Title
-                label1.Text = "Biodiesel";
-
-                //Setting the stacked bar chart information
-                fuelUsed = "Biodiesel";
-                double[] total_energy = { (te.MMBTUinperTrip * te.BD_WTP_TE), (te.MMBTUinperTrip * te.BD_VO_TE) }; //Resource 0
-                double[] fossil_fuels = { 10, 20 }; //Resource 1
-                double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { (te.BD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.BD_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
-                double[] ch4 = { (te.BD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.BD_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
-                double[] n2o = { (te.BD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.BD_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
-                double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { (te.BD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.BD_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
-                double[] co = { (te.BD_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.BD_CO_EF * te.MMBTUinperTrip) };           //Resource 8
-                double[] nox = { (te.BD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.BD_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
-                double[] pm10 = { (te.BD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.BD_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
-                double[] sox = { (te.BD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.BD_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
-                double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
-                //Generate the graph using the resources set and seriesArray.
-                Generate_Graph(resources, stacked_graph);
+                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
+                {
+                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    pathwayNode.Tag = pathway;
+                    resourceTreeNode.Nodes.Add(pathwayNode);
+                }
+                if (resourceTreeNode.Nodes.Count > 0)
+                    this.treeView1.Nodes.Add(resourceTreeNode);
             }
-            else if (e.Node.Text == "Fischer Tropsch Diesel")
+
+            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 44))
             {
-                /*
-                 * Column 1 -- Well to Pump
-                 */
+                TreeNode resourceTreeNode = new TreeNode(resource.Name);
+                resourceTreeNode.Tag = resource;
 
-                label24.Text = (te.MMBTUinperTrip * te.FTD_WTP_TE).ToString("#.##") + " mmbtu/trip";    // Total Energy
+                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
+                {
+                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    pathwayNode.Tag = pathway;
+                    resourceTreeNode.Nodes.Add(pathwayNode);
+                }
 
-                /***************
-                 * EMISSIONS
-                 ***************/
+                if (resourceTreeNode.Nodes.Count > 0)
+                    this.treeView1.Nodes.Add(resourceTreeNode);
+            }
 
-                label30.Text = (te.FTD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // VOC
-                label31.Text = (te.FTD_WTP_CO * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO
-                label32.Text = (te.FTD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // NOx
-                label33.Text = (te.FTD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM10
-                label34.Text = (te.FTD_WTP_PM25 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";   // PM2.5
-                label35.Text = (te.FTD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // SOx
-                label36.Text = (te.FTD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CH4
-                label37.Text = (te.FTD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2
-                label38.Text = (te.FTD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // N2O
-                label41.Text = (te.FTD_WTP_PM25_CO2Biogenic * 1000000000000 * te.MMBTUinperTrip).ToString("#.##") + " g/trip";  // CO2Biogenic
+            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 45))
+            {
+                TreeNode resourceTreeNode = new TreeNode(resource.Name);
+                resourceTreeNode.Tag = resource;
 
-                /*
-                 * Column 2 -- Vessel Operation
-                 */
+                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
+                {
+                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    pathwayNode.Tag = pathway;
+                    resourceTreeNode.Nodes.Add(pathwayNode);
+                }
 
-                label42.Text = (te.MMBTUinperTrip * te.FTD_VO_TE).ToString("#.##") + " mmbtu/trip"; // Total Energy
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label48.Text = (te.FTD_VOC_EF * te.MMBTUinperTrip).ToString();   // VOC
-                label49.Text = (te.FTD_CO_EF * te.MMBTUinperTrip).ToString();   // CO
-                label50.Text = (te.FTD_NOx_EF * te.MMBTUinperTrip).ToString();   // NOx
-                label51.Text = (te.FTD_PM10_EF * te.MMBTUinperTrip).ToString();   // PM10
-                label52.Text = "PM2.5";  // PM2.5
-                label53.Text = (te.FTD_SOx_EF * te.MMBTUinperTrip).ToString();   // SOx
-                label54.Text = (te.FTD_CH4_EF * te.MMBTUinperTrip).ToString();   // CH4
-                label55.Text = (te.FTD_CO2_EF * te.MMBTUinperTrip).ToString();   // CO2
-                label56.Text = (te.FTD_N2O_EF * te.MMBTUinperTrip).ToString();   // N2O
-                label59.Text = "CO2 Biogenic";   // CO2Biogenic
-
-                /*
-                 * Column 3 -- Total
-                 */
-
-                label60.Text = (te.MMBTUinperTrip * te.FTD_Total_TE).ToString("#.##") + " mmbtu/trip";  // Total Energy
-                label61.Text = (te.MMBTUinperTrip * te.FTD_Total_FF).ToString("#.##") + " mmbtu/trip";  // Fossil Fuel
-                label62.Text = (te.MMBTUinperTrip * te.FTD_Total_CF).ToString("#.##") + " mmbtu/trip";  // Coal Fuel
-                label63.Text = (te.MMBTUinperTrip * te.FTD_Total_NG).ToString("#.##") + " mmbtu/trip";    // Natural Gas Fuel
-                label64.Text = (te.MMBTUinperTrip * te.FTD_Total_PF).ToString("#.##") + " mmbtu/trip";    // Petroleum Fuel
-
-                /***************
-                 * EMISSIONS
-                 ***************/
-
-                label66.Text = ((te.FTD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip) + (te.FTD_VOC_EF * te.MMBTUinperTrip)).ToString();   // VOC
-                label67.Text = ((te.FTD_WTP_CO * 1000000000000 * te.MMBTUinperTrip) + (te.FTD_CO_EF * te.MMBTUinperTrip)).ToString();   // CO
-                label68.Text = ((te.FTD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip) + (te.FTD_NOx_EF * te.MMBTUinperTrip)).ToString();   // NOx
-                label69.Text = ((te.FTD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip) + (te.FTD_PM10_EF * te.MMBTUinperTrip)).ToString();   // PM10
-                label70.Text = "PM2.5";  // PM2.5
-                label71.Text = ((te.FTD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip) + (te.FTD_SOx_EF * te.MMBTUinperTrip)).ToString();   // SOx
-                label72.Text = ((te.FTD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip) + (te.FTD_CH4_EF * te.MMBTUinperTrip)).ToString();   // CH4
-                label73.Text = ((te.FTD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip) + (te.FTD_CO2_EF * te.MMBTUinperTrip)).ToString();   // CO2
-                label74.Text = ((te.FTD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip) + (te.FTD_N2O_EF * te.MMBTUinperTrip)).ToString();   // N2O
-                label77.Text = "CO2 biogenic";   // CO2Biogenic
-
-                //Title
-                label1.Text = "Fischer Tropsch Diesel";
-
-                //Setting the stacked bar chart information
-                fuelUsed = "Fischer Tropsch Diesel";
-                double[] total_energy = { (te.MMBTUinperTrip * te.FTD_WTP_TE), (te.MMBTUinperTrip * te.FTD_VO_TE) }; //Resource 0
-                double[] fossil_fuels = { 10, 20 }; //Resource 1
-                double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { (te.FTD_WTP_CO2 * 1000000000000 * te.MMBTUinperTrip), (te.FTD_CO2_EF * te.MMBTUinperTrip) };          //Resource 3
-                double[] ch4 = { (te.FTD_WTP_CH4 * 1000000000000 * te.MMBTUinperTrip), (te.FTD_CH4_EF * te.MMBTUinperTrip) };          //Resource 4
-                double[] n2o = { (te.FTD_WTP_N2O * 1000000000000 * te.MMBTUinperTrip), (te.FTD_N2O_EF * te.MMBTUinperTrip) };          //Resource 5
-                double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { (te.FTD_WTP_VOC * 1000000000000 * te.MMBTUinperTrip), (te.FTD_VOC_EF * te.MMBTUinperTrip) };          //Resource 7
-                double[] co = { (te.FTD_WTP_CO * 1000000000000 * te.MMBTUinperTrip), (te.FTD_CO_EF * te.MMBTUinperTrip) };           //Resource 8
-                double[] nox = { (te.FTD_WTP_NOX * 1000000000000 * te.MMBTUinperTrip), (te.FTD_NOx_EF * te.MMBTUinperTrip) };          //Resource 9
-                double[] pm10 = { (te.FTD_WTP_PM10 * 1000000000000 * te.MMBTUinperTrip), (te.FTD_PM10_EF * te.MMBTUinperTrip) };         //Resource 10
-                double[] sox = { (te.FTD_WTP_SOX * 1000000000000 * te.MMBTUinperTrip), (te.FTD_SOx_EF * te.MMBTUinperTrip) };          //Resource 11
-                double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
-                //Generate the graph using the resources set and seriesArray.
-                Generate_Graph(resources, stacked_graph);
+                if (resourceTreeNode.Nodes.Count > 0)
+                    this.treeView1.Nodes.Add(resourceTreeNode);
             }
         }
+        #endregion
+        #region Generating Bar Chart
         /// <summary>
         /// Generates the specified graph for display to the user.
         /// </summary>
@@ -639,6 +351,6 @@ namespace TEAMSModule
                 }
             }
         }
-
+        #endregion
     }
 }

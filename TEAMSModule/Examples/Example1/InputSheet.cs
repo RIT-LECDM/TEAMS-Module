@@ -886,8 +886,6 @@ namespace WindowsApplication1
             IGDataDictionary<int, IPathway> pathways = ResultsAccess.controler.CurrentProject.Data.Pathways;
             IGDataDictionary<int, IMix> mixes = ResultsAccess.controler.CurrentProject.Data.Mixes;
             //These are the Fuel_Specs information being replicated as needed
-            if (advanced == false)
-            {
                 #region Liquid Fuels
                 // Grab the pathway from greet for the resource you are looking for.
                 //IPathway myPathway = pathways.ValueForKey((int)numericUpDown264.Value);
@@ -1138,147 +1136,6 @@ namespace WindowsApplication1
 
                 //label251.Text = coalBTuperTON.ToString();
                 #endregion
-            }
-            else if (advanced == true)
-            {
-                //This is the same as above, but it only pulls the user values, and not the GREET ones
-                #region Liquid Fuels
-                // Grab the pathway from greet for the resource you are looking for.
-                //IPathway myPathway = pathways.ValueForKey((int)numericUpDown264.Value);
-                IPathway myPathway = pathways.ValueForKey(CRUDE_PATH_ID);
-                // Grab the int id for the resource (the water)
-                int productID = myPathway.MainOutputResourceID;
-                IResource CrudeOil = resources.ValueForKey(productID);
-
-                //This converts it to the preferred units, which in this case is grams/gal
-                crudeOilDensity = (CrudeOil.Density.UserValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                crudeOilBTUperGal = CrudeOil.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
-                crudeOilCarbonRatio = CrudeOil.CarbonRatio.UserValue;
-                crudeOilSulfurRatio = CrudeOil.SulfurRatio.UserValue * 1000000;
-                crudeOilSulfurRatioActual = CrudeOil.SulfurRatio.UserValue;
-                //this.label251.Text = CrudeOil.Name + " Sulfur Ratio " + crudeOilSulfurRatio;
-
-                //This is where you do the above process, but for conventional diesel
-                myPathway = pathways.ValueForKey(CD_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource ConvDiesel = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                conventionalDieselDensity = (ConvDiesel.Density.UserValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                conventionalDieselBTUperGal = ConvDiesel.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
-                conventionalDieselCarbonRatio = ConvDiesel.CarbonRatio.UserValue;
-                conventionalDieselSulfurRatio = ConvDiesel.SulfurRatio.UserValue * 1000000;
-                conventionalDieselSulfurRatioActual = ConvDiesel.SulfurRatio.UserValue;
-                // this.label258.Text = ConvDiesel.Name + " Energy Value " + conventionalDieselBTUperGal + " Btu/Gal " + " Density: " + conventionalDieselDensity + " grams/gallon CR " + ConvDiesel.CarbonRatio.UserValue;
-
-                //This is where you do the above process, but for low sulfur diesel
-                myPathway = pathways.ValueForKey(LSD_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource LSDiesel = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                lowSulfurDieselDensity = (LSDiesel.Density.UserValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                lowSulfurDieselBTUperGal = LSDiesel.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
-                lowSulfurDieselCarbonRatio = LSDiesel.CarbonRatio.UserValue;
-                lowSulfurDieselSulfurRatio = LSDiesel.SulfurRatio.UserValue * 1000000;
-                lowSulfurDieselSulfurRatioActual = LSDiesel.SulfurRatio.UserValue;
-
-                //This is where you do the above process, but for liquified petroleum gas
-                myPathway = pathways.ValueForKey(LIQ_PETROL_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource LPG = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                liquifiedPetroleumGasDensity = (LPG.Density.UserValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                liquifiedPetroleumGasBTUperGal = LPG.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
-                liquifiedPetroleumGasCarbonRatio = LPG.CarbonRatio.UserValue;
-                liquifiedPetroleumGasSulfurRatio = LPG.SulfurRatio.UserValue * 1000000;
-                liquifiedPetroleumGasSulfurRatioActual = LPG.SulfurRatio.UserValue;
-
-                //This is where you do the above process, but for residual oil
-                myPathway = pathways.ValueForKey(RO_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource RO = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                residualOilDensity = (RO.Density.UserValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                residualOilBTUperGal = RO.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
-                residualOilCarbonRatio = RO.CarbonRatio.UserValue;
-                residualOilSulfurRatio = RO.SulfurRatio.UserValue * 1000000;
-                residualOilSulfurRatioActual = RO.SulfurRatio.UserValue;
-
-                //This is where you do the above process, but for liquified natural gas
-                myPathway = pathways.ValueForKey(LIQ_NATGAS_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource LNG = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                liquifiedNaturalGasDensity = (LNG.Density.UserValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                liquifiedNaturalGasBTUperGal = LNG.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
-                liquifiedNaturalGasCarbonRatio = LNG.CarbonRatio.UserValue;
-                liquifiedNaturalGasSulfurRatio = LNG.SulfurRatio.UserValue * 1000000;
-                liquifiedNaturalGasSulfurRatioActual = LNG.SulfurRatio.UserValue;
-
-                //This is where you do the above process, but for biodiesel
-                myPathway = pathways.ValueForKey(BIODIESEL_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource BD = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                bioDieselDensity = (BD.Density.UserValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                bioDieselBTUperGal = BD.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
-                bioDieselCarbonRatio = BD.CarbonRatio.UserValue;
-                bioDieselSulfurRatio = BD.SulfurRatio.UserValue * 1000000;
-                bioDieselSulfurRatioActual = BD.SulfurRatio.UserValue;
-
-                //This is where you do the above process, but for fischer tropsch diesel
-                myPathway = pathways.ValueForKey(FTD_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource FTD = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                fischerTropschDensity = (FTD.Density.UserValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                fischerTropschBTUperGal = FTD.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
-                fischerTropschCarbonRatio = FTD.CarbonRatio.UserValue;
-                fischerTropschSulfurRatio = FTD.SulfurRatio.UserValue * 1000000;
-                fischerTropschSulfurRatioActual = FTD.SulfurRatio.UserValue;
-                #endregion
-                #region Solid and Gaseous Fuels
-                //This is where you do the above process, but for Gaseous Natural Gas
-                myPathway = pathways.ValueForKey(NATGAS_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource NG = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/Standard cubic foot
-                natGasGramsperSCF = NG.Density.UserValue / 0.0353146667;
-                //This converts it to the preferred units, which in this case is btu/SCF (Standard cubic feet)
-                natGasBTUperSCF = NG.LowerHeatingValue.UserValue / 37258.7438641;
-                natGasCarbonRatio = NG.CarbonRatio.UserValue;
-                natGasSulfurRatio = NG.SulfurRatio.UserValue * 1000000;
-                natGasSulfurRatioActual = NG.SulfurRatio.UserValue;
-
-                //This is where you do the above process, but for Gaseous Natural Gas
-                myPathway = pathways.ValueForKey(COAL_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource Coal = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is btu/SCF (Standard cubic feet)
-                coalBTuperTON = Coal.LowerHeatingValue.UserValue / 1.15870823646;
-                coalCarbonRatio = Coal.CarbonRatio.UserValue;
-                coalSulfurRatio = Coal.SulfurRatio.UserValue * 1000000;
-                coalSulfurRatioActual = Coal.SulfurRatio.UserValue;
-                //label251.Text = coalBTuperTON.ToString();
-                #endregion
-            }
-
         }
         public void submitAll()
         {
@@ -1950,11 +1807,6 @@ namespace WindowsApplication1
             DieselForFischerTropschBlend = 1;
             DieselForBiodieselBlend = 1;
             #endregion
-        }
-        //This is what happens when the TEAMS form loads
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
         //Shows Copyright Screen
         private void button1_Click(object sender, EventArgs e)
@@ -2952,38 +2804,10 @@ namespace WindowsApplication1
         {           
             GVE.Show();
         }
-
-        private void enableAdvancedUserToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (advanced == false)
-            {
-                MessageBox.Show("By selecting advanced user capabilities, you are rendering the data supplied by the GREET database null until you edit it within GREET yourself to your specifications. This is only for advanced users with an in depth knowledge base of the variables they need to edit in order to have TEAMS run a simulation.");
-                advanced = true;
-                pullFromGREET();
-                enableAdvancedUserToolStripMenuItem.BackColor = Color.Green;
-                enableAdvancedUserToolStripMenuItem.Text = "Disable Advanced User";
-                u = new Update(this);
-                u.Show();
-            }
-            else if (advanced == true)
-            {
-                advanced = false;
-                pullFromGREET();
-                enableAdvancedUserToolStripMenuItem.BackColor = Color.Yellow;
-                enableAdvancedUserToolStripMenuItem.Text = "Enable Advanced User";
-                u.Close();
-            }
-        }
-
         private void TEAMS_FormClosing(object sender, FormClosingEventArgs e)
         {
             u.Close();
             GVE.Close();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

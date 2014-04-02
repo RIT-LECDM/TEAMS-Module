@@ -31,7 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>SpreaderIcon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -77,23 +78,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ResultsSheet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ResultsSheet.Designer.cs">
-      <DependentUpon>ResultsSheet.cs</DependentUpon>
-    </Compile>
     <Compile Include="SplashPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SplashPage.Designer.cs">
       <DependentUpon>SplashPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="TEAMS.cs">
+    <Compile Include="InputSheet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TEAMS.Designer.cs">
-      <DependentUpon>TEAMS.cs</DependentUpon>
+    <Compile Include="InputSheet.Designer.cs">
+      <DependentUpon>InputSheet.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -122,19 +117,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResultsSheet.resx">
-      <DependentUpon>ResultsSheet.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SplashPage.resx">
       <DependentUpon>SplashPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TEAMS.resx">
-      <DependentUpon>TEAMS.cs</DependentUpon>
+    <EmbeddedResource Include="InputSheet.resx">
+      <DependentUpon>InputSheet.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SpreaderIcon.ico" />
-    <Content Include="TEAMS.jpg" />
+    <Content Include="images\icon.png" />
+    <Content Include="images\SpreaderIcon.ico" />
+    <Content Include="images\TEAMS.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

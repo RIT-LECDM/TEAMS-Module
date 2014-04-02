@@ -35,7 +35,6 @@
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enableAdvancedUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.useDefaultDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editGREETVariablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runSimulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -920,8 +919,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
             this.openToolStripMenuItem,
-            this.saveToolStripMenuItem,
-            this.enableAdvancedUserToolStripMenuItem});
+            this.saveToolStripMenuItem});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
@@ -930,31 +928,23 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveToolStripMenuItem.Text = "Save As";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
-            // enableAdvancedUserToolStripMenuItem
-            // 
-            this.enableAdvancedUserToolStripMenuItem.BackColor = System.Drawing.Color.Yellow;
-            this.enableAdvancedUserToolStripMenuItem.Name = "enableAdvancedUserToolStripMenuItem";
-            this.enableAdvancedUserToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.enableAdvancedUserToolStripMenuItem.Text = "Enable Advanced User Mode";
-            this.enableAdvancedUserToolStripMenuItem.Click += new System.EventHandler(this.enableAdvancedUserToolStripMenuItem_Click);
             // 
             // useDefaultDataToolStripMenuItem
             // 
@@ -1245,7 +1235,6 @@
             this.label3.Size = new System.Drawing.Size(298, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "1.1 - Efficiency For Petroleum Recovery";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -8592,7 +8581,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TEAMS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TEAMS_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -9452,7 +9440,6 @@
         private System.Windows.Forms.Label label249;
         private System.Windows.Forms.Label label248;
         private System.Windows.Forms.ToolStripMenuItem editGREETVariablesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem enableAdvancedUserToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
