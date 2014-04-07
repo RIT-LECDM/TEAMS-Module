@@ -85,9 +85,11 @@ namespace TEAMSModule
                 {
                     fuelUsed = resource.Name;
                 }
-                    TE_WTP = (path.GetUpstreamResults(data).ElementAt(0).Value.LifeCycleEmissions().ElementAt(0).Value.Value) * te.MMBTUinperTrip;
-                    TE_VO = 101;
-                    TE_Total = 101;
+                IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
+
+                    TE_WTP = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
+                    TE_VO = te.MMBTUinperTrip;
+                    TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip;
 
                     FF_Total = 101;
                     CF_Total = 101;
@@ -235,6 +237,7 @@ namespace TEAMSModule
             IGDataDictionary<int, IPathway> pathways = ResultsAccess.controler.CurrentProject.Data.Pathways;
             IGDataDictionary<int, IMix> mixes = ResultsAccess.controler.CurrentProject.Data.Mixes;
             //Adds pathways and mixes to the list so the user can select one
+            //Conventional Diesel Pathways
             foreach (IResource resource in resources.AllValues.Where(item => item.Id == 27))
             {
                 TreeNode resourceTreeNode = new TreeNode(resource.Name);
@@ -250,6 +253,7 @@ namespace TEAMSModule
                     this.treeView1.Nodes.Add(resourceTreeNode);
             }
 
+            //Residual Oil pathways
             foreach (IResource resource in resources.AllValues.Where(item => item.Id == 33))
             {
                 TreeNode resourceTreeNode = new TreeNode(resource.Name);
@@ -264,7 +268,7 @@ namespace TEAMSModule
                 if (resourceTreeNode.Nodes.Count > 0)
                     this.treeView1.Nodes.Add(resourceTreeNode);
             }
-
+            //Low Sulfur Diesel pathways
             foreach (IResource resource in resources.AllValues.Where(item => item.Id == 30))
             {
                 TreeNode resourceTreeNode = new TreeNode(resource.Name);
@@ -279,8 +283,8 @@ namespace TEAMSModule
                 if (resourceTreeNode.Nodes.Count > 0)
                     this.treeView1.Nodes.Add(resourceTreeNode);
             }
-
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 59))
+            //Liquid Natural Gas Pathways
+            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 41))
             {
                 TreeNode resourceTreeNode = new TreeNode(resource.Name);
                 resourceTreeNode.Tag = resource;
@@ -294,7 +298,7 @@ namespace TEAMSModule
                 if (resourceTreeNode.Nodes.Count > 0)
                     this.treeView1.Nodes.Add(resourceTreeNode);
             }
-
+            //Biodiesel pathways
             foreach (IResource resource in resources.AllValues.Where(item => item.Id == 44))
             {
                 TreeNode resourceTreeNode = new TreeNode(resource.Name);
@@ -310,7 +314,7 @@ namespace TEAMSModule
                 if (resourceTreeNode.Nodes.Count > 0)
                     this.treeView1.Nodes.Add(resourceTreeNode);
             }
-
+            //Fischer Tropsch Diesel Pathways
             foreach (IResource resource in resources.AllValues.Where(item => item.Id == 45))
             {
                 TreeNode resourceTreeNode = new TreeNode(resource.Name);
