@@ -79,13 +79,13 @@ namespace TEAMSModule
             {
                 IGDataDictionary<int, IResource> resources = ResultsAccess.controler.CurrentProject.Data.Resources;
                 IGDataDictionary<int, IPathway> pathways = ResultsAccess.controler.CurrentProject.Data.Pathways;
-
+                IData data = ResultsAccess.controler.CurrentProject.Data;
                 IPathway path = tag as IPathway;
                 foreach (IResource resource in resources.AllValues.Where(item => item.Id == path.MainOutputResourceID))
                 {
                     fuelUsed = resource.Name;
                 }
-                    TE_WTP = 101;
+                    TE_WTP = (path.GetUpstreamResults(data).ElementAt(0).Value.LifeCycleEmissions().ElementAt(0).Value.Value) * te.MMBTUinperTrip;
                     TE_VO = 101;
                     TE_Total = 101;
 
@@ -94,6 +94,7 @@ namespace TEAMSModule
                     NGF_Total = 101;
                     PF_Total = 101;
 
+                    //Requires an input on the input sheet
                     VOC_WTP = 101;
                     VOC_VO = 101;
                     VOC_Total = 101;
@@ -105,15 +106,18 @@ namespace TEAMSModule
                     NOx_WTP = 101;
                     NOx_VO = 101;
                     NOx_Total = 101;
-
+                    
+                    //Requires an input on the input sheet
                     PM10_WTP = 101;
                     PM10_VO = 101;
                     PM10_Total = 101;
 
+                    //Requires an input on the input sheet
                     PM25_WTP = 101;
                     PM25_VO = 101;
                     PM25_Total = 101;
-
+                    
+                    //Requires an input on the input sheet
                     SOx_WTP = 101;
                     SOx_VO = 101;
                     SOx_Total = 101;
