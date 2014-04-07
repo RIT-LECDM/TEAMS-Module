@@ -86,55 +86,55 @@ namespace TEAMSModule
                     fuelUsed = resource.Name;
                 }
                 IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
-
+                //These should be relatively accurate no matter what, since it's a total energy and not the different engines
                     TE_WTP = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
                     TE_VO = te.MMBTUinperTrip;
                     TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip;
 
-                    FF_Total = 101;
-                    CF_Total = 101;
-                    NGF_Total = 101;
-                    PF_Total = 101;
+                    FF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
+                    CF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
+                    NGF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
+                    PF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
 
                     //Requires an input on the input sheet
-                    VOC_WTP = 101;
+                    VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                     VOC_VO = 101;
-                    VOC_Total = 101;
+                    VOC_Total = VOC_WTP + VOC_VO;
 
-                    CO_WTP = 101;
+                    CO_WTP = pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                     CO_VO = 101;
-                    CO_Total = 101;
+                    CO_Total = CO_WTP + CO_VO;
 
-                    NOx_WTP = 101;
+                    NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                     NOx_VO = 101;
-                    NOx_Total = 101;
+                    NOx_Total = NOx_WTP + NOx_VO;
                     
                     //Requires an input on the input sheet
-                    PM10_WTP = 101;
+                    PM10_WTP = pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                     PM10_VO = 101;
-                    PM10_Total = 101;
+                    PM10_Total = PM10_WTP + PM10_VO;
 
                     //Requires an input on the input sheet
-                    PM25_WTP = 101;
+                    PM25_WTP = pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                     PM25_VO = 101;
-                    PM25_Total = 101;
+                    PM25_Total = PM25_WTP + PM25_VO;
                     
                     //Requires an input on the input sheet
-                    SOx_WTP = 101;
+                    SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                     SOx_VO = 101;
-                    SOx_Total = 101;
+                    SOx_Total = SOx_WTP + SOx_VO;
 
-                    CH4_WTP = 101;
+                    CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                     CH4_VO = 101;
-                    CH4_Total = 101;
+                    CH4_Total = CH4_WTP + CH4_VO;
 
-                    CO2_WTP = 101;
+                    CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                     CO2_VO = 101;
-                    CO2_Total = 101;
+                    CO2_Total = CO2_WTP + CO2_VO;
 
-                    N2O_WTP = 101;
+                    N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                     N2O_VO = 101;
-                    N2O_Total = 101;
+                    N2O_Total = N2O_WTP + N2O_VO;
             }
 
             setLabels();
