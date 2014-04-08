@@ -137,9 +137,8 @@ namespace TEAMSModule
                 CO2_VO = ((carbonPercentage * (gramsOfFuel / te.MMBTUinperTrip)) * te.MMBTUinperTrip) * (44 / 12);
                 CO2_Total = CO2_WTP + CO2_VO;
 
-                double sulfurPercentage = resourceUsed.SulfurRatio.GreetValue * 1000000;
-                N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                N2O_VO = ((sulfurPercentage * (gramsOfFuel / te.MMBTUinperTrip)) * te.MMBTUinperTrip) * (44 / 12);
+                N2O_WTP = 101;
+                N2O_VO = 101;
                 N2O_Total = N2O_WTP + N2O_VO;
 
                 GHG_WTP = pathwayResults.LifeCycleEmissionsGroups(data).ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;

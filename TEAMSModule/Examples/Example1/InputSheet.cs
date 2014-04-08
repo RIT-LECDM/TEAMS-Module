@@ -1599,5 +1599,11 @@ namespace WindowsApplication1
             this.Close();
         }
 
+        private void submitAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            five_complete = true;
+            six_complete = true;
+        }
+
     }
 }
