@@ -1592,5 +1592,10 @@ namespace WindowsApplication1
             GVE.Close();
         }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
