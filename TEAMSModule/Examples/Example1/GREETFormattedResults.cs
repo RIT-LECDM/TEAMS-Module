@@ -15,6 +15,7 @@ using PlugInsInterfaces.DataTypes.Mix;
 using PlugInsInterfaces.ResultTypes;
 using PlugInsInterfaces.DataTypes.Technology;
 using System.Windows.Forms.DataVisualization.Charting;
+using Excel = Microsoft.Office.Interop.Excel;
 namespace TEAMSModule
 {
     public partial class GREETFormattedResults : Form
@@ -99,6 +100,7 @@ namespace TEAMSModule
                 CF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 NGF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
                 PF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+
                 //Requires an input on the input sheet
                 VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 VOC_VO = 101;
@@ -143,7 +145,6 @@ namespace TEAMSModule
 
                 GHG_WTP = pathwayResults.LifeCycleEmissionsGroups(data).ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;
             }
-
             setLabels();
         }
         #endregion
@@ -369,5 +370,127 @@ namespace TEAMSModule
             }
         }
         #endregion
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
+            }
+        }
+
+        //Saving for the excel sheet
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Excel.Application xlApp;
+            Excel.Workbook xlWorkBook;
+            Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+
+            xlApp = new Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+            //add data 
+            xlWorkSheet.Cells[1, 1] = "Results Shown Per Trip";
+            xlWorkSheet.Cells[1, 2] = "Well To Pump";
+            xlWorkSheet.Cells[1, 3] = "Vessel Operation";
+            xlWorkSheet.Cells[1, 4] = "Total";
+
+            xlWorkSheet.Cells[2, 1] = "Total Energy";
+            xlWorkSheet.Cells[2, 2] = TE_WTP;
+            xlWorkSheet.Cells[2, 3] = TE_VO;
+            xlWorkSheet.Cells[2, 4] = TE_Total;
+
+            xlWorkSheet.Cells[3, 1] = "Fossil Fuel";
+            xlWorkSheet.Cells[3, 2] = "";
+            xlWorkSheet.Cells[3, 3] = "";
+            xlWorkSheet.Cells[3, 4] = FF_Total;
+
+            xlWorkSheet.Cells[4, 1] = "Coal Fuel";
+            xlWorkSheet.Cells[4, 2] = "";
+            xlWorkSheet.Cells[4, 3] = "";
+            xlWorkSheet.Cells[4, 4] = CF_Total;
+
+            xlWorkSheet.Cells[5, 1] = "Natural Gas Fuel";
+            xlWorkSheet.Cells[5, 2] = "";
+            xlWorkSheet.Cells[5, 3] = "";
+            xlWorkSheet.Cells[5, 4] = NGF_Total;
+
+            xlWorkSheet.Cells[6, 1] = "Petroleum Fuel";
+            xlWorkSheet.Cells[6, 2] = "";
+            xlWorkSheet.Cells[6, 3] = "";
+            xlWorkSheet.Cells[6, 4] = PF_Total;
+
+            xlWorkSheet.Cells[7, 1] = "Emissions";
+            xlWorkSheet.Cells[7, 2] = "";
+            xlWorkSheet.Cells[7, 3] = "";
+            xlWorkSheet.Cells[7, 4] = "";
+
+            xlWorkSheet.Cells[8, 1] = "VOC";
+            xlWorkSheet.Cells[8, 2] = VOC_WTP;
+            xlWorkSheet.Cells[8, 3] = VOC_VO;
+            xlWorkSheet.Cells[8, 4] = VOC_Total;
+
+            xlWorkSheet.Cells[9, 1] = "CO";
+            xlWorkSheet.Cells[9, 2] = CO_WTP;
+            xlWorkSheet.Cells[9, 3] = CO_VO;
+            xlWorkSheet.Cells[9, 4] = CO_Total;
+
+            xlWorkSheet.Cells[10, 1] = "NOx";
+            xlWorkSheet.Cells[10, 2] = NOx_WTP;
+            xlWorkSheet.Cells[10, 3] = NOx_VO;
+            xlWorkSheet.Cells[10, 4] = NOx_Total;
+
+            xlWorkSheet.Cells[11, 1] = "PM10";
+            xlWorkSheet.Cells[11, 2] = PM10_WTP;
+            xlWorkSheet.Cells[11, 3] = PM10_VO;
+            xlWorkSheet.Cells[11, 4] = PM10_Total;
+
+            xlWorkSheet.Cells[12, 1] = "PM 2.5";
+            xlWorkSheet.Cells[12, 2] = PM25_WTP;
+            xlWorkSheet.Cells[12, 3] = PM25_VO;
+            xlWorkSheet.Cells[12, 4] = PM25_Total;
+
+            xlWorkSheet.Cells[13, 1] = "SOx";
+            xlWorkSheet.Cells[13, 2] = SOx_WTP;
+            xlWorkSheet.Cells[13, 3] = SOx_VO;
+            xlWorkSheet.Cells[13, 4] = SOx_Total;
+
+            xlWorkSheet.Cells[14, 1] = "CH4";
+            xlWorkSheet.Cells[14, 2] = CH4_WTP;
+            xlWorkSheet.Cells[14, 3] = CH4_VO;
+            xlWorkSheet.Cells[14, 4] = CH4_Total;
+
+            xlWorkSheet.Cells[15, 1] = "CO2";
+            xlWorkSheet.Cells[15, 2] = CO2_WTP;
+            xlWorkSheet.Cells[15, 3] = CO2_VO;
+            xlWorkSheet.Cells[15, 4] = CO2_Total;
+
+            xlWorkSheet.Cells[16, 1] = "N2O";
+            xlWorkSheet.Cells[16, 2] = N2O_WTP;
+            xlWorkSheet.Cells[16, 3] = N2O_VO;
+            xlWorkSheet.Cells[16, 4] = N2O_Total;
+
+            xlWorkBook.SaveAs("TEAMS-Results.xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+            xlWorkBook.Close(true, misValue, misValue);
+            xlApp.Quit();
+
+            releaseObject(xlWorkSheet);
+            releaseObject(xlWorkBook);
+            releaseObject(xlApp);
+
+            MessageBox.Show("FIle saved, TEAMS-Results.xls should be in your Documents folder");
+        }
     }
 }
