@@ -17,6 +17,10 @@ namespace TEAMSModule
             InitializeComponent();
         }
 
+        /// <summary>
+        /// The user clicks "Start".
+        /// The form closes and the CopyrightPage form is loaded.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             Copyright c = new Copyright();
