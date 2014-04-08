@@ -355,7 +355,7 @@ namespace TEAMSModule
             string[] seriesArray = { "Upstream", "VesselOperation" };
             //Set the title of the graph to the passed in string title.
             graph.Titles[0].Text = "Your Vessel using " + fuelUsed + " \nContribution of Each Stage";
-            //Iterate through each of the three series.
+            //Iterate through both of the series.
             for (int i = 0; i < seriesArray.Length; i++)
             {
                 // Clears points to ensure working with a new graph.

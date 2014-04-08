@@ -77,7 +77,6 @@
             this.Name = "Copyright";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TEAMS";
-            this.Load += new System.EventHandler(this.Copyright_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
