@@ -154,11 +154,11 @@ namespace TEAMSModule
                  * EMISSIONS
                  ***************/
 
-                label30.Text = (VOC_WTP).ToString("#.##") + " g/trip";   // VOC
-                label31.Text = (CO_WTP).ToString("#.##") + " g/trip";  // CO
-                label32.Text = (NOx_WTP).ToString("#.##") + " g/trip";   // NOx
-                label33.Text = (PM10_WTP).ToString("#.##") + " g/trip";   // PM10
-                label34.Text = (PM25_WTP).ToString("#.##") + " g/trip";   // PM2.5
+                label30.Text = (VOC_WTP).ToString("#.##") + " g/trip";  // VOC
+                label31.Text = (CO_WTP).ToString("#.##") + " g/trip";   // CO
+                label32.Text = (NOx_WTP).ToString("#.##") + " g/trip";  // NOx
+                label33.Text = (PM10_WTP).ToString("#.##") + " g/trip"; // PM10
+                label34.Text = (PM25_WTP).ToString("#.##") + " g/trip"; // PM2.5
                 label35.Text = (SOx_WTP).ToString("#.##") + " g/trip";  // SOx
                 label36.Text = (CH4_WTP).ToString("#.##") + " g/trip";  // CH4
                 label37.Text = (CO2_WTP).ToString("#.##") + " g/trip";  // CO2
@@ -174,15 +174,15 @@ namespace TEAMSModule
                  * EMISSIONS
                  ***************/
 
-                label48.Text = (VOC_VO).ToString();   // VOC
-                label49.Text = (CO_VO).ToString();   // CO
-                label50.Text = (NOx_VO).ToString();   // NOx
-                label51.Text = (PM10_VO).ToString();   // PM10
-                label52.Text = (PM25_VO).ToString();   // PM2.5
-                label53.Text = (SOx_VO).ToString();   // SOx
-                label54.Text = (CH4_VO).ToString();   // CH4
-                label55.Text = (CO2_VO).ToString();   // CO2
-                label56.Text = (N2O_VO).ToString();   // N2O
+                label48.Text = (VOC_VO).ToString();     // VOC
+                label49.Text = (CO_VO).ToString();      // CO
+                label50.Text = (NOx_VO).ToString();     // NOx
+                label51.Text = (PM10_VO).ToString();    // PM10
+                label52.Text = (PM25_VO).ToString();    // PM2.5
+                label53.Text = (SOx_VO).ToString();     // SOx
+                label54.Text = (CH4_VO).ToString();     // CH4
+                label55.Text = (CO2_VO).ToString();     // CO2
+                label56.Text = (N2O_VO).ToString();     // N2O
 
                 /*
                  * Column 3 -- Total
@@ -191,40 +191,41 @@ namespace TEAMSModule
                 label60.Text = (TE_Total).ToString("#.##") + " mmbtu/trip";   // Total Energy
                 label61.Text = (FF_Total).ToString("#.##") + " mmbtu/trip";   // Fossil Fuel
                 label62.Text = (CF_Total).ToString("#.##") + " mmbtu/trip";   // Coal Fuel
-                label63.Text = (NGF_Total).ToString("#.##") + " mmbtu/trip";   // Natural Gas Fuel
+                label63.Text = (NGF_Total).ToString("#.##") + " mmbtu/trip";  // Natural Gas Fuel
                 label64.Text = (PF_Total).ToString("#.##") + " mmbtu/trip";   // Petroleum Fuel
 
                 /***************
                  * EMISSIONS
                  ***************/
 
-                label66.Text = (VOC_Total).ToString();   // VOC
-                label67.Text = (CO_Total).ToString();   // CO
-                label68.Text = (NOx_Total).ToString();   // NOx
-                label69.Text = (PM10_Total).ToString();   // PM10
-                label70.Text = (PM25_Total).ToString();   // PM2.5
-                label71.Text = (SOx_Total).ToString();   // SOx
-                label72.Text = (CH4_Total).ToString();   // CH4
-                label73.Text = (CO2_Total).ToString();   // CO2
-                label74.Text = (N2O_Total).ToString();   // N2O
+                label66.Text = (VOC_Total).ToString();      // VOC
+                label67.Text = (CO_Total).ToString();       // CO
+                label68.Text = (NOx_Total).ToString();      // NOx
+                label69.Text = (PM10_Total).ToString();     // PM10
+                label70.Text = (PM25_Total).ToString();     // PM2.5
+                label71.Text = (SOx_Total).ToString();      // SOx
+                label72.Text = (CH4_Total).ToString();      // CH4
+                label73.Text = (CO2_Total).ToString();      // CO2
+                label74.Text = (N2O_Total).ToString();      // N2O
 
                 //Title
                 label1.Text = fuelUsed;
 
                 //Setting the stacked bar chart information
-                double[] total_energy = { (TE_WTP), (TE_VO) }; //Resource 0
-                double[] fossil_fuels = { 10, 20 }; //Resource 1
-                double[] petroleum = { 15, 25 };    //Resource 2
-                double[] co2 = { (CO2_WTP), (CO2_VO) };          //Resource 3
-                double[] ch4 = { (CH4_WTP), (CH4_VO) };          //Resource 4
-                double[] n2o = { (N2O_WTP), (N2O_VO) };          //Resource 5
-                double[] ghgs = { 90, 4.5 };        //Resource 6
-                double[] voc = { (VOC_WTP), (VOC_VO) };          //Resource 7
-                double[] co = { (CO_WTP), (CO_VO) };           //Resource 8
-                double[] nox = { (NOx_WTP), (NOx_VO) };          //Resource 9
-                double[] pm10 = { (PM10_WTP), (PM10_VO) };         //Resource 10
-                double[] sox = { (SOx_WTP), (SOx_VO) };          //Resource 11
+                double[] total_energy = { (TE_WTP), (TE_VO) };  //Resource 0
+                double[] fossil_fuels = { 10, 20 };             //Resource 1
+                double[] petroleum = { 15, 25 };                //Resource 2
+                double[] co2 = { (CO2_WTP), (CO2_VO) };         //Resource 3
+                double[] ch4 = { (CH4_WTP), (CH4_VO) };         //Resource 4
+                double[] n2o = { (N2O_WTP), (N2O_VO) };         //Resource 5
+                double[] ghgs = { 90, 4.5 };                    //Resource 6
+                double[] voc = { (VOC_WTP), (VOC_VO) };         //Resource 7
+                double[] co = { (CO_WTP), (CO_VO) };            //Resource 8
+                double[] nox = { (NOx_WTP), (NOx_VO) };         //Resource 9
+                double[] pm10 = { (PM10_WTP), (PM10_VO) };      //Resource 10
+                double[] sox = { (SOx_WTP), (SOx_VO) };         //Resource 11
                 double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
+                
                 //Generate the graph using the resources set and seriesArray.
                 Generate_Graph(resources, stacked_graph);
     }
@@ -236,6 +237,7 @@ namespace TEAMSModule
             IGDataDictionary<int, IResource> resources = ResultsAccess.controler.CurrentProject.Data.Resources;
             IGDataDictionary<int, IPathway> pathways = ResultsAccess.controler.CurrentProject.Data.Pathways;
             IGDataDictionary<int, IMix> mixes = ResultsAccess.controler.CurrentProject.Data.Mixes;
+            
             //Adds pathways and mixes to the list so the user can select one
             //Conventional Diesel Pathways
             foreach (IResource resource in resources.AllValues.Where(item => item.Id == 27))
