@@ -1112,7 +1112,9 @@
             this.Controls.Add(this.treeView3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(18, 45);
             this.Name = "GREETFormattedResults";
             this.Text = "GREETFormattedResults";
