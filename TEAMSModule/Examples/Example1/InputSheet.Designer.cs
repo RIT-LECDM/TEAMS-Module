@@ -34,6 +34,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.submitAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editGREETVariablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runSimulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -303,7 +304,11 @@
             this.numericUpDown263 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown260 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown261 = new System.Windows.Forms.NumericUpDown();
-            this.submitAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -452,6 +457,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -491,6 +498,13 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // submitAllToolStripMenuItem
+            // 
+            this.submitAllToolStripMenuItem.Name = "submitAllToolStripMenuItem";
+            this.submitAllToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.submitAllToolStripMenuItem.Text = "Submit All";
+            this.submitAllToolStripMenuItem.Click += new System.EventHandler(this.submitAllToolStripMenuItem_Click);
+            // 
             // editGREETVariablesToolStripMenuItem
             // 
             this.editGREETVariablesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -529,6 +543,8 @@
             this.tabPage5.AutoScroll = true;
             this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage5.Controls.Add(this.panel1);
+            this.tabPage5.Controls.Add(this.label1);
             this.tabPage5.Controls.Add(this.numericUpDown221);
             this.tabPage5.Controls.Add(this.numericUpDown222);
             this.tabPage5.Controls.Add(this.numericUpDown223);
@@ -2307,9 +2323,9 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(3, 1370);
+            this.button5.Location = new System.Drawing.Point(3, 1752);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(654, 45);
+            this.button5.Size = new System.Drawing.Size(656, 45);
             this.button5.TabIndex = 22;
             this.button5.Text = "Do Calculations and Submit Data";
             this.button5.UseVisualStyleBackColor = true;
@@ -4302,12 +4318,68 @@
             this.numericUpDown261.Size = new System.Drawing.Size(101, 22);
             this.numericUpDown261.TabIndex = 311;
             // 
-            // submitAllToolStripMenuItem
+            // label1
             // 
-            this.submitAllToolStripMenuItem.Name = "submitAllToolStripMenuItem";
-            this.submitAllToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.submitAllToolStripMenuItem.Text = "Submit All";
-            this.submitAllToolStripMenuItem.Click += new System.EventHandler(this.submitAllToolStripMenuItem_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 1386);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label1.Size = new System.Drawing.Size(285, 18);
+            this.label1.TabIndex = 274;
+            this.label1.Text = "User Inputs For Emissions Calculations";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(6, 1425);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(616, 179);
+            this.panel1.TabIndex = 284;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Silver;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(5, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 17);
+            this.label2.TabIndex = 265;
+            this.label2.Text = "NOX";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown1.DecimalPlaces = 2;
+            this.numericUpDown1.Enabled = false;
+            this.numericUpDown1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(82, 27);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
+            this.numericUpDown1.Size = new System.Drawing.Size(97, 22);
+            this.numericUpDown1.TabIndex = 285;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(79, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 17);
+            this.label3.TabIndex = 286;
+            this.label3.Text = "g/HP-HR(out)";
             // 
             // TEAMS
             // 
@@ -4486,6 +4558,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4767,6 +4842,11 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem submitAllToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
 
 
 

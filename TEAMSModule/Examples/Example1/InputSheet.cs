@@ -624,61 +624,8 @@ namespace WindowsApplication1
         public const int NATGAS_PATH_ID = 1;
         public const int COAL_PATH_ID = 17;
         #endregion
-        #region Emissions Factor Variables
-        public double CD_VOC_EF = 97.224;
-        public double CD_CO_EF = 447.206;
-        public double CD_NOx_EF = 2455.663;
-        public double CD_PM10_EF = 14.690;
-        public double CD_SOx_EF = 17.259; //This one is based on a calculation
-        public double CD_CH4_EF = 4.581;
-        public double CD_N2O_EF = 2.0;
-        public double CD_CO2_EF = 77.181; //This is also based on a caluclation
-
-        public double RO_VOC_EF = 93.485;
-        public double RO_CO_EF = 430.006;
-        public double RO_NOx_EF = 2480.468;
-        public double RO_PM10_EF = 73.450;
-        public double RO_SOx_EF = 1224.353;//Calculation
-        public double RO_CH4_EF = 4.581;
-        public double RO_N2O_EF = 2.0;
-        public double RO_CO2_EF = 84.101;
-
-        public double LSD_VOC_EF = 93.485;
-        public double LSD_CO_EF = 430.006;
-        public double LSD_NOx_EF = 2480.468;
-        public double LSD_PM10_EF = 73.450;
-        public double LSD_SOx_EF = 0.001;
-        public double LSD_CH4_EF = 4.581;
-        public double LSD_N2O_EF = 2.0;
-        public double LSD_CO2_EF = 75.322;
-
-        public double NG_VOC_EF = 54.446;
-        public double NG_CO_EF = 223.603;
-        public double NG_NOx_EF = 1473.398;
-        public double NG_PM10_EF = .147;
-        public double NG_SOx_EF = .269;//Calculated
-        public double NG_CH4_EF = 91.615;
-        public double NG_N2O_EF = 2.0;//Caluclated
-        public double NG_CO2_EF = 58.640;//Calculated
-
-        public double BD_VOC_EF = 97.224;
-        public double BD_CO_EF = 447.206;
-        public double BD_NOx_EF = 2455.663;
-        public double BD_PM10_EF = 14.690;
-        public double BD_SOx_EF = 19.680;
-        public double BD_CH4_EF = 4.581;
-        public double BD_N2O_EF = 4.0;//Only one non calculated
-        public double BD_CO2_EF = 78.975;
-
-        public double FTD_VOC_EF = 101.113;
-        public double FTD_CO_EF= 465.094;
-        public double FTD_NOx_EF = 2431.107;
-        public double FTD_PM10_EF = 2.938;
-        public double FTD_SOx_EF = 0.0;//calculated
-        public double FTD_CH4_EF = 4.581;//calculated
-        public double FTD_N2O_EF = 2.0;//calculated
-        public double FTD_CO2_EF = 75.243;//calculated
-
+        #region Emissions Variables
+        public double NOX_gphphr_out;
         #endregion
         public Update u;
         public Fuel_Specs GVE;
@@ -1029,6 +976,7 @@ namespace WindowsApplication1
         {
             //5 
             textBox1.Text = (string)VesselTypeID;
+            numericUpDown1.Value = (decimal)NOX_gphphr_out;
             numericUpDown132.Value = (decimal)NumberOfEngines;
             numericUpDown124.Value = (decimal)SingleEngineHP;
             numericUpDown138.Value = (decimal)KWperHP;
@@ -1251,6 +1199,7 @@ namespace WindowsApplication1
             FischerTropschSlowCruise = 92;
             FischerTropschFullCruise = 111;
 
+            NOX_gphphr_out = 7.94;
             #endregion
             #region Teams 6.1 - 6.4d
             //6.1 Auxiliary Engine Fuel Type to Present On Results Sheet;
@@ -1470,6 +1419,9 @@ namespace WindowsApplication1
                 FischerTropschFullCruise = (int)numericUpDown216.Value;
                 FischerTropschTotal = (int)((FischerTropschIdle * TimeInIdle * NumberOfEngines) + (FischerTropschManeuvering * TimeInManeuvering * NumberOfEngines) + (FischerTropschPrecautionary * TimeInPrecautionary * NumberOfEngines) + (FischerTropschSlowCruise * TimeInSlowCruise * NumberOfEngines) + (FischerTropschFullCruise * TimeInFullCruise * NumberOfEngines));
                 numericUpDown221.Value = (decimal)FischerTropschTotal;
+
+                //Fuel Inputs
+                NOX_gphphr_out = (double)numericUpDown1.Value;
                 five_complete = true;
         }
         #endregion

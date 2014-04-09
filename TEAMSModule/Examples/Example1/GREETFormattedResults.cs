@@ -74,7 +74,7 @@ namespace TEAMSModule
             BuildingTreeView1();
         }
 
-        #region treeView1 After Select function
+        #region This is where all final results calculations and value pulls are taking place
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             Object tag = this.treeView1.SelectedNode.Tag;
@@ -110,7 +110,7 @@ namespace TEAMSModule
                 CO_Total = CO_WTP + CO_VO;
 
                 NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                NOx_VO = 101;
+                NOx_VO = ((te.NOX_gphphr_out/(te.BTUperKWH * 1.34102209)) * te.MMBTUoutperTrip);
                 NOx_Total = NOx_WTP + NOx_VO;
 
                 //Requires an input on the input sheet
@@ -132,13 +132,13 @@ namespace TEAMSModule
                 CH4_VO = 101;
                 CH4_Total = CH4_WTP + CH4_VO;
 
-                CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.MMBTUinperTrip;
+                CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 double gramsOfFuel = ((1 / (resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceUsed.Density.GreetValue * 3.78541178) / 1000);
                 double carbonPercentage = resourceUsed.CarbonRatio.GreetValue;
                 CO2_VO = ((carbonPercentage * (gramsOfFuel / te.MMBTUinperTrip)) * te.MMBTUinperTrip) * (44 / 12);
                 CO2_Total = CO2_WTP + CO2_VO;
 
-                N2O_WTP = 101;
+                N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 N2O_VO = 101;
                 N2O_Total = N2O_WTP + N2O_VO;
 
@@ -254,7 +254,7 @@ namespace TEAMSModule
 
                 foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
                 {
-                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    TreeNode pathwayNode = new TreeNode(pathway.Name);
                     pathwayNode.Tag = pathway;
                     resourceTreeNode.Nodes.Add(pathwayNode);
                 }
@@ -270,7 +270,7 @@ namespace TEAMSModule
 
                 foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
                 {
-                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    TreeNode pathwayNode = new TreeNode(pathway.Name);
                     pathwayNode.Tag = pathway;
                     resourceTreeNode.Nodes.Add(pathwayNode);
                 }
@@ -285,7 +285,7 @@ namespace TEAMSModule
 
                 foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
                 {
-                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    TreeNode pathwayNode = new TreeNode(pathway.Name);
                     pathwayNode.Tag = pathway;
                     resourceTreeNode.Nodes.Add(pathwayNode);
                 }
@@ -300,7 +300,7 @@ namespace TEAMSModule
 
                 foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
                 {
-                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    TreeNode pathwayNode = new TreeNode(pathway.Name);
                     pathwayNode.Tag = pathway;
                     resourceTreeNode.Nodes.Add(pathwayNode);
                 }
@@ -315,7 +315,7 @@ namespace TEAMSModule
 
                 foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
                 {
-                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    TreeNode pathwayNode = new TreeNode(pathway.Name);
                     pathwayNode.Tag = pathway;
                     resourceTreeNode.Nodes.Add(pathwayNode);
                 }
@@ -331,7 +331,7 @@ namespace TEAMSModule
 
                 foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
                 {
-                    TreeNode pathwayNode = new TreeNode("Pathway: " + pathway.Name);
+                    TreeNode pathwayNode = new TreeNode(pathway.Name);
                     pathwayNode.Tag = pathway;
                     resourceTreeNode.Nodes.Add(pathwayNode);
                 }
