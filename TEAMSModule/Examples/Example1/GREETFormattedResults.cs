@@ -102,30 +102,30 @@ namespace TEAMSModule
 
                 //Requires an input on the input sheet
                 VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                VOC_VO = ((te.VOC_gphphr_out / (te.BTUperKWH * 1.34102209)) * te.MMBTUoutperTrip);
+                VOC_VO = ((te.VOC_gphphr_out * (1/0.745699871)) * te.KWHOutperTrip);
                 VOC_Total = VOC_WTP + VOC_VO;
 
                 CO_WTP = pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                CO_VO = ((te.CO_gphphr_out / (te.BTUperKWH * 1.34102209)) * te.MMBTUoutperTrip);
+                CO_VO = ((te.CO_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
                 CO_Total = CO_WTP + CO_VO;
 
                 NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                NOx_VO = ((te.NOX_gphphr_out/(te.BTUperKWH * 1.34102209)) * te.MMBTUoutperTrip);
+                NOx_VO = ((te.NOX_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
                 NOx_Total = NOx_WTP + NOx_VO;
 
                 //Requires an input on the input sheet
                 PM10_WTP = pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                PM10_VO = ((te.PM10_gphphr_out / (te.BTUperKWH * 1.34102209)) * te.MMBTUoutperTrip);
+                PM10_VO = ((te.PM10_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
                 PM10_Total = PM10_WTP + PM10_VO;
 
                 //Requires an input on the input sheet
                 PM25_WTP = pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                PM25_VO = ((te.PM25_gphphr_out / (te.BTUperKWH * 1.34102209)) * te.MMBTUoutperTrip);
+                PM25_VO = ((te.PM25_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
                 PM25_Total = PM25_WTP + PM25_VO;
 
                 //Requires an input on the input sheet
                 SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                SOx_VO = 101;
+                SOx_VO = resourceUsed.Density.GreetValue * (1000 / 7.48052) * te.GALLONperTrip * resourceUsed.SulfurRatio.GreetValue;
                 SOx_Total = SOx_WTP + SOx_VO;
 
                 CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * 1000000000000 * te.MMBTUinperTrip;
