@@ -24,6 +24,7 @@ namespace TEAMSModule
         public TEAMS te;
 
         #region All Needed Results Variables
+        //Main ENgine Variables
         public double TE_WTP = 0;
         public double TE_VO = 0;
         public double TE_Total = 0;
@@ -60,6 +61,30 @@ namespace TEAMSModule
         public double N2O_Total = 0;
         public double GHG_WTP = 0;
         public double GHG_VO = 0;
+
+        //Auxillary Engine Variables
+        public double AUX_TE_WTP = 0;
+        public double AUX_TE_VO = 0;
+        public double AUX_VOC_WTP = 0;
+        public double AUX_VOC_VO = 0;
+        public double AUX_CO_WTP = 0;
+        public double AUX_CO_VO = 0;
+        public double AUX_NOx_WTP = 0;
+        public double AUX_NOx_VO = 0;
+        public double AUX_PM10_WTP = 0;
+        public double AUX_PM10_VO = 0;
+        public double AUX_PM25_WTP = 0;
+        public double AUX_PM25_VO = 0;
+        public double AUX_SOx_WTP = 0;
+        public double AUX_SOx_VO = 0;
+        public double AUX_CH4_WTP = 0;
+        public double AUX_CH4_VO = 0;
+        public double AUX_CO2_WTP = 0;
+        public double AUX_CO2_VO = 0;
+        public double AUX_N2O_WTP = 0;
+        public double AUX_N2O_VO = 0;
+        public double AUX_GHG_WTP = 0;
+        public double AUX_GHG_VO = 0;
         #endregion
         public GREETFormattedResults(TEAMS t)
         {
@@ -191,8 +216,40 @@ namespace TEAMSModule
             label55.Text = (CO2_VO).ToString();     // CO2
             label56.Text = (N2O_VO).ToString();     // N2O
 
+
+            //Column 3 -- Aux Engine WTP
+            label176.Text = "placeholder";
+            label177.Text = "placeholder";
+            label178.Text = "placeholder";
+            label180.Text = "placeholder";
+            label190.Text = "placeholder";
+            label192.Text = "placeholder";
+            label193.Text = "placeholder";
+            label194.Text = "placeholder";
+            label195.Text = "placeholder";
+            label196.Text = "placeholder";
+            label197.Text = "placeholder";
+            label198.Text = "placeholder";
+            label199.Text = "placeholder";
+            label200.Text = "placeholder";
+
+            //Collumn 4 -- Aux Engine Vessel Operations
+            label19.Text = "placeholder";
+            label26.Text = "placeholder";
+            label27.Text = "placeholder";
+            label28.Text = "placeholder";
+            label29.Text = "placeholder";
+            label40.Text = "placeholder";
+            label41.Text = "placeholder";
+            label43.Text = "placeholder";
+            label44.Text = "placeholder";
+            label45.Text = "placeholder";
+            label46.Text = "placeholder";
+            label47.Text = "placeholder";
+            label57.Text = "placeholder";
+            label58.Text = "placeholder";
             /*
-             * Column 3 -- Total
+             * Column 5 -- Total
              */
 
             label60.Text = (TE_Total).ToString("#.##") + " mmbtu/trip";   // Total Energy
