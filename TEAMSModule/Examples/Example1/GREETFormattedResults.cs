@@ -118,7 +118,9 @@ namespace TEAMSModule
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
                 TE_WTP = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
                 TE_VO = te.MMBTUinperTrip;
-                TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip;
+                AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
+                AUX_TE_VO = te.AuxEngineMMBTUinperTrip;
+                TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip + AUX_TE_WTP + AUX_TE_VO;
 
                 FF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 CF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
@@ -128,44 +130,62 @@ namespace TEAMSModule
                 //Requires an input on the input sheet
                 VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 VOC_VO = ((te.VOC_gphphr_out * (1/0.745699871)) * te.KWHOutperTrip);
-                VOC_Total = VOC_WTP + VOC_VO;
+                AUX_VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_VOC_VO = ((te.VOC_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                VOC_Total = VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
                 CO_WTP = pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 CO_VO = ((te.CO_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
-                CO_Total = CO_WTP + CO_VO;
+                AUX_CO_WTP = pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_CO_VO = ((te.CO_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                CO_Total = CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
                 NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 NOx_VO = ((te.NOX_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
-                NOx_Total = NOx_WTP + NOx_VO;
+                AUX_NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_NOx_VO = ((te.NOX_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                NOx_Total = NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
                 //Requires an input on the input sheet
                 PM10_WTP = pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 PM10_VO = ((te.PM10_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
-                PM10_Total = PM10_WTP + PM10_VO;
+                AUX_PM10_WTP = pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_PM10_VO = ((te.PM10_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                PM10_Total = PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
                 //Requires an input on the input sheet
                 PM25_WTP = pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 PM25_VO = ((te.PM25_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
-                PM25_Total = PM25_WTP + PM25_VO;
+                AUX_PM25_WTP = pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_PM25_VO = ((te.PM25_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                PM25_Total = PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 //Requires an input on the input sheet
                 SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 SOx_VO = resourceUsed.Density.GreetValue * (1000 / 7.48052) * te.GALLONperTrip * resourceUsed.SulfurRatio.GreetValue;
-                SOx_Total = SOx_WTP + SOx_VO;
+                AUX_SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_SOx_VO = resourceUsed.Density.GreetValue * (1000 / 7.48052) * te.AuxEngineGALLONperTrip * resourceUsed.SulfurRatio.GreetValue;
+                SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 CH4_VO = 101;
-                CH4_Total = CH4_WTP + CH4_VO;
+                AUX_CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_CH4_VO = 101;
+                CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 double gramsOfFuel = ((1 / (resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceUsed.Density.GreetValue * 3.78541178) / 1000);
                 double carbonPercentage = resourceUsed.CarbonRatio.GreetValue;
                 CO2_VO = ((carbonPercentage * (gramsOfFuel / te.MMBTUinperTrip)) * te.MMBTUinperTrip) * (44 / 12);
-                CO2_Total = CO2_WTP + CO2_VO;
+                AUX_CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_CO2_VO = ((carbonPercentage * (gramsOfFuel / te.AuxEngineMMBTUinperTrip)) * te.AuxEngineMMBTUinperTrip) * (44 / 12);
+                CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 N2O_VO = 101;
-                N2O_Total = N2O_WTP + N2O_VO;
+                AUX_N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_N2O_VO = 101;
+                N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
 
                 GHG_WTP = pathwayResults.LifeCycleEmissionsGroups(data).ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;
             }
@@ -206,48 +226,40 @@ namespace TEAMSModule
              * EMISSIONS
              ***************/
 
-            label48.Text = (VOC_VO).ToString();     // VOC
-            label49.Text = (CO_VO).ToString();      // CO
-            label50.Text = (NOx_VO).ToString();     // NOx
-            label51.Text = (PM10_VO).ToString();    // PM10
-            label52.Text = (PM25_VO).ToString();    // PM2.5
-            label53.Text = (SOx_VO).ToString();     // SOx
-            label54.Text = (CH4_VO).ToString();     // CH4
-            label55.Text = (CO2_VO).ToString();     // CO2
-            label56.Text = (N2O_VO).ToString();     // N2O
+            label48.Text = (VOC_VO).ToString("#.##") + " g/trip";     // VOC
+            label49.Text = (CO_VO).ToString("#.##") + " g/trip";      // CO
+            label50.Text = (NOx_VO).ToString("#.##") + " g/trip";     // NOx
+            label51.Text = (PM10_VO).ToString("#.##") + " g/trip";    // PM10
+            label52.Text = (PM25_VO).ToString("#.##") + " g/trip";    // PM2.5
+            label53.Text = (SOx_VO).ToString("#.##") + " g/trip";     // SOx
+            label54.Text = (CH4_VO).ToString("#.##") + " g/trip";     // CH4
+            label55.Text = (CO2_VO).ToString("#.##") + " g/trip";     // CO2
+            label56.Text = (N2O_VO).ToString("#.##") + " g/trip";     // N2O
 
 
             //Column 3 -- Aux Engine WTP
-            label176.Text = "placeholder";
-            label177.Text = "placeholder";
-            label178.Text = "placeholder";
-            label180.Text = "placeholder";
-            label190.Text = "placeholder";
-            label192.Text = "placeholder";
-            label193.Text = "placeholder";
-            label194.Text = "placeholder";
-            label195.Text = "placeholder";
-            label196.Text = "placeholder";
-            label197.Text = "placeholder";
-            label198.Text = "placeholder";
-            label199.Text = "placeholder";
-            label200.Text = "placeholder";
+            label176.Text = AUX_TE_WTP.ToString("#.##") + " mmbtu/trip";
+            label192.Text = AUX_VOC_WTP.ToString("#.##") + " g/trip";
+            label193.Text = AUX_CO_WTP.ToString("#.##") + " g/trip";
+            label194.Text = AUX_NOx_WTP.ToString("#.##") + " g/trip";
+            label195.Text = AUX_PM10_WTP.ToString("#.##") + " g/trip";
+            label196.Text = AUX_PM25_WTP.ToString("#.##") + " g/trip";
+            label197.Text = AUX_SOx_WTP.ToString("#.##") + " g/trip";
+            label198.Text = AUX_CH4_WTP.ToString("#.##") + " g/trip";
+            label199.Text = AUX_CO2_WTP.ToString("#.##") + " g/trip";
+            label200.Text = AUX_N2O_WTP.ToString("#.##") + " g/trip";
 
             //Collumn 4 -- Aux Engine Vessel Operations
-            label19.Text = "placeholder";
-            label26.Text = "placeholder";
-            label27.Text = "placeholder";
-            label28.Text = "placeholder";
-            label29.Text = "placeholder";
-            label40.Text = "placeholder";
-            label41.Text = "placeholder";
-            label43.Text = "placeholder";
-            label44.Text = "placeholder";
-            label45.Text = "placeholder";
-            label46.Text = "placeholder";
-            label47.Text = "placeholder";
-            label57.Text = "placeholder";
-            label58.Text = "placeholder";
+            label19.Text = AUX_TE_VO.ToString("#.##") + " mmbtu/trip";
+            label40.Text = AUX_VOC_VO.ToString("#.##") + " g/trip";
+            label41.Text = AUX_CO_VO.ToString("#.##") + " g/trip";
+            label43.Text = AUX_NOx_VO.ToString("#.##") + " g/trip";
+            label44.Text = AUX_PM10_VO.ToString("#.##") + " g/trip";
+            label45.Text = AUX_PM25_VO.ToString("#.##") + " g/trip";
+            label46.Text = AUX_SOx_VO.ToString("#.##") + " g/trip";
+            label47.Text = AUX_CH4_VO.ToString("#.##") + " g/trip";
+            label57.Text = AUX_CO2_VO.ToString("#.##") + " g/trip";
+            label58.Text = AUX_N2O_VO.ToString("#.##") + " g/trip";
             /*
              * Column 5 -- Total
              */
@@ -262,15 +274,15 @@ namespace TEAMSModule
              * EMISSIONS
              ***************/
 
-            label66.Text = (VOC_Total).ToString();      // VOC
-            label67.Text = (CO_Total).ToString();       // CO
-            label68.Text = (NOx_Total).ToString();      // NOx
-            label69.Text = (PM10_Total).ToString();     // PM10
-            label70.Text = (PM25_Total).ToString();     // PM2.5
-            label71.Text = (SOx_Total).ToString();      // SOx
-            label72.Text = (CH4_Total).ToString();      // CH4
-            label73.Text = (CO2_Total).ToString();      // CO2
-            label74.Text = (N2O_Total).ToString();      // N2O
+            label66.Text = (VOC_Total).ToString("#.##") + " g/trip";      // VOC
+            label67.Text = (CO_Total).ToString("#.##") + " g/trip";       // CO
+            label68.Text = (NOx_Total).ToString("#.##") + " g/trip";      // NOx
+            label69.Text = (PM10_Total).ToString("#.##") + " g/trip";     // PM10
+            label70.Text = (PM25_Total).ToString("#.##") + " g/trip";     // PM2.5
+            label71.Text = (SOx_Total).ToString("#.##") + " g/trip";      // SOx
+            label72.Text = (CH4_Total).ToString("#.##") + " g/trip";      // CH4
+            label73.Text = (CO2_Total).ToString("#.##") + " g/trip";      // CO2
+            label74.Text = (N2O_Total).ToString("#.##") + " g/trip";      // N2O
 
             //Title
             label1.Text = fuelUsed;

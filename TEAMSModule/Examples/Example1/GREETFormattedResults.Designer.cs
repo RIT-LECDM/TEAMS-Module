@@ -60,25 +60,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GREETFormattedResults));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label68 = new System.Windows.Forms.Label();
-            this.label69 = new System.Windows.Forms.Label();
-            this.label70 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label200 = new System.Windows.Forms.Label();
+            this.label176 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -114,20 +105,20 @@
             this.label51 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label55 = new System.Windows.Forms.Label();
-            this.stacked_graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.treeView3 = new System.Windows.Forms.TreeView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label176 = new System.Windows.Forms.Label();
-            this.label177 = new System.Windows.Forms.Label();
-            this.label178 = new System.Windows.Forms.Label();
-            this.label180 = new System.Windows.Forms.Label();
-            this.label190 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
             this.label192 = new System.Windows.Forms.Label();
             this.label193 = new System.Windows.Forms.Label();
             this.label194 = new System.Windows.Forms.Label();
@@ -136,13 +127,6 @@
             this.label197 = new System.Windows.Forms.Label();
             this.label198 = new System.Windows.Forms.Label();
             this.label199 = new System.Windows.Forms.Label();
-            this.label200 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
@@ -152,6 +136,13 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
+            this.stacked_graph = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.treeView3 = new System.Windows.Forms.TreeView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -169,7 +160,7 @@
             this.panel2.Controls.Add(this.stacked_graph);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(272, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1627, 801);
             this.panel2.TabIndex = 1;
@@ -186,10 +177,34 @@
             this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.tableLayoutPanel1);
             this.panel4.Location = new System.Drawing.Point(4, 79);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1609, 715);
             this.panel4.TabIndex = 5;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(987, 15);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(252, 22);
+            this.label18.TabIndex = 23;
+            this.label18.Text = "Aux Engine: Vessel Operation";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label17
+            // 
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(744, 15);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(224, 22);
+            this.label17.TabIndex = 22;
+            this.label17.Text = "Aux Engine: Well to Pump";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label23
             // 
@@ -249,8 +264,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 277F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 217F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 282F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 338F));
-            this.tableLayoutPanel1.Controls.Add(this.label25, 1, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 340F));
             this.tableLayoutPanel1.Controls.Add(this.label19, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.label200, 3, 14);
             this.tableLayoutPanel1.Controls.Add(this.label176, 3, 0);
@@ -303,10 +317,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label72, 5, 12);
             this.tableLayoutPanel1.Controls.Add(this.label73, 5, 13);
             this.tableLayoutPanel1.Controls.Add(this.label74, 5, 14);
-            this.tableLayoutPanel1.Controls.Add(this.label177, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label178, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label180, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label190, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.label192, 3, 6);
             this.tableLayoutPanel1.Controls.Add(this.label193, 3, 7);
             this.tableLayoutPanel1.Controls.Add(this.label194, 3, 8);
@@ -315,10 +325,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label197, 3, 11);
             this.tableLayoutPanel1.Controls.Add(this.label198, 3, 12);
             this.tableLayoutPanel1.Controls.Add(this.label199, 3, 13);
-            this.tableLayoutPanel1.Controls.Add(this.label26, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label27, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label28, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label29, 4, 4);
             this.tableLayoutPanel1.Controls.Add(this.label40, 4, 6);
             this.tableLayoutPanel1.Controls.Add(this.label41, 4, 7);
             this.tableLayoutPanel1.Controls.Add(this.label43, 4, 8);
@@ -355,173 +361,41 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1594, 671);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label60
+            // label19
             // 
-            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label60.Location = new System.Drawing.Point(1257, 96);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(72, 20);
-            this.label60.TabIndex = 54;
-            this.label60.Text = "label60";
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label19.Location = new System.Drawing.Point(972, 96);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(81, 20);
+            this.label19.TabIndex = 83;
+            this.label19.Text = "label176";
             // 
-            // label61
+            // label200
             // 
-            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label61.Location = new System.Drawing.Point(1257, 159);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(72, 20);
-            this.label61.TabIndex = 55;
-            this.label61.Text = "label61";
+            this.label200.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label200.AutoSize = true;
+            this.label200.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label200.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label200.Location = new System.Drawing.Point(754, 650);
+            this.label200.Name = "label200";
+            this.label200.Size = new System.Drawing.Size(81, 20);
+            this.label200.TabIndex = 82;
+            this.label200.Text = "label176";
             // 
-            // label62
+            // label176
             // 
-            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label62.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label62.Location = new System.Drawing.Point(1257, 197);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(72, 20);
-            this.label62.TabIndex = 56;
-            this.label62.Text = "label62";
-            // 
-            // label63
-            // 
-            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label63.Location = new System.Drawing.Point(1257, 238);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(72, 20);
-            this.label63.TabIndex = 57;
-            this.label63.Text = "label63";
-            // 
-            // label64
-            // 
-            this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label64.Location = new System.Drawing.Point(1257, 278);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(72, 20);
-            this.label64.TabIndex = 58;
-            this.label64.Text = "label64";
-            // 
-            // label66
-            // 
-            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label66.Location = new System.Drawing.Point(1257, 364);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(72, 20);
-            this.label66.TabIndex = 60;
-            this.label66.Text = "label66";
-            // 
-            // label67
-            // 
-            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label67.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label67.Location = new System.Drawing.Point(1257, 403);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(72, 20);
-            this.label67.TabIndex = 61;
-            this.label67.Text = "label67";
-            // 
-            // label68
-            // 
-            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label68.Location = new System.Drawing.Point(1257, 443);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(72, 20);
-            this.label68.TabIndex = 62;
-            this.label68.Text = "label68";
-            // 
-            // label69
-            // 
-            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label69.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label69.Location = new System.Drawing.Point(1257, 478);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(72, 20);
-            this.label69.TabIndex = 63;
-            this.label69.Text = "label69";
-            // 
-            // label70
-            // 
-            this.label70.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label70.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label70.Location = new System.Drawing.Point(1257, 513);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(72, 20);
-            this.label70.TabIndex = 64;
-            this.label70.Text = "label70";
-            // 
-            // label71
-            // 
-            this.label71.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label71.Location = new System.Drawing.Point(1257, 547);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(72, 20);
-            this.label71.TabIndex = 65;
-            this.label71.Text = "label71";
-            // 
-            // label72
-            // 
-            this.label72.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label72.Location = new System.Drawing.Point(1257, 581);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(72, 20);
-            this.label72.TabIndex = 66;
-            this.label72.Text = "label72";
-            // 
-            // label73
-            // 
-            this.label73.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label73.Location = new System.Drawing.Point(1257, 614);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(72, 20);
-            this.label73.TabIndex = 67;
-            this.label73.Text = "label73";
-            // 
-            // label74
-            // 
-            this.label74.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label74.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label74.Location = new System.Drawing.Point(1257, 650);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(72, 20);
-            this.label74.TabIndex = 68;
-            this.label74.Text = "label74";
+            this.label176.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label176.AutoSize = true;
+            this.label176.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label176.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label176.Location = new System.Drawing.Point(754, 96);
+            this.label176.Name = "label176";
+            this.label176.Size = new System.Drawing.Size(81, 20);
+            this.label176.TabIndex = 19;
+            this.label176.Text = "label175";
             // 
             // label42
             // 
@@ -529,7 +403,7 @@
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label42.Location = new System.Drawing.Point(478, 96);
+            this.label42.Location = new System.Drawing.Point(476, 96);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(72, 20);
             this.label42.TabIndex = 36;
@@ -721,7 +595,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label24.Location = new System.Drawing.Point(205, 96);
+            this.label24.Location = new System.Drawing.Point(204, 96);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(72, 20);
             this.label24.TabIndex = 18;
@@ -733,7 +607,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label30.Location = new System.Drawing.Point(205, 364);
+            this.label30.Location = new System.Drawing.Point(204, 364);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(72, 20);
             this.label30.TabIndex = 24;
@@ -745,7 +619,7 @@
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label31.Location = new System.Drawing.Point(205, 403);
+            this.label31.Location = new System.Drawing.Point(204, 403);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(72, 20);
             this.label31.TabIndex = 25;
@@ -757,7 +631,7 @@
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label32.Location = new System.Drawing.Point(205, 443);
+            this.label32.Location = new System.Drawing.Point(204, 443);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(72, 20);
             this.label32.TabIndex = 26;
@@ -769,7 +643,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label33.Location = new System.Drawing.Point(205, 478);
+            this.label33.Location = new System.Drawing.Point(204, 478);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(72, 20);
             this.label33.TabIndex = 27;
@@ -781,7 +655,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label34.Location = new System.Drawing.Point(205, 513);
+            this.label34.Location = new System.Drawing.Point(204, 513);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(72, 20);
             this.label34.TabIndex = 28;
@@ -793,7 +667,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label35.Location = new System.Drawing.Point(205, 547);
+            this.label35.Location = new System.Drawing.Point(204, 547);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(72, 20);
             this.label35.TabIndex = 29;
@@ -805,7 +679,7 @@
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label36.Location = new System.Drawing.Point(205, 581);
+            this.label36.Location = new System.Drawing.Point(204, 581);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(72, 20);
             this.label36.TabIndex = 30;
@@ -817,7 +691,7 @@
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label37.Location = new System.Drawing.Point(205, 614);
+            this.label37.Location = new System.Drawing.Point(204, 614);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(72, 20);
             this.label37.TabIndex = 31;
@@ -829,7 +703,7 @@
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label38.Location = new System.Drawing.Point(205, 650);
+            this.label38.Location = new System.Drawing.Point(204, 650);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(72, 20);
             this.label38.TabIndex = 32;
@@ -841,7 +715,7 @@
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label56.Location = new System.Drawing.Point(478, 650);
+            this.label56.Location = new System.Drawing.Point(476, 650);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(72, 20);
             this.label56.TabIndex = 50;
@@ -853,7 +727,7 @@
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label54.Location = new System.Drawing.Point(478, 581);
+            this.label54.Location = new System.Drawing.Point(476, 581);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(72, 20);
             this.label54.TabIndex = 48;
@@ -865,7 +739,7 @@
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label52.Location = new System.Drawing.Point(478, 513);
+            this.label52.Location = new System.Drawing.Point(476, 513);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(72, 20);
             this.label52.TabIndex = 46;
@@ -877,7 +751,7 @@
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label50.Location = new System.Drawing.Point(478, 443);
+            this.label50.Location = new System.Drawing.Point(476, 443);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(72, 20);
             this.label50.TabIndex = 44;
@@ -889,7 +763,7 @@
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label48.Location = new System.Drawing.Point(478, 364);
+            this.label48.Location = new System.Drawing.Point(476, 364);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(72, 20);
             this.label48.TabIndex = 42;
@@ -901,7 +775,7 @@
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label49.Location = new System.Drawing.Point(478, 403);
+            this.label49.Location = new System.Drawing.Point(476, 403);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(72, 20);
             this.label49.TabIndex = 43;
@@ -913,7 +787,7 @@
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label51.Location = new System.Drawing.Point(478, 478);
+            this.label51.Location = new System.Drawing.Point(476, 478);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(72, 20);
             this.label51.TabIndex = 45;
@@ -925,7 +799,7 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label53.Location = new System.Drawing.Point(478, 547);
+            this.label53.Location = new System.Drawing.Point(476, 547);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(72, 20);
             this.label53.TabIndex = 47;
@@ -937,11 +811,383 @@
             this.label55.AutoSize = true;
             this.label55.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label55.Location = new System.Drawing.Point(478, 614);
+            this.label55.Location = new System.Drawing.Point(476, 614);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(72, 20);
             this.label55.TabIndex = 49;
             this.label55.Text = "label55";
+            // 
+            // label60
+            // 
+            this.label60.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label60.Location = new System.Drawing.Point(1255, 96);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(72, 20);
+            this.label60.TabIndex = 54;
+            this.label60.Text = "label60";
+            // 
+            // label61
+            // 
+            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label61.Location = new System.Drawing.Point(1255, 159);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(72, 20);
+            this.label61.TabIndex = 55;
+            this.label61.Text = "label61";
+            // 
+            // label62
+            // 
+            this.label62.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label62.Location = new System.Drawing.Point(1255, 197);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(72, 20);
+            this.label62.TabIndex = 56;
+            this.label62.Text = "label62";
+            // 
+            // label63
+            // 
+            this.label63.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label63.Location = new System.Drawing.Point(1255, 238);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(72, 20);
+            this.label63.TabIndex = 57;
+            this.label63.Text = "label63";
+            // 
+            // label64
+            // 
+            this.label64.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label64.Location = new System.Drawing.Point(1255, 278);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(72, 20);
+            this.label64.TabIndex = 58;
+            this.label64.Text = "label64";
+            // 
+            // label66
+            // 
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label66.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label66.Location = new System.Drawing.Point(1255, 364);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(72, 20);
+            this.label66.TabIndex = 60;
+            this.label66.Text = "label66";
+            // 
+            // label67
+            // 
+            this.label67.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label67.Location = new System.Drawing.Point(1255, 403);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(72, 20);
+            this.label67.TabIndex = 61;
+            this.label67.Text = "label67";
+            // 
+            // label68
+            // 
+            this.label68.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label68.Location = new System.Drawing.Point(1255, 443);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(72, 20);
+            this.label68.TabIndex = 62;
+            this.label68.Text = "label68";
+            // 
+            // label69
+            // 
+            this.label69.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label69.Location = new System.Drawing.Point(1255, 478);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(72, 20);
+            this.label69.TabIndex = 63;
+            this.label69.Text = "label69";
+            // 
+            // label70
+            // 
+            this.label70.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label70.Location = new System.Drawing.Point(1255, 513);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(72, 20);
+            this.label70.TabIndex = 64;
+            this.label70.Text = "label70";
+            // 
+            // label71
+            // 
+            this.label71.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label71.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label71.Location = new System.Drawing.Point(1255, 547);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(72, 20);
+            this.label71.TabIndex = 65;
+            this.label71.Text = "label71";
+            // 
+            // label72
+            // 
+            this.label72.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label72.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label72.Location = new System.Drawing.Point(1255, 581);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(72, 20);
+            this.label72.TabIndex = 66;
+            this.label72.Text = "label72";
+            // 
+            // label73
+            // 
+            this.label73.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label73.AutoSize = true;
+            this.label73.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label73.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label73.Location = new System.Drawing.Point(1255, 614);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(72, 20);
+            this.label73.TabIndex = 67;
+            this.label73.Text = "label73";
+            // 
+            // label74
+            // 
+            this.label74.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label74.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label74.Location = new System.Drawing.Point(1255, 650);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(72, 20);
+            this.label74.TabIndex = 68;
+            this.label74.Text = "label74";
+            // 
+            // label192
+            // 
+            this.label192.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label192.AutoSize = true;
+            this.label192.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label192.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label192.Location = new System.Drawing.Point(754, 364);
+            this.label192.Name = "label192";
+            this.label192.Size = new System.Drawing.Size(81, 20);
+            this.label192.TabIndex = 74;
+            this.label192.Text = "label176";
+            // 
+            // label193
+            // 
+            this.label193.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label193.AutoSize = true;
+            this.label193.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label193.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label193.Location = new System.Drawing.Point(754, 403);
+            this.label193.Name = "label193";
+            this.label193.Size = new System.Drawing.Size(81, 20);
+            this.label193.TabIndex = 75;
+            this.label193.Text = "label176";
+            // 
+            // label194
+            // 
+            this.label194.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label194.AutoSize = true;
+            this.label194.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label194.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label194.Location = new System.Drawing.Point(754, 443);
+            this.label194.Name = "label194";
+            this.label194.Size = new System.Drawing.Size(81, 20);
+            this.label194.TabIndex = 76;
+            this.label194.Text = "label176";
+            // 
+            // label195
+            // 
+            this.label195.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label195.AutoSize = true;
+            this.label195.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label195.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label195.Location = new System.Drawing.Point(754, 478);
+            this.label195.Name = "label195";
+            this.label195.Size = new System.Drawing.Size(81, 20);
+            this.label195.TabIndex = 77;
+            this.label195.Text = "label176";
+            // 
+            // label196
+            // 
+            this.label196.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label196.AutoSize = true;
+            this.label196.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label196.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label196.Location = new System.Drawing.Point(754, 513);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(81, 20);
+            this.label196.TabIndex = 78;
+            this.label196.Text = "label176";
+            // 
+            // label197
+            // 
+            this.label197.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label197.AutoSize = true;
+            this.label197.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label197.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label197.Location = new System.Drawing.Point(754, 547);
+            this.label197.Name = "label197";
+            this.label197.Size = new System.Drawing.Size(81, 20);
+            this.label197.TabIndex = 79;
+            this.label197.Text = "label176";
+            // 
+            // label198
+            // 
+            this.label198.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label198.AutoSize = true;
+            this.label198.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label198.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label198.Location = new System.Drawing.Point(754, 581);
+            this.label198.Name = "label198";
+            this.label198.Size = new System.Drawing.Size(81, 20);
+            this.label198.TabIndex = 80;
+            this.label198.Text = "label176";
+            // 
+            // label199
+            // 
+            this.label199.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label199.AutoSize = true;
+            this.label199.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label199.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label199.Location = new System.Drawing.Point(754, 614);
+            this.label199.Name = "label199";
+            this.label199.Size = new System.Drawing.Size(81, 20);
+            this.label199.TabIndex = 81;
+            this.label199.Text = "label176";
+            // 
+            // label40
+            // 
+            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label40.Location = new System.Drawing.Point(972, 364);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(81, 20);
+            this.label40.TabIndex = 90;
+            this.label40.Text = "label176";
+            // 
+            // label41
+            // 
+            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label41.Location = new System.Drawing.Point(972, 403);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(81, 20);
+            this.label41.TabIndex = 91;
+            this.label41.Text = "label176";
+            // 
+            // label43
+            // 
+            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label43.Location = new System.Drawing.Point(972, 443);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(81, 20);
+            this.label43.TabIndex = 92;
+            this.label43.Text = "label176";
+            // 
+            // label44
+            // 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label44.Location = new System.Drawing.Point(972, 478);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(81, 20);
+            this.label44.TabIndex = 93;
+            this.label44.Text = "label176";
+            // 
+            // label45
+            // 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label45.Location = new System.Drawing.Point(972, 513);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(81, 20);
+            this.label45.TabIndex = 94;
+            this.label45.Text = "label176";
+            // 
+            // label46
+            // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label46.Location = new System.Drawing.Point(972, 547);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(81, 20);
+            this.label46.TabIndex = 95;
+            this.label46.Text = "label176";
+            // 
+            // label47
+            // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label47.Location = new System.Drawing.Point(972, 581);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(81, 20);
+            this.label47.TabIndex = 96;
+            this.label47.Text = "label176";
+            // 
+            // label57
+            // 
+            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label57.Location = new System.Drawing.Point(972, 614);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(81, 20);
+            this.label57.TabIndex = 97;
+            this.label57.Text = "label176";
+            // 
+            // label58
+            // 
+            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label58.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label58.Location = new System.Drawing.Point(972, 650);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(81, 20);
+            this.label58.TabIndex = 98;
+            this.label58.Text = "label176";
             // 
             // stacked_graph
             // 
@@ -1001,7 +1247,7 @@
             legend1.Name = "Legend1";
             this.stacked_graph.Legends.Add(legend1);
             this.stacked_graph.Location = new System.Drawing.Point(8, 801);
-            this.stacked_graph.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stacked_graph.Margin = new System.Windows.Forms.Padding(4);
             this.stacked_graph.Name = "stacked_graph";
             this.stacked_graph.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
             series1.ChartArea = "ChartArea1";
@@ -1029,7 +1275,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(-1, -1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1073, 72);
             this.panel3.TabIndex = 2;
@@ -1115,7 +1361,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.treeView1);
             this.panel1.Location = new System.Drawing.Point(3, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(241, 1458);
             this.panel1.TabIndex = 8;
@@ -1124,385 +1370,13 @@
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(-1, 596);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 58);
             this.button1.TabIndex = 1;
             this.button1.Text = "Save to Excel";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(744, 15);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(224, 22);
-            this.label17.TabIndex = 22;
-            this.label17.Text = "Aux Engine: Well to Pump";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(987, 15);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(252, 22);
-            this.label18.TabIndex = 23;
-            this.label18.Text = "Aux Engine: Vessel Operation";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label176
-            // 
-            this.label176.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label176.AutoSize = true;
-            this.label176.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label176.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label176.Location = new System.Drawing.Point(756, 96);
-            this.label176.Name = "label176";
-            this.label176.Size = new System.Drawing.Size(81, 20);
-            this.label176.TabIndex = 19;
-            this.label176.Text = "label175";
-            // 
-            // label177
-            // 
-            this.label177.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label177.AutoSize = true;
-            this.label177.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label177.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label177.Location = new System.Drawing.Point(756, 159);
-            this.label177.Name = "label177";
-            this.label177.Size = new System.Drawing.Size(81, 20);
-            this.label177.TabIndex = 69;
-            this.label177.Text = "label176";
-            // 
-            // label178
-            // 
-            this.label178.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label178.AutoSize = true;
-            this.label178.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label178.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label178.Location = new System.Drawing.Point(756, 197);
-            this.label178.Name = "label178";
-            this.label178.Size = new System.Drawing.Size(81, 20);
-            this.label178.TabIndex = 70;
-            this.label178.Text = "label176";
-            // 
-            // label180
-            // 
-            this.label180.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label180.AutoSize = true;
-            this.label180.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label180.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label180.Location = new System.Drawing.Point(756, 238);
-            this.label180.Name = "label180";
-            this.label180.Size = new System.Drawing.Size(81, 20);
-            this.label180.TabIndex = 71;
-            this.label180.Text = "label176";
-            // 
-            // label190
-            // 
-            this.label190.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label190.AutoSize = true;
-            this.label190.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label190.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label190.Location = new System.Drawing.Point(756, 278);
-            this.label190.Name = "label190";
-            this.label190.Size = new System.Drawing.Size(81, 20);
-            this.label190.TabIndex = 72;
-            this.label190.Text = "label176";
-            // 
-            // label192
-            // 
-            this.label192.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label192.AutoSize = true;
-            this.label192.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label192.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label192.Location = new System.Drawing.Point(756, 364);
-            this.label192.Name = "label192";
-            this.label192.Size = new System.Drawing.Size(81, 20);
-            this.label192.TabIndex = 74;
-            this.label192.Text = "label176";
-            // 
-            // label193
-            // 
-            this.label193.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label193.AutoSize = true;
-            this.label193.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label193.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label193.Location = new System.Drawing.Point(756, 403);
-            this.label193.Name = "label193";
-            this.label193.Size = new System.Drawing.Size(81, 20);
-            this.label193.TabIndex = 75;
-            this.label193.Text = "label176";
-            // 
-            // label194
-            // 
-            this.label194.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label194.AutoSize = true;
-            this.label194.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label194.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label194.Location = new System.Drawing.Point(756, 443);
-            this.label194.Name = "label194";
-            this.label194.Size = new System.Drawing.Size(81, 20);
-            this.label194.TabIndex = 76;
-            this.label194.Text = "label176";
-            // 
-            // label195
-            // 
-            this.label195.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label195.AutoSize = true;
-            this.label195.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label195.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label195.Location = new System.Drawing.Point(756, 478);
-            this.label195.Name = "label195";
-            this.label195.Size = new System.Drawing.Size(81, 20);
-            this.label195.TabIndex = 77;
-            this.label195.Text = "label176";
-            // 
-            // label196
-            // 
-            this.label196.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label196.AutoSize = true;
-            this.label196.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label196.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label196.Location = new System.Drawing.Point(756, 513);
-            this.label196.Name = "label196";
-            this.label196.Size = new System.Drawing.Size(81, 20);
-            this.label196.TabIndex = 78;
-            this.label196.Text = "label176";
-            // 
-            // label197
-            // 
-            this.label197.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label197.AutoSize = true;
-            this.label197.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label197.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label197.Location = new System.Drawing.Point(756, 547);
-            this.label197.Name = "label197";
-            this.label197.Size = new System.Drawing.Size(81, 20);
-            this.label197.TabIndex = 79;
-            this.label197.Text = "label176";
-            // 
-            // label198
-            // 
-            this.label198.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label198.AutoSize = true;
-            this.label198.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label198.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label198.Location = new System.Drawing.Point(756, 581);
-            this.label198.Name = "label198";
-            this.label198.Size = new System.Drawing.Size(81, 20);
-            this.label198.TabIndex = 80;
-            this.label198.Text = "label176";
-            // 
-            // label199
-            // 
-            this.label199.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label199.AutoSize = true;
-            this.label199.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label199.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label199.Location = new System.Drawing.Point(756, 614);
-            this.label199.Name = "label199";
-            this.label199.Size = new System.Drawing.Size(81, 20);
-            this.label199.TabIndex = 81;
-            this.label199.Text = "label176";
-            // 
-            // label200
-            // 
-            this.label200.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label200.AutoSize = true;
-            this.label200.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label200.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label200.Location = new System.Drawing.Point(756, 650);
-            this.label200.Name = "label200";
-            this.label200.Size = new System.Drawing.Size(81, 20);
-            this.label200.TabIndex = 82;
-            this.label200.Text = "label176";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label19.Location = new System.Drawing.Point(974, 96);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(81, 20);
-            this.label19.TabIndex = 83;
-            this.label19.Text = "label176";
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label25.Location = new System.Drawing.Point(205, 159);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(81, 20);
-            this.label25.TabIndex = 84;
-            this.label25.Text = "label176";
-            // 
-            // label26
-            // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label26.Location = new System.Drawing.Point(974, 159);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(81, 20);
-            this.label26.TabIndex = 85;
-            this.label26.Text = "label176";
-            // 
-            // label27
-            // 
-            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label27.Location = new System.Drawing.Point(974, 197);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(81, 20);
-            this.label27.TabIndex = 86;
-            this.label27.Text = "label176";
-            // 
-            // label28
-            // 
-            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label28.Location = new System.Drawing.Point(974, 238);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(81, 20);
-            this.label28.TabIndex = 87;
-            this.label28.Text = "label176";
-            // 
-            // label29
-            // 
-            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label29.Location = new System.Drawing.Point(974, 278);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(81, 20);
-            this.label29.TabIndex = 88;
-            this.label29.Text = "label176";
-            // 
-            // label40
-            // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label40.Location = new System.Drawing.Point(974, 364);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(81, 20);
-            this.label40.TabIndex = 90;
-            this.label40.Text = "label176";
-            // 
-            // label41
-            // 
-            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label41.Location = new System.Drawing.Point(974, 403);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(81, 20);
-            this.label41.TabIndex = 91;
-            this.label41.Text = "label176";
-            // 
-            // label43
-            // 
-            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label43.Location = new System.Drawing.Point(974, 443);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(81, 20);
-            this.label43.TabIndex = 92;
-            this.label43.Text = "label176";
-            // 
-            // label44
-            // 
-            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label44.Location = new System.Drawing.Point(974, 478);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(81, 20);
-            this.label44.TabIndex = 93;
-            this.label44.Text = "label176";
-            // 
-            // label45
-            // 
-            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label45.Location = new System.Drawing.Point(974, 513);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(81, 20);
-            this.label45.TabIndex = 94;
-            this.label45.Text = "label176";
-            // 
-            // label46
-            // 
-            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label46.Location = new System.Drawing.Point(974, 547);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(81, 20);
-            this.label46.TabIndex = 95;
-            this.label46.Text = "label176";
-            // 
-            // label47
-            // 
-            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label47.Location = new System.Drawing.Point(974, 581);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(81, 20);
-            this.label47.TabIndex = 96;
-            this.label47.Text = "label176";
-            // 
-            // label57
-            // 
-            this.label57.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label57.Location = new System.Drawing.Point(974, 614);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(81, 20);
-            this.label57.TabIndex = 97;
-            this.label57.Text = "label176";
-            // 
-            // label58
-            // 
-            this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label58.Location = new System.Drawing.Point(974, 650);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(81, 20);
-            this.label58.TabIndex = 98;
-            this.label58.Text = "label176";
             // 
             // GREETFormattedResults
             // 
@@ -1515,7 +1389,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(22, 51);
             this.Name = "GREETFormattedResults";
@@ -1600,14 +1474,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label200;
         private System.Windows.Forms.Label label176;
-        private System.Windows.Forms.Label label177;
-        private System.Windows.Forms.Label label178;
-        private System.Windows.Forms.Label label180;
-        private System.Windows.Forms.Label label190;
         private System.Windows.Forms.Label label192;
         private System.Windows.Forms.Label label193;
         private System.Windows.Forms.Label label194;
@@ -1616,10 +1485,6 @@
         private System.Windows.Forms.Label label197;
         private System.Windows.Forms.Label label198;
         private System.Windows.Forms.Label label199;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label43;
