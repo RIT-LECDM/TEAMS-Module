@@ -665,7 +665,7 @@ namespace TEAMSModule
             saveFileDialog1.Filter = "Excel File|.xlsx";
             saveFileDialog1.Title = "Save TEAMS Results to an Excel File";
             saveFileDialog1.ShowDialog();
-            // TODO: IMPLEMENT ERROR CHECKING
+            // TODO: IMPLEMENT ERROR CHECKING AND HANDLING
             string filePath = saveFileDialog1.FileName;
             FileInfo newFile = new FileInfo(filePath);
 
