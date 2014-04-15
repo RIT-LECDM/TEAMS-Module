@@ -16,6 +16,8 @@ using PlugInsInterfaces.ResultTypes;
 using PlugInsInterfaces.DataTypes.Technology;
 using System.Windows.Forms.DataVisualization.Charting;
 //using Excel = Microsoft.Office.Interop.Excel;
+using OfficeOpenXml;
+using System.IO;
 namespace TEAMSModule
 {
     public partial class GREETFormattedResults : Form
@@ -659,6 +661,33 @@ namespace TEAMSModule
         //Saving for the excel sheet
         private void button1_Click_1(object sender, EventArgs e)
         {
+            // Create the new file to be saved, use Save Dialog Box.
+            saveFileDialog1.Filter = "Excel File|.xlsx";
+            saveFileDialog1.Title = "Save TEAMS Results to an Excel File";
+            saveFileDialog1.ShowDialog();
+            // TODO: IMPLEMENT ERROR CHECKING
+            string filePath = saveFileDialog1.FileName;
+            FileInfo newFile = new FileInfo(filePath);
+
+            using (ExcelPackage package = new ExcelPackage(newFile))
+            {
+                // Add a new Worksheet to the empty workbook
+                ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("TEAMS Results");
+                
+                // Add the headers
+                worksheet.Cells[1, 1].Value = fuelUsed;
+
+                worksheet.Cells[2, 1].Value = "Results Shown Per Trip";
+                worksheet.Cells[2, 2].Value = "Well To Pump";
+                worksheet.Cells[2, 3].Value = "Vessel Operation";
+                worksheet.Cells[2, 4].Value = "Total";
+
+                // Add the data
+
+                // Save the file
+                package.Save();
+            }
+
             //Excel.Application xlApp;
             //Excel.Workbook xlWorkBook;
             //Excel.Worksheet xlWorkSheet;
