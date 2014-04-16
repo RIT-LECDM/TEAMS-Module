@@ -1442,6 +1442,9 @@ namespace WindowsApplication1
                 PM10_gphphr_out = (double)numericUpDown4.Value;
                 PM25_gphphr_out = (double)numericUpDown5.Value;
                 five_complete = true;
+
+                doCalculations();
+                changeResults();
         }
         #endregion
         #region Sends data from sixth set of inputs (Aux Engine)
@@ -1545,6 +1548,8 @@ namespace WindowsApplication1
                 AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown258.Value = (decimal)AuxFischerTropschTotal;
                 six_complete = true;
+                doCalculations();
+                changeResults();
         }
         #endregion
 
@@ -1552,10 +1557,6 @@ namespace WindowsApplication1
         {
             Form f = new TEAMS();
             f.Show();
-        }
-        private void editGREETVariablesToolStripMenuItem_Click(object sender, EventArgs e)
-        {           
-            GVE.Show();
         }
         private void TEAMS_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -1576,7 +1577,6 @@ namespace WindowsApplication1
             EventArgs e2 = e;
             button5_Click(sender2, e2);
             button6_Click(sender2, e2);
-
         }
 
     }

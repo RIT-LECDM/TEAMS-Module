@@ -35,12 +35,19 @@
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.submitAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editGREETVariablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runSimulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -309,18 +316,14 @@
             this.numericUpDown263 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown260 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown261 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown221)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown222)).BeginInit();
@@ -467,10 +470,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -478,7 +477,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.submitAllToolStripMenuItem,
-            this.editGREETVariablesToolStripMenuItem,
             this.runSimulationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -518,14 +516,6 @@
             this.submitAllToolStripMenuItem.Text = "Submit All";
             this.submitAllToolStripMenuItem.Click += new System.EventHandler(this.submitAllToolStripMenuItem_Click);
             // 
-            // editGREETVariablesToolStripMenuItem
-            // 
-            this.editGREETVariablesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editGREETVariablesToolStripMenuItem.Name = "editGREETVariablesToolStripMenuItem";
-            this.editGREETVariablesToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
-            this.editGREETVariablesToolStripMenuItem.Text = "Edit Fuel Specs";
-            this.editGREETVariablesToolStripMenuItem.Click += new System.EventHandler(this.editGREETVariablesToolStripMenuItem_Click);
-            // 
             // runSimulationToolStripMenuItem
             // 
             this.runSimulationToolStripMenuItem.BackColor = System.Drawing.Color.Red;
@@ -546,7 +536,7 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 34);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(912, 783);
@@ -691,7 +681,7 @@
             this.tabPage5.Controls.Add(this.panel18);
             this.tabPage5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage5.Location = new System.Drawing.Point(4, 26);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(904, 753);
             this.tabPage5.TabIndex = 4;
@@ -718,6 +708,118 @@
             this.panel1.Size = new System.Drawing.Size(260, 220);
             this.panel1.TabIndex = 284;
             // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown5.DecimalPlaces = 2;
+            this.numericUpDown5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown5.Location = new System.Drawing.Point(109, 164);
+            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(129, 25);
+            this.numericUpDown5.TabIndex = 294;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Silver;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(7, 170);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 22);
+            this.label7.TabIndex = 293;
+            this.label7.Text = "PM2.5";
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown4.DecimalPlaces = 2;
+            this.numericUpDown4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown4.Location = new System.Drawing.Point(109, 131);
+            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(129, 25);
+            this.numericUpDown4.TabIndex = 292;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Silver;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(7, 137);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 22);
+            this.label6.TabIndex = 291;
+            this.label6.Text = "PM10";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown3.DecimalPlaces = 2;
+            this.numericUpDown3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown3.Location = new System.Drawing.Point(109, 98);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(129, 25);
+            this.numericUpDown3.TabIndex = 290;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Silver;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 104);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 22);
+            this.label5.TabIndex = 289;
+            this.label5.Text = "VOC";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown2.DecimalPlaces = 2;
+            this.numericUpDown2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.Location = new System.Drawing.Point(109, 65);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(129, 25);
+            this.numericUpDown2.TabIndex = 288;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 71);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 22);
+            this.label4.TabIndex = 287;
+            this.label4.Text = "CO";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -736,7 +838,7 @@
             this.numericUpDown1.DecimalPlaces = 2;
             this.numericUpDown1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(109, 33);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -777,7 +879,7 @@
             this.numericUpDown221.Enabled = false;
             this.numericUpDown221.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown221.Location = new System.Drawing.Point(721, 1644);
-            this.numericUpDown221.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown221.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown221.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -795,7 +897,7 @@
             this.numericUpDown222.Enabled = false;
             this.numericUpDown222.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown222.Location = new System.Drawing.Point(721, 1610);
-            this.numericUpDown222.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown222.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown222.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -813,7 +915,7 @@
             this.numericUpDown223.Enabled = false;
             this.numericUpDown223.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown223.Location = new System.Drawing.Point(721, 1578);
-            this.numericUpDown223.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown223.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown223.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -831,7 +933,7 @@
             this.numericUpDown224.Enabled = false;
             this.numericUpDown224.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown224.Location = new System.Drawing.Point(721, 1548);
-            this.numericUpDown224.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown224.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown224.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -849,7 +951,7 @@
             this.numericUpDown225.Enabled = false;
             this.numericUpDown225.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown225.Location = new System.Drawing.Point(721, 1518);
-            this.numericUpDown225.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown225.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown225.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -867,7 +969,7 @@
             this.numericUpDown226.Enabled = false;
             this.numericUpDown226.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown226.Location = new System.Drawing.Point(721, 1486);
-            this.numericUpDown226.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown226.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown226.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -895,7 +997,7 @@
             this.numericUpDown216.DecimalPlaces = 2;
             this.numericUpDown216.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown216.Location = new System.Drawing.Point(621, 1644);
-            this.numericUpDown216.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown216.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown216.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -910,7 +1012,7 @@
             this.numericUpDown217.DecimalPlaces = 2;
             this.numericUpDown217.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown217.Location = new System.Drawing.Point(517, 1644);
-            this.numericUpDown217.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown217.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown217.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -925,7 +1027,7 @@
             this.numericUpDown218.DecimalPlaces = 2;
             this.numericUpDown218.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown218.Location = new System.Drawing.Point(401, 1644);
-            this.numericUpDown218.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown218.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown218.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -940,7 +1042,7 @@
             this.numericUpDown219.DecimalPlaces = 2;
             this.numericUpDown219.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown219.Location = new System.Drawing.Point(295, 1644);
-            this.numericUpDown219.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown219.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown219.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -955,7 +1057,7 @@
             this.numericUpDown220.DecimalPlaces = 2;
             this.numericUpDown220.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown220.Location = new System.Drawing.Point(211, 1644);
-            this.numericUpDown220.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown220.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown220.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -970,7 +1072,7 @@
             this.numericUpDown191.DecimalPlaces = 2;
             this.numericUpDown191.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown191.Location = new System.Drawing.Point(621, 1610);
-            this.numericUpDown191.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown191.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown191.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -985,7 +1087,7 @@
             this.numericUpDown192.DecimalPlaces = 2;
             this.numericUpDown192.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown192.Location = new System.Drawing.Point(621, 1578);
-            this.numericUpDown192.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown192.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown192.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1000,7 +1102,7 @@
             this.numericUpDown193.DecimalPlaces = 2;
             this.numericUpDown193.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown193.Location = new System.Drawing.Point(621, 1548);
-            this.numericUpDown193.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown193.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown193.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1015,7 +1117,7 @@
             this.numericUpDown194.DecimalPlaces = 2;
             this.numericUpDown194.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown194.Location = new System.Drawing.Point(621, 1518);
-            this.numericUpDown194.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown194.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown194.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1030,7 +1132,7 @@
             this.numericUpDown195.DecimalPlaces = 2;
             this.numericUpDown195.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown195.Location = new System.Drawing.Point(621, 1486);
-            this.numericUpDown195.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown195.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown195.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1045,7 +1147,7 @@
             this.numericUpDown196.DecimalPlaces = 2;
             this.numericUpDown196.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown196.Location = new System.Drawing.Point(517, 1610);
-            this.numericUpDown196.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown196.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown196.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1060,7 +1162,7 @@
             this.numericUpDown197.DecimalPlaces = 2;
             this.numericUpDown197.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown197.Location = new System.Drawing.Point(517, 1578);
-            this.numericUpDown197.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown197.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown197.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1075,7 +1177,7 @@
             this.numericUpDown198.DecimalPlaces = 2;
             this.numericUpDown198.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown198.Location = new System.Drawing.Point(517, 1548);
-            this.numericUpDown198.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown198.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown198.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1090,7 +1192,7 @@
             this.numericUpDown199.DecimalPlaces = 2;
             this.numericUpDown199.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown199.Location = new System.Drawing.Point(517, 1518);
-            this.numericUpDown199.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown199.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown199.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1105,7 +1207,7 @@
             this.numericUpDown200.DecimalPlaces = 2;
             this.numericUpDown200.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown200.Location = new System.Drawing.Point(517, 1486);
-            this.numericUpDown200.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown200.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown200.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1120,7 +1222,7 @@
             this.numericUpDown201.DecimalPlaces = 2;
             this.numericUpDown201.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown201.Location = new System.Drawing.Point(401, 1610);
-            this.numericUpDown201.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown201.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown201.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1135,7 +1237,7 @@
             this.numericUpDown202.DecimalPlaces = 2;
             this.numericUpDown202.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown202.Location = new System.Drawing.Point(401, 1578);
-            this.numericUpDown202.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown202.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown202.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1150,7 +1252,7 @@
             this.numericUpDown203.DecimalPlaces = 2;
             this.numericUpDown203.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown203.Location = new System.Drawing.Point(401, 1548);
-            this.numericUpDown203.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown203.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown203.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1165,7 +1267,7 @@
             this.numericUpDown204.DecimalPlaces = 2;
             this.numericUpDown204.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown204.Location = new System.Drawing.Point(401, 1518);
-            this.numericUpDown204.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown204.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown204.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1180,7 +1282,7 @@
             this.numericUpDown205.DecimalPlaces = 2;
             this.numericUpDown205.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown205.Location = new System.Drawing.Point(401, 1486);
-            this.numericUpDown205.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown205.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown205.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1195,7 +1297,7 @@
             this.numericUpDown206.DecimalPlaces = 2;
             this.numericUpDown206.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown206.Location = new System.Drawing.Point(295, 1610);
-            this.numericUpDown206.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown206.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown206.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1210,7 +1312,7 @@
             this.numericUpDown207.DecimalPlaces = 2;
             this.numericUpDown207.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown207.Location = new System.Drawing.Point(295, 1578);
-            this.numericUpDown207.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown207.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown207.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1225,7 +1327,7 @@
             this.numericUpDown208.DecimalPlaces = 2;
             this.numericUpDown208.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown208.Location = new System.Drawing.Point(295, 1548);
-            this.numericUpDown208.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown208.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown208.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1240,7 +1342,7 @@
             this.numericUpDown209.DecimalPlaces = 2;
             this.numericUpDown209.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown209.Location = new System.Drawing.Point(295, 1518);
-            this.numericUpDown209.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown209.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown209.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1255,7 +1357,7 @@
             this.numericUpDown210.DecimalPlaces = 2;
             this.numericUpDown210.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown210.Location = new System.Drawing.Point(295, 1486);
-            this.numericUpDown210.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown210.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown210.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1270,7 +1372,7 @@
             this.numericUpDown211.DecimalPlaces = 2;
             this.numericUpDown211.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown211.Location = new System.Drawing.Point(211, 1610);
-            this.numericUpDown211.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown211.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown211.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1285,7 +1387,7 @@
             this.numericUpDown212.DecimalPlaces = 2;
             this.numericUpDown212.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown212.Location = new System.Drawing.Point(211, 1578);
-            this.numericUpDown212.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown212.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown212.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1300,7 +1402,7 @@
             this.numericUpDown213.DecimalPlaces = 2;
             this.numericUpDown213.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown213.Location = new System.Drawing.Point(211, 1548);
-            this.numericUpDown213.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown213.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown213.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1315,7 +1417,7 @@
             this.numericUpDown214.DecimalPlaces = 2;
             this.numericUpDown214.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown214.Location = new System.Drawing.Point(211, 1518);
-            this.numericUpDown214.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown214.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown214.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1330,7 +1432,7 @@
             this.numericUpDown215.DecimalPlaces = 2;
             this.numericUpDown215.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown215.Location = new System.Drawing.Point(211, 1486);
-            this.numericUpDown215.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown215.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown215.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1454,7 +1556,7 @@
             this.numericUpDown171.Enabled = false;
             this.numericUpDown171.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown171.Location = new System.Drawing.Point(173, 1120);
-            this.numericUpDown171.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown171.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown171.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1484,7 +1586,7 @@
             this.numericUpDown172.Enabled = false;
             this.numericUpDown172.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown172.Location = new System.Drawing.Point(173, 1088);
-            this.numericUpDown172.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown172.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown172.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1502,7 +1604,7 @@
             this.numericUpDown173.Enabled = false;
             this.numericUpDown173.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown173.Location = new System.Drawing.Point(173, 1058);
-            this.numericUpDown173.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown173.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown173.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1520,7 +1622,7 @@
             this.numericUpDown174.Enabled = false;
             this.numericUpDown174.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown174.Location = new System.Drawing.Point(173, 1026);
-            this.numericUpDown174.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown174.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown174.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1536,7 +1638,7 @@
             this.numericUpDown175.DecimalPlaces = 2;
             this.numericUpDown175.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown175.Location = new System.Drawing.Point(173, 994);
-            this.numericUpDown175.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown175.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown175.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1667,7 +1769,7 @@
             this.numericUpDown169.Enabled = false;
             this.numericUpDown169.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown169.Location = new System.Drawing.Point(332, 630);
-            this.numericUpDown169.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown169.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown169.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1685,7 +1787,7 @@
             this.numericUpDown164.Enabled = false;
             this.numericUpDown164.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown164.Location = new System.Drawing.Point(765, 598);
-            this.numericUpDown164.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown164.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown164.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1702,7 +1804,7 @@
             this.numericUpDown165.Enabled = false;
             this.numericUpDown165.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown165.Location = new System.Drawing.Point(765, 566);
-            this.numericUpDown165.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown165.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown165.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1718,7 +1820,7 @@
             this.numericUpDown166.DecimalPlaces = 2;
             this.numericUpDown166.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown166.Location = new System.Drawing.Point(765, 537);
-            this.numericUpDown166.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown166.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown166.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1735,7 +1837,7 @@
             this.numericUpDown167.Enabled = false;
             this.numericUpDown167.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown167.Location = new System.Drawing.Point(765, 507);
-            this.numericUpDown167.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown167.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown167.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1751,7 +1853,7 @@
             this.numericUpDown168.DecimalPlaces = 2;
             this.numericUpDown168.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown168.Location = new System.Drawing.Point(765, 475);
-            this.numericUpDown168.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown168.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown168.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1768,7 +1870,7 @@
             this.numericUpDown159.Enabled = false;
             this.numericUpDown159.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown159.Location = new System.Drawing.Point(648, 598);
-            this.numericUpDown159.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown159.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown159.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1785,7 +1887,7 @@
             this.numericUpDown160.Enabled = false;
             this.numericUpDown160.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown160.Location = new System.Drawing.Point(648, 566);
-            this.numericUpDown160.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown160.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown160.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1801,7 +1903,7 @@
             this.numericUpDown161.DecimalPlaces = 2;
             this.numericUpDown161.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown161.Location = new System.Drawing.Point(648, 537);
-            this.numericUpDown161.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown161.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown161.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1818,7 +1920,7 @@
             this.numericUpDown162.Enabled = false;
             this.numericUpDown162.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown162.Location = new System.Drawing.Point(648, 507);
-            this.numericUpDown162.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown162.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown162.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1834,7 +1936,7 @@
             this.numericUpDown163.DecimalPlaces = 2;
             this.numericUpDown163.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown163.Location = new System.Drawing.Point(648, 475);
-            this.numericUpDown163.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown163.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown163.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1851,7 +1953,7 @@
             this.numericUpDown154.Enabled = false;
             this.numericUpDown154.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown154.Location = new System.Drawing.Point(532, 598);
-            this.numericUpDown154.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown154.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown154.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1868,7 +1970,7 @@
             this.numericUpDown155.Enabled = false;
             this.numericUpDown155.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown155.Location = new System.Drawing.Point(532, 566);
-            this.numericUpDown155.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown155.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown155.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1884,7 +1986,7 @@
             this.numericUpDown156.DecimalPlaces = 2;
             this.numericUpDown156.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown156.Location = new System.Drawing.Point(532, 537);
-            this.numericUpDown156.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown156.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown156.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1901,7 +2003,7 @@
             this.numericUpDown157.Enabled = false;
             this.numericUpDown157.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown157.Location = new System.Drawing.Point(532, 507);
-            this.numericUpDown157.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown157.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown157.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1917,7 +2019,7 @@
             this.numericUpDown158.DecimalPlaces = 2;
             this.numericUpDown158.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown158.Location = new System.Drawing.Point(532, 475);
-            this.numericUpDown158.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown158.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown158.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1934,7 +2036,7 @@
             this.numericUpDown149.Enabled = false;
             this.numericUpDown149.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown149.Location = new System.Drawing.Point(425, 598);
-            this.numericUpDown149.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown149.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown149.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1951,7 +2053,7 @@
             this.numericUpDown150.Enabled = false;
             this.numericUpDown150.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown150.Location = new System.Drawing.Point(425, 566);
-            this.numericUpDown150.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown150.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown150.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1967,7 +2069,7 @@
             this.numericUpDown151.DecimalPlaces = 2;
             this.numericUpDown151.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown151.Location = new System.Drawing.Point(425, 537);
-            this.numericUpDown151.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown151.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown151.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1984,7 +2086,7 @@
             this.numericUpDown152.Enabled = false;
             this.numericUpDown152.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown152.Location = new System.Drawing.Point(425, 507);
-            this.numericUpDown152.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown152.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown152.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2000,7 +2102,7 @@
             this.numericUpDown153.DecimalPlaces = 2;
             this.numericUpDown153.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown153.Location = new System.Drawing.Point(425, 475);
-            this.numericUpDown153.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown153.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown153.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2029,7 +2131,7 @@
             this.numericUpDown148.Enabled = false;
             this.numericUpDown148.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown148.Location = new System.Drawing.Point(332, 598);
-            this.numericUpDown148.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown148.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown148.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2058,7 +2160,7 @@
             this.numericUpDown144.Enabled = false;
             this.numericUpDown144.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown144.Location = new System.Drawing.Point(332, 566);
-            this.numericUpDown144.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown144.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown144.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2084,7 +2186,7 @@
             this.numericUpDown145.DecimalPlaces = 2;
             this.numericUpDown145.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown145.Location = new System.Drawing.Point(332, 537);
-            this.numericUpDown145.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown145.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown145.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2101,7 +2203,7 @@
             this.numericUpDown146.Enabled = false;
             this.numericUpDown146.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown146.Location = new System.Drawing.Point(332, 507);
-            this.numericUpDown146.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown146.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown146.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2117,7 +2219,7 @@
             this.numericUpDown147.DecimalPlaces = 2;
             this.numericUpDown147.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown147.Location = new System.Drawing.Point(332, 475);
-            this.numericUpDown147.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown147.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown147.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2181,7 +2283,7 @@
             this.numericUpDown139.Enabled = false;
             this.numericUpDown139.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown139.Location = new System.Drawing.Point(221, 342);
-            this.numericUpDown139.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown139.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown139.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2209,7 +2311,7 @@
             this.numericUpDown140.DecimalPlaces = 2;
             this.numericUpDown140.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown140.Location = new System.Drawing.Point(221, 313);
-            this.numericUpDown140.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown140.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown140.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2224,7 +2326,7 @@
             this.numericUpDown142.DecimalPlaces = 2;
             this.numericUpDown142.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown142.Location = new System.Drawing.Point(221, 282);
-            this.numericUpDown142.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown142.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown142.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2239,7 +2341,7 @@
             this.numericUpDown143.DecimalPlaces = 2;
             this.numericUpDown143.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown143.Location = new System.Drawing.Point(221, 250);
-            this.numericUpDown143.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown143.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown143.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2301,7 +2403,7 @@
             this.numericUpDown141.DecimalPlaces = 2;
             this.numericUpDown141.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown141.Location = new System.Drawing.Point(465, 159);
-            this.numericUpDown141.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown141.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown141.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2328,7 +2430,7 @@
             this.numericUpDown136.DecimalPlaces = 2;
             this.numericUpDown136.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown136.Location = new System.Drawing.Point(465, 129);
-            this.numericUpDown136.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown136.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown136.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2343,7 +2445,7 @@
             this.numericUpDown137.DecimalPlaces = 2;
             this.numericUpDown137.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown137.Location = new System.Drawing.Point(465, 98);
-            this.numericUpDown137.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown137.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown137.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2358,7 +2460,7 @@
             this.numericUpDown138.DecimalPlaces = 4;
             this.numericUpDown138.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown138.Location = new System.Drawing.Point(465, 66);
-            this.numericUpDown138.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown138.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown138.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2443,7 +2545,7 @@
             this.numericUpDown128.Enabled = false;
             this.numericUpDown128.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown128.Location = new System.Drawing.Point(221, 130);
-            this.numericUpDown128.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown128.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown128.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2458,7 +2560,7 @@
             // 
             this.numericUpDown124.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown124.Location = new System.Drawing.Point(221, 100);
-            this.numericUpDown124.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown124.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown124.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2472,7 +2574,7 @@
             // 
             this.numericUpDown132.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown132.Location = new System.Drawing.Point(221, 68);
-            this.numericUpDown132.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown132.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown132.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2533,7 +2635,7 @@
             // 
             this.button5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(4, 2156);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(875, 55);
             this.button5.TabIndex = 22;
@@ -2651,7 +2753,7 @@
             // 
             this.numericUpDown170.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown170.Location = new System.Drawing.Point(7, 7);
-            this.numericUpDown170.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown170.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown170.Maximum = new decimal(new int[] {
             2,
             0,
@@ -2791,7 +2893,7 @@
             this.numericUpDown180.DecimalPlaces = 2;
             this.numericUpDown180.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown180.Location = new System.Drawing.Point(221, 38);
-            this.numericUpDown180.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown180.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown180.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2806,7 +2908,7 @@
             this.numericUpDown179.DecimalPlaces = 2;
             this.numericUpDown179.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown179.Location = new System.Drawing.Point(221, 70);
-            this.numericUpDown179.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown179.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown179.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2821,7 +2923,7 @@
             this.numericUpDown178.DecimalPlaces = 2;
             this.numericUpDown178.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown178.Location = new System.Drawing.Point(221, 100);
-            this.numericUpDown178.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown178.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown178.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2836,7 +2938,7 @@
             this.numericUpDown177.DecimalPlaces = 2;
             this.numericUpDown177.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown177.Location = new System.Drawing.Point(221, 129);
-            this.numericUpDown177.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown177.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown177.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2851,7 +2953,7 @@
             this.numericUpDown176.DecimalPlaces = 2;
             this.numericUpDown176.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown176.Location = new System.Drawing.Point(221, 161);
-            this.numericUpDown176.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown176.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown176.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -2868,7 +2970,7 @@
             this.numericUpDown185.Enabled = false;
             this.numericUpDown185.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown185.Location = new System.Drawing.Point(399, 38);
-            this.numericUpDown185.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown185.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown185.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2886,7 +2988,7 @@
             this.numericUpDown184.Enabled = false;
             this.numericUpDown184.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown184.Location = new System.Drawing.Point(399, 70);
-            this.numericUpDown184.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown184.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown184.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2904,7 +3006,7 @@
             this.numericUpDown183.Enabled = false;
             this.numericUpDown183.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown183.Location = new System.Drawing.Point(399, 100);
-            this.numericUpDown183.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown183.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown183.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2922,7 +3024,7 @@
             this.numericUpDown182.Enabled = false;
             this.numericUpDown182.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown182.Location = new System.Drawing.Point(399, 129);
-            this.numericUpDown182.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown182.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown182.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2940,7 +3042,7 @@
             this.numericUpDown181.Enabled = false;
             this.numericUpDown181.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown181.Location = new System.Drawing.Point(399, 161);
-            this.numericUpDown181.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown181.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown181.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2970,7 +3072,7 @@
             this.numericUpDown189.Enabled = false;
             this.numericUpDown189.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown189.Location = new System.Drawing.Point(544, 71);
-            this.numericUpDown189.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown189.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown189.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -2988,7 +3090,7 @@
             this.numericUpDown188.Enabled = false;
             this.numericUpDown188.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown188.Location = new System.Drawing.Point(544, 101);
-            this.numericUpDown188.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown188.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown188.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3006,7 +3108,7 @@
             this.numericUpDown187.Enabled = false;
             this.numericUpDown187.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown187.Location = new System.Drawing.Point(544, 130);
-            this.numericUpDown187.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown187.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown187.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3024,7 +3126,7 @@
             this.numericUpDown186.Enabled = false;
             this.numericUpDown186.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown186.Location = new System.Drawing.Point(544, 162);
-            this.numericUpDown186.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown186.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown186.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3054,7 +3156,7 @@
             this.numericUpDown190.Enabled = false;
             this.numericUpDown190.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown190.Location = new System.Drawing.Point(544, 39);
-            this.numericUpDown190.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown190.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown190.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3237,7 +3339,7 @@
             this.tabPage6.Controls.Add(this.panel25);
             this.tabPage6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage6.Location = new System.Drawing.Point(4, 26);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(904, 753);
             this.tabPage6.TabIndex = 5;
@@ -3271,7 +3373,7 @@
             // 
             this.numericUpDown268.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown268.Location = new System.Drawing.Point(211, 1462);
-            this.numericUpDown268.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown268.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown268.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3285,7 +3387,7 @@
             // 
             this.numericUpDown289.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown289.Location = new System.Drawing.Point(211, 1426);
-            this.numericUpDown289.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown289.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown289.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3299,7 +3401,7 @@
             // 
             this.numericUpDown290.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown290.Location = new System.Drawing.Point(211, 1394);
-            this.numericUpDown290.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown290.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown290.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3313,7 +3415,7 @@
             // 
             this.numericUpDown291.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown291.Location = new System.Drawing.Point(211, 1366);
-            this.numericUpDown291.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown291.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown291.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3327,7 +3429,7 @@
             // 
             this.numericUpDown292.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown292.Location = new System.Drawing.Point(211, 1335);
-            this.numericUpDown292.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown292.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown292.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3341,7 +3443,7 @@
             // 
             this.numericUpDown293.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown293.Location = new System.Drawing.Point(211, 1303);
-            this.numericUpDown293.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown293.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown293.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3453,7 +3555,7 @@
             this.numericUpDown253.Enabled = false;
             this.numericUpDown253.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown253.Location = new System.Drawing.Point(211, 1175);
-            this.numericUpDown253.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown253.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown253.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3483,7 +3585,7 @@
             this.numericUpDown254.Enabled = false;
             this.numericUpDown254.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown254.Location = new System.Drawing.Point(211, 1143);
-            this.numericUpDown254.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown254.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown254.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3501,7 +3603,7 @@
             this.numericUpDown255.Enabled = false;
             this.numericUpDown255.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown255.Location = new System.Drawing.Point(211, 1113);
-            this.numericUpDown255.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown255.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown255.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3519,7 +3621,7 @@
             this.numericUpDown256.Enabled = false;
             this.numericUpDown256.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown256.Location = new System.Drawing.Point(211, 1083);
-            this.numericUpDown256.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown256.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown256.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3537,7 +3639,7 @@
             this.numericUpDown257.Enabled = false;
             this.numericUpDown257.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown257.Location = new System.Drawing.Point(211, 1051);
-            this.numericUpDown257.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown257.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown257.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3615,7 +3717,7 @@
             this.numericUpDown238.Enabled = false;
             this.numericUpDown238.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown238.Location = new System.Drawing.Point(203, 917);
-            this.numericUpDown238.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown238.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown238.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3645,7 +3747,7 @@
             this.numericUpDown239.Enabled = false;
             this.numericUpDown239.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown239.Location = new System.Drawing.Point(203, 885);
-            this.numericUpDown239.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown239.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown239.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3663,7 +3765,7 @@
             this.numericUpDown240.Enabled = false;
             this.numericUpDown240.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown240.Location = new System.Drawing.Point(203, 855);
-            this.numericUpDown240.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown240.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown240.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3681,7 +3783,7 @@
             this.numericUpDown241.Enabled = false;
             this.numericUpDown241.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown241.Location = new System.Drawing.Point(203, 825);
-            this.numericUpDown241.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown241.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown241.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3697,7 +3799,7 @@
             this.numericUpDown242.DecimalPlaces = 2;
             this.numericUpDown242.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown242.Location = new System.Drawing.Point(203, 793);
-            this.numericUpDown242.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown242.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown242.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3780,7 +3882,7 @@
             // 
             this.numericUpDown237.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown237.Location = new System.Drawing.Point(17, 668);
-            this.numericUpDown237.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown237.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown237.Maximum = new decimal(new int[] {
             2,
             0,
@@ -3852,7 +3954,7 @@
             this.numericUpDown236.Enabled = false;
             this.numericUpDown236.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown236.Location = new System.Drawing.Point(484, 501);
-            this.numericUpDown236.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown236.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown236.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3882,7 +3984,7 @@
             this.numericUpDown235.Enabled = false;
             this.numericUpDown235.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown235.Location = new System.Drawing.Point(484, 471);
-            this.numericUpDown235.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown235.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown235.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3910,7 +4012,7 @@
             this.numericUpDown234.DecimalPlaces = 2;
             this.numericUpDown234.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown234.Location = new System.Drawing.Point(484, 442);
-            this.numericUpDown234.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown234.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown234.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3939,7 +4041,7 @@
             this.numericUpDown233.Enabled = false;
             this.numericUpDown233.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown233.Location = new System.Drawing.Point(484, 411);
-            this.numericUpDown233.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown233.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown233.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3967,7 +4069,7 @@
             this.numericUpDown232.DecimalPlaces = 2;
             this.numericUpDown232.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown232.Location = new System.Drawing.Point(484, 382);
-            this.numericUpDown232.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown232.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown232.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -4042,7 +4144,7 @@
             this.numericUpDown231.Enabled = false;
             this.numericUpDown231.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown231.Location = new System.Drawing.Point(352, 274);
-            this.numericUpDown231.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown231.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown231.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4057,7 +4159,7 @@
             // 
             this.numericUpDown230.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown230.Location = new System.Drawing.Point(352, 244);
-            this.numericUpDown230.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown230.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown230.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -4071,7 +4173,7 @@
             // 
             this.numericUpDown229.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown229.Location = new System.Drawing.Point(352, 214);
-            this.numericUpDown229.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown229.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown229.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -4085,7 +4187,7 @@
             // 
             this.numericUpDown228.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown228.Location = new System.Drawing.Point(352, 185);
-            this.numericUpDown228.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown228.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown228.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -4110,7 +4212,7 @@
             // 
             this.numericUpDown227.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown227.Location = new System.Drawing.Point(452, 82);
-            this.numericUpDown227.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown227.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown227.Maximum = new decimal(new int[] {
             6,
             0,
@@ -4211,7 +4313,7 @@
             // 
             this.button6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(4, 1516);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(875, 55);
             this.button6.TabIndex = 22;
@@ -4323,7 +4425,7 @@
             this.numericUpDown247.Enabled = false;
             this.numericUpDown247.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown247.Location = new System.Drawing.Point(564, 34);
-            this.numericUpDown247.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown247.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown247.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4341,7 +4443,7 @@
             this.numericUpDown246.Enabled = false;
             this.numericUpDown246.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown246.Location = new System.Drawing.Point(564, 66);
-            this.numericUpDown246.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown246.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown246.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4359,7 +4461,7 @@
             this.numericUpDown245.Enabled = false;
             this.numericUpDown245.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown245.Location = new System.Drawing.Point(564, 96);
-            this.numericUpDown245.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown245.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown245.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4377,7 +4479,7 @@
             this.numericUpDown244.Enabled = false;
             this.numericUpDown244.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown244.Location = new System.Drawing.Point(564, 127);
-            this.numericUpDown244.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown244.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown244.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4395,7 +4497,7 @@
             this.numericUpDown243.Enabled = false;
             this.numericUpDown243.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown243.Location = new System.Drawing.Point(564, 159);
-            this.numericUpDown243.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown243.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown243.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4425,7 +4527,7 @@
             this.numericUpDown252.Enabled = false;
             this.numericUpDown252.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown252.Location = new System.Drawing.Point(376, 34);
-            this.numericUpDown252.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown252.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown252.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4443,7 +4545,7 @@
             this.numericUpDown251.Enabled = false;
             this.numericUpDown251.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown251.Location = new System.Drawing.Point(376, 66);
-            this.numericUpDown251.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown251.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown251.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4461,7 +4563,7 @@
             this.numericUpDown250.Enabled = false;
             this.numericUpDown250.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown250.Location = new System.Drawing.Point(376, 96);
-            this.numericUpDown250.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown250.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown250.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4479,7 +4581,7 @@
             this.numericUpDown249.Enabled = false;
             this.numericUpDown249.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown249.Location = new System.Drawing.Point(376, 127);
-            this.numericUpDown249.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown249.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown249.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4497,7 +4599,7 @@
             this.numericUpDown248.Enabled = false;
             this.numericUpDown248.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown248.Location = new System.Drawing.Point(376, 159);
-            this.numericUpDown248.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown248.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown248.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4544,7 +4646,7 @@
             this.numericUpDown258.Enabled = false;
             this.numericUpDown258.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown258.Location = new System.Drawing.Point(405, 190);
-            this.numericUpDown258.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown258.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown258.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4562,7 +4664,7 @@
             this.numericUpDown262.Enabled = false;
             this.numericUpDown262.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown262.Location = new System.Drawing.Point(405, 63);
-            this.numericUpDown262.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown262.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown262.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4580,7 +4682,7 @@
             this.numericUpDown259.Enabled = false;
             this.numericUpDown259.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown259.Location = new System.Drawing.Point(405, 154);
-            this.numericUpDown259.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown259.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown259.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4598,7 +4700,7 @@
             this.numericUpDown263.Enabled = false;
             this.numericUpDown263.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown263.Location = new System.Drawing.Point(405, 31);
-            this.numericUpDown263.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown263.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown263.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4616,7 +4718,7 @@
             this.numericUpDown260.Enabled = false;
             this.numericUpDown260.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown260.Location = new System.Drawing.Point(405, 122);
-            this.numericUpDown260.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown260.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown260.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4634,7 +4736,7 @@
             this.numericUpDown261.Enabled = false;
             this.numericUpDown261.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown261.Location = new System.Drawing.Point(405, 94);
-            this.numericUpDown261.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown261.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown261.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -4644,118 +4746,6 @@
             this.numericUpDown261.ReadOnly = true;
             this.numericUpDown261.Size = new System.Drawing.Size(135, 25);
             this.numericUpDown261.TabIndex = 311;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(109, 65);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(129, 25);
-            this.numericUpDown2.TabIndex = 288;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Silver;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 22);
-            this.label4.TabIndex = 287;
-            this.label4.Text = "CO";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown3.DecimalPlaces = 2;
-            this.numericUpDown3.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(109, 98);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(129, 25);
-            this.numericUpDown3.TabIndex = 290;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Silver;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 104);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 22);
-            this.label5.TabIndex = 289;
-            this.label5.Text = "VOC";
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown4.DecimalPlaces = 2;
-            this.numericUpDown4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(109, 131);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(129, 25);
-            this.numericUpDown4.TabIndex = 292;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Silver;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 137);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 22);
-            this.label6.TabIndex = 291;
-            this.label6.Text = "PM10";
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown5.DecimalPlaces = 2;
-            this.numericUpDown5.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown5.Location = new System.Drawing.Point(109, 164);
-            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown5.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(129, 25);
-            this.numericUpDown5.TabIndex = 294;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Silver;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 170);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 22);
-            this.label7.TabIndex = 293;
-            this.label7.Text = "PM2.5";
             // 
             // TEAMS
             // 
@@ -4769,7 +4759,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(926, 850);
             this.MinimumSize = new System.Drawing.Size(926, 850);
@@ -4785,6 +4775,10 @@
             this.tabPage5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown221)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown222)).EndInit();
@@ -4938,10 +4932,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown263)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown260)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown261)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5196,7 +5186,6 @@
         private System.Windows.Forms.Label label255;
         private System.Windows.Forms.Label label256;
         private System.Windows.Forms.Label label257;
-        private System.Windows.Forms.ToolStripMenuItem editGREETVariablesToolStripMenuItem;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
