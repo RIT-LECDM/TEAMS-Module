@@ -633,7 +633,6 @@ namespace WindowsApplication1
 
         #endregion
         public Update u;
-        public Fuel_Specs GVE;
         public GREETFormattedResults gfr;
         public TEAMS()
         {
@@ -641,7 +640,6 @@ namespace WindowsApplication1
             pullFromGREET();
             useDefaults();
             changeResults();
-            GVE = new Fuel_Specs(this);
             u = new Update(this);
         }
         /// <summary>
@@ -1561,13 +1559,11 @@ namespace WindowsApplication1
         private void TEAMS_FormClosing(object sender, FormClosingEventArgs e)
         {
             u.Close();
-            GVE.Close();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             u.Close();
-            GVE.Close();
             this.Close();
         }
 
