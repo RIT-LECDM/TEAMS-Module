@@ -622,6 +622,17 @@ namespace TEAMSModule
             saveFileDialog1.ShowDialog();
             // TODO: IMPLEMENT ERROR CHECKING AND HANDLING
             string filePath = saveFileDialog1.FileName;
+
+            if (filePath == "")
+            {
+                MessageBox.Show("Error: You must give the file a name!");
+                button1_Click_1(sender, e);
+            }
+            if (File.Exists(filePath))
+            {
+                File.Delete(filePath);
+            }
+
             FileInfo newFile = new FileInfo(filePath);
 
             using (ExcelPackage package = new ExcelPackage(newFile))
@@ -639,114 +650,80 @@ namespace TEAMSModule
 
                 // Add the data
 
+                worksheet.Cells[3, 1].Value = "Total Energy";
+                worksheet.Cells[3, 2].Value = TE_WTP;
+                worksheet.Cells[3, 3].Value = TE_VO;
+                worksheet.Cells[3, 4].Value = TE_Total;
+
+                worksheet.Cells[4, 1].Value = "Fossil Fuel";
+                worksheet.Cells[4, 4].Value = FF_Total;
+
+                worksheet.Cells[5, 1].Value = "Coal Fuel";
+                worksheet.Cells[5, 4].Value = CF_Total;
+
+                worksheet.Cells[6, 1].Value = "Natural Gas Fuel";
+                worksheet.Cells[6, 4].Value = NGF_Total;
+
+                worksheet.Cells[7, 1].Value = "Petroleum Fuel";
+                worksheet.Cells[7, 4].Value = PF_Total;
+
+                worksheet.Cells[8, 1].Value = "Emissions";
+
+                worksheet.Cells[9, 1].Value = "VOC";
+                worksheet.Cells[9, 2].Value = VOC_WTP;
+                worksheet.Cells[9, 3].Value = VOC_VO;
+                worksheet.Cells[9, 4].Value = VOC_Total;
+
+                worksheet.Cells[10, 1].Value = "CO";
+                worksheet.Cells[10, 2].Value = CO_WTP;
+                worksheet.Cells[10, 3].Value = CO_VO;
+                worksheet.Cells[10, 4].Value = CO_Total;
+
+                worksheet.Cells[11, 1].Value = "NOx";
+                worksheet.Cells[11, 2].Value = NOx_WTP;
+                worksheet.Cells[11, 3].Value = NOx_VO;
+                worksheet.Cells[11, 4].Value = NOx_Total;
+
+                worksheet.Cells[12, 1].Value = "PM10";
+                worksheet.Cells[12, 2].Value = PM10_WTP;
+                worksheet.Cells[12, 3].Value = PM10_VO;
+                worksheet.Cells[12, 4].Value = PM10_Total;
+
+                worksheet.Cells[13, 1].Value = "PM 2.5";
+                worksheet.Cells[13, 2].Value = PM25_WTP;
+                worksheet.Cells[13, 3].Value = PM25_VO;
+                worksheet.Cells[13, 4].Value = PM25_Total;
+
+                worksheet.Cells[14, 1].Value = "SOx";
+                worksheet.Cells[14, 2].Value = SOx_WTP;
+                worksheet.Cells[14, 3].Value = SOx_VO;
+                worksheet.Cells[14, 4].Value = SOx_Total;
+
+                worksheet.Cells[15, 1].Value = "CH4";
+                worksheet.Cells[15, 2].Value = CH4_WTP;
+                worksheet.Cells[15, 3].Value = CH4_VO;
+                worksheet.Cells[15, 4].Value = CH4_Total;
+
+                worksheet.Cells[16, 1].Value = "CO2";
+                worksheet.Cells[16, 2].Value = CO2_WTP;
+                worksheet.Cells[16, 3].Value = CO2_VO;
+                worksheet.Cells[16, 4].Value = CO2_Total;
+
+                worksheet.Cells[17, 1].Value = "N2O";
+                worksheet.Cells[17, 2].Value = N2O_WTP;
+                worksheet.Cells[17, 3].Value = N2O_VO;
+                worksheet.Cells[17, 4].Value = N2O_Total;
+
+                // Resize the columns to fit the values
+                worksheet.Cells["A1:D17"].AutoFitColumns();
+
                 // Save the file
                 package.Save();
+
+                MessageBox.Show("Excel spreadsheet saved successfully.");
             }
 
-            //Excel.Application xlApp;
-            //Excel.Workbook xlWorkBook;
-            //Excel.Worksheet xlWorkSheet;
-            //object misValue = System.Reflection.Missing.Value;
-
-            //xlApp = new Excel.Application();
-            //xlWorkBook = xlApp.Workbooks.Add(misValue);
-            //xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
-            ////add data 
-            //xlWorkSheet.Cells[1, 1] = fuelUsed;
-            //xlWorkSheet.Cells[1, 2] = "";
-            //xlWorkSheet.Cells[1, 3] = "";
-            //xlWorkSheet.Cells[1, 4] = "";
-
-            //xlWorkSheet.Cells[2, 1] = "Results Shown Per Trip";
-            //xlWorkSheet.Cells[2, 2] = "Well To Pump";
-            //xlWorkSheet.Cells[2, 3] = "Vessel Operation";
-            //xlWorkSheet.Cells[2, 4] = "Total";
-
-            //xlWorkSheet.Cells[3, 1] = "Total Energy";
-            //xlWorkSheet.Cells[3, 2] = TE_WTP;
-            //xlWorkSheet.Cells[3, 3] = TE_VO;
-            //xlWorkSheet.Cells[3, 4] = TE_Total;
-
-            //xlWorkSheet.Cells[4, 1] = "Fossil Fuel";
-            //xlWorkSheet.Cells[4, 2] = "";
-            //xlWorkSheet.Cells[4, 3] = "";
-            //xlWorkSheet.Cells[4, 4] = FF_Total;
-
-            //xlWorkSheet.Cells[5, 1] = "Coal Fuel";
-            //xlWorkSheet.Cells[5, 2] = "";
-            //xlWorkSheet.Cells[5, 3] = "";
-            //xlWorkSheet.Cells[5, 4] = CF_Total;
-
-            //xlWorkSheet.Cells[6, 1] = "Natural Gas Fuel";
-            //xlWorkSheet.Cells[6, 2] = "";
-            //xlWorkSheet.Cells[6, 3] = "";
-            //xlWorkSheet.Cells[6, 4] = NGF_Total;
-
-            //xlWorkSheet.Cells[7, 1] = "Petroleum Fuel";
-            //xlWorkSheet.Cells[7, 2] = "";
-            //xlWorkSheet.Cells[7, 3] = "";
-            //xlWorkSheet.Cells[7, 4] = PF_Total;
-
-            //xlWorkSheet.Cells[8, 1] = "Emissions";
-            //xlWorkSheet.Cells[8, 2] = "";
-            //xlWorkSheet.Cells[8, 3] = "";
-            //xlWorkSheet.Cells[8, 4] = "";
-
-            //xlWorkSheet.Cells[9, 1] = "VOC";
-            //xlWorkSheet.Cells[9, 2] = VOC_WTP;
-            //xlWorkSheet.Cells[9, 3] = VOC_VO;
-            //xlWorkSheet.Cells[9, 4] = VOC_Total;
-
-            //xlWorkSheet.Cells[10, 1] = "CO";
-            //xlWorkSheet.Cells[10, 2] = CO_WTP;
-            //xlWorkSheet.Cells[10, 3] = CO_VO;
-            //xlWorkSheet.Cells[10, 4] = CO_Total;
-
-            //xlWorkSheet.Cells[11, 1] = "NOx";
-            //xlWorkSheet.Cells[11, 2] = NOx_WTP;
-            //xlWorkSheet.Cells[11, 3] = NOx_VO;
-            //xlWorkSheet.Cells[11, 4] = NOx_Total;
-
-            //xlWorkSheet.Cells[12, 1] = "PM10";
-            //xlWorkSheet.Cells[12, 2] = PM10_WTP;
-            //xlWorkSheet.Cells[12, 3] = PM10_VO;
-            //xlWorkSheet.Cells[12, 4] = PM10_Total;
-
-            //xlWorkSheet.Cells[13, 1] = "PM 2.5";
-            //xlWorkSheet.Cells[13, 2] = PM25_WTP;
-            //xlWorkSheet.Cells[13, 3] = PM25_VO;
-            //xlWorkSheet.Cells[13, 4] = PM25_Total;
-
-            //xlWorkSheet.Cells[14, 1] = "SOx";
-            //xlWorkSheet.Cells[14, 2] = SOx_WTP;
-            //xlWorkSheet.Cells[14, 3] = SOx_VO;
-            //xlWorkSheet.Cells[14, 4] = SOx_Total;
-
-            //xlWorkSheet.Cells[15, 1] = "CH4";
-            //xlWorkSheet.Cells[15, 2] = CH4_WTP;
-            //xlWorkSheet.Cells[15, 3] = CH4_VO;
-            //xlWorkSheet.Cells[15, 4] = CH4_Total;
-
-            //xlWorkSheet.Cells[16, 1] = "CO2";
-            //xlWorkSheet.Cells[16, 2] = CO2_WTP;
-            //xlWorkSheet.Cells[16, 3] = CO2_VO;
-            //xlWorkSheet.Cells[16, 4] = CO2_Total;
-
-            //xlWorkSheet.Cells[17, 1] = "N2O";
-            //xlWorkSheet.Cells[17, 2] = N2O_WTP;
-            //xlWorkSheet.Cells[17, 3] = N2O_VO;
-            //xlWorkSheet.Cells[17, 4] = N2O_Total;
-
-            //xlWorkBook.SaveAs("TEAMS-Results.xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
-            //xlWorkBook.Close(true, misValue, misValue);
-            //xlApp.Quit();
-
-            //releaseObject(xlWorkSheet);
-            //releaseObject(xlWorkBook);
-            //releaseObject(xlApp);
-
-            //MessageBox.Show("FIle saved, TEAMS-Results.xls should be in your Documents folder");
+            
         }
         #endregion
     }
