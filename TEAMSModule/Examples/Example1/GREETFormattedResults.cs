@@ -595,45 +595,62 @@ namespace TEAMSModule
         }
         #endregion
 
-        private void releaseObject(object obj)
+        #region Saving for the excel sheet
+
+        private void exception_Handling(Exception exception)
         {
-            try
-            {
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
-                obj = null;
-            }
-            catch (Exception ex)
-            {
-                obj = null;
-                MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
-            }
-            finally
-            {
-                GC.Collect();
-            }
+            MessageBox.Show("An error occurred while trying to save the file. Ensure it is not being used by another program and try again.\n" +
+                            "Exception message: " + exception.Message);
+            
         }
 
-        #region Saving for the excel sheet
         private void button1_Click_1(object sender, EventArgs e)
         {
             // Create the new file to be saved, use Save Dialog Box.
             saveFileDialog1.Filter = "Excel File|.xlsx";
             saveFileDialog1.Title = "Save TEAMS Results to an Excel File";
-            saveFileDialog1.ShowDialog();
+            DialogResult save_result = saveFileDialog1.ShowDialog();
             // TODO: IMPLEMENT ERROR CHECKING AND HANDLING
             string filePath = saveFileDialog1.FileName;
 
+            if (save_result == DialogResult.Cancel)
+            {
+                return;
+            }
+
             if (filePath == "")
             {
-                MessageBox.Show("Error: You must give the file a name!");
-                button1_Click_1(sender, e);
+                MessageBox.Show("File name cannot be blank.");
+                return;
             }
             if (File.Exists(filePath))
             {
+                try
+                {
+                    File.Delete(filePath);
+                }
+                catch ( Exception exception)
+                {
+                    exception_Handling(exception);
+                    return;
+                }
+
                 File.Delete(filePath);
+                
             }
 
-            FileInfo newFile = new FileInfo(filePath);
+            FileInfo newFile = null;
+            try
+            {
+                newFile = new FileInfo(filePath);
+            }
+            catch (Exception exception)
+            {
+                exception_Handling(exception);
+                return;
+            }
+
+            if (newFile == null) { button1_Click_1(sender, e); }
 
             using (ExcelPackage package = new ExcelPackage(newFile))
             {
@@ -642,80 +659,81 @@ namespace TEAMSModule
                 
                 // Add the headers
                 worksheet.Cells[1, 1].Value = fuelUsed;
+                worksheet.Cells[1, 1].Style.Font.Bold = true;
 
-                worksheet.Cells[2, 1].Value = "Results Shown Per Trip";
-                worksheet.Cells[2, 2].Value = "Well To Pump";
-                worksheet.Cells[2, 3].Value = "Vessel Operation";
-                worksheet.Cells[2, 4].Value = "Total";
+                worksheet.Cells[3, 1].Value = "Results Shown Per Trip";
+                worksheet.Cells[3, 2].Value = "Well To Pump";
+                worksheet.Cells[3, 3].Value = "Vessel Operation";
+                worksheet.Cells[3, 6].Value = "Total";
 
                 // Add the data
 
-                worksheet.Cells[3, 1].Value = "Total Energy";
-                worksheet.Cells[3, 2].Value = TE_WTP;
-                worksheet.Cells[3, 3].Value = TE_VO;
-                worksheet.Cells[3, 4].Value = TE_Total;
+                worksheet.Cells[4, 1].Value = "Total Energy";
+                worksheet.Cells[4, 2].Value = TE_WTP;
+                worksheet.Cells[4, 3].Value = TE_VO;
+                worksheet.Cells[4, 6].Value = TE_Total;
 
-                worksheet.Cells[4, 1].Value = "Fossil Fuel";
-                worksheet.Cells[4, 4].Value = FF_Total;
+                worksheet.Cells[5, 1].Value = "Fossil Fuel";
+                worksheet.Cells[5, 6].Value = FF_Total;
 
-                worksheet.Cells[5, 1].Value = "Coal Fuel";
-                worksheet.Cells[5, 4].Value = CF_Total;
+                worksheet.Cells[6, 1].Value = "Coal Fuel";
+                worksheet.Cells[6, 6].Value = CF_Total;
 
-                worksheet.Cells[6, 1].Value = "Natural Gas Fuel";
-                worksheet.Cells[6, 4].Value = NGF_Total;
+                worksheet.Cells[7, 1].Value = "Natural Gas Fuel";
+                worksheet.Cells[7, 6].Value = NGF_Total;
 
-                worksheet.Cells[7, 1].Value = "Petroleum Fuel";
-                worksheet.Cells[7, 4].Value = PF_Total;
+                worksheet.Cells[8, 1].Value = "Petroleum Fuel";
+                worksheet.Cells[8, 6].Value = PF_Total;
 
-                worksheet.Cells[8, 1].Value = "Emissions";
+                worksheet.Cells[9, 1].Value = "Emissions";
 
-                worksheet.Cells[9, 1].Value = "VOC";
-                worksheet.Cells[9, 2].Value = VOC_WTP;
-                worksheet.Cells[9, 3].Value = VOC_VO;
-                worksheet.Cells[9, 4].Value = VOC_Total;
+                worksheet.Cells[10, 1].Value = "VOC";
+                worksheet.Cells[10, 2].Value = VOC_WTP;
+                worksheet.Cells[10, 3].Value = VOC_VO;
+                worksheet.Cells[10, 6].Value = VOC_Total;
 
-                worksheet.Cells[10, 1].Value = "CO";
-                worksheet.Cells[10, 2].Value = CO_WTP;
-                worksheet.Cells[10, 3].Value = CO_VO;
-                worksheet.Cells[10, 4].Value = CO_Total;
+                worksheet.Cells[11, 1].Value = "CO";
+                worksheet.Cells[11, 2].Value = CO_WTP;
+                worksheet.Cells[11, 3].Value = CO_VO;
+                worksheet.Cells[11, 6].Value = CO_Total;
 
-                worksheet.Cells[11, 1].Value = "NOx";
-                worksheet.Cells[11, 2].Value = NOx_WTP;
-                worksheet.Cells[11, 3].Value = NOx_VO;
-                worksheet.Cells[11, 4].Value = NOx_Total;
+                worksheet.Cells[12, 1].Value = "NOx";
+                worksheet.Cells[12, 2].Value = NOx_WTP;
+                worksheet.Cells[12, 3].Value = NOx_VO;
+                worksheet.Cells[12, 6].Value = NOx_Total;
 
-                worksheet.Cells[12, 1].Value = "PM10";
-                worksheet.Cells[12, 2].Value = PM10_WTP;
-                worksheet.Cells[12, 3].Value = PM10_VO;
-                worksheet.Cells[12, 4].Value = PM10_Total;
+                worksheet.Cells[13, 1].Value = "PM10";
+                worksheet.Cells[13, 2].Value = PM10_WTP;
+                worksheet.Cells[13, 3].Value = PM10_VO;
+                worksheet.Cells[13, 6].Value = PM10_Total;
 
-                worksheet.Cells[13, 1].Value = "PM 2.5";
-                worksheet.Cells[13, 2].Value = PM25_WTP;
-                worksheet.Cells[13, 3].Value = PM25_VO;
-                worksheet.Cells[13, 4].Value = PM25_Total;
+                worksheet.Cells[14, 1].Value = "PM 2.5";
+                worksheet.Cells[14, 2].Value = PM25_WTP;
+                worksheet.Cells[14, 3].Value = PM25_VO;
+                worksheet.Cells[14, 6].Value = PM25_Total;
 
-                worksheet.Cells[14, 1].Value = "SOx";
-                worksheet.Cells[14, 2].Value = SOx_WTP;
-                worksheet.Cells[14, 3].Value = SOx_VO;
-                worksheet.Cells[14, 4].Value = SOx_Total;
+                worksheet.Cells[15, 1].Value = "SOx";
+                worksheet.Cells[15, 2].Value = SOx_WTP;
+                worksheet.Cells[15, 3].Value = SOx_VO;
+                worksheet.Cells[15, 6].Value = SOx_Total;
 
-                worksheet.Cells[15, 1].Value = "CH4";
-                worksheet.Cells[15, 2].Value = CH4_WTP;
-                worksheet.Cells[15, 3].Value = CH4_VO;
-                worksheet.Cells[15, 4].Value = CH4_Total;
+                worksheet.Cells[16, 1].Value = "CH4";
+                worksheet.Cells[16, 2].Value = CH4_WTP;
+                worksheet.Cells[16, 3].Value = CH4_VO;
+                worksheet.Cells[16, 6].Value = CH4_Total;
 
-                worksheet.Cells[16, 1].Value = "CO2";
-                worksheet.Cells[16, 2].Value = CO2_WTP;
-                worksheet.Cells[16, 3].Value = CO2_VO;
-                worksheet.Cells[16, 4].Value = CO2_Total;
+                worksheet.Cells[17, 1].Value = "CO2";
+                worksheet.Cells[17, 2].Value = CO2_WTP;
+                worksheet.Cells[17, 3].Value = CO2_VO;
+                worksheet.Cells[17, 6].Value = CO2_Total;
 
-                worksheet.Cells[17, 1].Value = "N2O";
-                worksheet.Cells[17, 2].Value = N2O_WTP;
-                worksheet.Cells[17, 3].Value = N2O_VO;
-                worksheet.Cells[17, 4].Value = N2O_Total;
+                worksheet.Cells[18, 1].Value = "N2O";
+                worksheet.Cells[18, 2].Value = N2O_WTP;
+                worksheet.Cells[18, 3].Value = N2O_VO;
+                worksheet.Cells[18, 6].Value = N2O_Total;
 
                 // Resize the columns to fit the values
-                worksheet.Cells["A1:D17"].AutoFitColumns();
+                worksheet.Cells["A1:D18"].AutoFitColumns();
 
                 // Save the file
                 package.Save();
