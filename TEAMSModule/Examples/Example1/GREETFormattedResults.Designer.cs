@@ -1379,7 +1379,7 @@
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(217, 37);
             this.label28.TabIndex = 4;
-            this.label28.Text = "Auxilliary Fuel";
+            this.label28.Text = "Auxiliary Fuel";
             // 
             // treeView2
             // 
