@@ -630,7 +630,8 @@ namespace WindowsApplication1
         public double VOC_gphphr_out;
         public double PM10_gphphr_out;
         public double PM25_gphphr_out;
-
+        public double N2O_gphphr_out;
+        public double CH4_gphphr_out;
         #endregion
         public Update u;
         public GREETFormattedResults gfr;
@@ -984,7 +985,8 @@ namespace WindowsApplication1
             numericUpDown3.Value = (decimal)VOC_gphphr_out;
             numericUpDown4.Value = (decimal)PM10_gphphr_out;
             numericUpDown5.Value = (decimal)PM25_gphphr_out;
-
+            numericUpDown6.Value = (decimal)N2O_gphphr_out;
+            numericUpDown7.Value = (decimal)CH4_gphphr_out;
             numericUpDown132.Value = (decimal)NumberOfEngines;
             numericUpDown124.Value = (decimal)SingleEngineHP;
             numericUpDown138.Value = (decimal)KWperHP;
@@ -1212,7 +1214,8 @@ namespace WindowsApplication1
             VOC_gphphr_out = 7.94;
             PM10_gphphr_out = 7.94;
             PM25_gphphr_out = 7.94;
-
+            N2O_gphphr_out = 7.94;
+            CH4_gphphr_out = 7.94;
             #endregion
             #region Teams 6.1 - 6.4d
             //6.1 Auxiliary Engine Fuel Type to Present On Results Sheet;
@@ -1439,6 +1442,8 @@ namespace WindowsApplication1
                 VOC_gphphr_out = (double)numericUpDown3.Value;
                 PM10_gphphr_out = (double)numericUpDown4.Value;
                 PM25_gphphr_out = (double)numericUpDown5.Value;
+                N2O_gphphr_out = (double)numericUpDown6.Value;
+                CH4_gphphr_out = (double)numericUpDown7.Value;
                 five_complete = true;
 
                 doCalculations();
