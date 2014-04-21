@@ -995,6 +995,7 @@ namespace WindowsApplication1
             numericUpDown5.Value = (decimal)PM25_gphphr_out;
             numericUpDown6.Value = (decimal)N2O_gphphr_out;
             numericUpDown7.Value = (decimal)CH4_gphphr_out;
+
             numericUpDown132.Value = (decimal)NumberOfEngines;
             numericUpDown124.Value = (decimal)SingleEngineHP;
             numericUpDown138.Value = (decimal)KWperHP;
@@ -1137,6 +1138,14 @@ namespace WindowsApplication1
             numericUpDown260.Value = (decimal)AuxNaturalGasTotal;
             numericUpDown259.Value = (decimal)AuxBioDieselTotal;
             numericUpDown258.Value = (decimal)AuxFischerTropschTotal;
+
+            numericUpDown14.Value = (decimal)AUX_NOX_gphphr_out;
+            numericUpDown13.Value = (decimal)AUX_CO_gphphr_out;
+            numericUpDown12.Value = (decimal)AUX_VOC_gphphr_out;
+            numericUpDown11.Value = (decimal)AUX_PM10_gphphr_out;
+            numericUpDown10.Value = (decimal)AUX_PM25_gphphr_out;
+            numericUpDown9.Value = (decimal)AUX_N2O_gphphr_out;
+            numericUpDown8.Value = (decimal)AUX_CH4_gphphr_out;
         }
         #endregion
         public void useDefaults()
@@ -1257,6 +1266,14 @@ namespace WindowsApplication1
             AuxNaturalGasFC = 800;
             AuxBiodieselFC = 9;
             AuxFischerTropschFC = 10;
+
+            AUX_NOX_gphphr_out = 7.94;
+            AUX_CO_gphphr_out = 7.94;
+            AUX_VOC_gphphr_out = 7.94;
+            AUX_PM10_gphphr_out = 7.94;
+            AUX_PM25_gphphr_out = 7.94;
+            AUX_N2O_gphphr_out = 7.94;
+            AUX_CH4_gphphr_out = 7.94;
             #endregion
         }
         //Shows Copyright Screen
@@ -1558,6 +1575,15 @@ namespace WindowsApplication1
                 AuxFischerTropschFC = (int)numericUpDown268.Value;
                 AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
                 numericUpDown258.Value = (decimal)AuxFischerTropschTotal;
+
+                AUX_NOX_gphphr_out = (double)numericUpDown14.Value;
+                AUX_CO_gphphr_out = (double)numericUpDown13.Value;
+                AUX_VOC_gphphr_out = (double)numericUpDown12.Value;
+                AUX_PM10_gphphr_out = (double)numericUpDown11.Value;
+                AUX_PM25_gphphr_out = (double)numericUpDown10.Value;
+                AUX_N2O_gphphr_out = (double)numericUpDown9.Value;
+                AUX_CH4_gphphr_out = (double)numericUpDown8.Value;
+                numericUpDown14.Value = (decimal)AUX_NOX_gphphr_out;
                 six_complete = true;
                 doCalculations();
                 changeResults();
@@ -1582,10 +1608,8 @@ namespace WindowsApplication1
 
         private void submitAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            object sender2 = sender;
-            EventArgs e2 = e;
-            button5_Click(sender2, e2);
-            button6_Click(sender2, e2);
+            button5_Click(sender, e);
+            button6_Click(sender, e);
         }
 
     }

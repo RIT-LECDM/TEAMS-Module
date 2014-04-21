@@ -200,25 +200,25 @@ namespace TEAMSModule
 
                 //Requires an input on the input sheet
                 AUX_VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_VOC_VO = ((te.VOC_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                AUX_VOC_VO = ((te.AUX_VOC_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 VOC_Total = VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
                 AUX_CO_WTP = pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_CO_VO = ((te.CO_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                AUX_CO_VO = ((te.AUX_CO_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 CO_Total = CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
                 AUX_NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_NOx_VO = ((te.NOX_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                AUX_NOx_VO = ((te.AUX_NOX_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 NOx_Total = NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
                 //Requires an input on the input sheet
                 AUX_PM10_WTP = pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_PM10_VO = ((te.PM10_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                AUX_PM10_VO = ((te.AUX_PM10_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 PM10_Total = PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
                 //Requires an input on the input sheet
                 AUX_PM25_WTP = pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_PM25_VO = ((te.PM25_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                AUX_PM25_VO = ((te.AUX_PM25_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 PM25_Total = PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 //Requires an input on the input sheet
@@ -227,7 +227,7 @@ namespace TEAMSModule
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 AUX_CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_CH4_VO = ((te.CH4_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                AUX_CH4_VO = ((te.AUX_CH4_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 double gramsOfFuel = ((1 / (resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceUsed.Density.GreetValue * 3.78541178) / 1000);
@@ -237,7 +237,7 @@ namespace TEAMSModule
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 AUX_N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_N2O_VO = ((te.N2O_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
+                AUX_N2O_VO = ((te.AUX_N2O_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
 
                 GHG_WTP = pathwayResults.LifeCycleEmissionsGroups(data).ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;
