@@ -227,7 +227,7 @@ namespace TEAMSModule
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 AUX_CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_CH4_VO = ((te.CH4_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
+                AUX_CH4_VO = ((te.CH4_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 double gramsOfFuel = ((1 / (resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceUsed.Density.GreetValue * 3.78541178) / 1000);
@@ -237,7 +237,7 @@ namespace TEAMSModule
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 AUX_N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_N2O_VO = ((te.N2O_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
+                AUX_N2O_VO = ((te.N2O_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
 
                 GHG_WTP = pathwayResults.LifeCycleEmissionsGroups(data).ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;
@@ -757,8 +757,7 @@ namespace TEAMSModule
 
                 // Resize the columns to fit the values
                 worksheet.Cells["A1:F17"].AutoFitColumns();
-                worksheet.Cells[1, 1].Value = fuelUsed;
-                worksheet.Cells[1, 1].Style.Font.Bold = true;
+
 
                 worksheet.Cells[2, 2].Value = "Main Engine";
                 worksheet.Cells[2, 2].Style.Font.Bold = true;
