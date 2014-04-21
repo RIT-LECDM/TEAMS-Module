@@ -632,6 +632,14 @@ namespace WindowsApplication1
         public double PM25_gphphr_out;
         public double N2O_gphphr_out;
         public double CH4_gphphr_out;
+
+        public double AUX_NOX_gphphr_out;
+        public double AUX_CO_gphphr_out;
+        public double AUX_VOC_gphphr_out;
+        public double AUX_PM10_gphphr_out;
+        public double AUX_PM25_gphphr_out;
+        public double AUX_N2O_gphphr_out;
+        public double AUX_CH4_gphphr_out;
         #endregion
         public Update u;
         public GREETFormattedResults gfr;
