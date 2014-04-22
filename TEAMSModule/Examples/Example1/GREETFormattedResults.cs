@@ -15,10 +15,10 @@ using PlugInsInterfaces.DataTypes.Mix;
 using PlugInsInterfaces.ResultTypes;
 using PlugInsInterfaces.DataTypes.Technology;
 using System.Windows.Forms.DataVisualization.Charting;
-//using Excel = Microsoft.Office.Interop.Excel;
 using OfficeOpenXml;
 using System.IO;
 using OfficeOpenXml.Style;
+
 namespace TEAMSModule
 {
     public partial class GREETFormattedResults : Form
@@ -598,6 +598,7 @@ namespace TEAMSModule
 
         #region Saving for the excel sheet
 
+        // For use during export to excel sheet. Prevents system crashing and gives error source to user.
         private void exception_Handling(Exception exception)
         {
             MessageBox.Show("An error occurred while trying to save the file. Ensure it is not being used by another program and try again.\n" +
@@ -614,16 +615,20 @@ namespace TEAMSModule
             // TODO: IMPLEMENT ERROR CHECKING AND HANDLING
             string filePath = saveFileDialog1.FileName;
 
+            // If user cancels the save, do nothing
             if (save_result == DialogResult.Cancel)
             {
                 return;
             }
 
+            // Error proofing
             if (filePath == "")
             {
                 MessageBox.Show("File name cannot be blank.");
                 return;
             }
+
+            // Handling for when the file exists and is being used by another program.
             if (File.Exists(filePath))
             {
                 try
@@ -640,6 +645,8 @@ namespace TEAMSModule
                 
             }
 
+            // If the file does not previously exist, but for whatever reason cannot be created,
+            // handle the exception and cancel the export.
             FileInfo newFile = null;
             try
             {
@@ -651,6 +658,7 @@ namespace TEAMSModule
                 return;
             }
 
+            // If the file could not be created or accessed, return the user to the save menu.
             if (newFile == null) { button1_Click_1(sender, e); }
 
             using (ExcelPackage package = new ExcelPackage(newFile))
@@ -659,106 +667,6 @@ namespace TEAMSModule
                 ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("TEAMS Results");
                 
                 // Add the headers
-                worksheet.Cells[1, 1].Value = "Main Engine Fuel: ";
-                worksheet.Cells[1, 2].Value = fuelUsed;
-                worksheet.Cells[1, 3].Value = "Aux Engine Fuel: ";
-                worksheet.Cells[1, 4].Value = auxFuelUsed;
-
-                worksheet.Cells[2, 1].Value = "Results Shown Per Trip";
-                worksheet.Cells[2, 2].Value = "Main Well To Pump";
-                worksheet.Cells[2, 3].Value = "Main Vessel Operation";
-                worksheet.Cells[2, 4].Value = "Aux Well To Pump";
-                worksheet.Cells[2, 5].Value = "Aux Vessel Operation";
-                worksheet.Cells[2, 6].Value = "Total";
-
-                // Add the data
-
-                worksheet.Cells[3, 1].Value = "Total Energy";
-                worksheet.Cells[3, 2].Value = TE_WTP;
-                worksheet.Cells[3, 3].Value = TE_VO;
-                worksheet.Cells[3, 4].Value = AUX_TE_WTP;
-                worksheet.Cells[3, 5].Value = AUX_TE_VO;
-                worksheet.Cells[3, 6].Value = TE_Total;
-
-                worksheet.Cells[4, 1].Value = "Fossil Fuel";
-                worksheet.Cells[4, 6].Value = FF_Total;
-
-                worksheet.Cells[5, 1].Value = "Coal Fuel";
-                worksheet.Cells[5, 6].Value = CF_Total;
-
-                worksheet.Cells[6, 1].Value = "Natural Gas Fuel";
-                worksheet.Cells[6, 6].Value = NGF_Total;
-
-                worksheet.Cells[7, 1].Value = "Petroleum Fuel";
-                worksheet.Cells[7, 6].Value = PF_Total;
-
-                worksheet.Cells[8, 1].Value = "Emissions";
-
-                worksheet.Cells[9, 1].Value = "VOC";
-                worksheet.Cells[9, 2].Value = VOC_WTP;
-                worksheet.Cells[9, 3].Value = VOC_VO;
-                worksheet.Cells[9, 4].Value = AUX_VOC_WTP;
-                worksheet.Cells[9, 5].Value = AUX_VOC_VO;
-                worksheet.Cells[9, 6].Value = VOC_Total;
-
-                worksheet.Cells[10, 1].Value = "CO";
-                worksheet.Cells[10, 2].Value = CO_WTP;
-                worksheet.Cells[10, 3].Value = CO_VO;
-                worksheet.Cells[10, 4].Value = AUX_CO_WTP;
-                worksheet.Cells[10, 5].Value = AUX_CO_VO;
-                worksheet.Cells[10, 6].Value = CO_Total;
-
-                worksheet.Cells[11, 1].Value = "NOx";
-                worksheet.Cells[11, 2].Value = NOx_WTP;
-                worksheet.Cells[11, 3].Value = NOx_VO;
-                worksheet.Cells[11, 4].Value = AUX_NOx_WTP;
-                worksheet.Cells[11, 5].Value = AUX_NOx_VO;
-                worksheet.Cells[11, 6].Value = NOx_Total;
-
-                worksheet.Cells[12, 1].Value = "PM10";
-                worksheet.Cells[12, 2].Value = PM10_WTP;
-                worksheet.Cells[12, 3].Value = PM10_VO;
-                worksheet.Cells[12, 4].Value = AUX_PM10_WTP;
-                worksheet.Cells[12, 5].Value = AUX_PM10_VO;
-                worksheet.Cells[12, 6].Value = PM10_Total;
-
-                worksheet.Cells[13, 1].Value = "PM 2.5";
-                worksheet.Cells[13, 2].Value = PM25_WTP;
-                worksheet.Cells[13, 3].Value = PM25_VO;
-                worksheet.Cells[13, 4].Value = AUX_PM25_WTP;
-                worksheet.Cells[13, 5].Value = AUX_PM25_VO;
-                worksheet.Cells[13, 6].Value = PM25_Total;
-
-                worksheet.Cells[14, 1].Value = "SOx";
-                worksheet.Cells[14, 2].Value = SOx_WTP;
-                worksheet.Cells[14, 3].Value = SOx_VO;
-                worksheet.Cells[14, 4].Value = SOx_Total;
-
-                worksheet.Cells[15, 1].Value = "CH4";
-                worksheet.Cells[15, 2].Value = CH4_WTP;
-                worksheet.Cells[15, 3].Value = CH4_VO;
-                worksheet.Cells[15, 4].Value = AUX_CH4_WTP;
-                worksheet.Cells[15, 5].Value = AUX_CH4_VO;
-                worksheet.Cells[15, 6].Value = CH4_Total;
-
-                worksheet.Cells[16, 1].Value = "CO2";
-                worksheet.Cells[16, 2].Value = CO2_WTP;
-                worksheet.Cells[16, 3].Value = CO2_VO;
-                worksheet.Cells[16, 4].Value = AUX_CO2_WTP;
-                worksheet.Cells[16, 5].Value = AUX_CO2_VO;
-                worksheet.Cells[16, 6].Value = CO2_Total;
-
-                worksheet.Cells[17, 1].Value = "N2O";
-                worksheet.Cells[17, 2].Value = N2O_WTP;
-                worksheet.Cells[17, 3].Value = N2O_VO;
-                worksheet.Cells[17, 4].Value = AUX_N2O_WTP;
-                worksheet.Cells[17, 5].Value = AUX_N2O_VO;
-                worksheet.Cells[17, 6].Value = N2O_Total;
-
-                // Resize the columns to fit the values
-                worksheet.Cells["A1:F17"].AutoFitColumns();
-
-
                 worksheet.Cells[2, 2].Value = "Main Engine";
                 worksheet.Cells[2, 2].Style.Font.Bold = true;
                 worksheet.Cells[2, 2].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
