@@ -1015,59 +1015,16 @@ namespace WindowsApplication1
             numericUpDown156.Value = (decimal)HPLFPrecautionary;
             numericUpDown161.Value = (decimal)HPLFSlowCruise;
             numericUpDown166.Value = (decimal)HPLFFullCruise;
-            numericUpDown170.Value = (decimal)SelectionOfModelCalculatedOrUserInputFuelConsumptionValues;
             numericUpDown175.Value = (decimal)EngineEfficiency;
-            numericUpDown180.Value = (decimal)ResidualOilEE;
-            numericUpDown179.Value = (decimal)LowSulfurDieselEE;
-            numericUpDown178.Value = (decimal)NaturalGasEE;
-            numericUpDown177.Value = (decimal)BiodieselEE;
-            numericUpDown176.Value = (decimal)FischerTropschEE;
-            numericUpDown215.Value = (decimal)ConventionalDieselIdle;
-            numericUpDown210.Value = (decimal)ConventionalDieselManeuvering;
-            numericUpDown205.Value = (decimal)ConventionalDieselPrecautionary;
-            numericUpDown200.Value = (decimal)ConventionalDieselSlowCruise;
-            numericUpDown195.Value = (decimal)ConventionalDieselFullCruise;
-            numericUpDown214.Value = (decimal)ResidualOilIdle;
-            numericUpDown209.Value = (decimal)ResidualOilManeuvering;
-            numericUpDown204.Value = (decimal)ResidualOilPrecautionary;
-            numericUpDown199.Value = (decimal)ResidualOilSlowCruise;
-            numericUpDown194.Value = (decimal)ResidualOilFullCruise;
-            numericUpDown213.Value = (decimal)LowSulfurDieselIdle;
-            numericUpDown208.Value = (decimal)LowSulfurDieselManeuvering;
-            numericUpDown203.Value = (decimal)LowSulfurDieselPrecautionary;
-            numericUpDown198.Value = (decimal)LowSulfurDieselSlowCruise;
-            numericUpDown193.Value = (decimal)LowSulfurDieselFullCruise;
-            numericUpDown212.Value = (decimal)NaturalGasIdle;
-            numericUpDown207.Value = (decimal)NaturalGasManeuvering;
-            numericUpDown202.Value = (decimal)NaturalGasPrecautionary;
-            numericUpDown197.Value = (decimal)NaturalGasSlowCruise;
-            numericUpDown192.Value = (decimal)NaturalGasFullCruise;
-            numericUpDown211.Value = (decimal)BioDieselIdle;
-            numericUpDown206.Value = (decimal)BioDieselManeuvering;
-            numericUpDown201.Value = (decimal)BioDieselPrecautionary;
-            numericUpDown196.Value = (decimal)BioDieselSlowCruise;
-            numericUpDown191.Value = (decimal)BioDieselFullCruise;
-            numericUpDown220.Value = (decimal)FischerTropschIdle;
-            numericUpDown219.Value = (decimal)FischerTropschManeuvering;
-            numericUpDown218.Value = (decimal)FischerTropschPrecautionary;
-            numericUpDown217.Value = (decimal)FischerTropschSlowCruise;
-            numericUpDown216.Value = (decimal)FischerTropschFullCruise;
+         
 
             //6
-            numericUpDown227.Value = (decimal)AuxiliaryEngineFuelType;
             numericUpDown228.Value = (decimal)NumberOfOnBoarAuxiliaryEngines;
             numericUpDown229.Value = (decimal)NumberOfAuxiliaryEnginesInUse;
             numericUpDown230.Value = (decimal)AuxiliaryEnginesRatedHPperEngine;
             numericUpDown232.Value = (decimal)PercentOfTripAuxiliaryIsActive;
             numericUpDown234.Value = (decimal)HPLoadFactorSingleEngine;
-            numericUpDown237.Value = (decimal)SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6;
             numericUpDown242.Value = (decimal)AuxiliaryEngineEfficiency;
-            numericUpDown293.Value = (decimal)AuxConventionalDieselFC;
-            numericUpDown292.Value = (decimal)AuxResidualOilFC;
-            numericUpDown291.Value = (decimal)AuxLowSulfurDieselFC;
-            numericUpDown290.Value = (decimal)AuxNaturalGasFC;
-            numericUpDown289.Value = (decimal)AuxBiodieselFC;
-            numericUpDown268.Value = (decimal)AuxFischerTropschFC;
 
             doCalculations();
             //All Results That Needed Calculation
@@ -1093,22 +1050,7 @@ namespace WindowsApplication1
             numericUpDown173.Value = (decimal)MMBTUoutperTrip;
             numericUpDown172.Value = (decimal)MMBTUinperTrip;
             numericUpDown171.Value = (decimal)GALLONperTrip;
-            numericUpDown185.Value = (decimal)ResidualOilMMBTU;
-            numericUpDown184.Value = (decimal)LowSulfurDieselMMBTU;
-            numericUpDown183.Value = (decimal)NaturalGasMMBTU;
-            numericUpDown182.Value = (decimal)BiodieselMMBTU;
-            numericUpDown181.Value = (decimal)FischerTropschMMBTU;
-            numericUpDown190.Value = (decimal)ResidualOilAFC;
-            numericUpDown189.Value = (decimal)LowSulfurDieselAFC;
-            numericUpDown188.Value = (decimal)NaturalGasAFC;
-            numericUpDown187.Value = (decimal)BiodieselAFC;
-            numericUpDown186.Value = (decimal)FischerTropschAFC;
-            numericUpDown226.Value = (decimal)ConventionalDieselTotal;
-            numericUpDown225.Value = (decimal)ResidualOilTotal;
-            numericUpDown224.Value = (decimal)LowSulfurDieselTotal;
-            numericUpDown223.Value = (decimal)NaturalGasTotal;
-            numericUpDown222.Value = (decimal)BioDieselTotal;
-            numericUpDown221.Value = (decimal)FischerTropschTotal;
+            
             numericUpDown231.Value = (decimal)TotalOnboardAUxHP;
             numericUpDown233.Value = (decimal)TimeAuxActiveHours;
             numericUpDown235.Value = (decimal)ActiveHPPerAuxEngine;
@@ -1117,27 +1059,6 @@ namespace WindowsApplication1
             numericUpDown240.Value = (decimal)AuxEngineMMBTUoutperTrip;
             numericUpDown239.Value = (decimal)AuxEngineMMBTUinperTrip;
             numericUpDown238.Value = (decimal)AuxEngineGALLONperTrip;
-            numericUpDown257.Value = (decimal)AuxResidualOilEE;
-            numericUpDown252.Value = (decimal)AuxResidualOilMMBTU;
-            numericUpDown247.Value = (decimal)AuxResidualOilEAFC;
-            numericUpDown256.Value = (decimal)AuxLowSulfurDieselEE;
-            numericUpDown251.Value = (decimal)AuxLowSulfurDieselMMBTU;
-            numericUpDown246.Value = (decimal)AuxLowSulfurDieselEAFC;
-            numericUpDown255.Value = (decimal)AuxNaturalGasEE;
-            numericUpDown250.Value = (decimal)AuxNaturalGasMMBTU;
-            numericUpDown245.Value = (decimal)AuxNaturalGasEAFC;
-            numericUpDown254.Value = (decimal)AuxBiodieselEE;
-            numericUpDown249.Value = (decimal)AuxBiodieselMMBTU;
-            numericUpDown244.Value = (decimal)AuxBiodieselEAFC;
-            numericUpDown253.Value = (decimal)AuxFischerTropschEE;
-            numericUpDown248.Value = (decimal)AuxFischerTropschMMBTU;
-            numericUpDown243.Value = (decimal)AuxFischerTropschEAFC;
-            numericUpDown263.Value = (decimal)AuxConventionalDieselTotal;
-            numericUpDown262.Value = (decimal)AuxResidualOilTotal;
-            numericUpDown261.Value = (decimal)AuxLowSulfurDieselTotal;
-            numericUpDown260.Value = (decimal)AuxNaturalGasTotal;
-            numericUpDown259.Value = (decimal)AuxBioDieselTotal;
-            numericUpDown258.Value = (decimal)AuxFischerTropschTotal;
 
             numericUpDown14.Value = (decimal)AUX_NOX_gphphr_out;
             numericUpDown13.Value = (decimal)AUX_CO_gphphr_out;
@@ -1371,9 +1292,6 @@ namespace WindowsApplication1
                 EPTotal = EPIdle + EPManeuvering + EPPrecautionary + EPSlowCruise + EPFullCruise;
                 numericUpDown169.Value = (decimal)EPTotal;
 
-                //5.4a
-                SelectionOfModelCalculatedOrUserInputFuelConsumptionValues = (int)numericUpDown170.Value;
-
                 //5.4b
                 EngineEfficiency = (double)numericUpDown175.Value;
                 KWHOutperTrip = EPTotal;
@@ -1385,81 +1303,6 @@ namespace WindowsApplication1
                 //Needs to pull from the Fuel Specs page in GREET
                 GALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * MMBTUinperTrip;
                 numericUpDown171.Value = (decimal)GALLONperTrip;
-
-                //5.4c
-                ResidualOilEE = (double)numericUpDown180.Value;
-                ResidualOilMMBTU = MMBTUoutperTrip * (100 / ResidualOilEE);
-                numericUpDown185.Value = (decimal)ResidualOilMMBTU;
-                ResidualOilAFC = GALLONperTrip = (1 / residualOilBTUperGal) * 1000000 * ResidualOilMMBTU;
-                numericUpDown190.Value = (decimal)ResidualOilAFC;
-
-                LowSulfurDieselEE = (double)numericUpDown179.Value;
-                LowSulfurDieselMMBTU = MMBTUoutperTrip * (100 / LowSulfurDieselEE);
-                numericUpDown184.Value = (decimal)LowSulfurDieselMMBTU;
-                LowSulfurDieselAFC = (1 / lowSulfurDieselBTUperGal) * 1000000 * LowSulfurDieselMMBTU;
-                numericUpDown189.Value = (decimal)LowSulfurDieselAFC;
-
-                NaturalGasEE = (double)numericUpDown178.Value;
-                NaturalGasMMBTU = MMBTUoutperTrip * (100 / NaturalGasEE);
-                numericUpDown183.Value = (decimal)NaturalGasMMBTU;
-                NaturalGasAFC = (1 / natGasBTUperSCF) * 1000000 * NaturalGasMMBTU;
-                numericUpDown188.Value = (decimal)NaturalGasAFC;
-
-                BiodieselEE = (double)numericUpDown177.Value;
-                BiodieselMMBTU = MMBTUoutperTrip * (100 / BiodieselEE);
-                numericUpDown182.Value = (decimal)BiodieselMMBTU;
-                BiodieselAFC = (1 / bioDieselBTUperGal) * 1000000 * BiodieselMMBTU;
-                numericUpDown187.Value = (decimal)BiodieselAFC;
-
-                FischerTropschEE = (double)numericUpDown176.Value;
-                FischerTropschMMBTU = MMBTUoutperTrip * (100 / FischerTropschEE);
-                numericUpDown181.Value = (decimal)FischerTropschMMBTU;
-                FischerTropschAFC = (1 / fischerTropschBTUperGal) * 1000000 * FischerTropschMMBTU;
-                numericUpDown186.Value = (decimal)FischerTropschAFC;
-
-                //5.4d
-                ConventionalDieselIdle = (int)numericUpDown215.Value;
-                ConventionalDieselManeuvering = (int)numericUpDown210.Value;
-                ConventionalDieselPrecautionary = (int)numericUpDown205.Value;
-                ConventionalDieselSlowCruise = (int)numericUpDown200.Value;
-                ConventionalDieselFullCruise = (int)numericUpDown195.Value;
-                ConventionalDieselTotal = (int)((ConventionalDieselIdle * TimeInIdle * NumberOfEngines)+(ConventionalDieselManeuvering * TimeInManeuvering * NumberOfEngines)+(ConventionalDieselPrecautionary * TimeInPrecautionary * NumberOfEngines)+(ConventionalDieselSlowCruise * TimeInSlowCruise * NumberOfEngines)+(ConventionalDieselFullCruise * TimeInFullCruise * NumberOfEngines));
-                numericUpDown226.Value = (decimal)ConventionalDieselTotal;
-                ResidualOilIdle = (int)numericUpDown214.Value;
-                ResidualOilManeuvering = (int)numericUpDown209.Value;
-                ResidualOilPrecautionary = (int)numericUpDown204.Value;
-                ResidualOilSlowCruise = (int)numericUpDown199.Value;
-                ResidualOilFullCruise = (int)numericUpDown194.Value;
-                ResidualOilTotal = (int)((ResidualOilIdle * TimeInIdle * NumberOfEngines) + (ResidualOilManeuvering * TimeInManeuvering * NumberOfEngines) + (ResidualOilPrecautionary * TimeInPrecautionary * NumberOfEngines) + (ResidualOilSlowCruise * TimeInSlowCruise * NumberOfEngines) + (ResidualOilFullCruise * TimeInFullCruise * NumberOfEngines));
-                numericUpDown225.Value = (decimal)ResidualOilTotal;
-                LowSulfurDieselIdle = (int)numericUpDown213.Value;
-                LowSulfurDieselManeuvering = (int)numericUpDown208.Value;
-                LowSulfurDieselPrecautionary = (int)numericUpDown203.Value;
-                LowSulfurDieselSlowCruise = (int)numericUpDown198.Value;
-                LowSulfurDieselFullCruise = (int)numericUpDown193.Value;
-                LowSulfurDieselTotal = (int)((LowSulfurDieselIdle * TimeInIdle * NumberOfEngines) + (LowSulfurDieselManeuvering * TimeInManeuvering * NumberOfEngines) + (LowSulfurDieselPrecautionary * TimeInPrecautionary * NumberOfEngines) + (LowSulfurDieselSlowCruise * TimeInSlowCruise * NumberOfEngines) + (LowSulfurDieselFullCruise * TimeInFullCruise * NumberOfEngines));
-                numericUpDown224.Value = (decimal)LowSulfurDieselTotal;
-                NaturalGasIdle = (int)numericUpDown212.Value;
-                NaturalGasManeuvering = (int)numericUpDown207.Value;
-                NaturalGasPrecautionary = (int)numericUpDown202.Value;
-                NaturalGasSlowCruise = (int)numericUpDown197.Value;
-                NaturalGasFullCruise = (int)numericUpDown192.Value;
-                NaturalGasTotal = (int)((NaturalGasIdle * TimeInIdle * NumberOfEngines) + (NaturalGasManeuvering * TimeInManeuvering * NumberOfEngines) + (NaturalGasPrecautionary * TimeInPrecautionary * NumberOfEngines) + (NaturalGasSlowCruise * TimeInSlowCruise * NumberOfEngines) + (NaturalGasFullCruise * TimeInFullCruise * NumberOfEngines));
-                numericUpDown223.Value = (decimal)NaturalGasTotal;
-                BioDieselIdle = (int)numericUpDown211.Value;
-                BioDieselManeuvering = (int)numericUpDown206.Value;
-                BioDieselPrecautionary = (int)numericUpDown201.Value;
-                BioDieselSlowCruise = (int)numericUpDown196.Value;
-                BioDieselFullCruise = (int)numericUpDown191.Value;
-                BioDieselTotal = (int)((BioDieselIdle * TimeInIdle * NumberOfEngines) + (BioDieselManeuvering * TimeInManeuvering * NumberOfEngines) + (BioDieselPrecautionary * TimeInPrecautionary * NumberOfEngines) + (BioDieselSlowCruise * TimeInSlowCruise * NumberOfEngines) + (BioDieselFullCruise * TimeInFullCruise * NumberOfEngines));
-                numericUpDown222.Value = (decimal)BioDieselTotal;
-                FischerTropschIdle = (int)numericUpDown220.Value;
-                FischerTropschManeuvering = (int)numericUpDown219.Value;
-                FischerTropschPrecautionary = (int)numericUpDown218.Value;
-                FischerTropschSlowCruise = (int)numericUpDown217.Value;
-                FischerTropschFullCruise = (int)numericUpDown216.Value;
-                FischerTropschTotal = (int)((FischerTropschIdle * TimeInIdle * NumberOfEngines) + (FischerTropschManeuvering * TimeInManeuvering * NumberOfEngines) + (FischerTropschPrecautionary * TimeInPrecautionary * NumberOfEngines) + (FischerTropschSlowCruise * TimeInSlowCruise * NumberOfEngines) + (FischerTropschFullCruise * TimeInFullCruise * NumberOfEngines));
-                numericUpDown221.Value = (decimal)FischerTropschTotal;
 
                 //Fuel Inputs
                 NOX_gphphr_out = (double)numericUpDown1.Value;
@@ -1479,8 +1322,6 @@ namespace WindowsApplication1
         private void button6_Click(object sender, EventArgs e)
         {
                 button6.BackColor = Color.Green;
-                //6.1
-                AuxiliaryEngineFuelType = (int)numericUpDown227.Value;
 
                 //6.2
                 NumberOfOnBoarAuxiliaryEngines = (int)numericUpDown228.Value;
@@ -1499,9 +1340,6 @@ namespace WindowsApplication1
                 TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
                 numericUpDown236.Value = (decimal)TotalAuxEnergyProduction;
 
-                //6.4a 
-                SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = (int)numericUpDown237.Value;
-
                 //6.4b
                 AuxiliaryEngineEfficiency = (double)numericUpDown242.Value;
                 AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
@@ -1517,64 +1355,37 @@ namespace WindowsApplication1
 
                 //6.4c
                 AuxResidualOilEE = ResidualOilEE;
-                numericUpDown257.Value = (decimal)AuxResidualOilEE;
                 AuxResidualOilMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxResidualOilEE);
-                numericUpDown252.Value = (decimal)AuxResidualOilMMBTU;
                 //This one requires Fuel Specs from GREET
                 AuxResidualOilEAFC = (1 / residualOilBTUperGal) * 1000000 * AuxResidualOilMMBTU;
-                numericUpDown247.Value = (decimal)AuxResidualOilEAFC;
 
                 AuxLowSulfurDieselEE = LowSulfurDieselEE;
-                numericUpDown256.Value = (decimal)AuxLowSulfurDieselEE;
                 AuxLowSulfurDieselMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxLowSulfurDieselEE);
-                numericUpDown251.Value = (decimal)AuxLowSulfurDieselMMBTU;
                 //This one requires Fuel Specs from GREET
                 AuxLowSulfurDieselEAFC = (1 /lowSulfurDieselBTUperGal) * 1000000 * AuxLowSulfurDieselMMBTU;
-                numericUpDown246.Value = (decimal)AuxLowSulfurDieselEAFC;
 
                 AuxNaturalGasEE = NaturalGasEE;
-                numericUpDown255.Value = (decimal)AuxNaturalGasEE;
                 AuxNaturalGasMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxNaturalGasEE);
-                numericUpDown250.Value = (decimal)AuxNaturalGasMMBTU;
                 //This one requires Fuel Specs from GREET
                 AuxNaturalGasEAFC = (1 / natGasBTUperSCF) * 1000000 * AuxNaturalGasMMBTU;
-                numericUpDown245.Value = (decimal)AuxNaturalGasEAFC;
 
                 AuxBiodieselEE = BiodieselEE;
-                numericUpDown254.Value = (decimal)AuxBiodieselEE;
                 AuxBiodieselMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxBiodieselEE);
-                numericUpDown249.Value = (decimal)AuxBiodieselMMBTU;
                 //This one requires Fuel Specs from GREET
                 AuxBiodieselEAFC = (1 / bioDieselBTUperGal) * 1000000 * AuxBiodieselMMBTU;
-                numericUpDown244.Value = (decimal)AuxBiodieselEAFC;
 
                 AuxFischerTropschEE = FischerTropschEE;
-                numericUpDown253.Value = (decimal)AuxFischerTropschEE;
                 AuxFischerTropschMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxFischerTropschEE);
-                numericUpDown248.Value = (decimal)AuxFischerTropschMMBTU;
                 //This one requires Fuel Specs from GREET
                 AuxFischerTropschEAFC = (1 / fischerTropschBTUperGal) * 1000000 * AuxFischerTropschMMBTU;
-                numericUpDown243.Value = (decimal)AuxFischerTropschEAFC;
 
                 //6.4d
-                AuxConventionalDieselFC = (int)numericUpDown293.Value;
                 AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                numericUpDown263.Value = (decimal)AuxConventionalDieselTotal;
-                AuxResidualOilFC = (int)numericUpDown292.Value;
                 AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                numericUpDown262.Value = (decimal)AuxResidualOilTotal;
-                AuxLowSulfurDieselFC = (int)numericUpDown291.Value;
                 AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                numericUpDown261.Value = (decimal)AuxLowSulfurDieselTotal;
-                AuxNaturalGasFC = (int)numericUpDown290.Value;
                 AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                numericUpDown260.Value = (decimal)AuxNaturalGasTotal;
-                AuxBiodieselFC = (int)numericUpDown289.Value;
                 AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                numericUpDown259.Value = (decimal)AuxBioDieselTotal;
-                AuxFischerTropschFC = (int)numericUpDown268.Value;
                 AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                numericUpDown258.Value = (decimal)AuxFischerTropschTotal;
 
                 AUX_NOX_gphphr_out = (double)numericUpDown14.Value;
                 AUX_CO_gphphr_out = (double)numericUpDown13.Value;
