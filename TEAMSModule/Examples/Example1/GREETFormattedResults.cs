@@ -122,6 +122,7 @@ namespace TEAMSModule
                     fuelUsed = resource.Name;
                 }
                 IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
+                te.GALLONperTrip = resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 100000);
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
                 TE_WTP = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
                 TE_VO = te.MMBTUinperTrip;
@@ -194,6 +195,7 @@ namespace TEAMSModule
                 }
                 IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
+                te.AuxEngineGALLONperTrip = resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 100000);
                 AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
                 AUX_TE_VO = te.AuxEngineMMBTUinperTrip;
                 TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip + AUX_TE_WTP + AUX_TE_VO;
@@ -667,6 +669,10 @@ namespace TEAMSModule
                 ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("TEAMS Results");
                 
                 // Add the headers
+                worksheet.Cells[1, 1].Value = "Vessel name";
+                worksheet.Cells[1, 1].Style.Font.Bold = true;
+                worksheet.Cells[1, 2].Value = te.VesselTypeID;
+
                 worksheet.Cells[2, 2].Value = "Main Engine";
                 worksheet.Cells[2, 2].Style.Font.Bold = true;
                 worksheet.Cells[2, 2].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
@@ -763,7 +769,7 @@ namespace TEAMSModule
                 worksheet.Cells[17, 2].Value = CO2_WTP;
                 worksheet.Cells[17, 3].Value = CO2_VO;
                 worksheet.Cells[17, 4].Value = AUX_CO2_WTP;
-                worksheet.Cells[17, 4].Value = AUX_CO2_VO;
+                worksheet.Cells[17, 5].Value = AUX_CO2_VO;
                 worksheet.Cells[17, 6].Value = CO2_Total;
 
                 worksheet.Cells[18, 1].Value = "N2O";

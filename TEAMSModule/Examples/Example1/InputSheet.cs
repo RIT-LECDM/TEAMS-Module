@@ -68,10 +68,6 @@ namespace WindowsApplication1
         public double EPFullCruise;
         public double EPTotal;
 
-        //5.4a Selection of Model Calculated or User Input Fuel Consumption Values (Conventional Diesel as Baseline Fuel)
-        //1 = Simulate using GPH derived from user-entered engine specifications 2 = Simulate using User - Entered GPH
-        public int SelectionOfModelCalculatedOrUserInputFuelConsumptionValues;
-
         //5.4b Calculation of Fuel Use Using Conventional Diesel as Baseline Fuel
         public double EngineEfficiency;
         public double KWHOutperTrip;
@@ -79,67 +75,17 @@ namespace WindowsApplication1
         public double MMBTUinperTrip;
         public double GALLONperTrip;
 
-        //5.4c Calculation of Fuel Use Using Alternative Fuels (Conventional Diesel as Baseline Fuel)
-        //EE = Engine Efficiency in percent MMBTU = million BTUs in per trip AFC = alternative Fuel Consumption in Gallons per trip
-        public double ResidualOilEE;
-        public double ResidualOilMMBTU;
-        public double ResidualOilAFC;
-        public double LowSulfurDieselEE;
-        public double LowSulfurDieselMMBTU;
-        public double LowSulfurDieselAFC;
-        public double NaturalGasEE;
-        public double NaturalGasMMBTU;
-        public double NaturalGasAFC;
-        public double BiodieselEE;
-        public double BiodieselMMBTU;
-        public double BiodieselAFC;
-        public double FischerTropschEE;
-        public double FischerTropschMMBTU;
-        public double FischerTropschAFC;
-
-        //5.4d Fuel Consumption (Only needed if you are simulating using user - entered GPH) Total is in Gallons/Trip
-        public int ConventionalDieselIdle;
-        public int ConventionalDieselManeuvering;
-        public int ConventionalDieselPrecautionary;
-        public int ConventionalDieselSlowCruise;
-        public int ConventionalDieselFullCruise;
-        public int ConventionalDieselTotal;
-        public int ResidualOilIdle;
-        public int ResidualOilManeuvering;
-        public int ResidualOilPrecautionary;
-        public int ResidualOilSlowCruise;
-        public int ResidualOilFullCruise;
-        public int ResidualOilTotal;
-        public int LowSulfurDieselIdle;
-        public int LowSulfurDieselManeuvering;
-        public int LowSulfurDieselPrecautionary;
-        public int LowSulfurDieselSlowCruise;
-        public int LowSulfurDieselFullCruise;
-        public int LowSulfurDieselTotal;
-        public int NaturalGasIdle;
-        public int NaturalGasManeuvering;
-        public int NaturalGasPrecautionary;
-        public int NaturalGasSlowCruise;
-        public int NaturalGasFullCruise;
-        public int NaturalGasTotal;
-        public int BioDieselIdle;
-        public int BioDieselManeuvering;
-        public int BioDieselPrecautionary;
-        public int BioDieselSlowCruise;
-        public int BioDieselFullCruise;
-        public int BioDieselTotal;
-        public int FischerTropschIdle;
-        public int FischerTropschManeuvering;
-        public int FischerTropschPrecautionary;
-        public int FischerTropschSlowCruise;
-        public int FischerTropschFullCruise;
-        public int FischerTropschTotal;
+        //Emissions Factor Variables
+        public double NOX_gphphr_out;
+        public double CO_gphphr_out;
+        public double VOC_gphphr_out;
+        public double PM10_gphphr_out;
+        public double PM25_gphphr_out;
+        public double N2O_gphphr_out;
+        public double CH4_gphphr_out;
 
         #endregion
         #region Teams 6.1 - 6.4d
-        //6.1 Auxiliary Engine Fuel Type to Present On Results Sheet;
-        //1 = Conventional Diesel 2 = Residual Oil 3 = Low Sulfur Diesel 4 = Natural gas 5 = Biodiesel 6 = Fischer Tropsch Diesel
-        public int AuxiliaryEngineFuelType = 1;
 
         //6.2 Auxiliary Engine Variables
         public int NumberOfOnBoarAuxiliaryEngines;
@@ -154,9 +100,6 @@ namespace WindowsApplication1
         public double ActiveHPPerAuxEngine;
         public double TotalAuxEnergyProduction;
 
-        //6.4a Selection of Medel Calculated or User Input Fuel Consumption Values Conventional Diesel as Baseline Fuel
-        //1 = Simlate using GPH derived from User-Entered Auxiliary engine specifications 2 = Simlate using user entered GPH
-        public int SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = 1;
 
         //6.4b Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
         public double AuxiliaryEngineEfficiency;
@@ -165,38 +108,13 @@ namespace WindowsApplication1
         public double AuxEngineMMBTUinperTrip;
         public double AuxEngineGALLONperTrip;
 
-        //6.4c Calculation of Auxiliary Engine Fuel Use Using Alternative Fuels
-        //EE = Engine Efficiency AuxMMBTU = Auxiliary MMTBUin/Trip EAFC = Auxiliary Engine Alternativee Fuel Consumption
-        public double AuxResidualOilEE;
-        public double AuxResidualOilMMBTU;
-        public double AuxResidualOilEAFC;
-        public double AuxLowSulfurDieselEE;
-        public double AuxLowSulfurDieselMMBTU;
-        public double AuxLowSulfurDieselEAFC;
-        public double AuxNaturalGasEE;
-        public double AuxNaturalGasMMBTU;
-        public double AuxNaturalGasEAFC;
-        public double AuxBiodieselEE;
-        public double AuxBiodieselMMBTU;
-        public double AuxBiodieselEAFC;
-        public double AuxFischerTropschEE;
-        public double AuxFischerTropschMMBTU;
-        public double AuxFischerTropschEAFC;
-
-        //6.4d  Auxiliary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
-        //FC = Fuel Consumption 
-        public int AuxConventionalDieselFC;
-        public double AuxConventionalDieselTotal;
-        public int AuxResidualOilFC;
-        public double AuxResidualOilTotal;
-        public int AuxLowSulfurDieselFC;
-        public double AuxLowSulfurDieselTotal;
-        public int AuxNaturalGasFC;
-        public double AuxNaturalGasTotal;
-        public int AuxBiodieselFC;
-        public double AuxBioDieselTotal;
-        public int AuxFischerTropschFC;
-        public double AuxFischerTropschTotal;
+        public double AUX_NOX_gphphr_out;
+        public double AUX_CO_gphphr_out;
+        public double AUX_VOC_gphphr_out;
+        public double AUX_PM10_gphphr_out;
+        public double AUX_PM25_gphphr_out;
+        public double AUX_N2O_gphphr_out;
+        public double AUX_CH4_gphphr_out;
         #endregion
 
         //Program Variables
@@ -531,81 +449,10 @@ namespace WindowsApplication1
         public double FTD_Total_PM10_TBW;
         public double FTD_Total_PM25_TBW;
         public double FTD_Total_PM25_CO2Biogenic;
-        #endregion
-        public double crudeOilBTUperGal;
+
         public double conventionalDieselBTUperGal;
-        public double lowSulfurDieselBTUperGal;
-        public double liquifiedPetroleumGasBTUperGal;
-        public double residualOilBTUperGal;
-        public double liquifiedNaturalGasBTUperGal;
-        public double bioDieselBTUperGal;
-        public double fischerTropschBTUperGal;
 
-        public double natGasBTUperSCF;
-
-        public double coalBTuperTON;
-        //Grams/Gal
-        public double crudeOilDensity;
-        public double conventionalDieselDensity;
-        public double lowSulfurDieselDensity;
-        public double liquifiedPetroleumGasDensity;
-        public double residualOilDensity;
-        public double liquifiedNaturalGasDensity;
-        public double bioDieselDensity;
-        public double fischerTropschDensity;
-
-        public double natGasGramsperSCF;
-
-        //Carbon % by wt
-        public double crudeOilCarbonRatio;
-        public double conventionalDieselCarbonRatio;
-        public double lowSulfurDieselCarbonRatio;
-        public double liquifiedPetroleumGasCarbonRatio;
-        public double residualOilCarbonRatio;
-        public double liquifiedNaturalGasCarbonRatio;
-        public double bioDieselCarbonRatio;
-        public double fischerTropschCarbonRatio;
-        public double natGasCarbonRatio;
-        public double coalCarbonRatio;
-
-        //These are ratios that are ppm by wt
-        public double crudeOilSulfurRatio;
-        public double conventionalDieselSulfurRatio;
-        public double lowSulfurDieselSulfurRatio;
-        public double liquifiedPetroleumGasSulfurRatio;
-        public double residualOilSulfurRatio;
-        public double liquifiedNaturalGasSulfurRatio;
-        public double bioDieselSulfurRatio;
-        public double fischerTropschSulfurRatio;
-        public double natGasSulfurRatio;
-        public double coalSulfurRatio;
-
-        //These are ratios that are actual ration by wt
-        public double crudeOilSulfurRatioActual;
-        public double conventionalDieselSulfurRatioActual;
-        public double lowSulfurDieselSulfurRatioActual;
-        public double liquifiedPetroleumGasSulfurRatioActual;
-        public double residualOilSulfurRatioActual;
-        public double liquifiedNaturalGasSulfurRatioActual;
-        public double bioDieselSulfurRatioActual;
-        public double fischerTropschSulfurRatioActual;
-        public double natGasSulfurRatioActual;
-        public double coalSulfurRatioActual;
-
-        public int GHPCO2 = 1;
-        public int GHPCH4 = 23;
-        public int GHPN2O = 296;
-        public int GHPVOC = 0;
-        public int GHPCO = 0;
-        public int GHPNO2 = 0;
-
-        public double CarbonRatioVOC = 85.0;
-        public double CarbonRatioCO = 43.0;
-        public double CarbonRatioCH4 = 75.0;
-        public double CarbonRatioCO2 = 27.0;
-        public double CarbonRatioSO2 = 50.0;
-	
-
+        #endregion
 
         #endregion
 
@@ -625,21 +472,7 @@ namespace WindowsApplication1
         public const int COAL_PATH_ID = 17;
         #endregion
         #region Emissions Variables
-        public double NOX_gphphr_out;
-        public double CO_gphphr_out;
-        public double VOC_gphphr_out;
-        public double PM10_gphphr_out;
-        public double PM25_gphphr_out;
-        public double N2O_gphphr_out;
-        public double CH4_gphphr_out;
 
-        public double AUX_NOX_gphphr_out;
-        public double AUX_CO_gphphr_out;
-        public double AUX_VOC_gphphr_out;
-        public double AUX_PM10_gphphr_out;
-        public double AUX_PM25_gphphr_out;
-        public double AUX_N2O_gphphr_out;
-        public double AUX_CH4_gphphr_out;
         #endregion
         public Update u;
         public GREETFormattedResults gfr;
@@ -656,260 +489,17 @@ namespace WindowsApplication1
         /// </summary>
         public void pullFromGREET()
         {
+            //All this function is doing now is pulling the BTUPerGal for Conventional Diesel so it can be used to calculate the gallons per trip. (This is ultimately recalculated in the Results code)
             IGDataDictionary<int, IResource> resources = ResultsAccess.controler.CurrentProject.Data.Resources;
             IGDataDictionary<int, IPathway> pathways = ResultsAccess.controler.CurrentProject.Data.Pathways;
             IGDataDictionary<int, IMix> mixes = ResultsAccess.controler.CurrentProject.Data.Mixes;
-            //These are the Fuel_Specs information being replicated as needed
-                #region Liquid Fuels
-                // Grab the pathway from greet for the resource you are looking for.
-                //IPathway myPathway = pathways.ValueForKey((int)numericUpDown264.Value);
-                IPathway myPathway = pathways.ValueForKey(CRUDE_PATH_ID);
-                // Grab the int id for the resource (the water)
-                int productID = myPathway.MainOutputResourceID;
-                IResource CrudeOil = resources.ValueForKey(productID);
+            IPathway myPathway = pathways.ValueForKey(CD_PATH_ID);
+            int productID = myPathway.MainOutputResourceID;
+            // Grab the int id for the resource (the water)
+            productID = myPathway.MainOutputResourceID;
+            IResource ConvDiesel = resources.ValueForKey(productID);
+            conventionalDieselBTUperGal = ConvDiesel.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
 
-                //This converts it to the preferred units, which in this case is grams/gal
-                crudeOilDensity = (CrudeOil.Density.GreetValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                crudeOilBTUperGal = CrudeOil.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
-                crudeOilCarbonRatio = CrudeOil.CarbonRatio.GreetValue;
-                crudeOilSulfurRatio = CrudeOil.SulfurRatio.GreetValue * 1000000;
-                crudeOilSulfurRatioActual = CrudeOil.SulfurRatio.GreetValue;
-
-                //This is where you do the above process, but for conventional diesel
-                myPathway = pathways.ValueForKey(CD_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource ConvDiesel = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                conventionalDieselDensity = (ConvDiesel.Density.GreetValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                conventionalDieselBTUperGal = ConvDiesel.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
-                conventionalDieselCarbonRatio = ConvDiesel.CarbonRatio.GreetValue;
-                conventionalDieselSulfurRatio = ConvDiesel.SulfurRatio.GreetValue * 1000000;
-                conventionalDieselSulfurRatioActual = ConvDiesel.SulfurRatio.GreetValue;
-                IData data = ResultsAccess.controler.CurrentProject.Data;
-                IResults path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-                CD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
-                CD_WTP_TE = (CD_Total_TE - 1);
-                CD_VO_TE = 1;
-                CD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
-                CD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
-                CD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
-                CD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-                CD_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
-                CD_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
-                CD_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
-                CD_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
-                CD_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
-                CD_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
-                CD_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
-                CD_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
-                CD_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
-                CD_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
-                //This is where you do the above process, but for low sulfur diesel
-                myPathway = pathways.ValueForKey(LSD_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource LSDiesel = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                lowSulfurDieselDensity = (LSDiesel.Density.GreetValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                lowSulfurDieselBTUperGal = LSDiesel.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
-                lowSulfurDieselCarbonRatio = LSDiesel.CarbonRatio.GreetValue;
-                lowSulfurDieselSulfurRatio = LSDiesel.SulfurRatio.GreetValue * 1000000;
-                lowSulfurDieselSulfurRatioActual = LSDiesel.SulfurRatio.GreetValue;
-                data = ResultsAccess.controler.CurrentProject.Data;
-                path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-                LSD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
-                LSD_WTP_TE = (LSD_Total_TE - 1);
-                LSD_VO_TE = 1;
-                LSD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
-                LSD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
-                LSD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
-                LSD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-                LSD_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
-                LSD_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
-                LSD_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
-                LSD_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
-                LSD_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
-                LSD_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
-                LSD_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
-                LSD_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
-                LSD_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
-                LSD_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
-                //This is where you do the above process, but for liquified petroleum gas
-                myPathway = pathways.ValueForKey(LIQ_PETROL_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource LPG = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                liquifiedPetroleumGasDensity = (LPG.Density.GreetValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                liquifiedPetroleumGasBTUperGal = LPG.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
-                liquifiedPetroleumGasCarbonRatio = LPG.CarbonRatio.GreetValue;
-                liquifiedPetroleumGasSulfurRatio = LPG.SulfurRatio.GreetValue * 1000000;
-                liquifiedPetroleumGasSulfurRatioActual = LPG.SulfurRatio.GreetValue;
-
-                //This is where you do the above process, but for residual oil
-                myPathway = pathways.ValueForKey(RO_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource RO = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                residualOilDensity = (RO.Density.GreetValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                residualOilBTUperGal = RO.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
-                residualOilCarbonRatio = RO.CarbonRatio.GreetValue;
-                residualOilSulfurRatio = RO.SulfurRatio.GreetValue * 1000000;
-                residualOilSulfurRatioActual = RO.SulfurRatio.GreetValue;
-                data = ResultsAccess.controler.CurrentProject.Data;
-                path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-                RO_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
-                RO_WTP_TE = (RO_Total_TE - 1);
-                RO_VO_TE = 1;
-                RO_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
-                RO_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
-                RO_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
-                RO_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-                RO_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
-                RO_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
-                RO_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
-                RO_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
-                RO_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
-                RO_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
-                RO_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
-                RO_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
-                RO_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
-                RO_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
-
-                //This is where you do the above process, but for liquified natural gas
-                myPathway = pathways.ValueForKey(LIQ_NATGAS_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource LNG = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                liquifiedNaturalGasDensity = (LNG.Density.GreetValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                liquifiedNaturalGasBTUperGal = LNG.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
-                liquifiedNaturalGasCarbonRatio = LNG.CarbonRatio.GreetValue;
-                liquifiedNaturalGasSulfurRatio = LNG.SulfurRatio.GreetValue * 1000000;
-                liquifiedNaturalGasSulfurRatioActual = LNG.SulfurRatio.GreetValue;
-                data = ResultsAccess.controler.CurrentProject.Data;
-                path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-
-                NG_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
-                NG_WTP_TE = (NG_Total_TE - 1);
-                NG_VO_TE = 1;
-                NG_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-                NG_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
-                NG_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(4).Value.Value;
-                NG_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
-                NG_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
-                NG_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
-                NG_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
-                NG_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
-                NG_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
-                NG_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
-                NG_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
-                NG_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
-                NG_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
-                NG_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
-
-                //This is where you do the above process, but for biodiesel
-                myPathway = pathways.ValueForKey(BIODIESEL_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource BD = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                bioDieselDensity = (BD.Density.GreetValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                bioDieselBTUperGal = BD.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
-                bioDieselCarbonRatio = BD.CarbonRatio.GreetValue;
-                bioDieselSulfurRatio = BD.SulfurRatio.GreetValue * 1000000;
-                bioDieselSulfurRatioActual = BD.SulfurRatio.GreetValue;
-                data = ResultsAccess.controler.CurrentProject.Data;
-                path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-                BD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
-                BD_WTP_TE = BD_Total_TE;
-                BD_VO_TE = 1;
-                BD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
-                BD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
-                BD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-                BD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
-                BD_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
-                BD_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
-                BD_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
-                BD_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
-                BD_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
-                BD_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
-                BD_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
-                BD_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
-                BD_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
-                BD_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
-                //MessageBox.Show(path.LifeCycleEmissions().ElementAt(0).Value.Value.ToString());
-                //This is where you do the above process, but for fischer tropsch diesel
-                myPathway = pathways.ValueForKey(FTD_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource FTD = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/gal
-                fischerTropschDensity = (FTD.Density.GreetValue * 3.78541178) / 1000;
-                //This converts it to the preferred units, which in this case is btu/gal
-                fischerTropschBTUperGal = FTD.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
-                fischerTropschCarbonRatio = FTD.CarbonRatio.GreetValue;
-                fischerTropschSulfurRatio = FTD.SulfurRatio.GreetValue * 1000000;
-                fischerTropschSulfurRatioActual = FTD.SulfurRatio.GreetValue;
-                data = ResultsAccess.controler.CurrentProject.Data;
-                path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-                FTD_Total_TE = (path.LifeCycleResources().ElementAt(13).Value.Value + path.LifeCycleResources().ElementAt(12).Value.Value + path.LifeCycleResources().ElementAt(11).Value.Value + path.LifeCycleResources().ElementAt(10).Value.Value + path.LifeCycleResources().ElementAt(9).Value.Value + path.LifeCycleResources().ElementAt(8).Value.Value + path.LifeCycleResources().ElementAt(7).Value.Value + path.LifeCycleResources().ElementAt(6).Value.Value + path.LifeCycleResources().ElementAt(5).Value.Value + path.LifeCycleResources().ElementAt(4).Value.Value + path.LifeCycleResources().ElementAt(3).Value.Value + path.LifeCycleResources().ElementAt(2).Value.Value + path.LifeCycleResources().ElementAt(1).Value.Value + path.LifeCycleResources().ElementAt(0).Value.Value);
-                FTD_WTP_TE = (FTD_Total_TE - 1);
-                FTD_VO_TE = 1;
-                FTD_Total_FF = path.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
-                FTD_Total_CF = path.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
-                FTD_Total_PF = path.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-                FTD_Total_NG = path.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
-                FTD_WTP_VOC = path.LifeCycleEmissions().ElementAt(0).Value.Value;
-                FTD_WTP_CO = path.LifeCycleEmissions().ElementAt(1).Value.Value;
-                FTD_WTP_NOX = path.LifeCycleEmissions().ElementAt(2).Value.Value;
-                FTD_WTP_PM10 = path.LifeCycleEmissions().ElementAt(3).Value.Value;
-                FTD_WTP_PM25 = path.LifeCycleEmissions().ElementAt(4).Value.Value;
-                FTD_WTP_SOX = path.LifeCycleEmissions().ElementAt(5).Value.Value;
-                FTD_WTP_CH4 = path.LifeCycleEmissions().ElementAt(6).Value.Value;
-                FTD_WTP_N2O = path.LifeCycleEmissions().ElementAt(7).Value.Value;
-                FTD_WTP_CO2 = path.LifeCycleEmissions().ElementAt(8).Value.Value;
-                FTD_WTP_PM25_CO2Biogenic = path.LifeCycleEmissions().ElementAt(9).Value.Value;
-                #endregion
-                #region Solid and Gaseous Fuels
-                //This is where you do the above process, but for Gaseous Natural Gas
-                myPathway = pathways.ValueForKey(NATGAS_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource NG = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is grams/Standard cubic foot
-                natGasGramsperSCF = NG.Density.GreetValue / 0.0353146667;
-                //This converts it to the preferred units, which in this case is btu/SCF (Standard cubic feet)
-                natGasBTUperSCF = NG.LowerHeatingValue.GreetValue / 37258.7438641;
-                natGasCarbonRatio = NG.CarbonRatio.GreetValue;
-                natGasSulfurRatio = NG.SulfurRatio.GreetValue * 1000000;
-                natGasSulfurRatioActual = NG.SulfurRatio.GreetValue;
-                data = ResultsAccess.controler.CurrentProject.Data;
-                path = myPathway.GetUpstreamResults(data).ElementAt(0).Value;
-
-                //This is where you do the above process, but for Gaseous Natural Gas
-                myPathway = pathways.ValueForKey(COAL_PATH_ID);
-                // Grab the int id for the resource (the water)
-                productID = myPathway.MainOutputResourceID;
-                IResource Coal = resources.ValueForKey(productID);
-                //This converts it to the preferred units, which in this case is btu/SCF (Standard cubic feet)
-                coalBTuperTON = Coal.LowerHeatingValue.GreetValue / 1.15870823646;
-                coalCarbonRatio = Coal.CarbonRatio.GreetValue;
-                coalSulfurRatio = Coal.SulfurRatio.GreetValue * 1000000;
-                coalSulfurRatioActual = Coal.SulfurRatio.GreetValue;
-                data = ResultsAccess.controler.CurrentProject.Data;
-
-                //label251.Text = coalBTuperTON.ToString();
-                #endregion
         }
         #region This will recalculate every value that is determined by taking in other values and applying calculation
         public void doCalculations()
@@ -936,22 +526,7 @@ namespace WindowsApplication1
             MMBTUoutperTrip = (KWHOutperTrip * BTUperKWH) / 1000000;
             MMBTUinperTrip = MMBTUoutperTrip * (100 / EngineEfficiency);
             GALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * MMBTUinperTrip;
-            ResidualOilMMBTU = MMBTUoutperTrip * (100 / ResidualOilEE);
-            LowSulfurDieselMMBTU = MMBTUoutperTrip * (100 / LowSulfurDieselEE);
-            NaturalGasMMBTU = MMBTUoutperTrip * (100 / NaturalGasEE);
-            BiodieselMMBTU = MMBTUoutperTrip * (100 / BiodieselEE);
-            FischerTropschMMBTU = MMBTUoutperTrip * (100 / FischerTropschEE);
-            ResidualOilAFC = GALLONperTrip = (1 / residualOilBTUperGal) * 1000000 * ResidualOilMMBTU;
-            LowSulfurDieselAFC = (1 / lowSulfurDieselBTUperGal) * 1000000 * LowSulfurDieselMMBTU;
-            NaturalGasAFC = (1 / natGasBTUperSCF) * 1000000 * NaturalGasMMBTU;
-            BiodieselAFC = (1 / bioDieselBTUperGal) * 1000000 * BiodieselMMBTU;
-            FischerTropschAFC = (1 / fischerTropschBTUperGal) * 1000000 * FischerTropschMMBTU;
-            ConventionalDieselTotal = (int)((ConventionalDieselIdle * TimeInIdle * NumberOfEngines) + (ConventionalDieselManeuvering * TimeInManeuvering * NumberOfEngines) + (ConventionalDieselPrecautionary * TimeInPrecautionary * NumberOfEngines) + (ConventionalDieselSlowCruise * TimeInSlowCruise * NumberOfEngines) + (ConventionalDieselFullCruise * TimeInFullCruise * NumberOfEngines));
-            ResidualOilTotal = (int)((ResidualOilIdle * TimeInIdle * NumberOfEngines) + (ResidualOilManeuvering * TimeInManeuvering * NumberOfEngines) + (ResidualOilPrecautionary * TimeInPrecautionary * NumberOfEngines) + (ResidualOilSlowCruise * TimeInSlowCruise * NumberOfEngines) + (ResidualOilFullCruise * TimeInFullCruise * NumberOfEngines));
-            LowSulfurDieselTotal = (int)((LowSulfurDieselIdle * TimeInIdle * NumberOfEngines) + (LowSulfurDieselManeuvering * TimeInManeuvering * NumberOfEngines) + (LowSulfurDieselPrecautionary * TimeInPrecautionary * NumberOfEngines) + (LowSulfurDieselSlowCruise * TimeInSlowCruise * NumberOfEngines) + (LowSulfurDieselFullCruise * TimeInFullCruise * NumberOfEngines));
-            NaturalGasTotal = (int)((NaturalGasIdle * TimeInIdle * NumberOfEngines) + (NaturalGasManeuvering * TimeInManeuvering * NumberOfEngines) + (NaturalGasPrecautionary * TimeInPrecautionary * NumberOfEngines) + (NaturalGasSlowCruise * TimeInSlowCruise * NumberOfEngines) + (NaturalGasFullCruise * TimeInFullCruise * NumberOfEngines));
-            BioDieselTotal = (int)((BioDieselIdle * TimeInIdle * NumberOfEngines) + (BioDieselManeuvering * TimeInManeuvering * NumberOfEngines) + (BioDieselPrecautionary * TimeInPrecautionary * NumberOfEngines) + (BioDieselSlowCruise * TimeInSlowCruise * NumberOfEngines) + (BioDieselFullCruise * TimeInFullCruise * NumberOfEngines));
-            FischerTropschTotal = (int)(( FischerTropschIdle * TimeInIdle * NumberOfEngines) + ( FischerTropschManeuvering * TimeInManeuvering * NumberOfEngines) + ( FischerTropschPrecautionary * TimeInPrecautionary * NumberOfEngines) + ( FischerTropschSlowCruise * TimeInSlowCruise * NumberOfEngines) + (FischerTropschFullCruise * TimeInFullCruise * NumberOfEngines));
+            
             TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
             TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
             ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
@@ -960,27 +535,7 @@ namespace WindowsApplication1
             AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / 1000000;
             AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
             AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
-            AuxResidualOilEE = ResidualOilEE;
-            AuxResidualOilMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxResidualOilEE);
-            AuxLowSulfurDieselEE = LowSulfurDieselEE;
-            AuxLowSulfurDieselMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxLowSulfurDieselEE);
-            AuxNaturalGasEE = NaturalGasEE;
-            AuxNaturalGasMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxNaturalGasEE);
-            AuxBiodieselEE = BiodieselEE;
-            AuxBiodieselMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxBiodieselEE);
-            AuxFischerTropschEE = FischerTropschEE;
-            AuxFischerTropschMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxFischerTropschEE);
-            AuxResidualOilEAFC = (1 / residualOilBTUperGal) * 1000000 * AuxResidualOilMMBTU;
-            AuxLowSulfurDieselEAFC = (1 / lowSulfurDieselBTUperGal) * 1000000 * AuxLowSulfurDieselMMBTU;
-            AuxNaturalGasEAFC = (1 / natGasBTUperSCF) * 1000000 * AuxNaturalGasMMBTU;
-            AuxBiodieselEAFC = (1 / bioDieselBTUperGal) * 1000000 * AuxBiodieselMMBTU;
-            AuxFischerTropschEAFC = (1 / fischerTropschBTUperGal) * 1000000 * AuxFischerTropschMMBTU;
-            AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
+           
         }
         #endregion
         #region This will make it so that all the values shown are consistent with the code values of the variables
@@ -1100,52 +655,8 @@ namespace WindowsApplication1
             HPLFSlowCruise = 50.00;
             HPLFFullCruise = 95.00;
 
-            //5.4a Selection of Model Calculated or User Input Fuel Consumption Values (Conventional Diesel as Baseline Fuel)
-            //1 = Simulate using GPH derived from user-entered engine specifications 2 = Simulate using User - Entered GPH
-            SelectionOfModelCalculatedOrUserInputFuelConsumptionValues = 1;
-
             //5.4b Calculation of Fuel Use Using Conventional Diesel as Baseline Fuel
             EngineEfficiency = 45.00;
-
-            //5.4c Calculation of Fuel Use Using Alternative Fuels (Conventional Diesel as Baseline Fuel)
-            //EE = Engine Efficiency in percent MMBTU = million BTUs in per trip AFC = alternative Fuel Consumption in Gallons per trip
-            ResidualOilEE = 45.0;
-            LowSulfurDieselEE = 40.0;
-            NaturalGasEE = 35.0;
-            BiodieselEE = 40.0;
-            FischerTropschEE = 40.0;
-
-            //5.4d Fuel Consumption (Only needed if you are simulating using user - entered GPH) Total is in Gallons/Trip
-            ConventionalDieselIdle = 30;
-            ConventionalDieselManeuvering = 40;
-            ConventionalDieselPrecautionary = 60;
-            ConventionalDieselSlowCruise = 90;
-            ConventionalDieselFullCruise = 100;
-            ResidualOilIdle = 21;
-            ResidualOilManeuvering = 31;
-            ResidualOilPrecautionary = 52;
-            ResidualOilSlowCruise = 75;
-            ResidualOilFullCruise = 92;
-            LowSulfurDieselIdle = 31;
-            LowSulfurDieselManeuvering = 41;
-            LowSulfurDieselPrecautionary = 61;
-            LowSulfurDieselSlowCruise = 91;
-            LowSulfurDieselFullCruise = 101;
-            NaturalGasIdle = 3200;
-            NaturalGasManeuvering = 4100;
-            NaturalGasPrecautionary = 7800;
-            NaturalGasSlowCruise = 10000;
-            NaturalGasFullCruise = 11000;
-            BioDieselIdle = 35;
-            BioDieselManeuvering = 45;
-            BioDieselPrecautionary = 65;
-            BioDieselSlowCruise = 95;
-            BioDieselFullCruise = 120;
-            FischerTropschIdle = 34;
-            FischerTropschManeuvering = 44;
-            FischerTropschPrecautionary = 63;
-            FischerTropschSlowCruise = 92;
-            FischerTropschFullCruise = 111;
 
             NOX_gphphr_out = 7.94;
             CO_gphphr_out = 7.94;
@@ -1156,9 +667,6 @@ namespace WindowsApplication1
             CH4_gphphr_out = 7.94;
             #endregion
             #region Teams 6.1 - 6.4d
-            //6.1 Auxiliary Engine Fuel Type to Present On Results Sheet;
-            //1 = Conventional Diesel 2 = Residual Oil 3 = Low Sulfur Diesel 4 = Natural gas 5 = Biodiesel 6 = Fischer Tropsch Diesel
-            AuxiliaryEngineFuelType = 1;
 
             //6.2 Auxiliary Engine Variables
             NumberOfOnBoarAuxiliaryEngines = 4;
@@ -1169,24 +677,8 @@ namespace WindowsApplication1
             PercentOfTripAuxiliaryIsActive = 50.00;
             HPLoadFactorSingleEngine = 80.00;
 
-            //6.4a Selection of Medel Calculated or User Input Fuel Consumption Values Conventional Diesel as Baseline Fuel
-            //1 = Simlate using GPH derived from User-Entered Auxiliary engine specifications 2 = Simlate using user entered GPH
-            SelectionOfModelCalculatedOrUserInputFuelConsumptionValues6 = 1;
-
             //6.4b Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
             AuxiliaryEngineEfficiency = 40.00;
-
-            //6.4c Calculation of Auxiliary Engine Fuel Use Using Alternative Fuels
-            //EE = Engine Efficiency AuxMMBTU = Auxiliary MMTBUin/Trip EAFC = Auxiliary Engine Alternativee Fuel Consumption
-
-            //6.4d  Auxiliary Engine Fuel Consumption (Only if you're using user entered GPH for your simulation
-            //FC = Fuel Consumption 
-            AuxConventionalDieselFC = 9;
-            AuxResidualOilFC = 10;
-            AuxLowSulfurDieselFC = 11;
-            AuxNaturalGasFC = 800;
-            AuxBiodieselFC = 9;
-            AuxFischerTropschFC = 10;
 
             AUX_NOX_gphphr_out = 7.94;
             AUX_CO_gphphr_out = 7.94;
@@ -1353,40 +845,6 @@ namespace WindowsApplication1
                 AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
                 numericUpDown238.Value = (decimal)AuxEngineGALLONperTrip;
 
-                //6.4c
-                AuxResidualOilEE = ResidualOilEE;
-                AuxResidualOilMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxResidualOilEE);
-                //This one requires Fuel Specs from GREET
-                AuxResidualOilEAFC = (1 / residualOilBTUperGal) * 1000000 * AuxResidualOilMMBTU;
-
-                AuxLowSulfurDieselEE = LowSulfurDieselEE;
-                AuxLowSulfurDieselMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxLowSulfurDieselEE);
-                //This one requires Fuel Specs from GREET
-                AuxLowSulfurDieselEAFC = (1 /lowSulfurDieselBTUperGal) * 1000000 * AuxLowSulfurDieselMMBTU;
-
-                AuxNaturalGasEE = NaturalGasEE;
-                AuxNaturalGasMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxNaturalGasEE);
-                //This one requires Fuel Specs from GREET
-                AuxNaturalGasEAFC = (1 / natGasBTUperSCF) * 1000000 * AuxNaturalGasMMBTU;
-
-                AuxBiodieselEE = BiodieselEE;
-                AuxBiodieselMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxBiodieselEE);
-                //This one requires Fuel Specs from GREET
-                AuxBiodieselEAFC = (1 / bioDieselBTUperGal) * 1000000 * AuxBiodieselMMBTU;
-
-                AuxFischerTropschEE = FischerTropschEE;
-                AuxFischerTropschMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxFischerTropschEE);
-                //This one requires Fuel Specs from GREET
-                AuxFischerTropschEAFC = (1 / fischerTropschBTUperGal) * 1000000 * AuxFischerTropschMMBTU;
-
-                //6.4d
-                AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-                AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-
                 AUX_NOX_gphphr_out = (double)numericUpDown14.Value;
                 AUX_CO_gphphr_out = (double)numericUpDown13.Value;
                 AUX_VOC_gphphr_out = (double)numericUpDown12.Value;
@@ -1535,40 +993,6 @@ namespace WindowsApplication1
             //This one requires fuel specs from GREET
             AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
             numericUpDown238.Value = (decimal)AuxEngineGALLONperTrip;
-
-            //6.4c
-            AuxResidualOilEE = ResidualOilEE;
-            AuxResidualOilMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxResidualOilEE);
-            //This one requires Fuel Specs from GREET
-            AuxResidualOilEAFC = (1 / residualOilBTUperGal) * 1000000 * AuxResidualOilMMBTU;
-
-            AuxLowSulfurDieselEE = LowSulfurDieselEE;
-            AuxLowSulfurDieselMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxLowSulfurDieselEE);
-            //This one requires Fuel Specs from GREET
-            AuxLowSulfurDieselEAFC = (1 / lowSulfurDieselBTUperGal) * 1000000 * AuxLowSulfurDieselMMBTU;
-
-            AuxNaturalGasEE = NaturalGasEE;
-            AuxNaturalGasMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxNaturalGasEE);
-            //This one requires Fuel Specs from GREET
-            AuxNaturalGasEAFC = (1 / natGasBTUperSCF) * 1000000 * AuxNaturalGasMMBTU;
-
-            AuxBiodieselEE = BiodieselEE;
-            AuxBiodieselMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxBiodieselEE);
-            //This one requires Fuel Specs from GREET
-            AuxBiodieselEAFC = (1 / bioDieselBTUperGal) * 1000000 * AuxBiodieselMMBTU;
-
-            AuxFischerTropschEE = FischerTropschEE;
-            AuxFischerTropschMMBTU = AuxEngineMMBTUoutperTrip * (100 / AuxFischerTropschEE);
-            //This one requires Fuel Specs from GREET
-            AuxFischerTropschEAFC = (1 / fischerTropschBTUperGal) * 1000000 * AuxFischerTropschMMBTU;
-
-            //6.4d
-            AuxConventionalDieselTotal = AuxConventionalDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxResidualOilTotal = AuxResidualOilFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxLowSulfurDieselTotal = AuxLowSulfurDieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxNaturalGasTotal = AuxNaturalGasFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxBioDieselTotal = AuxBiodieselFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
-            AuxFischerTropschTotal = AuxFischerTropschFC * TimeAuxActiveHours * NumberOfAuxiliaryEnginesInUse;
 
             AUX_NOX_gphphr_out = (double)numericUpDown14.Value;
             AUX_CO_gphphr_out = (double)numericUpDown13.Value;
