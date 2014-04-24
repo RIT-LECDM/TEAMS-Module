@@ -281,7 +281,7 @@
             this.runSimulationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(680, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(690, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -917,11 +917,6 @@
             this.numericUpDown168.DecimalPlaces = 2;
             this.numericUpDown168.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown168.Location = new System.Drawing.Point(574, 386);
-            this.numericUpDown168.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
             this.numericUpDown168.Name = "numericUpDown168";
             this.numericUpDown168.Size = new System.Drawing.Size(76, 22);
             this.numericUpDown168.TabIndex = 161;
@@ -995,11 +990,6 @@
             this.numericUpDown163.DecimalPlaces = 2;
             this.numericUpDown163.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown163.Location = new System.Drawing.Point(486, 386);
-            this.numericUpDown163.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
             this.numericUpDown163.Name = "numericUpDown163";
             this.numericUpDown163.Size = new System.Drawing.Size(87, 22);
             this.numericUpDown163.TabIndex = 155;
@@ -1073,11 +1063,6 @@
             this.numericUpDown158.DecimalPlaces = 2;
             this.numericUpDown158.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown158.Location = new System.Drawing.Point(399, 386);
-            this.numericUpDown158.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
             this.numericUpDown158.Name = "numericUpDown158";
             this.numericUpDown158.Size = new System.Drawing.Size(87, 22);
             this.numericUpDown158.TabIndex = 149;
@@ -1151,11 +1136,6 @@
             this.numericUpDown153.DecimalPlaces = 2;
             this.numericUpDown153.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown153.Location = new System.Drawing.Point(319, 386);
-            this.numericUpDown153.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
             this.numericUpDown153.Name = "numericUpDown153";
             this.numericUpDown153.Size = new System.Drawing.Size(79, 22);
             this.numericUpDown153.TabIndex = 143;
@@ -1260,11 +1240,6 @@
             this.numericUpDown147.DecimalPlaces = 2;
             this.numericUpDown147.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown147.Location = new System.Drawing.Point(249, 386);
-            this.numericUpDown147.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
             this.numericUpDown147.Name = "numericUpDown147";
             this.numericUpDown147.Size = new System.Drawing.Size(68, 22);
             this.numericUpDown147.TabIndex = 134;
@@ -2503,7 +2478,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(680, 656);
+            this.ClientSize = new System.Drawing.Size(690, 666);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
