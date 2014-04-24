@@ -118,9 +118,9 @@ namespace TEAMS_Plugin
         #endregion
 
         //Program Variables
-        public bool five_complete;
-        public bool six_complete;
-        public bool runSimActive;
+        private bool five_complete;
+        private bool six_complete;
+        private bool runSimActive;
         #region Greet Variables
         //GREET Variables
         //btu/Gal
@@ -456,9 +456,6 @@ namespace TEAMS_Plugin
 
         #endregion
 
-        public string openedFile;
-
-        public bool advanced;
         #region ID Variables
         public const int CRUDE_PATH_ID = 34;
         public const int CD_PATH_ID = 40;
