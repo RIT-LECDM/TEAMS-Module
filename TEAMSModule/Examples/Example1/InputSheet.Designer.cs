@@ -1,4 +1,4 @@
-﻿namespace WindowsApplication1
+﻿namespace TEAMS_Plugin
 {
     partial class TEAMS
     {

@@ -16,7 +16,7 @@ using PlugInsInterfaces.ResultTypes;
 using PlugInsInterfaces.DataTypes.Technology;
 using TEAMSModule;
 
-namespace WindowsApplication1
+namespace TEAMS_Plugin
 {
     public partial class TEAMS : Form
     {

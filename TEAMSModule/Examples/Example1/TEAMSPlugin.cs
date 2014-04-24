@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using TEAMSModule;
 
-namespace WindowsApplication1
+namespace TEAMS_Plugin
 {
     /// <summary>
     /// This plugin example shows a very simple way to grab results from the GREET calculated pathways

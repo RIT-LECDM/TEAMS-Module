@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using TEAMSModule;
-using WindowsApplication1;
+using TEAMS_Plugin;
 using PlugInsInterfaces.DataTypes.Resource;
 using PlugInsInterfaces.DataTypes;
 using PlugInsInterfaces.DataTypes.Pathway;
