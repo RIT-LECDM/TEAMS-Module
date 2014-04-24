@@ -1030,7 +1030,7 @@ namespace WindowsApplication1
             decimal sum = 0;
             sum += (numericUpDown147.Value + numericUpDown153.Value + numericUpDown158.Value + 
                 numericUpDown163.Value + numericUpDown168.Value );
-            if (sum > 100)
+            if (sum != 100)
             {
                 return false;
             }
