@@ -455,23 +455,10 @@ namespace TEAMS_Plugin
         #endregion
 
         #endregion
-
-        #region ID Variables
-        public const int CRUDE_PATH_ID = 34;
         public const int CD_PATH_ID = 40;
-        public const int LSD_PATH_ID = 61;
-        public const int LIQ_PETROL_PATH_ID = 20;
-        public const int RO_PATH_ID = 60;
-        public const int LIQ_NATGAS_PATH_ID = 150000;
-        public const int BIODIESEL_PATH_ID = 2020;
-        public const int FTD_PATH_ID = 75;
-        public const int NATGAS_PATH_ID = 1;
-        public const int COAL_PATH_ID = 17;
-        #endregion
         #region Emissions Variables
 
         #endregion
-        public Update u;
         public GREETFormattedResults gfr;
         public TEAMS()
         {
@@ -479,7 +466,6 @@ namespace TEAMS_Plugin
             pullFromGREET();
             useDefaults();
             changeResults();
-            u = new Update(this);
         }
         /// <summary>
         /// Grabs all of the data needed to do calculations from GREET resources, pathways, and mixes.
@@ -873,12 +859,12 @@ namespace TEAMS_Plugin
         }
         private void TEAMS_FormClosing(object sender, FormClosingEventArgs e)
         {
-            u.Close();
+            gfr.Close();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            u.Close();
+            gfr.Close();
             this.Close();
         }
 
