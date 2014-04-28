@@ -481,8 +481,14 @@ namespace TEAMS_Plugin
             // Grab the int id for the resource (the water)
             productID = myPathway.MainOutputResourceID;
             IResource ConvDiesel = resources.ValueForKey(productID);
-            conventionalDieselBTUperGal = ConvDiesel.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
-
+            if (ConvDiesel.LowerHeatingValue.UserValue == 0)
+            {
+                conventionalDieselBTUperGal = ConvDiesel.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
+            }
+            else
+            {
+                conventionalDieselBTUperGal = ConvDiesel.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
+            }
         }
         #region This will recalculate every value that is determined by taking in other values and applying calculation
         public void doCalculations()
@@ -859,12 +865,10 @@ namespace TEAMS_Plugin
         }
         private void TEAMS_FormClosing(object sender, FormClosingEventArgs e)
         {
-            gfr.Close();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            gfr.Close();
             this.Close();
         }
 

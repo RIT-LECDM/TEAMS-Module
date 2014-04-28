@@ -122,7 +122,54 @@ namespace TEAMSModule
                     fuelUsed = resource.Name;
                 }
                 IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
-                te.GALLONperTrip = resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 100000);
+                if (resourceUsed.LowerHeatingValue.UserValue == 0)
+                {
+                    te.GALLONperTrip = resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 100000);
+                }
+                else
+                {
+                    te.GALLONperTrip = resourceUsed.LowerHeatingValue.UserValue * (3.5878781 / 100000);
+                }
+
+                //These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
+                double resourceDensity;
+                if (resourceUsed.Density.UserValue == 0)
+                {
+                    resourceDensity = resourceUsed.Density.GreetValue;
+                }
+                else
+                {
+                    resourceDensity = resourceUsed.Density.UserValue;
+                }
+                double resourceSulfurRatio;
+                if (resourceUsed.SulfurRatio.UserValue == 0)
+                {
+                    resourceSulfurRatio = resourceUsed.SulfurRatio.GreetValue;
+                }
+                else
+                {
+                    resourceSulfurRatio = resourceUsed.SulfurRatio.UserValue;
+                }
+                double resourceLowerHeatingValue;
+                if (resourceUsed.LowerHeatingValue.UserValue == 0)
+                {
+                    resourceLowerHeatingValue = resourceUsed.LowerHeatingValue.GreetValue;
+                }
+                else
+                {
+                    resourceLowerHeatingValue = resourceUsed.LowerHeatingValue.UserValue;
+                }
+                double resourceCarbonRatio;
+                if (resourceUsed.CarbonRatio.UserValue == 0)
+                {
+                    resourceCarbonRatio = resourceUsed.CarbonRatio.GreetValue;
+                }
+                else
+                {
+                    resourceCarbonRatio = resourceUsed.CarbonRatio.UserValue;
+                }
+
+
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
                 TE_WTP = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
                 TE_VO = te.MMBTUinperTrip;
@@ -158,7 +205,7 @@ namespace TEAMSModule
 
                 //Requires an input on the input sheet
                 SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                SOx_VO = resourceUsed.Density.GreetValue * (1000 / 7.48052) * te.GALLONperTrip * resourceUsed.SulfurRatio.GreetValue;
+                SOx_VO = resourceDensity * (1000 / 7.48052) * te.GALLONperTrip * resourceSulfurRatio;
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * 1000000000000 * te.MMBTUinperTrip;
@@ -166,9 +213,8 @@ namespace TEAMSModule
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.MMBTUinperTrip;
-                double gramsOfFuel = ((1 / (resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceUsed.Density.GreetValue * 3.78541178) / 1000);
-                double carbonPercentage = resourceUsed.CarbonRatio.GreetValue;
-                CO2_VO = ((carbonPercentage * (gramsOfFuel / te.MMBTUinperTrip)) * te.MMBTUinperTrip) * (44 / 12);
+                double gramsOfFuel = ((1 / (resourceLowerHeatingValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceDensity * 3.78541178) / 1000);
+                CO2_VO = ((resourceCarbonRatio * (gramsOfFuel / te.MMBTUinperTrip)) * te.MMBTUinperTrip) * (44 / 12);
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.MMBTUinperTrip;
@@ -194,8 +240,46 @@ namespace TEAMSModule
                     auxFuelUsed = resource.Name;
                 }
                 IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
+
+                                //These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
+                double resourceDensity;
+                if (resourceUsed.Density.UserValue == 0)
+                {
+                    resourceDensity = resourceUsed.Density.GreetValue;
+                }
+                else
+                {
+                    resourceDensity = resourceUsed.Density.UserValue;
+                }
+                double resourceSulfurRatio;
+                if (resourceUsed.SulfurRatio.UserValue == 0)
+                {
+                    resourceSulfurRatio = resourceUsed.SulfurRatio.GreetValue;
+                }
+                else
+                {
+                    resourceSulfurRatio = resourceUsed.SulfurRatio.UserValue;
+                }
+                double resourceLowerHeatingValue;
+                if (resourceUsed.LowerHeatingValue.UserValue == 0)
+                {
+                    resourceLowerHeatingValue = resourceUsed.LowerHeatingValue.GreetValue;
+                }
+                else
+                {
+                    resourceLowerHeatingValue = resourceUsed.LowerHeatingValue.UserValue;
+                }
+                double resourceCarbonRatio;
+                if (resourceUsed.CarbonRatio.UserValue == 0)
+                {
+                    resourceCarbonRatio = resourceUsed.CarbonRatio.GreetValue;
+                }
+                else
+                {
+                    resourceCarbonRatio = resourceUsed.CarbonRatio.UserValue;
+                }
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
-                te.AuxEngineGALLONperTrip = resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 100000);
+                te.AuxEngineGALLONperTrip = resourceLowerHeatingValue * (3.5878781 / 100000);
                 AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
                 AUX_TE_VO = te.AuxEngineMMBTUinperTrip;
                 TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip + AUX_TE_WTP + AUX_TE_VO;
@@ -225,17 +309,16 @@ namespace TEAMSModule
 
                 //Requires an input on the input sheet
                 AUX_SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_SOx_VO = resourceUsed.Density.GreetValue * (1000 / 7.48052) * te.AuxEngineGALLONperTrip * resourceUsed.SulfurRatio.GreetValue;
+                AUX_SOx_VO = resourceDensity * (1000 / 7.48052) * te.AuxEngineGALLONperTrip * resourceSulfurRatio;
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 AUX_CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
                 AUX_CH4_VO = ((te.AUX_CH4_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
-                double gramsOfFuel = ((1 / (resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceUsed.Density.GreetValue * 3.78541178) / 1000);
-                double carbonPercentage = resourceUsed.CarbonRatio.GreetValue;
+                double gramsOfFuel = ((1 / (resourceLowerHeatingValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceDensity * 3.78541178) / 1000);
                 AUX_CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_CO2_VO = ((carbonPercentage * (gramsOfFuel / te.AuxEngineMMBTUinperTrip)) * te.AuxEngineMMBTUinperTrip) * (44 / 12);
+                AUX_CO2_VO = ((resourceCarbonRatio * (gramsOfFuel / te.AuxEngineMMBTUinperTrip)) * te.AuxEngineMMBTUinperTrip) * (44 / 12);
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 AUX_N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
@@ -343,18 +426,18 @@ namespace TEAMSModule
             label1.Text = fuelUsed;
             label27.Text = auxFuelUsed;
             //Setting the stacked bar chart information
-            double[] total_energy = { (TE_WTP), (TE_VO) };  //Resource 0
+            double[] total_energy = { (TE_WTP + AUX_TE_WTP), (TE_VO + AUX_TE_VO) };  //Resource 0
             double[] fossil_fuels = { 10, 20 };             //Resource 1
             double[] petroleum = { 15, 25 };                //Resource 2
-            double[] co2 = { (CO2_WTP), (CO2_VO) };         //Resource 3
-            double[] ch4 = { (CH4_WTP), (CH4_VO) };         //Resource 4
-            double[] n2o = { (N2O_WTP), (N2O_VO) };         //Resource 5
+            double[] co2 = { (CO2_WTP + AUX_CO2_WTP), (CO2_VO + AUX_CO2_VO) };         //Resource 3
+            double[] ch4 = { (CH4_WTP + AUX_CH4_WTP), (CH4_VO + AUX_CH4_VO) };         //Resource 4
+            double[] n2o = { (N2O_WTP + AUX_N2O_WTP), (N2O_VO + AUX_N2O_VO) };         //Resource 5
             double[] ghgs = { 90, 4.5 };                    //Resource 6
-            double[] voc = { (VOC_WTP), (VOC_VO) };         //Resource 7
-            double[] co = { (CO_WTP), (CO_VO) };            //Resource 8
-            double[] nox = { (NOx_WTP), (NOx_VO) };         //Resource 9
-            double[] pm10 = { (PM10_WTP), (PM10_VO) };      //Resource 10
-            double[] sox = { (SOx_WTP), (SOx_VO) };         //Resource 11
+            double[] voc = { (VOC_WTP + AUX_VOC_WTP), (VOC_VO + AUX_VOC_VO) };         //Resource 7
+            double[] co = { (CO_WTP + AUX_CO_WTP), (CO_VO + AUX_CO_VO) };            //Resource 8
+            double[] nox = { (NOx_WTP + AUX_NOx_WTP), (NOx_VO + AUX_NOx_VO) };         //Resource 9
+            double[] pm10 = { (PM10_WTP + AUX_PM10_WTP), (PM10_VO + AUX_PM10_VO) };      //Resource 10
+            double[] sox = { (SOx_WTP + AUX_SOx_WTP), (SOx_VO + AUX_SOx_VO) };         //Resource 11
             double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
 
             //Generate the graph using the resources set and seriesArray.
