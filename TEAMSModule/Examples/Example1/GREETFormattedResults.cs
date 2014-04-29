@@ -885,5 +885,17 @@ namespace TEAMSModule
             
         }
         #endregion
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you wish to reset the form?", "Reset Results", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                GREETFormattedResults newWindow = new GREETFormattedResults(te);
+                newWindow.Show();
+            }
+
+        }
     }
 }
