@@ -329,6 +329,17 @@ namespace TEAMSModule
             }
             setLabels();
         }
+
+
+        private String parseResourceToString(double resource)
+        {
+            if (resource != 0)
+            {
+                return (resource).ToString("#.##");
+            }
+            return "0.00";
+        }
+
         #endregion
 
         #region Setting Labels, and Generating new Graph
@@ -338,89 +349,89 @@ namespace TEAMSModule
             * Column 1 -- Well to Pump
             */
             // Total Energy
-            label24.Text = (TE_WTP).ToString("#.##") + " mmbtu/trip";
+            label24.Text = parseResourceToString(TE_WTP) + " mmbtu/trip";
 
             /***************
              * EMISSIONS
              ***************/
 
-            label30.Text = (VOC_WTP).ToString("#.##") + " g/trip";  // VOC
-            label31.Text = (CO_WTP).ToString("#.##") + " g/trip";   // CO
-            label32.Text = (NOx_WTP).ToString("#.##") + " g/trip";  // NOx
-            label33.Text = (PM10_WTP).ToString("#.##") + " g/trip"; // PM10
-            label34.Text = (PM25_WTP).ToString("#.##") + " g/trip"; // PM2.5
-            label35.Text = (SOx_WTP).ToString("#.##") + " g/trip";  // SOx
-            label36.Text = (CH4_WTP).ToString("#.##") + " g/trip";  // CH4
-            label37.Text = (CO2_WTP).ToString("#.##") + " g/trip";  // CO2
-            label38.Text = (N2O_WTP).ToString("#.##") + " g/trip";  // N2O
+            label30.Text = parseResourceToString(VOC_WTP) + " g/trip";  // VOC
+            label31.Text = parseResourceToString(CO_WTP) + " g/trip";   // CO
+            label32.Text = parseResourceToString(NOx_WTP) + " g/trip";  // NOx
+            label33.Text = parseResourceToString(PM10_WTP) + " g/trip"; // PM10
+            label34.Text = parseResourceToString(PM25_WTP) + " g/trip"; // PM2.5
+            label35.Text = parseResourceToString(SOx_WTP) + " g/trip";  // SOx
+            label36.Text = parseResourceToString(CH4_WTP) + " g/trip";  // CH4
+            label37.Text = parseResourceToString(CO2_WTP) + " g/trip";  // CO2
+            label38.Text = parseResourceToString(N2O_WTP) + " g/trip";  // N2O
 
             /*
              * Column 2 -- Vessel Operation
              */
 
-            label42.Text = (TE_VO).ToString("#.##") + " mmbtu/trip";  // Total Energy
+            label42.Text = parseResourceToString(TE_VO) + " mmbtu/trip";  // Total Energy
 
             /***************
              * EMISSIONS
              ***************/
 
-            label48.Text = (VOC_VO).ToString("#.##") + " g/trip";     // VOC
-            label49.Text = (CO_VO).ToString("#.##") + " g/trip";      // CO
-            label50.Text = (NOx_VO).ToString("#.##") + " g/trip";     // NOx
-            label51.Text = (PM10_VO).ToString("#.##") + " g/trip";    // PM10
-            label52.Text = (PM25_VO).ToString("#.##") + " g/trip";    // PM2.5
-            label53.Text = (SOx_VO).ToString("#.##") + " g/trip";     // SOx
-            label54.Text = (CH4_VO).ToString("#.##") + " g/trip";     // CH4
-            label55.Text = (CO2_VO).ToString("#.##") + " g/trip";     // CO2
-            label56.Text = (N2O_VO).ToString("#.##") + " g/trip";     // N2O
+            label48.Text = parseResourceToString(VOC_VO) + " g/trip";     // VOC
+            label49.Text = parseResourceToString(CO_VO) + " g/trip";      // CO
+            label50.Text = parseResourceToString(NOx_VO) + " g/trip";     // NOx
+            label51.Text = parseResourceToString(PM10_VO) + " g/trip";    // PM10
+            label52.Text = parseResourceToString(PM25_VO) + " g/trip";    // PM2.5
+            label53.Text = parseResourceToString(SOx_VO) + " g/trip";     // SOx
+            label54.Text = parseResourceToString(CH4_VO) + " g/trip";     // CH4
+            label55.Text = parseResourceToString(CO2_VO) + " g/trip";     // CO2
+            label56.Text = parseResourceToString(N2O_VO) + " g/trip";     // N2O
 
 
             //Column 3 -- Aux Engine WTP
-            label176.Text = AUX_TE_WTP.ToString("#.##") + " mmbtu/trip";
-            label192.Text = AUX_VOC_WTP.ToString("#.##") + " g/trip";
-            label193.Text = AUX_CO_WTP.ToString("#.##") + " g/trip";
-            label194.Text = AUX_NOx_WTP.ToString("#.##") + " g/trip";
-            label195.Text = AUX_PM10_WTP.ToString("#.##") + " g/trip";
-            label196.Text = AUX_PM25_WTP.ToString("#.##") + " g/trip";
-            label197.Text = AUX_SOx_WTP.ToString("#.##") + " g/trip";
-            label198.Text = AUX_CH4_WTP.ToString("#.##") + " g/trip";
-            label199.Text = AUX_CO2_WTP.ToString("#.##") + " g/trip";
-            label200.Text = AUX_N2O_WTP.ToString("#.##") + " g/trip";
+            label176.Text = parseResourceToString(AUX_TE_WTP) + " mmbtu/trip";
+            label192.Text = parseResourceToString(AUX_VOC_WTP) + " g/trip";
+            label193.Text = parseResourceToString(AUX_CO_WTP) + " g/trip";
+            label194.Text = parseResourceToString(AUX_NOx_WTP) + " g/trip";
+            label195.Text = parseResourceToString(AUX_PM10_WTP) + " g/trip";
+            label196.Text = parseResourceToString(AUX_PM25_WTP) + " g/trip";
+            label197.Text = parseResourceToString(AUX_SOx_WTP) + " g/trip";
+            label198.Text = parseResourceToString(AUX_CH4_WTP) + " g/trip";
+            label199.Text = parseResourceToString(AUX_CO2_WTP) + " g/trip";
+            label200.Text = parseResourceToString(AUX_N2O_WTP) + " g/trip";
 
-            //Collumn 4 -- Aux Engine Vessel Operations
-            label19.Text = AUX_TE_VO.ToString("#.##") + " mmbtu/trip";
-            label40.Text = AUX_VOC_VO.ToString("#.##") + " g/trip";
-            label41.Text = AUX_CO_VO.ToString("#.##") + " g/trip";
-            label43.Text = AUX_NOx_VO.ToString("#.##") + " g/trip";
-            label44.Text = AUX_PM10_VO.ToString("#.##") + " g/trip";
-            label45.Text = AUX_PM25_VO.ToString("#.##") + " g/trip";
-            label46.Text = AUX_SOx_VO.ToString("#.##") + " g/trip";
-            label47.Text = AUX_CH4_VO.ToString("#.##") + " g/trip";
-            label57.Text = AUX_CO2_VO.ToString("#.##") + " g/trip";
-            label58.Text = AUX_N2O_VO.ToString("#.##") + " g/trip";
+            //Column 4 -- Aux Engine Vessel Operations
+            label19.Text = parseResourceToString(AUX_TE_VO) + " mmbtu/trip";
+            label40.Text = parseResourceToString(AUX_VOC_VO) + " g/trip";
+            label41.Text = parseResourceToString(AUX_CO_VO) + " g/trip";
+            label43.Text = parseResourceToString(AUX_NOx_VO) + " g/trip";
+            label44.Text = parseResourceToString(AUX_PM10_VO) + " g/trip";
+            label45.Text = parseResourceToString(AUX_PM25_VO) + " g/trip";
+            label46.Text = parseResourceToString(AUX_SOx_VO) + " g/trip";
+            label47.Text = parseResourceToString(AUX_CH4_VO) + " g/trip";
+            label57.Text = parseResourceToString(AUX_CO2_VO) + " g/trip";
+            label58.Text = parseResourceToString(AUX_N2O_VO) + " g/trip";
             /*
              * Column 5 -- Total
              */
 
-            label60.Text = (TE_Total).ToString("#.##") + " mmbtu/trip";   // Total Energy
-            label61.Text = (FF_Total).ToString("#.##") + " mmbtu/trip";   // Fossil Fuel
-            label62.Text = (CF_Total).ToString("#.##") + " mmbtu/trip";   // Coal Fuel
-            label63.Text = (NGF_Total).ToString("#.##") + " mmbtu/trip";  // Natural Gas Fuel
-            label64.Text = (PF_Total).ToString("#.##") + " mmbtu/trip";   // Petroleum Fuel
+            label60.Text = parseResourceToString(TE_Total) + " mmbtu/trip";   // Total Energy
+            label61.Text = parseResourceToString(FF_Total) + " mmbtu/trip";   // Fossil Fuel
+            label62.Text = parseResourceToString(CF_Total) + " mmbtu/trip";   // Coal Fuel
+            label63.Text = parseResourceToString(NGF_Total) + " mmbtu/trip";  // Natural Gas Fuel
+            label64.Text = parseResourceToString(PF_Total) + " mmbtu/trip";   // Petroleum Fuel
 
             /***************
              * EMISSIONS
              ***************/
 
-            label66.Text = (VOC_Total).ToString("#.##") + " g/trip";      // VOC
-            label67.Text = (CO_Total).ToString("#.##") + " g/trip";       // CO
-            label68.Text = (NOx_Total).ToString("#.##") + " g/trip";      // NOx
-            label69.Text = (PM10_Total).ToString("#.##") + " g/trip";     // PM10
-            label70.Text = (PM25_Total).ToString("#.##") + " g/trip";     // PM2.5
-            label71.Text = (SOx_Total).ToString("#.##") + " g/trip";      // SOx
-            label72.Text = (CH4_Total).ToString("#.##") + " g/trip";      // CH4
-            label73.Text = (CO2_Total).ToString("#.##") + " g/trip";      // CO2
-            label74.Text = (N2O_Total).ToString("#.##") + " g/trip";      // N2O
+            label66.Text = parseResourceToString(VOC_Total) + " g/trip";      // VOC
+            label67.Text = parseResourceToString(CO_Total) + " g/trip";       // CO
+            label68.Text = parseResourceToString(NOx_Total) + " g/trip";      // NOx
+            label69.Text = parseResourceToString(PM10_Total) + " g/trip";     // PM10
+            label70.Text = parseResourceToString(PM25_Total) + " g/trip";     // PM2.5
+            label71.Text = parseResourceToString(SOx_Total) + " g/trip";      // SOx
+            label72.Text = parseResourceToString(CH4_Total) + " g/trip";      // CH4
+            label73.Text = parseResourceToString(CO2_Total) + " g/trip";      // CO2
+            label74.Text = parseResourceToString(N2O_Total) + " g/trip";      // N2O
 
             //Title
             label1.Text = fuelUsed;
