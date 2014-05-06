@@ -46,3 +46,10 @@ Public interface for GREET project
 More information on the GREET-API can be found at: http://greet.es.anl.gov/greet/
 
 The GREET-API git repo is available here: https://github.com/greet-dev/GREETAPI
+
+EPPlus
+=========
+
+TEAMS uses the standard EPPlus version 3.1.3 binary to export data to a .xlsx file. We have included the source code for EPPlus 3.1.3 and the LGPL license for EPPlus in the /EPPlus directory within our repository. EPPlus.dll is provided as-is and no ownership of the library is implied.
+
+More information on EPPlus can be found at http://epplus.codeplex.com/
