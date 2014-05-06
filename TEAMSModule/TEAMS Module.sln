@@ -1,9 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEAMS", "Examples\Example1\TEAMS.csproj", "{AD91D8FB-3C8A-46AA-86C8-3BF6831B0D25}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEAMS", "Plugin\TEAMSPlugin\TEAMS.csproj", "{AD91D8FB-3C8A-46AA-86C8-3BF6831B0D25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlugInsInterfaces", "Interfaces\PlugInsInterfaces.csproj", "{E9F76280-130B-4699-9F1B-768ED383B730}"
 EndProject
