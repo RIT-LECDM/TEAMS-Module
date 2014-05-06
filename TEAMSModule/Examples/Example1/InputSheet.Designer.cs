@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TEAMS));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.submitAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.runSimulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -129,7 +126,6 @@
             this.label147 = new System.Windows.Forms.Label();
             this.label149 = new System.Windows.Forms.Label();
             this.label145 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -188,11 +184,12 @@
             this.numericUpDown229 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown228 = new System.Windows.Forms.NumericUpDown();
             this.label214 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
             this.label229 = new System.Windows.Forms.Label();
+            this.Submit_Button = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -277,11 +274,10 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.submitAllToolStripMenuItem,
             this.runSimulationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(690, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(990, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -309,26 +305,14 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // submitAllToolStripMenuItem
-            // 
-            this.submitAllToolStripMenuItem.Name = "submitAllToolStripMenuItem";
-            this.submitAllToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.submitAllToolStripMenuItem.Text = "Submit All";
-            this.submitAllToolStripMenuItem.Click += new System.EventHandler(this.submitAllToolStripMenuItem_Click);
-            // 
             // runSimulationToolStripMenuItem
             // 
-            this.runSimulationToolStripMenuItem.BackColor = System.Drawing.Color.Red;
+            this.runSimulationToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.runSimulationToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.runSimulationToolStripMenuItem.Name = "runSimulationToolStripMenuItem";
             this.runSimulationToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
             this.runSimulationToolStripMenuItem.Text = "Run Simulation";
             this.runSimulationToolStripMenuItem.Click += new System.EventHandler(this.runSimulationToolStripMenuItem_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // tabControl1
             // 
@@ -421,7 +405,6 @@
             this.tabPage5.Controls.Add(this.label147);
             this.tabPage5.Controls.Add(this.label149);
             this.tabPage5.Controls.Add(this.label145);
-            this.tabPage5.Controls.Add(this.button5);
             this.tabPage5.Controls.Add(this.panel12);
             this.tabPage5.Controls.Add(this.panel13);
             this.tabPage5.Controls.Add(this.panel14);
@@ -1616,17 +1599,6 @@
             this.label145.TabIndex = 34;
             this.label145.Text = "Main Engine Variables ";
             // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1, 1024);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(656, 45);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "Do Calculations and Submit Data";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.Silver;
@@ -1769,7 +1741,6 @@
             this.tabPage6.Controls.Add(this.numericUpDown229);
             this.tabPage6.Controls.Add(this.numericUpDown228);
             this.tabPage6.Controls.Add(this.label214);
-            this.tabPage6.Controls.Add(this.button6);
             this.tabPage6.Controls.Add(this.panel20);
             this.tabPage6.Controls.Add(this.panel21);
             this.tabPage6.Controls.Add(this.panel23);
@@ -2419,17 +2390,6 @@
             this.label214.TabIndex = 122;
             this.label214.Text = "Auxiliary Engine Variables";
             // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(0, 812);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(656, 55);
-            this.button6.TabIndex = 22;
-            this.button6.Text = "Do Calculations and Submit Data";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.Silver;
@@ -2472,21 +2432,47 @@
             this.label229.TabIndex = 200;
             this.label229.Text = "Baseline Fuel Consumption";
             // 
+            // Submit_Button
+            // 
+            this.Submit_Button.Location = new System.Drawing.Point(690, 50);
+            this.Submit_Button.Name = "Submit_Button";
+            this.Submit_Button.Size = new System.Drawing.Size(288, 125);
+            this.Submit_Button.TabIndex = 2;
+            this.Submit_Button.Text = "Do Calculations and Submit Data";
+            this.Submit_Button.UseVisualStyleBackColor = true;
+            this.Submit_Button.Click += new System.EventHandler(this.Submit_Button_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(690, 255);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(288, 207);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "Instructions:\n\n1.     Input Main Engine values\n2.     Input Auxiliary Engine valu" +
+    "es\n3.     Click \'Do Calculations and\n        Submit Data\'\n4.     Click \'Run Simu" +
+    "lations\'";
+            // 
             // TEAMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(690, 666);
+            this.ClientSize = new System.Drawing.Size(990, 666);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.Submit_Button);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 698);
-            this.MinimumSize = new System.Drawing.Size(700, 698);
+            this.MaximumSize = new System.Drawing.Size(1000, 698);
+            this.MinimumSize = new System.Drawing.Size(1000, 698);
             this.Name = "TEAMS";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2586,12 +2572,9 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem runSimulationToolStripMenuItem;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.NumericUpDown numericUpDown139;
@@ -2712,7 +2695,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem submitAllToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
@@ -2747,6 +2729,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.NumericUpDown numericUpDown14;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button Submit_Button;
+        private System.Windows.Forms.RichTextBox richTextBox1;
 
 
 

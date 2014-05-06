@@ -117,10 +117,7 @@ namespace TEAMS_Plugin
         public double AUX_CH4_gphphr_out;
         #endregion
 
-        //Program Variables
-        private bool five_complete;
-        private bool six_complete;
-        private bool runSimActive;
+
         #region Greet Variables
         //GREET Variables
         //btu/Gal
@@ -686,177 +683,14 @@ namespace TEAMS_Plugin
             c.Show();
         }
         //Timer constantly checking for needs to update
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (five_complete == true && six_complete == true)
-            {
-                runSimActive = true;
-                runSimulationToolStripMenuItem.BackColor = Color.FromArgb(224, 224, 224);
-                //Timer stops running after the simulation is ready to run
-                timer1.Stop();
-            }
-        }
+
         //Runs the simulation, and opens up the new results windows
         private void runSimulationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (runSimActive == true)
-            {
-                runSimulationToolStripMenuItem.BackColor = Color.Green;
-                gfr = new GREETFormattedResults(this);
-                gfr.Show();
-            }
+            gfr = new GREETFormattedResults(this);
+            gfr.Show();
+
         }
-        #region Sends data from fifth set of inputs (Main Engine)
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if (checkValid() == false)
-            {
-                MessageBox.Show("Percent of Trip In Mode (time) on Main Engine tab must sum to 100%!!", "ERROR");
-                return;
-            }
-            button5.BackColor = Color.Green;
-            //5.1
-            VesselTypeID = textBox1.Text;
-            NumberOfEngines = (int)numericUpDown132.Value;
-            SingleEngineHP = (int)numericUpDown124.Value;
-            TotalOnboardHP = SingleEngineHP * NumberOfEngines;
-            numericUpDown128.Value = (decimal)TotalOnboardHP;
-            //Constants (These are units of measurement)
-            KWperHP = (double)numericUpDown138.Value;
-            GALperBBL = (double)numericUpDown137.Value;
-            BBLperTONNE = (double)numericUpDown136.Value;
-            BTUperKWH = (double)numericUpDown141.Value;
-
-            //5.2
-            TotalTripDistanceInMiles = (double)numericUpDown143.Value;
-            TripTimeHours = (double)numericUpDown142.Value;
-            TripTimeMinutes = (double)numericUpDown140.Value;
-            TotalTripTimeHours = TripTimeHours + (TripTimeMinutes / 60);
-            numericUpDown139.Value = (decimal)TotalTripTimeHours;
-            //5.3
-            POTIdle = (double)numericUpDown147.Value;
-            POTManeuvering = (double)numericUpDown153.Value;
-            POTPrecautionary = (double)numericUpDown158.Value;
-            POTSlowCruise = (double)numericUpDown163.Value;
-            POTFullCruise = (double)numericUpDown168.Value;
-            TimeInIdle = (POTIdle / 100) * TotalTripTimeHours;
-            numericUpDown146.Value = (decimal)TimeInIdle;
-            TimeInManeuvering = (POTManeuvering / 100) * TotalTripTimeHours;
-            numericUpDown152.Value = (decimal)TimeInManeuvering;
-            TimeInPrecautionary = (POTPrecautionary / 100) * TotalTripTimeHours;
-            numericUpDown157.Value = (decimal)TimeInPrecautionary;
-            TimeInSlowCruise = (POTSlowCruise / 100) * TotalTripTimeHours;
-            numericUpDown162.Value = (decimal)TimeInSlowCruise;
-            TimeInFullCruise = (POTFullCruise / 100) * TotalTripTimeHours;
-            numericUpDown167.Value = (decimal)TimeInFullCruise;
-            HPLFIdle = (double)numericUpDown145.Value;
-            HPLFManeuvering = (double)numericUpDown151.Value;
-            HPLFPrecautionary = (double)numericUpDown156.Value;
-            HPLFSlowCruise = (double)numericUpDown161.Value;
-            HPLFFullCruise = (double)numericUpDown166.Value;
-
-            HPPEIdle = (HPLFIdle / 100) * SingleEngineHP;
-            numericUpDown144.Value = (decimal)HPPEIdle;
-            HPPEManeuvering = (HPLFManeuvering / 100) * SingleEngineHP;
-            numericUpDown150.Value = (decimal)HPPEManeuvering;
-            HPPEPrecautionary = (HPLFPrecautionary / 100) * SingleEngineHP;
-            numericUpDown155.Value = (decimal)HPPEPrecautionary;
-            HPPESlowCruise = (HPLFSlowCruise / 100) * SingleEngineHP;
-            numericUpDown160.Value = (decimal)HPPESlowCruise;
-            HPPEFullCruise = (HPLFFullCruise / 100) * SingleEngineHP;
-            numericUpDown165.Value = (decimal)HPPEFullCruise;
-            EPIdle = NumberOfEngines * HPPEIdle * TimeInIdle * KWperHP;
-            numericUpDown148.Value = (decimal)EPIdle;
-            EPManeuvering = NumberOfEngines * HPPEManeuvering * TimeInManeuvering * KWperHP;
-            numericUpDown149.Value = (decimal)EPManeuvering;
-            EPPrecautionary = NumberOfEngines * HPPEPrecautionary * TimeInPrecautionary * KWperHP;
-            numericUpDown154.Value = (decimal)EPPrecautionary;
-            EPSlowCruise = NumberOfEngines * HPPESlowCruise * TimeInSlowCruise * KWperHP;
-            numericUpDown159.Value = (decimal)EPSlowCruise;
-            EPFullCruise = NumberOfEngines * HPPEFullCruise * TimeInFullCruise * KWperHP;
-            numericUpDown164.Value = (decimal)EPFullCruise;
-            EPTotal = EPIdle + EPManeuvering + EPPrecautionary + EPSlowCruise + EPFullCruise;
-            numericUpDown169.Value = (decimal)EPTotal;
-
-            //5.4b
-            EngineEfficiency = (double)numericUpDown175.Value;
-            KWHOutperTrip = EPTotal;
-            numericUpDown174.Value = (decimal)KWHOutperTrip;
-            MMBTUoutperTrip = (KWHOutperTrip * BTUperKWH) / 1000000;
-            numericUpDown173.Value = (decimal)MMBTUoutperTrip;
-            MMBTUinperTrip = MMBTUoutperTrip * (100 / EngineEfficiency);
-            numericUpDown172.Value = (decimal)MMBTUinperTrip;
-            //Needs to pull from the Fuel Specs page in GREET
-            GALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * MMBTUinperTrip;
-            numericUpDown171.Value = (decimal)GALLONperTrip;
-
-            //Fuel Inputs
-            NOX_gphphr_out = (double)numericUpDown1.Value;
-            CO_gphphr_out = (double)numericUpDown2.Value;
-            VOC_gphphr_out = (double)numericUpDown3.Value;
-            PM10_gphphr_out = (double)numericUpDown4.Value;
-            PM25_gphphr_out = (double)numericUpDown5.Value;
-            N2O_gphphr_out = (double)numericUpDown6.Value;
-            CH4_gphphr_out = (double)numericUpDown7.Value;
-            five_complete = true;
-
-            doCalculations();
-            changeResults();
-        }
-        #endregion
-        #region Sends data from sixth set of inputs (Aux Engine)
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if (checkValid() == false)
-            {
-                MessageBox.Show("Percent of Trip In Mode (time) on Main Engine tab must sum to 100%!!", "ERROR");
-                return;
-            }
-            button6.BackColor = Color.Green;
-
-            //6.2
-            NumberOfOnBoarAuxiliaryEngines = (int)numericUpDown228.Value;
-            NumberOfAuxiliaryEnginesInUse = (int)numericUpDown229.Value;
-            AuxiliaryEnginesRatedHPperEngine = (int)numericUpDown230.Value;
-            TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
-            numericUpDown231.Value = (decimal)TotalOnboardAUxHP;
-
-            //6.3
-            PercentOfTripAuxiliaryIsActive = (double)numericUpDown232.Value;
-            TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
-            numericUpDown233.Value = (decimal)TimeAuxActiveHours;
-            HPLoadFactorSingleEngine = (double)numericUpDown234.Value;
-            ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
-            numericUpDown235.Value = (decimal)ActiveHPPerAuxEngine;
-            TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
-            numericUpDown236.Value = (decimal)TotalAuxEnergyProduction;
-
-            //6.4b
-            AuxiliaryEngineEfficiency = (double)numericUpDown242.Value;
-            AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
-            numericUpDown241.Value = (decimal)AuxEngineKWHoutperTrip;
-            AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / 1000000;
-
-            numericUpDown240.Value = (decimal)AuxEngineMMBTUoutperTrip;
-            AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
-            numericUpDown239.Value = (decimal)AuxEngineMMBTUinperTrip;
-            //This one requires fuel specs from GREET
-            AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
-            numericUpDown238.Value = (decimal)AuxEngineGALLONperTrip;
-
-            AUX_NOX_gphphr_out = (double)numericUpDown14.Value;
-            AUX_CO_gphphr_out = (double)numericUpDown13.Value;
-            AUX_VOC_gphphr_out = (double)numericUpDown12.Value;
-            AUX_PM10_gphphr_out = (double)numericUpDown11.Value;
-            AUX_PM25_gphphr_out = (double)numericUpDown10.Value;
-            AUX_N2O_gphphr_out = (double)numericUpDown9.Value;
-            AUX_CH4_gphphr_out = (double)numericUpDown8.Value;
-            numericUpDown14.Value = (decimal)AUX_NOX_gphphr_out;
-            six_complete = true;
-            doCalculations();
-            changeResults();
-        }
-        #endregion
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -873,7 +707,13 @@ namespace TEAMS_Plugin
         }
 
         #region Submit All
-        private void submitAllToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void Submit_Button_Click(object sender, EventArgs e)
+        {
+            SubmitAll();
+        }
+
+        private void SubmitAll()
         {
             if (checkValid() == false)
             {
@@ -881,7 +721,6 @@ namespace TEAMS_Plugin
                 return;
             }
 
-            button5.BackColor = Color.Green;
             //5.1
             VesselTypeID = textBox1.Text;
             NumberOfEngines = (int)numericUpDown132.Value;
@@ -965,8 +804,7 @@ namespace TEAMS_Plugin
             PM25_gphphr_out = (double)numericUpDown5.Value;
             N2O_gphphr_out = (double)numericUpDown6.Value;
             CH4_gphphr_out = (double)numericUpDown7.Value;
-            five_complete = true;
-            button6.BackColor = Color.Green;
+
 
             //6.2
             NumberOfOnBoarAuxiliaryEngines = (int)numericUpDown228.Value;
@@ -1006,7 +844,7 @@ namespace TEAMS_Plugin
             AUX_N2O_gphphr_out = (double)numericUpDown9.Value;
             AUX_CH4_gphphr_out = (double)numericUpDown8.Value;
             numericUpDown14.Value = (decimal)AUX_NOX_gphphr_out;
-            six_complete = true;
+
             doCalculations();
             changeResults();
         }
@@ -1026,5 +864,7 @@ namespace TEAMS_Plugin
                 return true;
             }
         }
+
+
     }
 }
