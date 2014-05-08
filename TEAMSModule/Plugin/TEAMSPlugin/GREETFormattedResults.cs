@@ -23,11 +23,16 @@ namespace TEAMSModule
 {
     public partial class GREETFormattedResults : Form
     {
+        //These are values for the string of text showing what fuel is used
         public string fuelUsed = "Conventional Diesel";
         public string auxFuelUsed = "Conventional Diesel";
 
+        //The input sheet we are pulling from
         public TEAMS te;
 
+        /// <summary>
+        /// These are all of the variables for values on the results sheet itself, they are being set to a default of 0
+        /// </summary>
         #region All Needed Results Variables
         //Main ENgine Variables
         public double TE_WTP = 0;
@@ -91,6 +96,8 @@ namespace TEAMSModule
         public double AUX_GHG_WTP = 0;
         public double AUX_GHG_VO = 0;
         #endregion
+
+        //Constructor for this form
         public GREETFormattedResults(TEAMS t)
         {
             //We will use this teams object to pull the GREET values into the TEAMS class, and then reference them here so they can be displayed
@@ -98,6 +105,8 @@ namespace TEAMSModule
             InitializeComponent();
             setValues();
         }
+
+        //Function that sets everything up at the beginning so that the values are a pleasent default to work on
         public void setValues()
         {
             treeView1.Select();
@@ -105,8 +114,10 @@ namespace TEAMSModule
             BuildingTreeView1();
             BuildingTreeView2();
         }
-
-        #region This is where all final results calculations and value pulls are taking place
+        /// <summary>
+        /// Pulls the needed GREET data, and makes final results calculations
+        /// </summary>
+        #region Final results calculation
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             Object tag = this.treeView1.SelectedNode.Tag;
@@ -342,7 +353,10 @@ namespace TEAMSModule
 
         #endregion
 
-        #region Setting Labels, and Generating new Graph
+        /// <summary>
+        /// Sets the labels and makes a new graph
+        /// </summary>
+        #region Set Labels, Make new Graph
         public void setLabels()
         {
             /* 
@@ -455,6 +469,10 @@ namespace TEAMSModule
             Generate_Graph(resources, stacked_graph);
         }
         #endregion
+
+        /// <summary>
+        /// Setup for the main engine fuel selector
+        /// </summary>
         #region TreeView 1 Setup
         public void BuildingTreeView1()
         {
@@ -559,6 +577,10 @@ namespace TEAMSModule
             }
         }
         #endregion
+
+        /// <summary>
+        /// Setup for the auxiliary engine fuel selector
+        /// </summary>
         #region TreeView 2 Setup
         public void BuildingTreeView2()
         {
@@ -663,6 +685,10 @@ namespace TEAMSModule
             }
         }
         #endregion
+
+        /// <summary>
+        /// Generates the bar chart at the bottom of the form
+        /// </summary>
         #region Generating Bar Chart
         /// <summary>
         /// Generates the specified graph for display to the user.
@@ -692,6 +718,9 @@ namespace TEAMSModule
         }
         #endregion
 
+        /// <summary>
+        /// Saves values to an excel sheet, and lets the user pick the file path and name
+        /// </summary>
         #region Saving for the excel sheet
 
         // For use during export to excel sheet. Prevents system crashing and gives error source to user.
@@ -886,6 +915,7 @@ namespace TEAMSModule
         }
         #endregion
 
+        //Reset button puts everything back to the original default
         private void ResetButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you wish to reset the form?", "Reset Results", MessageBoxButtons.YesNo);

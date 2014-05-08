@@ -20,8 +20,8 @@ namespace TEAMS_Plugin
 {
     public partial class TEAMS : Form
     {
-        //Input Variables
-        #region Teams 5.1 - 5.4d
+        //Input Variables - These are used to do the calculations for the model
+        #region Main Engine
         //5.1 Main Engine Variables
         public string VesselTypeID;
         public int NumberOfEngines;
@@ -85,7 +85,7 @@ namespace TEAMS_Plugin
         public double CH4_gphphr_out;
 
         #endregion
-        #region Teams 6.1 - 6.4d
+        #region Auxiliary Engine(s)
 
         //6.2 Auxiliary Engine Variables
         public int NumberOfOnBoarAuxiliaryEngines;
@@ -117,11 +117,7 @@ namespace TEAMS_Plugin
         public double AUX_CH4_gphphr_out;
         #endregion
 
-
-        #region Greet Variables
-        //GREET Variables
-        //btu/Gal
-
+        //Results variables - These are used to store calculated values later on, as well as the actual results that come from another round of calculations
         #region Results Variables
         public double CD_WTP_TE;
         public double CD_WTP_FF;
@@ -451,12 +447,12 @@ namespace TEAMS_Plugin
 
         #endregion
 
-        #endregion
+        //Conventional Diesel Path ID - Just used for estimation of fuel gallons for input, does not appear on the results sheet.
         public const int CD_PATH_ID = 40;
-        #region Emissions Variables
 
-        #endregion
+        //The results sheet
         public GREETFormattedResults gfr;
+
         public TEAMS()
         {
             InitializeComponent();
@@ -465,8 +461,9 @@ namespace TEAMS_Plugin
             changeResults();
         }
         /// <summary>
-        /// Grabs all of the data needed to do calculations from GREET resources, pathways, and mixes.
+        /// Grabs the data needed to calculate the Conventional Diesel btu/gal
         /// </summary>
+        #region Conventional Diesel Pull From GREET
         public void pullFromGREET()
         {
             //All this function is doing now is pulling the BTUPerGal for Conventional Diesel so it can be used to calculate the gallons per trip. (This is ultimately recalculated in the Results code)
@@ -487,7 +484,12 @@ namespace TEAMS_Plugin
                 conventionalDieselBTUperGal = ConvDiesel.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
             }
         }
-        #region This will recalculate every value that is determined by taking in other values and applying calculation
+        #endregion
+
+        /// <summary>
+        /// Calculated values based on the current values of variables in the model
+        /// </summary>
+        #region Do Calculations
         public void doCalculations()
         {
             TotalOnboardHP = SingleEngineHP * NumberOfEngines;
@@ -524,7 +526,11 @@ namespace TEAMS_Plugin
            
         }
         #endregion
-        #region This will make it so that all the values shown are consistent with the code values of the variables
+
+        /// <summary>
+        /// Changes labels based on updated values from calculation/manual changes
+        /// </summary>
+        #region Change Resutls
         public void changeResults()
         {
             //5 
@@ -610,6 +616,11 @@ namespace TEAMS_Plugin
             numericUpDown8.Value = (decimal)AUX_CH4_gphphr_out;
         }
         #endregion
+
+        /// <summary>
+        /// Sets the variables to their initial default state
+        /// </summary>
+        #region Use Defaults
         public void useDefaults()
         {
             #region Teams 5.1 - 5.4d
@@ -675,34 +686,27 @@ namespace TEAMS_Plugin
             AUX_CH4_gphphr_out = 7.94;
             #endregion
         }
-        //Shows Copyright Screen
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Copyright c = new Copyright();
-            this.Hide();
-            c.Show();
-        }
-        //Timer constantly checking for needs to update
+        #endregion
+
 
         //Runs the simulation, and opens up the new results windows
         private void runSimulationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             gfr = new GREETFormattedResults(this);
             gfr.Show();
-
         }
 
+        //This will make a new input sheet, so you can perform multiple simulations at one time
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form f = new TEAMS();
             f.Show();
         }
-        private void TEAMS_FormClosing(object sender, FormClosingEventArgs e)
-        {
-        }
 
+        //Closes the sheets if you hit the exit button
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            gfr.Close();
             this.Close();
         }
 
@@ -850,6 +854,7 @@ namespace TEAMS_Plugin
         }
         #endregion
 
+        //Checks to see that the percentage of trip variables actually add up to 100
         private bool checkValid()
         {
             decimal sum = 0;
