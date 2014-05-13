@@ -492,38 +492,70 @@ namespace TEAMS_Plugin
         #region Do Calculations
         public void doCalculations()
         {
+            //Total Horsepower = One Engine's Horsepower * The Number of Engines
             TotalOnboardHP = SingleEngineHP * NumberOfEngines;
+            //Total Trip Time = Trip Hours + (Trip Minutes / 60)
             TotalTripTimeHours = TripTimeHours + (TripTimeMinutes / 60);
+
+            //Time in Stage of Transit = (Percent of Time as Defined by User / 100) * Total Trip Time
             TimeInIdle = (POTIdle / 100) * TotalTripTimeHours;
             TimeInManeuvering = (POTManeuvering / 100) * TotalTripTimeHours;
             TimeInPrecautionary = (POTPrecautionary / 100) * TotalTripTimeHours;
             TimeInSlowCruise = (POTSlowCruise / 100) * TotalTripTimeHours;
             TimeInFullCruise = (POTFullCruise / 100) * TotalTripTimeHours;
+
+            //Horsepower Per Engine in a given mode = (Horsepower Load Factor in that mode / 100) * Horsepower of a single engine
             HPPEIdle = (HPLFIdle / 100) * SingleEngineHP;
             HPPEManeuvering = (HPLFManeuvering / 100) * SingleEngineHP;
             HPPEPrecautionary = (HPLFPrecautionary / 100) * SingleEngineHP;
             HPPESlowCruise = (HPLFSlowCruise / 100) * SingleEngineHP;
             HPPEFullCruise = (HPLFFullCruise / 100) * SingleEngineHP;
+
+            //Energy Production (in KWH for all engines) in a given mode = Number of Engines * Horsepower Per Engine in that mode * Time in that mode * Kilowats per Horsepower
             EPIdle = NumberOfEngines * HPPEIdle * TimeInIdle * KWperHP;
             EPManeuvering = NumberOfEngines * HPPEManeuvering * TimeInManeuvering * KWperHP;
             EPPrecautionary = NumberOfEngines * HPPEPrecautionary * TimeInPrecautionary * KWperHP;
             EPSlowCruise = NumberOfEngines * HPPESlowCruise * TimeInSlowCruise * KWperHP;
             EPFullCruise = NumberOfEngines * HPPEFullCruise * TimeInFullCruise * KWperHP;
+
+            //Energy Production Total = The Summation of the Energy Productions for each mode
             EPTotal = EPIdle + EPManeuvering + EPPrecautionary + EPSlowCruise + EPFullCruise;
+
+            //Kilowat Hours out Per Trip = Energy Production Total
             KWHOutperTrip = EPTotal;
+
+            //Million BTUs of Energy needed to power the trip = (Kilowat Hours Out per trip * BTU per Kilowat Hours) / 1000000 (The million converts from btu to mmbtu)
             MMBTUoutperTrip = (KWHOutperTrip * BTUperKWH) / 1000000;
+
+            //Million BTUs of Energy you need to put in in order to actually get the mmbtus out you needed above = mmbtu to power the trip * (100 / Engine efficiency)
             MMBTUinperTrip = MMBTUoutperTrip * (100 / EngineEfficiency);
+
+            //Gallons of fuel per trip if it were powered by conventional diesel = (1/ Conventional Diesel BTUs per gallon) * 100000 * million BTUs in per trip 
             GALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * MMBTUinperTrip;
-            
+
+            //Total Horsepower of Auxiliary engines = Number of Aux engines in use * Aux engine rated Horsepower per engine
             TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
+
+            //Time auxiliary engines are active in hours = (Percent of trip aux engines active / 100) * Total Trip Time in Hours
             TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
+
+            //Active Horsepower per Auxiliary engine = (Horsepower Load Factor Single engine / 100) * Aux engine Rated Horsepower pwe engine
             ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
+
+            //Total auxiliary engine production = number of auxiliary engines in use * Active Horsepower per Aux Engine * Time aux engines active in hours * Kilowwats per Horsepower
             TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
+
+            //Aux Engine Kilowat Hours out per trip = Total auxiliary engine production
             AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
+
+            //Auxiliary Engine million BTUs of energy to power the trip = (Aux engine Kilowat Hours Per Trip * BTU per Kilowat Hours) / 1000000
             AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / 1000000;
+
+            //Auxiliary Engine million BTUs of energy to put in to the engine in order to get the needed energy out = Aux engine mmbtu out * (100 / Auxiliary engine efficiency)
             AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
+
+            //Auxiliary Engine gallons of fuel per trip if it were using conventional diesel = (1 / Diesel btu per gallon) * 1000000 * auxiliary engine mmbtu in the engine to make the trip
             AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
-           
         }
         #endregion
 
@@ -564,8 +596,6 @@ namespace TEAMS_Plugin
             numericUpDown166.Value = (decimal)HPLFFullCruise;
             numericUpDown175.Value = (decimal)EngineEfficiency;
          
-
-            //6
             numericUpDown228.Value = (decimal)NumberOfOnBoarAuxiliaryEngines;
             numericUpDown229.Value = (decimal)NumberOfAuxiliaryEnginesInUse;
             numericUpDown230.Value = (decimal)AuxiliaryEnginesRatedHPperEngine;
@@ -623,7 +653,7 @@ namespace TEAMS_Plugin
         #region Use Defaults
         public void useDefaults()
         {
-            #region Teams 5.1 - 5.4d
+            #region Main Engine Variables
             //5.1 Main Engine Variables
             VesselTypeID = "Cont. Ship 6000";
             NumberOfEngines = 1;
@@ -663,7 +693,7 @@ namespace TEAMS_Plugin
             N2O_gphphr_out = 7.94;
             CH4_gphphr_out = 7.94;
             #endregion
-            #region Teams 6.1 - 6.4d
+            #region Auxiliary Engine Variables
 
             //6.2 Auxiliary Engine Variables
             NumberOfOnBoarAuxiliaryEngines = 4;

@@ -135,11 +135,13 @@ namespace TEAMSModule
                 IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
                 if (resourceUsed.LowerHeatingValue.UserValue == 0)
                 {
-                    te.GALLONperTrip = resourceUsed.LowerHeatingValue.GreetValue * (3.5878781 / 100000);
+                    //Gallons = 1/ BTUs per gallon * 1000000 * main engine mmbtu in per trip
+                    te.GALLONperTrip = (1 / resourceUsed.LowerHeatingValue.GreetValue) * 1000000 * te.MMBTUinperTrip;
                 }
                 else
                 {
-                    te.GALLONperTrip = resourceUsed.LowerHeatingValue.UserValue * (3.5878781 / 100000);
+                    //Gallons = 1/ BTUs per gallon * 1000000 * main engine mmbtu in per trip
+                    te.GALLONperTrip = (1 / resourceUsed.LowerHeatingValue.UserValue) * 1000000 * te.MMBTUinperTrip;
                 }
 
                 //These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
@@ -182,10 +184,15 @@ namespace TEAMSModule
 
 
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
+                
+                //Total Energy Well To Pump = mmbtu of fuel put into the engine * all sections of energy for what it took to create 1 mmbtu of fuel - the 1 mmbtu of fuel
                 TE_WTP = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
+                //Total Energy Vessel Operation = mmbtu needed to put into the ship
                 TE_VO = te.MMBTUinperTrip;
+                //Total Energy = Vessel Operation + Well to pump + aux vessel operation + aux well to pump
                 TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip + AUX_TE_WTP + AUX_TE_VO;
 
+                //These might get deleted actually, also these are just straight mmbtuin * a greet energy WTP value
                 FF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 CF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(3).Value.Value;
                 NGF_Total = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(1).Value.Value;
@@ -199,7 +206,7 @@ namespace TEAMSModule
                 CO_WTP = pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 CO_VO = ((te.CO_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
                 CO_Total = CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
-
+                 
                 NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 NOx_VO = ((te.NOX_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
                 NOx_Total = NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
@@ -252,7 +259,7 @@ namespace TEAMSModule
                 }
                 IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
 
-                                //These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
+                //These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
                 double resourceDensity;
                 if (resourceUsed.Density.UserValue == 0)
                 {
@@ -289,8 +296,11 @@ namespace TEAMSModule
                 {
                     resourceCarbonRatio = resourceUsed.CarbonRatio.UserValue;
                 }
+
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
-                te.AuxEngineGALLONperTrip = resourceLowerHeatingValue * (3.5878781 / 100000);
+                
+                //Auxiliary Engine Gallons of Fuel per trip = fuel being used heating value (btu/gallon) * 
+                te.AuxEngineGALLONperTrip = (1 / resourceLowerHeatingValue) * 1000000 * te.AuxEngineMMBTUinperTrip;
                 AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
                 AUX_TE_VO = te.AuxEngineMMBTUinperTrip;
                 TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip + AUX_TE_WTP + AUX_TE_VO;
@@ -327,7 +337,7 @@ namespace TEAMSModule
                 AUX_CH4_VO = ((te.AUX_CH4_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
-                double gramsOfFuel = ((1 / (resourceLowerHeatingValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceDensity * 3.78541178) / 1000);
+                double gramsOfFuel = ((1 / (resourceLowerHeatingValue * (3.5878781 / 1000000))) * 1000000 * te.AuxEngineMMBTUinperTrip) * ((resourceDensity * 3.78541178) / 1000);
                 AUX_CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
                 AUX_CO2_VO = ((resourceCarbonRatio * (gramsOfFuel / te.AuxEngineMMBTUinperTrip)) * te.AuxEngineMMBTUinperTrip) * (44 / 12);
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
