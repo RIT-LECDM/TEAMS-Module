@@ -84,6 +84,13 @@ namespace TEAMS_Plugin
         public double N2O_gphphr_out;
         public double CH4_gphphr_out;
 
+        //Global Warming Potential
+        public double CO2_GWP;
+        public double CH4_GWP;
+        public double N2O_GWP;
+        public double VOC_GWP;
+        public double CO_GWP;
+        public double NO2_GWP;
         #endregion
         #region Auxiliary Engine(s)
 

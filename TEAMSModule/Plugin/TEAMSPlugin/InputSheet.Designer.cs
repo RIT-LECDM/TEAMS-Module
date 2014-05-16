@@ -190,6 +190,20 @@
             this.label229 = new System.Windows.Forms.Label();
             this.Submit_Button = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
+            this.label21 = new System.Windows.Forms.Label();
+            this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
+            this.label22 = new System.Windows.Forms.Label();
+            this.numericUpDown19 = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.numericUpDown20 = new System.Windows.Forms.NumericUpDown();
+            this.label24 = new System.Windows.Forms.Label();
+            this.numericUpDown21 = new System.Windows.Forms.NumericUpDown();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -268,6 +282,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown229)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).BeginInit();
             this.panel23.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -277,7 +298,7 @@
             this.runSimulationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(990, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(980, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -330,6 +351,8 @@
             this.tabPage5.AutoScroll = true;
             this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPage5.Controls.Add(this.label19);
+            this.tabPage5.Controls.Add(this.panel3);
             this.tabPage5.Controls.Add(this.panel1);
             this.tabPage5.Controls.Add(this.label1);
             this.tabPage5.Controls.Add(this.label179);
@@ -2456,13 +2479,202 @@
     "es\n3.     Click \'Do Calculations and\n        Submit Data\'\n4.     Click \'Run Simu" +
     "lations\'";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.numericUpDown16);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.numericUpDown17);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.numericUpDown18);
+            this.panel3.Controls.Add(this.label22);
+            this.panel3.Controls.Add(this.numericUpDown19);
+            this.panel3.Controls.Add(this.label23);
+            this.panel3.Controls.Add(this.numericUpDown20);
+            this.panel3.Controls.Add(this.label24);
+            this.panel3.Controls.Add(this.numericUpDown21);
+            this.panel3.Controls.Add(this.label26);
+            this.panel3.Location = new System.Drawing.Point(399, 830);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(196, 170);
+            this.panel3.TabIndex = 299;
+            // 
+            // numericUpDown16
+            // 
+            this.numericUpDown16.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown16.DecimalPlaces = 2;
+            this.numericUpDown16.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown16.Location = new System.Drawing.Point(79, 139);
+            this.numericUpDown16.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown16.Name = "numericUpDown16";
+            this.numericUpDown16.Size = new System.Drawing.Size(97, 22);
+            this.numericUpDown16.TabIndex = 296;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Silver;
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(2, 144);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(41, 17);
+            this.label20.TabIndex = 295;
+            this.label20.Text = "NOX";
+            // 
+            // numericUpDown17
+            // 
+            this.numericUpDown17.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown17.DecimalPlaces = 2;
+            this.numericUpDown17.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown17.Location = new System.Drawing.Point(79, 113);
+            this.numericUpDown17.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown17.Name = "numericUpDown17";
+            this.numericUpDown17.Size = new System.Drawing.Size(97, 22);
+            this.numericUpDown17.TabIndex = 294;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Silver;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(2, 118);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(31, 17);
+            this.label21.TabIndex = 293;
+            this.label21.Text = "CO";
+            // 
+            // numericUpDown18
+            // 
+            this.numericUpDown18.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown18.DecimalPlaces = 2;
+            this.numericUpDown18.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown18.Location = new System.Drawing.Point(79, 86);
+            this.numericUpDown18.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown18.Name = "numericUpDown18";
+            this.numericUpDown18.Size = new System.Drawing.Size(97, 22);
+            this.numericUpDown18.TabIndex = 292;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Silver;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(2, 91);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(41, 17);
+            this.label22.TabIndex = 291;
+            this.label22.Text = "VOC";
+            // 
+            // numericUpDown19
+            // 
+            this.numericUpDown19.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown19.DecimalPlaces = 2;
+            this.numericUpDown19.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown19.Location = new System.Drawing.Point(79, 60);
+            this.numericUpDown19.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown19.Name = "numericUpDown19";
+            this.numericUpDown19.Size = new System.Drawing.Size(97, 22);
+            this.numericUpDown19.TabIndex = 290;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Silver;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(2, 64);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(39, 17);
+            this.label23.TabIndex = 289;
+            this.label23.Text = "N2O";
+            // 
+            // numericUpDown20
+            // 
+            this.numericUpDown20.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown20.DecimalPlaces = 2;
+            this.numericUpDown20.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown20.Location = new System.Drawing.Point(79, 33);
+            this.numericUpDown20.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown20.Name = "numericUpDown20";
+            this.numericUpDown20.Size = new System.Drawing.Size(97, 22);
+            this.numericUpDown20.TabIndex = 288;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Silver;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(2, 38);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(39, 17);
+            this.label24.TabIndex = 287;
+            this.label24.Text = "CH4";
+            // 
+            // numericUpDown21
+            // 
+            this.numericUpDown21.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown21.DecimalPlaces = 2;
+            this.numericUpDown21.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown21.Location = new System.Drawing.Point(79, 7);
+            this.numericUpDown21.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown21.Name = "numericUpDown21";
+            this.numericUpDown21.Size = new System.Drawing.Size(97, 22);
+            this.numericUpDown21.TabIndex = 285;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Silver;
+            this.label26.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(2, 12);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(39, 17);
+            this.label26.TabIndex = 265;
+            this.label26.Text = "CO2";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(396, 810);
+            this.label19.Name = "label19";
+            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label19.Size = new System.Drawing.Size(193, 18);
+            this.label19.TabIndex = 300;
+            this.label19.Text = "Global Warming Potentials";
+            // 
             // TEAMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(990, 666);
+            this.ClientSize = new System.Drawing.Size(980, 656);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.Submit_Button);
             this.Controls.Add(this.tabControl1);
@@ -2562,6 +2774,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2730,6 +2950,20 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button Submit_Button;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.NumericUpDown numericUpDown16;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.NumericUpDown numericUpDown17;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.NumericUpDown numericUpDown18;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.NumericUpDown numericUpDown19;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.NumericUpDown numericUpDown20;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.NumericUpDown numericUpDown21;
+        private System.Windows.Forms.Label label26;
 
 
 
