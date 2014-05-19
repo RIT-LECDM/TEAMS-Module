@@ -563,6 +563,7 @@ namespace TEAMS_Plugin
 
             //Auxiliary Engine gallons of fuel per trip if it were using conventional diesel = (1 / Diesel btu per gallon) * 1000000 * auxiliary engine mmbtu in the engine to make the trip
             AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * 1000000 * AuxEngineMMBTUinperTrip;
+
         }
         #endregion
 
@@ -651,6 +652,14 @@ namespace TEAMS_Plugin
             numericUpDown10.Value = (decimal)AUX_PM25_gphphr_out;
             numericUpDown9.Value = (decimal)AUX_N2O_gphphr_out;
             numericUpDown8.Value = (decimal)AUX_CH4_gphphr_out;
+
+            //Global Warming Potential
+            numericUpDown21.Value = (decimal)CO2_GWP;
+            numericUpDown20.Value = (decimal)CH4_GWP;
+            numericUpDown19.Value = (decimal)N2O_GWP;
+            numericUpDown18.Value = (decimal)VOC_GWP;
+            numericUpDown17.Value = (decimal)CO_GWP;
+            numericUpDown16.Value = (decimal)NO2_GWP;
         }
         #endregion
 
@@ -699,6 +708,14 @@ namespace TEAMS_Plugin
             PM25_gphphr_out = 7.94;
             N2O_gphphr_out = 7.94;
             CH4_gphphr_out = 7.94;
+
+            //Global Warming Potential
+            CO2_GWP = 1;
+            CH4_GWP = 23;
+            N2O_GWP = 296;
+            VOC_GWP = 0;
+            CO_GWP = 0;
+            NO2_GWP = 0;
             #endregion
             #region Auxiliary Engine Variables
 
@@ -846,7 +863,13 @@ namespace TEAMS_Plugin
             N2O_gphphr_out = (double)numericUpDown6.Value;
             CH4_gphphr_out = (double)numericUpDown7.Value;
 
-
+            //Global Warming Potential
+            CO2_GWP = (double)numericUpDown21.Value;
+            CH4_GWP = (double)numericUpDown20.Value;
+            N2O_GWP = (double)numericUpDown19.Value;
+            VOC_GWP = (double)numericUpDown18.Value;
+            CO_GWP = (double)numericUpDown17.Value;
+            NO2_GWP = (double)numericUpDown16.Value;
             //6.2
             NumberOfOnBoarAuxiliaryEngines = (int)numericUpDown228.Value;
             NumberOfAuxiliaryEnginesInUse = (int)numericUpDown229.Value;

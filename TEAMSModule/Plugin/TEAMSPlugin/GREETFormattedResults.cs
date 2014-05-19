@@ -72,8 +72,6 @@ namespace TEAMSModule
         public double N2O_WTP = 0;
         public double N2O_VO = 0;
         public double N2O_Total = 0;
-        public double GHG_WTP = 0;
-        public double GHG_VO = 0;
 
         //Auxillary Engine Variables
         public double AUX_TE_WTP = 0;
@@ -100,8 +98,7 @@ namespace TEAMSModule
         public double AUX_CO2_VO = 0;
         public double AUX_N2O_WTP = 0;
         public double AUX_N2O_VO = 0;
-        public double AUX_GHG_WTP = 0;
-        public double AUX_GHG_VO = 0;
+
         public double Total_GHG_WTP = 0;
         public double Total_GHG_VO = 0;
         #endregion
@@ -272,12 +269,6 @@ namespace TEAMSModule
                 N2O_VO = ((te.N2O_gphphr_out * (1 / 0.745699871)) * te.KWHOutperTrip);
                 //Total = The sum of the above two and the aux values
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
-
-                //Likely to be deleted, but in this state it's the well to pump emissions for the greenhouse gas group
-                GHG_WTP = (pathwayResults.LifeCycleEmissionsGroups(data).ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip);
-                GHG_VO = VOC_VO + CO2_VO + CH4_VO + NOx_VO;
-                Total_GHG_WTP = GHG_WTP + AUX_GHG_WTP;
-                Total_GHG_VO = GHG_VO + AUX_GHG_VO;
             }
             setLabels();
         }
@@ -387,11 +378,6 @@ namespace TEAMSModule
                 AUX_N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
                 AUX_N2O_VO = ((te.AUX_N2O_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
-
-                AUX_GHG_WTP = pathwayResults.LifeCycleEmissionsGroups(data).ElementAt(0).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_GHG_VO = AUX_CO2_VO + AUX_VOC_VO + AUX_NOx_VO + AUX_CH4_VO;
-                Total_GHG_WTP = GHG_WTP + AUX_GHG_WTP;
-                Total_GHG_VO = GHG_VO + AUX_GHG_VO;
             }
             setLabels();
         }
@@ -468,6 +454,7 @@ namespace TEAMSModule
             label200.Text = parseResourceToString(AUX_N2O_WTP) + " g/trip";
             label39.Text = parseResourceToString(AUX_FF_WTP) + " mmbtu/trip"; //Fossil Fuel Total
             label59.Text = parseResourceToString(AUX_PF_WTP) + " mmbtu/trip"; //Petroleum Fuel Total
+
             //Column 4 -- Aux Engine Vessel Operations
             label19.Text = parseResourceToString(AUX_TE_VO) + " mmbtu/trip";
             label40.Text = parseResourceToString(AUX_VOC_VO) + " g/trip";
@@ -506,6 +493,9 @@ namespace TEAMSModule
             //Title
             label1.Text = fuelUsed;
             label27.Text = auxFuelUsed;
+            //Calculating greenhouse gas using Global Warming Potential
+            Total_GHG_WTP = (CO2_WTP * te.CO2_GWP) + (CH4_WTP * te.CH4_GWP) + (N2O_WTP * te.N2O_GWP) + (VOC_WTP * te.VOC_GWP) + (CO_WTP * te.CO_GWP) + (NOx_WTP * te.NO2_GWP);
+            Total_GHG_VO = (CO2_VO * te.CO2_GWP) + (CH4_VO * te.CH4_GWP) + (N2O_VO * te.N2O_GWP) + (VOC_VO * te.VOC_GWP) + (CO_VO * te.CO_GWP) + (NOx_VO * te.NO2_GWP);
             //Setting the stacked bar chart information
             double[] total_energy = { (TE_WTP + AUX_TE_WTP), (TE_VO + AUX_TE_VO) };  //Resource 0
             double[] fossil_fuels = { 10, 20 };             //Resource 1
