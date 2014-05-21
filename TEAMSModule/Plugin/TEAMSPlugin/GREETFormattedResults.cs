@@ -257,7 +257,7 @@ namespace TEAMSModule
                 //Carbon Dioxide Well To Pump Emissions = CH4permmbtu(as defined by GREET) *  1000000 * mmbtu needed to put into the engine
                 //Currently working with the CO2 value, to figure out what the number that is currently a million should be
 
-                CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000 * te.MMBTUinperTrip;
+                CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.MMBTUinperTrip;
                 //Grams of the fuel = 1/ lower heating value (btu per gal) * conversion * million * million btu in per trip * density * conversion
                 double gramsOfFuel = ((1 / (resourceLowerHeatingValue * (3.5878781 / 1000000))) * 1000000 * te.MMBTUinperTrip) * ((resourceDensity * 3.78541178) / 1000);
                 //Carbon Dioxide Vessel Operation Emissions = carbon ratio * (grams of fuel/mmbtu in per trip) * mmbtu in per trip * 44/12 (44/12 is the conversion from carbon to co2)
@@ -376,7 +376,7 @@ namespace TEAMSModule
 
                 double gramsOfFuel = ((1 / (resourceLowerHeatingValue * (3.5878781 / 1000000))) * 1000000 * te.AuxEngineMMBTUinperTrip) * ((resourceDensity * 3.78541178) / 1000);
                 //Currently working with the CO2 value, to figure out what the number that is currently a million should be
-                AUX_CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000 * te.AuxEngineMMBTUinperTrip;
+                AUX_CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
                 AUX_CO2_VO = gramsOfFuel * resourceCarbonRatio * (44 / 12);
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
