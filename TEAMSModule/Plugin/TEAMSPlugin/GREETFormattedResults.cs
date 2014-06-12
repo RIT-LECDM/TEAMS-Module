@@ -197,6 +197,8 @@ namespace TEAMSModule
                 //Total Energy = Vessel Operation + Well to pump + aux vessel operation + aux well to pump
                 TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip + AUX_TE_WTP + AUX_TE_VO;
 
+                #region FOR FUTURE: FOSSIL FUELS / PETROLEUM FUELS
+                /**********************************************************************************************************
                 //Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
                 FF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
@@ -204,6 +206,8 @@ namespace TEAMSModule
                 //Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
                 PF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;
+                ***********************************************************************************************************/
+                #endregion
 
                 //Volatile Organic Compound Well To Pump Emissions = VOCpermmbtu(as defined by GREET) *  1000000000000 * mmbtu needed to put into the engine
                 VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * 1000000000000 * te.MMBTUinperTrip;
@@ -330,21 +334,28 @@ namespace TEAMSModule
                     resourceCarbonRatio = resourceUsed.CarbonRatio.UserValue;
                 }
 
-                //THe values below are calculated in almost exactly the same way as their counterparts in "Treeview2_afterselect" if you want an in depth breakdown of the formulas, it is there
+                //The values below are calculated in almost exactly the same way as their counterparts in "Treeview2_afterselect" if you want an in depth breakdown of the formulas, it is there
                 
                 te.AuxEngineGALLONperTrip = (1 / resourceLowerHeatingValue) * 1000000 * te.AuxEngineMMBTUinperTrip;
                 AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1;
                 AUX_TE_VO = te.AuxEngineMMBTUinperTrip;
                 TE_Total = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 + te.MMBTUinperTrip + AUX_TE_WTP + AUX_TE_VO;
 
-
+                #region FOR FUTURE: FOSSIL FUELS / PETROLEUM FUELS
+                /**********************************************************************************************************
+                 * Fossil Fuel is label3 in the Designer.
+                 * 
                 //Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
                 AUX_FF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
-
+                 * 
+                 * Petroluem Fuel is label6 in the Designer.
+                 * 
                 //Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
                 AUX_PF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;
+                ***********************************************************************************************************/
+                #endregion
 
                 AUX_VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * 1000000000000 * te.AuxEngineMMBTUinperTrip;
                 AUX_VOC_VO = ((te.AUX_VOC_gphphr_out * (1 / 0.745699871)) * te.AuxEngineKWHoutperTrip);
@@ -457,8 +468,10 @@ namespace TEAMSModule
             label198.Text = parseResourceToString(AUX_CH4_WTP) + " g/trip";
             label199.Text = parseResourceToString(AUX_CO2_WTP) + " g/trip";
             label200.Text = parseResourceToString(AUX_N2O_WTP) + " g/trip";
-            label39.Text = parseResourceToString(AUX_FF_WTP) + " mmbtu/trip"; //Fossil Fuel Total
-            label59.Text = parseResourceToString(AUX_PF_WTP) + " mmbtu/trip"; //Petroleum Fuel Total
+            //label39.Text = parseResourceToString(AUX_FF_WTP) + " mmbtu/trip"; //Fossil Fuel Total
+            label39.Text = "";
+            //label59.Text = parseResourceToString(AUX_PF_WTP) + " mmbtu/trip"; //Petroleum Fuel Total
+            label59.Text = "";
 
             //Column 4 -- Aux Engine Vessel Operations
             label19.Text = parseResourceToString(AUX_TE_VO) + " mmbtu/trip";
@@ -476,11 +489,16 @@ namespace TEAMSModule
              */
 
             label60.Text = parseResourceToString(TE_Total) + " mmbtu/trip";   // Total Energy
-            label61.Text = parseResourceToString(FF_WTP) + " mmbtu/trip";   // Fossil Fuel
-            label64.Text = parseResourceToString(PF_WTP) + " mmbtu/trip";   // Petroleum Fuel
+            //label61.Text = parseResourceToString(FF_WTP) + " mmbtu/trip";   // Fossil Fuel
+            label61.Text = "";
+            //label64.Text = parseResourceToString(PF_WTP) + " mmbtu/trip";   // Petroleum Fuel
+            label64.Text = "";
 
-            label4.Text = parseResourceToString(FF_Total) + " mmbtu/trip"; //Fossil Fuel Total
-            label5.Text = parseResourceToString(PF_Total) + " mmbtu/trip"; //Petroleum Fuel Total
+            //label4.Text = parseResourceToString(FF_Total) + " mmbtu/trip"; //Fossil Fuel Total
+            label4.Text = "";
+            //label5.Text = parseResourceToString(PF_Total) + " mmbtu/trip"; //Petroleum Fuel Total
+            label5.Text = "";
+
             /***************
              * EMISSIONS
              ***************/
@@ -503,18 +521,20 @@ namespace TEAMSModule
             Total_GHG_VO = (CO2_VO * te.CO2_GWP) + (CH4_VO * te.CH4_GWP) + (N2O_VO * te.N2O_GWP) + (VOC_VO * te.VOC_GWP) + (CO_VO * te.CO_GWP) + (NOx_VO * te.NO2_GWP);
             //Setting the stacked bar chart information
             double[] total_energy = { (TE_WTP + AUX_TE_WTP), (TE_VO + AUX_TE_VO) };  //Resource 0
-            double[] fossil_fuels = { 10, 20 };             //Resource 1
-            double[] petroleum = { 15, 25 };                //Resource 2
-            double[] co2 = { (CO2_WTP + AUX_CO2_WTP), (CO2_VO + AUX_CO2_VO) };         //Resource 3
-            double[] ch4 = { (CH4_WTP + AUX_CH4_WTP), (CH4_VO + AUX_CH4_VO) };         //Resource 4
-            double[] n2o = { (N2O_WTP + AUX_N2O_WTP), (N2O_VO + AUX_N2O_VO) };         //Resource 5
-            double[] ghgs = { Total_GHG_WTP, Total_GHG_VO };                    //Resource 6
-            double[] voc = { (VOC_WTP + AUX_VOC_WTP), (VOC_VO + AUX_VOC_VO) };         //Resource 7
-            double[] co = { (CO_WTP + AUX_CO_WTP), (CO_VO + AUX_CO_VO) };            //Resource 8
-            double[] nox = { (NOx_WTP + AUX_NOx_WTP), (NOx_VO + AUX_NOx_VO) };         //Resource 9
-            double[] pm10 = { (PM10_WTP + AUX_PM10_WTP), (PM10_VO + AUX_PM10_VO) };      //Resource 10
-            double[] sox = { (SOx_WTP + AUX_SOx_WTP), (SOx_VO + AUX_SOx_VO) };         //Resource 11
-            double[][] resources = { total_energy, fossil_fuels, petroleum, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
+            /* TODO: Re-implement fossil_fuels and petroleum calculations
+             * double[] fossil_fuels = { 10, 20 };             //Resource xx
+             * double[] petroleum = { 15, 25 };                //Resource xx
+             * */
+            double[] co2 = { (CO2_WTP + AUX_CO2_WTP), (CO2_VO + AUX_CO2_VO) };         //Resource 2
+            double[] ch4 = { (CH4_WTP + AUX_CH4_WTP), (CH4_VO + AUX_CH4_VO) };         //Resource 3
+            double[] n2o = { (N2O_WTP + AUX_N2O_WTP), (N2O_VO + AUX_N2O_VO) };         //Resource 4
+            double[] ghgs = { Total_GHG_WTP, Total_GHG_VO };                    //Resource 5
+            double[] voc = { (VOC_WTP + AUX_VOC_WTP), (VOC_VO + AUX_VOC_VO) };         //Resource 6
+            double[] co = { (CO_WTP + AUX_CO_WTP), (CO_VO + AUX_CO_VO) };            //Resource 7
+            double[] nox = { (NOx_WTP + AUX_NOx_WTP), (NOx_VO + AUX_NOx_VO) };         //Resource 8
+            double[] pm10 = { (PM10_WTP + AUX_PM10_WTP), (PM10_VO + AUX_PM10_VO) };      //Resource 9
+            double[] sox = { (SOx_WTP + AUX_SOx_WTP), (SOx_VO + AUX_SOx_VO) };         //Resource 10
+            double[][] resources = { total_energy, co2, ch4, n2o, ghgs, voc, co, nox, pm10, sox };
 
             //Generate the graph using the resources set and seriesArray.
             Generate_Graph(resources, stacked_graph);
