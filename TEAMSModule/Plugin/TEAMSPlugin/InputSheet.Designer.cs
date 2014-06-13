@@ -182,22 +182,20 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Res_CH4 = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Res_N2O = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Res_PM25 = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
-            this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Res_PM10 = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
-            this.numericUpDown12 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Res_VOC = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Res_CO = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Res_NOX = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.label230 = new System.Windows.Forms.Label();
             this.numericUpDown238 = new System.Windows.Forms.NumericUpDown();
@@ -237,6 +235,48 @@
             this.Submit_Button = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.Reset = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Aux_Ult_CH4 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Ult_N2O = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Ult_PM25 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Ult_PM10 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Ult_VOC = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Ult_CO = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Ult_NOX = new System.Windows.Forms.NumericUpDown();
+            this.label31 = new System.Windows.Forms.Label();
+            this.Aux_Bio_CH4 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Bio_N2O = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Bio_PM25 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Bio_PM10 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Bio_VOC = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Bio_CO = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Bio_NOX = new System.Windows.Forms.NumericUpDown();
+            this.label32 = new System.Windows.Forms.Label();
+            this.Aux_Fis_CH4 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Fis_N2O = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Fis_PM25 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Fis_PM10 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Fis_VOC = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Fis_CO = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Fis_NOX = new System.Windows.Forms.NumericUpDown();
+            this.label33 = new System.Windows.Forms.Label();
+            this.Aux_Nat_CH4 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Nat_N2O = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Nat_PM25 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Nat_PM10 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Nat_VOC = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Nat_CO = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Nat_NOX = new System.Windows.Forms.NumericUpDown();
+            this.label34 = new System.Windows.Forms.Label();
+            this.Aux_Die_CH4 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Die_N2O = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Die_PM25 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Die_PM10 = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Die_VOC = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Die_CO = new System.Windows.Forms.NumericUpDown();
+            this.Aux_Die_NOX = new System.Windows.Forms.NumericUpDown();
+            this.label35 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -331,13 +371,13 @@
             this.panel14.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_CH4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_N2O)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_PM25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_PM10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_VOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_CO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_NOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown238)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown239)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown240)).BeginInit();
@@ -353,6 +393,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown229)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).BeginInit();
             this.panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_CH4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_N2O)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_PM25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_PM10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_VOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_CO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_NOX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_CH4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_N2O)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_PM25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_PM10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_VOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_CO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_NOX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_CH4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_N2O)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_PM25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_PM10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_VOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_CO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_NOX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_CH4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_N2O)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_PM25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_PM10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_VOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_CO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_NOX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_CH4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_N2O)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_PM25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_PM10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_VOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_CO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_NOX)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -2525,234 +2600,252 @@
             this.tabPage6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(723, 610);
+            this.tabPage6.Size = new System.Drawing.Size(752, 610);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Auxiliary Engine";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(0, 532);
-            this.label18.Name = "label18";
-            this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label18.Size = new System.Drawing.Size(368, 18);
-            this.label18.TabIndex = 325;
-            this.label18.Text = "User Inputs For Aux Engine Emissions Calculations";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.numericUpDown8);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.numericUpDown9);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.numericUpDown10);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.numericUpDown11);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.numericUpDown12);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.numericUpDown13);
-            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.label35);
             this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.numericUpDown14);
+            this.panel2.Controls.Add(this.Aux_Ult_CH4);
+            this.panel2.Controls.Add(this.Aux_Ult_N2O);
+            this.panel2.Controls.Add(this.Aux_Ult_PM25);
+            this.panel2.Controls.Add(this.Aux_Ult_PM10);
+            this.panel2.Controls.Add(this.Aux_Ult_VOC);
+            this.panel2.Controls.Add(this.Aux_Ult_CO);
+            this.panel2.Controls.Add(this.Aux_Ult_NOX);
+            this.panel2.Controls.Add(this.label31);
+            this.panel2.Controls.Add(this.Aux_Bio_CH4);
+            this.panel2.Controls.Add(this.Aux_Bio_N2O);
+            this.panel2.Controls.Add(this.Aux_Bio_PM25);
+            this.panel2.Controls.Add(this.Aux_Bio_PM10);
+            this.panel2.Controls.Add(this.Aux_Bio_VOC);
+            this.panel2.Controls.Add(this.Aux_Bio_CO);
+            this.panel2.Controls.Add(this.Aux_Bio_NOX);
+            this.panel2.Controls.Add(this.label32);
+            this.panel2.Controls.Add(this.Aux_Fis_CH4);
+            this.panel2.Controls.Add(this.Aux_Fis_N2O);
+            this.panel2.Controls.Add(this.Aux_Fis_PM25);
+            this.panel2.Controls.Add(this.Aux_Fis_PM10);
+            this.panel2.Controls.Add(this.Aux_Fis_VOC);
+            this.panel2.Controls.Add(this.Aux_Fis_CO);
+            this.panel2.Controls.Add(this.Aux_Fis_NOX);
+            this.panel2.Controls.Add(this.label33);
+            this.panel2.Controls.Add(this.Aux_Nat_CH4);
+            this.panel2.Controls.Add(this.Aux_Nat_N2O);
+            this.panel2.Controls.Add(this.Aux_Nat_PM25);
+            this.panel2.Controls.Add(this.Aux_Nat_PM10);
+            this.panel2.Controls.Add(this.Aux_Nat_VOC);
+            this.panel2.Controls.Add(this.Aux_Nat_CO);
+            this.panel2.Controls.Add(this.Aux_Nat_NOX);
+            this.panel2.Controls.Add(this.label34);
+            this.panel2.Controls.Add(this.Aux_Die_CH4);
+            this.panel2.Controls.Add(this.Aux_Die_N2O);
+            this.panel2.Controls.Add(this.Aux_Die_PM25);
+            this.panel2.Controls.Add(this.Aux_Die_PM10);
+            this.panel2.Controls.Add(this.Aux_Die_VOC);
+            this.panel2.Controls.Add(this.Aux_Die_CO);
+            this.panel2.Controls.Add(this.Aux_Die_NOX);
+            this.panel2.Controls.Add(this.Aux_Res_CH4);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.Aux_Res_N2O);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.Aux_Res_PM25);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.Aux_Res_PM10);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.Aux_Res_VOC);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.Aux_Res_CO);
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.Aux_Res_NOX);
             this.panel2.Controls.Add(this.label17);
-            this.panel2.Location = new System.Drawing.Point(3, 560);
+            this.panel2.Location = new System.Drawing.Point(6, 540);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 216);
+            this.panel2.Size = new System.Drawing.Size(715, 247);
             this.panel2.TabIndex = 324;
             // 
-            // numericUpDown8
+            // Aux_Res_CH4
             // 
-            this.numericUpDown8.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown8.DecimalPlaces = 2;
-            this.numericUpDown8.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown8.Location = new System.Drawing.Point(82, 186);
-            this.numericUpDown8.Maximum = new decimal(new int[] {
+            this.Aux_Res_CH4.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Res_CH4.DecimalPlaces = 2;
+            this.Aux_Res_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_CH4.Location = new System.Drawing.Point(81, 194);
+            this.Aux_Res_CH4.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(97, 22);
-            this.numericUpDown8.TabIndex = 298;
+            this.Aux_Res_CH4.Name = "Aux_Res_CH4";
+            this.Aux_Res_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_CH4.TabIndex = 298;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Silver;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(5, 191);
+            this.label10.Location = new System.Drawing.Point(4, 199);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(39, 17);
             this.label10.TabIndex = 297;
             this.label10.Text = "CH4";
             // 
-            // numericUpDown9
+            // Aux_Res_N2O
             // 
-            this.numericUpDown9.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown9.DecimalPlaces = 2;
-            this.numericUpDown9.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown9.Location = new System.Drawing.Point(82, 159);
-            this.numericUpDown9.Maximum = new decimal(new int[] {
+            this.Aux_Res_N2O.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Res_N2O.DecimalPlaces = 2;
+            this.Aux_Res_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_N2O.Location = new System.Drawing.Point(81, 167);
+            this.Aux_Res_N2O.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown9.Name = "numericUpDown9";
-            this.numericUpDown9.Size = new System.Drawing.Size(97, 22);
-            this.numericUpDown9.TabIndex = 296;
+            this.Aux_Res_N2O.Name = "Aux_Res_N2O";
+            this.Aux_Res_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_N2O.TabIndex = 296;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Silver;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(5, 164);
+            this.label11.Location = new System.Drawing.Point(4, 172);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 17);
             this.label11.TabIndex = 295;
             this.label11.Text = "N2O";
             // 
-            // numericUpDown10
+            // Aux_Res_PM25
             // 
-            this.numericUpDown10.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown10.DecimalPlaces = 2;
-            this.numericUpDown10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown10.Location = new System.Drawing.Point(82, 133);
-            this.numericUpDown10.Maximum = new decimal(new int[] {
+            this.Aux_Res_PM25.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Res_PM25.DecimalPlaces = 2;
+            this.Aux_Res_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_PM25.Location = new System.Drawing.Point(81, 141);
+            this.Aux_Res_PM25.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(97, 22);
-            this.numericUpDown10.TabIndex = 294;
+            this.Aux_Res_PM25.Name = "Aux_Res_PM25";
+            this.Aux_Res_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_PM25.TabIndex = 294;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Silver;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(5, 138);
+            this.label12.Location = new System.Drawing.Point(4, 146);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(52, 17);
             this.label12.TabIndex = 293;
             this.label12.Text = "PM2.5";
             // 
-            // numericUpDown11
+            // Aux_Res_PM10
             // 
-            this.numericUpDown11.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown11.DecimalPlaces = 2;
-            this.numericUpDown11.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown11.Location = new System.Drawing.Point(82, 106);
-            this.numericUpDown11.Maximum = new decimal(new int[] {
+            this.Aux_Res_PM10.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Res_PM10.DecimalPlaces = 2;
+            this.Aux_Res_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_PM10.Location = new System.Drawing.Point(81, 114);
+            this.Aux_Res_PM10.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown11.Name = "numericUpDown11";
-            this.numericUpDown11.Size = new System.Drawing.Size(97, 22);
-            this.numericUpDown11.TabIndex = 292;
+            this.Aux_Res_PM10.Name = "Aux_Res_PM10";
+            this.Aux_Res_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_PM10.TabIndex = 292;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Silver;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(5, 111);
+            this.label13.Location = new System.Drawing.Point(4, 119);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 17);
             this.label13.TabIndex = 291;
             this.label13.Text = "PM10";
             // 
-            // numericUpDown12
+            // Aux_Res_VOC
             // 
-            this.numericUpDown12.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown12.DecimalPlaces = 2;
-            this.numericUpDown12.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown12.Location = new System.Drawing.Point(82, 80);
-            this.numericUpDown12.Maximum = new decimal(new int[] {
+            this.Aux_Res_VOC.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Res_VOC.DecimalPlaces = 2;
+            this.Aux_Res_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_VOC.Location = new System.Drawing.Point(81, 88);
+            this.Aux_Res_VOC.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown12.Name = "numericUpDown12";
-            this.numericUpDown12.Size = new System.Drawing.Size(97, 22);
-            this.numericUpDown12.TabIndex = 290;
+            this.Aux_Res_VOC.Name = "Aux_Res_VOC";
+            this.Aux_Res_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_VOC.TabIndex = 290;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Silver;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(5, 84);
+            this.label14.Location = new System.Drawing.Point(4, 92);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(41, 17);
             this.label14.TabIndex = 289;
             this.label14.Text = "VOC";
             // 
-            // numericUpDown13
+            // Aux_Res_CO
             // 
-            this.numericUpDown13.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown13.DecimalPlaces = 2;
-            this.numericUpDown13.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown13.Location = new System.Drawing.Point(82, 53);
-            this.numericUpDown13.Maximum = new decimal(new int[] {
+            this.Aux_Res_CO.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Res_CO.DecimalPlaces = 2;
+            this.Aux_Res_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_CO.Location = new System.Drawing.Point(81, 61);
+            this.Aux_Res_CO.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.Size = new System.Drawing.Size(97, 22);
-            this.numericUpDown13.TabIndex = 288;
+            this.Aux_Res_CO.Name = "Aux_Res_CO";
+            this.Aux_Res_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_CO.TabIndex = 288;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Silver;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(5, 58);
+            this.label15.Location = new System.Drawing.Point(4, 66);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(31, 17);
             this.label15.TabIndex = 287;
             this.label15.Text = "CO";
             // 
-            // label16
+            // Aux_Res_NOX
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Silver;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(79, 7);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 17);
-            this.label16.TabIndex = 286;
-            this.label16.Text = "g/HP-HR(out)";
-            // 
-            // numericUpDown14
-            // 
-            this.numericUpDown14.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown14.DecimalPlaces = 2;
-            this.numericUpDown14.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown14.Location = new System.Drawing.Point(82, 27);
-            this.numericUpDown14.Maximum = new decimal(new int[] {
+            this.Aux_Res_NOX.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Res_NOX.DecimalPlaces = 2;
+            this.Aux_Res_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_NOX.Location = new System.Drawing.Point(81, 35);
+            this.Aux_Res_NOX.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.Size = new System.Drawing.Size(97, 22);
-            this.numericUpDown14.TabIndex = 285;
+            this.Aux_Res_NOX.Name = "Aux_Res_NOX";
+            this.Aux_Res_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_NOX.TabIndex = 285;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.Silver;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(5, 32);
+            this.label17.Location = new System.Drawing.Point(4, 40);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(41, 17);
             this.label17.TabIndex = 265;
@@ -3064,7 +3157,7 @@
             this.label218.AutoSize = true;
             this.label218.BackColor = System.Drawing.Color.Silver;
             this.label218.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label218.Location = new System.Drawing.Point(10, 103);
+            this.label218.Location = new System.Drawing.Point(7, 109);
             this.label218.Name = "label218";
             this.label218.Size = new System.Drawing.Size(244, 17);
             this.label218.TabIndex = 130;
@@ -3075,7 +3168,7 @@
             this.label217.AutoSize = true;
             this.label217.BackColor = System.Drawing.Color.Silver;
             this.label217.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label217.Location = new System.Drawing.Point(10, 79);
+            this.label217.Location = new System.Drawing.Point(7, 85);
             this.label217.Name = "label217";
             this.label217.Size = new System.Drawing.Size(242, 17);
             this.label217.TabIndex = 129;
@@ -3086,7 +3179,7 @@
             this.label216.AutoSize = true;
             this.label216.BackColor = System.Drawing.Color.Silver;
             this.label216.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label216.Location = new System.Drawing.Point(10, 54);
+            this.label216.Location = new System.Drawing.Point(7, 59);
             this.label216.Name = "label216";
             this.label216.Size = new System.Drawing.Size(216, 17);
             this.label216.TabIndex = 128;
@@ -3097,7 +3190,7 @@
             this.label215.AutoSize = true;
             this.label215.BackColor = System.Drawing.Color.Silver;
             this.label215.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label215.Location = new System.Drawing.Point(10, 28);
+            this.label215.Location = new System.Drawing.Point(7, 32);
             this.label215.Name = "label215";
             this.label215.Size = new System.Drawing.Size(236, 17);
             this.label215.TabIndex = 127;
@@ -3108,7 +3201,7 @@
             this.numericUpDown231.BackColor = System.Drawing.SystemColors.Window;
             this.numericUpDown231.Enabled = false;
             this.numericUpDown231.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown231.Location = new System.Drawing.Point(267, 101);
+            this.numericUpDown231.Location = new System.Drawing.Point(267, 107);
             this.numericUpDown231.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3122,7 +3215,7 @@
             // numericUpDown230
             // 
             this.numericUpDown230.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown230.Location = new System.Drawing.Point(267, 76);
+            this.numericUpDown230.Location = new System.Drawing.Point(267, 83);
             this.numericUpDown230.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3135,7 +3228,7 @@
             // numericUpDown229
             // 
             this.numericUpDown229.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown229.Location = new System.Drawing.Point(267, 52);
+            this.numericUpDown229.Location = new System.Drawing.Point(267, 59);
             this.numericUpDown229.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3148,7 +3241,7 @@
             // numericUpDown228
             // 
             this.numericUpDown228.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown228.Location = new System.Drawing.Point(267, 28);
+            this.numericUpDown228.Location = new System.Drawing.Point(267, 32);
             this.numericUpDown228.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -3162,7 +3255,7 @@
             // 
             this.label214.AutoSize = true;
             this.label214.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label214.Location = new System.Drawing.Point(3, 0);
+            this.label214.Location = new System.Drawing.Point(3, 6);
             this.label214.Name = "label214";
             this.label214.Size = new System.Drawing.Size(189, 18);
             this.label214.TabIndex = 122;
@@ -3172,7 +3265,7 @@
             // 
             this.panel20.BackColor = System.Drawing.Color.Silver;
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel20.Location = new System.Drawing.Point(6, 21);
+            this.panel20.Location = new System.Drawing.Point(6, 26);
             this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(360, 109);
@@ -3182,7 +3275,7 @@
             // 
             this.panel21.BackColor = System.Drawing.Color.Silver;
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel21.Location = new System.Drawing.Point(3, 178);
+            this.panel21.Location = new System.Drawing.Point(6, 178);
             this.panel21.Margin = new System.Windows.Forms.Padding(2);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(460, 132);
@@ -3193,7 +3286,7 @@
             this.panel23.BackColor = System.Drawing.Color.Silver;
             this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel23.Controls.Add(this.label229);
-            this.panel23.Location = new System.Drawing.Point(3, 351);
+            this.panel23.Location = new System.Drawing.Point(6, 351);
             this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(340, 154);
@@ -3242,6 +3335,602 @@
             this.Reset.Text = "Reset to Defaults";
             this.Reset.UseVisualStyleBackColor = true;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(3, 520);
+            this.label18.Name = "label18";
+            this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label18.Size = new System.Drawing.Size(498, 18);
+            this.label18.TabIndex = 299;
+            this.label18.Text = "User Inputs For Auxiliary Engine Emissions Calculations - g/hp-hr(out)";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(597, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(103, 34);
+            this.label16.TabIndex = 381;
+            this.label16.Text = "Ultra-low Sulfur\r\nDiesel";
+            // 
+            // Aux_Ult_CH4
+            // 
+            this.Aux_Ult_CH4.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Ult_CH4.DecimalPlaces = 3;
+            this.Aux_Ult_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_CH4.Location = new System.Drawing.Point(600, 195);
+            this.Aux_Ult_CH4.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Ult_CH4.Name = "Aux_Ult_CH4";
+            this.Aux_Ult_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_CH4.TabIndex = 380;
+            // 
+            // Aux_Ult_N2O
+            // 
+            this.Aux_Ult_N2O.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Ult_N2O.DecimalPlaces = 3;
+            this.Aux_Ult_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_N2O.Location = new System.Drawing.Point(600, 168);
+            this.Aux_Ult_N2O.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Ult_N2O.Name = "Aux_Ult_N2O";
+            this.Aux_Ult_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_N2O.TabIndex = 379;
+            // 
+            // Aux_Ult_PM25
+            // 
+            this.Aux_Ult_PM25.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Ult_PM25.DecimalPlaces = 3;
+            this.Aux_Ult_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_PM25.Location = new System.Drawing.Point(600, 142);
+            this.Aux_Ult_PM25.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Ult_PM25.Name = "Aux_Ult_PM25";
+            this.Aux_Ult_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_PM25.TabIndex = 378;
+            // 
+            // Aux_Ult_PM10
+            // 
+            this.Aux_Ult_PM10.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Ult_PM10.DecimalPlaces = 3;
+            this.Aux_Ult_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_PM10.Location = new System.Drawing.Point(600, 115);
+            this.Aux_Ult_PM10.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Ult_PM10.Name = "Aux_Ult_PM10";
+            this.Aux_Ult_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_PM10.TabIndex = 377;
+            // 
+            // Aux_Ult_VOC
+            // 
+            this.Aux_Ult_VOC.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Ult_VOC.DecimalPlaces = 3;
+            this.Aux_Ult_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_VOC.Location = new System.Drawing.Point(600, 88);
+            this.Aux_Ult_VOC.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Ult_VOC.Name = "Aux_Ult_VOC";
+            this.Aux_Ult_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_VOC.TabIndex = 376;
+            // 
+            // Aux_Ult_CO
+            // 
+            this.Aux_Ult_CO.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Ult_CO.DecimalPlaces = 3;
+            this.Aux_Ult_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_CO.Location = new System.Drawing.Point(600, 62);
+            this.Aux_Ult_CO.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Ult_CO.Name = "Aux_Ult_CO";
+            this.Aux_Ult_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_CO.TabIndex = 375;
+            // 
+            // Aux_Ult_NOX
+            // 
+            this.Aux_Ult_NOX.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Ult_NOX.DecimalPlaces = 3;
+            this.Aux_Ult_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_NOX.Location = new System.Drawing.Point(600, 36);
+            this.Aux_Ult_NOX.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Ult_NOX.Name = "Aux_Ult_NOX";
+            this.Aux_Ult_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_NOX.TabIndex = 374;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(494, 17);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(61, 17);
+            this.label31.TabIndex = 373;
+            this.label31.Text = "Biodiesel";
+            // 
+            // Aux_Bio_CH4
+            // 
+            this.Aux_Bio_CH4.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Bio_CH4.DecimalPlaces = 3;
+            this.Aux_Bio_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_CH4.Location = new System.Drawing.Point(497, 195);
+            this.Aux_Bio_CH4.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Bio_CH4.Name = "Aux_Bio_CH4";
+            this.Aux_Bio_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_CH4.TabIndex = 372;
+            // 
+            // Aux_Bio_N2O
+            // 
+            this.Aux_Bio_N2O.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Bio_N2O.DecimalPlaces = 3;
+            this.Aux_Bio_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_N2O.Location = new System.Drawing.Point(497, 168);
+            this.Aux_Bio_N2O.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Bio_N2O.Name = "Aux_Bio_N2O";
+            this.Aux_Bio_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_N2O.TabIndex = 371;
+            // 
+            // Aux_Bio_PM25
+            // 
+            this.Aux_Bio_PM25.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Bio_PM25.DecimalPlaces = 3;
+            this.Aux_Bio_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_PM25.Location = new System.Drawing.Point(497, 142);
+            this.Aux_Bio_PM25.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Bio_PM25.Name = "Aux_Bio_PM25";
+            this.Aux_Bio_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_PM25.TabIndex = 370;
+            // 
+            // Aux_Bio_PM10
+            // 
+            this.Aux_Bio_PM10.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Bio_PM10.DecimalPlaces = 3;
+            this.Aux_Bio_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_PM10.Location = new System.Drawing.Point(497, 115);
+            this.Aux_Bio_PM10.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Bio_PM10.Name = "Aux_Bio_PM10";
+            this.Aux_Bio_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_PM10.TabIndex = 369;
+            // 
+            // Aux_Bio_VOC
+            // 
+            this.Aux_Bio_VOC.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Bio_VOC.DecimalPlaces = 3;
+            this.Aux_Bio_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_VOC.Location = new System.Drawing.Point(497, 88);
+            this.Aux_Bio_VOC.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Bio_VOC.Name = "Aux_Bio_VOC";
+            this.Aux_Bio_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_VOC.TabIndex = 368;
+            // 
+            // Aux_Bio_CO
+            // 
+            this.Aux_Bio_CO.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Bio_CO.DecimalPlaces = 3;
+            this.Aux_Bio_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_CO.Location = new System.Drawing.Point(497, 62);
+            this.Aux_Bio_CO.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Bio_CO.Name = "Aux_Bio_CO";
+            this.Aux_Bio_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_CO.TabIndex = 367;
+            // 
+            // Aux_Bio_NOX
+            // 
+            this.Aux_Bio_NOX.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Bio_NOX.DecimalPlaces = 3;
+            this.Aux_Bio_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_NOX.Location = new System.Drawing.Point(497, 36);
+            this.Aux_Bio_NOX.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Bio_NOX.Name = "Aux_Bio_NOX";
+            this.Aux_Bio_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_NOX.TabIndex = 366;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(388, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(106, 34);
+            this.label32.TabIndex = 365;
+            this.label32.Text = "Fischer–Tropsch\r\nDiesel";
+            // 
+            // Aux_Fis_CH4
+            // 
+            this.Aux_Fis_CH4.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Fis_CH4.DecimalPlaces = 3;
+            this.Aux_Fis_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_CH4.Location = new System.Drawing.Point(391, 195);
+            this.Aux_Fis_CH4.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Fis_CH4.Name = "Aux_Fis_CH4";
+            this.Aux_Fis_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_CH4.TabIndex = 364;
+            // 
+            // Aux_Fis_N2O
+            // 
+            this.Aux_Fis_N2O.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Fis_N2O.DecimalPlaces = 3;
+            this.Aux_Fis_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_N2O.Location = new System.Drawing.Point(391, 168);
+            this.Aux_Fis_N2O.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Fis_N2O.Name = "Aux_Fis_N2O";
+            this.Aux_Fis_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_N2O.TabIndex = 363;
+            // 
+            // Aux_Fis_PM25
+            // 
+            this.Aux_Fis_PM25.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Fis_PM25.DecimalPlaces = 3;
+            this.Aux_Fis_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_PM25.Location = new System.Drawing.Point(391, 142);
+            this.Aux_Fis_PM25.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Fis_PM25.Name = "Aux_Fis_PM25";
+            this.Aux_Fis_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_PM25.TabIndex = 362;
+            // 
+            // Aux_Fis_PM10
+            // 
+            this.Aux_Fis_PM10.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Fis_PM10.DecimalPlaces = 3;
+            this.Aux_Fis_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_PM10.Location = new System.Drawing.Point(391, 115);
+            this.Aux_Fis_PM10.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Fis_PM10.Name = "Aux_Fis_PM10";
+            this.Aux_Fis_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_PM10.TabIndex = 361;
+            // 
+            // Aux_Fis_VOC
+            // 
+            this.Aux_Fis_VOC.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Fis_VOC.DecimalPlaces = 3;
+            this.Aux_Fis_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_VOC.Location = new System.Drawing.Point(391, 88);
+            this.Aux_Fis_VOC.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Fis_VOC.Name = "Aux_Fis_VOC";
+            this.Aux_Fis_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_VOC.TabIndex = 360;
+            // 
+            // Aux_Fis_CO
+            // 
+            this.Aux_Fis_CO.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Fis_CO.DecimalPlaces = 3;
+            this.Aux_Fis_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_CO.Location = new System.Drawing.Point(391, 62);
+            this.Aux_Fis_CO.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Fis_CO.Name = "Aux_Fis_CO";
+            this.Aux_Fis_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_CO.TabIndex = 359;
+            // 
+            // Aux_Fis_NOX
+            // 
+            this.Aux_Fis_NOX.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Fis_NOX.DecimalPlaces = 3;
+            this.Aux_Fis_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_NOX.Location = new System.Drawing.Point(391, 36);
+            this.Aux_Fis_NOX.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Fis_NOX.Name = "Aux_Fis_NOX";
+            this.Aux_Fis_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_NOX.TabIndex = 358;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(285, 17);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(79, 17);
+            this.label33.TabIndex = 357;
+            this.label33.Text = "Natural Gas";
+            // 
+            // Aux_Nat_CH4
+            // 
+            this.Aux_Nat_CH4.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Nat_CH4.DecimalPlaces = 3;
+            this.Aux_Nat_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_CH4.Location = new System.Drawing.Point(288, 195);
+            this.Aux_Nat_CH4.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Nat_CH4.Name = "Aux_Nat_CH4";
+            this.Aux_Nat_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_CH4.TabIndex = 356;
+            // 
+            // Aux_Nat_N2O
+            // 
+            this.Aux_Nat_N2O.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Nat_N2O.DecimalPlaces = 3;
+            this.Aux_Nat_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_N2O.Location = new System.Drawing.Point(288, 168);
+            this.Aux_Nat_N2O.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Nat_N2O.Name = "Aux_Nat_N2O";
+            this.Aux_Nat_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_N2O.TabIndex = 355;
+            // 
+            // Aux_Nat_PM25
+            // 
+            this.Aux_Nat_PM25.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Nat_PM25.DecimalPlaces = 3;
+            this.Aux_Nat_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_PM25.Location = new System.Drawing.Point(288, 142);
+            this.Aux_Nat_PM25.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Nat_PM25.Name = "Aux_Nat_PM25";
+            this.Aux_Nat_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_PM25.TabIndex = 354;
+            // 
+            // Aux_Nat_PM10
+            // 
+            this.Aux_Nat_PM10.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Nat_PM10.DecimalPlaces = 3;
+            this.Aux_Nat_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_PM10.Location = new System.Drawing.Point(288, 115);
+            this.Aux_Nat_PM10.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Nat_PM10.Name = "Aux_Nat_PM10";
+            this.Aux_Nat_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_PM10.TabIndex = 353;
+            // 
+            // Aux_Nat_VOC
+            // 
+            this.Aux_Nat_VOC.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Nat_VOC.DecimalPlaces = 3;
+            this.Aux_Nat_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_VOC.Location = new System.Drawing.Point(288, 88);
+            this.Aux_Nat_VOC.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Nat_VOC.Name = "Aux_Nat_VOC";
+            this.Aux_Nat_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_VOC.TabIndex = 352;
+            // 
+            // Aux_Nat_CO
+            // 
+            this.Aux_Nat_CO.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Nat_CO.DecimalPlaces = 3;
+            this.Aux_Nat_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_CO.Location = new System.Drawing.Point(288, 62);
+            this.Aux_Nat_CO.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Nat_CO.Name = "Aux_Nat_CO";
+            this.Aux_Nat_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_CO.TabIndex = 351;
+            // 
+            // Aux_Nat_NOX
+            // 
+            this.Aux_Nat_NOX.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Nat_NOX.DecimalPlaces = 3;
+            this.Aux_Nat_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_NOX.Location = new System.Drawing.Point(288, 36);
+            this.Aux_Nat_NOX.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Nat_NOX.Name = "Aux_Nat_NOX";
+            this.Aux_Nat_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_NOX.TabIndex = 350;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(182, 17);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(45, 17);
+            this.label34.TabIndex = 349;
+            this.label34.Text = "Diesel";
+            // 
+            // Aux_Die_CH4
+            // 
+            this.Aux_Die_CH4.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Die_CH4.DecimalPlaces = 3;
+            this.Aux_Die_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_CH4.Location = new System.Drawing.Point(185, 195);
+            this.Aux_Die_CH4.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Die_CH4.Name = "Aux_Die_CH4";
+            this.Aux_Die_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_CH4.TabIndex = 348;
+            // 
+            // Aux_Die_N2O
+            // 
+            this.Aux_Die_N2O.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Die_N2O.DecimalPlaces = 3;
+            this.Aux_Die_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_N2O.Location = new System.Drawing.Point(185, 168);
+            this.Aux_Die_N2O.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Die_N2O.Name = "Aux_Die_N2O";
+            this.Aux_Die_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_N2O.TabIndex = 347;
+            // 
+            // Aux_Die_PM25
+            // 
+            this.Aux_Die_PM25.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Die_PM25.DecimalPlaces = 3;
+            this.Aux_Die_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_PM25.Location = new System.Drawing.Point(185, 142);
+            this.Aux_Die_PM25.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Die_PM25.Name = "Aux_Die_PM25";
+            this.Aux_Die_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_PM25.TabIndex = 346;
+            // 
+            // Aux_Die_PM10
+            // 
+            this.Aux_Die_PM10.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Die_PM10.DecimalPlaces = 3;
+            this.Aux_Die_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_PM10.Location = new System.Drawing.Point(185, 115);
+            this.Aux_Die_PM10.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Die_PM10.Name = "Aux_Die_PM10";
+            this.Aux_Die_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_PM10.TabIndex = 345;
+            // 
+            // Aux_Die_VOC
+            // 
+            this.Aux_Die_VOC.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Die_VOC.DecimalPlaces = 3;
+            this.Aux_Die_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_VOC.Location = new System.Drawing.Point(185, 88);
+            this.Aux_Die_VOC.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Die_VOC.Name = "Aux_Die_VOC";
+            this.Aux_Die_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_VOC.TabIndex = 344;
+            // 
+            // Aux_Die_CO
+            // 
+            this.Aux_Die_CO.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Die_CO.DecimalPlaces = 3;
+            this.Aux_Die_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_CO.Location = new System.Drawing.Point(185, 62);
+            this.Aux_Die_CO.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Die_CO.Name = "Aux_Die_CO";
+            this.Aux_Die_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_CO.TabIndex = 343;
+            // 
+            // Aux_Die_NOX
+            // 
+            this.Aux_Die_NOX.BackColor = System.Drawing.SystemColors.Window;
+            this.Aux_Die_NOX.DecimalPlaces = 3;
+            this.Aux_Die_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_NOX.Location = new System.Drawing.Point(185, 36);
+            this.Aux_Die_NOX.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.Aux_Die_NOX.Name = "Aux_Die_NOX";
+            this.Aux_Die_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_NOX.TabIndex = 342;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(78, 17);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(79, 17);
+            this.label35.TabIndex = 325;
+            this.label35.Text = "Residual Oil";
             // 
             // TEAMS
             // 
@@ -3366,13 +4055,13 @@
             this.tabPage6.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_CH4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_N2O)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_PM25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_PM10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_VOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_CO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_NOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown238)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown239)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown240)).EndInit();
@@ -3389,6 +4078,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).EndInit();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_CH4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_N2O)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_PM25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_PM10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_VOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_CO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_NOX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_CH4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_N2O)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_PM25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_PM10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_VOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_CO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Bio_NOX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_CH4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_N2O)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_PM25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_PM10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_VOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_CO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Fis_NOX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_CH4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_N2O)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_PM25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_PM10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_VOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_CO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Nat_NOX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_CH4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_N2O)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_PM25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_PM10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_VOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_CO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Aux_Die_NOX)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3528,22 +4252,20 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown Res_N2O;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown Aux_Res_CH4;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.NumericUpDown Aux_Res_N2O;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.NumericUpDown Aux_Res_PM25;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.NumericUpDown numericUpDown11;
+        private System.Windows.Forms.NumericUpDown Aux_Res_PM10;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown numericUpDown12;
+        private System.Windows.Forms.NumericUpDown Aux_Res_VOC;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.NumericUpDown numericUpDown13;
+        private System.Windows.Forms.NumericUpDown Aux_Res_CO;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.NumericUpDown numericUpDown14;
+        private System.Windows.Forms.NumericUpDown Aux_Res_NOX;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button Submit_Button;
         private System.Windows.Forms.RichTextBox richTextBox1;
@@ -3604,6 +4326,48 @@
         private System.Windows.Forms.NumericUpDown Die_NOX;
         private System.Windows.Forms.Label Res_Oil_Label;
         private System.Windows.Forms.Button Reset;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown Aux_Ult_CH4;
+        private System.Windows.Forms.NumericUpDown Aux_Ult_N2O;
+        private System.Windows.Forms.NumericUpDown Aux_Ult_PM25;
+        private System.Windows.Forms.NumericUpDown Aux_Ult_PM10;
+        private System.Windows.Forms.NumericUpDown Aux_Ult_VOC;
+        private System.Windows.Forms.NumericUpDown Aux_Ult_CO;
+        private System.Windows.Forms.NumericUpDown Aux_Ult_NOX;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.NumericUpDown Aux_Bio_CH4;
+        private System.Windows.Forms.NumericUpDown Aux_Bio_N2O;
+        private System.Windows.Forms.NumericUpDown Aux_Bio_PM25;
+        private System.Windows.Forms.NumericUpDown Aux_Bio_PM10;
+        private System.Windows.Forms.NumericUpDown Aux_Bio_VOC;
+        private System.Windows.Forms.NumericUpDown Aux_Bio_CO;
+        private System.Windows.Forms.NumericUpDown Aux_Bio_NOX;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.NumericUpDown Aux_Fis_CH4;
+        private System.Windows.Forms.NumericUpDown Aux_Fis_N2O;
+        private System.Windows.Forms.NumericUpDown Aux_Fis_PM25;
+        private System.Windows.Forms.NumericUpDown Aux_Fis_PM10;
+        private System.Windows.Forms.NumericUpDown Aux_Fis_VOC;
+        private System.Windows.Forms.NumericUpDown Aux_Fis_CO;
+        private System.Windows.Forms.NumericUpDown Aux_Fis_NOX;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.NumericUpDown Aux_Nat_CH4;
+        private System.Windows.Forms.NumericUpDown Aux_Nat_N2O;
+        private System.Windows.Forms.NumericUpDown Aux_Nat_PM25;
+        private System.Windows.Forms.NumericUpDown Aux_Nat_PM10;
+        private System.Windows.Forms.NumericUpDown Aux_Nat_VOC;
+        private System.Windows.Forms.NumericUpDown Aux_Nat_CO;
+        private System.Windows.Forms.NumericUpDown Aux_Nat_NOX;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.NumericUpDown Aux_Die_CH4;
+        private System.Windows.Forms.NumericUpDown Aux_Die_N2O;
+        private System.Windows.Forms.NumericUpDown Aux_Die_PM25;
+        private System.Windows.Forms.NumericUpDown Aux_Die_PM10;
+        private System.Windows.Forms.NumericUpDown Aux_Die_VOC;
+        private System.Windows.Forms.NumericUpDown Aux_Die_CO;
+        private System.Windows.Forms.NumericUpDown Aux_Die_NOX;
 
 
 
