@@ -84,6 +84,61 @@ namespace TEAMS_Plugin
         public double N2O_gphphr_out;
         public double CH4_gphphr_out;
 
+        public double Res_NOX_gphphr_out;   // gphphr = GramsPerHorsePowerHouR
+        public double Res_CO_gphphr_out;
+        public double Res_VOC_gphphr_out;
+        public double Res_PM10_gphphr_out;
+        public double Res_PM25_gphphr_out;
+        public double Res_N2O_gphphr_out;
+        public double Res_CH4_gphphr_out;
+
+        public double Die_NOX_gphphr_out;
+        public double Die_CO_gphphr_out;
+        public double Die_VOC_gphphr_out;
+        public double Die_PM10_gphphr_out;
+        public double Die_PM25_gphphr_out;
+        public double Die_N2O_gphphr_out;
+        public double Die_CH4_gphphr_out;
+
+        public double Nat_NOX_gphphr_out;
+        public double Nat_CO_gphphr_out;
+        public double Nat_VOC_gphphr_out;
+        public double Nat_PM10_gphphr_out;
+        public double Nat_PM25_gphphr_out;
+        public double Nat_N2O_gphphr_out;
+        public double Nat_CH4_gphphr_out;
+
+        public double Fis_NOX_gphphr_out;
+        public double Fis_CO_gphphr_out;
+        public double Fis_VOC_gphphr_out;
+        public double Fis_PM10_gphphr_out;
+        public double Fis_PM25_gphphr_out;
+        public double Fis_N2O_gphphr_out;
+        public double Fis_CH4_gphphr_out;
+
+        public double Bio_NOX_gphphr_out;
+        public double Bio_CO_gphphr_out;
+        public double Bio_VOC_gphphr_out;
+        public double Bio_PM10_gphphr_out;
+        public double Bio_PM25_gphphr_out;
+        public double Bio_N2O_gphphr_out;
+        public double Bio_CH4_gphphr_out;
+
+        public double Ult_NOX_gphphr_out;
+        public double Ult_CO_gphphr_out;
+        public double Ult_VOC_gphphr_out;
+        public double Ult_PM10_gphphr_out;
+        public double Ult_PM25_gphphr_out;
+        public double Ult_N2O_gphphr_out;
+        public double Ult_CH4_gphphr_out;
+
+        public double[] Residual_Oil;
+        public double[] Diesel;
+        public double[] Natural_Gas;
+        public double[] Fischer;
+        public double[] Biodiesel;
+        public double[] Ult_Low_Sulf;
+
         //Global Warming Potential
         public double CO2_GWP;
         public double CH4_GWP;
@@ -575,13 +630,55 @@ namespace TEAMS_Plugin
         {
             //5 
             textBox1.Text = (string)VesselTypeID;
-            numericUpDown1.Value = (decimal)NOX_gphphr_out;
-            numericUpDown2.Value = (decimal)CO_gphphr_out;
-            numericUpDown3.Value = (decimal)VOC_gphphr_out;
-            numericUpDown4.Value = (decimal)PM10_gphphr_out;
-            numericUpDown5.Value = (decimal)PM25_gphphr_out;
-            numericUpDown6.Value = (decimal)N2O_gphphr_out;
-            numericUpDown7.Value = (decimal)CH4_gphphr_out;
+            Res_NOX.Value = (decimal)Res_NOX_gphphr_out;
+            Res_CO.Value = (decimal)Res_CO_gphphr_out;
+            Res_VOC.Value = (decimal)Res_VOC_gphphr_out;
+            Res_PM10.Value = (decimal)Res_PM10_gphphr_out;
+            Res_PM25.Value = (decimal)Res_PM25_gphphr_out;
+            Res_N2O.Value = (decimal)Res_N2O_gphphr_out;
+            Res_CH4.Value = (decimal)Res_CH4_gphphr_out;
+
+            Die_NOX.Value = (decimal)Die_NOX_gphphr_out;
+            Die_CO.Value = (decimal)Die_CO_gphphr_out;
+            Die_VOC.Value = (decimal)Die_VOC_gphphr_out;
+            Die_PM10.Value = (decimal)Die_PM10_gphphr_out;
+            Die_PM25.Value = (decimal)Die_PM25_gphphr_out;
+            Die_N2O.Value = (decimal)Die_N2O_gphphr_out;
+            Die_CH4.Value = (decimal)Die_CH4_gphphr_out;
+
+            Nat_NOX.Value = (decimal)Nat_NOX_gphphr_out;
+            Nat_CO.Value = (decimal)Nat_CO_gphphr_out;
+            Nat_VOC.Value = (decimal)Nat_VOC_gphphr_out;
+            Nat_PM10.Value = (decimal)Nat_PM10_gphphr_out;
+            Nat_PM25.Value = (decimal)Nat_PM25_gphphr_out;
+            Nat_N2O.Value = (decimal)Nat_N2O_gphphr_out;
+            Nat_CH4.Value = (decimal)Nat_CH4_gphphr_out;
+
+            Fis_NOX.Value = (decimal)Fis_NOX_gphphr_out;
+            Fis_CO.Value = (decimal)Fis_CO_gphphr_out;
+            Fis_VOC.Value = (decimal)Fis_VOC_gphphr_out;
+            Fis_PM10.Value = (decimal)Fis_PM10_gphphr_out;
+            Fis_PM25.Value = (decimal)Fis_PM25_gphphr_out;
+            Fis_N2O.Value = (decimal)Fis_N2O_gphphr_out;
+            Fis_CH4.Value = (decimal)Fis_CH4_gphphr_out;
+
+            Bio_NOX.Value = (decimal)Bio_NOX_gphphr_out;
+            Bio_CO.Value = (decimal)Bio_CO_gphphr_out;
+            Bio_VOC.Value = (decimal)Bio_VOC_gphphr_out;
+            Bio_PM10.Value = (decimal)Bio_PM10_gphphr_out;
+            Bio_PM25.Value = (decimal)Bio_PM25_gphphr_out;
+            Bio_N2O.Value = (decimal)Bio_N2O_gphphr_out;
+            Bio_CH4.Value = (decimal)Bio_CH4_gphphr_out;
+
+            Ult_NOX.Value = (decimal)Ult_NOX_gphphr_out;
+            Ult_CO.Value = (decimal)Ult_CO_gphphr_out;
+            Ult_VOC.Value = (decimal)Ult_VOC_gphphr_out;
+            Ult_PM10.Value = (decimal)Ult_PM10_gphphr_out;
+            Ult_PM25.Value = (decimal)Ult_PM25_gphphr_out;
+            Ult_N2O.Value = (decimal)Ult_N2O_gphphr_out;
+            Ult_CH4.Value = (decimal)Ult_CH4_gphphr_out;
+
+
 
             numericUpDown132.Value = (decimal)NumberOfEngines;
             numericUpDown124.Value = (decimal)SingleEngineHP;
@@ -689,7 +786,7 @@ namespace TEAMS_Plugin
             HPLFSlowCruise = 50.00;
             HPLFFullCruise = 95.00;
 
-            //5.4b Calculation of Fuel Use Using Conventional Diesel as Baseline Fuel
+            //5.4b Calculation of all Fuels
             EngineEfficiency = 45.00;
 
             NOX_gphphr_out = 7.94;
@@ -699,6 +796,55 @@ namespace TEAMS_Plugin
             PM25_gphphr_out = 7.94;
             N2O_gphphr_out = 7.94;
             CH4_gphphr_out = 7.94;
+
+            Res_NOX_gphphr_out  =   14.015;
+            Res_CO_gphphr_out   =   2.429;
+            Res_VOC_gphphr_out  =   0.528;
+            Res_PM10_gphphr_out =   0.415;
+            Res_PM25_gphphr_out =   0.000;
+            Res_N2O_gphphr_out  =   0.011;
+            Res_CH4_gphphr_out  =   0.025;
+
+            Die_NOX_gphphr_out  =   14.015;
+            Die_CO_gphphr_out   =   2.429;
+            Die_VOC_gphphr_out  =   0.528;
+            Die_PM10_gphphr_out =   0.415;
+            Die_PM25_gphphr_out =   0.000;
+            Die_N2O_gphphr_out  =   0.011;
+            Die_CH4_gphphr_out  =   0.025;
+
+            Nat_NOX_gphphr_out  =   14.015;
+            Nat_CO_gphphr_out   =   1.214;
+            Nat_VOC_gphphr_out  =   0.528;
+            Nat_PM10_gphphr_out =   0.004;
+            Nat_PM25_gphphr_out =   0.000;
+            Nat_N2O_gphphr_out  =   0.011;
+            Nat_CH4_gphphr_out  =   0.517;
+
+            Fis_NOX_gphphr_out  =   14.015;
+            Fis_CO_gphphr_out   =   2.429;
+            Fis_VOC_gphphr_out  =   0.528;
+            Fis_PM10_gphphr_out =   0.415;
+            Fis_PM25_gphphr_out =   0.000;
+            Fis_N2O_gphphr_out  =   0.011;
+            Fis_CH4_gphphr_out  =   0.025;
+
+            Bio_NOX_gphphr_out  =   14.015;
+            Bio_CO_gphphr_out   =   2.429;
+            Bio_VOC_gphphr_out  =   0.528;
+            Bio_PM10_gphphr_out =   0.415;
+            Bio_PM25_gphphr_out =   0.000;
+            Bio_N2O_gphphr_out  =   0.022;
+            Bio_CH4_gphphr_out  =   0.025;
+
+            Ult_NOX_gphphr_out  =   14.015;
+            Ult_CO_gphphr_out   =   2.429;
+            Ult_VOC_gphphr_out  =   0.528;
+            Ult_PM10_gphphr_out =   0.415;
+            Ult_PM25_gphphr_out =   0.000;
+            Ult_N2O_gphphr_out  =   0.011;
+            Ult_CH4_gphphr_out  =   0.025;
+
 
             //Global Warming Potential
             CO2_GWP = 1;
@@ -737,6 +883,7 @@ namespace TEAMS_Plugin
         //Runs the simulation, and opens up the new results windows
         private void runSimulationToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SubmitAll();
             gfr = new GREETFormattedResults(this);
             gfr.Show();
         }
@@ -842,13 +989,78 @@ namespace TEAMS_Plugin
             numericUpDown171.Value = (decimal)GALLONperTrip;
 
             //Fuel Inputs
-            NOX_gphphr_out = (double)numericUpDown1.Value;
-            CO_gphphr_out = (double)numericUpDown2.Value;
-            VOC_gphphr_out = (double)numericUpDown3.Value;
-            PM10_gphphr_out = (double)numericUpDown4.Value;
-            PM25_gphphr_out = (double)numericUpDown5.Value;
-            N2O_gphphr_out = (double)numericUpDown6.Value;
-            CH4_gphphr_out = (double)numericUpDown7.Value;
+            Res_NOX_gphphr_out = (double)Res_NOX.Value;
+            Res_CO_gphphr_out = (double)Res_CO.Value;
+            Res_VOC_gphphr_out = (double)Res_VOC.Value;
+            Res_PM10_gphphr_out = (double)Res_PM10.Value;
+            Res_PM25_gphphr_out = (double)Res_PM25.Value;
+            Res_N2O_gphphr_out = (double)Res_N2O.Value;
+            Res_CH4_gphphr_out = (double)Res_CH4.Value;
+            Residual_Oil = new double[7] 
+                {Res_VOC_gphphr_out, Res_CO_gphphr_out, Res_NOX_gphphr_out, 
+                Res_PM10_gphphr_out, Res_PM25_gphphr_out, Res_CH4_gphphr_out, 
+                Res_N2O_gphphr_out};
+
+            Die_NOX_gphphr_out = (double)Die_NOX.Value;
+            Die_CO_gphphr_out = (double)Die_CO.Value;
+            Die_VOC_gphphr_out = (double)Die_VOC.Value;
+            Die_PM10_gphphr_out = (double)Die_PM10.Value;
+            Die_PM25_gphphr_out = (double)Die_PM25.Value;
+            Die_N2O_gphphr_out = (double)Die_N2O.Value;
+            Die_CH4_gphphr_out = (double)Die_CH4.Value;
+            Diesel = new double[7] 
+                {Die_VOC_gphphr_out, Die_CO_gphphr_out, Die_NOX_gphphr_out, 
+                Die_PM10_gphphr_out, Die_PM25_gphphr_out, Die_CH4_gphphr_out, 
+                Die_N2O_gphphr_out};
+
+            Nat_NOX_gphphr_out = (double)Nat_NOX.Value;
+            Nat_CO_gphphr_out = (double)Nat_CO.Value;
+            Nat_VOC_gphphr_out = (double)Nat_VOC.Value;
+            Nat_PM10_gphphr_out = (double)Nat_PM10.Value;
+            Nat_PM25_gphphr_out = (double)Nat_PM25.Value;
+            Nat_N2O_gphphr_out = (double)Nat_N2O.Value;
+            Nat_CH4_gphphr_out = (double)Nat_CH4.Value;
+            Natural_Gas = new double[7] 
+                {Nat_VOC_gphphr_out, Nat_CO_gphphr_out, Nat_NOX_gphphr_out, 
+                Nat_PM10_gphphr_out, Nat_PM25_gphphr_out, Nat_CH4_gphphr_out, 
+                Nat_N2O_gphphr_out};
+
+            Fis_NOX_gphphr_out = (double)Fis_NOX.Value;
+            Fis_CO_gphphr_out = (double)Fis_CO.Value;
+            Fis_VOC_gphphr_out = (double)Fis_VOC.Value;
+            Fis_PM10_gphphr_out = (double)Fis_PM10.Value;
+            Fis_PM25_gphphr_out = (double)Fis_PM25.Value;
+            Fis_N2O_gphphr_out = (double)Fis_N2O.Value;
+            Fis_CH4_gphphr_out = (double)Fis_CH4.Value;
+            Fischer = new double[7] 
+                {Fis_VOC_gphphr_out, Fis_CO_gphphr_out, Fis_NOX_gphphr_out, 
+                Fis_PM10_gphphr_out, Fis_PM25_gphphr_out, Fis_CH4_gphphr_out, 
+                Fis_N2O_gphphr_out};
+
+            Bio_NOX_gphphr_out = (double)Bio_NOX.Value;
+            Bio_CO_gphphr_out = (double)Bio_CO.Value;
+            Bio_VOC_gphphr_out = (double)Bio_VOC.Value;
+            Bio_PM10_gphphr_out = (double)Bio_PM10.Value;
+            Bio_PM25_gphphr_out = (double)Bio_PM25.Value;
+            Bio_N2O_gphphr_out = (double)Bio_N2O.Value;
+            Bio_CH4_gphphr_out = (double)Bio_CH4.Value;
+            Biodiesel = new double[7] 
+                {Bio_VOC_gphphr_out, Bio_CO_gphphr_out, Bio_NOX_gphphr_out, 
+                Bio_PM10_gphphr_out, Bio_PM25_gphphr_out, Bio_CH4_gphphr_out, 
+                Bio_N2O_gphphr_out};
+
+            Ult_NOX_gphphr_out = (double)Ult_NOX.Value;
+            Ult_CO_gphphr_out = (double)Ult_CO.Value;
+            Ult_VOC_gphphr_out = (double)Ult_VOC.Value;
+            Ult_PM10_gphphr_out = (double)Ult_PM10.Value;
+            Ult_PM25_gphphr_out = (double)Ult_PM25.Value;
+            Ult_N2O_gphphr_out = (double)Ult_N2O.Value;
+            Ult_CH4_gphphr_out = (double)Ult_CH4.Value;
+            Ult_Low_Sulf = new double[7] 
+                {Ult_VOC_gphphr_out, Ult_CO_gphphr_out, Ult_NOX_gphphr_out, 
+                Ult_PM10_gphphr_out, Ult_PM25_gphphr_out, Ult_CH4_gphphr_out, 
+                Ult_N2O_gphphr_out};
+
 
             //Global Warming Potential
             CO2_GWP = (double)numericUpDown21.Value;
@@ -914,6 +1126,17 @@ namespace TEAMS_Plugin
             else
             {
                 return true;
+            }
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you wish to reset the form back to default values?", "Reset Input", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                TEAMS newWindow = new TEAMS();
+                newWindow.Show();
             }
         }
 
