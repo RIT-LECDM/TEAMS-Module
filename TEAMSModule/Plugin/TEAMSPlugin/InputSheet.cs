@@ -28,10 +28,10 @@ namespace TEAMS_Plugin
         public int SingleEngineHP;
         public int TotalOnboardHP;
         //Constants (These are units of measurement)
-        public double KWperHP;
-        public double GALperBBL;
-        public double BBLperTONNE;
-        public double BTUperKWH;
+        public const double KWperHP = 0.745699872;
+        public const double GALperBBL = 42.0;
+        public const double BBLperTONNE = 7.45;
+        public const double BTUperKWH = 3412.14163;
 
         //5.2 Trip Distance and Time
         public double TotalTripDistanceInMiles;
@@ -585,10 +585,6 @@ namespace TEAMS_Plugin
 
             numericUpDown132.Value = (decimal)NumberOfEngines;
             numericUpDown124.Value = (decimal)SingleEngineHP;
-            numericUpDown138.Value = (decimal)KWperHP;
-            numericUpDown137.Value = (decimal)GALperBBL;
-            numericUpDown136.Value = (decimal)BBLperTONNE;
-            numericUpDown141.Value = (decimal)BTUperKWH;
             numericUpDown143.Value = (decimal)TotalTripDistanceInMiles;
             numericUpDown142.Value = (decimal)TripTimeHours;
             numericUpDown140.Value = (decimal)TripTimeMinutes;
@@ -674,11 +670,6 @@ namespace TEAMS_Plugin
             VesselTypeID = "Cont. Ship 6000";
             NumberOfEngines = 1;
             SingleEngineHP = 75097;
-            //Constants (These are units of measurement)
-            KWperHP = .7457;
-            GALperBBL = 42;
-            BBLperTONNE = 7.45;
-            BTUperKWH = 3412;
 
             //5.2 Trip Distance and Time
             TotalTripDistanceInMiles = 10600.00;
@@ -785,11 +776,7 @@ namespace TEAMS_Plugin
             SingleEngineHP = (int)numericUpDown124.Value;
             TotalOnboardHP = SingleEngineHP * NumberOfEngines;
             numericUpDown128.Value = (decimal)TotalOnboardHP;
-            //Constants (These are units of measurement)
-            KWperHP = (double)numericUpDown138.Value;
-            GALperBBL = (double)numericUpDown137.Value;
-            BBLperTONNE = (double)numericUpDown136.Value;
-            BTUperKWH = (double)numericUpDown141.Value;
+
 
             //5.2
             TotalTripDistanceInMiles = (double)numericUpDown143.Value;

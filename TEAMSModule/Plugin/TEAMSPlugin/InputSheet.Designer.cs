@@ -36,6 +36,7 @@
             this.runSimulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
@@ -122,15 +123,6 @@
             this.label158 = new System.Windows.Forms.Label();
             this.label159 = new System.Windows.Forms.Label();
             this.label150 = new System.Windows.Forms.Label();
-            this.numericUpDown141 = new System.Windows.Forms.NumericUpDown();
-            this.label156 = new System.Windows.Forms.Label();
-            this.numericUpDown136 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown137 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown138 = new System.Windows.Forms.NumericUpDown();
-            this.label151 = new System.Windows.Forms.Label();
-            this.label152 = new System.Windows.Forms.Label();
-            this.label153 = new System.Windows.Forms.Label();
-            this.label154 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label148 = new System.Windows.Forms.Label();
             this.numericUpDown128 = new System.Windows.Forms.NumericUpDown();
@@ -204,7 +196,6 @@
             this.label229 = new System.Windows.Forms.Label();
             this.Submit_Button = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -258,10 +249,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown140)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown142)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown143)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown141)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown136)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown137)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown138)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown128)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown124)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown132)).BeginInit();
@@ -299,7 +286,7 @@
             this.runSimulationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(980, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(990, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -412,15 +399,6 @@
             this.tabPage5.Controls.Add(this.label158);
             this.tabPage5.Controls.Add(this.label159);
             this.tabPage5.Controls.Add(this.label150);
-            this.tabPage5.Controls.Add(this.numericUpDown141);
-            this.tabPage5.Controls.Add(this.label156);
-            this.tabPage5.Controls.Add(this.numericUpDown136);
-            this.tabPage5.Controls.Add(this.numericUpDown137);
-            this.tabPage5.Controls.Add(this.numericUpDown138);
-            this.tabPage5.Controls.Add(this.label151);
-            this.tabPage5.Controls.Add(this.label152);
-            this.tabPage5.Controls.Add(this.label153);
-            this.tabPage5.Controls.Add(this.label154);
             this.tabPage5.Controls.Add(this.textBox1);
             this.tabPage5.Controls.Add(this.label148);
             this.tabPage5.Controls.Add(this.numericUpDown128);
@@ -440,6 +418,14 @@
             this.tabPage5.Size = new System.Drawing.Size(676, 610);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Main Engine";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(330, 980);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(0, 16);
+            this.label25.TabIndex = 301;
             // 
             // label19
             // 
@@ -469,7 +455,7 @@
             this.panel3.Controls.Add(this.numericUpDown21);
             this.panel3.Controls.Add(this.label26);
             this.panel3.Location = new System.Drawing.Point(399, 794);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(196, 188);
             this.panel3.TabIndex = 299;
@@ -650,7 +636,7 @@
             this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(8, 766);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(196, 216);
             this.panel1.TabIndex = 284;
@@ -1597,124 +1583,13 @@
             this.label150.TabIndex = 121;
             this.label150.Text = "Trip Distance and Time";
             // 
-            // numericUpDown141
-            // 
-            this.numericUpDown141.DecimalPlaces = 2;
-            this.numericUpDown141.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown141.Location = new System.Drawing.Point(349, 129);
-            this.numericUpDown141.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numericUpDown141.Name = "numericUpDown141";
-            this.numericUpDown141.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown141.TabIndex = 120;
-            // 
-            // label156
-            // 
-            this.label156.AutoSize = true;
-            this.label156.BackColor = System.Drawing.Color.Silver;
-            this.label156.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label156.Location = new System.Drawing.Point(280, 132);
-            this.label156.Name = "label156";
-            this.label156.Size = new System.Drawing.Size(62, 17);
-            this.label156.TabIndex = 117;
-            this.label156.Text = "btu/KWh";
-            // 
-            // numericUpDown136
-            // 
-            this.numericUpDown136.DecimalPlaces = 2;
-            this.numericUpDown136.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown136.Location = new System.Drawing.Point(349, 105);
-            this.numericUpDown136.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numericUpDown136.Name = "numericUpDown136";
-            this.numericUpDown136.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown136.TabIndex = 116;
-            // 
-            // numericUpDown137
-            // 
-            this.numericUpDown137.DecimalPlaces = 2;
-            this.numericUpDown137.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown137.Location = new System.Drawing.Point(349, 80);
-            this.numericUpDown137.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numericUpDown137.Name = "numericUpDown137";
-            this.numericUpDown137.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown137.TabIndex = 115;
-            // 
-            // numericUpDown138
-            // 
-            this.numericUpDown138.DecimalPlaces = 4;
-            this.numericUpDown138.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown138.Location = new System.Drawing.Point(349, 54);
-            this.numericUpDown138.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numericUpDown138.Name = "numericUpDown138";
-            this.numericUpDown138.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown138.TabIndex = 114;
-            // 
-            // label151
-            // 
-            this.label151.AutoSize = true;
-            this.label151.BackColor = System.Drawing.Color.Silver;
-            this.label151.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label151.Location = new System.Drawing.Point(280, 110);
-            this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(61, 17);
-            this.label151.TabIndex = 113;
-            this.label151.Text = "bbl/tonne";
-            // 
-            // label152
-            // 
-            this.label152.AutoSize = true;
-            this.label152.BackColor = System.Drawing.Color.Silver;
-            this.label152.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label152.Location = new System.Drawing.Point(280, 84);
-            this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(46, 17);
-            this.label152.TabIndex = 112;
-            this.label152.Text = "gal/bbl";
-            // 
-            // label153
-            // 
-            this.label153.AutoSize = true;
-            this.label153.BackColor = System.Drawing.Color.Silver;
-            this.label153.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label153.Location = new System.Drawing.Point(280, 58);
-            this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(57, 17);
-            this.label153.TabIndex = 111;
-            this.label153.Text = "KW/HP";
-            // 
-            // label154
-            // 
-            this.label154.AutoSize = true;
-            this.label154.BackColor = System.Drawing.Color.Silver;
-            this.label154.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label154.Location = new System.Drawing.Point(280, 32);
-            this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(197, 17);
-            this.label154.TabIndex = 110;
-            this.label154.Text = "Constants For Measurement";
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(166, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(93, 23);
+            this.textBox1.Size = new System.Drawing.Size(199, 23);
             this.textBox1.TabIndex = 109;
             // 
             // label148
@@ -1733,7 +1608,7 @@
             this.numericUpDown128.BackColor = System.Drawing.SystemColors.Window;
             this.numericUpDown128.Enabled = false;
             this.numericUpDown128.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown128.Location = new System.Drawing.Point(166, 106);
+            this.numericUpDown128.Location = new System.Drawing.Point(166, 110);
             this.numericUpDown128.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -1747,7 +1622,7 @@
             // numericUpDown124
             // 
             this.numericUpDown124.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown124.Location = new System.Drawing.Point(166, 81);
+            this.numericUpDown124.Location = new System.Drawing.Point(166, 85);
             this.numericUpDown124.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1760,7 +1635,7 @@
             // numericUpDown132
             // 
             this.numericUpDown132.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown132.Location = new System.Drawing.Point(166, 55);
+            this.numericUpDown132.Location = new System.Drawing.Point(166, 59);
             this.numericUpDown132.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -1775,7 +1650,7 @@
             this.label146.AutoSize = true;
             this.label146.BackColor = System.Drawing.Color.Silver;
             this.label146.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label146.Location = new System.Drawing.Point(7, 107);
+            this.label146.Location = new System.Drawing.Point(7, 111);
             this.label146.Name = "label146";
             this.label146.Size = new System.Drawing.Size(123, 17);
             this.label146.TabIndex = 104;
@@ -1786,7 +1661,7 @@
             this.label147.AutoSize = true;
             this.label147.BackColor = System.Drawing.Color.Silver;
             this.label147.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label147.Location = new System.Drawing.Point(7, 81);
+            this.label147.Location = new System.Drawing.Point(7, 85);
             this.label147.Name = "label147";
             this.label147.Size = new System.Drawing.Size(111, 17);
             this.label147.TabIndex = 103;
@@ -1797,7 +1672,7 @@
             this.label149.AutoSize = true;
             this.label149.BackColor = System.Drawing.Color.Silver;
             this.label149.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label149.Location = new System.Drawing.Point(7, 55);
+            this.label149.Location = new System.Drawing.Point(7, 59);
             this.label149.Name = "label149";
             this.label149.Size = new System.Drawing.Size(122, 17);
             this.label149.TabIndex = 101;
@@ -1818,9 +1693,9 @@
             this.panel12.BackColor = System.Drawing.Color.Silver;
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Location = new System.Drawing.Point(6, 26);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(480, 133);
+            this.panel12.Size = new System.Drawing.Size(427, 121);
             this.panel12.TabIndex = 267;
             // 
             // panel13
@@ -1828,7 +1703,7 @@
             this.panel13.BackColor = System.Drawing.Color.Silver;
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Location = new System.Drawing.Point(6, 189);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(266, 124);
             this.panel13.TabIndex = 268;
@@ -1843,7 +1718,7 @@
             this.panel14.Controls.Add(this.textBox3);
             this.panel14.Controls.Add(this.textBox2);
             this.panel14.Location = new System.Drawing.Point(6, 358);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(649, 183);
             this.panel14.TabIndex = 269;
@@ -1854,7 +1729,7 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(567, 8);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(68, 18);
             this.textBox6.TabIndex = 278;
@@ -1866,7 +1741,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(479, 8);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(68, 18);
             this.textBox5.TabIndex = 277;
@@ -1878,7 +1753,7 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(392, 8);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(68, 18);
             this.textBox4.TabIndex = 276;
@@ -1890,7 +1765,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(312, 8);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(68, 18);
             this.textBox3.TabIndex = 275;
@@ -1902,7 +1777,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(242, 8);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(68, 18);
             this.textBox2.TabIndex = 274;
@@ -1913,7 +1788,7 @@
             this.panel16.BackColor = System.Drawing.Color.Silver;
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.Location = new System.Drawing.Point(8, 580);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(313, 148);
             this.panel16.TabIndex = 271;
@@ -1996,7 +1871,7 @@
             this.panel2.Controls.Add(this.numericUpDown14);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Location = new System.Drawing.Point(3, 560);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(196, 216);
             this.panel2.TabIndex = 324;
@@ -2609,7 +2484,7 @@
             this.panel20.BackColor = System.Drawing.Color.Silver;
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Location = new System.Drawing.Point(6, 21);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(360, 109);
             this.panel20.TabIndex = 318;
@@ -2619,7 +2494,7 @@
             this.panel21.BackColor = System.Drawing.Color.Silver;
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel21.Location = new System.Drawing.Point(3, 178);
-            this.panel21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel21.Margin = new System.Windows.Forms.Padding(2);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(460, 132);
             this.panel21.TabIndex = 319;
@@ -2630,7 +2505,7 @@
             this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel23.Controls.Add(this.label229);
             this.panel23.Location = new System.Drawing.Point(3, 351);
-            this.panel23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(340, 154);
             this.panel23.TabIndex = 321;
@@ -2670,21 +2545,13 @@
     "es\n3.     Click \'Do Calculations and\n        Submit Data\'\n4.     Click \'Run Simu" +
     "lations\'";
             // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(330, 980);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(0, 16);
-            this.label25.TabIndex = 301;
-            // 
             // TEAMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(980, 654);
+            this.ClientSize = new System.Drawing.Size(990, 664);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.Submit_Button);
             this.Controls.Add(this.tabControl1);
@@ -2756,10 +2623,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown140)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown142)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown143)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown141)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown136)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown137)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown138)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown128)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown124)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown132)).EndInit();
@@ -2815,15 +2678,6 @@
         private System.Windows.Forms.Label label158;
         private System.Windows.Forms.Label label159;
         private System.Windows.Forms.Label label150;
-        private System.Windows.Forms.NumericUpDown numericUpDown141;
-        private System.Windows.Forms.Label label156;
-        private System.Windows.Forms.NumericUpDown numericUpDown136;
-        private System.Windows.Forms.NumericUpDown numericUpDown137;
-        private System.Windows.Forms.NumericUpDown numericUpDown138;
-        private System.Windows.Forms.Label label151;
-        private System.Windows.Forms.Label label152;
-        private System.Windows.Forms.Label label153;
-        private System.Windows.Forms.Label label154;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label148;
         private System.Windows.Forms.NumericUpDown numericUpDown128;
