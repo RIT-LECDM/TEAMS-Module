@@ -288,6 +288,9 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -439,6 +442,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown230)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown229)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).BeginInit();
+            this.panel21.SuspendLayout();
             this.panel23.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -2590,7 +2594,6 @@
             this.tabPage6.Controls.Add(this.numericUpDown238);
             this.tabPage6.Controls.Add(this.label231);
             this.tabPage6.Controls.Add(this.numericUpDown239);
-            this.tabPage6.Controls.Add(this.numericUpDown240);
             this.tabPage6.Controls.Add(this.numericUpDown241);
             this.tabPage6.Controls.Add(this.numericUpDown242);
             this.tabPage6.Controls.Add(this.label232);
@@ -3532,7 +3535,7 @@
             this.numericUpDown240.DecimalPlaces = 2;
             this.numericUpDown240.Enabled = false;
             this.numericUpDown240.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown240.Location = new System.Drawing.Point(152, 424);
+            this.numericUpDown240.Location = new System.Drawing.Point(145, 71);
             this.numericUpDown240.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -3894,21 +3897,25 @@
             // 
             this.panel21.BackColor = System.Drawing.Color.Silver;
             this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel21.Controls.Add(this.label48);
+            this.panel21.Controls.Add(this.label47);
             this.panel21.Location = new System.Drawing.Point(6, 178);
             this.panel21.Margin = new System.Windows.Forms.Padding(2);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(460, 132);
+            this.panel21.Size = new System.Drawing.Size(476, 132);
             this.panel21.TabIndex = 319;
             // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.Silver;
             this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel23.Controls.Add(this.label49);
             this.panel23.Controls.Add(this.label229);
+            this.panel23.Controls.Add(this.numericUpDown240);
             this.panel23.Location = new System.Drawing.Point(6, 351);
             this.panel23.Margin = new System.Windows.Forms.Padding(2);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(340, 154);
+            this.panel23.Size = new System.Drawing.Size(360, 154);
             this.panel23.TabIndex = 321;
             // 
             // label229
@@ -4075,6 +4082,39 @@
             this.label46.Size = new System.Drawing.Size(17, 15);
             this.label46.TabIndex = 303;
             this.label46.Text = "%";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.Color.Silver;
+            this.label47.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(445, 8);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(17, 15);
+            this.label47.TabIndex = 325;
+            this.label47.Text = "%";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Silver;
+            this.label48.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(445, 56);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(17, 15);
+            this.label48.TabIndex = 325;
+            this.label48.Text = "%";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.Silver;
+            this.label49.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(327, 22);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(17, 15);
+            this.label49.TabIndex = 303;
+            this.label49.Text = "%";
             // 
             // TEAMS
             // 
@@ -4257,6 +4297,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown230)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown229)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).EndInit();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
             this.ResumeLayout(false);
@@ -4525,6 +4567,9 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label49;
 
 
 
