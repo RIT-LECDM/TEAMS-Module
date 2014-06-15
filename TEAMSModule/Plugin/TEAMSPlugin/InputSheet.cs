@@ -874,7 +874,7 @@ namespace TEAMS_Plugin
             Res_CO_gphphr_out   =   2.429;
             Res_VOC_gphphr_out  =   0.528;
             Res_PM10_gphphr_out =   0.415;
-            Res_PM25_gphphr_out =   0.000;
+            Res_PM25_gphphr_out =   0.415;    // Left as same as PM10 for now, per Jamie's request
             Res_N2O_gphphr_out  =   0.011;
             Res_CH4_gphphr_out  =   0.025;
 
@@ -882,7 +882,7 @@ namespace TEAMS_Plugin
             Die_CO_gphphr_out   =   2.429;
             Die_VOC_gphphr_out  =   0.528;
             Die_PM10_gphphr_out =   0.415;
-            Die_PM25_gphphr_out =   0.000;
+            Die_PM25_gphphr_out =   0.415;
             Die_N2O_gphphr_out  =   0.011;
             Die_CH4_gphphr_out  =   0.025;
 
@@ -890,7 +890,7 @@ namespace TEAMS_Plugin
             Nat_CO_gphphr_out   =   1.214;
             Nat_VOC_gphphr_out  =   0.528;
             Nat_PM10_gphphr_out =   0.004;
-            Nat_PM25_gphphr_out =   0.000;
+            Nat_PM25_gphphr_out =   0.004;
             Nat_N2O_gphphr_out  =   0.011;
             Nat_CH4_gphphr_out  =   0.517;
 
@@ -898,7 +898,7 @@ namespace TEAMS_Plugin
             Fis_CO_gphphr_out   =   2.429;
             Fis_VOC_gphphr_out  =   0.528;
             Fis_PM10_gphphr_out =   0.415;
-            Fis_PM25_gphphr_out =   0.000;
+            Fis_PM25_gphphr_out =   0.415;
             Fis_N2O_gphphr_out  =   0.011;
             Fis_CH4_gphphr_out  =   0.025;
 
@@ -906,7 +906,7 @@ namespace TEAMS_Plugin
             Bio_CO_gphphr_out   =   2.429;
             Bio_VOC_gphphr_out  =   0.528;
             Bio_PM10_gphphr_out =   0.415;
-            Bio_PM25_gphphr_out =   0.000;
+            Bio_PM25_gphphr_out =   0.415;
             Bio_N2O_gphphr_out  =   0.022;
             Bio_CH4_gphphr_out  =   0.025;
 
@@ -914,7 +914,7 @@ namespace TEAMS_Plugin
             Ult_CO_gphphr_out   =   2.429;
             Ult_VOC_gphphr_out  =   0.528;
             Ult_PM10_gphphr_out =   0.415;
-            Ult_PM25_gphphr_out =   0.000;
+            Ult_PM25_gphphr_out =   0.415;
             Ult_N2O_gphphr_out  =   0.011;
             Ult_CH4_gphphr_out  =   0.025;
 
@@ -945,7 +945,7 @@ namespace TEAMS_Plugin
             Aux_Res_CO_gphphr_out = 2.429;
             Aux_Res_VOC_gphphr_out = 0.528;
             Aux_Res_PM10_gphphr_out = 0.415;
-            Aux_Res_PM25_gphphr_out = 0.000;
+            Aux_Res_PM25_gphphr_out = 0.415;
             Aux_Res_N2O_gphphr_out = 0.011;
             Aux_Res_CH4_gphphr_out = 0.025;
 
@@ -953,7 +953,7 @@ namespace TEAMS_Plugin
             Aux_Die_CO_gphphr_out = 2.429;
             Aux_Die_VOC_gphphr_out = 0.528;
             Aux_Die_PM10_gphphr_out = 0.415;
-            Aux_Die_PM25_gphphr_out = 0.000;
+            Aux_Die_PM25_gphphr_out = 0.415;
             Aux_Die_N2O_gphphr_out = 0.011;
             Aux_Die_CH4_gphphr_out = 0.025;
 
@@ -961,7 +961,7 @@ namespace TEAMS_Plugin
             Aux_Nat_CO_gphphr_out = 1.214;
             Aux_Nat_VOC_gphphr_out = 0.528;
             Aux_Nat_PM10_gphphr_out = 0.004;
-            Aux_Nat_PM25_gphphr_out = 0.000;
+            Aux_Nat_PM25_gphphr_out = 0.004;
             Aux_Nat_N2O_gphphr_out = 0.011;
             Aux_Nat_CH4_gphphr_out = 0.517;
 
@@ -969,7 +969,7 @@ namespace TEAMS_Plugin
             Aux_Fis_CO_gphphr_out = 2.429;
             Aux_Fis_VOC_gphphr_out = 0.528;
             Aux_Fis_PM10_gphphr_out = 0.415;
-            Aux_Fis_PM25_gphphr_out = 0.000;
+            Aux_Fis_PM25_gphphr_out = 0.415;
             Aux_Fis_N2O_gphphr_out = 0.011;
             Aux_Fis_CH4_gphphr_out = 0.025;
 
@@ -977,7 +977,7 @@ namespace TEAMS_Plugin
             Aux_Bio_CO_gphphr_out = 2.429;
             Aux_Bio_VOC_gphphr_out = 0.528;
             Aux_Bio_PM10_gphphr_out = 0.415;
-            Aux_Bio_PM25_gphphr_out = 0.000;
+            Aux_Bio_PM25_gphphr_out = 0.415;
             Aux_Bio_N2O_gphphr_out = 0.022;
             Aux_Bio_CH4_gphphr_out = 0.025;
 
@@ -985,7 +985,7 @@ namespace TEAMS_Plugin
             Aux_Ult_CO_gphphr_out = 2.429;
             Aux_Ult_VOC_gphphr_out = 0.528;
             Aux_Ult_PM10_gphphr_out = 0.415;
-            Aux_Ult_PM25_gphphr_out = 0.000;
+            Aux_Ult_PM25_gphphr_out = 0.415;
             Aux_Ult_N2O_gphphr_out = 0.011;
             Aux_Ult_CH4_gphphr_out = 0.025;
 
