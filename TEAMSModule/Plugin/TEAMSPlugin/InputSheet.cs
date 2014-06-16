@@ -27,11 +27,15 @@ namespace TEAMS_Plugin
         public int NumberOfEngines;
         public int SingleEngineHP;
         public int TotalOnboardHP;
+
         //Constants (These are units of measurement)
         public const double KWperHP = 0.745699872;
         public const double GALperBBL = 42.0;
         public const double BBLperTONNE = 7.45;
         public const double BTUperKWH = 3412.14163;
+
+        //Conventional Diesel Path ID - Just used for estimation of fuel gallons for input, does not appear on the results sheet.
+        public const int CD_PATH_ID = 40;
 
         //5.2 Trip Distance and Time
         public double TotalTripDistanceInMiles;
@@ -549,8 +553,7 @@ namespace TEAMS_Plugin
 
         #endregion
 
-        //Conventional Diesel Path ID - Just used for estimation of fuel gallons for input, does not appear on the results sheet.
-        public const int CD_PATH_ID = 40;
+
 
         //The results sheet
         public GREETFormattedResults gfr;
