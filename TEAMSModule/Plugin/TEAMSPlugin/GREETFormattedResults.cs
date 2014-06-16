@@ -281,8 +281,8 @@ namespace TEAMSModule
 
                 //Sulfur Oxides Well To Pump Emissions = SOxpermmbtu(as defined by GREET) *  1000000000000 * mmbtu needed to put into the engine
                 SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_TO_MMBTU * te.MMBTUinperTrip * 1000;
-                //Sulfur Oxides Vessel Operation Emissions = density of the fuel * conversion for grams per gallon * gallons * sulfur ratio
-                SOx_VO = resourceDensity * (1000 / 7.48052) * te.GALLONperTrip * resourceSulfurRatio;
+                //Sulfur Oxides Vessel Operation Emissions = density of the fuel * sulfur ratio * kg to g * m^3 to gallon * gallon per trip
+                SOx_VO = resourceDensity * resourceSulfurRatio * 1000 * (1/264.172) * te.GALLONperTrip;
                 //Total = The sum of the above two and the aux values
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
@@ -444,7 +444,7 @@ namespace TEAMSModule
                 PM25_Total = PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 AUX_SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_TO_MMBTU * te.AuxEngineMMBTUinperTrip * 1000;
-                AUX_SOx_VO = resourceDensity * (1000 / 7.48052) * te.AuxEngineGALLONperTrip * resourceSulfurRatio;
+                AUX_SOx_VO = resourceDensity * resourceSulfurRatio * 1000 * (1 / 264.172) * te.AuxEngineGALLONperTrip;
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 AUX_CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * JOULES_TO_MMBTU * te.AuxEngineMMBTUinperTrip * 1000;
