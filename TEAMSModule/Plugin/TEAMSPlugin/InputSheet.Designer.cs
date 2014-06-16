@@ -139,7 +139,6 @@
             this.numericUpDown158 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown149 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown150 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown151 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown152 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown153 = new System.Windows.Forms.NumericUpDown();
             this.label166 = new System.Windows.Forms.Label();
@@ -175,12 +174,24 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.numericUpDown151 = new System.Windows.Forms.NumericUpDown();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.label46 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -243,7 +254,6 @@
             this.numericUpDown238 = new System.Windows.Forms.NumericUpDown();
             this.label231 = new System.Windows.Forms.Label();
             this.numericUpDown239 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown240 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown241 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown242 = new System.Windows.Forms.NumericUpDown();
             this.label232 = new System.Windows.Forms.Label();
@@ -272,25 +282,15 @@
             this.label214 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.label49 = new System.Windows.Forms.Label();
             this.label229 = new System.Windows.Forms.Label();
+            this.numericUpDown240 = new System.Windows.Forms.NumericUpDown();
             this.Submit_Button = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.Reset = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
@@ -367,7 +367,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown158)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown149)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown150)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown151)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown152)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown153)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown148)).BeginInit();
@@ -383,6 +382,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown124)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown132)).BeginInit();
             this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown151)).BeginInit();
             this.panel16.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -430,7 +430,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_NOX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown238)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown239)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown240)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown241)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown242)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown236)).BeginInit();
@@ -444,6 +443,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).BeginInit();
             this.panel21.SuspendLayout();
             this.panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown240)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -2064,20 +2064,6 @@
             this.numericUpDown150.Size = new System.Drawing.Size(60, 22);
             this.numericUpDown150.TabIndex = 146;
             // 
-            // numericUpDown151
-            // 
-            this.numericUpDown151.DecimalPlaces = 2;
-            this.numericUpDown151.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown151.Location = new System.Drawing.Point(331, 77);
-            this.numericUpDown151.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numericUpDown151.Name = "numericUpDown151";
-            this.numericUpDown151.Size = new System.Drawing.Size(60, 22);
-            this.numericUpDown151.TabIndex = 145;
-            // 
             // numericUpDown152
             // 
             this.numericUpDown152.BackColor = System.Drawing.SystemColors.Window;
@@ -2444,7 +2430,7 @@
             this.label147.Name = "label147";
             this.label147.Size = new System.Drawing.Size(111, 17);
             this.label147.TabIndex = 103;
-            this.label147.Text = "Single Enging HP";
+            this.label147.Text = "Single Engine HP";
             // 
             // label149
             // 
@@ -2513,6 +2499,116 @@
             this.panel14.Size = new System.Drawing.Size(677, 183);
             this.panel14.TabIndex = 269;
             // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Silver;
+            this.label45.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Location = new System.Drawing.Point(641, 78);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(17, 15);
+            this.label45.TabIndex = 303;
+            this.label45.Text = "%";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Silver;
+            this.label44.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Location = new System.Drawing.Point(565, 78);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(17, 15);
+            this.label44.TabIndex = 304;
+            this.label44.Text = "%";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Silver;
+            this.label43.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(477, 77);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(17, 15);
+            this.label43.TabIndex = 303;
+            this.label43.Text = "%";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Silver;
+            this.label42.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Location = new System.Drawing.Point(390, 77);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(17, 15);
+            this.label42.TabIndex = 303;
+            this.label42.Text = "%";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Silver;
+            this.label41.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(308, 78);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(17, 15);
+            this.label41.TabIndex = 303;
+            this.label41.Text = "%";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Silver;
+            this.label40.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(641, 28);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(17, 15);
+            this.label40.TabIndex = 303;
+            this.label40.Text = "%";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Silver;
+            this.label39.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(565, 28);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(17, 15);
+            this.label39.TabIndex = 303;
+            this.label39.Text = "%";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Silver;
+            this.label38.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(477, 28);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(17, 15);
+            this.label38.TabIndex = 303;
+            this.label38.Text = "%";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Silver;
+            this.label37.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(390, 28);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(17, 15);
+            this.label37.TabIndex = 303;
+            this.label37.Text = "%";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Silver;
+            this.label36.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(308, 28);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(17, 15);
+            this.label36.TabIndex = 302;
+            this.label36.Text = "%";
+            // 
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.Silver;
@@ -2573,6 +2669,20 @@
             this.textBox2.TabIndex = 274;
             this.textBox2.Text = "Mode 1";
             // 
+            // numericUpDown151
+            // 
+            this.numericUpDown151.DecimalPlaces = 2;
+            this.numericUpDown151.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown151.Location = new System.Drawing.Point(331, 77);
+            this.numericUpDown151.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDown151.Name = "numericUpDown151";
+            this.numericUpDown151.Size = new System.Drawing.Size(60, 22);
+            this.numericUpDown151.TabIndex = 145;
+            // 
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.Silver;
@@ -2583,6 +2693,17 @@
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(313, 148);
             this.panel16.TabIndex = 271;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.Color.Silver;
+            this.label46.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Location = new System.Drawing.Point(213, 20);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(17, 15);
+            this.label46.TabIndex = 303;
+            this.label46.Text = "%";
             // 
             // tabPage6
             // 
@@ -3529,23 +3650,6 @@
             this.numericUpDown239.Size = new System.Drawing.Size(179, 22);
             this.numericUpDown239.TabIndex = 196;
             // 
-            // numericUpDown240
-            // 
-            this.numericUpDown240.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown240.DecimalPlaces = 2;
-            this.numericUpDown240.Enabled = false;
-            this.numericUpDown240.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown240.Location = new System.Drawing.Point(145, 71);
-            this.numericUpDown240.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.numericUpDown240.Name = "numericUpDown240";
-            this.numericUpDown240.ReadOnly = true;
-            this.numericUpDown240.Size = new System.Drawing.Size(179, 22);
-            this.numericUpDown240.TabIndex = 195;
-            // 
             // numericUpDown241
             // 
             this.numericUpDown241.BackColor = System.Drawing.SystemColors.Window;
@@ -3905,6 +4009,28 @@
             this.panel21.Size = new System.Drawing.Size(476, 132);
             this.panel21.TabIndex = 319;
             // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Silver;
+            this.label48.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(445, 56);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(17, 15);
+            this.label48.TabIndex = 325;
+            this.label48.Text = "%";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.Color.Silver;
+            this.label47.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(445, 8);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(17, 15);
+            this.label47.TabIndex = 325;
+            this.label47.Text = "%";
+            // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.Silver;
@@ -3918,6 +4044,17 @@
             this.panel23.Size = new System.Drawing.Size(360, 154);
             this.panel23.TabIndex = 321;
             // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.Silver;
+            this.label49.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(327, 22);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(17, 15);
+            this.label49.TabIndex = 303;
+            this.label49.Text = "%";
+            // 
             // label229
             // 
             this.label229.AutoSize = true;
@@ -3928,6 +4065,23 @@
             this.label229.Size = new System.Drawing.Size(189, 17);
             this.label229.TabIndex = 200;
             this.label229.Text = "Baseline Fuel Consumption";
+            // 
+            // numericUpDown240
+            // 
+            this.numericUpDown240.BackColor = System.Drawing.SystemColors.Window;
+            this.numericUpDown240.DecimalPlaces = 2;
+            this.numericUpDown240.Enabled = false;
+            this.numericUpDown240.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown240.Location = new System.Drawing.Point(145, 71);
+            this.numericUpDown240.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.numericUpDown240.Name = "numericUpDown240";
+            this.numericUpDown240.ReadOnly = true;
+            this.numericUpDown240.Size = new System.Drawing.Size(179, 22);
+            this.numericUpDown240.TabIndex = 195;
             // 
             // Submit_Button
             // 
@@ -3961,160 +4115,6 @@
             this.Reset.Text = "Reset to Defaults";
             this.Reset.UseVisualStyleBackColor = true;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Silver;
-            this.label36.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(308, 28);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(17, 15);
-            this.label36.TabIndex = 302;
-            this.label36.Text = "%";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Silver;
-            this.label37.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(390, 28);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(17, 15);
-            this.label37.TabIndex = 303;
-            this.label37.Text = "%";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Silver;
-            this.label38.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(477, 28);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(17, 15);
-            this.label38.TabIndex = 303;
-            this.label38.Text = "%";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Silver;
-            this.label39.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(565, 28);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(17, 15);
-            this.label39.TabIndex = 303;
-            this.label39.Text = "%";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Silver;
-            this.label40.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(641, 28);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(17, 15);
-            this.label40.TabIndex = 303;
-            this.label40.Text = "%";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Silver;
-            this.label41.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(308, 78);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(17, 15);
-            this.label41.TabIndex = 303;
-            this.label41.Text = "%";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Silver;
-            this.label42.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(390, 77);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(17, 15);
-            this.label42.TabIndex = 303;
-            this.label42.Text = "%";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Silver;
-            this.label43.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(477, 77);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(17, 15);
-            this.label43.TabIndex = 303;
-            this.label43.Text = "%";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Silver;
-            this.label44.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(565, 78);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(17, 15);
-            this.label44.TabIndex = 304;
-            this.label44.Text = "%";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Silver;
-            this.label45.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(641, 78);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(17, 15);
-            this.label45.TabIndex = 303;
-            this.label45.Text = "%";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.Color.Silver;
-            this.label46.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(213, 20);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(17, 15);
-            this.label46.TabIndex = 303;
-            this.label46.Text = "%";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.BackColor = System.Drawing.Color.Silver;
-            this.label47.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(445, 8);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(17, 15);
-            this.label47.TabIndex = 325;
-            this.label47.Text = "%";
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.BackColor = System.Drawing.Color.Silver;
-            this.label48.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(445, 56);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(17, 15);
-            this.label48.TabIndex = 325;
-            this.label48.Text = "%";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.BackColor = System.Drawing.Color.Silver;
-            this.label49.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(327, 22);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(17, 15);
-            this.label49.TabIndex = 303;
-            this.label49.Text = "%";
             // 
             // TEAMS
             // 
@@ -4218,7 +4218,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown158)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown149)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown150)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown151)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown152)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown153)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown148)).EndInit();
@@ -4235,6 +4234,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown132)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown151)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.tabPage6.ResumeLayout(false);
@@ -4285,7 +4285,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_NOX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown238)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown239)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown240)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown241)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown242)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown236)).EndInit();
@@ -4301,6 +4300,7 @@
             this.panel21.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown240)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
