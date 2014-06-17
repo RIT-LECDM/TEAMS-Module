@@ -551,6 +551,15 @@ namespace TEAMS_Plugin
 
         public double conventionalDieselBTUperGal;
 
+        // Constants
+
+        // Joules per 1 mmBtu
+        private const double JOULES_TO_MMBTU = 1055870000.0;
+        // Joules per 1 Btu
+        private const double JOULES_TO_BTU = 1055.05585;
+        // 1 m^3 per xx US Gallons
+        private const double CUBIC_METER_TO_GALLONS = (1 / 264.172);
+
         #endregion
 
 
@@ -582,11 +591,11 @@ namespace TEAMS_Plugin
             IResource ConvDiesel = resources.ValueForKey(productID);
             if (ConvDiesel.LowerHeatingValue.UserValue == 0)
             {
-                conventionalDieselBTUperGal = ConvDiesel.LowerHeatingValue.GreetValue * (3.5878781 / 1000000);
+                conventionalDieselBTUperGal = (ConvDiesel.LowerHeatingValue.GreetValue) *  (CUBIC_METER_TO_GALLONS) * (1 / JOULES_TO_BTU);
             }
             else
             {
-                conventionalDieselBTUperGal = ConvDiesel.LowerHeatingValue.UserValue * (3.5878781 / 1000000);
+                conventionalDieselBTUperGal = (ConvDiesel.LowerHeatingValue.UserValue) * (CUBIC_METER_TO_GALLONS) * (1 / JOULES_TO_BTU);
             }
         }
         #endregion
@@ -920,7 +929,6 @@ namespace TEAMS_Plugin
             Ult_PM25_gphphr_out =   0.415;
             Ult_N2O_gphphr_out  =   0.011;
             Ult_CH4_gphphr_out  =   0.025;
-
 
             //Global Warming Potential
             CO2_GWP = 1;
