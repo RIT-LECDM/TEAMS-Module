@@ -146,7 +146,7 @@ namespace TEAMS_Plugin
         #region Auxiliary Engine(s)
 
         //6.2 Auxiliary Engine Variables
-        public int NumberOfOnBoarAuxiliaryEngines;
+        public int NumberOfOnBoardAuxiliaryEngines;
         public int NumberOfAuxiliaryEnginesInUse;
         public int AuxiliaryEnginesRatedHPperEngine;
         public int TotalOnboardAUxHP;
@@ -220,6 +220,17 @@ namespace TEAMS_Plugin
         public double[] Aux_Fischer;
         public double[] Aux_Biodiesel;
         public double[] Aux_Ult_Low_Sulf;
+
+        #endregion
+
+        #region Constants
+
+        // Joules per 1 mmBtu
+        private const double JOULES_PER_MMBTU = 1055870000.0;
+        // Joules per 1 Btu
+        private const double JOULES_PER_BTU = 1055.05585;
+        // Gallons per 1 m^3
+        private const double GALLONS_PER_CUBIC_METER = 264.172;
 
         #endregion
 
@@ -551,18 +562,7 @@ namespace TEAMS_Plugin
 
         public double conventionalDieselBTUperGal;
 
-        // Constants
-
-        // Joules per 1 mmBtu
-        private const double JOULES_PER_MMBTU = 1055870000.0;
-        // Joules per 1 Btu
-        private const double JOULES_PER_BTU = 1055.05585;
-        // Gallons per 1 m^3
-        private const double GALLONS_PER_CUBIC_METER = 264.172;
-
         #endregion
-
-
 
         //The results sheet
         public GREETFormattedResults gfr;
@@ -681,7 +681,7 @@ namespace TEAMS_Plugin
         public void changeResults()
         {
             //5 
-            textBox1.Text = (string)VesselTypeID;
+            textBox_Vessel_Type.Text = (string)VesselTypeID;
 
             Res_NOX.Value = (decimal)Res_NOX_gphphr_out;
             Res_CO.Value = (decimal)Res_CO_gphphr_out;
@@ -731,41 +731,39 @@ namespace TEAMS_Plugin
             Ult_N2O.Value = (decimal)Ult_N2O_gphphr_out;
             Ult_CH4.Value = (decimal)Ult_CH4_gphphr_out;
 
-
-
-            numericUpDown132.Value = (decimal)NumberOfEngines;
-            numericUpDown124.Value = (decimal)SingleEngineHP;
-            numericUpDown143.Value = (decimal)TotalTripDistanceInMiles;
-            numericUpDown142.Value = (decimal)TripTimeHours;
-            numericUpDown140.Value = (decimal)TripTimeMinutes;
-            numericUpDown147.Value = (decimal)POTIdle;
-            numericUpDown153.Value = (decimal)POTManeuvering;
-            numericUpDown158.Value = (decimal)POTPrecautionary;
-            numericUpDown163.Value = (decimal)POTSlowCruise;
-            numericUpDown168.Value = (decimal)POTFullCruise;
-            numericUpDown145.Value = (decimal)HPLFIdle;
-            numericUpDown151.Value = (decimal)HPLFManeuvering;
-            numericUpDown156.Value = (decimal)HPLFPrecautionary;
-            numericUpDown161.Value = (decimal)HPLFSlowCruise;
-            numericUpDown166.Value = (decimal)HPLFFullCruise;
-            numericUpDown175.Value = (decimal)EngineEfficiency;
+            updown_Number_Of_Engines.Value          =   (decimal)NumberOfEngines;
+            updown_Single_Engine_HP.Value           =   (decimal)SingleEngineHP;
+            updown_Total_Trip_Distance.Value        =   (decimal)TotalTripDistanceInMiles;
+            updown_Trip_Time_Hours.Value            =   (decimal)TripTimeHours;
+            updown_Trip_Time_Minutes.Value          =   (decimal)TripTimeMinutes;
+            updown_Percent_Idle.Value               =   (decimal)POTIdle;
+            updown_Percent_Maneuvering.Value        =   (decimal)POTManeuvering;
+            updown_Percent_Precautionary.Value      =   (decimal)POTPrecautionary;
+            updown_Percent_Slow_Cruise.Value        =   (decimal)POTSlowCruise;
+            updown_Percent_Full_Cruise.Value        =   (decimal)POTFullCruise;
+            updown_Horsepower_Idle.Value            =   (decimal)HPLFIdle;
+            updown_Horsepower_Maneuvering.Value     =   (decimal)HPLFManeuvering;
+            updown_Horsepower_Precautionary.Value   =   (decimal)HPLFPrecautionary;
+            updown_Horsepower_Slow_Cruise.Value     =   (decimal)HPLFSlowCruise;
+            updown_Horsepower_Full_Cruise.Value     =   (decimal)HPLFFullCruise;
+            updown_Engine_Efficiency.Value          =   (decimal)EngineEfficiency;
          
-            numericUpDown228.Value = (decimal)NumberOfOnBoarAuxiliaryEngines;
-            numericUpDown229.Value = (decimal)NumberOfAuxiliaryEnginesInUse;
-            numericUpDown230.Value = (decimal)AuxiliaryEnginesRatedHPperEngine;
-            numericUpDown232.Value = (decimal)PercentOfTripAuxiliaryIsActive;
-            numericUpDown234.Value = (decimal)HPLoadFactorSingleEngine;
-            numericUpDown242.Value = (decimal)AuxiliaryEngineEfficiency;
+            updown_Aux_Number_Engines.Value         =   (decimal)NumberOfOnBoardAuxiliaryEngines;
+            updown_Aux_Engines_In_Use.Value         =   (decimal)NumberOfAuxiliaryEnginesInUse;
+            updown_Aux_HP_Per_Engine.Value          =   (decimal)AuxiliaryEnginesRatedHPperEngine;
+            updown_Aux_Percent_Trip_Active.Value    =   (decimal)PercentOfTripAuxiliaryIsActive;
+            updown_Aux_HP_Load_Factor.Value         =   (decimal)HPLoadFactorSingleEngine;
+            updown_Aux_Engine_Efficiency.Value      =   (decimal)AuxiliaryEngineEfficiency;
 
             doCalculations();
             //All Results That Needed Calculation
-            numericUpDown128.Value = (decimal)TotalOnboardHP;
-            numericUpDown139.Value = (decimal)TotalTripTimeHours;
-            numericUpDown146.Value = (decimal)TimeInIdle;
-            numericUpDown152.Value = (decimal)TimeInManeuvering;
-            numericUpDown157.Value = (decimal)TimeInPrecautionary;
-            numericUpDown162.Value = (decimal)TimeInSlowCruise;
-            numericUpDown167.Value = (decimal)TimeInFullCruise;
+            updown_Tot_Onboard_HP.Value     =    (decimal)TotalOnboardHP;
+            updown_Tot_Trip_Hours.Value     =    (decimal)TotalTripTimeHours;
+            updown_Time_Idle.Value          =    (decimal)TimeInIdle;
+            updown_Time_Maneuvering.Value   =    (decimal)TimeInManeuvering;
+            updown_Time_Precautionary.Value =    (decimal)TimeInPrecautionary;
+            updown_Time_Slow_Cruise.Value   =    (decimal)TimeInSlowCruise;
+            updown_Time_Full_Cruise.Value   =    (decimal)TimeInFullCruise;
             numericUpDown144.Value = (decimal)HPPEIdle;
             numericUpDown150.Value = (decimal)HPPEManeuvering;
             numericUpDown155.Value = (decimal)HPPEPrecautionary;
@@ -941,7 +939,7 @@ namespace TEAMS_Plugin
             #region Auxiliary Engine Variables
 
             //6.2 Auxiliary Engine Variables
-            NumberOfOnBoarAuxiliaryEngines = 4;
+            NumberOfOnBoardAuxiliaryEngines = 4;
             NumberOfAuxiliaryEnginesInUse = 2;
             AuxiliaryEnginesRatedHPperEngine = 1400;
 
@@ -1043,40 +1041,40 @@ namespace TEAMS_Plugin
             }
 
             //5.1
-            VesselTypeID = textBox1.Text;
-            NumberOfEngines = (int)numericUpDown132.Value;
-            SingleEngineHP = (int)numericUpDown124.Value;
+            VesselTypeID = textBox_Vessel_Type.Text;
+            NumberOfEngines = (int)updown_Number_Of_Engines.Value;
+            SingleEngineHP = (int)updown_Single_Engine_HP.Value;
             TotalOnboardHP = SingleEngineHP * NumberOfEngines;
-            numericUpDown128.Value = (decimal)TotalOnboardHP;
+            updown_Tot_Onboard_HP.Value = (decimal)TotalOnboardHP;
 
 
             //5.2
-            TotalTripDistanceInMiles = (double)numericUpDown143.Value;
-            TripTimeHours = (double)numericUpDown142.Value;
-            TripTimeMinutes = (double)numericUpDown140.Value;
+            TotalTripDistanceInMiles = (double)updown_Total_Trip_Distance.Value;
+            TripTimeHours = (double)updown_Trip_Time_Hours.Value;
+            TripTimeMinutes = (double)updown_Trip_Time_Minutes.Value;
             TotalTripTimeHours = TripTimeHours + (TripTimeMinutes / 60);
-            numericUpDown139.Value = (decimal)TotalTripTimeHours;
+            updown_Tot_Trip_Hours.Value = (decimal)TotalTripTimeHours;
             //5.3
-            POTIdle = (double)numericUpDown147.Value;
-            POTManeuvering = (double)numericUpDown153.Value;
-            POTPrecautionary = (double)numericUpDown158.Value;
-            POTSlowCruise = (double)numericUpDown163.Value;
-            POTFullCruise = (double)numericUpDown168.Value;
+            POTIdle = (double)updown_Percent_Idle.Value;
+            POTManeuvering = (double)updown_Percent_Maneuvering.Value;
+            POTPrecautionary = (double)updown_Percent_Precautionary.Value;
+            POTSlowCruise = (double)updown_Percent_Slow_Cruise.Value;
+            POTFullCruise = (double)updown_Percent_Full_Cruise.Value;
             TimeInIdle = (POTIdle / 100) * TotalTripTimeHours;
-            numericUpDown146.Value = (decimal)TimeInIdle;
+            updown_Time_Idle.Value = (decimal)TimeInIdle;
             TimeInManeuvering = (POTManeuvering / 100) * TotalTripTimeHours;
-            numericUpDown152.Value = (decimal)TimeInManeuvering;
+            updown_Time_Maneuvering.Value = (decimal)TimeInManeuvering;
             TimeInPrecautionary = (POTPrecautionary / 100) * TotalTripTimeHours;
-            numericUpDown157.Value = (decimal)TimeInPrecautionary;
+            updown_Time_Precautionary.Value = (decimal)TimeInPrecautionary;
             TimeInSlowCruise = (POTSlowCruise / 100) * TotalTripTimeHours;
-            numericUpDown162.Value = (decimal)TimeInSlowCruise;
+            updown_Time_Slow_Cruise.Value = (decimal)TimeInSlowCruise;
             TimeInFullCruise = (POTFullCruise / 100) * TotalTripTimeHours;
-            numericUpDown167.Value = (decimal)TimeInFullCruise;
-            HPLFIdle = (double)numericUpDown145.Value;
-            HPLFManeuvering = (double)numericUpDown151.Value;
-            HPLFPrecautionary = (double)numericUpDown156.Value;
-            HPLFSlowCruise = (double)numericUpDown161.Value;
-            HPLFFullCruise = (double)numericUpDown166.Value;
+            updown_Time_Full_Cruise.Value = (decimal)TimeInFullCruise;
+            HPLFIdle = (double)updown_Horsepower_Idle.Value;
+            HPLFManeuvering = (double)updown_Horsepower_Maneuvering.Value;
+            HPLFPrecautionary = (double)updown_Horsepower_Precautionary.Value;
+            HPLFSlowCruise = (double)updown_Horsepower_Slow_Cruise.Value;
+            HPLFFullCruise = (double)updown_Horsepower_Full_Cruise.Value;
 
             HPPEIdle = (HPLFIdle / 100) * SingleEngineHP;
             numericUpDown144.Value = (decimal)HPPEIdle;
@@ -1102,7 +1100,7 @@ namespace TEAMS_Plugin
             numericUpDown169.Value = (decimal)EPTotal;
 
             //5.4b
-            EngineEfficiency = (double)numericUpDown175.Value;
+            EngineEfficiency = (double)updown_Engine_Efficiency.Value;
             KWHOutperTrip = EPTotal;
             numericUpDown174.Value = (decimal)KWHOutperTrip;
             MMBTUoutperTrip = (KWHOutperTrip * BTUperKWH) / 1000000;
@@ -1195,24 +1193,24 @@ namespace TEAMS_Plugin
             CO_GWP = (double)numericUpDown17.Value;
             NO2_GWP = (double)numericUpDown16.Value;
             //6.2
-            NumberOfOnBoarAuxiliaryEngines = (int)numericUpDown228.Value;
-            NumberOfAuxiliaryEnginesInUse = (int)numericUpDown229.Value;
-            AuxiliaryEnginesRatedHPperEngine = (int)numericUpDown230.Value;
+            NumberOfOnBoardAuxiliaryEngines = (int)updown_Aux_Number_Engines.Value;
+            NumberOfAuxiliaryEnginesInUse = (int)updown_Aux_Engines_In_Use.Value;
+            AuxiliaryEnginesRatedHPperEngine = (int)updown_Aux_HP_Per_Engine.Value;
             TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
             numericUpDown231.Value = (decimal)TotalOnboardAUxHP;
 
             //6.3
-            PercentOfTripAuxiliaryIsActive = (double)numericUpDown232.Value;
+            PercentOfTripAuxiliaryIsActive = (double)updown_Aux_Percent_Trip_Active.Value;
             TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
             numericUpDown233.Value = (decimal)TimeAuxActiveHours;
-            HPLoadFactorSingleEngine = (double)numericUpDown234.Value;
+            HPLoadFactorSingleEngine = (double)updown_Aux_HP_Load_Factor.Value;
             ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
             numericUpDown235.Value = (decimal)ActiveHPPerAuxEngine;
             TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
             numericUpDown236.Value = (decimal)TotalAuxEnergyProduction;
 
             //6.4b
-            AuxiliaryEngineEfficiency = (double)numericUpDown242.Value;
+            AuxiliaryEngineEfficiency = (double)updown_Aux_Engine_Efficiency.Value;
             AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
             numericUpDown241.Value = (decimal)AuxEngineKWHoutperTrip;
             AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / 1000000;
@@ -1307,8 +1305,8 @@ namespace TEAMS_Plugin
         private bool checkValid()
         {
             decimal sum = 0;
-            sum += (numericUpDown147.Value + numericUpDown153.Value + numericUpDown158.Value + 
-                numericUpDown163.Value + numericUpDown168.Value );
+            sum += (updown_Percent_Idle.Value + updown_Percent_Maneuvering.Value + updown_Percent_Precautionary.Value + 
+                updown_Percent_Slow_Cruise.Value + updown_Percent_Full_Cruise.Value );
             if (sum != 100)
             {
                 return false;

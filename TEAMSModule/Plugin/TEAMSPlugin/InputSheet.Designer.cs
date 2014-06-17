@@ -115,7 +115,7 @@
             this.numericUpDown172 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown173 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown174 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown175 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Engine_Efficiency = new System.Windows.Forms.NumericUpDown();
             this.label182 = new System.Windows.Forms.Label();
             this.label183 = new System.Windows.Forms.Label();
             this.label184 = new System.Windows.Forms.Label();
@@ -124,49 +124,49 @@
             this.numericUpDown169 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown164 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown165 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown166 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown167 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown168 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Horsepower_Full_Cruise = new System.Windows.Forms.NumericUpDown();
+            this.updown_Time_Full_Cruise = new System.Windows.Forms.NumericUpDown();
+            this.updown_Percent_Full_Cruise = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown159 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown160 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown161 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown162 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown163 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Horsepower_Slow_Cruise = new System.Windows.Forms.NumericUpDown();
+            this.updown_Time_Slow_Cruise = new System.Windows.Forms.NumericUpDown();
+            this.updown_Percent_Slow_Cruise = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown154 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown155 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown156 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown157 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown158 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Horsepower_Precautionary = new System.Windows.Forms.NumericUpDown();
+            this.updown_Time_Precautionary = new System.Windows.Forms.NumericUpDown();
+            this.updown_Percent_Precautionary = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown149 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown150 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown152 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown153 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Time_Maneuvering = new System.Windows.Forms.NumericUpDown();
+            this.updown_Percent_Maneuvering = new System.Windows.Forms.NumericUpDown();
             this.label166 = new System.Windows.Forms.Label();
             this.numericUpDown148 = new System.Windows.Forms.NumericUpDown();
             this.label165 = new System.Windows.Forms.Label();
             this.numericUpDown144 = new System.Windows.Forms.NumericUpDown();
             this.label160 = new System.Windows.Forms.Label();
-            this.numericUpDown145 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown146 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown147 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Horsepower_Idle = new System.Windows.Forms.NumericUpDown();
+            this.updown_Time_Idle = new System.Windows.Forms.NumericUpDown();
+            this.updown_Percent_Idle = new System.Windows.Forms.NumericUpDown();
             this.label161 = new System.Windows.Forms.Label();
             this.label162 = new System.Windows.Forms.Label();
             this.label163 = new System.Windows.Forms.Label();
             this.label164 = new System.Windows.Forms.Label();
-            this.numericUpDown139 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Tot_Trip_Hours = new System.Windows.Forms.NumericUpDown();
             this.label155 = new System.Windows.Forms.Label();
-            this.numericUpDown140 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown142 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown143 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Trip_Time_Minutes = new System.Windows.Forms.NumericUpDown();
+            this.updown_Trip_Time_Hours = new System.Windows.Forms.NumericUpDown();
+            this.updown_Total_Trip_Distance = new System.Windows.Forms.NumericUpDown();
             this.label157 = new System.Windows.Forms.Label();
             this.label158 = new System.Windows.Forms.Label();
             this.label159 = new System.Windows.Forms.Label();
             this.label150 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_Vessel_Type = new System.Windows.Forms.TextBox();
             this.label148 = new System.Windows.Forms.Label();
-            this.numericUpDown128 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown124 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown132 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Tot_Onboard_HP = new System.Windows.Forms.NumericUpDown();
+            this.updown_Single_Engine_HP = new System.Windows.Forms.NumericUpDown();
+            this.updown_Number_Of_Engines = new System.Windows.Forms.NumericUpDown();
             this.label146 = new System.Windows.Forms.Label();
             this.label147 = new System.Windows.Forms.Label();
             this.label149 = new System.Windows.Forms.Label();
@@ -189,7 +189,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown151 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Horsepower_Maneuvering = new System.Windows.Forms.NumericUpDown();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label46 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -255,7 +255,7 @@
             this.label231 = new System.Windows.Forms.Label();
             this.numericUpDown239 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown241 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown242 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Aux_Engine_Efficiency = new System.Windows.Forms.NumericUpDown();
             this.label232 = new System.Windows.Forms.Label();
             this.label233 = new System.Windows.Forms.Label();
             this.label234 = new System.Windows.Forms.Label();
@@ -265,20 +265,20 @@
             this.label223 = new System.Windows.Forms.Label();
             this.numericUpDown235 = new System.Windows.Forms.NumericUpDown();
             this.label222 = new System.Windows.Forms.Label();
-            this.numericUpDown234 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Aux_HP_Load_Factor = new System.Windows.Forms.NumericUpDown();
             this.label221 = new System.Windows.Forms.Label();
             this.numericUpDown233 = new System.Windows.Forms.NumericUpDown();
             this.label220 = new System.Windows.Forms.Label();
-            this.numericUpDown232 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Aux_Percent_Trip_Active = new System.Windows.Forms.NumericUpDown();
             this.label219 = new System.Windows.Forms.Label();
             this.label218 = new System.Windows.Forms.Label();
             this.label217 = new System.Windows.Forms.Label();
             this.label216 = new System.Windows.Forms.Label();
             this.label215 = new System.Windows.Forms.Label();
             this.numericUpDown231 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown230 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown229 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown228 = new System.Windows.Forms.NumericUpDown();
+            this.updown_Aux_HP_Per_Engine = new System.Windows.Forms.NumericUpDown();
+            this.updown_Aux_Engines_In_Use = new System.Windows.Forms.NumericUpDown();
+            this.updown_Aux_Number_Engines = new System.Windows.Forms.NumericUpDown();
             this.label214 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -348,41 +348,41 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown172)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown173)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown174)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown175)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Engine_Efficiency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown169)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown164)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown165)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown166)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown167)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown168)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Full_Cruise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Full_Cruise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Full_Cruise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown159)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown160)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown161)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown162)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown163)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Slow_Cruise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Slow_Cruise)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Slow_Cruise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown154)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown155)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown156)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown157)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown158)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Precautionary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Precautionary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Precautionary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown149)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown150)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown152)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown153)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Maneuvering)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Maneuvering)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown148)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown144)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown145)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown146)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown147)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown139)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown140)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown142)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown143)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown128)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown124)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown132)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Idle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Idle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Idle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Trip_Hours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Trip_Time_Minutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Trip_Time_Hours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Total_Trip_Distance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_HP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Single_Engine_HP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Number_Of_Engines)).BeginInit();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown151)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Maneuvering)).BeginInit();
             this.panel16.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -431,16 +431,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown238)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown239)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown241)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown242)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engine_Efficiency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown236)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown235)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown234)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Load_Factor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown233)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown232)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Percent_Trip_Active)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown231)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown230)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown229)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Per_Engine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engines_In_Use)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Number_Engines)).BeginInit();
             this.panel21.SuspendLayout();
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown240)).BeginInit();
@@ -518,7 +518,7 @@
             this.tabPage5.Controls.Add(this.numericUpDown172);
             this.tabPage5.Controls.Add(this.numericUpDown173);
             this.tabPage5.Controls.Add(this.numericUpDown174);
-            this.tabPage5.Controls.Add(this.numericUpDown175);
+            this.tabPage5.Controls.Add(this.updown_Engine_Efficiency);
             this.tabPage5.Controls.Add(this.label182);
             this.tabPage5.Controls.Add(this.label183);
             this.tabPage5.Controls.Add(this.label184);
@@ -527,49 +527,49 @@
             this.tabPage5.Controls.Add(this.numericUpDown169);
             this.tabPage5.Controls.Add(this.numericUpDown164);
             this.tabPage5.Controls.Add(this.numericUpDown165);
-            this.tabPage5.Controls.Add(this.numericUpDown166);
-            this.tabPage5.Controls.Add(this.numericUpDown167);
-            this.tabPage5.Controls.Add(this.numericUpDown168);
+            this.tabPage5.Controls.Add(this.updown_Horsepower_Full_Cruise);
+            this.tabPage5.Controls.Add(this.updown_Time_Full_Cruise);
+            this.tabPage5.Controls.Add(this.updown_Percent_Full_Cruise);
             this.tabPage5.Controls.Add(this.numericUpDown159);
             this.tabPage5.Controls.Add(this.numericUpDown160);
-            this.tabPage5.Controls.Add(this.numericUpDown161);
-            this.tabPage5.Controls.Add(this.numericUpDown162);
-            this.tabPage5.Controls.Add(this.numericUpDown163);
+            this.tabPage5.Controls.Add(this.updown_Horsepower_Slow_Cruise);
+            this.tabPage5.Controls.Add(this.updown_Time_Slow_Cruise);
+            this.tabPage5.Controls.Add(this.updown_Percent_Slow_Cruise);
             this.tabPage5.Controls.Add(this.numericUpDown154);
             this.tabPage5.Controls.Add(this.numericUpDown155);
-            this.tabPage5.Controls.Add(this.numericUpDown156);
-            this.tabPage5.Controls.Add(this.numericUpDown157);
-            this.tabPage5.Controls.Add(this.numericUpDown158);
+            this.tabPage5.Controls.Add(this.updown_Horsepower_Precautionary);
+            this.tabPage5.Controls.Add(this.updown_Time_Precautionary);
+            this.tabPage5.Controls.Add(this.updown_Percent_Precautionary);
             this.tabPage5.Controls.Add(this.numericUpDown149);
             this.tabPage5.Controls.Add(this.numericUpDown150);
-            this.tabPage5.Controls.Add(this.numericUpDown152);
-            this.tabPage5.Controls.Add(this.numericUpDown153);
+            this.tabPage5.Controls.Add(this.updown_Time_Maneuvering);
+            this.tabPage5.Controls.Add(this.updown_Percent_Maneuvering);
             this.tabPage5.Controls.Add(this.label166);
             this.tabPage5.Controls.Add(this.numericUpDown148);
             this.tabPage5.Controls.Add(this.label165);
             this.tabPage5.Controls.Add(this.numericUpDown144);
             this.tabPage5.Controls.Add(this.label160);
-            this.tabPage5.Controls.Add(this.numericUpDown145);
-            this.tabPage5.Controls.Add(this.numericUpDown146);
-            this.tabPage5.Controls.Add(this.numericUpDown147);
+            this.tabPage5.Controls.Add(this.updown_Horsepower_Idle);
+            this.tabPage5.Controls.Add(this.updown_Time_Idle);
+            this.tabPage5.Controls.Add(this.updown_Percent_Idle);
             this.tabPage5.Controls.Add(this.label161);
             this.tabPage5.Controls.Add(this.label162);
             this.tabPage5.Controls.Add(this.label163);
             this.tabPage5.Controls.Add(this.label164);
-            this.tabPage5.Controls.Add(this.numericUpDown139);
+            this.tabPage5.Controls.Add(this.updown_Tot_Trip_Hours);
             this.tabPage5.Controls.Add(this.label155);
-            this.tabPage5.Controls.Add(this.numericUpDown140);
-            this.tabPage5.Controls.Add(this.numericUpDown142);
-            this.tabPage5.Controls.Add(this.numericUpDown143);
+            this.tabPage5.Controls.Add(this.updown_Trip_Time_Minutes);
+            this.tabPage5.Controls.Add(this.updown_Trip_Time_Hours);
+            this.tabPage5.Controls.Add(this.updown_Total_Trip_Distance);
             this.tabPage5.Controls.Add(this.label157);
             this.tabPage5.Controls.Add(this.label158);
             this.tabPage5.Controls.Add(this.label159);
             this.tabPage5.Controls.Add(this.label150);
-            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.textBox_Vessel_Type);
             this.tabPage5.Controls.Add(this.label148);
-            this.tabPage5.Controls.Add(this.numericUpDown128);
-            this.tabPage5.Controls.Add(this.numericUpDown124);
-            this.tabPage5.Controls.Add(this.numericUpDown132);
+            this.tabPage5.Controls.Add(this.updown_Tot_Onboard_HP);
+            this.tabPage5.Controls.Add(this.updown_Single_Engine_HP);
+            this.tabPage5.Controls.Add(this.updown_Number_Of_Engines);
             this.tabPage5.Controls.Add(this.label146);
             this.tabPage5.Controls.Add(this.label147);
             this.tabPage5.Controls.Add(this.label149);
@@ -1727,19 +1727,19 @@
             this.numericUpDown174.Size = new System.Drawing.Size(124, 22);
             this.numericUpDown174.TabIndex = 182;
             // 
-            // numericUpDown175
+            // updown_Engine_Efficiency
             // 
-            this.numericUpDown175.DecimalPlaces = 2;
-            this.numericUpDown175.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown175.Location = new System.Drawing.Point(134, 600);
-            this.numericUpDown175.Maximum = new decimal(new int[] {
+            this.updown_Engine_Efficiency.DecimalPlaces = 2;
+            this.updown_Engine_Efficiency.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Engine_Efficiency.Location = new System.Drawing.Point(134, 600);
+            this.updown_Engine_Efficiency.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown175.Name = "numericUpDown175";
-            this.numericUpDown175.Size = new System.Drawing.Size(124, 22);
-            this.numericUpDown175.TabIndex = 181;
+            this.updown_Engine_Efficiency.Name = "numericUpDown175";
+            this.updown_Engine_Efficiency.Size = new System.Drawing.Size(124, 22);
+            this.updown_Engine_Efficiency.TabIndex = 181;
             // 
             // label182
             // 
@@ -1845,45 +1845,45 @@
             this.numericUpDown165.Size = new System.Drawing.Size(55, 22);
             this.numericUpDown165.TabIndex = 164;
             // 
-            // numericUpDown166
+            // updown_Horsepower_Full_Cruise
             // 
-            this.numericUpDown166.DecimalPlaces = 2;
-            this.numericUpDown166.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown166.Location = new System.Drawing.Point(595, 436);
-            this.numericUpDown166.Maximum = new decimal(new int[] {
+            this.updown_Horsepower_Full_Cruise.DecimalPlaces = 2;
+            this.updown_Horsepower_Full_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Full_Cruise.Location = new System.Drawing.Point(595, 436);
+            this.updown_Horsepower_Full_Cruise.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown166.Name = "numericUpDown166";
-            this.numericUpDown166.Size = new System.Drawing.Size(55, 22);
-            this.numericUpDown166.TabIndex = 163;
+            this.updown_Horsepower_Full_Cruise.Name = "numericUpDown166";
+            this.updown_Horsepower_Full_Cruise.Size = new System.Drawing.Size(55, 22);
+            this.updown_Horsepower_Full_Cruise.TabIndex = 163;
             // 
-            // numericUpDown167
+            // updown_Time_Full_Cruise
             // 
-            this.numericUpDown167.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown167.DecimalPlaces = 2;
-            this.numericUpDown167.Enabled = false;
-            this.numericUpDown167.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown167.Location = new System.Drawing.Point(595, 412);
-            this.numericUpDown167.Maximum = new decimal(new int[] {
+            this.updown_Time_Full_Cruise.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_Time_Full_Cruise.DecimalPlaces = 2;
+            this.updown_Time_Full_Cruise.Enabled = false;
+            this.updown_Time_Full_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Full_Cruise.Location = new System.Drawing.Point(595, 412);
+            this.updown_Time_Full_Cruise.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown167.Name = "numericUpDown167";
-            this.numericUpDown167.ReadOnly = true;
-            this.numericUpDown167.Size = new System.Drawing.Size(55, 22);
-            this.numericUpDown167.TabIndex = 162;
+            this.updown_Time_Full_Cruise.Name = "numericUpDown167";
+            this.updown_Time_Full_Cruise.ReadOnly = true;
+            this.updown_Time_Full_Cruise.Size = new System.Drawing.Size(55, 22);
+            this.updown_Time_Full_Cruise.TabIndex = 162;
             // 
-            // numericUpDown168
+            // updown_Percent_Full_Cruise
             // 
-            this.numericUpDown168.DecimalPlaces = 2;
-            this.numericUpDown168.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown168.Location = new System.Drawing.Point(595, 386);
-            this.numericUpDown168.Name = "numericUpDown168";
-            this.numericUpDown168.Size = new System.Drawing.Size(55, 22);
-            this.numericUpDown168.TabIndex = 161;
+            this.updown_Percent_Full_Cruise.DecimalPlaces = 2;
+            this.updown_Percent_Full_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Full_Cruise.Location = new System.Drawing.Point(595, 386);
+            this.updown_Percent_Full_Cruise.Name = "numericUpDown168";
+            this.updown_Percent_Full_Cruise.Size = new System.Drawing.Size(55, 22);
+            this.updown_Percent_Full_Cruise.TabIndex = 161;
             // 
             // numericUpDown159
             // 
@@ -1918,45 +1918,45 @@
             this.numericUpDown160.Size = new System.Drawing.Size(64, 22);
             this.numericUpDown160.TabIndex = 158;
             // 
-            // numericUpDown161
+            // updown_Horsepower_Slow_Cruise
             // 
-            this.numericUpDown161.DecimalPlaces = 2;
-            this.numericUpDown161.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown161.Location = new System.Drawing.Point(509, 436);
-            this.numericUpDown161.Maximum = new decimal(new int[] {
+            this.updown_Horsepower_Slow_Cruise.DecimalPlaces = 2;
+            this.updown_Horsepower_Slow_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Slow_Cruise.Location = new System.Drawing.Point(509, 436);
+            this.updown_Horsepower_Slow_Cruise.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown161.Name = "numericUpDown161";
-            this.numericUpDown161.Size = new System.Drawing.Size(64, 22);
-            this.numericUpDown161.TabIndex = 157;
+            this.updown_Horsepower_Slow_Cruise.Name = "numericUpDown161";
+            this.updown_Horsepower_Slow_Cruise.Size = new System.Drawing.Size(64, 22);
+            this.updown_Horsepower_Slow_Cruise.TabIndex = 157;
             // 
-            // numericUpDown162
+            // updown_Time_Slow_Cruise
             // 
-            this.numericUpDown162.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown162.DecimalPlaces = 2;
-            this.numericUpDown162.Enabled = false;
-            this.numericUpDown162.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown162.Location = new System.Drawing.Point(509, 412);
-            this.numericUpDown162.Maximum = new decimal(new int[] {
+            this.updown_Time_Slow_Cruise.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_Time_Slow_Cruise.DecimalPlaces = 2;
+            this.updown_Time_Slow_Cruise.Enabled = false;
+            this.updown_Time_Slow_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Slow_Cruise.Location = new System.Drawing.Point(509, 412);
+            this.updown_Time_Slow_Cruise.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown162.Name = "numericUpDown162";
-            this.numericUpDown162.ReadOnly = true;
-            this.numericUpDown162.Size = new System.Drawing.Size(64, 22);
-            this.numericUpDown162.TabIndex = 156;
+            this.updown_Time_Slow_Cruise.Name = "numericUpDown162";
+            this.updown_Time_Slow_Cruise.ReadOnly = true;
+            this.updown_Time_Slow_Cruise.Size = new System.Drawing.Size(64, 22);
+            this.updown_Time_Slow_Cruise.TabIndex = 156;
             // 
-            // numericUpDown163
+            // updown_Percent_Slow_Cruise
             // 
-            this.numericUpDown163.DecimalPlaces = 2;
-            this.numericUpDown163.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown163.Location = new System.Drawing.Point(509, 386);
-            this.numericUpDown163.Name = "numericUpDown163";
-            this.numericUpDown163.Size = new System.Drawing.Size(64, 22);
-            this.numericUpDown163.TabIndex = 155;
+            this.updown_Percent_Slow_Cruise.DecimalPlaces = 2;
+            this.updown_Percent_Slow_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Slow_Cruise.Location = new System.Drawing.Point(509, 386);
+            this.updown_Percent_Slow_Cruise.Name = "numericUpDown163";
+            this.updown_Percent_Slow_Cruise.Size = new System.Drawing.Size(64, 22);
+            this.updown_Percent_Slow_Cruise.TabIndex = 155;
             // 
             // numericUpDown154
             // 
@@ -1991,45 +1991,45 @@
             this.numericUpDown155.Size = new System.Drawing.Size(68, 22);
             this.numericUpDown155.TabIndex = 152;
             // 
-            // numericUpDown156
+            // updown_Horsepower_Precautionary
             // 
-            this.numericUpDown156.DecimalPlaces = 2;
-            this.numericUpDown156.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown156.Location = new System.Drawing.Point(418, 436);
-            this.numericUpDown156.Maximum = new decimal(new int[] {
+            this.updown_Horsepower_Precautionary.DecimalPlaces = 2;
+            this.updown_Horsepower_Precautionary.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Precautionary.Location = new System.Drawing.Point(418, 436);
+            this.updown_Horsepower_Precautionary.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown156.Name = "numericUpDown156";
-            this.numericUpDown156.Size = new System.Drawing.Size(68, 22);
-            this.numericUpDown156.TabIndex = 151;
+            this.updown_Horsepower_Precautionary.Name = "numericUpDown156";
+            this.updown_Horsepower_Precautionary.Size = new System.Drawing.Size(68, 22);
+            this.updown_Horsepower_Precautionary.TabIndex = 151;
             // 
-            // numericUpDown157
+            // updown_Time_Precautionary
             // 
-            this.numericUpDown157.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown157.DecimalPlaces = 2;
-            this.numericUpDown157.Enabled = false;
-            this.numericUpDown157.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown157.Location = new System.Drawing.Point(418, 412);
-            this.numericUpDown157.Maximum = new decimal(new int[] {
+            this.updown_Time_Precautionary.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_Time_Precautionary.DecimalPlaces = 2;
+            this.updown_Time_Precautionary.Enabled = false;
+            this.updown_Time_Precautionary.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Precautionary.Location = new System.Drawing.Point(418, 412);
+            this.updown_Time_Precautionary.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown157.Name = "numericUpDown157";
-            this.numericUpDown157.ReadOnly = true;
-            this.numericUpDown157.Size = new System.Drawing.Size(68, 22);
-            this.numericUpDown157.TabIndex = 150;
+            this.updown_Time_Precautionary.Name = "numericUpDown157";
+            this.updown_Time_Precautionary.ReadOnly = true;
+            this.updown_Time_Precautionary.Size = new System.Drawing.Size(68, 22);
+            this.updown_Time_Precautionary.TabIndex = 150;
             // 
-            // numericUpDown158
+            // updown_Percent_Precautionary
             // 
-            this.numericUpDown158.DecimalPlaces = 2;
-            this.numericUpDown158.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown158.Location = new System.Drawing.Point(418, 386);
-            this.numericUpDown158.Name = "numericUpDown158";
-            this.numericUpDown158.Size = new System.Drawing.Size(68, 22);
-            this.numericUpDown158.TabIndex = 149;
+            this.updown_Percent_Precautionary.DecimalPlaces = 2;
+            this.updown_Percent_Precautionary.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Precautionary.Location = new System.Drawing.Point(418, 386);
+            this.updown_Percent_Precautionary.Name = "numericUpDown158";
+            this.updown_Percent_Precautionary.Size = new System.Drawing.Size(68, 22);
+            this.updown_Percent_Precautionary.TabIndex = 149;
             // 
             // numericUpDown149
             // 
@@ -2064,31 +2064,31 @@
             this.numericUpDown150.Size = new System.Drawing.Size(60, 22);
             this.numericUpDown150.TabIndex = 146;
             // 
-            // numericUpDown152
+            // updown_Time_Maneuvering
             // 
-            this.numericUpDown152.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown152.DecimalPlaces = 2;
-            this.numericUpDown152.Enabled = false;
-            this.numericUpDown152.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown152.Location = new System.Drawing.Point(338, 412);
-            this.numericUpDown152.Maximum = new decimal(new int[] {
+            this.updown_Time_Maneuvering.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_Time_Maneuvering.DecimalPlaces = 2;
+            this.updown_Time_Maneuvering.Enabled = false;
+            this.updown_Time_Maneuvering.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Maneuvering.Location = new System.Drawing.Point(338, 412);
+            this.updown_Time_Maneuvering.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown152.Name = "numericUpDown152";
-            this.numericUpDown152.ReadOnly = true;
-            this.numericUpDown152.Size = new System.Drawing.Size(60, 22);
-            this.numericUpDown152.TabIndex = 144;
+            this.updown_Time_Maneuvering.Name = "numericUpDown152";
+            this.updown_Time_Maneuvering.ReadOnly = true;
+            this.updown_Time_Maneuvering.Size = new System.Drawing.Size(60, 22);
+            this.updown_Time_Maneuvering.TabIndex = 144;
             // 
-            // numericUpDown153
+            // updown_Percent_Maneuvering
             // 
-            this.numericUpDown153.DecimalPlaces = 2;
-            this.numericUpDown153.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown153.Location = new System.Drawing.Point(338, 386);
-            this.numericUpDown153.Name = "numericUpDown153";
-            this.numericUpDown153.Size = new System.Drawing.Size(60, 22);
-            this.numericUpDown153.TabIndex = 143;
+            this.updown_Percent_Maneuvering.DecimalPlaces = 2;
+            this.updown_Percent_Maneuvering.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Maneuvering.Location = new System.Drawing.Point(338, 386);
+            this.updown_Percent_Maneuvering.Name = "numericUpDown153";
+            this.updown_Percent_Maneuvering.Size = new System.Drawing.Size(60, 22);
+            this.updown_Percent_Maneuvering.TabIndex = 143;
             // 
             // label166
             // 
@@ -2154,45 +2154,45 @@
             this.label160.Size = new System.Drawing.Size(0, 16);
             this.label160.TabIndex = 137;
             // 
-            // numericUpDown145
+            // updown_Horsepower_Idle
             // 
-            this.numericUpDown145.DecimalPlaces = 2;
-            this.numericUpDown145.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown145.Location = new System.Drawing.Point(249, 436);
-            this.numericUpDown145.Maximum = new decimal(new int[] {
+            this.updown_Horsepower_Idle.DecimalPlaces = 2;
+            this.updown_Horsepower_Idle.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Idle.Location = new System.Drawing.Point(249, 436);
+            this.updown_Horsepower_Idle.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown145.Name = "numericUpDown145";
-            this.numericUpDown145.Size = new System.Drawing.Size(68, 22);
-            this.numericUpDown145.TabIndex = 136;
+            this.updown_Horsepower_Idle.Name = "numericUpDown145";
+            this.updown_Horsepower_Idle.Size = new System.Drawing.Size(68, 22);
+            this.updown_Horsepower_Idle.TabIndex = 136;
             // 
-            // numericUpDown146
+            // updown_Time_Idle
             // 
-            this.numericUpDown146.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown146.DecimalPlaces = 2;
-            this.numericUpDown146.Enabled = false;
-            this.numericUpDown146.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown146.Location = new System.Drawing.Point(249, 412);
-            this.numericUpDown146.Maximum = new decimal(new int[] {
+            this.updown_Time_Idle.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_Time_Idle.DecimalPlaces = 2;
+            this.updown_Time_Idle.Enabled = false;
+            this.updown_Time_Idle.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Idle.Location = new System.Drawing.Point(249, 412);
+            this.updown_Time_Idle.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown146.Name = "numericUpDown146";
-            this.numericUpDown146.ReadOnly = true;
-            this.numericUpDown146.Size = new System.Drawing.Size(68, 22);
-            this.numericUpDown146.TabIndex = 135;
+            this.updown_Time_Idle.Name = "numericUpDown146";
+            this.updown_Time_Idle.ReadOnly = true;
+            this.updown_Time_Idle.Size = new System.Drawing.Size(68, 22);
+            this.updown_Time_Idle.TabIndex = 135;
             // 
-            // numericUpDown147
+            // updown_Percent_Idle
             // 
-            this.numericUpDown147.DecimalPlaces = 2;
-            this.numericUpDown147.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown147.Location = new System.Drawing.Point(249, 386);
-            this.numericUpDown147.Name = "numericUpDown147";
-            this.numericUpDown147.Size = new System.Drawing.Size(68, 22);
-            this.numericUpDown147.TabIndex = 134;
+            this.updown_Percent_Idle.DecimalPlaces = 2;
+            this.updown_Percent_Idle.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Idle.Location = new System.Drawing.Point(249, 386);
+            this.updown_Percent_Idle.Name = "numericUpDown147";
+            this.updown_Percent_Idle.Size = new System.Drawing.Size(68, 22);
+            this.updown_Percent_Idle.TabIndex = 134;
             // 
             // label161
             // 
@@ -2237,22 +2237,22 @@
             this.label164.TabIndex = 130;
             this.label164.Text = "Engine Characterization Per Mode";
             // 
-            // numericUpDown139
+            // updown_Tot_Trip_Hours
             // 
-            this.numericUpDown139.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown139.DecimalPlaces = 2;
-            this.numericUpDown139.Enabled = false;
-            this.numericUpDown139.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown139.Location = new System.Drawing.Point(166, 278);
-            this.numericUpDown139.Maximum = new decimal(new int[] {
+            this.updown_Tot_Trip_Hours.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_Tot_Trip_Hours.DecimalPlaces = 2;
+            this.updown_Tot_Trip_Hours.Enabled = false;
+            this.updown_Tot_Trip_Hours.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Tot_Trip_Hours.Location = new System.Drawing.Point(166, 278);
+            this.updown_Tot_Trip_Hours.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown139.Name = "numericUpDown139";
-            this.numericUpDown139.ReadOnly = true;
-            this.numericUpDown139.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown139.TabIndex = 129;
+            this.updown_Tot_Trip_Hours.Name = "numericUpDown139";
+            this.updown_Tot_Trip_Hours.ReadOnly = true;
+            this.updown_Tot_Trip_Hours.Size = new System.Drawing.Size(92, 22);
+            this.updown_Tot_Trip_Hours.TabIndex = 129;
             // 
             // label155
             // 
@@ -2265,45 +2265,45 @@
             this.label155.TabIndex = 128;
             this.label155.Text = "Total Trip Time (hours)";
             // 
-            // numericUpDown140
+            // updown_Trip_Time_Minutes
             // 
-            this.numericUpDown140.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown140.Location = new System.Drawing.Point(166, 254);
-            this.numericUpDown140.Maximum = new decimal(new int[] {
+            this.updown_Trip_Time_Minutes.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Trip_Time_Minutes.Location = new System.Drawing.Point(166, 254);
+            this.updown_Trip_Time_Minutes.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown140.Name = "numericUpDown140";
-            this.numericUpDown140.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown140.TabIndex = 127;
+            this.updown_Trip_Time_Minutes.Name = "numericUpDown140";
+            this.updown_Trip_Time_Minutes.Size = new System.Drawing.Size(92, 22);
+            this.updown_Trip_Time_Minutes.TabIndex = 127;
             // 
-            // numericUpDown142
+            // updown_Trip_Time_Hours
             // 
-            this.numericUpDown142.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown142.Location = new System.Drawing.Point(166, 229);
-            this.numericUpDown142.Maximum = new decimal(new int[] {
+            this.updown_Trip_Time_Hours.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Trip_Time_Hours.Location = new System.Drawing.Point(166, 229);
+            this.updown_Trip_Time_Hours.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown142.Name = "numericUpDown142";
-            this.numericUpDown142.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown142.TabIndex = 126;
+            this.updown_Trip_Time_Hours.Name = "numericUpDown142";
+            this.updown_Trip_Time_Hours.Size = new System.Drawing.Size(92, 22);
+            this.updown_Trip_Time_Hours.TabIndex = 126;
             // 
-            // numericUpDown143
+            // updown_Total_Trip_Distance
             // 
-            this.numericUpDown143.DecimalPlaces = 2;
-            this.numericUpDown143.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown143.Location = new System.Drawing.Point(166, 203);
-            this.numericUpDown143.Maximum = new decimal(new int[] {
+            this.updown_Total_Trip_Distance.DecimalPlaces = 2;
+            this.updown_Total_Trip_Distance.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Total_Trip_Distance.Location = new System.Drawing.Point(166, 203);
+            this.updown_Total_Trip_Distance.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown143.Name = "numericUpDown143";
-            this.numericUpDown143.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown143.TabIndex = 125;
+            this.updown_Total_Trip_Distance.Name = "numericUpDown143";
+            this.updown_Total_Trip_Distance.Size = new System.Drawing.Size(92, 22);
+            this.updown_Total_Trip_Distance.TabIndex = 125;
             // 
             // label157
             // 
@@ -2348,14 +2348,14 @@
             this.label150.TabIndex = 121;
             this.label150.Text = "Trip Distance and Time";
             // 
-            // textBox1
+            // textBox_Vessel_Type
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(166, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 23);
-            this.textBox1.TabIndex = 109;
+            this.textBox_Vessel_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Vessel_Type.Location = new System.Drawing.Point(166, 32);
+            this.textBox_Vessel_Type.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Vessel_Type.Name = "textBox1";
+            this.textBox_Vessel_Type.Size = new System.Drawing.Size(199, 23);
+            this.textBox_Vessel_Type.TabIndex = 109;
             // 
             // label148
             // 
@@ -2368,47 +2368,47 @@
             this.label148.TabIndex = 108;
             this.label148.Text = "Vessel Type ID";
             // 
-            // numericUpDown128
+            // updown_Tot_Onboard_HP
             // 
-            this.numericUpDown128.BackColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown128.Enabled = false;
-            this.numericUpDown128.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown128.Location = new System.Drawing.Point(166, 110);
-            this.numericUpDown128.Maximum = new decimal(new int[] {
+            this.updown_Tot_Onboard_HP.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_Tot_Onboard_HP.Enabled = false;
+            this.updown_Tot_Onboard_HP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Tot_Onboard_HP.Location = new System.Drawing.Point(166, 110);
+            this.updown_Tot_Onboard_HP.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
             542101,
             0});
-            this.numericUpDown128.Name = "numericUpDown128";
-            this.numericUpDown128.ReadOnly = true;
-            this.numericUpDown128.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown128.TabIndex = 107;
+            this.updown_Tot_Onboard_HP.Name = "numericUpDown128";
+            this.updown_Tot_Onboard_HP.ReadOnly = true;
+            this.updown_Tot_Onboard_HP.Size = new System.Drawing.Size(92, 22);
+            this.updown_Tot_Onboard_HP.TabIndex = 107;
             // 
-            // numericUpDown124
+            // updown_Single_Engine_HP
             // 
-            this.numericUpDown124.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown124.Location = new System.Drawing.Point(166, 85);
-            this.numericUpDown124.Maximum = new decimal(new int[] {
+            this.updown_Single_Engine_HP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Single_Engine_HP.Location = new System.Drawing.Point(166, 85);
+            this.updown_Single_Engine_HP.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown124.Name = "numericUpDown124";
-            this.numericUpDown124.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown124.TabIndex = 106;
+            this.updown_Single_Engine_HP.Name = "numericUpDown124";
+            this.updown_Single_Engine_HP.Size = new System.Drawing.Size(92, 22);
+            this.updown_Single_Engine_HP.TabIndex = 106;
             // 
-            // numericUpDown132
+            // updown_Number_Of_Engines
             // 
-            this.numericUpDown132.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown132.Location = new System.Drawing.Point(166, 59);
-            this.numericUpDown132.Maximum = new decimal(new int[] {
+            this.updown_Number_Of_Engines.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Number_Of_Engines.Location = new System.Drawing.Point(166, 59);
+            this.updown_Number_Of_Engines.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown132.Name = "numericUpDown132";
-            this.numericUpDown132.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown132.TabIndex = 105;
+            this.updown_Number_Of_Engines.Name = "numericUpDown132";
+            this.updown_Number_Of_Engines.Size = new System.Drawing.Size(92, 22);
+            this.updown_Number_Of_Engines.TabIndex = 105;
             // 
             // label146
             // 
@@ -2492,7 +2492,7 @@
             this.panel14.Controls.Add(this.textBox4);
             this.panel14.Controls.Add(this.textBox3);
             this.panel14.Controls.Add(this.textBox2);
-            this.panel14.Controls.Add(this.numericUpDown151);
+            this.panel14.Controls.Add(this.updown_Horsepower_Maneuvering);
             this.panel14.Location = new System.Drawing.Point(6, 358);
             this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
@@ -2669,19 +2669,19 @@
             this.textBox2.TabIndex = 274;
             this.textBox2.Text = "Mode 1";
             // 
-            // numericUpDown151
+            // updown_Horsepower_Maneuvering
             // 
-            this.numericUpDown151.DecimalPlaces = 2;
-            this.numericUpDown151.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown151.Location = new System.Drawing.Point(331, 77);
-            this.numericUpDown151.Maximum = new decimal(new int[] {
+            this.updown_Horsepower_Maneuvering.DecimalPlaces = 2;
+            this.updown_Horsepower_Maneuvering.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Maneuvering.Location = new System.Drawing.Point(331, 77);
+            this.updown_Horsepower_Maneuvering.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown151.Name = "numericUpDown151";
-            this.numericUpDown151.Size = new System.Drawing.Size(60, 22);
-            this.numericUpDown151.TabIndex = 145;
+            this.updown_Horsepower_Maneuvering.Name = "numericUpDown151";
+            this.updown_Horsepower_Maneuvering.Size = new System.Drawing.Size(60, 22);
+            this.updown_Horsepower_Maneuvering.TabIndex = 145;
             // 
             // panel16
             // 
@@ -2716,7 +2716,7 @@
             this.tabPage6.Controls.Add(this.label231);
             this.tabPage6.Controls.Add(this.numericUpDown239);
             this.tabPage6.Controls.Add(this.numericUpDown241);
-            this.tabPage6.Controls.Add(this.numericUpDown242);
+            this.tabPage6.Controls.Add(this.updown_Aux_Engine_Efficiency);
             this.tabPage6.Controls.Add(this.label232);
             this.tabPage6.Controls.Add(this.label233);
             this.tabPage6.Controls.Add(this.label234);
@@ -2726,20 +2726,20 @@
             this.tabPage6.Controls.Add(this.label223);
             this.tabPage6.Controls.Add(this.numericUpDown235);
             this.tabPage6.Controls.Add(this.label222);
-            this.tabPage6.Controls.Add(this.numericUpDown234);
+            this.tabPage6.Controls.Add(this.updown_Aux_HP_Load_Factor);
             this.tabPage6.Controls.Add(this.label221);
             this.tabPage6.Controls.Add(this.numericUpDown233);
             this.tabPage6.Controls.Add(this.label220);
-            this.tabPage6.Controls.Add(this.numericUpDown232);
+            this.tabPage6.Controls.Add(this.updown_Aux_Percent_Trip_Active);
             this.tabPage6.Controls.Add(this.label219);
             this.tabPage6.Controls.Add(this.label218);
             this.tabPage6.Controls.Add(this.label217);
             this.tabPage6.Controls.Add(this.label216);
             this.tabPage6.Controls.Add(this.label215);
             this.tabPage6.Controls.Add(this.numericUpDown231);
-            this.tabPage6.Controls.Add(this.numericUpDown230);
-            this.tabPage6.Controls.Add(this.numericUpDown229);
-            this.tabPage6.Controls.Add(this.numericUpDown228);
+            this.tabPage6.Controls.Add(this.updown_Aux_HP_Per_Engine);
+            this.tabPage6.Controls.Add(this.updown_Aux_Engines_In_Use);
+            this.tabPage6.Controls.Add(this.updown_Aux_Number_Engines);
             this.tabPage6.Controls.Add(this.label214);
             this.tabPage6.Controls.Add(this.panel20);
             this.tabPage6.Controls.Add(this.panel21);
@@ -3667,25 +3667,25 @@
             this.numericUpDown241.Size = new System.Drawing.Size(179, 22);
             this.numericUpDown241.TabIndex = 194;
             // 
-            // numericUpDown242
+            // updown_Aux_Engine_Efficiency
             // 
-            this.numericUpDown242.DecimalPlaces = 2;
-            this.numericUpDown242.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown242.Location = new System.Drawing.Point(152, 373);
-            this.numericUpDown242.Maximum = new decimal(new int[] {
+            this.updown_Aux_Engine_Efficiency.DecimalPlaces = 2;
+            this.updown_Aux_Engine_Efficiency.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Engine_Efficiency.Location = new System.Drawing.Point(152, 373);
+            this.updown_Aux_Engine_Efficiency.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown242.Minimum = new decimal(new int[] {
+            this.updown_Aux_Engine_Efficiency.Minimum = new decimal(new int[] {
             5,
             0,
             0,
             0});
-            this.numericUpDown242.Name = "numericUpDown242";
-            this.numericUpDown242.Size = new System.Drawing.Size(179, 22);
-            this.numericUpDown242.TabIndex = 193;
-            this.numericUpDown242.Value = new decimal(new int[] {
+            this.updown_Aux_Engine_Efficiency.Name = "numericUpDown242";
+            this.updown_Aux_Engine_Efficiency.Size = new System.Drawing.Size(179, 22);
+            this.updown_Aux_Engine_Efficiency.TabIndex = 193;
+            this.updown_Aux_Engine_Efficiency.Value = new decimal(new int[] {
             10,
             0,
             0,
@@ -3801,19 +3801,19 @@
             this.label222.TabIndex = 137;
             this.label222.Text = "HP Load Factor (Single Engine)";
             // 
-            // numericUpDown234
+            // updown_Aux_HP_Load_Factor
             // 
-            this.numericUpDown234.DecimalPlaces = 2;
-            this.numericUpDown234.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown234.Location = new System.Drawing.Point(359, 234);
-            this.numericUpDown234.Maximum = new decimal(new int[] {
+            this.updown_Aux_HP_Load_Factor.DecimalPlaces = 2;
+            this.updown_Aux_HP_Load_Factor.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_HP_Load_Factor.Location = new System.Drawing.Point(359, 234);
+            this.updown_Aux_HP_Load_Factor.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown234.Name = "numericUpDown234";
-            this.numericUpDown234.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown234.TabIndex = 136;
+            this.updown_Aux_HP_Load_Factor.Name = "numericUpDown234";
+            this.updown_Aux_HP_Load_Factor.Size = new System.Drawing.Size(92, 22);
+            this.updown_Aux_HP_Load_Factor.TabIndex = 136;
             // 
             // label221
             // 
@@ -3854,19 +3854,19 @@
             this.label220.TabIndex = 133;
             this.label220.Text = "Percent of Trip Auxillary Engine is Active Based on Time";
             // 
-            // numericUpDown232
+            // updown_Aux_Percent_Trip_Active
             // 
-            this.numericUpDown232.DecimalPlaces = 2;
-            this.numericUpDown232.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown232.Location = new System.Drawing.Point(359, 185);
-            this.numericUpDown232.Maximum = new decimal(new int[] {
+            this.updown_Aux_Percent_Trip_Active.DecimalPlaces = 2;
+            this.updown_Aux_Percent_Trip_Active.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Percent_Trip_Active.Location = new System.Drawing.Point(359, 185);
+            this.updown_Aux_Percent_Trip_Active.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown232.Name = "numericUpDown232";
-            this.numericUpDown232.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown232.TabIndex = 132;
+            this.updown_Aux_Percent_Trip_Active.Name = "numericUpDown232";
+            this.updown_Aux_Percent_Trip_Active.Size = new System.Drawing.Size(92, 22);
+            this.updown_Aux_Percent_Trip_Active.TabIndex = 132;
             // 
             // label219
             // 
@@ -3938,44 +3938,44 @@
             this.numericUpDown231.Size = new System.Drawing.Size(92, 22);
             this.numericUpDown231.TabIndex = 126;
             // 
-            // numericUpDown230
+            // updown_Aux_HP_Per_Engine
             // 
-            this.numericUpDown230.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown230.Location = new System.Drawing.Point(267, 83);
-            this.numericUpDown230.Maximum = new decimal(new int[] {
+            this.updown_Aux_HP_Per_Engine.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_HP_Per_Engine.Location = new System.Drawing.Point(267, 83);
+            this.updown_Aux_HP_Per_Engine.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown230.Name = "numericUpDown230";
-            this.numericUpDown230.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown230.TabIndex = 125;
+            this.updown_Aux_HP_Per_Engine.Name = "numericUpDown230";
+            this.updown_Aux_HP_Per_Engine.Size = new System.Drawing.Size(92, 22);
+            this.updown_Aux_HP_Per_Engine.TabIndex = 125;
             // 
-            // numericUpDown229
+            // updown_Aux_Engines_In_Use
             // 
-            this.numericUpDown229.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown229.Location = new System.Drawing.Point(267, 59);
-            this.numericUpDown229.Maximum = new decimal(new int[] {
+            this.updown_Aux_Engines_In_Use.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Engines_In_Use.Location = new System.Drawing.Point(267, 59);
+            this.updown_Aux_Engines_In_Use.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown229.Name = "numericUpDown229";
-            this.numericUpDown229.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown229.TabIndex = 124;
+            this.updown_Aux_Engines_In_Use.Name = "numericUpDown229";
+            this.updown_Aux_Engines_In_Use.Size = new System.Drawing.Size(92, 22);
+            this.updown_Aux_Engines_In_Use.TabIndex = 124;
             // 
-            // numericUpDown228
+            // updown_Aux_Number_Engines
             // 
-            this.numericUpDown228.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown228.Location = new System.Drawing.Point(267, 32);
-            this.numericUpDown228.Maximum = new decimal(new int[] {
+            this.updown_Aux_Number_Engines.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Number_Engines.Location = new System.Drawing.Point(267, 32);
+            this.updown_Aux_Number_Engines.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDown228.Name = "numericUpDown228";
-            this.numericUpDown228.Size = new System.Drawing.Size(92, 22);
-            this.numericUpDown228.TabIndex = 123;
+            this.updown_Aux_Number_Engines.Name = "numericUpDown228";
+            this.updown_Aux_Number_Engines.Size = new System.Drawing.Size(92, 22);
+            this.updown_Aux_Number_Engines.TabIndex = 123;
             // 
             // label214
             // 
@@ -4199,42 +4199,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown172)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown173)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown174)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown175)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Engine_Efficiency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown169)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown164)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown165)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown166)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown167)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown168)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Full_Cruise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Full_Cruise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Full_Cruise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown159)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown160)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown161)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown162)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown163)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Slow_Cruise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Slow_Cruise)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Slow_Cruise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown154)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown155)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown156)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown157)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown158)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Precautionary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Precautionary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Precautionary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown149)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown150)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown152)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown153)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Maneuvering)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Maneuvering)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown148)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown144)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown145)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown146)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown147)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown139)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown140)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown142)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown143)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown128)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown124)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown132)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Idle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Idle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Idle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Trip_Hours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Trip_Time_Minutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Trip_Time_Hours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Total_Trip_Distance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_HP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Single_Engine_HP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Number_Of_Engines)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown151)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Maneuvering)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.tabPage6.ResumeLayout(false);
@@ -4286,16 +4286,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown238)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown239)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown241)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown242)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engine_Efficiency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown236)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown235)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown234)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Load_Factor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown233)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown232)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Percent_Trip_Active)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown231)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown230)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown229)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown228)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Per_Engine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engines_In_Use)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Number_Engines)).EndInit();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             this.panel23.ResumeLayout(false);
@@ -4315,20 +4315,20 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.NumericUpDown numericUpDown139;
+        private System.Windows.Forms.NumericUpDown updown_Tot_Trip_Hours;
         private System.Windows.Forms.Label label155;
-        private System.Windows.Forms.NumericUpDown numericUpDown140;
-        private System.Windows.Forms.NumericUpDown numericUpDown142;
-        private System.Windows.Forms.NumericUpDown numericUpDown143;
+        private System.Windows.Forms.NumericUpDown updown_Trip_Time_Minutes;
+        private System.Windows.Forms.NumericUpDown updown_Trip_Time_Hours;
+        private System.Windows.Forms.NumericUpDown updown_Total_Trip_Distance;
         private System.Windows.Forms.Label label157;
         private System.Windows.Forms.Label label158;
         private System.Windows.Forms.Label label159;
         private System.Windows.Forms.Label label150;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_Vessel_Type;
         private System.Windows.Forms.Label label148;
-        private System.Windows.Forms.NumericUpDown numericUpDown128;
-        private System.Windows.Forms.NumericUpDown numericUpDown124;
-        private System.Windows.Forms.NumericUpDown numericUpDown132;
+        private System.Windows.Forms.NumericUpDown updown_Tot_Onboard_HP;
+        private System.Windows.Forms.NumericUpDown updown_Single_Engine_HP;
+        private System.Windows.Forms.NumericUpDown updown_Number_Of_Engines;
         private System.Windows.Forms.Label label146;
         private System.Windows.Forms.Label label147;
         private System.Windows.Forms.Label label149;
@@ -4338,28 +4338,28 @@
         private System.Windows.Forms.Label label165;
         private System.Windows.Forms.NumericUpDown numericUpDown144;
         private System.Windows.Forms.Label label160;
-        private System.Windows.Forms.NumericUpDown numericUpDown145;
-        private System.Windows.Forms.NumericUpDown numericUpDown146;
-        private System.Windows.Forms.NumericUpDown numericUpDown147;
+        private System.Windows.Forms.NumericUpDown updown_Horsepower_Idle;
+        private System.Windows.Forms.NumericUpDown updown_Time_Idle;
+        private System.Windows.Forms.NumericUpDown updown_Percent_Idle;
         private System.Windows.Forms.Label label161;
         private System.Windows.Forms.Label label162;
         private System.Windows.Forms.Label label163;
         private System.Windows.Forms.Label label164;
         private System.Windows.Forms.NumericUpDown numericUpDown159;
         private System.Windows.Forms.NumericUpDown numericUpDown160;
-        private System.Windows.Forms.NumericUpDown numericUpDown161;
-        private System.Windows.Forms.NumericUpDown numericUpDown162;
-        private System.Windows.Forms.NumericUpDown numericUpDown163;
+        private System.Windows.Forms.NumericUpDown updown_Horsepower_Slow_Cruise;
+        private System.Windows.Forms.NumericUpDown updown_Time_Slow_Cruise;
+        private System.Windows.Forms.NumericUpDown updown_Percent_Slow_Cruise;
         private System.Windows.Forms.NumericUpDown numericUpDown154;
         private System.Windows.Forms.NumericUpDown numericUpDown155;
-        private System.Windows.Forms.NumericUpDown numericUpDown156;
-        private System.Windows.Forms.NumericUpDown numericUpDown157;
-        private System.Windows.Forms.NumericUpDown numericUpDown158;
+        private System.Windows.Forms.NumericUpDown updown_Horsepower_Precautionary;
+        private System.Windows.Forms.NumericUpDown updown_Time_Precautionary;
+        private System.Windows.Forms.NumericUpDown updown_Percent_Precautionary;
         private System.Windows.Forms.NumericUpDown numericUpDown149;
         private System.Windows.Forms.NumericUpDown numericUpDown150;
-        private System.Windows.Forms.NumericUpDown numericUpDown151;
-        private System.Windows.Forms.NumericUpDown numericUpDown152;
-        private System.Windows.Forms.NumericUpDown numericUpDown153;
+        private System.Windows.Forms.NumericUpDown updown_Horsepower_Maneuvering;
+        private System.Windows.Forms.NumericUpDown updown_Time_Maneuvering;
+        private System.Windows.Forms.NumericUpDown updown_Percent_Maneuvering;
         private System.Windows.Forms.Label label179;
         private System.Windows.Forms.Label label180;
         private System.Windows.Forms.NumericUpDown numericUpDown171;
@@ -4367,7 +4367,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown172;
         private System.Windows.Forms.NumericUpDown numericUpDown173;
         private System.Windows.Forms.NumericUpDown numericUpDown174;
-        private System.Windows.Forms.NumericUpDown numericUpDown175;
+        private System.Windows.Forms.NumericUpDown updown_Engine_Efficiency;
         private System.Windows.Forms.Label label182;
         private System.Windows.Forms.Label label183;
         private System.Windows.Forms.Label label184;
@@ -4376,28 +4376,28 @@
         private System.Windows.Forms.NumericUpDown numericUpDown169;
         private System.Windows.Forms.NumericUpDown numericUpDown164;
         private System.Windows.Forms.NumericUpDown numericUpDown165;
-        private System.Windows.Forms.NumericUpDown numericUpDown166;
-        private System.Windows.Forms.NumericUpDown numericUpDown167;
-        private System.Windows.Forms.NumericUpDown numericUpDown168;
+        private System.Windows.Forms.NumericUpDown updown_Horsepower_Full_Cruise;
+        private System.Windows.Forms.NumericUpDown updown_Time_Full_Cruise;
+        private System.Windows.Forms.NumericUpDown updown_Percent_Full_Cruise;
         private System.Windows.Forms.Label label224;
         private System.Windows.Forms.NumericUpDown numericUpDown236;
         private System.Windows.Forms.Label label223;
         private System.Windows.Forms.NumericUpDown numericUpDown235;
         private System.Windows.Forms.Label label222;
-        private System.Windows.Forms.NumericUpDown numericUpDown234;
+        private System.Windows.Forms.NumericUpDown updown_Aux_HP_Load_Factor;
         private System.Windows.Forms.Label label221;
         private System.Windows.Forms.NumericUpDown numericUpDown233;
         private System.Windows.Forms.Label label220;
-        private System.Windows.Forms.NumericUpDown numericUpDown232;
+        private System.Windows.Forms.NumericUpDown updown_Aux_Percent_Trip_Active;
         private System.Windows.Forms.Label label219;
         private System.Windows.Forms.Label label218;
         private System.Windows.Forms.Label label217;
         private System.Windows.Forms.Label label216;
         private System.Windows.Forms.Label label215;
         private System.Windows.Forms.NumericUpDown numericUpDown231;
-        private System.Windows.Forms.NumericUpDown numericUpDown230;
-        private System.Windows.Forms.NumericUpDown numericUpDown229;
-        private System.Windows.Forms.NumericUpDown numericUpDown228;
+        private System.Windows.Forms.NumericUpDown updown_Aux_HP_Per_Engine;
+        private System.Windows.Forms.NumericUpDown updown_Aux_Engines_In_Use;
+        private System.Windows.Forms.NumericUpDown updown_Aux_Number_Engines;
         private System.Windows.Forms.Label label214;
         private System.Windows.Forms.Label label229;
         private System.Windows.Forms.Label label230;
@@ -4406,7 +4406,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown239;
         private System.Windows.Forms.NumericUpDown numericUpDown240;
         private System.Windows.Forms.NumericUpDown numericUpDown241;
-        private System.Windows.Forms.NumericUpDown numericUpDown242;
+        private System.Windows.Forms.NumericUpDown updown_Aux_Engine_Efficiency;
         private System.Windows.Forms.Label label232;
         private System.Windows.Forms.Label label233;
         private System.Windows.Forms.Label label234;
