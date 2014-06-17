@@ -554,11 +554,11 @@ namespace TEAMS_Plugin
         // Constants
 
         // Joules per 1 mmBtu
-        private const double JOULES_TO_MMBTU = 1055870000.0;
+        private const double JOULES_PER_MMBTU = 1055870000.0;
         // Joules per 1 Btu
-        private const double JOULES_TO_BTU = 1055.05585;
-        // 1 m^3 per xx US Gallons
-        private const double CUBIC_METER_TO_GALLONS = (1 / 264.172);
+        private const double JOULES_PER_BTU = 1055.05585;
+        // Gallons per 1 m^3
+        private const double GALLONS_PER_CUBIC_METER = 264.172;
 
         #endregion
 
@@ -591,11 +591,11 @@ namespace TEAMS_Plugin
             IResource ConvDiesel = resources.ValueForKey(productID);
             if (ConvDiesel.LowerHeatingValue.UserValue == 0)
             {
-                conventionalDieselBTUperGal = (ConvDiesel.LowerHeatingValue.GreetValue) *  (CUBIC_METER_TO_GALLONS) * (1 / JOULES_TO_BTU);
+                conventionalDieselBTUperGal = (ConvDiesel.LowerHeatingValue.GreetValue) *  (1 / GALLONS_PER_CUBIC_METER) * (1 / JOULES_PER_BTU);
             }
             else
             {
-                conventionalDieselBTUperGal = (ConvDiesel.LowerHeatingValue.UserValue) * (CUBIC_METER_TO_GALLONS) * (1 / JOULES_TO_BTU);
+                conventionalDieselBTUperGal = (ConvDiesel.LowerHeatingValue.UserValue) * (1 / GALLONS_PER_CUBIC_METER) * (1 / JOULES_PER_BTU);
             }
         }
         #endregion
