@@ -1662,7 +1662,7 @@
             0});
             this.numericUpDown171.Name = "numericUpDown171";
             this.numericUpDown171.ReadOnly = true;
-            this.numericUpDown171.Size = new System.Drawing.Size(85, 22);
+            this.numericUpDown171.Size = new System.Drawing.Size(124, 22);
             this.numericUpDown171.TabIndex = 186;
             // 
             // label181
@@ -1690,7 +1690,7 @@
             0});
             this.numericUpDown172.Name = "numericUpDown172";
             this.numericUpDown172.ReadOnly = true;
-            this.numericUpDown172.Size = new System.Drawing.Size(85, 22);
+            this.numericUpDown172.Size = new System.Drawing.Size(124, 22);
             this.numericUpDown172.TabIndex = 184;
             // 
             // numericUpDown173
@@ -1707,7 +1707,7 @@
             0});
             this.numericUpDown173.Name = "numericUpDown173";
             this.numericUpDown173.ReadOnly = true;
-            this.numericUpDown173.Size = new System.Drawing.Size(85, 22);
+            this.numericUpDown173.Size = new System.Drawing.Size(124, 22);
             this.numericUpDown173.TabIndex = 183;
             // 
             // numericUpDown174
@@ -1724,7 +1724,7 @@
             0});
             this.numericUpDown174.Name = "numericUpDown174";
             this.numericUpDown174.ReadOnly = true;
-            this.numericUpDown174.Size = new System.Drawing.Size(85, 22);
+            this.numericUpDown174.Size = new System.Drawing.Size(124, 22);
             this.numericUpDown174.TabIndex = 182;
             // 
             // numericUpDown175
@@ -1738,7 +1738,7 @@
             0,
             0});
             this.numericUpDown175.Name = "numericUpDown175";
-            this.numericUpDown175.Size = new System.Drawing.Size(85, 22);
+            this.numericUpDown175.Size = new System.Drawing.Size(124, 22);
             this.numericUpDown175.TabIndex = 181;
             // 
             // label182
@@ -2699,7 +2699,7 @@
             this.label46.AutoSize = true;
             this.label46.BackColor = System.Drawing.Color.Silver;
             this.label46.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(213, 20);
+            this.label46.Location = new System.Drawing.Point(255, 21);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(17, 15);
             this.label46.TabIndex = 303;
