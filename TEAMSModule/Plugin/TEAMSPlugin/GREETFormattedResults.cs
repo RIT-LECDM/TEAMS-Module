@@ -30,9 +30,9 @@ namespace TEAMSModule
         // Grams per 1 Kilogram
         private const double GRAMS_PER_KILOGRAM = 1000.0;
         // Kilowatt-hours per 1 Horsepower-hour
-        private const double HPHR_TO_KWHR = 0.745699871;
+        private const double KWHRS_PER_HPHR = 0.745699871;
         // Gallons per 1 cubic meter
-        private const double CUBIC_METER_TO_GALLONS = 264.172;
+        private const double GALLONS_PER_CUBIC_METER = 264.172;
 
         #endregion
 
@@ -156,13 +156,11 @@ namespace TEAMSModule
                 IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
                 if (resourceUsed.LowerHeatingValue.UserValue == 0)
                 {
-                    //Gallons = 1/ BTUs per gallon * 1000000 * main engine mmbtu in per trip
-                    te.GALLONperTrip = (1 / resourceUsed.LowerHeatingValue.GreetValue) * 1000000 * te.MMBTUinperTrip;
+                    te.GALLONperTrip = (1 / resourceUsed.LowerHeatingValue.GreetValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * te.MMBTUinperTrip;
                 }
                 else
                 {
-                    //Gallons = 1/ BTUs per gallon * 1000000 * main engine mmbtu in per trip
-                    te.GALLONperTrip = (1 / resourceUsed.LowerHeatingValue.UserValue) * 1000000 * te.MMBTUinperTrip;
+                    te.GALLONperTrip = (1 / resourceUsed.LowerHeatingValue.UserValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * te.MMBTUinperTrip;
                 }
 
                 //These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
@@ -233,13 +231,35 @@ namespace TEAMSModule
 
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
                 //Total Energy Well To Pump = mmbtu of fuel put into the engine * all sections of energy for what it took to create 1 mmbtu of fuel - the 1 mmbtu of fuel
-                TE_WTP = te.MMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + pathwayResults.LifeCycleResources().ElementAt(12).Value.Value +
-                    pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + pathwayResults.LifeCycleResources().ElementAt(10).Value.Value +
-                    pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 - te.MMBTUinperTrip;
+
+                TE_WTP = te.MMBTUinperTrip * ((
+                    // Nuclear Energy
+                    pathwayResults.LifeCycleResources().ElementAt(13).Value.Value   +
+                    // Renewable (Solar, Hydro, Wind, Geothermal
+                    pathwayResults.LifeCycleResources().ElementAt(11).Value.Value   + 
+                    // Wind Power
+                    pathwayResults.LifeCycleResources().ElementAt(10).Value.Value   +
+                    // Geothermal
+                    pathwayResults.LifeCycleResources().ElementAt(9).Value.Value    + 
+                    // Hydroelectric
+                    pathwayResults.LifeCycleResources().ElementAt(8).Value.Value    + 
+                    // Solar
+                    pathwayResults.LifeCycleResources().ElementAt(7).Value.Value    + 
+                    // Forest Residue
+                    pathwayResults.LifeCycleResources().ElementAt(6).Value.Value    + 
+                    // Farmed Trees or Switchgrass -- unconfirmed which is which
+                    pathwayResults.LifeCycleResources().ElementAt(5).Value.Value    + 
+                    // Farmed Trees or Switchgrass -- unconfirmed which is which
+                    pathwayResults.LifeCycleResources().ElementAt(4).Value.Value    + 
+                    // Coal Average
+                    pathwayResults.LifeCycleResources().ElementAt(3).Value.Value    + 
+                    // Bituminous Oil
+                    pathwayResults.LifeCycleResources().ElementAt(2).Value.Value    + 
+                    // Crude Oil
+                    pathwayResults.LifeCycleResources().ElementAt(1).Value.Value    + 
+                    // Natural Gas
+                    pathwayResults.LifeCycleResources().ElementAt(0).Value.Value))  - 
+                    1 - te.MMBTUinperTrip;
                 //Total Energy Vessel Operation = mmbtu needed to put into the ship
                 TE_VO = te.MMBTUinperTrip;
                 //Total Energy = Vessel Operation + Well to pump + aux vessel operation + aux well to pump
@@ -260,49 +280,49 @@ namespace TEAMSModule
                 //Volatile Organic Compound Well To Pump Emissions
                 VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 //Volatile Organic Compound Vessel Operation Emissions = VOC grams per horsepower hour (As defined by the user) * conversion from hphr to kwh * kwhout per trip
-                VOC_VO = main_fuel_type[0] * (1 / HPHR_TO_KWHR ) * te.KWHOutperTrip;
+                VOC_VO = main_fuel_type[0] * (1 / KWHRS_PER_HPHR ) * te.KWHOutperTrip;
                 //Total = The sum of the above two and the aux values
                 VOC_Total = VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
                 //Carbon Monoxide Well To Pump Emissions
                 CO_WTP = pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 //Carbon Monoxide Vessel Operation Emissions
-                CO_VO = (main_fuel_type[1] * ( 1 / HPHR_TO_KWHR) * te.KWHOutperTrip);
+                CO_VO = (main_fuel_type[1] * ( 1 / KWHRS_PER_HPHR) * te.KWHOutperTrip);
                 //Total = The sum of the above two and the aux values
                 CO_Total = CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
                 //Nitrogen Oxides Well To Pump Emissions
                 NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 //Nitrogen Oxides Operation Emissions
-                NOx_VO = main_fuel_type[2] * ( 1 / HPHR_TO_KWHR ) * te.KWHOutperTrip;
+                NOx_VO = main_fuel_type[2] * ( 1 / KWHRS_PER_HPHR ) * te.KWHOutperTrip;
                 //Total = The sum of the above two and the aux values
                 NOx_Total = NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
                 //Particulate Matter 10 Well To Pump Emissions
                 PM10_WTP = pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 //Particulate Matter 10 Operation Emissions
-                PM10_VO = main_fuel_type[3] * ( 1 / HPHR_TO_KWHR ) * te.KWHOutperTrip;
+                PM10_VO = main_fuel_type[3] * ( 1 / KWHRS_PER_HPHR ) * te.KWHOutperTrip;
                 //Total = The sum of the above two and the aux values
                 PM10_Total = PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
                 //Particulate Matter 25 Well To Pump Emissions
                 PM25_WTP = pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 //Particulate Matter 25 Operation Emissions
-                PM25_VO = main_fuel_type[4] * ( 1 / HPHR_TO_KWHR ) * te.KWHOutperTrip;
+                PM25_VO = main_fuel_type[4] * ( 1 / KWHRS_PER_HPHR ) * te.KWHOutperTrip;
                 //Total = The sum of the above two and the aux values
                 PM25_Total = PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 //Sulfur Oxides Well To Pump Emissions
                 SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 //Sulfur Oxides Vessel Operation Emissions = density of the fuel * sulfur ratio * kg to g * m^3 to gallon * gallon per trip
-                SOx_VO = resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * ( 1 / CUBIC_METER_TO_GALLONS ) * te.GALLONperTrip;
+                SOx_VO = resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * ( 1 / GALLONS_PER_CUBIC_METER ) * te.GALLONperTrip;
                 //Total = The sum of the above two and the aux values
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 //Methane Well To Pump Emissions
                 CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 //Methane Vessel Operation Emissions
-                CH4_VO = main_fuel_type[5] * ( 1 / HPHR_TO_KWHR ) * te.KWHOutperTrip;
+                CH4_VO = main_fuel_type[5] * ( 1 / KWHRS_PER_HPHR ) * te.KWHOutperTrip;
                 //Total = The sum of the above two and the aux values
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
@@ -317,7 +337,7 @@ namespace TEAMSModule
                 //Nitrous Oxide Well To Pump Emissions
                 N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 //Nitrous oxide Operation Emissions
-                N2O_VO = main_fuel_type[6] * ( 1 / HPHR_TO_KWHR ) * te.KWHOutperTrip;
+                N2O_VO = main_fuel_type[6] * ( 1 / KWHRS_PER_HPHR ) * te.KWHOutperTrip;
                 //Total = The sum of the above two and the aux values
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
@@ -405,16 +425,36 @@ namespace TEAMSModule
                 }
 
                 //The values below are calculated in almost exactly the same way as their counterparts in "Treeview2_afterselect" if you want an in depth breakdown of the formulas, it is there
-                
-                te.AuxEngineGALLONperTrip = (1 / resourceLowerHeatingValue) * 1000000 * te.AuxEngineMMBTUinperTrip;
-                AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(12).Value.Value + pathwayResults.LifeCycleResources().ElementAt(11).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(10).Value.Value + pathwayResults.LifeCycleResources().ElementAt(9).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(8).Value.Value + pathwayResults.LifeCycleResources().ElementAt(7).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(6).Value.Value + pathwayResults.LifeCycleResources().ElementAt(5).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(4).Value.Value + pathwayResults.LifeCycleResources().ElementAt(3).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(2).Value.Value + pathwayResults.LifeCycleResources().ElementAt(1).Value.Value + 
-                    pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) - 1 - te.AuxEngineMMBTUinperTrip;
+
+                te.AuxEngineGALLONperTrip = (1 / resourceLowerHeatingValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip;
+                AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * 
+                    // Nuclear Energy
+                    ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value  + 
+                    // Renewable (Solar, Hydro, Wind, GeoThermal)
+                    pathwayResults.LifeCycleResources().ElementAt(11).Value.Value    + 
+                    // Wind Power
+                    pathwayResults.LifeCycleResources().ElementAt(10).Value.Value    + 
+                    // Geothermal
+                    pathwayResults.LifeCycleResources().ElementAt(9).Value.Value     + 
+                    // Hydroelectric
+                    pathwayResults.LifeCycleResources().ElementAt(8).Value.Value     + 
+                    // Solar
+                    pathwayResults.LifeCycleResources().ElementAt(7).Value.Value     + 
+                    // Forest Residue
+                    pathwayResults.LifeCycleResources().ElementAt(6).Value.Value     + 
+                    // Farmed Trees OR Switchgrass -- unconfirmed which is which
+                    pathwayResults.LifeCycleResources().ElementAt(5).Value.Value     + 
+                    // Farmed Trees OR Switchgrass -- unconfirmed which is which
+                    pathwayResults.LifeCycleResources().ElementAt(4).Value.Value     + 
+                    // Coal Average
+                    pathwayResults.LifeCycleResources().ElementAt(3).Value.Value     + 
+                    // Bituminous Oil
+                    pathwayResults.LifeCycleResources().ElementAt(2).Value.Value     + 
+                    // Crude Oil
+                    pathwayResults.LifeCycleResources().ElementAt(1).Value.Value     + 
+                    // Natural Gas
+                    pathwayResults.LifeCycleResources().ElementAt(0).Value.Value))   -
+                    1 - te.AuxEngineMMBTUinperTrip;
                 AUX_TE_VO = te.AuxEngineMMBTUinperTrip;
                 TE_Total = TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
 
@@ -435,31 +475,31 @@ namespace TEAMSModule
                 #endregion
 
                 AUX_VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                AUX_VOC_VO = aux_fuel_type[0] * ( 1 / HPHR_TO_KWHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_VOC_VO = aux_fuel_type[0] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 VOC_Total = VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
                 AUX_CO_WTP = pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                AUX_CO_VO = aux_fuel_type[1] * ( 1 / HPHR_TO_KWHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_CO_VO = aux_fuel_type[1] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 CO_Total = CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
                 AUX_NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                AUX_NOx_VO = aux_fuel_type[2] * ( 1 / HPHR_TO_KWHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_NOx_VO = aux_fuel_type[2] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 NOx_Total = NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
                 AUX_PM10_WTP = pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                AUX_PM10_VO = aux_fuel_type[3] * ( 1 / HPHR_TO_KWHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_PM10_VO = aux_fuel_type[3] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 PM10_Total = PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
                 AUX_PM25_WTP = pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                AUX_PM25_VO = aux_fuel_type[4] * ( 1 / HPHR_TO_KWHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_PM25_VO = aux_fuel_type[4] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 PM25_Total = PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 AUX_SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                AUX_SOx_VO = resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * ( 1 / CUBIC_METER_TO_GALLONS ) * te.AuxEngineGALLONperTrip;
+                AUX_SOx_VO = resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * ( 1 / GALLONS_PER_CUBIC_METER ) * te.AuxEngineGALLONperTrip;
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 AUX_CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                AUX_CH4_VO = aux_fuel_type[5] * ( 1 / HPHR_TO_KWHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_CH4_VO = aux_fuel_type[5] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 double gramsOfFuel = (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * te.AuxEngineMMBTUinperTrip;
@@ -468,7 +508,7 @@ namespace TEAMSModule
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 AUX_N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                AUX_N2O_VO = aux_fuel_type[6] * ( 1 / HPHR_TO_KWHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_N2O_VO = aux_fuel_type[6] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
             setLabels();
@@ -972,12 +1012,14 @@ namespace TEAMSModule
                 worksheet.Cells[4, 5].Value = AUX_TE_VO;
                 worksheet.Cells[4, 6].Value = TE_Total;
 
-                worksheet.Cells[5, 1].Value = "Fossil Fuel";
+                // TODO: Implement Fossil Fuel
+                // worksheet.Cells[5, 1].Value = "Fossil Fuel";
                 worksheet.Cells[5, 2].Value = FF_WTP;
                 worksheet.Cells[5, 4].Value = AUX_FF_WTP;
                 worksheet.Cells[5, 6].Value = FF_Total;
                 
-                worksheet.Cells[6, 1].Value = "Petroleum Fuel";
+                // TODO: Implement Petroleum Fuel
+                // worksheet.Cells[6, 1].Value = "Petroleum Fuel";
                 worksheet.Cells[6, 2].Value = PF_WTP;
                 worksheet.Cells[6, 4].Value = AUX_PF_WTP;
                 worksheet.Cells[6, 6].Value = PF_Total;
@@ -1047,8 +1089,16 @@ namespace TEAMSModule
                 worksheet.Cells[18, 5].Value = AUX_N2O_VO;
                 worksheet.Cells[18, 6].Value = N2O_Total;
 
+                worksheet.Cells[20, 1].Value = "Main Engine Fuel Type:";
+                worksheet.Cells[20, 1].Style.Font.Bold = true;
+                worksheet.Cells[20, 2].Value = fuelUsed;
+
+                worksheet.Cells[21, 1].Value = "Auxiliary Engine Fuel Type:";
+                worksheet.Cells[21, 1].Style.Font.Bold = true;
+                worksheet.Cells[21, 2].Value = auxFuelUsed;
+
                 // Resize the columns to fit the values
-                worksheet.Cells["A1:F18"].AutoFitColumns();
+                worksheet.Cells["A1:F22"].AutoFitColumns();
 
                 // Save the file
                 package.Save();
