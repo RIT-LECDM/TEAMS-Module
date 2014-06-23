@@ -882,16 +882,16 @@ namespace TEAMSModule
         /// <summary>
         /// Generates the specified graph for display to the user.
         /// </summary>
-        /// <param name="resources">A collection of the 12 resources to be modeled by the graph with values: { %upstream%, %vesseloperation% }</param>
+        /// <param name="resources">A collection of the resources to be modeled by the graph with values: { %upstream%, %vesseloperation% }</param>
         /// <param name="graph">The graph to be generated. Note that this should always be the graph from the designer, 'stacked_graph'.
-        /// If you wish to generate another graph, you will need to do more than pass the graph in as a parameter.</param>
-        /// <param name="title">The title of the graph to be displayed. These are taken from and match the titles from the graphs in the original TEAMS spreadsheet ~v1.4</param>
+        ///                     If you wish to generate another graph, you will need to do more than pass the graph in as a parameter.</param>
+        /// <param name="title">The title of the graph to be displayed.</param>
         private void Generate_Graph(double[][] resources, Chart graph)
         {
             //Matches the series collection already outlined in the designer.
             string[] seriesArray     =   { "Upstream", "VesselOperation" };
             //Set the title of the graph to the passed in string title.
-            graph.Titles[0].Text     =   "Your Vessel using " + fuelUsed + " \nContribution of Each Stage";
+            graph.Titles[0].Text     =   te.VesselTypeID + "\nMain Engine: " + fuelUsed + "\nAuxiliary Engine: " + auxFuelUsed;
             //Iterate through both of the series.
             for (int i = 0; i < seriesArray.Length; i++)
             {
