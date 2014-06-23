@@ -21,7 +21,7 @@ namespace TEAMSModule
         /// The user selects "I Understand" to the copyright notice.
         /// CopyrightForm closes and the main TEAM Module Input form is loaded.
         /// </summary>
-        private void button1_Click(object sender, EventArgs e)
+        private void I_Understand_Button_Click(object sender, EventArgs e)
         {
             TEAMS t = new TEAMS();
             t.Show();

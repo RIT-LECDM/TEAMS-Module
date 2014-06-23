@@ -20,31 +20,48 @@ namespace TEAMS_Plugin
 {
     public partial class TEAMS : Form
     {
-        // Input Variables - These are used to do the calculations for the model
+        // Input Variables - Used to do the calculations for the model
         #region Main Engine
-        // 5.1 Main Engine Variables
+
+        // Main Engine Variables
         public string VesselTypeID;
         public int NumberOfEngines;
         public int SingleEngineHP;
         public int TotalOnboardHP;
 
-        // Constants (These are units of measurement)
-        public const double KWperHP = 0.745699872;
-        public const double GALperBBL = 42.0;
-        public const double BBLperTONNE = 7.45;
-        public const double BTUperKWH = 3412.14163;
+        // Constants
+        #region Constants
 
-        // Conventional Diesel Path ID - Just used for estimation of fuel gallons for input, does not appear on the results sheet.
+        private const double KWperHP = 0.745699872;
+        private const double GALperBBL = 42.0;
+        private const double BBLperTONNE = 7.45;
+        private const double BTUperKWH = 3412.14163;
+
+        // Joules per 1 mmBtu
+        private const double JOULES_PER_MMBTU = 1055870000.0;
+        // Joules per 1 Btu
+        private const double JOULES_PER_BTU = 1055.05585;
+        // Gallons per 1 m^3
+        private const double GALLONS_PER_CUBIC_METER = 264.172;
+        // Btu's per 1 mmBtu
+        private const double BTUS_PER_MMBTU = 1000000.00;
+
+        // Conventional Diesel Path ID - Used for estimation of fuel gallons for input, does not appear on the results sheet.
         public const int CD_PATH_ID = 40;
 
-        // 5.2 Trip Distance and Time
+        #endregion
+
+        // Trip Distance and Time
         public double TotalTripDistanceInMiles;
         public double TripTimeHours;
         public double TripTimeMinutes;
         public double TotalTripTimeHours;
 
-        // 5.3 Engine Charicterization Per Mode
-        // POT - Percent Of Trip, Time in mode is measured in hours HPLF - Horse Power Load Factor (Single engine). HPPE = Horse Power Per Engine EP = Energy Production in KWH for all engines
+        // Engine Charicterization Per Mode
+        // POT  -   Percent Of Trip, Time in mode is measured in hours
+        // HPLF -   Horse Power Load Factor (Single engine)
+        // HPPE -   Horse Power Per Engine
+        // EP   -   Energy Production in KWH for all engines
         public double POTIdle;
         public double POTManeuvering;
         public double POTPrecautionary;
@@ -72,7 +89,7 @@ namespace TEAMS_Plugin
         public double EPFullCruise;
         public double EPTotal;
 
-        // 5.4b Calculation of Fuel Use Using Conventional Diesel as Baseline Fuel
+        // Calculation of Fuel Use Using Conventional Diesel as Baseline Fuel
         public double EngineEfficiency;
         public double KWHOutperTrip;
         public double MMBTUoutperTrip;
@@ -145,13 +162,13 @@ namespace TEAMS_Plugin
         #endregion
         #region Auxiliary Engine(s)
 
-        // 6.2 Auxiliary Engine Variables
+        // Auxiliary Engine Variables
         public int NumberOfOnBoardAuxiliaryEngines;
         public int NumberOfAuxiliaryEnginesInUse;
         public int AuxiliaryEnginesRatedHPperEngine;
         public int TotalOnboardAUxHP;
 
-        // 6.3 Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
+        // Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
         public double PercentOfTripAuxiliaryIsActive;
         public double TimeAuxActiveHours;
         public double HPLoadFactorSingleEngine;
@@ -159,7 +176,7 @@ namespace TEAMS_Plugin
         public double TotalAuxEnergyProduction;
 
 
-        // 6.4b Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
+        // Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
         public double AuxiliaryEngineEfficiency;
         public double AuxEngineKWHoutperTrip;
         public double AuxEngineMMBTUoutperTrip;
@@ -223,18 +240,6 @@ namespace TEAMS_Plugin
 
         #endregion
 
-        #region Constants
-
-        // Joules per 1 mmBtu
-        private const double JOULES_PER_MMBTU = 1055870000.0;
-        // Joules per 1 Btu
-        private const double JOULES_PER_BTU = 1055.05585;
-        // Gallons per 1 m^3
-        private const double GALLONS_PER_CUBIC_METER = 264.172;
-        // Btu's per 1 mmBtu
-        private const double BTUS_PER_MMBTU = 1000000.00;
-
-        #endregion
 
         // Results variables - These are used to store calculated values later on, as well as the actual results that come from another round of calculations
         #region Results Variables
@@ -634,43 +639,43 @@ namespace TEAMS_Plugin
             EPFullCruise     =   NumberOfEngines * HPPEFullCruise * TimeInFullCruise * KWperHP;
 
             // Energy Production Total
-            EPTotal  =   EPIdle + EPManeuvering + EPPrecautionary + EPSlowCruise + EPFullCruise;
+            EPTotal                      =   EPIdle + EPManeuvering + EPPrecautionary + EPSlowCruise + EPFullCruise;
 
             // Kilowat Hours out Per Trip
-            KWHOutperTrip    =   EPTotal;
+            KWHOutperTrip                =   EPTotal;
 
             // Million BTUs of Energy needed to power the trip
-            MMBTUoutperTrip     =   (KWHOutperTrip * BTUperKWH) / BTUS_PER_MMBTU;
+            MMBTUoutperTrip              =   (KWHOutperTrip * BTUperKWH) / BTUS_PER_MMBTU;
 
             // Million BTUs of Energy to put into the system to get the MMBTU's required as output
-            MMBTUinperTrip   =   MMBTUoutperTrip * (100 / EngineEfficiency);
+            MMBTUinperTrip               =   MMBTUoutperTrip * (100 / EngineEfficiency);
 
             // Gallons of fuel per trip if it were powered by conventional diesel
-            GALLONperTrip    =   (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * MMBTUinperTrip;
+            GALLONperTrip                =   (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * MMBTUinperTrip;
 
             // Total Horsepower of Auxiliary engines
-            TotalOnboardAUxHP    =   NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
+            TotalOnboardAUxHP            =   NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
 
             // Time auxiliary engines are active in hours
-            TimeAuxActiveHours   =   (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
+            TimeAuxActiveHours           =   (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
 
             // Active Horsepower per Auxiliary engine
-            ActiveHPPerAuxEngine     =   (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
+            ActiveHPPerAuxEngine         =   (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
 
             // Total auxiliary engine production
             TotalAuxEnergyProduction     =   NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
 
             // Aux Engine Kilowat Hours out per trip
-            AuxEngineKWHoutperTrip   =   TotalAuxEnergyProduction;
+            AuxEngineKWHoutperTrip       =   TotalAuxEnergyProduction;
 
             // Auxiliary Engine million BTUs of energy to power the trip
             AuxEngineMMBTUoutperTrip     =   (AuxEngineKWHoutperTrip * BTUperKWH) / BTUS_PER_MMBTU;
 
             // Auxiliary Engine million BTUs of energy to put in to the engine in order to get the needed energy out
-            AuxEngineMMBTUinperTrip  =   AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
+            AuxEngineMMBTUinperTrip      =   AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
 
             // Auxiliary Engine gallons of fuel per trip if it were using conventional diesel
-            AuxEngineGALLONperTrip   =   (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * AuxEngineMMBTUinperTrip;
+            AuxEngineGALLONperTrip       =   (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * AuxEngineMMBTUinperTrip;
 
         }
         #endregion
@@ -855,18 +860,21 @@ namespace TEAMS_Plugin
         public void useDefaults()
         {
             #region Main Engine Variables
-            // 5.1 Main Engine Variables
+            // Main Engine Variables
             VesselTypeID    =    "Cont. Ship 6000";
             NumberOfEngines =    1;
             SingleEngineHP  =    75097;
 
-            // 5.2 Trip Distance and Time
+            // Trip Distance and Time
             TotalTripDistanceInMiles    =    10600.00;
             TripTimeHours               =    480.00;
             TripTimeMinutes             =    0.00;
 
-            // 5.3 Engine Charicterization Per Mode
-            // POT - Percent Of Trip, Time in mode is measured in hours HPLF - Horse Power Load Factor (Single engine). HPPE = Horse Power Per Engine EP = Energy Production in KWH for all engines
+            // Engine Charicterization Per Mode
+            // POT  -   Percent Of Trip, Time in mode is measured in hours
+            // HPLF -   Horse Power Load Factor (Single engine)
+            // HPPE -   Horse Power Per Engine
+            // EP   -   Energy Production in KWH for all engines
             POTIdle              =   1.25;
             POTManeuvering       =   1.75;
             POTPrecautionary     =   5.00;
@@ -878,7 +886,7 @@ namespace TEAMS_Plugin
             HPLFSlowCruise       =   50.00;
             HPLFFullCruise       =   95.00;
 
-            // 5.4b Calculation of all Fuels
+            // Calculation of all Fuels
             EngineEfficiency    =   45.00;
 
             Res_NOX_gphphr_out  =   14.015;
@@ -940,16 +948,16 @@ namespace TEAMS_Plugin
 
             #region Auxiliary Engine Variables
 
-            // 6.2 Auxiliary Engine Variables
+            // Auxiliary Engine Variables
             NumberOfOnBoardAuxiliaryEngines      =   4;
             NumberOfAuxiliaryEnginesInUse        =   2;
             AuxiliaryEnginesRatedHPperEngine     =   1400;
 
-            // 6.3 Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
+            // Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
             PercentOfTripAuxiliaryIsActive   =   50.00;
             HPLoadFactorSingleEngine         =   80.00;
 
-            // 6.4b Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
+            // Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
             AuxiliaryEngineEfficiency   =    40.00;
 
             Aux_Res_NOX_gphphr_out   =   14.015;
@@ -1042,21 +1050,18 @@ namespace TEAMS_Plugin
                 return;
             }
 
-            // 5.1
             VesselTypeID                 =   textBox_Vessel_Type.Text;
             NumberOfEngines              =   (int)updown_Number_Of_Engines.Value;
             SingleEngineHP               =   (int)updown_Single_Engine_HP.Value;
             TotalOnboardHP               =   SingleEngineHP * NumberOfEngines;
             updown_Tot_Onboard_HP.Value  =   (decimal)TotalOnboardHP;
 
-
-            // 5.2
             TotalTripDistanceInMiles     =   (double)updown_Total_Trip_Distance.Value;
             TripTimeHours                =   (double)updown_Trip_Time_Hours.Value;
             TripTimeMinutes              =   (double)updown_Trip_Time_Minutes.Value;
             TotalTripTimeHours           =   TripTimeHours + (TripTimeMinutes / 60);
             updown_Tot_Trip_Hours.Value  =   (decimal)TotalTripTimeHours;
-            // 5.3
+
             POTIdle                          =   (double)updown_Percent_Idle.Value;
             POTManeuvering                   =   (double)updown_Percent_Maneuvering.Value;
             POTPrecautionary                 =   (double)updown_Percent_Precautionary.Value;
@@ -1101,7 +1106,6 @@ namespace TEAMS_Plugin
             EPTotal                          =   EPIdle + EPManeuvering + EPPrecautionary + EPSlowCruise + EPFullCruise;
             updown_EP_Total.Value            =   (decimal)EPTotal;
 
-            // 5.4b
             EngineEfficiency         =   (double)updown_Engine_Efficiency.Value;
             KWHOutperTrip            =   EPTotal;
             updown_KW_HR_Out.Value   =   (decimal)KWHOutperTrip;
@@ -1112,7 +1116,6 @@ namespace TEAMS_Plugin
             GALLONperTrip            =   (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * MMBTUinperTrip;
             updown_GALLON.Value      =   (decimal)GALLONperTrip;
 
-            // Fuel Inputs
             Res_NOX_gphphr_out   =   (double)Res_NOX.Value;
             Res_CO_gphphr_out    =   (double)Res_CO.Value;
             Res_VOC_gphphr_out   =   (double)Res_VOC.Value;
@@ -1193,14 +1196,13 @@ namespace TEAMS_Plugin
             VOC_GWP  =   (double)updown_VOC_GWP.Value;
             CO_GWP   =   (double)updown_CO_GWP.Value;
             NO2_GWP  =   (double)updown_NO2_GWP.Value;
-            // 6.2
+
             NumberOfOnBoardAuxiliaryEngines  =   (int)updown_Aux_Number_Engines.Value;
             NumberOfAuxiliaryEnginesInUse    =   (int)updown_Aux_Engines_In_Use.Value;
             AuxiliaryEnginesRatedHPperEngine =   (int)updown_Aux_HP_Per_Engine.Value;
             TotalOnboardAUxHP                =   NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
             updown_Tot_Onboard_AUX_HP.Value  =   (decimal)TotalOnboardAUxHP;
 
-            // 6.3
             PercentOfTripAuxiliaryIsActive   =   (double)updown_Aux_Percent_Trip_Active.Value;
             TimeAuxActiveHours               =   (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
             updown_AUX_Time_Active.Value     =   (decimal)TimeAuxActiveHours;
@@ -1210,7 +1212,6 @@ namespace TEAMS_Plugin
             TotalAuxEnergyProduction         =   NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
             updown_Tot_AUX_Energy.Value      =   (decimal)TotalAuxEnergyProduction;
 
-            // 6.4b
             AuxiliaryEngineEfficiency    =   (double)updown_Aux_Engine_Efficiency.Value;
             AuxEngineKWHoutperTrip       =   TotalAuxEnergyProduction;
             updown_AUX_KW_HR_Out.Value   =   (decimal)AuxEngineKWHoutperTrip;
@@ -1303,16 +1304,10 @@ namespace TEAMS_Plugin
         private bool checkValid()
         {
             decimal sum = 0;
-            sum  +=  (updown_Percent_Idle.Value + updown_Percent_Maneuvering.Value + updown_Percent_Precautionary.Value + 
-                     updown_Percent_Slow_Cruise.Value + updown_Percent_Full_Cruise.Value );
-            if (sum != 100)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            sum  =  (updown_Percent_Idle.Value + updown_Percent_Maneuvering.Value + updown_Percent_Precautionary.Value + 
+                    updown_Percent_Slow_Cruise.Value + updown_Percent_Full_Cruise.Value );
+            if (sum != 100) { return false; }
+            return true;
         }
 
         // Resets the input sheet back to default inputs

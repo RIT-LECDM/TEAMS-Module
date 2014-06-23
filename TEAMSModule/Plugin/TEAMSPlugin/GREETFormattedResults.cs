@@ -26,13 +26,13 @@ namespace TEAMSModule
         #region Constants
 
         // Joules per 1 MMBTU
-        private const double JOULES_PER_MMBTU = 1055870000.0;
+        private const double JOULES_PER_MMBTU           =   1055870000.0;
         // Grams per 1 Kilogram
-        private const double GRAMS_PER_KILOGRAM = 1000.0;
+        private const double GRAMS_PER_KILOGRAM         =   1000.0;
         // Kilowatt-hours per 1 Horsepower-hour
-        private const double KWHRS_PER_HPHR = 0.745699871;
+        private const double KWHRS_PER_HPHR             =   0.745699871;
         // Gallons per 1 cubic meter
-        private const double GALLONS_PER_CUBIC_METER = 264.172;
+        private const double GALLONS_PER_CUBIC_METER    =   264.172;
 
         #endregion
 
@@ -259,6 +259,7 @@ namespace TEAMSModule
                     // Natural Gas
                     pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) -
                     1 - te.MMBTUinperTrip;
+
                 //Total Energy Vessel Operation = mmbtu needed to put into the ship
                 TE_VO = te.MMBTUinperTrip;
                 //Total Energy = Vessel Operation + Well to pump + aux vessel operation + aux well to pump
@@ -266,11 +267,11 @@ namespace TEAMSModule
 
                 #region FOR FUTURE: FOSSIL FUELS / PETROLEUM FUELS
                 /**********************************************************************************************************
-                //Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
+                // Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
                 FF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
 
-                //Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
+                // Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
                 PF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;
                 ***********************************************************************************************************/
@@ -278,53 +279,53 @@ namespace TEAMSModule
 
                 // Volatile Organic Compounds
                 // Well To Pump Emissions
-                VOC_WTP = pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                VOC_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 // Vessel Operation Emissions
-                VOC_VO = main_fuel_type[0] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                VOC_VO      =   main_fuel_type[0] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
                 // Total Emissions
-                VOC_Total = VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
+                VOC_Total   =   VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
                 // Carbon Monoxide
-                CO_WTP = pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                CO_VO = (main_fuel_type[1] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip);
-                CO_Total = CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
+                CO_WTP      =   pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                CO_VO       =   (main_fuel_type[1] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip);
+                CO_Total    =   CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
                 // Nitrogen Dioxide
-                NOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                NOx_VO = main_fuel_type[2] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
-                NOx_Total = NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
+                NOx_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                NOx_VO      =   main_fuel_type[2] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                NOx_Total   =   NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
                 // Particulate Matter 10
-                PM10_WTP = pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                PM10_VO = main_fuel_type[3] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
-                PM10_Total = PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
+                PM10_WTP    =   pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                PM10_VO     =   main_fuel_type[3] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                PM10_Total  =   PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
                 // Particulate Matter 25
-                PM25_WTP = pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                PM25_VO = main_fuel_type[4] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
-                PM25_Total = PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
+                PM25_WTP    =   pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                PM25_VO     =   main_fuel_type[4] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                PM25_Total  =   PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 // Sulfur Oxides
                 // TODO: Sulfur Oxides Vessel Operation Emissions = density of the fuel * sulfur ratio * kg to g * m^3 to gallon * gallon per trip
-                SOx_WTP = pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                SOx_VO = resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * te.GALLONperTrip;
-                SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
+                SOx_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                SOx_VO      =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * te.GALLONperTrip;
+                SOx_Total   =   SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 // Methane
-                CH4_WTP = pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                CH4_VO = main_fuel_type[5] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
-                CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
+                CH4_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                CH4_VO      =   main_fuel_type[5] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                CH4_Total   =   CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 // Carbon Dioxide
-                double gramsOfFuel = (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * te.MMBTUinperTrip;
-                CO2_WTP = pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                CO2_VO = gramsOfFuel * resourceCarbonRatio * (44 / 12);
-                CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
+                double gramsOfFuel  =   (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * te.MMBTUinperTrip;
+                CO2_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                CO2_VO      =   gramsOfFuel * resourceCarbonRatio * (44 / 12);
+                CO2_Total   =   CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 //Nitrous Oxide
-                N2O_WTP = pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                N2O_VO = main_fuel_type[6] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
-                N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
+                N2O_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                N2O_VO      =   main_fuel_type[6] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                N2O_Total   =   N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
             setLabels();
         }
@@ -529,21 +530,21 @@ namespace TEAMSModule
              * EMISSIONS
              ***************/
 
-            label_Main_VOC_WTP.Text     =   parseResourceToString(VOC_WTP) + " g/trip";   // VOC
+            label_Main_VOC_WTP.Text    =   parseResourceToString(VOC_WTP) + " g/trip";   // VOC
             label_Main_CO_WTP.Text     =   parseResourceToString(CO_WTP) + " g/trip";     // CO
-            label_Main_NOx_WTP.Text     =   parseResourceToString(NOx_WTP) + " g/trip";   // NOx
-            label_Main_PM10_WTP.Text     =   parseResourceToString(PM10_WTP) + " g/trip"; // PM10
-            label_Main_PM25_WTP.Text     =   parseResourceToString(PM25_WTP) + " g/trip"; // PM2.5
-            label_Main_SOx_WTP.Text     =   parseResourceToString(SOx_WTP) + " g/trip";   // SOx
-            label_Main_CH4_WTP.Text     =   parseResourceToString(CH4_WTP) + " g/trip";   // CH4
-            label_Main_CO2_WTP.Text     =   parseResourceToString(CO2_WTP) + " g/trip";   // CO2
-            label_Main_N2O_WTP.Text     =   parseResourceToString(N2O_WTP) + " g/trip";   // N2O
+            label_Main_NOx_WTP.Text    =   parseResourceToString(NOx_WTP) + " g/trip";   // NOx
+            label_Main_PM10_WTP.Text   =   parseResourceToString(PM10_WTP) + " g/trip"; // PM10
+            label_Main_PM25_WTP.Text   =   parseResourceToString(PM25_WTP) + " g/trip"; // PM2.5
+            label_Main_SOx_WTP.Text    =   parseResourceToString(SOx_WTP) + " g/trip";   // SOx
+            label_Main_CH4_WTP.Text    =   parseResourceToString(CH4_WTP) + " g/trip";   // CH4
+            label_Main_CO2_WTP.Text    =   parseResourceToString(CO2_WTP) + " g/trip";   // CO2
+            label_Main_N2O_WTP.Text    =   parseResourceToString(N2O_WTP) + " g/trip";   // N2O
 
             /*
              * Column 2 -- Vessel Operation
              */
 
-            label_Main_TE_VO.Text     =   parseResourceToString(TE_VO) + " mmbtu/trip";  // Total Energy
+            label_Main_TE_VO.Text      =   parseResourceToString(TE_VO) + " mmbtu/trip";  // Total Energy
 
             /***************
              * EMISSIONS
@@ -619,18 +620,18 @@ namespace TEAMSModule
              ***************/
 
             label_VOC_Total.Text     =   parseResourceToString(VOC_Total) + " g/trip";
-            label_CO_Total.Text     =   parseResourceToString(CO_Total) + " g/trip";
+            label_CO_Total.Text      =   parseResourceToString(CO_Total) + " g/trip";
             label_NOx_Total.Text     =   parseResourceToString(NOx_Total) + " g/trip";
-            label_PM10_Total.Text     =   parseResourceToString(PM10_Total) + " g/trip";
-            label_PM25_Total.Text     =   parseResourceToString(PM25_Total) + " g/trip";
+            label_PM10_Total.Text    =   parseResourceToString(PM10_Total) + " g/trip";
+            label_PM25_Total.Text    =   parseResourceToString(PM25_Total) + " g/trip";
             label_SOx_Total.Text     =   parseResourceToString(SOx_Total) + " g/trip";
             label_CH4_Total.Text     =   parseResourceToString(CH4_Total) + " g/trip";
             label_CO2_Total.Text     =   parseResourceToString(CO2_Total) + " g/trip";
             label_N2O_Total.Text     =   parseResourceToString(N2O_Total) + " g/trip";
 
             // Title
-            label_Main_Fuel_Type.Text  =   fuelUsed;
-            label_Aux_Fuel_Type.Text =   auxFuelUsed;
+            label_Main_Fuel_Type.Text   =   fuelUsed;
+            label_Aux_Fuel_Type.Text    =   auxFuelUsed;
 
             // Calculating greenhouse gas using Global Warming Potential
             Total_GHG_WTP    =   (CO2_WTP * te.CO2_GWP) + (CH4_WTP * te.CH4_GWP) + (N2O_WTP * te.N2O_GWP) + (VOC_WTP * te.VOC_GWP) + (CO_WTP * te.CO_GWP) + (NOx_WTP * te.NO2_GWP);
@@ -890,8 +891,10 @@ namespace TEAMSModule
         {
             // Matches the series collection already outlined in the designer.
             string[] seriesArray     =   { "WellToPump", "VesselOperation" };
+
             // Set the title of the graph to the passed in string title.
             graph.Titles[0].Text     =   te.VesselTypeID + "\nMain Engine: " + fuelUsed + "\nAuxiliary Engine: " + auxFuelUsed;
+
             // Iterate through both of the series.
             for (int i = 0; i < seriesArray.Length; i++)
             {
@@ -926,7 +929,7 @@ namespace TEAMSModule
             SaveFile.Filter   =   "Excel File|.xlsx";
             SaveFile.Title    =   "Save TEAMS Results to an Excel File";
             DialogResult save_result =   SaveFile.ShowDialog();
-            // TODO: IMPLEMENT ERROR CHECKING AND HANDLING
+
             string filePath  =   SaveFile.FileName;
 
             // If user cancels the save, do nothing
@@ -1115,11 +1118,11 @@ namespace TEAMSModule
         // Reset button puts everything back to the original default
         private void ResetButton_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you wish to reset the form?", "Reset Results", MessageBoxButtons.YesNo);
+            DialogResult result     =   MessageBox.Show("Are you sure you wish to reset the form?", "Reset Results", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                GREETFormattedResults newWindow  =   new GREETFormattedResults(te);
+                GREETFormattedResults newWindow     =   new GREETFormattedResults(te);
                 newWindow.Show();
             }
 

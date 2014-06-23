@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashPage));
-            this.button1 = new System.Windows.Forms.Button();
+            this.StartButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // StartButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(140)))), ((int)(((byte)(51)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(250, 500);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 50);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.StartButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(140)))), ((int)(((byte)(51)))));
+            this.StartButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.StartButton.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.StartButton.Location = new System.Drawing.Point(250, 500);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(200, 50);
+            this.StartButton.TabIndex = 2;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = false;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // SplashPage
             // 
@@ -54,7 +54,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(684, 662);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.StartButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(700, 700);
@@ -68,6 +68,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button StartButton;
     }
 }

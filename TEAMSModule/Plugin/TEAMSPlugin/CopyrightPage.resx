@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
+  <data name="Copyright_Textbox.Text" xml:space="preserve">
     <value>COPYRIGHT
 
 The Total Energy and Emissions Analysis in Marine Systems (TEAMS) Model is derived from the Greenhouse Gas and Regulated Energy Use and Emissions in Transportion (GREET) model developed by the University of Chicago.  TEAMS used the following workbook tabs in the GREET source code, Version 1.6 with significant modification: EF, Fuel_Specs, T&amp;D, Petroleum, NG, Ag_Inputs, and BD. TEAMS used the following workbook tabs in the GREET source code, Version 1.6 with little to no modification: Coal, Uranium, and Electric.  

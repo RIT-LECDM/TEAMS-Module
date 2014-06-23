@@ -21,7 +21,7 @@ namespace TEAMSModule
         /// The user clicks "Start".
         /// The form closes and the CopyrightPage form is loaded.
         /// </summary>
-        private void button1_Click(object sender, EventArgs e)
+        private void StartButton_Click(object sender, EventArgs e)
         {
             Copyright c = new Copyright();
             this.Close();
