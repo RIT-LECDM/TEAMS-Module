@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TEAMS));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.runSimulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.menu_strip = new System.Windows.Forms.MenuStrip();
+            this.file_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.file_new_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.file_exit_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.run_menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.engine_tabs = new System.Windows.Forms.TabControl();
+            this.tab_Main = new System.Windows.Forms.TabPage();
             this.label25 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label_Main_Global_Warming_Potentials = new System.Windows.Forms.Label();
+            this.panel_Main_GWPs = new System.Windows.Forms.Panel();
             this.updown_NO2_GWP = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label_Main_GWP_NOX = new System.Windows.Forms.Label();
             this.updown_CO_GWP = new System.Windows.Forms.NumericUpDown();
-            this.label21 = new System.Windows.Forms.Label();
+            this.label_Main_GWP_CO = new System.Windows.Forms.Label();
             this.updown_VOC_GWP = new System.Windows.Forms.NumericUpDown();
-            this.label22 = new System.Windows.Forms.Label();
+            this.label_Main_GWP_VOC = new System.Windows.Forms.Label();
             this.updown_N2O_GWP = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
+            this.label_Main_GWP_N2O = new System.Windows.Forms.Label();
             this.updown_CH4_GWP = new System.Windows.Forms.NumericUpDown();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label_Main_GWP_CH4 = new System.Windows.Forms.Label();
             this.updown_CO2_GWP = new System.Windows.Forms.NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
+            this.label_Main_GWP_CO2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label30 = new System.Windows.Forms.Label();
+            this.Main_ULSD_Label = new System.Windows.Forms.Label();
             this.Ult_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Ult_N2O = new System.Windows.Forms.NumericUpDown();
             this.Ult_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -60,7 +60,7 @@
             this.Ult_VOC = new System.Windows.Forms.NumericUpDown();
             this.Ult_CO = new System.Windows.Forms.NumericUpDown();
             this.Ult_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label29 = new System.Windows.Forms.Label();
+            this.Main_Biodiesel_Label = new System.Windows.Forms.Label();
             this.Bio_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Bio_N2O = new System.Windows.Forms.NumericUpDown();
             this.Bio_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -68,7 +68,7 @@
             this.Bio_VOC = new System.Windows.Forms.NumericUpDown();
             this.Bio_CO = new System.Windows.Forms.NumericUpDown();
             this.Bio_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label28 = new System.Windows.Forms.Label();
+            this.Main_Fischer_Label = new System.Windows.Forms.Label();
             this.Fis_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Fis_N2O = new System.Windows.Forms.NumericUpDown();
             this.Fis_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -76,7 +76,7 @@
             this.Fis_VOC = new System.Windows.Forms.NumericUpDown();
             this.Fis_CO = new System.Windows.Forms.NumericUpDown();
             this.Fis_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label27 = new System.Windows.Forms.Label();
+            this.Main_Natural_Gas_Label = new System.Windows.Forms.Label();
             this.Nat_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Nat_N2O = new System.Windows.Forms.NumericUpDown();
             this.Nat_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -84,7 +84,7 @@
             this.Nat_VOC = new System.Windows.Forms.NumericUpDown();
             this.Nat_CO = new System.Windows.Forms.NumericUpDown();
             this.Nat_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Main_Diesel_Label = new System.Windows.Forms.Label();
             this.Die_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Die_N2O = new System.Windows.Forms.NumericUpDown();
             this.Die_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -92,35 +92,35 @@
             this.Die_VOC = new System.Windows.Forms.NumericUpDown();
             this.Die_CO = new System.Windows.Forms.NumericUpDown();
             this.Die_NOX = new System.Windows.Forms.NumericUpDown();
-            this.Res_Oil_Label = new System.Windows.Forms.Label();
+            this.Main_Residual_Oil_Label = new System.Windows.Forms.Label();
             this.Res_CH4 = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label_Main_Inputs_CH4 = new System.Windows.Forms.Label();
             this.Res_N2O = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label_Main_Inputs_N2O = new System.Windows.Forms.Label();
             this.Res_PM25 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label_Main_Inputs_PM25 = new System.Windows.Forms.Label();
             this.Res_PM10 = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label_Main_Inputs_PM10 = new System.Windows.Forms.Label();
             this.Res_VOC = new System.Windows.Forms.NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label_Main_Inputs_VOC = new System.Windows.Forms.Label();
             this.Res_CO = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_Main_Inputs_CO = new System.Windows.Forms.Label();
             this.Res_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label179 = new System.Windows.Forms.Label();
-            this.label180 = new System.Windows.Forms.Label();
+            this.label_Main_Inputs_NOX = new System.Windows.Forms.Label();
+            this.label_Main_Engine_Inputs = new System.Windows.Forms.Label();
+            this.label_Main_Baseline_Fuel_Consumption = new System.Windows.Forms.Label();
+            this.label_Main_Gallon = new System.Windows.Forms.Label();
             this.updown_GALLON = new System.Windows.Forms.NumericUpDown();
-            this.label181 = new System.Windows.Forms.Label();
+            this.label_Main_mmbtu_In = new System.Windows.Forms.Label();
             this.updown_MMBTU_In = new System.Windows.Forms.NumericUpDown();
             this.updown_MMBTU_Out = new System.Windows.Forms.NumericUpDown();
             this.updown_KW_HR_Out = new System.Windows.Forms.NumericUpDown();
             this.updown_Engine_Efficiency = new System.Windows.Forms.NumericUpDown();
-            this.label182 = new System.Windows.Forms.Label();
-            this.label183 = new System.Windows.Forms.Label();
-            this.label184 = new System.Windows.Forms.Label();
-            this.label178 = new System.Windows.Forms.Label();
-            this.label172 = new System.Windows.Forms.Label();
+            this.label_Main_mmbtu_Out = new System.Windows.Forms.Label();
+            this.label_Main_KWH_Out = new System.Windows.Forms.Label();
+            this.label_Main_Engine_Efficiency = new System.Windows.Forms.Label();
+            this.label_Main_Fuel_Calculations = new System.Windows.Forms.Label();
+            this.label_Main_Energy_Total = new System.Windows.Forms.Label();
             this.updown_EP_Total = new System.Windows.Forms.NumericUpDown();
             this.updown_EP_Full_Cruise = new System.Windows.Forms.NumericUpDown();
             this.updown_HP_Full_Cruise = new System.Windows.Forms.NumericUpDown();
@@ -141,62 +141,62 @@
             this.updown_HP_Maneuvering = new System.Windows.Forms.NumericUpDown();
             this.updown_Time_Maneuvering = new System.Windows.Forms.NumericUpDown();
             this.updown_Percent_Maneuvering = new System.Windows.Forms.NumericUpDown();
-            this.label166 = new System.Windows.Forms.Label();
+            this.label_Main_Energy_Production = new System.Windows.Forms.Label();
             this.updown_EP_Idle = new System.Windows.Forms.NumericUpDown();
-            this.label165 = new System.Windows.Forms.Label();
+            this.label_Main_HP_Per_Engine = new System.Windows.Forms.Label();
             this.updown_HP_Idle = new System.Windows.Forms.NumericUpDown();
             this.label160 = new System.Windows.Forms.Label();
             this.updown_Horsepower_Idle = new System.Windows.Forms.NumericUpDown();
             this.updown_Time_Idle = new System.Windows.Forms.NumericUpDown();
             this.updown_Percent_Idle = new System.Windows.Forms.NumericUpDown();
-            this.label161 = new System.Windows.Forms.Label();
-            this.label162 = new System.Windows.Forms.Label();
-            this.label163 = new System.Windows.Forms.Label();
-            this.label164 = new System.Windows.Forms.Label();
+            this.label_Main_HP_Load_Factor = new System.Windows.Forms.Label();
+            this.label_Main_Time_Per_Mode = new System.Windows.Forms.Label();
+            this.label_Main_Percent_In_Mode = new System.Windows.Forms.Label();
+            this.label_Main_Engine_Char_Per_Mode = new System.Windows.Forms.Label();
             this.updown_Tot_Trip_Hours = new System.Windows.Forms.NumericUpDown();
-            this.label155 = new System.Windows.Forms.Label();
+            this.label_Main_Time_Total = new System.Windows.Forms.Label();
             this.updown_Trip_Time_Minutes = new System.Windows.Forms.NumericUpDown();
             this.updown_Trip_Time_Hours = new System.Windows.Forms.NumericUpDown();
             this.updown_Total_Trip_Distance = new System.Windows.Forms.NumericUpDown();
-            this.label157 = new System.Windows.Forms.Label();
-            this.label158 = new System.Windows.Forms.Label();
-            this.label159 = new System.Windows.Forms.Label();
-            this.label150 = new System.Windows.Forms.Label();
+            this.label_Main_Time_Minutes = new System.Windows.Forms.Label();
+            this.label_Main_Time_Hours = new System.Windows.Forms.Label();
+            this.label_Main_Total_Trip_Distance = new System.Windows.Forms.Label();
+            this.label_Main_Total_Distance_And_Time = new System.Windows.Forms.Label();
             this.textBox_Vessel_Type = new System.Windows.Forms.TextBox();
-            this.label148 = new System.Windows.Forms.Label();
+            this.label_Main_Vessel_ID = new System.Windows.Forms.Label();
             this.updown_Tot_Onboard_HP = new System.Windows.Forms.NumericUpDown();
             this.updown_Single_Engine_HP = new System.Windows.Forms.NumericUpDown();
             this.updown_Number_Of_Engines = new System.Windows.Forms.NumericUpDown();
-            this.label146 = new System.Windows.Forms.Label();
-            this.label147 = new System.Windows.Forms.Label();
-            this.label149 = new System.Windows.Forms.Label();
-            this.label145 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label_Main_Total_HP = new System.Windows.Forms.Label();
+            this.label_Main_Single_Engine_HP = new System.Windows.Forms.Label();
+            this.label_Main_Num_Engines = new System.Windows.Forms.Label();
+            this.label_Main_Engine_Vars = new System.Windows.Forms.Label();
+            this.panel_Main_Engine_Vars = new System.Windows.Forms.Panel();
+            this.panel_Main_Trip_Distance_Time = new System.Windows.Forms.Panel();
+            this.panel_Main_Engine_Chars = new System.Windows.Forms.Panel();
+            this.label_Main_Percent_10 = new System.Windows.Forms.Label();
+            this.label_Main_Percent_9 = new System.Windows.Forms.Label();
+            this.label_Main_Percent_8 = new System.Windows.Forms.Label();
+            this.label_Main_Percent_7 = new System.Windows.Forms.Label();
+            this.label_Main_Percent_6 = new System.Windows.Forms.Label();
+            this.label_Main_Percent_5 = new System.Windows.Forms.Label();
+            this.label_Main_Percent_4 = new System.Windows.Forms.Label();
+            this.label_Main_Percent_3 = new System.Windows.Forms.Label();
+            this.label_Main_Percent_2 = new System.Windows.Forms.Label();
+            this.label_Main_Percent_1 = new System.Windows.Forms.Label();
+            this.text_Main_Mode_5 = new System.Windows.Forms.TextBox();
+            this.text_Main_Mode_4 = new System.Windows.Forms.TextBox();
+            this.text_Main_Mode_3 = new System.Windows.Forms.TextBox();
+            this.text_Main_Mode_2 = new System.Windows.Forms.TextBox();
+            this.text_Main_Mode_1 = new System.Windows.Forms.TextBox();
             this.updown_Horsepower_Maneuvering = new System.Windows.Forms.NumericUpDown();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label46 = new System.Windows.Forms.Label();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.panel_Main_Fuel_Calculations = new System.Windows.Forms.Panel();
+            this.label_Main_Percent_11 = new System.Windows.Forms.Label();
+            this.tab_Aux = new System.Windows.Forms.TabPage();
+            this.label_Aux_Emissions_Calc_Inputs = new System.Windows.Forms.Label();
+            this.panel_Aux_Emissions_Input = new System.Windows.Forms.Panel();
+            this.Aux_Residual_Oil_Label = new System.Windows.Forms.Label();
+            this.Aux_ULSD_Label = new System.Windows.Forms.Label();
             this.Aux_Ult_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Aux_Ult_N2O = new System.Windows.Forms.NumericUpDown();
             this.Aux_Ult_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -204,7 +204,7 @@
             this.Aux_Ult_VOC = new System.Windows.Forms.NumericUpDown();
             this.Aux_Ult_CO = new System.Windows.Forms.NumericUpDown();
             this.Aux_Ult_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label31 = new System.Windows.Forms.Label();
+            this.Aux_Biodiesel_Label = new System.Windows.Forms.Label();
             this.Aux_Bio_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Aux_Bio_N2O = new System.Windows.Forms.NumericUpDown();
             this.Aux_Bio_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -212,7 +212,7 @@
             this.Aux_Bio_VOC = new System.Windows.Forms.NumericUpDown();
             this.Aux_Bio_CO = new System.Windows.Forms.NumericUpDown();
             this.Aux_Bio_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label32 = new System.Windows.Forms.Label();
+            this.Aux_Fischer_Label = new System.Windows.Forms.Label();
             this.Aux_Fis_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Aux_Fis_N2O = new System.Windows.Forms.NumericUpDown();
             this.Aux_Fis_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -220,7 +220,7 @@
             this.Aux_Fis_VOC = new System.Windows.Forms.NumericUpDown();
             this.Aux_Fis_CO = new System.Windows.Forms.NumericUpDown();
             this.Aux_Fis_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label33 = new System.Windows.Forms.Label();
+            this.Aux_Natural_Gas_Label = new System.Windows.Forms.Label();
             this.Aux_Nat_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Aux_Nat_N2O = new System.Windows.Forms.NumericUpDown();
             this.Aux_Nat_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -228,7 +228,7 @@
             this.Aux_Nat_VOC = new System.Windows.Forms.NumericUpDown();
             this.Aux_Nat_CO = new System.Windows.Forms.NumericUpDown();
             this.Aux_Nat_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label34 = new System.Windows.Forms.Label();
+            this.Aux_Diesel_Label = new System.Windows.Forms.Label();
             this.Aux_Die_CH4 = new System.Windows.Forms.NumericUpDown();
             this.Aux_Die_N2O = new System.Windows.Forms.NumericUpDown();
             this.Aux_Die_PM25 = new System.Windows.Forms.NumericUpDown();
@@ -237,64 +237,64 @@
             this.Aux_Die_CO = new System.Windows.Forms.NumericUpDown();
             this.Aux_Die_NOX = new System.Windows.Forms.NumericUpDown();
             this.Aux_Res_CH4 = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label_Aux_CH4 = new System.Windows.Forms.Label();
             this.Aux_Res_N2O = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label_Aux_N2O = new System.Windows.Forms.Label();
             this.Aux_Res_PM25 = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label_Aux_PM25 = new System.Windows.Forms.Label();
             this.Aux_Res_PM10 = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label_Aux_PM10 = new System.Windows.Forms.Label();
             this.Aux_Res_VOC = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label_Aux_VOC = new System.Windows.Forms.Label();
             this.Aux_Res_CO = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label_Aux_CO = new System.Windows.Forms.Label();
             this.Aux_Res_NOX = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label230 = new System.Windows.Forms.Label();
+            this.label_Aux_NOX = new System.Windows.Forms.Label();
+            this.label_Aux_Gallon = new System.Windows.Forms.Label();
             this.updown_AUX_GALLON = new System.Windows.Forms.NumericUpDown();
-            this.label231 = new System.Windows.Forms.Label();
+            this.label_Aux_mmbtu_In = new System.Windows.Forms.Label();
             this.updown_AUX_MMBTU_In = new System.Windows.Forms.NumericUpDown();
             this.updown_AUX_KW_HR_Out = new System.Windows.Forms.NumericUpDown();
             this.updown_Aux_Engine_Efficiency = new System.Windows.Forms.NumericUpDown();
-            this.label232 = new System.Windows.Forms.Label();
-            this.label233 = new System.Windows.Forms.Label();
-            this.label234 = new System.Windows.Forms.Label();
-            this.label235 = new System.Windows.Forms.Label();
-            this.label224 = new System.Windows.Forms.Label();
+            this.label_Aux_mmbtu_Out = new System.Windows.Forms.Label();
+            this.label_Aux_KHW_Out = new System.Windows.Forms.Label();
+            this.label_Aux_Engine_Efficiency = new System.Windows.Forms.Label();
+            this.label_Aux_Fuel_Calc = new System.Windows.Forms.Label();
+            this.label_Aux_Total_Energy = new System.Windows.Forms.Label();
             this.updown_Tot_AUX_Energy = new System.Windows.Forms.NumericUpDown();
-            this.label223 = new System.Windows.Forms.Label();
+            this.label_Aux_Active_HP = new System.Windows.Forms.Label();
             this.updown_AUX_Active_HP = new System.Windows.Forms.NumericUpDown();
-            this.label222 = new System.Windows.Forms.Label();
+            this.label_Aux_HP_Load_Factor = new System.Windows.Forms.Label();
             this.updown_Aux_HP_Load_Factor = new System.Windows.Forms.NumericUpDown();
-            this.label221 = new System.Windows.Forms.Label();
+            this.label_Aux_Time_Active = new System.Windows.Forms.Label();
             this.updown_AUX_Time_Active = new System.Windows.Forms.NumericUpDown();
-            this.label220 = new System.Windows.Forms.Label();
+            this.label_Aux_Percent_Active = new System.Windows.Forms.Label();
             this.updown_Aux_Percent_Trip_Active = new System.Windows.Forms.NumericUpDown();
-            this.label219 = new System.Windows.Forms.Label();
-            this.label218 = new System.Windows.Forms.Label();
-            this.label217 = new System.Windows.Forms.Label();
-            this.label216 = new System.Windows.Forms.Label();
-            this.label215 = new System.Windows.Forms.Label();
+            this.label_Aux_Engine_Chars = new System.Windows.Forms.Label();
+            this.label_Aux_Total_Onboard_HP = new System.Windows.Forms.Label();
+            this.label_Aux_Engine_Rated_HP = new System.Windows.Forms.Label();
+            this.label_Aux_Num_Engines_In_Use = new System.Windows.Forms.Label();
+            this.label_Aux_Num_Engines_Onboard = new System.Windows.Forms.Label();
             this.updown_Tot_Onboard_AUX_HP = new System.Windows.Forms.NumericUpDown();
             this.updown_Aux_HP_Per_Engine = new System.Windows.Forms.NumericUpDown();
             this.updown_Aux_Engines_In_Use = new System.Windows.Forms.NumericUpDown();
             this.updown_Aux_Number_Engines = new System.Windows.Forms.NumericUpDown();
-            this.label214 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label49 = new System.Windows.Forms.Label();
+            this.label_Aux_Engine_Vars = new System.Windows.Forms.Label();
+            this.panel_Aux_Engine_Vars = new System.Windows.Forms.Panel();
+            this.panel_Aux_Engine_Chars = new System.Windows.Forms.Panel();
+            this.label_Aux_Percent_2 = new System.Windows.Forms.Label();
+            this.label_Aux_Percent_1 = new System.Windows.Forms.Label();
+            this.panel_Aux_Fuel_Calc = new System.Windows.Forms.Panel();
+            this.label_Aux_Percent_3 = new System.Windows.Forms.Label();
             this.label229 = new System.Windows.Forms.Label();
             this.updown_AUX_MMBTU_Out = new System.Windows.Forms.NumericUpDown();
-            this.Submit_Button = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.Reset = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.Recalc_Button = new System.Windows.Forms.Button();
+            this.Instructions_Text_Box = new System.Windows.Forms.RichTextBox();
+            this.ResetButton = new System.Windows.Forms.Button();
+            this.menu_strip.SuspendLayout();
+            this.engine_tabs.SuspendLayout();
+            this.tab_Main.SuspendLayout();
+            this.panel_Main_GWPs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updown_NO2_GWP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_CO_GWP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_VOC_GWP)).BeginInit();
@@ -381,11 +381,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_HP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Single_Engine_HP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Number_Of_Engines)).BeginInit();
-            this.panel14.SuspendLayout();
+            this.panel_Main_Engine_Chars.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Maneuvering)).BeginInit();
-            this.panel16.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel_Main_Fuel_Calculations.SuspendLayout();
+            this.tab_Aux.SuspendLayout();
+            this.panel_Aux_Emissions_Input.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_CH4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_N2O)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_PM25)).BeginInit();
@@ -441,149 +441,149 @@
             ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Per_Engine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engines_In_Use)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Number_Engines)).BeginInit();
-            this.panel21.SuspendLayout();
-            this.panel23.SuspendLayout();
+            this.panel_Aux_Engine_Chars.SuspendLayout();
+            this.panel_Aux_Fuel_Calc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updown_AUX_MMBTU_Out)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menu_strip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.runSimulationToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(990, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menu_strip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.file_menu,
+            this.run_menu});
+            this.menu_strip.Location = new System.Drawing.Point(0, 0);
+            this.menu_strip.Name = "menu_strip";
+            this.menu_strip.Size = new System.Drawing.Size(990, 24);
+            this.menu_strip.TabIndex = 0;
+            this.menu_strip.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
+            // file_menu
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.file_menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.file_new_menu,
+            this.file_exit_menu});
+            this.file_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.file_menu.Name = "file_menu";
+            this.file_menu.Size = new System.Drawing.Size(39, 20);
+            this.file_menu.Text = "File";
             // 
-            // newToolStripMenuItem
+            // file_new_menu
             // 
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
-            this.newToolStripMenuItem.Text = "New";
-            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            this.file_new_menu.Name = "file_new_menu";
+            this.file_new_menu.Size = new System.Drawing.Size(152, 22);
+            this.file_new_menu.Text = "New";
+            this.file_new_menu.Click += new System.EventHandler(this.file_new_menu_Click);
             // 
-            // exitToolStripMenuItem
+            // file_exit_menu
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.file_exit_menu.Name = "file_exit_menu";
+            this.file_exit_menu.Size = new System.Drawing.Size(152, 22);
+            this.file_exit_menu.Text = "Exit";
+            this.file_exit_menu.Click += new System.EventHandler(this.file_exit_menu_Click);
             // 
-            // runSimulationToolStripMenuItem
+            // run_menu
             // 
-            this.runSimulationToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.runSimulationToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.runSimulationToolStripMenuItem.Name = "runSimulationToolStripMenuItem";
-            this.runSimulationToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.runSimulationToolStripMenuItem.Text = "Run Simulation";
-            this.runSimulationToolStripMenuItem.Click += new System.EventHandler(this.runSimulationToolStripMenuItem_Click);
+            this.run_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.run_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.run_menu.Name = "run_menu";
+            this.run_menu.Size = new System.Drawing.Size(104, 20);
+            this.run_menu.Text = "Run Simulation";
+            this.run_menu.Click += new System.EventHandler(this.run_menu_Click);
             // 
-            // tabControl1
+            // engine_tabs
             // 
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 28);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(760, 636);
-            this.tabControl1.TabIndex = 1;
+            this.engine_tabs.Controls.Add(this.tab_Main);
+            this.engine_tabs.Controls.Add(this.tab_Aux);
+            this.engine_tabs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.engine_tabs.Location = new System.Drawing.Point(0, 28);
+            this.engine_tabs.Name = "engine_tabs";
+            this.engine_tabs.SelectedIndex = 0;
+            this.engine_tabs.Size = new System.Drawing.Size(760, 636);
+            this.engine_tabs.TabIndex = 1;
             // 
-            // tabPage5
+            // tab_Main
             // 
-            this.tabPage5.AutoScroll = true;
-            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPage5.Controls.Add(this.label25);
-            this.tabPage5.Controls.Add(this.label19);
-            this.tabPage5.Controls.Add(this.panel3);
-            this.tabPage5.Controls.Add(this.panel1);
-            this.tabPage5.Controls.Add(this.label1);
-            this.tabPage5.Controls.Add(this.label179);
-            this.tabPage5.Controls.Add(this.label180);
-            this.tabPage5.Controls.Add(this.updown_GALLON);
-            this.tabPage5.Controls.Add(this.label181);
-            this.tabPage5.Controls.Add(this.updown_MMBTU_In);
-            this.tabPage5.Controls.Add(this.updown_MMBTU_Out);
-            this.tabPage5.Controls.Add(this.updown_KW_HR_Out);
-            this.tabPage5.Controls.Add(this.updown_Engine_Efficiency);
-            this.tabPage5.Controls.Add(this.label182);
-            this.tabPage5.Controls.Add(this.label183);
-            this.tabPage5.Controls.Add(this.label184);
-            this.tabPage5.Controls.Add(this.label178);
-            this.tabPage5.Controls.Add(this.label172);
-            this.tabPage5.Controls.Add(this.updown_EP_Total);
-            this.tabPage5.Controls.Add(this.updown_EP_Full_Cruise);
-            this.tabPage5.Controls.Add(this.updown_HP_Full_Cruise);
-            this.tabPage5.Controls.Add(this.updown_Horsepower_Full_Cruise);
-            this.tabPage5.Controls.Add(this.updown_Time_Full_Cruise);
-            this.tabPage5.Controls.Add(this.updown_Percent_Full_Cruise);
-            this.tabPage5.Controls.Add(this.updown_EP_Slow_Cruise);
-            this.tabPage5.Controls.Add(this.updown_HP_Slow_Cruise);
-            this.tabPage5.Controls.Add(this.updown_Horsepower_Slow_Cruise);
-            this.tabPage5.Controls.Add(this.updown_Time_Slow_Cruise);
-            this.tabPage5.Controls.Add(this.updown_Percent_Slow_Cruise);
-            this.tabPage5.Controls.Add(this.updown_EP_Precautionary);
-            this.tabPage5.Controls.Add(this.updown_HP_Precautionary);
-            this.tabPage5.Controls.Add(this.updown_Horsepower_Precautionary);
-            this.tabPage5.Controls.Add(this.updown_Time_Precautionary);
-            this.tabPage5.Controls.Add(this.updown_Percent_Precautionary);
-            this.tabPage5.Controls.Add(this.updown_EP_Maneuvering);
-            this.tabPage5.Controls.Add(this.updown_HP_Maneuvering);
-            this.tabPage5.Controls.Add(this.updown_Time_Maneuvering);
-            this.tabPage5.Controls.Add(this.updown_Percent_Maneuvering);
-            this.tabPage5.Controls.Add(this.label166);
-            this.tabPage5.Controls.Add(this.updown_EP_Idle);
-            this.tabPage5.Controls.Add(this.label165);
-            this.tabPage5.Controls.Add(this.updown_HP_Idle);
-            this.tabPage5.Controls.Add(this.label160);
-            this.tabPage5.Controls.Add(this.updown_Horsepower_Idle);
-            this.tabPage5.Controls.Add(this.updown_Time_Idle);
-            this.tabPage5.Controls.Add(this.updown_Percent_Idle);
-            this.tabPage5.Controls.Add(this.label161);
-            this.tabPage5.Controls.Add(this.label162);
-            this.tabPage5.Controls.Add(this.label163);
-            this.tabPage5.Controls.Add(this.label164);
-            this.tabPage5.Controls.Add(this.updown_Tot_Trip_Hours);
-            this.tabPage5.Controls.Add(this.label155);
-            this.tabPage5.Controls.Add(this.updown_Trip_Time_Minutes);
-            this.tabPage5.Controls.Add(this.updown_Trip_Time_Hours);
-            this.tabPage5.Controls.Add(this.updown_Total_Trip_Distance);
-            this.tabPage5.Controls.Add(this.label157);
-            this.tabPage5.Controls.Add(this.label158);
-            this.tabPage5.Controls.Add(this.label159);
-            this.tabPage5.Controls.Add(this.label150);
-            this.tabPage5.Controls.Add(this.textBox_Vessel_Type);
-            this.tabPage5.Controls.Add(this.label148);
-            this.tabPage5.Controls.Add(this.updown_Tot_Onboard_HP);
-            this.tabPage5.Controls.Add(this.updown_Single_Engine_HP);
-            this.tabPage5.Controls.Add(this.updown_Number_Of_Engines);
-            this.tabPage5.Controls.Add(this.label146);
-            this.tabPage5.Controls.Add(this.label147);
-            this.tabPage5.Controls.Add(this.label149);
-            this.tabPage5.Controls.Add(this.label145);
-            this.tabPage5.Controls.Add(this.panel12);
-            this.tabPage5.Controls.Add(this.panel13);
-            this.tabPage5.Controls.Add(this.panel14);
-            this.tabPage5.Controls.Add(this.panel16);
-            this.tabPage5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(752, 610);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Main Engine";
+            this.tab_Main.AutoScroll = true;
+            this.tab_Main.BackColor = System.Drawing.SystemColors.Control;
+            this.tab_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tab_Main.Controls.Add(this.label25);
+            this.tab_Main.Controls.Add(this.label_Main_Global_Warming_Potentials);
+            this.tab_Main.Controls.Add(this.panel_Main_GWPs);
+            this.tab_Main.Controls.Add(this.panel1);
+            this.tab_Main.Controls.Add(this.label_Main_Engine_Inputs);
+            this.tab_Main.Controls.Add(this.label_Main_Baseline_Fuel_Consumption);
+            this.tab_Main.Controls.Add(this.label_Main_Gallon);
+            this.tab_Main.Controls.Add(this.updown_GALLON);
+            this.tab_Main.Controls.Add(this.label_Main_mmbtu_In);
+            this.tab_Main.Controls.Add(this.updown_MMBTU_In);
+            this.tab_Main.Controls.Add(this.updown_MMBTU_Out);
+            this.tab_Main.Controls.Add(this.updown_KW_HR_Out);
+            this.tab_Main.Controls.Add(this.updown_Engine_Efficiency);
+            this.tab_Main.Controls.Add(this.label_Main_mmbtu_Out);
+            this.tab_Main.Controls.Add(this.label_Main_KWH_Out);
+            this.tab_Main.Controls.Add(this.label_Main_Engine_Efficiency);
+            this.tab_Main.Controls.Add(this.label_Main_Fuel_Calculations);
+            this.tab_Main.Controls.Add(this.label_Main_Energy_Total);
+            this.tab_Main.Controls.Add(this.updown_EP_Total);
+            this.tab_Main.Controls.Add(this.updown_EP_Full_Cruise);
+            this.tab_Main.Controls.Add(this.updown_HP_Full_Cruise);
+            this.tab_Main.Controls.Add(this.updown_Horsepower_Full_Cruise);
+            this.tab_Main.Controls.Add(this.updown_Time_Full_Cruise);
+            this.tab_Main.Controls.Add(this.updown_Percent_Full_Cruise);
+            this.tab_Main.Controls.Add(this.updown_EP_Slow_Cruise);
+            this.tab_Main.Controls.Add(this.updown_HP_Slow_Cruise);
+            this.tab_Main.Controls.Add(this.updown_Horsepower_Slow_Cruise);
+            this.tab_Main.Controls.Add(this.updown_Time_Slow_Cruise);
+            this.tab_Main.Controls.Add(this.updown_Percent_Slow_Cruise);
+            this.tab_Main.Controls.Add(this.updown_EP_Precautionary);
+            this.tab_Main.Controls.Add(this.updown_HP_Precautionary);
+            this.tab_Main.Controls.Add(this.updown_Horsepower_Precautionary);
+            this.tab_Main.Controls.Add(this.updown_Time_Precautionary);
+            this.tab_Main.Controls.Add(this.updown_Percent_Precautionary);
+            this.tab_Main.Controls.Add(this.updown_EP_Maneuvering);
+            this.tab_Main.Controls.Add(this.updown_HP_Maneuvering);
+            this.tab_Main.Controls.Add(this.updown_Time_Maneuvering);
+            this.tab_Main.Controls.Add(this.updown_Percent_Maneuvering);
+            this.tab_Main.Controls.Add(this.label_Main_Energy_Production);
+            this.tab_Main.Controls.Add(this.updown_EP_Idle);
+            this.tab_Main.Controls.Add(this.label_Main_HP_Per_Engine);
+            this.tab_Main.Controls.Add(this.updown_HP_Idle);
+            this.tab_Main.Controls.Add(this.label160);
+            this.tab_Main.Controls.Add(this.updown_Horsepower_Idle);
+            this.tab_Main.Controls.Add(this.updown_Time_Idle);
+            this.tab_Main.Controls.Add(this.updown_Percent_Idle);
+            this.tab_Main.Controls.Add(this.label_Main_HP_Load_Factor);
+            this.tab_Main.Controls.Add(this.label_Main_Time_Per_Mode);
+            this.tab_Main.Controls.Add(this.label_Main_Percent_In_Mode);
+            this.tab_Main.Controls.Add(this.label_Main_Engine_Char_Per_Mode);
+            this.tab_Main.Controls.Add(this.updown_Tot_Trip_Hours);
+            this.tab_Main.Controls.Add(this.label_Main_Time_Total);
+            this.tab_Main.Controls.Add(this.updown_Trip_Time_Minutes);
+            this.tab_Main.Controls.Add(this.updown_Trip_Time_Hours);
+            this.tab_Main.Controls.Add(this.updown_Total_Trip_Distance);
+            this.tab_Main.Controls.Add(this.label_Main_Time_Minutes);
+            this.tab_Main.Controls.Add(this.label_Main_Time_Hours);
+            this.tab_Main.Controls.Add(this.label_Main_Total_Trip_Distance);
+            this.tab_Main.Controls.Add(this.label_Main_Total_Distance_And_Time);
+            this.tab_Main.Controls.Add(this.textBox_Vessel_Type);
+            this.tab_Main.Controls.Add(this.label_Main_Vessel_ID);
+            this.tab_Main.Controls.Add(this.updown_Tot_Onboard_HP);
+            this.tab_Main.Controls.Add(this.updown_Single_Engine_HP);
+            this.tab_Main.Controls.Add(this.updown_Number_Of_Engines);
+            this.tab_Main.Controls.Add(this.label_Main_Total_HP);
+            this.tab_Main.Controls.Add(this.label_Main_Single_Engine_HP);
+            this.tab_Main.Controls.Add(this.label_Main_Num_Engines);
+            this.tab_Main.Controls.Add(this.label_Main_Engine_Vars);
+            this.tab_Main.Controls.Add(this.panel_Main_Engine_Vars);
+            this.tab_Main.Controls.Add(this.panel_Main_Trip_Distance_Time);
+            this.tab_Main.Controls.Add(this.panel_Main_Engine_Chars);
+            this.tab_Main.Controls.Add(this.panel_Main_Fuel_Calculations);
+            this.tab_Main.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_Main.Location = new System.Drawing.Point(4, 22);
+            this.tab_Main.Name = "tab_Main";
+            this.tab_Main.Size = new System.Drawing.Size(752, 610);
+            this.tab_Main.TabIndex = 4;
+            this.tab_Main.Text = "Main Engine";
             // 
             // label25
             // 
@@ -593,38 +593,38 @@
             this.label25.Size = new System.Drawing.Size(0, 16);
             this.label25.TabIndex = 301;
             // 
-            // label19
+            // label_Main_Global_Warming_Potentials
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(415, 560);
-            this.label19.Name = "label19";
-            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label19.Size = new System.Drawing.Size(193, 18);
-            this.label19.TabIndex = 300;
-            this.label19.Text = "Global Warming Potentials";
+            this.label_Main_Global_Warming_Potentials.AutoSize = true;
+            this.label_Main_Global_Warming_Potentials.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Global_Warming_Potentials.Location = new System.Drawing.Point(415, 560);
+            this.label_Main_Global_Warming_Potentials.Name = "label_Main_Global_Warming_Potentials";
+            this.label_Main_Global_Warming_Potentials.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_Main_Global_Warming_Potentials.Size = new System.Drawing.Size(193, 18);
+            this.label_Main_Global_Warming_Potentials.TabIndex = 300;
+            this.label_Main_Global_Warming_Potentials.Text = "Global Warming Potentials";
             // 
-            // panel3
+            // panel_Main_GWPs
             // 
-            this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.updown_NO2_GWP);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.updown_CO_GWP);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.updown_VOC_GWP);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.updown_N2O_GWP);
-            this.panel3.Controls.Add(this.label23);
-            this.panel3.Controls.Add(this.updown_CH4_GWP);
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.updown_CO2_GWP);
-            this.panel3.Controls.Add(this.label26);
-            this.panel3.Location = new System.Drawing.Point(418, 580);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(196, 188);
-            this.panel3.TabIndex = 299;
+            this.panel_Main_GWPs.BackColor = System.Drawing.Color.Silver;
+            this.panel_Main_GWPs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Main_GWPs.Controls.Add(this.updown_NO2_GWP);
+            this.panel_Main_GWPs.Controls.Add(this.label_Main_GWP_NOX);
+            this.panel_Main_GWPs.Controls.Add(this.updown_CO_GWP);
+            this.panel_Main_GWPs.Controls.Add(this.label_Main_GWP_CO);
+            this.panel_Main_GWPs.Controls.Add(this.updown_VOC_GWP);
+            this.panel_Main_GWPs.Controls.Add(this.label_Main_GWP_VOC);
+            this.panel_Main_GWPs.Controls.Add(this.updown_N2O_GWP);
+            this.panel_Main_GWPs.Controls.Add(this.label_Main_GWP_N2O);
+            this.panel_Main_GWPs.Controls.Add(this.updown_CH4_GWP);
+            this.panel_Main_GWPs.Controls.Add(this.label_Main_GWP_CH4);
+            this.panel_Main_GWPs.Controls.Add(this.updown_CO2_GWP);
+            this.panel_Main_GWPs.Controls.Add(this.label_Main_GWP_CO2);
+            this.panel_Main_GWPs.Location = new System.Drawing.Point(418, 580);
+            this.panel_Main_GWPs.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Main_GWPs.Name = "panel_Main_GWPs";
+            this.panel_Main_GWPs.Size = new System.Drawing.Size(196, 188);
+            this.panel_Main_GWPs.TabIndex = 299;
             // 
             // updown_NO2_GWP
             // 
@@ -637,20 +637,20 @@
             370409800,
             542101,
             0});
-            this.updown_NO2_GWP.Name = "numericUpDown16";
+            this.updown_NO2_GWP.Name = "updown_NO2_GWP";
             this.updown_NO2_GWP.Size = new System.Drawing.Size(97, 22);
             this.updown_NO2_GWP.TabIndex = 296;
             // 
-            // label20
+            // label_Main_GWP_NOX
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Silver;
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(2, 144);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(41, 17);
-            this.label20.TabIndex = 295;
-            this.label20.Text = "NOX";
+            this.label_Main_GWP_NOX.AutoSize = true;
+            this.label_Main_GWP_NOX.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_GWP_NOX.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_NOX.Location = new System.Drawing.Point(2, 144);
+            this.label_Main_GWP_NOX.Name = "label_Main_GWP_NOX";
+            this.label_Main_GWP_NOX.Size = new System.Drawing.Size(41, 17);
+            this.label_Main_GWP_NOX.TabIndex = 295;
+            this.label_Main_GWP_NOX.Text = "NOX";
             // 
             // updown_CO_GWP
             // 
@@ -663,20 +663,20 @@
             370409800,
             542101,
             0});
-            this.updown_CO_GWP.Name = "numericUpDown17";
+            this.updown_CO_GWP.Name = "updown_CO_GWP";
             this.updown_CO_GWP.Size = new System.Drawing.Size(97, 22);
             this.updown_CO_GWP.TabIndex = 294;
             // 
-            // label21
+            // label_Main_GWP_CO
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Silver;
-            this.label21.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(2, 118);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(31, 17);
-            this.label21.TabIndex = 293;
-            this.label21.Text = "CO";
+            this.label_Main_GWP_CO.AutoSize = true;
+            this.label_Main_GWP_CO.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_GWP_CO.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_CO.Location = new System.Drawing.Point(2, 118);
+            this.label_Main_GWP_CO.Name = "label_Main_GWP_CO";
+            this.label_Main_GWP_CO.Size = new System.Drawing.Size(31, 17);
+            this.label_Main_GWP_CO.TabIndex = 293;
+            this.label_Main_GWP_CO.Text = "CO";
             // 
             // updown_VOC_GWP
             // 
@@ -689,20 +689,20 @@
             370409800,
             542101,
             0});
-            this.updown_VOC_GWP.Name = "numericUpDown18";
+            this.updown_VOC_GWP.Name = "updown_VOC_GWP";
             this.updown_VOC_GWP.Size = new System.Drawing.Size(97, 22);
             this.updown_VOC_GWP.TabIndex = 292;
             // 
-            // label22
+            // label_Main_GWP_VOC
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Silver;
-            this.label22.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(2, 91);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 17);
-            this.label22.TabIndex = 291;
-            this.label22.Text = "VOC";
+            this.label_Main_GWP_VOC.AutoSize = true;
+            this.label_Main_GWP_VOC.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_GWP_VOC.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_VOC.Location = new System.Drawing.Point(2, 91);
+            this.label_Main_GWP_VOC.Name = "label_Main_GWP_VOC";
+            this.label_Main_GWP_VOC.Size = new System.Drawing.Size(41, 17);
+            this.label_Main_GWP_VOC.TabIndex = 291;
+            this.label_Main_GWP_VOC.Text = "VOC";
             // 
             // updown_N2O_GWP
             // 
@@ -715,20 +715,20 @@
             370409800,
             542101,
             0});
-            this.updown_N2O_GWP.Name = "numericUpDown19";
+            this.updown_N2O_GWP.Name = "updown_N2O_GWP";
             this.updown_N2O_GWP.Size = new System.Drawing.Size(97, 22);
             this.updown_N2O_GWP.TabIndex = 290;
             // 
-            // label23
+            // label_Main_GWP_N2O
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Silver;
-            this.label23.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(2, 64);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(39, 17);
-            this.label23.TabIndex = 289;
-            this.label23.Text = "N2O";
+            this.label_Main_GWP_N2O.AutoSize = true;
+            this.label_Main_GWP_N2O.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_GWP_N2O.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_N2O.Location = new System.Drawing.Point(2, 64);
+            this.label_Main_GWP_N2O.Name = "label_Main_GWP_N2O";
+            this.label_Main_GWP_N2O.Size = new System.Drawing.Size(39, 17);
+            this.label_Main_GWP_N2O.TabIndex = 289;
+            this.label_Main_GWP_N2O.Text = "N2O";
             // 
             // updown_CH4_GWP
             // 
@@ -741,20 +741,20 @@
             370409800,
             542101,
             0});
-            this.updown_CH4_GWP.Name = "numericUpDown20";
+            this.updown_CH4_GWP.Name = "updown_CH4_GWP";
             this.updown_CH4_GWP.Size = new System.Drawing.Size(97, 22);
             this.updown_CH4_GWP.TabIndex = 288;
             // 
-            // label24
+            // label_Main_GWP_CH4
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Silver;
-            this.label24.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(2, 38);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(39, 17);
-            this.label24.TabIndex = 287;
-            this.label24.Text = "CH4";
+            this.label_Main_GWP_CH4.AutoSize = true;
+            this.label_Main_GWP_CH4.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_GWP_CH4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_CH4.Location = new System.Drawing.Point(2, 38);
+            this.label_Main_GWP_CH4.Name = "label_Main_GWP_CH4";
+            this.label_Main_GWP_CH4.Size = new System.Drawing.Size(39, 17);
+            this.label_Main_GWP_CH4.TabIndex = 287;
+            this.label_Main_GWP_CH4.Text = "CH4";
             // 
             // updown_CO2_GWP
             // 
@@ -767,27 +767,27 @@
             370409800,
             542101,
             0});
-            this.updown_CO2_GWP.Name = "numericUpDown21";
+            this.updown_CO2_GWP.Name = "updown_CO2_GWP";
             this.updown_CO2_GWP.Size = new System.Drawing.Size(97, 22);
             this.updown_CO2_GWP.TabIndex = 285;
             // 
-            // label26
+            // label_Main_GWP_CO2
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Silver;
-            this.label26.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(2, 12);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(39, 17);
-            this.label26.TabIndex = 265;
-            this.label26.Text = "CO2";
+            this.label_Main_GWP_CO2.AutoSize = true;
+            this.label_Main_GWP_CO2.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_GWP_CO2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_CO2.Location = new System.Drawing.Point(2, 12);
+            this.label_Main_GWP_CO2.Name = "label_Main_GWP_CO2";
+            this.label_Main_GWP_CO2.Size = new System.Drawing.Size(39, 17);
+            this.label_Main_GWP_CO2.TabIndex = 265;
+            this.label_Main_GWP_CO2.Text = "CO2";
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label30);
+            this.panel1.Controls.Add(this.Main_ULSD_Label);
             this.panel1.Controls.Add(this.Ult_CH4);
             this.panel1.Controls.Add(this.Ult_N2O);
             this.panel1.Controls.Add(this.Ult_PM25);
@@ -795,7 +795,7 @@
             this.panel1.Controls.Add(this.Ult_VOC);
             this.panel1.Controls.Add(this.Ult_CO);
             this.panel1.Controls.Add(this.Ult_NOX);
-            this.panel1.Controls.Add(this.label29);
+            this.panel1.Controls.Add(this.Main_Biodiesel_Label);
             this.panel1.Controls.Add(this.Bio_CH4);
             this.panel1.Controls.Add(this.Bio_N2O);
             this.panel1.Controls.Add(this.Bio_PM25);
@@ -803,7 +803,7 @@
             this.panel1.Controls.Add(this.Bio_VOC);
             this.panel1.Controls.Add(this.Bio_CO);
             this.panel1.Controls.Add(this.Bio_NOX);
-            this.panel1.Controls.Add(this.label28);
+            this.panel1.Controls.Add(this.Main_Fischer_Label);
             this.panel1.Controls.Add(this.Fis_CH4);
             this.panel1.Controls.Add(this.Fis_N2O);
             this.panel1.Controls.Add(this.Fis_PM25);
@@ -811,7 +811,7 @@
             this.panel1.Controls.Add(this.Fis_VOC);
             this.panel1.Controls.Add(this.Fis_CO);
             this.panel1.Controls.Add(this.Fis_NOX);
-            this.panel1.Controls.Add(this.label27);
+            this.panel1.Controls.Add(this.Main_Natural_Gas_Label);
             this.panel1.Controls.Add(this.Nat_CH4);
             this.panel1.Controls.Add(this.Nat_N2O);
             this.panel1.Controls.Add(this.Nat_PM25);
@@ -819,7 +819,7 @@
             this.panel1.Controls.Add(this.Nat_VOC);
             this.panel1.Controls.Add(this.Nat_CO);
             this.panel1.Controls.Add(this.Nat_NOX);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.Main_Diesel_Label);
             this.panel1.Controls.Add(this.Die_CH4);
             this.panel1.Controls.Add(this.Die_N2O);
             this.panel1.Controls.Add(this.Die_PM25);
@@ -827,36 +827,36 @@
             this.panel1.Controls.Add(this.Die_VOC);
             this.panel1.Controls.Add(this.Die_CO);
             this.panel1.Controls.Add(this.Die_NOX);
-            this.panel1.Controls.Add(this.Res_Oil_Label);
+            this.panel1.Controls.Add(this.Main_Residual_Oil_Label);
             this.panel1.Controls.Add(this.Res_CH4);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label_Main_Inputs_CH4);
             this.panel1.Controls.Add(this.Res_N2O);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label_Main_Inputs_N2O);
             this.panel1.Controls.Add(this.Res_PM25);
-            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label_Main_Inputs_PM25);
             this.panel1.Controls.Add(this.Res_PM10);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label_Main_Inputs_PM10);
             this.panel1.Controls.Add(this.Res_VOC);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label_Main_Inputs_VOC);
             this.panel1.Controls.Add(this.Res_CO);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label_Main_Inputs_CO);
             this.panel1.Controls.Add(this.Res_NOX);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label_Main_Inputs_NOX);
             this.panel1.Location = new System.Drawing.Point(11, 818);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(709, 260);
             this.panel1.TabIndex = 284;
             // 
-            // label30
+            // Main_ULSD_Label
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(597, 14);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(103, 34);
-            this.label30.TabIndex = 341;
-            this.label30.Text = "Ultra-low Sulfur\r\nDiesel";
+            this.Main_ULSD_Label.AutoSize = true;
+            this.Main_ULSD_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main_ULSD_Label.Location = new System.Drawing.Point(597, 14);
+            this.Main_ULSD_Label.Name = "Main_ULSD_Label";
+            this.Main_ULSD_Label.Size = new System.Drawing.Size(103, 34);
+            this.Main_ULSD_Label.TabIndex = 341;
+            this.Main_ULSD_Label.Text = "Ultra-low Sulfur\r\nDiesel";
             // 
             // Ult_CH4
             // 
@@ -963,15 +963,15 @@
             this.Ult_NOX.Size = new System.Drawing.Size(97, 22);
             this.Ult_NOX.TabIndex = 334;
             // 
-            // label29
+            // Main_Biodiesel_Label
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(494, 31);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(61, 17);
-            this.label29.TabIndex = 333;
-            this.label29.Text = "Biodiesel";
+            this.Main_Biodiesel_Label.AutoSize = true;
+            this.Main_Biodiesel_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main_Biodiesel_Label.Location = new System.Drawing.Point(494, 31);
+            this.Main_Biodiesel_Label.Name = "Main_Biodiesel_Label";
+            this.Main_Biodiesel_Label.Size = new System.Drawing.Size(61, 17);
+            this.Main_Biodiesel_Label.TabIndex = 333;
+            this.Main_Biodiesel_Label.Text = "Biodiesel";
             // 
             // Bio_CH4
             // 
@@ -1078,15 +1078,15 @@
             this.Bio_NOX.Size = new System.Drawing.Size(97, 22);
             this.Bio_NOX.TabIndex = 326;
             // 
-            // label28
+            // Main_Fischer_Label
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(388, 14);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(106, 34);
-            this.label28.TabIndex = 325;
-            this.label28.Text = "Fischer–Tropsch\r\nDiesel";
+            this.Main_Fischer_Label.AutoSize = true;
+            this.Main_Fischer_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main_Fischer_Label.Location = new System.Drawing.Point(388, 14);
+            this.Main_Fischer_Label.Name = "Main_Fischer_Label";
+            this.Main_Fischer_Label.Size = new System.Drawing.Size(106, 34);
+            this.Main_Fischer_Label.TabIndex = 325;
+            this.Main_Fischer_Label.Text = "Fischer–Tropsch\r\nDiesel";
             // 
             // Fis_CH4
             // 
@@ -1193,15 +1193,15 @@
             this.Fis_NOX.Size = new System.Drawing.Size(97, 22);
             this.Fis_NOX.TabIndex = 318;
             // 
-            // label27
+            // Main_Natural_Gas_Label
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(285, 31);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(79, 17);
-            this.label27.TabIndex = 317;
-            this.label27.Text = "Natural Gas";
+            this.Main_Natural_Gas_Label.AutoSize = true;
+            this.Main_Natural_Gas_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main_Natural_Gas_Label.Location = new System.Drawing.Point(285, 31);
+            this.Main_Natural_Gas_Label.Name = "Main_Natural_Gas_Label";
+            this.Main_Natural_Gas_Label.Size = new System.Drawing.Size(79, 17);
+            this.Main_Natural_Gas_Label.TabIndex = 317;
+            this.Main_Natural_Gas_Label.Text = "Natural Gas";
             // 
             // Nat_CH4
             // 
@@ -1308,15 +1308,15 @@
             this.Nat_NOX.Size = new System.Drawing.Size(97, 22);
             this.Nat_NOX.TabIndex = 310;
             // 
-            // label3
+            // Main_Diesel_Label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(182, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
-            this.label3.TabIndex = 309;
-            this.label3.Text = "Diesel";
+            this.Main_Diesel_Label.AutoSize = true;
+            this.Main_Diesel_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main_Diesel_Label.Location = new System.Drawing.Point(182, 31);
+            this.Main_Diesel_Label.Name = "Main_Diesel_Label";
+            this.Main_Diesel_Label.Size = new System.Drawing.Size(45, 17);
+            this.Main_Diesel_Label.TabIndex = 309;
+            this.Main_Diesel_Label.Text = "Diesel";
             // 
             // Die_CH4
             // 
@@ -1423,15 +1423,15 @@
             this.Die_NOX.Size = new System.Drawing.Size(97, 22);
             this.Die_NOX.TabIndex = 301;
             // 
-            // Res_Oil_Label
+            // Main_Residual_Oil_Label
             // 
-            this.Res_Oil_Label.AutoSize = true;
-            this.Res_Oil_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Res_Oil_Label.Location = new System.Drawing.Point(76, 31);
-            this.Res_Oil_Label.Name = "Res_Oil_Label";
-            this.Res_Oil_Label.Size = new System.Drawing.Size(79, 17);
-            this.Res_Oil_Label.TabIndex = 299;
-            this.Res_Oil_Label.Text = "Residual Oil";
+            this.Main_Residual_Oil_Label.AutoSize = true;
+            this.Main_Residual_Oil_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Main_Residual_Oil_Label.Location = new System.Drawing.Point(76, 31);
+            this.Main_Residual_Oil_Label.Name = "Main_Residual_Oil_Label";
+            this.Main_Residual_Oil_Label.Size = new System.Drawing.Size(79, 17);
+            this.Main_Residual_Oil_Label.TabIndex = 299;
+            this.Main_Residual_Oil_Label.Text = "Residual Oil";
             // 
             // Res_CH4
             // 
@@ -1448,16 +1448,16 @@
             this.Res_CH4.Size = new System.Drawing.Size(97, 22);
             this.Res_CH4.TabIndex = 298;
             // 
-            // label9
+            // label_Main_Inputs_CH4
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Silver;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(2, 214);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 17);
-            this.label9.TabIndex = 297;
-            this.label9.Text = "CH4";
+            this.label_Main_Inputs_CH4.AutoSize = true;
+            this.label_Main_Inputs_CH4.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Inputs_CH4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_CH4.Location = new System.Drawing.Point(2, 214);
+            this.label_Main_Inputs_CH4.Name = "label_Main_Inputs_CH4";
+            this.label_Main_Inputs_CH4.Size = new System.Drawing.Size(39, 17);
+            this.label_Main_Inputs_CH4.TabIndex = 297;
+            this.label_Main_Inputs_CH4.Text = "CH4";
             // 
             // Res_N2O
             // 
@@ -1474,16 +1474,16 @@
             this.Res_N2O.Size = new System.Drawing.Size(97, 22);
             this.Res_N2O.TabIndex = 296;
             // 
-            // label8
+            // label_Main_Inputs_N2O
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Silver;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(2, 187);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 17);
-            this.label8.TabIndex = 295;
-            this.label8.Text = "N2O";
+            this.label_Main_Inputs_N2O.AutoSize = true;
+            this.label_Main_Inputs_N2O.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Inputs_N2O.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_N2O.Location = new System.Drawing.Point(2, 187);
+            this.label_Main_Inputs_N2O.Name = "label_Main_Inputs_N2O";
+            this.label_Main_Inputs_N2O.Size = new System.Drawing.Size(39, 17);
+            this.label_Main_Inputs_N2O.TabIndex = 295;
+            this.label_Main_Inputs_N2O.Text = "N2O";
             // 
             // Res_PM25
             // 
@@ -1500,16 +1500,16 @@
             this.Res_PM25.Size = new System.Drawing.Size(97, 22);
             this.Res_PM25.TabIndex = 294;
             // 
-            // label7
+            // label_Main_Inputs_PM25
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Silver;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(2, 161);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 17);
-            this.label7.TabIndex = 293;
-            this.label7.Text = "PM2.5";
+            this.label_Main_Inputs_PM25.AutoSize = true;
+            this.label_Main_Inputs_PM25.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Inputs_PM25.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_PM25.Location = new System.Drawing.Point(2, 161);
+            this.label_Main_Inputs_PM25.Name = "label_Main_Inputs_PM25";
+            this.label_Main_Inputs_PM25.Size = new System.Drawing.Size(52, 17);
+            this.label_Main_Inputs_PM25.TabIndex = 293;
+            this.label_Main_Inputs_PM25.Text = "PM2.5";
             // 
             // Res_PM10
             // 
@@ -1526,16 +1526,16 @@
             this.Res_PM10.Size = new System.Drawing.Size(97, 22);
             this.Res_PM10.TabIndex = 292;
             // 
-            // label6
+            // label_Main_Inputs_PM10
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Silver;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(2, 134);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 17);
-            this.label6.TabIndex = 291;
-            this.label6.Text = "PM10";
+            this.label_Main_Inputs_PM10.AutoSize = true;
+            this.label_Main_Inputs_PM10.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Inputs_PM10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_PM10.Location = new System.Drawing.Point(2, 134);
+            this.label_Main_Inputs_PM10.Name = "label_Main_Inputs_PM10";
+            this.label_Main_Inputs_PM10.Size = new System.Drawing.Size(48, 17);
+            this.label_Main_Inputs_PM10.TabIndex = 291;
+            this.label_Main_Inputs_PM10.Text = "PM10";
             // 
             // Res_VOC
             // 
@@ -1552,16 +1552,16 @@
             this.Res_VOC.Size = new System.Drawing.Size(97, 22);
             this.Res_VOC.TabIndex = 290;
             // 
-            // label5
+            // label_Main_Inputs_VOC
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Silver;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 17);
-            this.label5.TabIndex = 289;
-            this.label5.Text = "VOC";
+            this.label_Main_Inputs_VOC.AutoSize = true;
+            this.label_Main_Inputs_VOC.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Inputs_VOC.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_VOC.Location = new System.Drawing.Point(2, 107);
+            this.label_Main_Inputs_VOC.Name = "label_Main_Inputs_VOC";
+            this.label_Main_Inputs_VOC.Size = new System.Drawing.Size(41, 17);
+            this.label_Main_Inputs_VOC.TabIndex = 289;
+            this.label_Main_Inputs_VOC.Text = "VOC";
             // 
             // Res_CO
             // 
@@ -1578,16 +1578,16 @@
             this.Res_CO.Size = new System.Drawing.Size(97, 22);
             this.Res_CO.TabIndex = 288;
             // 
-            // label4
+            // label_Main_Inputs_CO
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Silver;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 17);
-            this.label4.TabIndex = 287;
-            this.label4.Text = "CO";
+            this.label_Main_Inputs_CO.AutoSize = true;
+            this.label_Main_Inputs_CO.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Inputs_CO.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_CO.Location = new System.Drawing.Point(2, 81);
+            this.label_Main_Inputs_CO.Name = "label_Main_Inputs_CO";
+            this.label_Main_Inputs_CO.Size = new System.Drawing.Size(31, 17);
+            this.label_Main_Inputs_CO.TabIndex = 287;
+            this.label_Main_Inputs_CO.Text = "CO";
             // 
             // Res_NOX
             // 
@@ -1604,49 +1604,49 @@
             this.Res_NOX.Size = new System.Drawing.Size(97, 22);
             this.Res_NOX.TabIndex = 285;
             // 
-            // label2
+            // label_Main_Inputs_NOX
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Silver;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 17);
-            this.label2.TabIndex = 265;
-            this.label2.Text = "NOX";
+            this.label_Main_Inputs_NOX.AutoSize = true;
+            this.label_Main_Inputs_NOX.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Inputs_NOX.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_NOX.Location = new System.Drawing.Point(2, 55);
+            this.label_Main_Inputs_NOX.Name = "label_Main_Inputs_NOX";
+            this.label_Main_Inputs_NOX.Size = new System.Drawing.Size(41, 17);
+            this.label_Main_Inputs_NOX.TabIndex = 265;
+            this.label_Main_Inputs_NOX.Text = "NOX";
             // 
-            // label1
+            // label_Main_Engine_Inputs
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 799);
-            this.label1.Name = "label1";
-            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label1.Size = new System.Drawing.Size(474, 18);
-            this.label1.TabIndex = 274;
-            this.label1.Text = "User Inputs For Main Engine Emissions Calculations - g/hp-hr(out)";
+            this.label_Main_Engine_Inputs.AutoSize = true;
+            this.label_Main_Engine_Inputs.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Engine_Inputs.Location = new System.Drawing.Point(8, 799);
+            this.label_Main_Engine_Inputs.Name = "label_Main_Engine_Inputs";
+            this.label_Main_Engine_Inputs.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_Main_Engine_Inputs.Size = new System.Drawing.Size(474, 18);
+            this.label_Main_Engine_Inputs.TabIndex = 274;
+            this.label_Main_Engine_Inputs.Text = "User Inputs For Main Engine Emissions Calculations - g/hp-hr(out)";
             // 
-            // label179
+            // label_Main_Baseline_Fuel_Consumption
             // 
-            this.label179.AutoSize = true;
-            this.label179.BackColor = System.Drawing.Color.Silver;
-            this.label179.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label179.Location = new System.Drawing.Point(131, 583);
-            this.label179.Name = "label179";
-            this.label179.Size = new System.Drawing.Size(189, 17);
-            this.label179.TabIndex = 188;
-            this.label179.Text = "Baseline Fuel Consumption";
+            this.label_Main_Baseline_Fuel_Consumption.AutoSize = true;
+            this.label_Main_Baseline_Fuel_Consumption.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Baseline_Fuel_Consumption.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Baseline_Fuel_Consumption.Location = new System.Drawing.Point(131, 583);
+            this.label_Main_Baseline_Fuel_Consumption.Name = "label_Main_Baseline_Fuel_Consumption";
+            this.label_Main_Baseline_Fuel_Consumption.Size = new System.Drawing.Size(189, 17);
+            this.label_Main_Baseline_Fuel_Consumption.TabIndex = 188;
+            this.label_Main_Baseline_Fuel_Consumption.Text = "Baseline Fuel Consumption";
             // 
-            // label180
+            // label_Main_Gallon
             // 
-            this.label180.AutoSize = true;
-            this.label180.BackColor = System.Drawing.Color.Silver;
-            this.label180.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label180.Location = new System.Drawing.Point(16, 704);
-            this.label180.Name = "label180";
-            this.label180.Size = new System.Drawing.Size(65, 17);
-            this.label180.TabIndex = 187;
-            this.label180.Text = "gallon/trip";
+            this.label_Main_Gallon.AutoSize = true;
+            this.label_Main_Gallon.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Gallon.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Gallon.Location = new System.Drawing.Point(16, 704);
+            this.label_Main_Gallon.Name = "label_Main_Gallon";
+            this.label_Main_Gallon.Size = new System.Drawing.Size(65, 17);
+            this.label_Main_Gallon.TabIndex = 187;
+            this.label_Main_Gallon.Text = "gallon/trip";
             // 
             // updown_GALLON
             // 
@@ -1660,21 +1660,21 @@
             370409800,
             542101,
             0});
-            this.updown_GALLON.Name = "numericUpDown171";
+            this.updown_GALLON.Name = "updown_GALLON";
             this.updown_GALLON.ReadOnly = true;
             this.updown_GALLON.Size = new System.Drawing.Size(124, 22);
             this.updown_GALLON.TabIndex = 186;
             // 
-            // label181
+            // label_Main_mmbtu_In
             // 
-            this.label181.AutoSize = true;
-            this.label181.BackColor = System.Drawing.Color.Silver;
-            this.label181.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label181.Location = new System.Drawing.Point(16, 678);
-            this.label181.Name = "label181";
-            this.label181.Size = new System.Drawing.Size(85, 17);
-            this.label181.TabIndex = 185;
-            this.label181.Text = "mmbtu in/trip";
+            this.label_Main_mmbtu_In.AutoSize = true;
+            this.label_Main_mmbtu_In.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_mmbtu_In.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_mmbtu_In.Location = new System.Drawing.Point(16, 678);
+            this.label_Main_mmbtu_In.Name = "label_Main_mmbtu_In";
+            this.label_Main_mmbtu_In.Size = new System.Drawing.Size(85, 17);
+            this.label_Main_mmbtu_In.TabIndex = 185;
+            this.label_Main_mmbtu_In.Text = "mmbtu in/trip";
             // 
             // updown_MMBTU_In
             // 
@@ -1688,7 +1688,7 @@
             370409800,
             542101,
             0});
-            this.updown_MMBTU_In.Name = "numericUpDown172";
+            this.updown_MMBTU_In.Name = "updown_MMBTU_In";
             this.updown_MMBTU_In.ReadOnly = true;
             this.updown_MMBTU_In.Size = new System.Drawing.Size(124, 22);
             this.updown_MMBTU_In.TabIndex = 184;
@@ -1705,7 +1705,7 @@
             370409800,
             542101,
             0});
-            this.updown_MMBTU_Out.Name = "numericUpDown173";
+            this.updown_MMBTU_Out.Name = "updown_MMBTU_Out";
             this.updown_MMBTU_Out.ReadOnly = true;
             this.updown_MMBTU_Out.Size = new System.Drawing.Size(124, 22);
             this.updown_MMBTU_Out.TabIndex = 183;
@@ -1722,7 +1722,7 @@
             370409800,
             542101,
             0});
-            this.updown_KW_HR_Out.Name = "numericUpDown174";
+            this.updown_KW_HR_Out.Name = "updown_KW_HR_Out";
             this.updown_KW_HR_Out.ReadOnly = true;
             this.updown_KW_HR_Out.Size = new System.Drawing.Size(124, 22);
             this.updown_KW_HR_Out.TabIndex = 182;
@@ -1737,63 +1737,63 @@
             0,
             0,
             0});
-            this.updown_Engine_Efficiency.Name = "numericUpDown175";
+            this.updown_Engine_Efficiency.Name = "updown_Engine_Efficiency";
             this.updown_Engine_Efficiency.Size = new System.Drawing.Size(124, 22);
             this.updown_Engine_Efficiency.TabIndex = 181;
             // 
-            // label182
+            // label_Main_mmbtu_Out
             // 
-            this.label182.AutoSize = true;
-            this.label182.BackColor = System.Drawing.Color.Silver;
-            this.label182.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label182.Location = new System.Drawing.Point(16, 652);
-            this.label182.Name = "label182";
-            this.label182.Size = new System.Drawing.Size(93, 17);
-            this.label182.TabIndex = 180;
-            this.label182.Text = "mmbtu out/trip";
+            this.label_Main_mmbtu_Out.AutoSize = true;
+            this.label_Main_mmbtu_Out.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_mmbtu_Out.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_mmbtu_Out.Location = new System.Drawing.Point(16, 652);
+            this.label_Main_mmbtu_Out.Name = "label_Main_mmbtu_Out";
+            this.label_Main_mmbtu_Out.Size = new System.Drawing.Size(93, 17);
+            this.label_Main_mmbtu_Out.TabIndex = 180;
+            this.label_Main_mmbtu_Out.Text = "mmbtu out/trip";
             // 
-            // label183
+            // label_Main_KWH_Out
             // 
-            this.label183.AutoSize = true;
-            this.label183.BackColor = System.Drawing.Color.Silver;
-            this.label183.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label183.Location = new System.Drawing.Point(16, 626);
-            this.label183.Name = "label183";
-            this.label183.Size = new System.Drawing.Size(85, 17);
-            this.label183.TabIndex = 179;
-            this.label183.Text = "KWh out/trip";
+            this.label_Main_KWH_Out.AutoSize = true;
+            this.label_Main_KWH_Out.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_KWH_Out.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_KWH_Out.Location = new System.Drawing.Point(16, 626);
+            this.label_Main_KWH_Out.Name = "label_Main_KWH_Out";
+            this.label_Main_KWH_Out.Size = new System.Drawing.Size(85, 17);
+            this.label_Main_KWH_Out.TabIndex = 179;
+            this.label_Main_KWH_Out.Text = "KWh out/trip";
             // 
-            // label184
+            // label_Main_Engine_Efficiency
             // 
-            this.label184.AutoSize = true;
-            this.label184.BackColor = System.Drawing.Color.Silver;
-            this.label184.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label184.Location = new System.Drawing.Point(16, 600);
-            this.label184.Name = "label184";
-            this.label184.Size = new System.Drawing.Size(112, 17);
-            this.label184.TabIndex = 178;
-            this.label184.Text = "Engine Efficiency";
+            this.label_Main_Engine_Efficiency.AutoSize = true;
+            this.label_Main_Engine_Efficiency.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Engine_Efficiency.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Engine_Efficiency.Location = new System.Drawing.Point(16, 600);
+            this.label_Main_Engine_Efficiency.Name = "label_Main_Engine_Efficiency";
+            this.label_Main_Engine_Efficiency.Size = new System.Drawing.Size(112, 17);
+            this.label_Main_Engine_Efficiency.TabIndex = 178;
+            this.label_Main_Engine_Efficiency.Text = "Engine Efficiency";
             // 
-            // label178
+            // label_Main_Fuel_Calculations
             // 
-            this.label178.AutoSize = true;
-            this.label178.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label178.Location = new System.Drawing.Point(7, 561);
-            this.label178.Name = "label178";
-            this.label178.Size = new System.Drawing.Size(130, 18);
-            this.label178.TabIndex = 177;
-            this.label178.Text = "Fuel Calculations";
+            this.label_Main_Fuel_Calculations.AutoSize = true;
+            this.label_Main_Fuel_Calculations.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Fuel_Calculations.Location = new System.Drawing.Point(7, 561);
+            this.label_Main_Fuel_Calculations.Name = "label_Main_Fuel_Calculations";
+            this.label_Main_Fuel_Calculations.Size = new System.Drawing.Size(130, 18);
+            this.label_Main_Fuel_Calculations.TabIndex = 177;
+            this.label_Main_Fuel_Calculations.Text = "Fuel Calculations";
             // 
-            // label172
+            // label_Main_Energy_Total
             // 
-            this.label172.AutoSize = true;
-            this.label172.BackColor = System.Drawing.Color.Silver;
-            this.label172.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label172.Location = new System.Drawing.Point(8, 508);
-            this.label172.Name = "label172";
-            this.label172.Size = new System.Drawing.Size(151, 17);
-            this.label172.TabIndex = 168;
-            this.label172.Text = "Energy Total (KWh out)";
+            this.label_Main_Energy_Total.AutoSize = true;
+            this.label_Main_Energy_Total.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Energy_Total.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Energy_Total.Location = new System.Drawing.Point(8, 508);
+            this.label_Main_Energy_Total.Name = "label_Main_Energy_Total";
+            this.label_Main_Energy_Total.Size = new System.Drawing.Size(151, 17);
+            this.label_Main_Energy_Total.TabIndex = 168;
+            this.label_Main_Energy_Total.Text = "Energy Total (KWh out)";
             // 
             // updown_EP_Total
             // 
@@ -1807,7 +1807,7 @@
             370409800,
             542101,
             0});
-            this.updown_EP_Total.Name = "numericUpDown169";
+            this.updown_EP_Total.Name = "updown_EP_Total";
             this.updown_EP_Total.ReadOnly = true;
             this.updown_EP_Total.Size = new System.Drawing.Size(116, 22);
             this.updown_EP_Total.TabIndex = 167;
@@ -1824,7 +1824,7 @@
             370409800,
             542101,
             0});
-            this.updown_EP_Full_Cruise.Name = "numericUpDown164";
+            this.updown_EP_Full_Cruise.Name = "updown_EP_Full_Cruise";
             this.updown_EP_Full_Cruise.ReadOnly = true;
             this.updown_EP_Full_Cruise.Size = new System.Drawing.Size(55, 22);
             this.updown_EP_Full_Cruise.TabIndex = 165;
@@ -1840,7 +1840,7 @@
             370409800,
             542101,
             0});
-            this.updown_HP_Full_Cruise.Name = "numericUpDown165";
+            this.updown_HP_Full_Cruise.Name = "updown_HP_Full_Cruise";
             this.updown_HP_Full_Cruise.ReadOnly = true;
             this.updown_HP_Full_Cruise.Size = new System.Drawing.Size(55, 22);
             this.updown_HP_Full_Cruise.TabIndex = 164;
@@ -1855,7 +1855,7 @@
             0,
             0,
             0});
-            this.updown_Horsepower_Full_Cruise.Name = "numericUpDown166";
+            this.updown_Horsepower_Full_Cruise.Name = "updown_Horsepower_Full_Cruise";
             this.updown_Horsepower_Full_Cruise.Size = new System.Drawing.Size(55, 22);
             this.updown_Horsepower_Full_Cruise.TabIndex = 163;
             // 
@@ -1871,7 +1871,7 @@
             370409800,
             542101,
             0});
-            this.updown_Time_Full_Cruise.Name = "numericUpDown167";
+            this.updown_Time_Full_Cruise.Name = "updown_Time_Full_Cruise";
             this.updown_Time_Full_Cruise.ReadOnly = true;
             this.updown_Time_Full_Cruise.Size = new System.Drawing.Size(55, 22);
             this.updown_Time_Full_Cruise.TabIndex = 162;
@@ -1881,7 +1881,7 @@
             this.updown_Percent_Full_Cruise.DecimalPlaces = 2;
             this.updown_Percent_Full_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Full_Cruise.Location = new System.Drawing.Point(595, 386);
-            this.updown_Percent_Full_Cruise.Name = "numericUpDown168";
+            this.updown_Percent_Full_Cruise.Name = "updown_Percent_Full_Cruise";
             this.updown_Percent_Full_Cruise.Size = new System.Drawing.Size(55, 22);
             this.updown_Percent_Full_Cruise.TabIndex = 161;
             // 
@@ -1897,7 +1897,7 @@
             370409800,
             542101,
             0});
-            this.updown_EP_Slow_Cruise.Name = "numericUpDown159";
+            this.updown_EP_Slow_Cruise.Name = "updown_EP_Slow_Cruise";
             this.updown_EP_Slow_Cruise.ReadOnly = true;
             this.updown_EP_Slow_Cruise.Size = new System.Drawing.Size(64, 22);
             this.updown_EP_Slow_Cruise.TabIndex = 159;
@@ -1913,7 +1913,7 @@
             370409800,
             542101,
             0});
-            this.updown_HP_Slow_Cruise.Name = "numericUpDown160";
+            this.updown_HP_Slow_Cruise.Name = "updown_HP_Slow_Cruise";
             this.updown_HP_Slow_Cruise.ReadOnly = true;
             this.updown_HP_Slow_Cruise.Size = new System.Drawing.Size(64, 22);
             this.updown_HP_Slow_Cruise.TabIndex = 158;
@@ -1928,7 +1928,7 @@
             0,
             0,
             0});
-            this.updown_Horsepower_Slow_Cruise.Name = "numericUpDown161";
+            this.updown_Horsepower_Slow_Cruise.Name = "updown_Horsepower_Slow_Cruise";
             this.updown_Horsepower_Slow_Cruise.Size = new System.Drawing.Size(64, 22);
             this.updown_Horsepower_Slow_Cruise.TabIndex = 157;
             // 
@@ -1944,7 +1944,7 @@
             370409800,
             542101,
             0});
-            this.updown_Time_Slow_Cruise.Name = "numericUpDown162";
+            this.updown_Time_Slow_Cruise.Name = "updown_Time_Slow_Cruise";
             this.updown_Time_Slow_Cruise.ReadOnly = true;
             this.updown_Time_Slow_Cruise.Size = new System.Drawing.Size(64, 22);
             this.updown_Time_Slow_Cruise.TabIndex = 156;
@@ -1954,7 +1954,7 @@
             this.updown_Percent_Slow_Cruise.DecimalPlaces = 2;
             this.updown_Percent_Slow_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Slow_Cruise.Location = new System.Drawing.Point(509, 386);
-            this.updown_Percent_Slow_Cruise.Name = "numericUpDown163";
+            this.updown_Percent_Slow_Cruise.Name = "updown_Percent_Slow_Cruise";
             this.updown_Percent_Slow_Cruise.Size = new System.Drawing.Size(64, 22);
             this.updown_Percent_Slow_Cruise.TabIndex = 155;
             // 
@@ -1970,7 +1970,7 @@
             370409800,
             542101,
             0});
-            this.updown_EP_Precautionary.Name = "numericUpDown154";
+            this.updown_EP_Precautionary.Name = "updown_EP_Precautionary";
             this.updown_EP_Precautionary.ReadOnly = true;
             this.updown_EP_Precautionary.Size = new System.Drawing.Size(68, 22);
             this.updown_EP_Precautionary.TabIndex = 153;
@@ -1986,7 +1986,7 @@
             370409800,
             542101,
             0});
-            this.updown_HP_Precautionary.Name = "numericUpDown155";
+            this.updown_HP_Precautionary.Name = "updown_HP_Precautionary";
             this.updown_HP_Precautionary.ReadOnly = true;
             this.updown_HP_Precautionary.Size = new System.Drawing.Size(68, 22);
             this.updown_HP_Precautionary.TabIndex = 152;
@@ -2001,7 +2001,7 @@
             0,
             0,
             0});
-            this.updown_Horsepower_Precautionary.Name = "numericUpDown156";
+            this.updown_Horsepower_Precautionary.Name = "updown_Horsepower_Precautionary";
             this.updown_Horsepower_Precautionary.Size = new System.Drawing.Size(68, 22);
             this.updown_Horsepower_Precautionary.TabIndex = 151;
             // 
@@ -2017,7 +2017,7 @@
             370409800,
             542101,
             0});
-            this.updown_Time_Precautionary.Name = "numericUpDown157";
+            this.updown_Time_Precautionary.Name = "updown_Time_Precautionary";
             this.updown_Time_Precautionary.ReadOnly = true;
             this.updown_Time_Precautionary.Size = new System.Drawing.Size(68, 22);
             this.updown_Time_Precautionary.TabIndex = 150;
@@ -2027,7 +2027,7 @@
             this.updown_Percent_Precautionary.DecimalPlaces = 2;
             this.updown_Percent_Precautionary.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Precautionary.Location = new System.Drawing.Point(418, 386);
-            this.updown_Percent_Precautionary.Name = "numericUpDown158";
+            this.updown_Percent_Precautionary.Name = "updown_Percent_Precautionary";
             this.updown_Percent_Precautionary.Size = new System.Drawing.Size(68, 22);
             this.updown_Percent_Precautionary.TabIndex = 149;
             // 
@@ -2043,7 +2043,7 @@
             370409800,
             542101,
             0});
-            this.updown_EP_Maneuvering.Name = "numericUpDown149";
+            this.updown_EP_Maneuvering.Name = "updown_EP_Maneuvering";
             this.updown_EP_Maneuvering.ReadOnly = true;
             this.updown_EP_Maneuvering.Size = new System.Drawing.Size(60, 22);
             this.updown_EP_Maneuvering.TabIndex = 147;
@@ -2059,7 +2059,7 @@
             370409800,
             542101,
             0});
-            this.updown_HP_Maneuvering.Name = "numericUpDown150";
+            this.updown_HP_Maneuvering.Name = "updown_HP_Maneuvering";
             this.updown_HP_Maneuvering.ReadOnly = true;
             this.updown_HP_Maneuvering.Size = new System.Drawing.Size(60, 22);
             this.updown_HP_Maneuvering.TabIndex = 146;
@@ -2076,7 +2076,7 @@
             370409800,
             542101,
             0});
-            this.updown_Time_Maneuvering.Name = "numericUpDown152";
+            this.updown_Time_Maneuvering.Name = "updown_Time_Maneuvering";
             this.updown_Time_Maneuvering.ReadOnly = true;
             this.updown_Time_Maneuvering.Size = new System.Drawing.Size(60, 22);
             this.updown_Time_Maneuvering.TabIndex = 144;
@@ -2086,20 +2086,20 @@
             this.updown_Percent_Maneuvering.DecimalPlaces = 2;
             this.updown_Percent_Maneuvering.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Maneuvering.Location = new System.Drawing.Point(338, 386);
-            this.updown_Percent_Maneuvering.Name = "numericUpDown153";
+            this.updown_Percent_Maneuvering.Name = "updown_Percent_Maneuvering";
             this.updown_Percent_Maneuvering.Size = new System.Drawing.Size(60, 22);
             this.updown_Percent_Maneuvering.TabIndex = 143;
             // 
-            // label166
+            // label_Main_Energy_Production
             // 
-            this.label166.AutoSize = true;
-            this.label166.BackColor = System.Drawing.Color.Silver;
-            this.label166.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label166.Location = new System.Drawing.Point(7, 486);
-            this.label166.Name = "label166";
-            this.label166.Size = new System.Drawing.Size(240, 17);
-            this.label166.TabIndex = 141;
-            this.label166.Text = "Energy Production (KWh)(All Engines)";
+            this.label_Main_Energy_Production.AutoSize = true;
+            this.label_Main_Energy_Production.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Energy_Production.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Energy_Production.Location = new System.Drawing.Point(7, 486);
+            this.label_Main_Energy_Production.Name = "label_Main_Energy_Production";
+            this.label_Main_Energy_Production.Size = new System.Drawing.Size(240, 17);
+            this.label_Main_Energy_Production.TabIndex = 141;
+            this.label_Main_Energy_Production.Text = "Energy Production (KWh)(All Engines)";
             // 
             // updown_EP_Idle
             // 
@@ -2113,21 +2113,21 @@
             370409800,
             542101,
             0});
-            this.updown_EP_Idle.Name = "numericUpDown148";
+            this.updown_EP_Idle.Name = "updown_EP_Idle";
             this.updown_EP_Idle.ReadOnly = true;
             this.updown_EP_Idle.Size = new System.Drawing.Size(68, 22);
             this.updown_EP_Idle.TabIndex = 140;
             // 
-            // label165
+            // label_Main_HP_Per_Engine
             // 
-            this.label165.AutoSize = true;
-            this.label165.BackColor = System.Drawing.Color.Silver;
-            this.label165.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label165.Location = new System.Drawing.Point(7, 460);
-            this.label165.Name = "label165";
-            this.label165.Size = new System.Drawing.Size(96, 17);
-            this.label165.TabIndex = 139;
-            this.label165.Text = "HP Per Engine";
+            this.label_Main_HP_Per_Engine.AutoSize = true;
+            this.label_Main_HP_Per_Engine.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_HP_Per_Engine.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_HP_Per_Engine.Location = new System.Drawing.Point(7, 460);
+            this.label_Main_HP_Per_Engine.Name = "label_Main_HP_Per_Engine";
+            this.label_Main_HP_Per_Engine.Size = new System.Drawing.Size(96, 17);
+            this.label_Main_HP_Per_Engine.TabIndex = 139;
+            this.label_Main_HP_Per_Engine.Text = "HP Per Engine";
             // 
             // updown_HP_Idle
             // 
@@ -2140,7 +2140,7 @@
             370409800,
             542101,
             0});
-            this.updown_HP_Idle.Name = "numericUpDown144";
+            this.updown_HP_Idle.Name = "updown_HP_Idle";
             this.updown_HP_Idle.ReadOnly = true;
             this.updown_HP_Idle.Size = new System.Drawing.Size(68, 22);
             this.updown_HP_Idle.TabIndex = 138;
@@ -2164,7 +2164,7 @@
             0,
             0,
             0});
-            this.updown_Horsepower_Idle.Name = "numericUpDown145";
+            this.updown_Horsepower_Idle.Name = "updown_Horsepower_Idle";
             this.updown_Horsepower_Idle.Size = new System.Drawing.Size(68, 22);
             this.updown_Horsepower_Idle.TabIndex = 136;
             // 
@@ -2180,7 +2180,7 @@
             370409800,
             542101,
             0});
-            this.updown_Time_Idle.Name = "numericUpDown146";
+            this.updown_Time_Idle.Name = "updown_Time_Idle";
             this.updown_Time_Idle.ReadOnly = true;
             this.updown_Time_Idle.Size = new System.Drawing.Size(68, 22);
             this.updown_Time_Idle.TabIndex = 135;
@@ -2190,52 +2190,52 @@
             this.updown_Percent_Idle.DecimalPlaces = 2;
             this.updown_Percent_Idle.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Idle.Location = new System.Drawing.Point(249, 386);
-            this.updown_Percent_Idle.Name = "numericUpDown147";
+            this.updown_Percent_Idle.Name = "updown_Percent_Idle";
             this.updown_Percent_Idle.Size = new System.Drawing.Size(68, 22);
             this.updown_Percent_Idle.TabIndex = 134;
             // 
-            // label161
+            // label_Main_HP_Load_Factor
             // 
-            this.label161.AutoSize = true;
-            this.label161.BackColor = System.Drawing.Color.Silver;
-            this.label161.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label161.Location = new System.Drawing.Point(7, 435);
-            this.label161.Name = "label161";
-            this.label161.Size = new System.Drawing.Size(192, 17);
-            this.label161.TabIndex = 133;
-            this.label161.Text = "HP Load Factor (single engine)";
+            this.label_Main_HP_Load_Factor.AutoSize = true;
+            this.label_Main_HP_Load_Factor.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_HP_Load_Factor.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_HP_Load_Factor.Location = new System.Drawing.Point(7, 435);
+            this.label_Main_HP_Load_Factor.Name = "label_Main_HP_Load_Factor";
+            this.label_Main_HP_Load_Factor.Size = new System.Drawing.Size(192, 17);
+            this.label_Main_HP_Load_Factor.TabIndex = 133;
+            this.label_Main_HP_Load_Factor.Text = "HP Load Factor (single engine)";
             // 
-            // label162
+            // label_Main_Time_Per_Mode
             // 
-            this.label162.AutoSize = true;
-            this.label162.BackColor = System.Drawing.Color.Silver;
-            this.label162.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label162.Location = new System.Drawing.Point(7, 409);
-            this.label162.Name = "label162";
-            this.label162.Size = new System.Drawing.Size(146, 17);
-            this.label162.TabIndex = 132;
-            this.label162.Text = "Time Per Mode (hours)";
+            this.label_Main_Time_Per_Mode.AutoSize = true;
+            this.label_Main_Time_Per_Mode.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Time_Per_Mode.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Time_Per_Mode.Location = new System.Drawing.Point(7, 409);
+            this.label_Main_Time_Per_Mode.Name = "label_Main_Time_Per_Mode";
+            this.label_Main_Time_Per_Mode.Size = new System.Drawing.Size(146, 17);
+            this.label_Main_Time_Per_Mode.TabIndex = 132;
+            this.label_Main_Time_Per_Mode.Text = "Time Per Mode (hours)";
             // 
-            // label163
+            // label_Main_Percent_In_Mode
             // 
-            this.label163.AutoSize = true;
-            this.label163.BackColor = System.Drawing.Color.Silver;
-            this.label163.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label163.Location = new System.Drawing.Point(7, 383);
-            this.label163.Name = "label163";
-            this.label163.Size = new System.Drawing.Size(190, 17);
-            this.label163.TabIndex = 131;
-            this.label163.Text = "Percent of Trip In Mode (time)";
+            this.label_Main_Percent_In_Mode.AutoSize = true;
+            this.label_Main_Percent_In_Mode.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_In_Mode.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_In_Mode.Location = new System.Drawing.Point(7, 383);
+            this.label_Main_Percent_In_Mode.Name = "label_Main_Percent_In_Mode";
+            this.label_Main_Percent_In_Mode.Size = new System.Drawing.Size(190, 17);
+            this.label_Main_Percent_In_Mode.TabIndex = 131;
+            this.label_Main_Percent_In_Mode.Text = "Percent of Trip In Mode (time)";
             // 
-            // label164
+            // label_Main_Engine_Char_Per_Mode
             // 
-            this.label164.AutoSize = true;
-            this.label164.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label164.Location = new System.Drawing.Point(3, 337);
-            this.label164.Name = "label164";
-            this.label164.Size = new System.Drawing.Size(252, 18);
-            this.label164.TabIndex = 130;
-            this.label164.Text = "Engine Characterization Per Mode";
+            this.label_Main_Engine_Char_Per_Mode.AutoSize = true;
+            this.label_Main_Engine_Char_Per_Mode.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Engine_Char_Per_Mode.Location = new System.Drawing.Point(3, 337);
+            this.label_Main_Engine_Char_Per_Mode.Name = "label_Main_Engine_Char_Per_Mode";
+            this.label_Main_Engine_Char_Per_Mode.Size = new System.Drawing.Size(252, 18);
+            this.label_Main_Engine_Char_Per_Mode.TabIndex = 130;
+            this.label_Main_Engine_Char_Per_Mode.Text = "Engine Characterization Per Mode";
             // 
             // updown_Tot_Trip_Hours
             // 
@@ -2249,21 +2249,21 @@
             370409800,
             542101,
             0});
-            this.updown_Tot_Trip_Hours.Name = "numericUpDown139";
+            this.updown_Tot_Trip_Hours.Name = "updown_Tot_Trip_Hours";
             this.updown_Tot_Trip_Hours.ReadOnly = true;
             this.updown_Tot_Trip_Hours.Size = new System.Drawing.Size(92, 22);
             this.updown_Tot_Trip_Hours.TabIndex = 129;
             // 
-            // label155
+            // label_Main_Time_Total
             // 
-            this.label155.AutoSize = true;
-            this.label155.BackColor = System.Drawing.Color.Silver;
-            this.label155.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label155.Location = new System.Drawing.Point(7, 279);
-            this.label155.Name = "label155";
-            this.label155.Size = new System.Drawing.Size(143, 17);
-            this.label155.TabIndex = 128;
-            this.label155.Text = "Total Trip Time (hours)";
+            this.label_Main_Time_Total.AutoSize = true;
+            this.label_Main_Time_Total.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Time_Total.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Time_Total.Location = new System.Drawing.Point(7, 279);
+            this.label_Main_Time_Total.Name = "label_Main_Time_Total";
+            this.label_Main_Time_Total.Size = new System.Drawing.Size(143, 17);
+            this.label_Main_Time_Total.TabIndex = 128;
+            this.label_Main_Time_Total.Text = "Total Trip Time (hours)";
             // 
             // updown_Trip_Time_Minutes
             // 
@@ -2274,7 +2274,7 @@
             0,
             0,
             0});
-            this.updown_Trip_Time_Minutes.Name = "numericUpDown140";
+            this.updown_Trip_Time_Minutes.Name = "updown_Trip_Time_Minutes";
             this.updown_Trip_Time_Minutes.Size = new System.Drawing.Size(92, 22);
             this.updown_Trip_Time_Minutes.TabIndex = 127;
             // 
@@ -2287,7 +2287,7 @@
             0,
             0,
             0});
-            this.updown_Trip_Time_Hours.Name = "numericUpDown142";
+            this.updown_Trip_Time_Hours.Name = "updown_Trip_Time_Hours";
             this.updown_Trip_Time_Hours.Size = new System.Drawing.Size(92, 22);
             this.updown_Trip_Time_Hours.TabIndex = 126;
             // 
@@ -2301,72 +2301,72 @@
             0,
             0,
             0});
-            this.updown_Total_Trip_Distance.Name = "numericUpDown143";
+            this.updown_Total_Trip_Distance.Name = "updown_Total_Trip_Distance";
             this.updown_Total_Trip_Distance.Size = new System.Drawing.Size(92, 22);
             this.updown_Total_Trip_Distance.TabIndex = 125;
             // 
-            // label157
+            // label_Main_Time_Minutes
             // 
-            this.label157.AutoSize = true;
-            this.label157.BackColor = System.Drawing.Color.Silver;
-            this.label157.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label157.Location = new System.Drawing.Point(7, 256);
-            this.label157.Name = "label157";
-            this.label157.Size = new System.Drawing.Size(123, 17);
-            this.label157.TabIndex = 124;
-            this.label157.Text = "Trip Time (minutes)";
+            this.label_Main_Time_Minutes.AutoSize = true;
+            this.label_Main_Time_Minutes.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Time_Minutes.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Time_Minutes.Location = new System.Drawing.Point(7, 256);
+            this.label_Main_Time_Minutes.Name = "label_Main_Time_Minutes";
+            this.label_Main_Time_Minutes.Size = new System.Drawing.Size(123, 17);
+            this.label_Main_Time_Minutes.TabIndex = 124;
+            this.label_Main_Time_Minutes.Text = "Trip Time (minutes)";
             // 
-            // label158
+            // label_Main_Time_Hours
             // 
-            this.label158.AutoSize = true;
-            this.label158.BackColor = System.Drawing.Color.Silver;
-            this.label158.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label158.Location = new System.Drawing.Point(7, 230);
-            this.label158.Name = "label158";
-            this.label158.Size = new System.Drawing.Size(110, 17);
-            this.label158.TabIndex = 123;
-            this.label158.Text = "Trip Time (hours)";
+            this.label_Main_Time_Hours.AutoSize = true;
+            this.label_Main_Time_Hours.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Time_Hours.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Time_Hours.Location = new System.Drawing.Point(7, 230);
+            this.label_Main_Time_Hours.Name = "label_Main_Time_Hours";
+            this.label_Main_Time_Hours.Size = new System.Drawing.Size(110, 17);
+            this.label_Main_Time_Hours.TabIndex = 123;
+            this.label_Main_Time_Hours.Text = "Trip Time (hours)";
             // 
-            // label159
+            // label_Main_Total_Trip_Distance
             // 
-            this.label159.AutoSize = true;
-            this.label159.BackColor = System.Drawing.Color.Silver;
-            this.label159.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label159.Location = new System.Drawing.Point(7, 204);
-            this.label159.Name = "label159";
-            this.label159.Size = new System.Drawing.Size(164, 17);
-            this.label159.TabIndex = 122;
-            this.label159.Text = "Total Trip Distance (miles)";
+            this.label_Main_Total_Trip_Distance.AutoSize = true;
+            this.label_Main_Total_Trip_Distance.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Total_Trip_Distance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Total_Trip_Distance.Location = new System.Drawing.Point(7, 204);
+            this.label_Main_Total_Trip_Distance.Name = "label_Main_Total_Trip_Distance";
+            this.label_Main_Total_Trip_Distance.Size = new System.Drawing.Size(164, 17);
+            this.label_Main_Total_Trip_Distance.TabIndex = 122;
+            this.label_Main_Total_Trip_Distance.Text = "Total Trip Distance (miles)";
             // 
-            // label150
+            // label_Main_Total_Distance_And_Time
             // 
-            this.label150.AutoSize = true;
-            this.label150.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label150.Location = new System.Drawing.Point(3, 168);
-            this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(171, 18);
-            this.label150.TabIndex = 121;
-            this.label150.Text = "Trip Distance and Time";
+            this.label_Main_Total_Distance_And_Time.AutoSize = true;
+            this.label_Main_Total_Distance_And_Time.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Total_Distance_And_Time.Location = new System.Drawing.Point(3, 168);
+            this.label_Main_Total_Distance_And_Time.Name = "label_Main_Total_Distance_And_Time";
+            this.label_Main_Total_Distance_And_Time.Size = new System.Drawing.Size(171, 18);
+            this.label_Main_Total_Distance_And_Time.TabIndex = 121;
+            this.label_Main_Total_Distance_And_Time.Text = "Trip Distance and Time";
             // 
             // textBox_Vessel_Type
             // 
             this.textBox_Vessel_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Vessel_Type.Location = new System.Drawing.Point(166, 32);
             this.textBox_Vessel_Type.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_Vessel_Type.Name = "textBox1";
+            this.textBox_Vessel_Type.Name = "textBox_Vessel_Type";
             this.textBox_Vessel_Type.Size = new System.Drawing.Size(199, 23);
             this.textBox_Vessel_Type.TabIndex = 109;
             // 
-            // label148
+            // label_Main_Vessel_ID
             // 
-            this.label148.AutoSize = true;
-            this.label148.BackColor = System.Drawing.Color.Silver;
-            this.label148.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label148.Location = new System.Drawing.Point(7, 32);
-            this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(99, 17);
-            this.label148.TabIndex = 108;
-            this.label148.Text = "Vessel Type ID";
+            this.label_Main_Vessel_ID.AutoSize = true;
+            this.label_Main_Vessel_ID.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Vessel_ID.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Vessel_ID.Location = new System.Drawing.Point(7, 32);
+            this.label_Main_Vessel_ID.Name = "label_Main_Vessel_ID";
+            this.label_Main_Vessel_ID.Size = new System.Drawing.Size(99, 17);
+            this.label_Main_Vessel_ID.TabIndex = 108;
+            this.label_Main_Vessel_ID.Text = "Vessel Type ID";
             // 
             // updown_Tot_Onboard_HP
             // 
@@ -2379,7 +2379,7 @@
             370409800,
             542101,
             0});
-            this.updown_Tot_Onboard_HP.Name = "numericUpDown128";
+            this.updown_Tot_Onboard_HP.Name = "updown_Tot_Onboard_HP";
             this.updown_Tot_Onboard_HP.ReadOnly = true;
             this.updown_Tot_Onboard_HP.Size = new System.Drawing.Size(92, 22);
             this.updown_Tot_Onboard_HP.TabIndex = 107;
@@ -2393,7 +2393,7 @@
             0,
             0,
             0});
-            this.updown_Single_Engine_HP.Name = "numericUpDown124";
+            this.updown_Single_Engine_HP.Name = "updown_Single_Engine_HP";
             this.updown_Single_Engine_HP.Size = new System.Drawing.Size(92, 22);
             this.updown_Single_Engine_HP.TabIndex = 106;
             // 
@@ -2406,268 +2406,268 @@
             0,
             0,
             0});
-            this.updown_Number_Of_Engines.Name = "numericUpDown132";
+            this.updown_Number_Of_Engines.Name = "updown_Number_Of_Engines";
             this.updown_Number_Of_Engines.Size = new System.Drawing.Size(92, 22);
             this.updown_Number_Of_Engines.TabIndex = 105;
             // 
-            // label146
+            // label_Main_Total_HP
             // 
-            this.label146.AutoSize = true;
-            this.label146.BackColor = System.Drawing.Color.Silver;
-            this.label146.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label146.Location = new System.Drawing.Point(7, 111);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(123, 17);
-            this.label146.TabIndex = 104;
-            this.label146.Text = "Total On Board HP";
+            this.label_Main_Total_HP.AutoSize = true;
+            this.label_Main_Total_HP.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Total_HP.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Total_HP.Location = new System.Drawing.Point(7, 111);
+            this.label_Main_Total_HP.Name = "label_Main_Total_HP";
+            this.label_Main_Total_HP.Size = new System.Drawing.Size(123, 17);
+            this.label_Main_Total_HP.TabIndex = 104;
+            this.label_Main_Total_HP.Text = "Total On Board HP";
             // 
-            // label147
+            // label_Main_Single_Engine_HP
             // 
-            this.label147.AutoSize = true;
-            this.label147.BackColor = System.Drawing.Color.Silver;
-            this.label147.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label147.Location = new System.Drawing.Point(7, 85);
-            this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(111, 17);
-            this.label147.TabIndex = 103;
-            this.label147.Text = "Single Engine HP";
+            this.label_Main_Single_Engine_HP.AutoSize = true;
+            this.label_Main_Single_Engine_HP.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Single_Engine_HP.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Single_Engine_HP.Location = new System.Drawing.Point(7, 85);
+            this.label_Main_Single_Engine_HP.Name = "label_Main_Single_Engine_HP";
+            this.label_Main_Single_Engine_HP.Size = new System.Drawing.Size(111, 17);
+            this.label_Main_Single_Engine_HP.TabIndex = 103;
+            this.label_Main_Single_Engine_HP.Text = "Single Engine HP";
             // 
-            // label149
+            // label_Main_Num_Engines
             // 
-            this.label149.AutoSize = true;
-            this.label149.BackColor = System.Drawing.Color.Silver;
-            this.label149.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label149.Location = new System.Drawing.Point(7, 59);
-            this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(122, 17);
-            this.label149.TabIndex = 101;
-            this.label149.Text = "Number of Engines";
+            this.label_Main_Num_Engines.AutoSize = true;
+            this.label_Main_Num_Engines.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Num_Engines.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Num_Engines.Location = new System.Drawing.Point(7, 59);
+            this.label_Main_Num_Engines.Name = "label_Main_Num_Engines";
+            this.label_Main_Num_Engines.Size = new System.Drawing.Size(122, 17);
+            this.label_Main_Num_Engines.TabIndex = 101;
+            this.label_Main_Num_Engines.Text = "Number of Engines";
             // 
-            // label145
+            // label_Main_Engine_Vars
             // 
-            this.label145.AutoSize = true;
-            this.label145.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label145.Location = new System.Drawing.Point(3, 6);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(168, 18);
-            this.label145.TabIndex = 34;
-            this.label145.Text = "Main Engine Variables ";
+            this.label_Main_Engine_Vars.AutoSize = true;
+            this.label_Main_Engine_Vars.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Engine_Vars.Location = new System.Drawing.Point(3, 6);
+            this.label_Main_Engine_Vars.Name = "label_Main_Engine_Vars";
+            this.label_Main_Engine_Vars.Size = new System.Drawing.Size(168, 18);
+            this.label_Main_Engine_Vars.TabIndex = 34;
+            this.label_Main_Engine_Vars.Text = "Main Engine Variables ";
             // 
-            // panel12
+            // panel_Main_Engine_Vars
             // 
-            this.panel12.BackColor = System.Drawing.Color.Silver;
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Location = new System.Drawing.Point(6, 26);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(427, 121);
-            this.panel12.TabIndex = 267;
+            this.panel_Main_Engine_Vars.BackColor = System.Drawing.Color.Silver;
+            this.panel_Main_Engine_Vars.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Main_Engine_Vars.Location = new System.Drawing.Point(6, 26);
+            this.panel_Main_Engine_Vars.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Main_Engine_Vars.Name = "panel_Main_Engine_Vars";
+            this.panel_Main_Engine_Vars.Size = new System.Drawing.Size(427, 121);
+            this.panel_Main_Engine_Vars.TabIndex = 267;
             // 
-            // panel13
+            // panel_Main_Trip_Distance_Time
             // 
-            this.panel13.BackColor = System.Drawing.Color.Silver;
-            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Location = new System.Drawing.Point(6, 189);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(266, 124);
-            this.panel13.TabIndex = 268;
+            this.panel_Main_Trip_Distance_Time.BackColor = System.Drawing.Color.Silver;
+            this.panel_Main_Trip_Distance_Time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Main_Trip_Distance_Time.Location = new System.Drawing.Point(6, 189);
+            this.panel_Main_Trip_Distance_Time.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Main_Trip_Distance_Time.Name = "panel_Main_Trip_Distance_Time";
+            this.panel_Main_Trip_Distance_Time.Size = new System.Drawing.Size(266, 124);
+            this.panel_Main_Trip_Distance_Time.TabIndex = 268;
             // 
-            // panel14
+            // panel_Main_Engine_Chars
             // 
-            this.panel14.BackColor = System.Drawing.Color.Silver;
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel14.Controls.Add(this.label45);
-            this.panel14.Controls.Add(this.label44);
-            this.panel14.Controls.Add(this.label43);
-            this.panel14.Controls.Add(this.label42);
-            this.panel14.Controls.Add(this.label41);
-            this.panel14.Controls.Add(this.label40);
-            this.panel14.Controls.Add(this.label39);
-            this.panel14.Controls.Add(this.label38);
-            this.panel14.Controls.Add(this.label37);
-            this.panel14.Controls.Add(this.label36);
-            this.panel14.Controls.Add(this.textBox6);
-            this.panel14.Controls.Add(this.textBox5);
-            this.panel14.Controls.Add(this.textBox4);
-            this.panel14.Controls.Add(this.textBox3);
-            this.panel14.Controls.Add(this.textBox2);
-            this.panel14.Controls.Add(this.updown_Horsepower_Maneuvering);
-            this.panel14.Location = new System.Drawing.Point(6, 358);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(677, 183);
-            this.panel14.TabIndex = 269;
+            this.panel_Main_Engine_Chars.BackColor = System.Drawing.Color.Silver;
+            this.panel_Main_Engine_Chars.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_10);
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_9);
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_8);
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_7);
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_6);
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_5);
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_4);
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_3);
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_2);
+            this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_1);
+            this.panel_Main_Engine_Chars.Controls.Add(this.text_Main_Mode_5);
+            this.panel_Main_Engine_Chars.Controls.Add(this.text_Main_Mode_4);
+            this.panel_Main_Engine_Chars.Controls.Add(this.text_Main_Mode_3);
+            this.panel_Main_Engine_Chars.Controls.Add(this.text_Main_Mode_2);
+            this.panel_Main_Engine_Chars.Controls.Add(this.text_Main_Mode_1);
+            this.panel_Main_Engine_Chars.Controls.Add(this.updown_Horsepower_Maneuvering);
+            this.panel_Main_Engine_Chars.Location = new System.Drawing.Point(6, 358);
+            this.panel_Main_Engine_Chars.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Main_Engine_Chars.Name = "panel_Main_Engine_Chars";
+            this.panel_Main_Engine_Chars.Size = new System.Drawing.Size(677, 183);
+            this.panel_Main_Engine_Chars.TabIndex = 269;
             // 
-            // label45
+            // label_Main_Percent_10
             // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Silver;
-            this.label45.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(641, 78);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(17, 15);
-            this.label45.TabIndex = 303;
-            this.label45.Text = "%";
+            this.label_Main_Percent_10.AutoSize = true;
+            this.label_Main_Percent_10.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_10.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_10.Location = new System.Drawing.Point(641, 78);
+            this.label_Main_Percent_10.Name = "label_Main_Percent_10";
+            this.label_Main_Percent_10.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_10.TabIndex = 303;
+            this.label_Main_Percent_10.Text = "%";
             // 
-            // label44
+            // label_Main_Percent_9
             // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Silver;
-            this.label44.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(565, 78);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(17, 15);
-            this.label44.TabIndex = 304;
-            this.label44.Text = "%";
+            this.label_Main_Percent_9.AutoSize = true;
+            this.label_Main_Percent_9.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_9.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_9.Location = new System.Drawing.Point(565, 78);
+            this.label_Main_Percent_9.Name = "label_Main_Percent_9";
+            this.label_Main_Percent_9.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_9.TabIndex = 304;
+            this.label_Main_Percent_9.Text = "%";
             // 
-            // label43
+            // label_Main_Percent_8
             // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Silver;
-            this.label43.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(477, 77);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(17, 15);
-            this.label43.TabIndex = 303;
-            this.label43.Text = "%";
+            this.label_Main_Percent_8.AutoSize = true;
+            this.label_Main_Percent_8.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_8.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_8.Location = new System.Drawing.Point(477, 77);
+            this.label_Main_Percent_8.Name = "label_Main_Percent_8";
+            this.label_Main_Percent_8.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_8.TabIndex = 303;
+            this.label_Main_Percent_8.Text = "%";
             // 
-            // label42
+            // label_Main_Percent_7
             // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Silver;
-            this.label42.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(390, 77);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(17, 15);
-            this.label42.TabIndex = 303;
-            this.label42.Text = "%";
+            this.label_Main_Percent_7.AutoSize = true;
+            this.label_Main_Percent_7.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_7.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_7.Location = new System.Drawing.Point(390, 77);
+            this.label_Main_Percent_7.Name = "label_Main_Percent_7";
+            this.label_Main_Percent_7.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_7.TabIndex = 303;
+            this.label_Main_Percent_7.Text = "%";
             // 
-            // label41
+            // label_Main_Percent_6
             // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Silver;
-            this.label41.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(308, 78);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(17, 15);
-            this.label41.TabIndex = 303;
-            this.label41.Text = "%";
+            this.label_Main_Percent_6.AutoSize = true;
+            this.label_Main_Percent_6.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_6.Location = new System.Drawing.Point(308, 78);
+            this.label_Main_Percent_6.Name = "label_Main_Percent_6";
+            this.label_Main_Percent_6.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_6.TabIndex = 303;
+            this.label_Main_Percent_6.Text = "%";
             // 
-            // label40
+            // label_Main_Percent_5
             // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Silver;
-            this.label40.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(641, 28);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(17, 15);
-            this.label40.TabIndex = 303;
-            this.label40.Text = "%";
+            this.label_Main_Percent_5.AutoSize = true;
+            this.label_Main_Percent_5.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_5.Location = new System.Drawing.Point(641, 28);
+            this.label_Main_Percent_5.Name = "label_Main_Percent_5";
+            this.label_Main_Percent_5.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_5.TabIndex = 303;
+            this.label_Main_Percent_5.Text = "%";
             // 
-            // label39
+            // label_Main_Percent_4
             // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Silver;
-            this.label39.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(565, 28);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(17, 15);
-            this.label39.TabIndex = 303;
-            this.label39.Text = "%";
+            this.label_Main_Percent_4.AutoSize = true;
+            this.label_Main_Percent_4.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_4.Location = new System.Drawing.Point(565, 28);
+            this.label_Main_Percent_4.Name = "label_Main_Percent_4";
+            this.label_Main_Percent_4.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_4.TabIndex = 303;
+            this.label_Main_Percent_4.Text = "%";
             // 
-            // label38
+            // label_Main_Percent_3
             // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Silver;
-            this.label38.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(477, 28);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(17, 15);
-            this.label38.TabIndex = 303;
-            this.label38.Text = "%";
+            this.label_Main_Percent_3.AutoSize = true;
+            this.label_Main_Percent_3.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_3.Location = new System.Drawing.Point(477, 28);
+            this.label_Main_Percent_3.Name = "label_Main_Percent_3";
+            this.label_Main_Percent_3.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_3.TabIndex = 303;
+            this.label_Main_Percent_3.Text = "%";
             // 
-            // label37
+            // label_Main_Percent_2
             // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Silver;
-            this.label37.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(390, 28);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(17, 15);
-            this.label37.TabIndex = 303;
-            this.label37.Text = "%";
+            this.label_Main_Percent_2.AutoSize = true;
+            this.label_Main_Percent_2.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_2.Location = new System.Drawing.Point(390, 28);
+            this.label_Main_Percent_2.Name = "label_Main_Percent_2";
+            this.label_Main_Percent_2.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_2.TabIndex = 303;
+            this.label_Main_Percent_2.Text = "%";
             // 
-            // label36
+            // label_Main_Percent_1
             // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Silver;
-            this.label36.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(308, 28);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(17, 15);
-            this.label36.TabIndex = 302;
-            this.label36.Text = "%";
+            this.label_Main_Percent_1.AutoSize = true;
+            this.label_Main_Percent_1.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_1.Location = new System.Drawing.Point(308, 28);
+            this.label_Main_Percent_1.Name = "label_Main_Percent_1";
+            this.label_Main_Percent_1.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_1.TabIndex = 302;
+            this.label_Main_Percent_1.Text = "%";
             // 
-            // textBox6
+            // text_Main_Mode_5
             // 
-            this.textBox6.BackColor = System.Drawing.Color.Silver;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(588, 8);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(68, 18);
-            this.textBox6.TabIndex = 278;
-            this.textBox6.Text = "Mode 5";
+            this.text_Main_Mode_5.BackColor = System.Drawing.Color.Silver;
+            this.text_Main_Mode_5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.text_Main_Mode_5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_5.Location = new System.Drawing.Point(588, 8);
+            this.text_Main_Mode_5.Margin = new System.Windows.Forms.Padding(2);
+            this.text_Main_Mode_5.Name = "text_Main_Mode_5";
+            this.text_Main_Mode_5.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_5.TabIndex = 278;
+            this.text_Main_Mode_5.Text = "Mode 5";
             // 
-            // textBox5
+            // text_Main_Mode_4
             // 
-            this.textBox5.BackColor = System.Drawing.Color.Silver;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(502, 8);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(68, 18);
-            this.textBox5.TabIndex = 277;
-            this.textBox5.Text = "Mode 4";
+            this.text_Main_Mode_4.BackColor = System.Drawing.Color.Silver;
+            this.text_Main_Mode_4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.text_Main_Mode_4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_4.Location = new System.Drawing.Point(502, 8);
+            this.text_Main_Mode_4.Margin = new System.Windows.Forms.Padding(2);
+            this.text_Main_Mode_4.Name = "text_Main_Mode_4";
+            this.text_Main_Mode_4.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_4.TabIndex = 277;
+            this.text_Main_Mode_4.Text = "Mode 4";
             // 
-            // textBox4
+            // text_Main_Mode_3
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Silver;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(411, 8);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(68, 18);
-            this.textBox4.TabIndex = 276;
-            this.textBox4.Text = "Mode 3";
+            this.text_Main_Mode_3.BackColor = System.Drawing.Color.Silver;
+            this.text_Main_Mode_3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.text_Main_Mode_3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_3.Location = new System.Drawing.Point(411, 8);
+            this.text_Main_Mode_3.Margin = new System.Windows.Forms.Padding(2);
+            this.text_Main_Mode_3.Name = "text_Main_Mode_3";
+            this.text_Main_Mode_3.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_3.TabIndex = 276;
+            this.text_Main_Mode_3.Text = "Mode 3";
             // 
-            // textBox3
+            // text_Main_Mode_2
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Silver;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(331, 8);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(68, 18);
-            this.textBox3.TabIndex = 275;
-            this.textBox3.Text = "Mode 2";
+            this.text_Main_Mode_2.BackColor = System.Drawing.Color.Silver;
+            this.text_Main_Mode_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.text_Main_Mode_2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_2.Location = new System.Drawing.Point(331, 8);
+            this.text_Main_Mode_2.Margin = new System.Windows.Forms.Padding(2);
+            this.text_Main_Mode_2.Name = "text_Main_Mode_2";
+            this.text_Main_Mode_2.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_2.TabIndex = 275;
+            this.text_Main_Mode_2.Text = "Mode 2";
             // 
-            // textBox2
+            // text_Main_Mode_1
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Silver;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(242, 8);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(68, 18);
-            this.textBox2.TabIndex = 274;
-            this.textBox2.Text = "Mode 1";
+            this.text_Main_Mode_1.BackColor = System.Drawing.Color.Silver;
+            this.text_Main_Mode_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.text_Main_Mode_1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_1.Location = new System.Drawing.Point(242, 8);
+            this.text_Main_Mode_1.Margin = new System.Windows.Forms.Padding(2);
+            this.text_Main_Mode_1.Name = "text_Main_Mode_1";
+            this.text_Main_Mode_1.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_1.TabIndex = 274;
+            this.text_Main_Mode_1.Text = "Mode 1";
             // 
             // updown_Horsepower_Maneuvering
             // 
@@ -2679,173 +2679,173 @@
             0,
             0,
             0});
-            this.updown_Horsepower_Maneuvering.Name = "numericUpDown151";
+            this.updown_Horsepower_Maneuvering.Name = "updown_Horsepower_Maneuvering";
             this.updown_Horsepower_Maneuvering.Size = new System.Drawing.Size(60, 22);
             this.updown_Horsepower_Maneuvering.TabIndex = 145;
             // 
-            // panel16
+            // panel_Main_Fuel_Calculations
             // 
-            this.panel16.BackColor = System.Drawing.Color.Silver;
-            this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel16.Controls.Add(this.label46);
-            this.panel16.Location = new System.Drawing.Point(8, 580);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(313, 148);
-            this.panel16.TabIndex = 271;
+            this.panel_Main_Fuel_Calculations.BackColor = System.Drawing.Color.Silver;
+            this.panel_Main_Fuel_Calculations.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_Percent_11);
+            this.panel_Main_Fuel_Calculations.Location = new System.Drawing.Point(8, 580);
+            this.panel_Main_Fuel_Calculations.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Main_Fuel_Calculations.Name = "panel_Main_Fuel_Calculations";
+            this.panel_Main_Fuel_Calculations.Size = new System.Drawing.Size(313, 148);
+            this.panel_Main_Fuel_Calculations.TabIndex = 271;
             // 
-            // label46
+            // label_Main_Percent_11
             // 
-            this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.Color.Silver;
-            this.label46.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(255, 21);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(17, 15);
-            this.label46.TabIndex = 303;
-            this.label46.Text = "%";
+            this.label_Main_Percent_11.AutoSize = true;
+            this.label_Main_Percent_11.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_11.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_11.Location = new System.Drawing.Point(255, 21);
+            this.label_Main_Percent_11.Name = "label_Main_Percent_11";
+            this.label_Main_Percent_11.Size = new System.Drawing.Size(17, 15);
+            this.label_Main_Percent_11.TabIndex = 303;
+            this.label_Main_Percent_11.Text = "%";
             // 
-            // tabPage6
+            // tab_Aux
             // 
-            this.tabPage6.AutoScroll = true;
-            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage6.Controls.Add(this.label18);
-            this.tabPage6.Controls.Add(this.panel2);
-            this.tabPage6.Controls.Add(this.label230);
-            this.tabPage6.Controls.Add(this.updown_AUX_GALLON);
-            this.tabPage6.Controls.Add(this.label231);
-            this.tabPage6.Controls.Add(this.updown_AUX_MMBTU_In);
-            this.tabPage6.Controls.Add(this.updown_AUX_KW_HR_Out);
-            this.tabPage6.Controls.Add(this.updown_Aux_Engine_Efficiency);
-            this.tabPage6.Controls.Add(this.label232);
-            this.tabPage6.Controls.Add(this.label233);
-            this.tabPage6.Controls.Add(this.label234);
-            this.tabPage6.Controls.Add(this.label235);
-            this.tabPage6.Controls.Add(this.label224);
-            this.tabPage6.Controls.Add(this.updown_Tot_AUX_Energy);
-            this.tabPage6.Controls.Add(this.label223);
-            this.tabPage6.Controls.Add(this.updown_AUX_Active_HP);
-            this.tabPage6.Controls.Add(this.label222);
-            this.tabPage6.Controls.Add(this.updown_Aux_HP_Load_Factor);
-            this.tabPage6.Controls.Add(this.label221);
-            this.tabPage6.Controls.Add(this.updown_AUX_Time_Active);
-            this.tabPage6.Controls.Add(this.label220);
-            this.tabPage6.Controls.Add(this.updown_Aux_Percent_Trip_Active);
-            this.tabPage6.Controls.Add(this.label219);
-            this.tabPage6.Controls.Add(this.label218);
-            this.tabPage6.Controls.Add(this.label217);
-            this.tabPage6.Controls.Add(this.label216);
-            this.tabPage6.Controls.Add(this.label215);
-            this.tabPage6.Controls.Add(this.updown_Tot_Onboard_AUX_HP);
-            this.tabPage6.Controls.Add(this.updown_Aux_HP_Per_Engine);
-            this.tabPage6.Controls.Add(this.updown_Aux_Engines_In_Use);
-            this.tabPage6.Controls.Add(this.updown_Aux_Number_Engines);
-            this.tabPage6.Controls.Add(this.label214);
-            this.tabPage6.Controls.Add(this.panel20);
-            this.tabPage6.Controls.Add(this.panel21);
-            this.tabPage6.Controls.Add(this.panel23);
-            this.tabPage6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(752, 610);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Auxiliary Engine";
+            this.tab_Aux.AutoScroll = true;
+            this.tab_Aux.BackColor = System.Drawing.SystemColors.Control;
+            this.tab_Aux.Controls.Add(this.label_Aux_Emissions_Calc_Inputs);
+            this.tab_Aux.Controls.Add(this.panel_Aux_Emissions_Input);
+            this.tab_Aux.Controls.Add(this.label_Aux_Gallon);
+            this.tab_Aux.Controls.Add(this.updown_AUX_GALLON);
+            this.tab_Aux.Controls.Add(this.label_Aux_mmbtu_In);
+            this.tab_Aux.Controls.Add(this.updown_AUX_MMBTU_In);
+            this.tab_Aux.Controls.Add(this.updown_AUX_KW_HR_Out);
+            this.tab_Aux.Controls.Add(this.updown_Aux_Engine_Efficiency);
+            this.tab_Aux.Controls.Add(this.label_Aux_mmbtu_Out);
+            this.tab_Aux.Controls.Add(this.label_Aux_KHW_Out);
+            this.tab_Aux.Controls.Add(this.label_Aux_Engine_Efficiency);
+            this.tab_Aux.Controls.Add(this.label_Aux_Fuel_Calc);
+            this.tab_Aux.Controls.Add(this.label_Aux_Total_Energy);
+            this.tab_Aux.Controls.Add(this.updown_Tot_AUX_Energy);
+            this.tab_Aux.Controls.Add(this.label_Aux_Active_HP);
+            this.tab_Aux.Controls.Add(this.updown_AUX_Active_HP);
+            this.tab_Aux.Controls.Add(this.label_Aux_HP_Load_Factor);
+            this.tab_Aux.Controls.Add(this.updown_Aux_HP_Load_Factor);
+            this.tab_Aux.Controls.Add(this.label_Aux_Time_Active);
+            this.tab_Aux.Controls.Add(this.updown_AUX_Time_Active);
+            this.tab_Aux.Controls.Add(this.label_Aux_Percent_Active);
+            this.tab_Aux.Controls.Add(this.updown_Aux_Percent_Trip_Active);
+            this.tab_Aux.Controls.Add(this.label_Aux_Engine_Chars);
+            this.tab_Aux.Controls.Add(this.label_Aux_Total_Onboard_HP);
+            this.tab_Aux.Controls.Add(this.label_Aux_Engine_Rated_HP);
+            this.tab_Aux.Controls.Add(this.label_Aux_Num_Engines_In_Use);
+            this.tab_Aux.Controls.Add(this.label_Aux_Num_Engines_Onboard);
+            this.tab_Aux.Controls.Add(this.updown_Tot_Onboard_AUX_HP);
+            this.tab_Aux.Controls.Add(this.updown_Aux_HP_Per_Engine);
+            this.tab_Aux.Controls.Add(this.updown_Aux_Engines_In_Use);
+            this.tab_Aux.Controls.Add(this.updown_Aux_Number_Engines);
+            this.tab_Aux.Controls.Add(this.label_Aux_Engine_Vars);
+            this.tab_Aux.Controls.Add(this.panel_Aux_Engine_Vars);
+            this.tab_Aux.Controls.Add(this.panel_Aux_Engine_Chars);
+            this.tab_Aux.Controls.Add(this.panel_Aux_Fuel_Calc);
+            this.tab_Aux.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tab_Aux.Location = new System.Drawing.Point(4, 22);
+            this.tab_Aux.Name = "tab_Aux";
+            this.tab_Aux.Size = new System.Drawing.Size(752, 610);
+            this.tab_Aux.TabIndex = 5;
+            this.tab_Aux.Text = "Auxiliary Engine";
             // 
-            // label18
+            // label_Aux_Emissions_Calc_Inputs
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(3, 520);
-            this.label18.Name = "label18";
-            this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label18.Size = new System.Drawing.Size(498, 18);
-            this.label18.TabIndex = 299;
-            this.label18.Text = "User Inputs For Auxiliary Engine Emissions Calculations - g/hp-hr(out)";
+            this.label_Aux_Emissions_Calc_Inputs.AutoSize = true;
+            this.label_Aux_Emissions_Calc_Inputs.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Emissions_Calc_Inputs.Location = new System.Drawing.Point(3, 520);
+            this.label_Aux_Emissions_Calc_Inputs.Name = "label_Aux_Emissions_Calc_Inputs";
+            this.label_Aux_Emissions_Calc_Inputs.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_Aux_Emissions_Calc_Inputs.Size = new System.Drawing.Size(498, 18);
+            this.label_Aux_Emissions_Calc_Inputs.TabIndex = 299;
+            this.label_Aux_Emissions_Calc_Inputs.Text = "User Inputs For Auxiliary Engine Emissions Calculations - g/hp-hr(out)";
             // 
-            // panel2
+            // panel_Aux_Emissions_Input
             // 
-            this.panel2.BackColor = System.Drawing.Color.Silver;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label35);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.Aux_Ult_CH4);
-            this.panel2.Controls.Add(this.Aux_Ult_N2O);
-            this.panel2.Controls.Add(this.Aux_Ult_PM25);
-            this.panel2.Controls.Add(this.Aux_Ult_PM10);
-            this.panel2.Controls.Add(this.Aux_Ult_VOC);
-            this.panel2.Controls.Add(this.Aux_Ult_CO);
-            this.panel2.Controls.Add(this.Aux_Ult_NOX);
-            this.panel2.Controls.Add(this.label31);
-            this.panel2.Controls.Add(this.Aux_Bio_CH4);
-            this.panel2.Controls.Add(this.Aux_Bio_N2O);
-            this.panel2.Controls.Add(this.Aux_Bio_PM25);
-            this.panel2.Controls.Add(this.Aux_Bio_PM10);
-            this.panel2.Controls.Add(this.Aux_Bio_VOC);
-            this.panel2.Controls.Add(this.Aux_Bio_CO);
-            this.panel2.Controls.Add(this.Aux_Bio_NOX);
-            this.panel2.Controls.Add(this.label32);
-            this.panel2.Controls.Add(this.Aux_Fis_CH4);
-            this.panel2.Controls.Add(this.Aux_Fis_N2O);
-            this.panel2.Controls.Add(this.Aux_Fis_PM25);
-            this.panel2.Controls.Add(this.Aux_Fis_PM10);
-            this.panel2.Controls.Add(this.Aux_Fis_VOC);
-            this.panel2.Controls.Add(this.Aux_Fis_CO);
-            this.panel2.Controls.Add(this.Aux_Fis_NOX);
-            this.panel2.Controls.Add(this.label33);
-            this.panel2.Controls.Add(this.Aux_Nat_CH4);
-            this.panel2.Controls.Add(this.Aux_Nat_N2O);
-            this.panel2.Controls.Add(this.Aux_Nat_PM25);
-            this.panel2.Controls.Add(this.Aux_Nat_PM10);
-            this.panel2.Controls.Add(this.Aux_Nat_VOC);
-            this.panel2.Controls.Add(this.Aux_Nat_CO);
-            this.panel2.Controls.Add(this.Aux_Nat_NOX);
-            this.panel2.Controls.Add(this.label34);
-            this.panel2.Controls.Add(this.Aux_Die_CH4);
-            this.panel2.Controls.Add(this.Aux_Die_N2O);
-            this.panel2.Controls.Add(this.Aux_Die_PM25);
-            this.panel2.Controls.Add(this.Aux_Die_PM10);
-            this.panel2.Controls.Add(this.Aux_Die_VOC);
-            this.panel2.Controls.Add(this.Aux_Die_CO);
-            this.panel2.Controls.Add(this.Aux_Die_NOX);
-            this.panel2.Controls.Add(this.Aux_Res_CH4);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.Aux_Res_N2O);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.Aux_Res_PM25);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.Aux_Res_PM10);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.Aux_Res_VOC);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.Aux_Res_CO);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.Aux_Res_NOX);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Location = new System.Drawing.Point(6, 540);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(715, 247);
-            this.panel2.TabIndex = 324;
+            this.panel_Aux_Emissions_Input.BackColor = System.Drawing.Color.Silver;
+            this.panel_Aux_Emissions_Input.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Residual_Oil_Label);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_ULSD_Label);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Ult_CH4);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Ult_N2O);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Ult_PM25);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Ult_PM10);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Ult_VOC);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Ult_CO);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Ult_NOX);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Biodiesel_Label);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Bio_CH4);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Bio_N2O);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Bio_PM25);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Bio_PM10);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Bio_VOC);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Bio_CO);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Bio_NOX);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Fischer_Label);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Fis_CH4);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Fis_N2O);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Fis_PM25);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Fis_PM10);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Fis_VOC);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Fis_CO);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Fis_NOX);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Natural_Gas_Label);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Nat_CH4);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Nat_N2O);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Nat_PM25);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Nat_PM10);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Nat_VOC);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Nat_CO);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Nat_NOX);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Diesel_Label);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Die_CH4);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Die_N2O);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Die_PM25);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Die_PM10);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Die_VOC);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Die_CO);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Die_NOX);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Res_CH4);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_CH4);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Res_N2O);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_N2O);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Res_PM25);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_PM25);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Res_PM10);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_PM10);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Res_VOC);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_VOC);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Res_CO);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_CO);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Res_NOX);
+            this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_NOX);
+            this.panel_Aux_Emissions_Input.Location = new System.Drawing.Point(6, 540);
+            this.panel_Aux_Emissions_Input.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Aux_Emissions_Input.Name = "panel_Aux_Emissions_Input";
+            this.panel_Aux_Emissions_Input.Size = new System.Drawing.Size(715, 247);
+            this.panel_Aux_Emissions_Input.TabIndex = 324;
             // 
-            // label35
+            // Aux_Residual_Oil_Label
             // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(78, 17);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(79, 17);
-            this.label35.TabIndex = 325;
-            this.label35.Text = "Residual Oil";
+            this.Aux_Residual_Oil_Label.AutoSize = true;
+            this.Aux_Residual_Oil_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Residual_Oil_Label.Location = new System.Drawing.Point(78, 17);
+            this.Aux_Residual_Oil_Label.Name = "Aux_Residual_Oil_Label";
+            this.Aux_Residual_Oil_Label.Size = new System.Drawing.Size(79, 17);
+            this.Aux_Residual_Oil_Label.TabIndex = 325;
+            this.Aux_Residual_Oil_Label.Text = "Residual Oil";
             // 
-            // label16
+            // Aux_ULSD_Label
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(597, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(103, 34);
-            this.label16.TabIndex = 381;
-            this.label16.Text = "Ultra-low Sulfur\r\nDiesel";
+            this.Aux_ULSD_Label.AutoSize = true;
+            this.Aux_ULSD_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_ULSD_Label.Location = new System.Drawing.Point(597, 0);
+            this.Aux_ULSD_Label.Name = "Aux_ULSD_Label";
+            this.Aux_ULSD_Label.Size = new System.Drawing.Size(103, 34);
+            this.Aux_ULSD_Label.TabIndex = 381;
+            this.Aux_ULSD_Label.Text = "Ultra-low Sulfur\r\nDiesel";
             // 
             // Aux_Ult_CH4
             // 
@@ -2952,15 +2952,15 @@
             this.Aux_Ult_NOX.Size = new System.Drawing.Size(97, 22);
             this.Aux_Ult_NOX.TabIndex = 374;
             // 
-            // label31
+            // Aux_Biodiesel_Label
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(494, 17);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(61, 17);
-            this.label31.TabIndex = 373;
-            this.label31.Text = "Biodiesel";
+            this.Aux_Biodiesel_Label.AutoSize = true;
+            this.Aux_Biodiesel_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Biodiesel_Label.Location = new System.Drawing.Point(494, 17);
+            this.Aux_Biodiesel_Label.Name = "Aux_Biodiesel_Label";
+            this.Aux_Biodiesel_Label.Size = new System.Drawing.Size(61, 17);
+            this.Aux_Biodiesel_Label.TabIndex = 373;
+            this.Aux_Biodiesel_Label.Text = "Biodiesel";
             // 
             // Aux_Bio_CH4
             // 
@@ -3067,15 +3067,15 @@
             this.Aux_Bio_NOX.Size = new System.Drawing.Size(97, 22);
             this.Aux_Bio_NOX.TabIndex = 366;
             // 
-            // label32
+            // Aux_Fischer_Label
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(388, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(106, 34);
-            this.label32.TabIndex = 365;
-            this.label32.Text = "Fischer–Tropsch\r\nDiesel";
+            this.Aux_Fischer_Label.AutoSize = true;
+            this.Aux_Fischer_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fischer_Label.Location = new System.Drawing.Point(388, 0);
+            this.Aux_Fischer_Label.Name = "Aux_Fischer_Label";
+            this.Aux_Fischer_Label.Size = new System.Drawing.Size(106, 34);
+            this.Aux_Fischer_Label.TabIndex = 365;
+            this.Aux_Fischer_Label.Text = "Fischer–Tropsch\r\nDiesel";
             // 
             // Aux_Fis_CH4
             // 
@@ -3182,15 +3182,15 @@
             this.Aux_Fis_NOX.Size = new System.Drawing.Size(97, 22);
             this.Aux_Fis_NOX.TabIndex = 358;
             // 
-            // label33
+            // Aux_Natural_Gas_Label
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(285, 17);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(79, 17);
-            this.label33.TabIndex = 357;
-            this.label33.Text = "Natural Gas";
+            this.Aux_Natural_Gas_Label.AutoSize = true;
+            this.Aux_Natural_Gas_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Natural_Gas_Label.Location = new System.Drawing.Point(285, 17);
+            this.Aux_Natural_Gas_Label.Name = "Aux_Natural_Gas_Label";
+            this.Aux_Natural_Gas_Label.Size = new System.Drawing.Size(79, 17);
+            this.Aux_Natural_Gas_Label.TabIndex = 357;
+            this.Aux_Natural_Gas_Label.Text = "Natural Gas";
             // 
             // Aux_Nat_CH4
             // 
@@ -3297,15 +3297,15 @@
             this.Aux_Nat_NOX.Size = new System.Drawing.Size(97, 22);
             this.Aux_Nat_NOX.TabIndex = 350;
             // 
-            // label34
+            // Aux_Diesel_Label
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(182, 17);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(45, 17);
-            this.label34.TabIndex = 349;
-            this.label34.Text = "Diesel";
+            this.Aux_Diesel_Label.AutoSize = true;
+            this.Aux_Diesel_Label.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Diesel_Label.Location = new System.Drawing.Point(182, 17);
+            this.Aux_Diesel_Label.Name = "Aux_Diesel_Label";
+            this.Aux_Diesel_Label.Size = new System.Drawing.Size(45, 17);
+            this.Aux_Diesel_Label.TabIndex = 349;
+            this.Aux_Diesel_Label.Text = "Diesel";
             // 
             // Aux_Die_CH4
             // 
@@ -3427,16 +3427,16 @@
             this.Aux_Res_CH4.Size = new System.Drawing.Size(97, 22);
             this.Aux_Res_CH4.TabIndex = 298;
             // 
-            // label10
+            // label_Aux_CH4
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Silver;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 199);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 17);
-            this.label10.TabIndex = 297;
-            this.label10.Text = "CH4";
+            this.label_Aux_CH4.AutoSize = true;
+            this.label_Aux_CH4.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_CH4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CH4.Location = new System.Drawing.Point(4, 199);
+            this.label_Aux_CH4.Name = "label_Aux_CH4";
+            this.label_Aux_CH4.Size = new System.Drawing.Size(39, 17);
+            this.label_Aux_CH4.TabIndex = 297;
+            this.label_Aux_CH4.Text = "CH4";
             // 
             // Aux_Res_N2O
             // 
@@ -3453,16 +3453,16 @@
             this.Aux_Res_N2O.Size = new System.Drawing.Size(97, 22);
             this.Aux_Res_N2O.TabIndex = 296;
             // 
-            // label11
+            // label_Aux_N2O
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Silver;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(4, 172);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 17);
-            this.label11.TabIndex = 295;
-            this.label11.Text = "N2O";
+            this.label_Aux_N2O.AutoSize = true;
+            this.label_Aux_N2O.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_N2O.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_N2O.Location = new System.Drawing.Point(4, 172);
+            this.label_Aux_N2O.Name = "label_Aux_N2O";
+            this.label_Aux_N2O.Size = new System.Drawing.Size(39, 17);
+            this.label_Aux_N2O.TabIndex = 295;
+            this.label_Aux_N2O.Text = "N2O";
             // 
             // Aux_Res_PM25
             // 
@@ -3479,16 +3479,16 @@
             this.Aux_Res_PM25.Size = new System.Drawing.Size(97, 22);
             this.Aux_Res_PM25.TabIndex = 294;
             // 
-            // label12
+            // label_Aux_PM25
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Silver;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(4, 146);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 17);
-            this.label12.TabIndex = 293;
-            this.label12.Text = "PM2.5";
+            this.label_Aux_PM25.AutoSize = true;
+            this.label_Aux_PM25.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_PM25.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_PM25.Location = new System.Drawing.Point(4, 146);
+            this.label_Aux_PM25.Name = "label_Aux_PM25";
+            this.label_Aux_PM25.Size = new System.Drawing.Size(52, 17);
+            this.label_Aux_PM25.TabIndex = 293;
+            this.label_Aux_PM25.Text = "PM2.5";
             // 
             // Aux_Res_PM10
             // 
@@ -3505,16 +3505,16 @@
             this.Aux_Res_PM10.Size = new System.Drawing.Size(97, 22);
             this.Aux_Res_PM10.TabIndex = 292;
             // 
-            // label13
+            // label_Aux_PM10
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Silver;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(4, 119);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 17);
-            this.label13.TabIndex = 291;
-            this.label13.Text = "PM10";
+            this.label_Aux_PM10.AutoSize = true;
+            this.label_Aux_PM10.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_PM10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_PM10.Location = new System.Drawing.Point(4, 119);
+            this.label_Aux_PM10.Name = "label_Aux_PM10";
+            this.label_Aux_PM10.Size = new System.Drawing.Size(48, 17);
+            this.label_Aux_PM10.TabIndex = 291;
+            this.label_Aux_PM10.Text = "PM10";
             // 
             // Aux_Res_VOC
             // 
@@ -3531,16 +3531,16 @@
             this.Aux_Res_VOC.Size = new System.Drawing.Size(97, 22);
             this.Aux_Res_VOC.TabIndex = 290;
             // 
-            // label14
+            // label_Aux_VOC
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Silver;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(4, 92);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 17);
-            this.label14.TabIndex = 289;
-            this.label14.Text = "VOC";
+            this.label_Aux_VOC.AutoSize = true;
+            this.label_Aux_VOC.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_VOC.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_VOC.Location = new System.Drawing.Point(4, 92);
+            this.label_Aux_VOC.Name = "label_Aux_VOC";
+            this.label_Aux_VOC.Size = new System.Drawing.Size(41, 17);
+            this.label_Aux_VOC.TabIndex = 289;
+            this.label_Aux_VOC.Text = "VOC";
             // 
             // Aux_Res_CO
             // 
@@ -3557,16 +3557,16 @@
             this.Aux_Res_CO.Size = new System.Drawing.Size(97, 22);
             this.Aux_Res_CO.TabIndex = 288;
             // 
-            // label15
+            // label_Aux_CO
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Silver;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(4, 66);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 17);
-            this.label15.TabIndex = 287;
-            this.label15.Text = "CO";
+            this.label_Aux_CO.AutoSize = true;
+            this.label_Aux_CO.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_CO.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CO.Location = new System.Drawing.Point(4, 66);
+            this.label_Aux_CO.Name = "label_Aux_CO";
+            this.label_Aux_CO.Size = new System.Drawing.Size(31, 17);
+            this.label_Aux_CO.TabIndex = 287;
+            this.label_Aux_CO.Text = "CO";
             // 
             // Aux_Res_NOX
             // 
@@ -3583,27 +3583,27 @@
             this.Aux_Res_NOX.Size = new System.Drawing.Size(97, 22);
             this.Aux_Res_NOX.TabIndex = 285;
             // 
-            // label17
+            // label_Aux_NOX
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Silver;
-            this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(4, 40);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(41, 17);
-            this.label17.TabIndex = 265;
-            this.label17.Text = "NOX";
+            this.label_Aux_NOX.AutoSize = true;
+            this.label_Aux_NOX.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_NOX.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_NOX.Location = new System.Drawing.Point(4, 40);
+            this.label_Aux_NOX.Name = "label_Aux_NOX";
+            this.label_Aux_NOX.Size = new System.Drawing.Size(41, 17);
+            this.label_Aux_NOX.TabIndex = 265;
+            this.label_Aux_NOX.Text = "NOX";
             // 
-            // label230
+            // label_Aux_Gallon
             // 
-            this.label230.AutoSize = true;
-            this.label230.BackColor = System.Drawing.Color.Silver;
-            this.label230.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label230.Location = new System.Drawing.Point(11, 477);
-            this.label230.Name = "label230";
-            this.label230.Size = new System.Drawing.Size(65, 17);
-            this.label230.TabIndex = 199;
-            this.label230.Text = "gallon/trip";
+            this.label_Aux_Gallon.AutoSize = true;
+            this.label_Aux_Gallon.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Gallon.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Gallon.Location = new System.Drawing.Point(11, 477);
+            this.label_Aux_Gallon.Name = "label_Aux_Gallon";
+            this.label_Aux_Gallon.Size = new System.Drawing.Size(65, 17);
+            this.label_Aux_Gallon.TabIndex = 199;
+            this.label_Aux_Gallon.Text = "gallon/trip";
             // 
             // updown_AUX_GALLON
             // 
@@ -3617,21 +3617,21 @@
             370409800,
             542101,
             0});
-            this.updown_AUX_GALLON.Name = "numericUpDown238";
+            this.updown_AUX_GALLON.Name = "updown_AUX_GALLON";
             this.updown_AUX_GALLON.ReadOnly = true;
             this.updown_AUX_GALLON.Size = new System.Drawing.Size(179, 22);
             this.updown_AUX_GALLON.TabIndex = 198;
             // 
-            // label231
+            // label_Aux_mmbtu_In
             // 
-            this.label231.AutoSize = true;
-            this.label231.BackColor = System.Drawing.Color.Silver;
-            this.label231.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label231.Location = new System.Drawing.Point(11, 451);
-            this.label231.Name = "label231";
-            this.label231.Size = new System.Drawing.Size(85, 17);
-            this.label231.TabIndex = 197;
-            this.label231.Text = "mmbtu in/trip";
+            this.label_Aux_mmbtu_In.AutoSize = true;
+            this.label_Aux_mmbtu_In.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_mmbtu_In.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_mmbtu_In.Location = new System.Drawing.Point(11, 451);
+            this.label_Aux_mmbtu_In.Name = "label_Aux_mmbtu_In";
+            this.label_Aux_mmbtu_In.Size = new System.Drawing.Size(85, 17);
+            this.label_Aux_mmbtu_In.TabIndex = 197;
+            this.label_Aux_mmbtu_In.Text = "mmbtu in/trip";
             // 
             // updown_AUX_MMBTU_In
             // 
@@ -3645,7 +3645,7 @@
             370409800,
             542101,
             0});
-            this.updown_AUX_MMBTU_In.Name = "numericUpDown239";
+            this.updown_AUX_MMBTU_In.Name = "updown_AUX_MMBTU_In";
             this.updown_AUX_MMBTU_In.ReadOnly = true;
             this.updown_AUX_MMBTU_In.Size = new System.Drawing.Size(179, 22);
             this.updown_AUX_MMBTU_In.TabIndex = 196;
@@ -3662,7 +3662,7 @@
             370409800,
             542101,
             0});
-            this.updown_AUX_KW_HR_Out.Name = "numericUpDown241";
+            this.updown_AUX_KW_HR_Out.Name = "updown_AUX_KW_HR_Out";
             this.updown_AUX_KW_HR_Out.ReadOnly = true;
             this.updown_AUX_KW_HR_Out.Size = new System.Drawing.Size(179, 22);
             this.updown_AUX_KW_HR_Out.TabIndex = 194;
@@ -3682,7 +3682,7 @@
             0,
             0,
             0});
-            this.updown_Aux_Engine_Efficiency.Name = "numericUpDown242";
+            this.updown_Aux_Engine_Efficiency.Name = "updown_Aux_Engine_Efficiency";
             this.updown_Aux_Engine_Efficiency.Size = new System.Drawing.Size(179, 22);
             this.updown_Aux_Engine_Efficiency.TabIndex = 193;
             this.updown_Aux_Engine_Efficiency.Value = new decimal(new int[] {
@@ -3691,59 +3691,59 @@
             0,
             0});
             // 
-            // label232
+            // label_Aux_mmbtu_Out
             // 
-            this.label232.AutoSize = true;
-            this.label232.BackColor = System.Drawing.Color.Silver;
-            this.label232.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label232.Location = new System.Drawing.Point(11, 425);
-            this.label232.Name = "label232";
-            this.label232.Size = new System.Drawing.Size(93, 17);
-            this.label232.TabIndex = 192;
-            this.label232.Text = "mmbtu out/trip";
+            this.label_Aux_mmbtu_Out.AutoSize = true;
+            this.label_Aux_mmbtu_Out.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_mmbtu_Out.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_mmbtu_Out.Location = new System.Drawing.Point(11, 425);
+            this.label_Aux_mmbtu_Out.Name = "label_Aux_mmbtu_Out";
+            this.label_Aux_mmbtu_Out.Size = new System.Drawing.Size(93, 17);
+            this.label_Aux_mmbtu_Out.TabIndex = 192;
+            this.label_Aux_mmbtu_Out.Text = "mmbtu out/trip";
             // 
-            // label233
+            // label_Aux_KHW_Out
             // 
-            this.label233.AutoSize = true;
-            this.label233.BackColor = System.Drawing.Color.Silver;
-            this.label233.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label233.Location = new System.Drawing.Point(11, 399);
-            this.label233.Name = "label233";
-            this.label233.Size = new System.Drawing.Size(85, 17);
-            this.label233.TabIndex = 191;
-            this.label233.Text = "KWh out/trip";
+            this.label_Aux_KHW_Out.AutoSize = true;
+            this.label_Aux_KHW_Out.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_KHW_Out.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_KHW_Out.Location = new System.Drawing.Point(11, 399);
+            this.label_Aux_KHW_Out.Name = "label_Aux_KHW_Out";
+            this.label_Aux_KHW_Out.Size = new System.Drawing.Size(85, 17);
+            this.label_Aux_KHW_Out.TabIndex = 191;
+            this.label_Aux_KHW_Out.Text = "KWh out/trip";
             // 
-            // label234
+            // label_Aux_Engine_Efficiency
             // 
-            this.label234.AutoSize = true;
-            this.label234.BackColor = System.Drawing.Color.Silver;
-            this.label234.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label234.Location = new System.Drawing.Point(11, 373);
-            this.label234.Name = "label234";
-            this.label234.Size = new System.Drawing.Size(141, 17);
-            this.label234.TabIndex = 190;
-            this.label234.Text = "Aux Engine Efficiency";
+            this.label_Aux_Engine_Efficiency.AutoSize = true;
+            this.label_Aux_Engine_Efficiency.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Engine_Efficiency.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Engine_Efficiency.Location = new System.Drawing.Point(11, 373);
+            this.label_Aux_Engine_Efficiency.Name = "label_Aux_Engine_Efficiency";
+            this.label_Aux_Engine_Efficiency.Size = new System.Drawing.Size(141, 17);
+            this.label_Aux_Engine_Efficiency.TabIndex = 190;
+            this.label_Aux_Engine_Efficiency.Text = "Aux Engine Efficiency";
             // 
-            // label235
+            // label_Aux_Fuel_Calc
             // 
-            this.label235.AutoSize = true;
-            this.label235.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label235.Location = new System.Drawing.Point(3, 331);
-            this.label235.Name = "label235";
-            this.label235.Size = new System.Drawing.Size(516, 18);
-            this.label235.TabIndex = 189;
-            this.label235.Text = "Calculation of Auxiliary Fuel Using Conventional Diesel as Baseline Fuel";
+            this.label_Aux_Fuel_Calc.AutoSize = true;
+            this.label_Aux_Fuel_Calc.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Fuel_Calc.Location = new System.Drawing.Point(3, 331);
+            this.label_Aux_Fuel_Calc.Name = "label_Aux_Fuel_Calc";
+            this.label_Aux_Fuel_Calc.Size = new System.Drawing.Size(516, 18);
+            this.label_Aux_Fuel_Calc.TabIndex = 189;
+            this.label_Aux_Fuel_Calc.Text = "Calculation of Auxiliary Fuel Using Conventional Diesel as Baseline Fuel";
             // 
-            // label224
+            // label_Aux_Total_Energy
             // 
-            this.label224.AutoSize = true;
-            this.label224.BackColor = System.Drawing.Color.Silver;
-            this.label224.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label224.Location = new System.Drawing.Point(7, 283);
-            this.label224.Name = "label224";
-            this.label224.Size = new System.Drawing.Size(252, 17);
-            this.label224.TabIndex = 141;
-            this.label224.Text = "Total Auxiliary Energy Production (KWh)";
+            this.label_Aux_Total_Energy.AutoSize = true;
+            this.label_Aux_Total_Energy.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Total_Energy.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Total_Energy.Location = new System.Drawing.Point(7, 283);
+            this.label_Aux_Total_Energy.Name = "label_Aux_Total_Energy";
+            this.label_Aux_Total_Energy.Size = new System.Drawing.Size(252, 17);
+            this.label_Aux_Total_Energy.TabIndex = 141;
+            this.label_Aux_Total_Energy.Text = "Total Auxiliary Energy Production (KWh)";
             // 
             // updown_Tot_AUX_Energy
             // 
@@ -3757,21 +3757,21 @@
             370409800,
             542101,
             0});
-            this.updown_Tot_AUX_Energy.Name = "numericUpDown236";
+            this.updown_Tot_AUX_Energy.Name = "updown_Tot_AUX_Energy";
             this.updown_Tot_AUX_Energy.ReadOnly = true;
             this.updown_Tot_AUX_Energy.Size = new System.Drawing.Size(92, 22);
             this.updown_Tot_AUX_Energy.TabIndex = 140;
             // 
-            // label223
+            // label_Aux_Active_HP
             // 
-            this.label223.AutoSize = true;
-            this.label223.BackColor = System.Drawing.Color.Silver;
-            this.label223.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label223.Location = new System.Drawing.Point(7, 259);
-            this.label223.Name = "label223";
-            this.label223.Size = new System.Drawing.Size(193, 17);
-            this.label223.TabIndex = 139;
-            this.label223.Text = "Active HP per Auxiliary Engine";
+            this.label_Aux_Active_HP.AutoSize = true;
+            this.label_Aux_Active_HP.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Active_HP.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Active_HP.Location = new System.Drawing.Point(7, 259);
+            this.label_Aux_Active_HP.Name = "label_Aux_Active_HP";
+            this.label_Aux_Active_HP.Size = new System.Drawing.Size(193, 17);
+            this.label_Aux_Active_HP.TabIndex = 139;
+            this.label_Aux_Active_HP.Text = "Active HP per Auxiliary Engine";
             // 
             // updown_AUX_Active_HP
             // 
@@ -3785,21 +3785,21 @@
             370409800,
             542101,
             0});
-            this.updown_AUX_Active_HP.Name = "numericUpDown235";
+            this.updown_AUX_Active_HP.Name = "updown_AUX_Active_HP";
             this.updown_AUX_Active_HP.ReadOnly = true;
             this.updown_AUX_Active_HP.Size = new System.Drawing.Size(92, 22);
             this.updown_AUX_Active_HP.TabIndex = 138;
             // 
-            // label222
+            // label_Aux_HP_Load_Factor
             // 
-            this.label222.AutoSize = true;
-            this.label222.BackColor = System.Drawing.Color.Silver;
-            this.label222.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label222.Location = new System.Drawing.Point(7, 234);
-            this.label222.Name = "label222";
-            this.label222.Size = new System.Drawing.Size(196, 17);
-            this.label222.TabIndex = 137;
-            this.label222.Text = "HP Load Factor (Single Engine)";
+            this.label_Aux_HP_Load_Factor.AutoSize = true;
+            this.label_Aux_HP_Load_Factor.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_HP_Load_Factor.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_HP_Load_Factor.Location = new System.Drawing.Point(7, 234);
+            this.label_Aux_HP_Load_Factor.Name = "label_Aux_HP_Load_Factor";
+            this.label_Aux_HP_Load_Factor.Size = new System.Drawing.Size(196, 17);
+            this.label_Aux_HP_Load_Factor.TabIndex = 137;
+            this.label_Aux_HP_Load_Factor.Text = "HP Load Factor (Single Engine)";
             // 
             // updown_Aux_HP_Load_Factor
             // 
@@ -3811,20 +3811,20 @@
             0,
             0,
             0});
-            this.updown_Aux_HP_Load_Factor.Name = "numericUpDown234";
+            this.updown_Aux_HP_Load_Factor.Name = "updown_Aux_HP_Load_Factor";
             this.updown_Aux_HP_Load_Factor.Size = new System.Drawing.Size(92, 22);
             this.updown_Aux_HP_Load_Factor.TabIndex = 136;
             // 
-            // label221
+            // label_Aux_Time_Active
             // 
-            this.label221.AutoSize = true;
-            this.label221.BackColor = System.Drawing.Color.Silver;
-            this.label221.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label221.Location = new System.Drawing.Point(7, 210);
-            this.label221.Name = "label221";
-            this.label221.Size = new System.Drawing.Size(122, 17);
-            this.label221.TabIndex = 135;
-            this.label221.Text = "Time active (hours)";
+            this.label_Aux_Time_Active.AutoSize = true;
+            this.label_Aux_Time_Active.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Time_Active.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Time_Active.Location = new System.Drawing.Point(7, 210);
+            this.label_Aux_Time_Active.Name = "label_Aux_Time_Active";
+            this.label_Aux_Time_Active.Size = new System.Drawing.Size(122, 17);
+            this.label_Aux_Time_Active.TabIndex = 135;
+            this.label_Aux_Time_Active.Text = "Time active (hours)";
             // 
             // updown_AUX_Time_Active
             // 
@@ -3838,21 +3838,21 @@
             370409800,
             542101,
             0});
-            this.updown_AUX_Time_Active.Name = "numericUpDown233";
+            this.updown_AUX_Time_Active.Name = "updown_AUX_Time_Active";
             this.updown_AUX_Time_Active.ReadOnly = true;
             this.updown_AUX_Time_Active.Size = new System.Drawing.Size(92, 22);
             this.updown_AUX_Time_Active.TabIndex = 134;
             // 
-            // label220
+            // label_Aux_Percent_Active
             // 
-            this.label220.AutoSize = true;
-            this.label220.BackColor = System.Drawing.Color.Silver;
-            this.label220.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label220.Location = new System.Drawing.Point(7, 185);
-            this.label220.Name = "label220";
-            this.label220.Size = new System.Drawing.Size(344, 17);
-            this.label220.TabIndex = 133;
-            this.label220.Text = "Percent of Trip Auxillary Engine is Active Based on Time";
+            this.label_Aux_Percent_Active.AutoSize = true;
+            this.label_Aux_Percent_Active.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Percent_Active.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Percent_Active.Location = new System.Drawing.Point(7, 185);
+            this.label_Aux_Percent_Active.Name = "label_Aux_Percent_Active";
+            this.label_Aux_Percent_Active.Size = new System.Drawing.Size(344, 17);
+            this.label_Aux_Percent_Active.TabIndex = 133;
+            this.label_Aux_Percent_Active.Text = "Percent of Trip Auxillary Engine is Active Based on Time";
             // 
             // updown_Aux_Percent_Trip_Active
             // 
@@ -3864,63 +3864,63 @@
             0,
             0,
             0});
-            this.updown_Aux_Percent_Trip_Active.Name = "numericUpDown232";
+            this.updown_Aux_Percent_Trip_Active.Name = "updown_Aux_Percent_Trip_Active";
             this.updown_Aux_Percent_Trip_Active.Size = new System.Drawing.Size(92, 22);
             this.updown_Aux_Percent_Trip_Active.TabIndex = 132;
             // 
-            // label219
+            // label_Aux_Engine_Chars
             // 
-            this.label219.AutoSize = true;
-            this.label219.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label219.Location = new System.Drawing.Point(3, 155);
-            this.label219.Name = "label219";
-            this.label219.Size = new System.Drawing.Size(521, 18);
-            this.label219.TabIndex = 131;
-            this.label219.Text = "Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)";
+            this.label_Aux_Engine_Chars.AutoSize = true;
+            this.label_Aux_Engine_Chars.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Engine_Chars.Location = new System.Drawing.Point(3, 155);
+            this.label_Aux_Engine_Chars.Name = "label_Aux_Engine_Chars";
+            this.label_Aux_Engine_Chars.Size = new System.Drawing.Size(521, 18);
+            this.label_Aux_Engine_Chars.TabIndex = 131;
+            this.label_Aux_Engine_Chars.Text = "Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)";
             // 
-            // label218
+            // label_Aux_Total_Onboard_HP
             // 
-            this.label218.AutoSize = true;
-            this.label218.BackColor = System.Drawing.Color.Silver;
-            this.label218.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label218.Location = new System.Drawing.Point(7, 109);
-            this.label218.Name = "label218";
-            this.label218.Size = new System.Drawing.Size(244, 17);
-            this.label218.TabIndex = 130;
-            this.label218.Text = "Total OnBoard Aux Engine HP (In Use)";
+            this.label_Aux_Total_Onboard_HP.AutoSize = true;
+            this.label_Aux_Total_Onboard_HP.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Total_Onboard_HP.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Total_Onboard_HP.Location = new System.Drawing.Point(7, 109);
+            this.label_Aux_Total_Onboard_HP.Name = "label_Aux_Total_Onboard_HP";
+            this.label_Aux_Total_Onboard_HP.Size = new System.Drawing.Size(244, 17);
+            this.label_Aux_Total_Onboard_HP.TabIndex = 130;
+            this.label_Aux_Total_Onboard_HP.Text = "Total OnBoard Aux Engine HP (In Use)";
             // 
-            // label217
+            // label_Aux_Engine_Rated_HP
             // 
-            this.label217.AutoSize = true;
-            this.label217.BackColor = System.Drawing.Color.Silver;
-            this.label217.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label217.Location = new System.Drawing.Point(7, 85);
-            this.label217.Name = "label217";
-            this.label217.Size = new System.Drawing.Size(242, 17);
-            this.label217.TabIndex = 129;
-            this.label217.Text = "Auxillary Engine Rated HP (per engine)";
+            this.label_Aux_Engine_Rated_HP.AutoSize = true;
+            this.label_Aux_Engine_Rated_HP.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Engine_Rated_HP.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Engine_Rated_HP.Location = new System.Drawing.Point(7, 85);
+            this.label_Aux_Engine_Rated_HP.Name = "label_Aux_Engine_Rated_HP";
+            this.label_Aux_Engine_Rated_HP.Size = new System.Drawing.Size(242, 17);
+            this.label_Aux_Engine_Rated_HP.TabIndex = 129;
+            this.label_Aux_Engine_Rated_HP.Text = "Auxillary Engine Rated HP (per engine)";
             // 
-            // label216
+            // label_Aux_Num_Engines_In_Use
             // 
-            this.label216.AutoSize = true;
-            this.label216.BackColor = System.Drawing.Color.Silver;
-            this.label216.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label216.Location = new System.Drawing.Point(7, 59);
-            this.label216.Name = "label216";
-            this.label216.Size = new System.Drawing.Size(216, 17);
-            this.label216.TabIndex = 128;
-            this.label216.Text = "Number of Auxillary Engines in use";
+            this.label_Aux_Num_Engines_In_Use.AutoSize = true;
+            this.label_Aux_Num_Engines_In_Use.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Num_Engines_In_Use.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Num_Engines_In_Use.Location = new System.Drawing.Point(7, 59);
+            this.label_Aux_Num_Engines_In_Use.Name = "label_Aux_Num_Engines_In_Use";
+            this.label_Aux_Num_Engines_In_Use.Size = new System.Drawing.Size(216, 17);
+            this.label_Aux_Num_Engines_In_Use.TabIndex = 128;
+            this.label_Aux_Num_Engines_In_Use.Text = "Number of Auxillary Engines in use";
             // 
-            // label215
+            // label_Aux_Num_Engines_Onboard
             // 
-            this.label215.AutoSize = true;
-            this.label215.BackColor = System.Drawing.Color.Silver;
-            this.label215.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label215.Location = new System.Drawing.Point(7, 32);
-            this.label215.Name = "label215";
-            this.label215.Size = new System.Drawing.Size(236, 17);
-            this.label215.TabIndex = 127;
-            this.label215.Text = "Number of OnBoard Auxillary Engines";
+            this.label_Aux_Num_Engines_Onboard.AutoSize = true;
+            this.label_Aux_Num_Engines_Onboard.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Num_Engines_Onboard.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Num_Engines_Onboard.Location = new System.Drawing.Point(7, 32);
+            this.label_Aux_Num_Engines_Onboard.Name = "label_Aux_Num_Engines_Onboard";
+            this.label_Aux_Num_Engines_Onboard.Size = new System.Drawing.Size(236, 17);
+            this.label_Aux_Num_Engines_Onboard.TabIndex = 127;
+            this.label_Aux_Num_Engines_Onboard.Text = "Number of OnBoard Auxillary Engines";
             // 
             // updown_Tot_Onboard_AUX_HP
             // 
@@ -3933,7 +3933,7 @@
             370409800,
             542101,
             0});
-            this.updown_Tot_Onboard_AUX_HP.Name = "numericUpDown231";
+            this.updown_Tot_Onboard_AUX_HP.Name = "updown_Tot_Onboard_AUX_HP";
             this.updown_Tot_Onboard_AUX_HP.ReadOnly = true;
             this.updown_Tot_Onboard_AUX_HP.Size = new System.Drawing.Size(92, 22);
             this.updown_Tot_Onboard_AUX_HP.TabIndex = 126;
@@ -3947,7 +3947,7 @@
             0,
             0,
             0});
-            this.updown_Aux_HP_Per_Engine.Name = "numericUpDown230";
+            this.updown_Aux_HP_Per_Engine.Name = "updown_Aux_HP_Per_Engine";
             this.updown_Aux_HP_Per_Engine.Size = new System.Drawing.Size(92, 22);
             this.updown_Aux_HP_Per_Engine.TabIndex = 125;
             // 
@@ -3960,7 +3960,7 @@
             0,
             0,
             0});
-            this.updown_Aux_Engines_In_Use.Name = "numericUpDown229";
+            this.updown_Aux_Engines_In_Use.Name = "updown_Aux_Engines_In_Use";
             this.updown_Aux_Engines_In_Use.Size = new System.Drawing.Size(92, 22);
             this.updown_Aux_Engines_In_Use.TabIndex = 124;
             // 
@@ -3973,87 +3973,87 @@
             0,
             0,
             0});
-            this.updown_Aux_Number_Engines.Name = "numericUpDown228";
+            this.updown_Aux_Number_Engines.Name = "updown_Aux_Number_Engines";
             this.updown_Aux_Number_Engines.Size = new System.Drawing.Size(92, 22);
             this.updown_Aux_Number_Engines.TabIndex = 123;
             // 
-            // label214
+            // label_Aux_Engine_Vars
             // 
-            this.label214.AutoSize = true;
-            this.label214.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label214.Location = new System.Drawing.Point(3, 6);
-            this.label214.Name = "label214";
-            this.label214.Size = new System.Drawing.Size(189, 18);
-            this.label214.TabIndex = 122;
-            this.label214.Text = "Auxiliary Engine Variables";
+            this.label_Aux_Engine_Vars.AutoSize = true;
+            this.label_Aux_Engine_Vars.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Engine_Vars.Location = new System.Drawing.Point(3, 6);
+            this.label_Aux_Engine_Vars.Name = "label_Aux_Engine_Vars";
+            this.label_Aux_Engine_Vars.Size = new System.Drawing.Size(189, 18);
+            this.label_Aux_Engine_Vars.TabIndex = 122;
+            this.label_Aux_Engine_Vars.Text = "Auxiliary Engine Variables";
             // 
-            // panel20
+            // panel_Aux_Engine_Vars
             // 
-            this.panel20.BackColor = System.Drawing.Color.Silver;
-            this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel20.Location = new System.Drawing.Point(6, 26);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(360, 109);
-            this.panel20.TabIndex = 318;
+            this.panel_Aux_Engine_Vars.BackColor = System.Drawing.Color.Silver;
+            this.panel_Aux_Engine_Vars.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Aux_Engine_Vars.Location = new System.Drawing.Point(6, 26);
+            this.panel_Aux_Engine_Vars.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Aux_Engine_Vars.Name = "panel_Aux_Engine_Vars";
+            this.panel_Aux_Engine_Vars.Size = new System.Drawing.Size(360, 109);
+            this.panel_Aux_Engine_Vars.TabIndex = 318;
             // 
-            // panel21
+            // panel_Aux_Engine_Chars
             // 
-            this.panel21.BackColor = System.Drawing.Color.Silver;
-            this.panel21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel21.Controls.Add(this.label48);
-            this.panel21.Controls.Add(this.label47);
-            this.panel21.Location = new System.Drawing.Point(6, 178);
-            this.panel21.Margin = new System.Windows.Forms.Padding(2);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(476, 132);
-            this.panel21.TabIndex = 319;
+            this.panel_Aux_Engine_Chars.BackColor = System.Drawing.Color.Silver;
+            this.panel_Aux_Engine_Chars.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Aux_Engine_Chars.Controls.Add(this.label_Aux_Percent_2);
+            this.panel_Aux_Engine_Chars.Controls.Add(this.label_Aux_Percent_1);
+            this.panel_Aux_Engine_Chars.Location = new System.Drawing.Point(6, 178);
+            this.panel_Aux_Engine_Chars.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Aux_Engine_Chars.Name = "panel_Aux_Engine_Chars";
+            this.panel_Aux_Engine_Chars.Size = new System.Drawing.Size(476, 132);
+            this.panel_Aux_Engine_Chars.TabIndex = 319;
             // 
-            // label48
+            // label_Aux_Percent_2
             // 
-            this.label48.AutoSize = true;
-            this.label48.BackColor = System.Drawing.Color.Silver;
-            this.label48.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.Location = new System.Drawing.Point(445, 56);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(17, 15);
-            this.label48.TabIndex = 325;
-            this.label48.Text = "%";
+            this.label_Aux_Percent_2.AutoSize = true;
+            this.label_Aux_Percent_2.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Percent_2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Percent_2.Location = new System.Drawing.Point(445, 56);
+            this.label_Aux_Percent_2.Name = "label_Aux_Percent_2";
+            this.label_Aux_Percent_2.Size = new System.Drawing.Size(17, 15);
+            this.label_Aux_Percent_2.TabIndex = 325;
+            this.label_Aux_Percent_2.Text = "%";
             // 
-            // label47
+            // label_Aux_Percent_1
             // 
-            this.label47.AutoSize = true;
-            this.label47.BackColor = System.Drawing.Color.Silver;
-            this.label47.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(445, 8);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(17, 15);
-            this.label47.TabIndex = 325;
-            this.label47.Text = "%";
+            this.label_Aux_Percent_1.AutoSize = true;
+            this.label_Aux_Percent_1.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Percent_1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Percent_1.Location = new System.Drawing.Point(445, 8);
+            this.label_Aux_Percent_1.Name = "label_Aux_Percent_1";
+            this.label_Aux_Percent_1.Size = new System.Drawing.Size(17, 15);
+            this.label_Aux_Percent_1.TabIndex = 325;
+            this.label_Aux_Percent_1.Text = "%";
             // 
-            // panel23
+            // panel_Aux_Fuel_Calc
             // 
-            this.panel23.BackColor = System.Drawing.Color.Silver;
-            this.panel23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel23.Controls.Add(this.label49);
-            this.panel23.Controls.Add(this.label229);
-            this.panel23.Controls.Add(this.updown_AUX_MMBTU_Out);
-            this.panel23.Location = new System.Drawing.Point(6, 351);
-            this.panel23.Margin = new System.Windows.Forms.Padding(2);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(360, 154);
-            this.panel23.TabIndex = 321;
+            this.panel_Aux_Fuel_Calc.BackColor = System.Drawing.Color.Silver;
+            this.panel_Aux_Fuel_Calc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Aux_Fuel_Calc.Controls.Add(this.label_Aux_Percent_3);
+            this.panel_Aux_Fuel_Calc.Controls.Add(this.label229);
+            this.panel_Aux_Fuel_Calc.Controls.Add(this.updown_AUX_MMBTU_Out);
+            this.panel_Aux_Fuel_Calc.Location = new System.Drawing.Point(6, 351);
+            this.panel_Aux_Fuel_Calc.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Aux_Fuel_Calc.Name = "panel_Aux_Fuel_Calc";
+            this.panel_Aux_Fuel_Calc.Size = new System.Drawing.Size(360, 154);
+            this.panel_Aux_Fuel_Calc.TabIndex = 321;
             // 
-            // label49
+            // label_Aux_Percent_3
             // 
-            this.label49.AutoSize = true;
-            this.label49.BackColor = System.Drawing.Color.Silver;
-            this.label49.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(327, 22);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(17, 15);
-            this.label49.TabIndex = 303;
-            this.label49.Text = "%";
+            this.label_Aux_Percent_3.AutoSize = true;
+            this.label_Aux_Percent_3.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Percent_3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Percent_3.Location = new System.Drawing.Point(327, 22);
+            this.label_Aux_Percent_3.Name = "label_Aux_Percent_3";
+            this.label_Aux_Percent_3.Size = new System.Drawing.Size(17, 15);
+            this.label_Aux_Percent_3.TabIndex = 303;
+            this.label_Aux_Percent_3.Text = "%";
             // 
             // label229
             // 
@@ -4078,43 +4078,43 @@
             370409800,
             542101,
             0});
-            this.updown_AUX_MMBTU_Out.Name = "numericUpDown240";
+            this.updown_AUX_MMBTU_Out.Name = "updown_AUX_MMBTU_Out";
             this.updown_AUX_MMBTU_Out.ReadOnly = true;
             this.updown_AUX_MMBTU_Out.Size = new System.Drawing.Size(179, 22);
             this.updown_AUX_MMBTU_Out.TabIndex = 195;
             // 
-            // Submit_Button
+            // Recalc_Button
             // 
-            this.Submit_Button.Location = new System.Drawing.Point(800, 171);
-            this.Submit_Button.Name = "Submit_Button";
-            this.Submit_Button.Size = new System.Drawing.Size(135, 46);
-            this.Submit_Button.TabIndex = 2;
-            this.Submit_Button.Text = "Re-Calculate";
-            this.Submit_Button.UseVisualStyleBackColor = true;
-            this.Submit_Button.Click += new System.EventHandler(this.Submit_Button_Click);
+            this.Recalc_Button.Location = new System.Drawing.Point(800, 171);
+            this.Recalc_Button.Name = "Recalc_Button";
+            this.Recalc_Button.Size = new System.Drawing.Size(135, 46);
+            this.Recalc_Button.TabIndex = 2;
+            this.Recalc_Button.Text = "Re-Calculate";
+            this.Recalc_Button.UseVisualStyleBackColor = true;
+            this.Recalc_Button.Click += new System.EventHandler(this.Recalc_Button_Click);
             // 
-            // richTextBox1
+            // Instructions_Text_Box
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(766, 50);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(224, 115);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "Instructions:\n\n1.     Input Main Engine values\n2.     Input Auxiliary Engine valu" +
+            this.Instructions_Text_Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Instructions_Text_Box.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Instructions_Text_Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Instructions_Text_Box.Location = new System.Drawing.Point(766, 50);
+            this.Instructions_Text_Box.Name = "Instructions_Text_Box";
+            this.Instructions_Text_Box.ReadOnly = true;
+            this.Instructions_Text_Box.Size = new System.Drawing.Size(224, 115);
+            this.Instructions_Text_Box.TabIndex = 3;
+            this.Instructions_Text_Box.Text = "Instructions:\n\n1.     Input Main Engine values\n2.     Input Auxiliary Engine valu" +
     "es\n3.     Click \'Re-Calculate\'\n4.     Click \'Run Simulation\'";
             // 
-            // Reset
+            // ResetButton
             // 
-            this.Reset.Location = new System.Drawing.Point(800, 608);
-            this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(135, 46);
-            this.Reset.TabIndex = 4;
-            this.Reset.Text = "Reset to Defaults";
-            this.Reset.UseVisualStyleBackColor = true;
-            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            this.ResetButton.Location = new System.Drawing.Point(800, 608);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(135, 46);
+            this.ResetButton.TabIndex = 4;
+            this.ResetButton.Text = "Reset to Defaults";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // TEAMS
             // 
@@ -4123,14 +4123,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(990, 664);
-            this.Controls.Add(this.Reset);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.Submit_Button);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.ResetButton);
+            this.Controls.Add(this.Instructions_Text_Box);
+            this.Controls.Add(this.Recalc_Button);
+            this.Controls.Add(this.engine_tabs);
+            this.Controls.Add(this.menu_strip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menu_strip;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1000, 696);
             this.MinimumSize = new System.Drawing.Size(1000, 696);
@@ -4138,13 +4138,13 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TEAMS";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.menu_strip.ResumeLayout(false);
+            this.menu_strip.PerformLayout();
+            this.engine_tabs.ResumeLayout(false);
+            this.tab_Main.ResumeLayout(false);
+            this.tab_Main.PerformLayout();
+            this.panel_Main_GWPs.ResumeLayout(false);
+            this.panel_Main_GWPs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updown_NO2_GWP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_CO_GWP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_VOC_GWP)).EndInit();
@@ -4232,15 +4232,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_HP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Single_Engine_HP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Number_Of_Engines)).EndInit();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
+            this.panel_Main_Engine_Chars.ResumeLayout(false);
+            this.panel_Main_Engine_Chars.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Maneuvering)).EndInit();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel_Main_Fuel_Calculations.ResumeLayout(false);
+            this.panel_Main_Fuel_Calculations.PerformLayout();
+            this.tab_Aux.ResumeLayout(false);
+            this.tab_Aux.PerformLayout();
+            this.panel_Aux_Emissions_Input.ResumeLayout(false);
+            this.panel_Aux_Emissions_Input.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_CH4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_N2O)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Ult_PM25)).EndInit();
@@ -4296,10 +4296,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Per_Engine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engines_In_Use)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Number_Engines)).EndInit();
-            this.panel21.ResumeLayout(false);
-            this.panel21.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
+            this.panel_Aux_Engine_Chars.ResumeLayout(false);
+            this.panel_Aux_Engine_Chars.PerformLayout();
+            this.panel_Aux_Fuel_Calc.ResumeLayout(false);
+            this.panel_Aux_Fuel_Calc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updown_AUX_MMBTU_Out)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -4308,43 +4308,43 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem runSimulationToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menu_strip;
+        private System.Windows.Forms.ToolStripMenuItem run_menu;
+        private System.Windows.Forms.TabControl engine_tabs;
+        private System.Windows.Forms.TabPage tab_Main;
+        private System.Windows.Forms.TabPage tab_Aux;
+        private System.Windows.Forms.ToolStripMenuItem file_menu;
+        private System.Windows.Forms.ToolStripMenuItem file_new_menu;
         private System.Windows.Forms.NumericUpDown updown_Tot_Trip_Hours;
-        private System.Windows.Forms.Label label155;
+        private System.Windows.Forms.Label label_Main_Time_Total;
         private System.Windows.Forms.NumericUpDown updown_Trip_Time_Minutes;
         private System.Windows.Forms.NumericUpDown updown_Trip_Time_Hours;
         private System.Windows.Forms.NumericUpDown updown_Total_Trip_Distance;
-        private System.Windows.Forms.Label label157;
-        private System.Windows.Forms.Label label158;
-        private System.Windows.Forms.Label label159;
-        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.Label label_Main_Time_Minutes;
+        private System.Windows.Forms.Label label_Main_Time_Hours;
+        private System.Windows.Forms.Label label_Main_Total_Trip_Distance;
+        private System.Windows.Forms.Label label_Main_Total_Distance_And_Time;
         private System.Windows.Forms.TextBox textBox_Vessel_Type;
-        private System.Windows.Forms.Label label148;
+        private System.Windows.Forms.Label label_Main_Vessel_ID;
         private System.Windows.Forms.NumericUpDown updown_Tot_Onboard_HP;
         private System.Windows.Forms.NumericUpDown updown_Single_Engine_HP;
         private System.Windows.Forms.NumericUpDown updown_Number_Of_Engines;
-        private System.Windows.Forms.Label label146;
-        private System.Windows.Forms.Label label147;
-        private System.Windows.Forms.Label label149;
-        private System.Windows.Forms.Label label145;
-        private System.Windows.Forms.Label label166;
+        private System.Windows.Forms.Label label_Main_Total_HP;
+        private System.Windows.Forms.Label label_Main_Single_Engine_HP;
+        private System.Windows.Forms.Label label_Main_Num_Engines;
+        private System.Windows.Forms.Label label_Main_Engine_Vars;
+        private System.Windows.Forms.Label label_Main_Energy_Production;
         private System.Windows.Forms.NumericUpDown updown_EP_Idle;
-        private System.Windows.Forms.Label label165;
+        private System.Windows.Forms.Label label_Main_HP_Per_Engine;
         private System.Windows.Forms.NumericUpDown updown_HP_Idle;
         private System.Windows.Forms.Label label160;
         private System.Windows.Forms.NumericUpDown updown_Horsepower_Idle;
         private System.Windows.Forms.NumericUpDown updown_Time_Idle;
         private System.Windows.Forms.NumericUpDown updown_Percent_Idle;
-        private System.Windows.Forms.Label label161;
-        private System.Windows.Forms.Label label162;
-        private System.Windows.Forms.Label label163;
-        private System.Windows.Forms.Label label164;
+        private System.Windows.Forms.Label label_Main_HP_Load_Factor;
+        private System.Windows.Forms.Label label_Main_Time_Per_Mode;
+        private System.Windows.Forms.Label label_Main_Percent_In_Mode;
+        private System.Windows.Forms.Label label_Main_Engine_Char_Per_Mode;
         private System.Windows.Forms.NumericUpDown updown_EP_Slow_Cruise;
         private System.Windows.Forms.NumericUpDown updown_HP_Slow_Cruise;
         private System.Windows.Forms.NumericUpDown updown_Horsepower_Slow_Cruise;
@@ -4360,119 +4360,119 @@
         private System.Windows.Forms.NumericUpDown updown_Horsepower_Maneuvering;
         private System.Windows.Forms.NumericUpDown updown_Time_Maneuvering;
         private System.Windows.Forms.NumericUpDown updown_Percent_Maneuvering;
-        private System.Windows.Forms.Label label179;
-        private System.Windows.Forms.Label label180;
+        private System.Windows.Forms.Label label_Main_Baseline_Fuel_Consumption;
+        private System.Windows.Forms.Label label_Main_Gallon;
         private System.Windows.Forms.NumericUpDown updown_GALLON;
-        private System.Windows.Forms.Label label181;
+        private System.Windows.Forms.Label label_Main_mmbtu_In;
         private System.Windows.Forms.NumericUpDown updown_MMBTU_In;
         private System.Windows.Forms.NumericUpDown updown_MMBTU_Out;
         private System.Windows.Forms.NumericUpDown updown_KW_HR_Out;
         private System.Windows.Forms.NumericUpDown updown_Engine_Efficiency;
-        private System.Windows.Forms.Label label182;
-        private System.Windows.Forms.Label label183;
-        private System.Windows.Forms.Label label184;
-        private System.Windows.Forms.Label label178;
-        private System.Windows.Forms.Label label172;
+        private System.Windows.Forms.Label label_Main_mmbtu_Out;
+        private System.Windows.Forms.Label label_Main_KWH_Out;
+        private System.Windows.Forms.Label label_Main_Engine_Efficiency;
+        private System.Windows.Forms.Label label_Main_Fuel_Calculations;
+        private System.Windows.Forms.Label label_Main_Energy_Total;
         private System.Windows.Forms.NumericUpDown updown_EP_Total;
         private System.Windows.Forms.NumericUpDown updown_EP_Full_Cruise;
         private System.Windows.Forms.NumericUpDown updown_HP_Full_Cruise;
         private System.Windows.Forms.NumericUpDown updown_Horsepower_Full_Cruise;
         private System.Windows.Forms.NumericUpDown updown_Time_Full_Cruise;
         private System.Windows.Forms.NumericUpDown updown_Percent_Full_Cruise;
-        private System.Windows.Forms.Label label224;
+        private System.Windows.Forms.Label label_Aux_Total_Energy;
         private System.Windows.Forms.NumericUpDown updown_Tot_AUX_Energy;
-        private System.Windows.Forms.Label label223;
+        private System.Windows.Forms.Label label_Aux_Active_HP;
         private System.Windows.Forms.NumericUpDown updown_AUX_Active_HP;
-        private System.Windows.Forms.Label label222;
+        private System.Windows.Forms.Label label_Aux_HP_Load_Factor;
         private System.Windows.Forms.NumericUpDown updown_Aux_HP_Load_Factor;
-        private System.Windows.Forms.Label label221;
+        private System.Windows.Forms.Label label_Aux_Time_Active;
         private System.Windows.Forms.NumericUpDown updown_AUX_Time_Active;
-        private System.Windows.Forms.Label label220;
+        private System.Windows.Forms.Label label_Aux_Percent_Active;
         private System.Windows.Forms.NumericUpDown updown_Aux_Percent_Trip_Active;
-        private System.Windows.Forms.Label label219;
-        private System.Windows.Forms.Label label218;
-        private System.Windows.Forms.Label label217;
-        private System.Windows.Forms.Label label216;
-        private System.Windows.Forms.Label label215;
+        private System.Windows.Forms.Label label_Aux_Engine_Chars;
+        private System.Windows.Forms.Label label_Aux_Total_Onboard_HP;
+        private System.Windows.Forms.Label label_Aux_Engine_Rated_HP;
+        private System.Windows.Forms.Label label_Aux_Num_Engines_In_Use;
+        private System.Windows.Forms.Label label_Aux_Num_Engines_Onboard;
         private System.Windows.Forms.NumericUpDown updown_Tot_Onboard_AUX_HP;
         private System.Windows.Forms.NumericUpDown updown_Aux_HP_Per_Engine;
         private System.Windows.Forms.NumericUpDown updown_Aux_Engines_In_Use;
         private System.Windows.Forms.NumericUpDown updown_Aux_Number_Engines;
-        private System.Windows.Forms.Label label214;
+        private System.Windows.Forms.Label label_Aux_Engine_Vars;
         private System.Windows.Forms.Label label229;
-        private System.Windows.Forms.Label label230;
+        private System.Windows.Forms.Label label_Aux_Gallon;
         private System.Windows.Forms.NumericUpDown updown_AUX_GALLON;
-        private System.Windows.Forms.Label label231;
+        private System.Windows.Forms.Label label_Aux_mmbtu_In;
         private System.Windows.Forms.NumericUpDown updown_AUX_MMBTU_In;
         private System.Windows.Forms.NumericUpDown updown_AUX_MMBTU_Out;
         private System.Windows.Forms.NumericUpDown updown_AUX_KW_HR_Out;
         private System.Windows.Forms.NumericUpDown updown_Aux_Engine_Efficiency;
-        private System.Windows.Forms.Label label232;
-        private System.Windows.Forms.Label label233;
-        private System.Windows.Forms.Label label234;
-        private System.Windows.Forms.Label label235;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Label label_Aux_mmbtu_Out;
+        private System.Windows.Forms.Label label_Aux_KHW_Out;
+        private System.Windows.Forms.Label label_Aux_Engine_Efficiency;
+        private System.Windows.Forms.Label label_Aux_Fuel_Calc;
+        private System.Windows.Forms.Panel panel_Main_Engine_Vars;
+        private System.Windows.Forms.Panel panel_Main_Trip_Distance_Time;
+        private System.Windows.Forms.Panel panel_Main_Engine_Chars;
+        private System.Windows.Forms.Panel panel_Main_Fuel_Calculations;
+        private System.Windows.Forms.Panel panel_Aux_Engine_Vars;
+        private System.Windows.Forms.Panel panel_Aux_Engine_Chars;
+        private System.Windows.Forms.Panel panel_Aux_Fuel_Calc;
+        private System.Windows.Forms.TextBox text_Main_Mode_5;
+        private System.Windows.Forms.TextBox text_Main_Mode_4;
+        private System.Windows.Forms.TextBox text_Main_Mode_3;
+        private System.Windows.Forms.TextBox text_Main_Mode_2;
+        private System.Windows.Forms.TextBox text_Main_Mode_1;
+        private System.Windows.Forms.ToolStripMenuItem file_exit_menu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NumericUpDown Res_NOX;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_Main_Inputs_NOX;
+        private System.Windows.Forms.Label label_Main_Engine_Inputs;
         private System.Windows.Forms.NumericUpDown Res_PM25;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label_Main_Inputs_PM25;
         private System.Windows.Forms.NumericUpDown Res_PM10;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label_Main_Inputs_PM10;
         private System.Windows.Forms.NumericUpDown Res_VOC;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_Main_Inputs_VOC;
         private System.Windows.Forms.NumericUpDown Res_CO;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_Main_Inputs_CO;
         private System.Windows.Forms.NumericUpDown Res_CH4;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label_Main_Inputs_CH4;
         private System.Windows.Forms.NumericUpDown Res_N2O;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label_Main_Inputs_N2O;
+        private System.Windows.Forms.Panel panel_Aux_Emissions_Input;
         private System.Windows.Forms.NumericUpDown Aux_Res_CH4;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label_Aux_CH4;
         private System.Windows.Forms.NumericUpDown Aux_Res_N2O;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label_Aux_N2O;
         private System.Windows.Forms.NumericUpDown Aux_Res_PM25;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label_Aux_PM25;
         private System.Windows.Forms.NumericUpDown Aux_Res_PM10;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label_Aux_PM10;
         private System.Windows.Forms.NumericUpDown Aux_Res_VOC;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label_Aux_VOC;
         private System.Windows.Forms.NumericUpDown Aux_Res_CO;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label_Aux_CO;
         private System.Windows.Forms.NumericUpDown Aux_Res_NOX;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button Submit_Button;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label_Aux_NOX;
+        private System.Windows.Forms.Button Recalc_Button;
+        private System.Windows.Forms.RichTextBox Instructions_Text_Box;
+        private System.Windows.Forms.Label label_Main_Global_Warming_Potentials;
+        private System.Windows.Forms.Panel panel_Main_GWPs;
         private System.Windows.Forms.NumericUpDown updown_NO2_GWP;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label_Main_GWP_NOX;
         private System.Windows.Forms.NumericUpDown updown_CO_GWP;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label_Main_GWP_CO;
         private System.Windows.Forms.NumericUpDown updown_VOC_GWP;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label_Main_GWP_VOC;
         private System.Windows.Forms.NumericUpDown updown_N2O_GWP;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label_Main_GWP_N2O;
         private System.Windows.Forms.NumericUpDown updown_CH4_GWP;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label_Main_GWP_CH4;
         private System.Windows.Forms.NumericUpDown updown_CO2_GWP;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label_Main_GWP_CO2;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label Main_ULSD_Label;
         private System.Windows.Forms.NumericUpDown Ult_CH4;
         private System.Windows.Forms.NumericUpDown Ult_N2O;
         private System.Windows.Forms.NumericUpDown Ult_PM25;
@@ -4480,7 +4480,7 @@
         private System.Windows.Forms.NumericUpDown Ult_VOC;
         private System.Windows.Forms.NumericUpDown Ult_CO;
         private System.Windows.Forms.NumericUpDown Ult_NOX;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label Main_Biodiesel_Label;
         private System.Windows.Forms.NumericUpDown Bio_CH4;
         private System.Windows.Forms.NumericUpDown Bio_N2O;
         private System.Windows.Forms.NumericUpDown Bio_PM25;
@@ -4488,7 +4488,7 @@
         private System.Windows.Forms.NumericUpDown Bio_VOC;
         private System.Windows.Forms.NumericUpDown Bio_CO;
         private System.Windows.Forms.NumericUpDown Bio_NOX;
-        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label Main_Fischer_Label;
         private System.Windows.Forms.NumericUpDown Fis_CH4;
         private System.Windows.Forms.NumericUpDown Fis_N2O;
         private System.Windows.Forms.NumericUpDown Fis_PM25;
@@ -4496,7 +4496,7 @@
         private System.Windows.Forms.NumericUpDown Fis_VOC;
         private System.Windows.Forms.NumericUpDown Fis_CO;
         private System.Windows.Forms.NumericUpDown Fis_NOX;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label Main_Natural_Gas_Label;
         private System.Windows.Forms.NumericUpDown Nat_CH4;
         private System.Windows.Forms.NumericUpDown Nat_N2O;
         private System.Windows.Forms.NumericUpDown Nat_PM25;
@@ -4504,7 +4504,7 @@
         private System.Windows.Forms.NumericUpDown Nat_VOC;
         private System.Windows.Forms.NumericUpDown Nat_CO;
         private System.Windows.Forms.NumericUpDown Nat_NOX;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Main_Diesel_Label;
         private System.Windows.Forms.NumericUpDown Die_CH4;
         private System.Windows.Forms.NumericUpDown Die_N2O;
         private System.Windows.Forms.NumericUpDown Die_PM25;
@@ -4512,11 +4512,11 @@
         private System.Windows.Forms.NumericUpDown Die_VOC;
         private System.Windows.Forms.NumericUpDown Die_CO;
         private System.Windows.Forms.NumericUpDown Die_NOX;
-        private System.Windows.Forms.Label Res_Oil_Label;
-        private System.Windows.Forms.Button Reset;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label Main_Residual_Oil_Label;
+        private System.Windows.Forms.Button ResetButton;
+        private System.Windows.Forms.Label label_Aux_Emissions_Calc_Inputs;
+        private System.Windows.Forms.Label Aux_Residual_Oil_Label;
+        private System.Windows.Forms.Label Aux_ULSD_Label;
         private System.Windows.Forms.NumericUpDown Aux_Ult_CH4;
         private System.Windows.Forms.NumericUpDown Aux_Ult_N2O;
         private System.Windows.Forms.NumericUpDown Aux_Ult_PM25;
@@ -4524,7 +4524,7 @@
         private System.Windows.Forms.NumericUpDown Aux_Ult_VOC;
         private System.Windows.Forms.NumericUpDown Aux_Ult_CO;
         private System.Windows.Forms.NumericUpDown Aux_Ult_NOX;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label Aux_Biodiesel_Label;
         private System.Windows.Forms.NumericUpDown Aux_Bio_CH4;
         private System.Windows.Forms.NumericUpDown Aux_Bio_N2O;
         private System.Windows.Forms.NumericUpDown Aux_Bio_PM25;
@@ -4532,7 +4532,7 @@
         private System.Windows.Forms.NumericUpDown Aux_Bio_VOC;
         private System.Windows.Forms.NumericUpDown Aux_Bio_CO;
         private System.Windows.Forms.NumericUpDown Aux_Bio_NOX;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label Aux_Fischer_Label;
         private System.Windows.Forms.NumericUpDown Aux_Fis_CH4;
         private System.Windows.Forms.NumericUpDown Aux_Fis_N2O;
         private System.Windows.Forms.NumericUpDown Aux_Fis_PM25;
@@ -4540,7 +4540,7 @@
         private System.Windows.Forms.NumericUpDown Aux_Fis_VOC;
         private System.Windows.Forms.NumericUpDown Aux_Fis_CO;
         private System.Windows.Forms.NumericUpDown Aux_Fis_NOX;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label Aux_Natural_Gas_Label;
         private System.Windows.Forms.NumericUpDown Aux_Nat_CH4;
         private System.Windows.Forms.NumericUpDown Aux_Nat_N2O;
         private System.Windows.Forms.NumericUpDown Aux_Nat_PM25;
@@ -4548,7 +4548,7 @@
         private System.Windows.Forms.NumericUpDown Aux_Nat_VOC;
         private System.Windows.Forms.NumericUpDown Aux_Nat_CO;
         private System.Windows.Forms.NumericUpDown Aux_Nat_NOX;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label Aux_Diesel_Label;
         private System.Windows.Forms.NumericUpDown Aux_Die_CH4;
         private System.Windows.Forms.NumericUpDown Aux_Die_N2O;
         private System.Windows.Forms.NumericUpDown Aux_Die_PM25;
@@ -4556,20 +4556,20 @@
         private System.Windows.Forms.NumericUpDown Aux_Die_VOC;
         private System.Windows.Forms.NumericUpDown Aux_Die_CO;
         private System.Windows.Forms.NumericUpDown Aux_Die_NOX;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label_Main_Percent_10;
+        private System.Windows.Forms.Label label_Main_Percent_9;
+        private System.Windows.Forms.Label label_Main_Percent_8;
+        private System.Windows.Forms.Label label_Main_Percent_7;
+        private System.Windows.Forms.Label label_Main_Percent_6;
+        private System.Windows.Forms.Label label_Main_Percent_5;
+        private System.Windows.Forms.Label label_Main_Percent_4;
+        private System.Windows.Forms.Label label_Main_Percent_3;
+        private System.Windows.Forms.Label label_Main_Percent_2;
+        private System.Windows.Forms.Label label_Main_Percent_1;
+        private System.Windows.Forms.Label label_Main_Percent_11;
+        private System.Windows.Forms.Label label_Aux_Percent_2;
+        private System.Windows.Forms.Label label_Aux_Percent_1;
+        private System.Windows.Forms.Label label_Aux_Percent_3;
 
 
 
