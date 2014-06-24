@@ -54,7 +54,7 @@ namespace TEAMSModule
         public APIcalls APIcontroller = new APIcalls();
 
         // These are values for the string of text showing what fuel is used
-        public string fuelUsed       =   "None Selected";
+        public string MainfuelUsed       =   "None Selected";
         public string auxFuelUsed    =   "None Selected";
 
         // The input sheet we are pulling from
@@ -161,21 +161,17 @@ namespace TEAMSModule
             tree_Aux_Fuel_Pathways.Nodes.Clear();
             TreeView[] FuelTrees = new TreeView[2] { tree_Main_Fuel_Pathways, tree_Aux_Fuel_Pathways };
 
-            IGDataDictionary<int, IResource> resources = APIcontroller.getResources();
-            IGDataDictionary<int, IPathway> pathways = APIcontroller.getPathways();
-            IGDataDictionary<int, IMix> mixes = APIcontroller.getMixes();
-
             // Adds pathways and mixes to the list so the user can select one
             foreach (TreeView tree in FuelTrees)
             {
                 foreach (int id in resource_ids)
                 {
-                    foreach (IResource resource in APIcontroller.getSpecificResources(resources, id))
+                    foreach (IResource resource in APIcontroller.getSpecificResources(id))
                     {
                         TreeNode resourceTreeNode = new TreeNode(resource.Name);
                         resourceTreeNode.Tag = resource;
 
-                        foreach (IPathway pathway in APIcontroller.getSpecificPathways(pathways, id))
+                        foreach (IPathway pathway in APIcontroller.getSpecificPathways(id))
                         {
                             TreeNode pathwayNode = new TreeNode(pathway.Name);
                             pathwayNode.Tag = pathway;
@@ -195,27 +191,22 @@ namespace TEAMSModule
         #region Final results calculation
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            Object tag = this.tree_Main_Fuel_Pathways.SelectedNode.Tag;
+            Object tag = tree_Main_Fuel_Pathways.SelectedNode.Tag;
             if (tag is IPathway)
             {
-                IGDataDictionary<int, IResource> resources = ResultsAccess.controler.CurrentProject.Data.Resources;
-                IGDataDictionary<int, IPathway> pathways = ResultsAccess.controler.CurrentProject.Data.Pathways;
-                IData data = ResultsAccess.controler.CurrentProject.Data;
+                IGDataDictionary<int, IResource> resources = APIcontroller.getResources();
+                IGDataDictionary<int, IPathway> pathways = APIcontroller.getPathways();
+                IData data = APIcontroller.getData();
+
                 IPathway path = tag as IPathway;
-                IResource resourceUsed = ResultsAccess.controler.CurrentProject.Data.Resources.ValueForKey(path.MainOutputResourceID);
-                foreach (IResource resource in resources.AllValues.Where(item => item.Id == path.MainOutputResourceID))
-                {
-                    fuelUsed = resource.Name;
-                }
+                IResource resourceUsed = APIcontroller.getResourceUsed(path);
+
+                // Grabs the fuel used in the main engine to display to the user.
+                MainfuelUsed = APIcontroller.getFuelUsed(path);
+
                 IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
-                if (resourceUsed.LowerHeatingValue.UserValue == 0)
-                {
-                    te.GALLONperTrip = (1 / resourceUsed.LowerHeatingValue.GreetValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * te.MMBTUinperTrip;
-                }
-                else
-                {
-                    te.GALLONperTrip = (1 / resourceUsed.LowerHeatingValue.UserValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * te.MMBTUinperTrip;
-                }
+
+                te.GALLONperTrip = APIcontroller.getGallonsPerMMBTU(resourceUsed) * te.MMBTUinperTrip;
 
                 //These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
                 double resourceDensity;
@@ -258,23 +249,23 @@ namespace TEAMSModule
 
                 double[] main_fuel_type = new double[7];
 
-                if (fuelUsed.Equals("Conventional Diesel"))
+                if (MainfuelUsed.Equals("Conventional Diesel"))
                 {
                     Array.Copy(te.Diesel, main_fuel_type, te.Diesel.Length);
                 }
-                else if (fuelUsed.Equals("Residual Oil"))
+                else if (MainfuelUsed.Equals("Residual Oil"))
                 {
                     Array.Copy(te.Residual_Oil, main_fuel_type, te.Residual_Oil.Length);
                 }
-                else if (fuelUsed.Equals("Low-Sulfur Diesel"))
+                else if (MainfuelUsed.Equals("Low-Sulfur Diesel"))
                 {
                     Array.Copy(te.Ult_Low_Sulf, main_fuel_type, te.Ult_Low_Sulf.Length);
                 }
-                else if (fuelUsed.Equals("Liquefied Natural Gas"))
+                else if (MainfuelUsed.Equals("Liquefied Natural Gas"))
                 {
                     Array.Copy(te.Natural_Gas, main_fuel_type, te.Natural_Gas.Length);
                 }
-                else if (fuelUsed.Equals("Biodiesel"))
+                else if (MainfuelUsed.Equals("Biodiesel"))
                 {
                     Array.Copy(te.Biodiesel, main_fuel_type, te.Biodiesel.Length);
                 }
@@ -386,7 +377,7 @@ namespace TEAMSModule
         }
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            Object tag = this.tree_Aux_Fuel_Pathways.SelectedNode.Tag;
+            Object tag = tree_Aux_Fuel_Pathways.SelectedNode.Tag;
             if (tag is IPathway)
             {
                 IGDataDictionary<int, IResource> resources   =   ResultsAccess.controler.CurrentProject.Data.Resources;
@@ -396,10 +387,9 @@ namespace TEAMSModule
                 IPathway path            =   tag as IPathway;
                 IResource resourceUsed   =   ResultsAccess.controler.CurrentProject.Data.Resources.ValueForKey(path.MainOutputResourceID);
 
-                foreach (IResource resource in resources.AllValues.Where(item => item.Id == path.MainOutputResourceID))
-                {
-                    auxFuelUsed  =   resource.Name;
-                }
+                // Gets the fuel used in the auxiliary engine to display to the user.
+                auxFuelUsed = APIcontroller.getFuelUsed(path);
+
                 IResults pathwayResults  =   path.GetUpstreamResults(data).ElementAt(0).Value;
 
                 // These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
@@ -693,7 +683,7 @@ namespace TEAMSModule
             label_N2O_Total.Text     =   parseResourceToString(N2O_Total) + " g/trip";
 
             // Title
-            label_Main_Fuel_Type.Text   =   fuelUsed;
+            label_Main_Fuel_Type.Text   =   MainfuelUsed;
             label_Aux_Fuel_Type.Text    =   auxFuelUsed;
 
             // Calculating greenhouse gas using Global Warming Potential
@@ -741,7 +731,7 @@ namespace TEAMSModule
             string[] seriesArray     =   { "WellToPump", "VesselOperation" };
 
             // Set the title of the graph to the passed in string title.
-            graph.Titles[0].Text     =   te.VesselTypeID + "\nMain Engine: " + fuelUsed + "\nAuxiliary Engine: " + auxFuelUsed;
+            graph.Titles[0].Text     =   te.VesselTypeID + "\nMain Engine: " + MainfuelUsed + "\nAuxiliary Engine: " + auxFuelUsed;
 
             // Iterate through both of the series.
             for (int i = 0; i < seriesArray.Length; i++)
@@ -944,7 +934,7 @@ namespace TEAMSModule
 
                 worksheet.Cells[20, 1].Value             =   "Main Engine Fuel Type:";
                 worksheet.Cells[20, 1].Style.Font.Bold   =   true;
-                worksheet.Cells[20, 2].Value             =   fuelUsed;
+                worksheet.Cells[20, 2].Value             =   MainfuelUsed;
 
                 worksheet.Cells[21, 1].Value             =   "Auxiliary Engine Fuel Type:";
                 worksheet.Cells[21, 1].Style.Font.Bold   =   true;

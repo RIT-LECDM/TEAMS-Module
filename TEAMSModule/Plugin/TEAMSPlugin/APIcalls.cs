@@ -17,12 +17,18 @@ namespace TEAMS_Plugin
 
         // Conventional Diesel Path ID - Used for estimation of fuel gallons for input, does not appear on the results sheet.
         private const int CD_PATH_ID = 40;
-
         // Gallons per 1 m^3
         private const double GALLONS_PER_CUBIC_METER = 264.172;
-
         // Joules per 1 Btu
         private const double JOULES_PER_BTU = 1055.05585;
+        // Joules per 1 MMBTU
+        private const double JOULES_PER_MMBTU           =   1055870000.0;
+        // Grams per 1 Kilogram
+        private const double GRAMS_PER_KILOGRAM         =   1000.0;
+        // Kilowatt-hours per 1 Horsepower-hour
+        private const double KWHRS_PER_HPHR             =   0.745699871;
+        // Grams Sulfur Oxide to Grams Sulfur Ratio
+        private const double GRAMS_SOX_PER_GRAMS_S      =   64 / 32;
 
         #endregion
 
@@ -49,17 +55,63 @@ namespace TEAMS_Plugin
         }
 
         public IGDataDictionary<int, IResource> getResources() { return ResultsAccess.controler.CurrentProject.Data.Resources; }
+
+        /// <summary>
+        /// Gets all of the Pathways available from GREET
+        /// </summary>
+        /// <returns>IGDataDictionary containing all of the pathways in GREET</returns>
         public IGDataDictionary<int, IPathway> getPathways() { return ResultsAccess.controler.CurrentProject.Data.Pathways; }
+
+        /// <summary>
+        /// Gets all of the Mixes available from GREET
+        /// </summary>
+        /// <returns>IGDataDictionary containing all of the Mixes in GREET</returns>
         public IGDataDictionary<int, IMix> getMixes() { return ResultsAccess.controler.CurrentProject.Data.Mixes; }
 
-        public IEnumerable<IResource> getSpecificResources(IGDataDictionary<int, IResource> all_resources, int res_id)
+        /// <summary>
+        /// Gets the entire GREET project's database
+        /// </summary>
+        /// <returns>The GREET project's database</returns>
+        public IData getData() { return ResultsAccess.controler.CurrentProject.Data; }
+
+        /// <summary>
+        /// Pulls the main product resource from using a specific pathway
+        /// </summary>
+        /// <param name="path">The specific pathway you are getting the resource for</param>
+        /// <returns>The product of the pathway it was passed</returns>
+        public IResource getResourceUsed(IPathway path) { return ResultsAccess.controler.CurrentProject.Data.Resources.ValueForKey(path.MainOutputResourceID); }
+
+        /// <summary>
+        /// Grabs all of the specific types of resources from all resources in GREET that match the main resource ID it is passed
+        /// </summary>
+        /// <param name="all_resources"></param>
+        /// <param name="res_id"></param>
+        /// <returns></returns>
+        public IEnumerable<IResource> getSpecificResources(int res_id)
         {
-            return all_resources.AllValues.Where(item => item.Id == res_id);
+            return getResources().AllValues.Where(item => item.Id == res_id);
         }
 
-        public IEnumerable<IPathway> getSpecificPathways(IGDataDictionary<int, IPathway> all_pathways, int res_id)
+        public IEnumerable<IPathway> getSpecificPathways(int res_id)
         {
-            return all_pathways.AllValues.Where(item => item.MainOutputResourceID == res_id);
+            return getPathways().AllValues.Where(item => item.MainOutputResourceID == res_id);
+        }
+
+        public string getFuelUsed(IPathway pathway)
+        {
+            return getResources().AllValues.Where(item => item.Id == pathway.MainOutputResourceID).ElementAt(0).Name;
+        }
+
+        public double getGallonsPerMMBTU(IResource resource_used)
+        {
+            double api_value;
+            double conversions = GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU;
+            if (resource_used.LowerHeatingValue.UserValue == 0)
+            { api_value = resource_used.LowerHeatingValue.GreetValue; }
+            else
+            { api_value = resource_used.LowerHeatingValue.UserValue; }
+
+            return ( (1 / api_value) * conversions );
         }
     }
 }
