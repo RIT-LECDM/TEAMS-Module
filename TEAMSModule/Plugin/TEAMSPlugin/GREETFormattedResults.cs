@@ -266,7 +266,7 @@ namespace TEAMSModule
                 TE_Total = TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
 
                 #region FOR FUTURE: FOSSIL FUELS / PETROLEUM FUELS
-                /**********************************************************************************************************
+
                 // Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
                 FF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
@@ -274,7 +274,7 @@ namespace TEAMSModule
                 // Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
                 PF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;
-                ***********************************************************************************************************/
+
                 #endregion
 
                 // Volatile Organic Compounds
@@ -442,25 +442,16 @@ namespace TEAMSModule
                     pathwayResults.LifeCycleResources().ElementAt(0).Value.Value))   -
                     1 - te.AuxEngineMMBTUinperTrip;
 
-
                 AUX_TE_VO    =   te.AuxEngineMMBTUinperTrip;
                 TE_Total     =   TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
-
-                #region FOR FUTURE: FOSSIL FUELS / PETROLEUM FUELS
-                /**********************************************************************************************************
-                 * Fossil Fuel is label3 in the Designer.
-                 * 
+                
                 // Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
                 AUX_FF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
-                 * 
-                 * Petroluem Fuel is label6 in the Designer.
-                 * 
+
                 // Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
                 AUX_PF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-                PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;
-                ***********************************************************************************************************/
-                #endregion
+                PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;              
 
                 AUX_VOC_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 AUX_VOC_VO   =   aux_fuel_type[0] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
@@ -505,11 +496,8 @@ namespace TEAMSModule
 
         private String parseResourceToString(double resource)
         {
-            if (resource != 0)
-            {
-                return (resource).ToString("#.##");
-            }
-            return "0.00";
+            if (resource != 0) { return (resource).ToString("#.##"); }
+            else { return "0.00"; }
         }
 
         #endregion
@@ -525,6 +513,12 @@ namespace TEAMSModule
             */
             // Total Energy
             label_Main_TE_WTP.Text = parseResourceToString(TE_WTP) + " mmbtu/trip";
+
+            // Fossil Fuel
+            label_Main_FF_WTP.Text = parseResourceToString(FF_WTP) + " mmbtu/trip";
+
+            // Petroleum Fuel
+            label_Main_PF_WTP.Text = parseResourceToString(PF_WTP) + " mmbtu/trip";   
 
             /***************
              * EMISSIONS
@@ -573,13 +567,11 @@ namespace TEAMSModule
             label_Aux_CO2_WTP.Text    =   parseResourceToString(AUX_CO2_WTP) + " g/trip";
             label_Aux_N2O_WTP.Text    =   parseResourceToString(AUX_N2O_WTP) + " g/trip";
 
-            // Fossil Fuel Total
-            // label39.Text = parseResourceToString(AUX_FF_WTP) + " mmbtu/trip";
-            label39.Text     =   "";
+            // Fossil Fuel Aux WTP
+            label_Aux_FF_WTP.Text     =   parseResourceToString(AUX_FF_WTP) + " mmbtu/trip";
 
             // Petroleum Fuel Total
-            // label59.Text = parseResourceToString(AUX_PF_WTP) + " mmbtu/trip"; 
-            label59.Text     =   "";
+            label_Aux_PF_WTP.Text     =   parseResourceToString(AUX_PF_WTP) + " mmbtu/trip"; 
 
             // Column 4 -- Aux Engine Vessel Operations
             label_Aux_TE_VO.Text      =   parseResourceToString(AUX_TE_VO) + " mmbtu/trip";
@@ -599,21 +591,11 @@ namespace TEAMSModule
             // Total Energy
             label_TE_Total.Text     =   parseResourceToString(TE_Total) + " mmbtu/trip";
 
-            // Fossil Fuel
-            // label61.Text = parseResourceToString(FF_WTP) + " mmbtu/trip";
-            label61.Text     =   "";
-
-            // Petroleum Fuel
-            // label64.Text = parseResourceToString(PF_WTP) + " mmbtu/trip";   
-            label64.Text     =   "";
-
             // Fossil Fuel Total
-            // label4.Text = parseResourceToString(FF_Total) + " mmbtu/trip";
-            label4.Text  =   "";
+            label_FF_Total.Text     =   parseResourceToString(FF_Total) + " mmbtu/trip";
 
             // Petroleum Fuel Total
-            // label5.Text = parseResourceToString(PF_Total) + " mmbtu/trip";
-            label5.Text  =   "";
+            label_PF_Total.Text     =   parseResourceToString(PF_Total) + " mmbtu/trip";
 
             /***************
              * EMISSIONS
