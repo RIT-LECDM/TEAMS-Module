@@ -265,8 +265,6 @@ namespace TEAMSModule
                 //Total Energy = Vessel Operation + Well to pump + aux vessel operation + aux well to pump
                 TE_Total = TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
 
-                #region FOR FUTURE: FOSSIL FUELS / PETROLEUM FUELS
-
                 // Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
                 FF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
@@ -274,8 +272,6 @@ namespace TEAMSModule
                 // Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
                 PF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;
-
-                #endregion
 
                 // Volatile Organic Compounds
                 // Well To Pump Emissions
