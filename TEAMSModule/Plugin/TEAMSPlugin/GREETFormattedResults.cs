@@ -33,6 +33,8 @@ namespace TEAMSModule
         private const double KWHRS_PER_HPHR             =   0.745699871;
         // Gallons per 1 cubic meter
         private const double GALLONS_PER_CUBIC_METER    =   264.172;
+        // Grams Sulfur Oxide to Grams Sulfur Ratio
+        private const double GRAMS_SOX_PER_GRAMS_S      =   64 / 32;
 
         #endregion
 
@@ -302,9 +304,8 @@ namespace TEAMSModule
                 PM25_Total  =   PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 // Sulfur Oxides
-                // TODO: Sulfur Oxides Vessel Operation Emissions = density of the fuel * sulfur ratio * kg to g * m^3 to gallon * gallon per trip
                 SOx_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                SOx_VO      =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * te.GALLONperTrip;
+                SOx_VO      =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * GRAMS_SOX_PER_GRAMS_S * te.GALLONperTrip;
                 SOx_Total   =   SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 // Methane
@@ -470,7 +471,7 @@ namespace TEAMSModule
                 PM25_Total   =   PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 AUX_SOx_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                AUX_SOx_VO   =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * ( 1 / GALLONS_PER_CUBIC_METER ) * te.AuxEngineGALLONperTrip;
+                AUX_SOx_VO   =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * ( 1 / GALLONS_PER_CUBIC_METER ) * GRAMS_SOX_PER_GRAMS_S * te.AuxEngineGALLONperTrip;
                 SOx_Total    =   SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 AUX_CH4_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
@@ -510,11 +511,20 @@ namespace TEAMSModule
             // Total Energy
             label_Main_TE_WTP.Text = parseResourceToString(TE_WTP) + " mmbtu/trip";
 
+            /***********************************************************
+             * TODO: Re-implement Fossil Fuel and Petroleum Fuel Results
+             ***********************************************************/
+
             // Fossil Fuel
-            label_Main_FF_WTP.Text = parseResourceToString(FF_WTP) + " mmbtu/trip";
+            //label_Main_FF_WTP.Text = parseResourceToString(FF_WTP) + " mmbtu/trip";
+            label_Fossil_Fuels.Text = "";
+            label_Main_FF_WTP.Text = "";
 
             // Petroleum Fuel
-            label_Main_PF_WTP.Text = parseResourceToString(PF_WTP) + " mmbtu/trip";   
+            //label_Main_PF_WTP.Text = parseResourceToString(PF_WTP) + " mmbtu/trip";
+            label_Petroleum_Fuel.Text = "";
+            label_Main_PF_WTP.Text = "";
+
 
             /***************
              * EMISSIONS
@@ -563,11 +573,17 @@ namespace TEAMSModule
             label_Aux_CO2_WTP.Text    =   parseResourceToString(AUX_CO2_WTP) + " g/trip";
             label_Aux_N2O_WTP.Text    =   parseResourceToString(AUX_N2O_WTP) + " g/trip";
 
+            /***********************************************************
+             * TODO: Re-implement Fossil Fuel and Petroleum Fuel Results
+             ***********************************************************/
+
             // Fossil Fuel Aux WTP
-            label_Aux_FF_WTP.Text     =   parseResourceToString(AUX_FF_WTP) + " mmbtu/trip";
+            //label_Aux_FF_WTP.Text     =   parseResourceToString(AUX_FF_WTP) + " mmbtu/trip";
+            label_Aux_FF_WTP.Text = "";
 
             // Petroleum Fuel Total
-            label_Aux_PF_WTP.Text     =   parseResourceToString(AUX_PF_WTP) + " mmbtu/trip"; 
+            //label_Aux_PF_WTP.Text     =   parseResourceToString(AUX_PF_WTP) + " mmbtu/trip";
+            label_Aux_PF_WTP.Text = "";
 
             // Column 4 -- Aux Engine Vessel Operations
             label_Aux_TE_VO.Text      =   parseResourceToString(AUX_TE_VO) + " mmbtu/trip";
@@ -587,11 +603,17 @@ namespace TEAMSModule
             // Total Energy
             label_TE_Total.Text     =   parseResourceToString(TE_Total) + " mmbtu/trip";
 
+
+            /***********************************************************
+             * TODO: Re-implement Fossil Fuel and Petroleum Fuel Results
+             ***********************************************************/
             // Fossil Fuel Total
-            label_FF_Total.Text     =   parseResourceToString(FF_Total) + " mmbtu/trip";
+            //label_FF_Total.Text     =   parseResourceToString(FF_Total) + " mmbtu/trip";
+            label_FF_Total.Text = "";
 
             // Petroleum Fuel Total
-            label_PF_Total.Text     =   parseResourceToString(PF_Total) + " mmbtu/trip";
+            //label_PF_Total.Text     =   parseResourceToString(PF_Total) + " mmbtu/trip";
+            label_PF_Total.Text = "";
 
             /***************
              * EMISSIONS
