@@ -267,13 +267,18 @@ namespace TEAMSModule
                 //Total Energy = Vessel Operation + Well to pump + aux vessel operation + aux well to pump
                 TE_Total = TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
 
+                // TODO: Implement Fossil Fuels and Petroleum Fuels
                 // Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
-                FF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
-                FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
+                //FF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
+                //FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
+                FF_WTP = 0;
+                FF_Total = 0;
 
                 // Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
-                PF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-                PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;
+                //PF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+                //PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;
+                PF_WTP = 0;
+                PF_Total = 0;
 
                 // Volatile Organic Compounds
                 // Well To Pump Emissions
@@ -442,13 +447,18 @@ namespace TEAMSModule
                 AUX_TE_VO    =   te.AuxEngineMMBTUinperTrip;
                 TE_Total     =   TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
                 
+                // TODO: Implement Fossil Fuels and Petroleum Fuels
                 // Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
-                AUX_FF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
-                FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
+                //AUX_FF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
+                //FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
+                AUX_FF_WTP = 0;
+                FF_Total = 0;
 
                 // Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
-                AUX_PF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
-                PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;              
+                //AUX_PF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+                //PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;              
+                AUX_PF_WTP = 0;
+                PF_Total = 0;
 
                 AUX_VOC_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
                 AUX_VOC_VO   =   aux_fuel_type[0] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;

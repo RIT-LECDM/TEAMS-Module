@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APIcalls.cs" />
     <Compile Include="CopyrightPage.cs">
       <SubType>Form</SubType>
     </Compile>

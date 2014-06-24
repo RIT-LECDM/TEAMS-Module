@@ -20,15 +20,6 @@ namespace TEAMS_Plugin
 {
     public partial class TEAMS : Form
     {
-        // Input Variables - Used to do the calculations for the model
-        #region Main Engine
-
-        // Main Engine Variables
-        public string VesselTypeID;
-        public int NumberOfEngines;
-        public int SingleEngineHP;
-        public int TotalOnboardHP;
-
         // Constants
         #region Constants
 
@@ -47,9 +38,22 @@ namespace TEAMS_Plugin
         private const double BTUS_PER_MMBTU = 1000000.00;
 
         // Conventional Diesel Path ID - Used for estimation of fuel gallons for input, does not appear on the results sheet.
-        public const int CD_PATH_ID = 40;
+        private const int CD_PATH_ID = 40;
 
         #endregion
+
+        // API Controller
+        public APIcalls APIcontroller = new APIcalls();
+
+        //Used to do the calculations for the model
+        #region Input Variables
+        #region Main Engine
+
+        // Main Engine Variables
+        public string VesselTypeID;
+        public int NumberOfEngines;
+        public int SingleEngineHP;
+        public int TotalOnboardHP;
 
         // Trip Distance and Time
         public double TotalTripDistanceInMiles;
@@ -57,7 +61,7 @@ namespace TEAMS_Plugin
         public double TripTimeMinutes;
         public double TotalTripTimeHours;
 
-        // Engine Charicterization Per Mode
+        //Engine Charicterization Per Mode
         // POT  -   Percent Of Trip, Time in mode is measured in hours
         // HPLF -   Horse Power Load Factor (Single engine)
         // HPPE -   Horse Power Per Engine
@@ -160,6 +164,7 @@ namespace TEAMS_Plugin
         public double CO_GWP;
         public double NO2_GWP;
         #endregion
+
         #region Auxiliary Engine(s)
 
         // Auxiliary Engine Variables
@@ -238,6 +243,7 @@ namespace TEAMS_Plugin
         public double[] Aux_Biodiesel;
         public double[] Aux_Ult_Low_Sulf;
 
+        #endregion
         #endregion
 
 
@@ -577,34 +583,9 @@ namespace TEAMS_Plugin
         public TEAMS()
         {
             InitializeComponent();
-            pullFromGREET();
             useDefaults();
             changeResults();
         }
-        /// <summary>
-        /// Grabs the data needed to calculate the Conventional Diesel btu/gal
-        /// </summary>
-        #region Conventional Diesel Pull From GREET
-        public void pullFromGREET()
-        {
-            // All this function is doing now is pulling the BTUPerGal for Conventional Diesel so it can be used to calculate the gallons per trip. (This is ultimately recalculated in the Results code)
-            IGDataDictionary<int, IResource> resources   =   ResultsAccess.controler.CurrentProject.Data.Resources;
-            IGDataDictionary<int, IPathway> pathways     =   ResultsAccess.controler.CurrentProject.Data.Pathways;
-            IGDataDictionary<int, IMix> mixes            =   ResultsAccess.controler.CurrentProject.Data.Mixes;
-            IPathway myPathway   =   pathways.ValueForKey(CD_PATH_ID);
-            int productID        =   myPathway.MainOutputResourceID;
-            productID            =   myPathway.MainOutputResourceID;
-            IResource ConvDiesel =   resources.ValueForKey(productID);
-            if (ConvDiesel.LowerHeatingValue.UserValue == 0)
-            {
-                conventionalDieselBTUperGal  =   (ConvDiesel.LowerHeatingValue.GreetValue) *  (1 / GALLONS_PER_CUBIC_METER) * (1 / JOULES_PER_BTU);
-            }
-            else
-            {
-                conventionalDieselBTUperGal  =   (ConvDiesel.LowerHeatingValue.UserValue) * (1 / GALLONS_PER_CUBIC_METER) * (1 / JOULES_PER_BTU);
-            }
-        }
-        #endregion
 
         /// <summary>
         /// Calculated values based on the current values of variables in the model
@@ -860,6 +841,10 @@ namespace TEAMS_Plugin
         public void useDefaults()
         {
             #region Main Engine Variables
+
+            // Baseline conventional diesel call for estimates. Will ultimately be re-calculated in the results.
+            conventionalDieselBTUperGal = APIcontroller.getApproxBTUperGAL();
+
             // Main Engine Variables
             VesselTypeID    =    "Cont. Ship 6000";
             NumberOfEngines =    1;

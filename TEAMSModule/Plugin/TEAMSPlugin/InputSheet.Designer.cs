@@ -470,14 +470,14 @@
             // file_new_menu
             // 
             this.file_new_menu.Name = "file_new_menu";
-            this.file_new_menu.Size = new System.Drawing.Size(152, 22);
+            this.file_new_menu.Size = new System.Drawing.Size(99, 22);
             this.file_new_menu.Text = "New";
             this.file_new_menu.Click += new System.EventHandler(this.file_new_menu_Click);
             // 
             // file_exit_menu
             // 
             this.file_exit_menu.Name = "file_exit_menu";
-            this.file_exit_menu.Size = new System.Drawing.Size(152, 22);
+            this.file_exit_menu.Size = new System.Drawing.Size(99, 22);
             this.file_exit_menu.Text = "Exit";
             this.file_exit_menu.Click += new System.EventHandler(this.file_exit_menu_Click);
             // 
