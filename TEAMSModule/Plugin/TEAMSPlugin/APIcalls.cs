@@ -26,10 +26,7 @@ namespace TEAMS_Plugin
 
         #endregion
 
-        public APIcalls()
-        {
-
-        }
+        public APIcalls() { }
 
         /// <summary>
         /// This function is pulling the BTUPerGal for Conventional Diesel so it can be used to calculate the gallons per trip. (This is ultimately recalculated in the Results code)
@@ -49,6 +46,20 @@ namespace TEAMS_Plugin
             { return (ConvDiesel.LowerHeatingValue.GreetValue) * (1 / GALLONS_PER_CUBIC_METER) * (1 / JOULES_PER_BTU); }
             else
             { return (ConvDiesel.LowerHeatingValue.UserValue) * (1 / GALLONS_PER_CUBIC_METER) * (1 / JOULES_PER_BTU); }
+        }
+
+        public IGDataDictionary<int, IResource> getResources() { return ResultsAccess.controler.CurrentProject.Data.Resources; }
+        public IGDataDictionary<int, IPathway> getPathways() { return ResultsAccess.controler.CurrentProject.Data.Pathways; }
+        public IGDataDictionary<int, IMix> getMixes() { return ResultsAccess.controler.CurrentProject.Data.Mixes; }
+
+        public IEnumerable<IResource> getSpecificResources(IGDataDictionary<int, IResource> all_resources, int res_id)
+        {
+            return all_resources.AllValues.Where(item => item.Id == res_id);
+        }
+
+        public IEnumerable<IPathway> getSpecificPathways(IGDataDictionary<int, IPathway> all_pathways, int res_id)
+        {
+            return all_pathways.AllValues.Where(item => item.MainOutputResourceID == res_id);
         }
     }
 }

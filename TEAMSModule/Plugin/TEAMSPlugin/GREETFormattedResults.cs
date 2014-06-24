@@ -36,7 +36,22 @@ namespace TEAMSModule
         // Grams Sulfur Oxide to Grams Sulfur Ratio
         private const double GRAMS_SOX_PER_GRAMS_S      =   64 / 32;
 
+        // Resource ID Numbers
+        private const int CONVENTIONAL_DIESEL_ID = 27;
+        private const int RESIDUAL_OIL_ID = 33;
+        private const int LOW_SULFUR_DIESEL_ID = 30;
+        private const int LIQUID_NATURAL_GAS_ID = 41;
+        private const int BIODIESEL_ID = 44;
+        private const int FISCHER_TROPSCH_ID = 45;
+
         #endregion
+
+        // Collection of resource id numbers for use in the tree building selections
+        private int[] resource_ids = new int[6] { CONVENTIONAL_DIESEL_ID, RESIDUAL_OIL_ID, LOW_SULFUR_DIESEL_ID, 
+                                                  LIQUID_NATURAL_GAS_ID, BIODIESEL_ID, FISCHER_TROPSCH_ID };
+
+        // API Controller
+        public APIcalls APIcontroller = new APIcalls();
 
         // These are values for the string of text showing what fuel is used
         public string fuelUsed       =   "None Selected";
@@ -133,9 +148,47 @@ namespace TEAMSModule
         {
             tree_Main_Fuel_Pathways.Select();
             tree_Aux_Fuel_Pathways.Select();
-            BuildingMainFuelPathways();
-            BuildingAuxFuelPathways();
+            BuildingFuelPathways();
         }
+
+        /// <summary>
+        /// Setup for both engine fuel selectors
+        /// </summary>
+        #region Fuel Pathways Setup
+        public void BuildingFuelPathways()
+        {
+            tree_Main_Fuel_Pathways.Nodes.Clear();
+            tree_Aux_Fuel_Pathways.Nodes.Clear();
+            TreeView[] FuelTrees = new TreeView[2] { tree_Main_Fuel_Pathways, tree_Aux_Fuel_Pathways };
+
+            IGDataDictionary<int, IResource> resources = APIcontroller.getResources();
+            IGDataDictionary<int, IPathway> pathways = APIcontroller.getPathways();
+            IGDataDictionary<int, IMix> mixes = APIcontroller.getMixes();
+
+            // Adds pathways and mixes to the list so the user can select one
+            foreach (TreeView tree in FuelTrees)
+            {
+                foreach (int id in resource_ids)
+                {
+                    foreach (IResource resource in APIcontroller.getSpecificResources(resources, id))
+                    {
+                        TreeNode resourceTreeNode = new TreeNode(resource.Name);
+                        resourceTreeNode.Tag = resource;
+
+                        foreach (IPathway pathway in APIcontroller.getSpecificPathways(pathways, id))
+                        {
+                            TreeNode pathwayNode = new TreeNode(pathway.Name);
+                            pathwayNode.Tag = pathway;
+                            resourceTreeNode.Nodes.Add(pathwayNode);
+                        }
+                        if (resourceTreeNode.Nodes.Count > 0)
+                            tree.Nodes.Add(resourceTreeNode);
+                    }
+                }
+            }
+        }
+        #endregion
+
         /// <summary>
         /// Pulls the needed GREET data, and makes final results calculations
         /// </summary>
@@ -670,221 +723,6 @@ namespace TEAMSModule
         }
         #endregion
 
-        /// <summary>
-        /// Setup for the main engine fuel selector
-        /// </summary>
-        #region Main Fuel Pathways Setup
-        public void BuildingMainFuelPathways()
-        {
-            tree_Main_Fuel_Pathways.Nodes.Clear();
-            IGDataDictionary<int, IResource> resources   =   ResultsAccess.controler.CurrentProject.Data.Resources;
-            IGDataDictionary<int, IPathway> pathways     =   ResultsAccess.controler.CurrentProject.Data.Pathways;
-            IGDataDictionary<int, IMix> mixes            =   ResultsAccess.controler.CurrentProject.Data.Mixes;
-
-            // Adds pathways and mixes to the list so the user can select one
-            // Conventional Diesel Pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 27))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode     =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag          =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Main_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-
-            // Residual Oil pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 33))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Main_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-            // Low Sulfur Diesel pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 30))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Main_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-            // Liquid Natural Gas Pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 41))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Main_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-            // Biodiesel pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 44))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Main_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-            // Fischer Tropsch Diesel Pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 45))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Main_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-        }
-        #endregion
-
-        /// <summary>
-        /// Setup for the auxiliary engine fuel selector
-        /// </summary>
-        #region Auxiliary Fuel Pathways Setup
-        public void BuildingAuxFuelPathways()
-        {
-            tree_Aux_Fuel_Pathways.Nodes.Clear();
-            IGDataDictionary<int, IResource> resources   =   ResultsAccess.controler.CurrentProject.Data.Resources;
-            IGDataDictionary<int, IPathway> pathways     =   ResultsAccess.controler.CurrentProject.Data.Pathways;
-            IGDataDictionary<int, IMix> mixes            =   ResultsAccess.controler.CurrentProject.Data.Mixes;
-
-            // Adds pathways and mixes to the list so the user can select one
-            // Conventional Diesel Pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 27))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Aux_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-
-            // Residual Oil pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 33))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Aux_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-            // Low Sulfur Diesel pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 30))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Aux_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-            // Liquid Natural Gas Pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 41))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Aux_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-            // Biodiesel pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 44))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Aux_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-            // Fischer Tropsch Diesel Pathways
-            foreach (IResource resource in resources.AllValues.Where(item => item.Id == 45))
-            {
-                TreeNode resourceTreeNode    =   new TreeNode(resource.Name);
-                resourceTreeNode.Tag         =   resource;
-
-                foreach (IPathway pathway in pathways.AllValues.Where(item => item.MainOutputResourceID == resource.Id))
-                {
-                    TreeNode pathwayNode =   new TreeNode(pathway.Name);
-                    pathwayNode.Tag      =   pathway;
-                    resourceTreeNode.Nodes.Add(pathwayNode);
-                }
-
-                if (resourceTreeNode.Nodes.Count > 0)
-                    this.tree_Aux_Fuel_Pathways.Nodes.Add(resourceTreeNode);
-            }
-        }
-        #endregion
 
         /// <summary>
         /// Generates the bar chart at the bottom of the form
