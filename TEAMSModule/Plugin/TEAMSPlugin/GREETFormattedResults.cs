@@ -194,8 +194,6 @@ namespace TEAMSModule
             Object tag = tree_Main_Fuel_Pathways.SelectedNode.Tag;
             if (tag is IPathway)
             {
-                IGDataDictionary<int, IResource> resources = APIcontroller.getResources();
-                IGDataDictionary<int, IPathway> pathways = APIcontroller.getPathways();
                 IData data = APIcontroller.getData();
 
                 IPathway path = tag as IPathway;
@@ -204,47 +202,15 @@ namespace TEAMSModule
                 // Grabs the fuel used in the main engine to display to the user.
                 MainfuelUsed = APIcontroller.getFuelUsed(path);
 
-                IResults pathwayResults = path.GetUpstreamResults(data).ElementAt(0).Value;
+                IResults pathwayResults = APIcontroller.getPathwayResults(data, path);
 
                 te.GALLONperTrip = APIcontroller.getGallonsPerMMBTU(resourceUsed) * te.MMBTUinperTrip;
 
-                //These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
-                double resourceDensity;
-                if (resourceUsed.Density.UserValue == 0)
-                {
-                    resourceDensity = resourceUsed.Density.GreetValue;
-                }
-                else
-                {
-                    resourceDensity = resourceUsed.Density.UserValue;
-                }
-                double resourceSulfurRatio;
-                if (resourceUsed.SulfurRatio.UserValue == 0)
-                {
-                    resourceSulfurRatio = resourceUsed.SulfurRatio.GreetValue;
-                }
-                else
-                {
-                    resourceSulfurRatio = resourceUsed.SulfurRatio.UserValue;
-                }
-                double resourceLowerHeatingValue;
-                if (resourceUsed.LowerHeatingValue.UserValue == 0)
-                {
-                    resourceLowerHeatingValue = resourceUsed.LowerHeatingValue.GreetValue;
-                }
-                else
-                {
-                    resourceLowerHeatingValue = resourceUsed.LowerHeatingValue.UserValue;
-                }
-                double resourceCarbonRatio;
-                if (resourceUsed.CarbonRatio.UserValue == 0)
-                {
-                    resourceCarbonRatio = resourceUsed.CarbonRatio.GreetValue;
-                }
-                else
-                {
-                    resourceCarbonRatio = resourceUsed.CarbonRatio.UserValue;
-                }
+                //These numbers will be used in calculations below, and are based on whether or not the user has edited GREET resource variables
+                double resourceDensity              =   APIcontroller.getResourceDensity(resourceUsed);
+                double resourceSulfurRatio          =   APIcontroller.getResourceSulfurRatio(resourceUsed);
+                double resourceLowerHeatingValue    =   APIcontroller.getResourceLowerHeatingValue(resourceUsed);
+                double resourceCarbonRatio          =   APIcontroller.getResourceCarbonRatio(resourceUsed);
 
 
                 double[] main_fuel_type = new double[7];
@@ -277,34 +243,7 @@ namespace TEAMSModule
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
                 //Total Energy Well To Pump = mmbtu of fuel put into the engine * all sections of energy for what it took to create 1 mmbtu of fuel - the 1 mmbtu of fuel
 
-                TE_WTP = te.MMBTUinperTrip * ((
-                    // Nuclear Energy
-                    pathwayResults.LifeCycleResources().ElementAt(13).Value.Value +
-                    // Renewable (Solar, Hydro, Wind, Geothermal
-                    pathwayResults.LifeCycleResources().ElementAt(11).Value.Value +
-                    // Wind Power
-                    pathwayResults.LifeCycleResources().ElementAt(10).Value.Value +
-                    // Geothermal
-                    pathwayResults.LifeCycleResources().ElementAt(9).Value.Value +
-                    // Hydroelectric
-                    pathwayResults.LifeCycleResources().ElementAt(8).Value.Value +
-                    // Solar
-                    pathwayResults.LifeCycleResources().ElementAt(7).Value.Value +
-                    // Forest Residue
-                    pathwayResults.LifeCycleResources().ElementAt(6).Value.Value +
-                    // Farmed Trees or Switchgrass -- unconfirmed which is which
-                    pathwayResults.LifeCycleResources().ElementAt(5).Value.Value +
-                    // Farmed Trees or Switchgrass -- unconfirmed which is which
-                    pathwayResults.LifeCycleResources().ElementAt(4).Value.Value +
-                    // Coal Average
-                    pathwayResults.LifeCycleResources().ElementAt(3).Value.Value +
-                    // Bituminous Oil
-                    pathwayResults.LifeCycleResources().ElementAt(2).Value.Value +
-                    // Crude Oil
-                    pathwayResults.LifeCycleResources().ElementAt(1).Value.Value +
-                    // Natural Gas
-                    pathwayResults.LifeCycleResources().ElementAt(0).Value.Value)) -
-                    1 - te.MMBTUinperTrip;
+                TE_WTP = te.MMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults) - 1 - te.MMBTUinperTrip;
 
                 //Total Energy Vessel Operation = mmbtu needed to put into the ship
                 TE_VO = te.MMBTUinperTrip;
@@ -325,51 +264,48 @@ namespace TEAMSModule
                 PF_Total = 0;
 
                 // Volatile Organic Compounds
-                // Well To Pump Emissions
-                VOC_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
-                // Vessel Operation Emissions
+                VOC_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * te.MMBTUinperTrip;
                 VOC_VO      =   main_fuel_type[0] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
-                // Total Emissions
                 VOC_Total   =   VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
                 // Carbon Monoxide
-                CO_WTP      =   pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                CO_WTP      =   APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * te.MMBTUinperTrip;
                 CO_VO       =   (main_fuel_type[1] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip);
                 CO_Total    =   CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
                 // Nitrogen Dioxide
-                NOx_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                NOx_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * te.MMBTUinperTrip;
                 NOx_VO      =   main_fuel_type[2] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
                 NOx_Total   =   NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
                 // Particulate Matter 10
-                PM10_WTP    =   pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                PM10_WTP    =   APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * te.MMBTUinperTrip;
                 PM10_VO     =   main_fuel_type[3] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
                 PM10_Total  =   PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
                 // Particulate Matter 25
-                PM25_WTP    =   pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                PM25_WTP    =   APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * te.MMBTUinperTrip;
                 PM25_VO     =   main_fuel_type[4] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
                 PM25_Total  =   PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 // Sulfur Oxides
-                SOx_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                SOx_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * te.MMBTUinperTrip;
                 SOx_VO      =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * GRAMS_SOX_PER_GRAMS_S * te.GALLONperTrip;
                 SOx_Total   =   SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 // Methane
-                CH4_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                CH4_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * te.MMBTUinperTrip;
                 CH4_VO      =   main_fuel_type[5] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
                 CH4_Total   =   CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 // Carbon Dioxide
                 double gramsOfFuel  =   (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * te.MMBTUinperTrip;
-                CO2_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                CO2_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * te.MMBTUinperTrip;
                 CO2_VO      =   gramsOfFuel * resourceCarbonRatio * (44 / 12);
                 CO2_Total   =   CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 //Nitrous Oxide
-                N2O_WTP     =   pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * JOULES_PER_MMBTU * te.MMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                N2O_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * te.MMBTUinperTrip;
                 N2O_VO      =   main_fuel_type[6] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
                 N2O_Total   =   N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
@@ -380,55 +316,20 @@ namespace TEAMSModule
             Object tag = tree_Aux_Fuel_Pathways.SelectedNode.Tag;
             if (tag is IPathway)
             {
-                IGDataDictionary<int, IResource> resources   =   ResultsAccess.controler.CurrentProject.Data.Resources;
-                IGDataDictionary<int, IPathway> pathways     =   ResultsAccess.controler.CurrentProject.Data.Pathways;
-
-                IData data               =   ResultsAccess.controler.CurrentProject.Data;
+                IData data               =   APIcontroller.getData();
                 IPathway path            =   tag as IPathway;
-                IResource resourceUsed   =   ResultsAccess.controler.CurrentProject.Data.Resources.ValueForKey(path.MainOutputResourceID);
+                IResource resourceUsed   =   APIcontroller.getResourceUsed(path);
 
                 // Gets the fuel used in the auxiliary engine to display to the user.
-                auxFuelUsed = APIcontroller.getFuelUsed(path);
+                auxFuelUsed              =   APIcontroller.getFuelUsed(path);
 
-                IResults pathwayResults  =   path.GetUpstreamResults(data).ElementAt(0).Value;
+                IResults pathwayResults  =   APIcontroller.getPathwayResults(data, path);
 
                 // These numbers will be used in calculations below, and are based on whether or not the user has tried to edit GREET resource variables
-                double resourceDensity;
-                if (resourceUsed.Density.UserValue == 0)
-                {
-                    resourceDensity  =   resourceUsed.Density.GreetValue;
-                }
-                else
-                {
-                    resourceDensity  =   resourceUsed.Density.UserValue;
-                }
-                double resourceSulfurRatio;
-                if (resourceUsed.SulfurRatio.UserValue == 0)
-                {
-                    resourceSulfurRatio  =   resourceUsed.SulfurRatio.GreetValue;
-                }
-                else
-                {
-                    resourceSulfurRatio  =   resourceUsed.SulfurRatio.UserValue;
-                }
-                double resourceLowerHeatingValue;
-                if (resourceUsed.LowerHeatingValue.UserValue == 0)
-                {
-                    resourceLowerHeatingValue    =   resourceUsed.LowerHeatingValue.GreetValue;
-                }
-                else
-                {
-                    resourceLowerHeatingValue    =   resourceUsed.LowerHeatingValue.UserValue;
-                }
-                double resourceCarbonRatio;
-                if (resourceUsed.CarbonRatio.UserValue == 0)
-                {
-                    resourceCarbonRatio  =   resourceUsed.CarbonRatio.GreetValue;
-                }
-                else
-                {
-                    resourceCarbonRatio  =   resourceUsed.CarbonRatio.UserValue;
-                }
+                double resourceDensity              =   APIcontroller.getResourceDensity(resourceUsed);
+                double resourceSulfurRatio          =   APIcontroller.getResourceSulfurRatio(resourceUsed);
+                double resourceLowerHeatingValue    =   APIcontroller.getResourceLowerHeatingValue(resourceUsed);
+                double resourceCarbonRatio          =   APIcontroller.getResourceCarbonRatio(resourceUsed);
 
                 double[] aux_fuel_type   =   new double[7];
 
@@ -458,34 +359,8 @@ namespace TEAMSModule
                 }
 
                 te.AuxEngineGALLONperTrip = (1 / resourceLowerHeatingValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip;
-                AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * 
-                    // Nuclear Energy
-                    ((pathwayResults.LifeCycleResources().ElementAt(13).Value.Value  + 
-                    // Renewable (Solar, Hydro, Wind, GeoThermal)
-                    pathwayResults.LifeCycleResources().ElementAt(11).Value.Value    + 
-                    // Wind Power
-                    pathwayResults.LifeCycleResources().ElementAt(10).Value.Value    + 
-                    // Geothermal
-                    pathwayResults.LifeCycleResources().ElementAt(9).Value.Value     + 
-                    // Hydroelectric
-                    pathwayResults.LifeCycleResources().ElementAt(8).Value.Value     + 
-                    // Solar
-                    pathwayResults.LifeCycleResources().ElementAt(7).Value.Value     + 
-                    // Forest Residue
-                    pathwayResults.LifeCycleResources().ElementAt(6).Value.Value     + 
-                    // Farmed Trees OR Switchgrass -- unconfirmed which is which
-                    pathwayResults.LifeCycleResources().ElementAt(5).Value.Value     + 
-                    // Farmed Trees OR Switchgrass -- unconfirmed which is which
-                    pathwayResults.LifeCycleResources().ElementAt(4).Value.Value     + 
-                    // Coal Average
-                    pathwayResults.LifeCycleResources().ElementAt(3).Value.Value     + 
-                    // Bituminous Oil
-                    pathwayResults.LifeCycleResources().ElementAt(2).Value.Value     + 
-                    // Crude Oil
-                    pathwayResults.LifeCycleResources().ElementAt(1).Value.Value     + 
-                    // Natural Gas
-                    pathwayResults.LifeCycleResources().ElementAt(0).Value.Value))   -
-                    1 - te.AuxEngineMMBTUinperTrip;
+
+                AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults) - 1 - te.AuxEngineMMBTUinperTrip;
 
                 AUX_TE_VO    =   te.AuxEngineMMBTUinperTrip;
                 TE_Total     =   TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
@@ -503,40 +378,40 @@ namespace TEAMSModule
                 AUX_PF_WTP = 0;
                 PF_Total = 0;
 
-                AUX_VOC_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(0).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                AUX_VOC_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * te.MMBTUinperTrip;
                 AUX_VOC_VO   =   aux_fuel_type[0] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 VOC_Total    =   VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
-                AUX_CO_WTP   =   pathwayResults.LifeCycleEmissions().ElementAt(1).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                AUX_CO_WTP   =   APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * te.MMBTUinperTrip;
                 AUX_CO_VO    =   aux_fuel_type[1] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 CO_Total     =   CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
-                AUX_NOx_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(2).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                AUX_NOx_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * te.MMBTUinperTrip;
                 AUX_NOx_VO   =   aux_fuel_type[2] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 NOx_Total    =   NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
-                AUX_PM10_WTP =   pathwayResults.LifeCycleEmissions().ElementAt(3).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                AUX_PM10_WTP =   APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * te.MMBTUinperTrip;
                 AUX_PM10_VO  =   aux_fuel_type[3] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 PM10_Total   =   PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
-                AUX_PM25_WTP =   pathwayResults.LifeCycleEmissions().ElementAt(4).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                AUX_PM25_WTP =   APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * te.MMBTUinperTrip;
                 AUX_PM25_VO  =   aux_fuel_type[4] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 PM25_Total   =   PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
-                AUX_SOx_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(5).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                AUX_SOx_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * te.MMBTUinperTrip;
                 AUX_SOx_VO   =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * ( 1 / GALLONS_PER_CUBIC_METER ) * GRAMS_SOX_PER_GRAMS_S * te.AuxEngineGALLONperTrip;
                 SOx_Total    =   SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
-                AUX_CH4_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(6).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                AUX_CH4_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * te.MMBTUinperTrip;
                 AUX_CH4_VO   =   aux_fuel_type[5] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 CH4_Total    =   CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 double gramsOfFuel   =   (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * te.AuxEngineMMBTUinperTrip;
-                AUX_CO2_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(8).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                AUX_CO2_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * te.MMBTUinperTrip;
                 AUX_CO2_VO   =   gramsOfFuel * resourceCarbonRatio * (44 / 12);
                 CO2_Total    =   CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
-                AUX_N2O_WTP  =   pathwayResults.LifeCycleEmissions().ElementAt(7).Value.Value * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip * GRAMS_PER_KILOGRAM;
+                AUX_N2O_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * te.MMBTUinperTrip;
                 AUX_N2O_VO   =   aux_fuel_type[6] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
                 N2O_Total    =   N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }

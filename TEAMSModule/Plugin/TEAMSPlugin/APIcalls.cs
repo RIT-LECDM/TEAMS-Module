@@ -113,5 +113,72 @@ namespace TEAMS_Plugin
 
             return ( (1 / api_value) * conversions );
         }
+
+        public IResults getPathwayResults(IData data, IPathway pathway) { return pathway.GetUpstreamResults(data).ElementAt(0).Value; }
+
+        public double getResourceDensity(IResource resource_used)
+        {
+            if (resource_used.Density.UserValue == 0)
+            { return resource_used.Density.GreetValue; }
+            else
+            { return resource_used.Density.UserValue; }
+        }
+
+        public double getResourceSulfurRatio(IResource resource_used)
+        {
+            if (resource_used.SulfurRatio.UserValue == 0)
+            { return resource_used.SulfurRatio.GreetValue; }
+            else
+            { return resource_used.SulfurRatio.UserValue; }
+        }
+
+        public double getResourceLowerHeatingValue(IResource resource_used)
+        {
+            if (resource_used.LowerHeatingValue.UserValue == 0)
+            { return resource_used.LowerHeatingValue.GreetValue; }
+            else
+            { return resource_used.LowerHeatingValue.UserValue; }
+        }
+
+        public double getResourceCarbonRatio(IResource resource_used)
+        {
+            if (resource_used.CarbonRatio.UserValue == 0)
+            { return resource_used.CarbonRatio.GreetValue; }
+            else
+            { return resource_used.CarbonRatio.UserValue; }
+        }
+
+        public double getSumAllLifeCycleResources(IResults pathway)
+        {
+
+            // 13 - Nuclear Energy
+            // 12 - SKIPPED!!
+            // 11 - Renewable (Solar, Hydro, Wind, Geothermal
+            // 10 - Wind Power
+            //  9 - Geothermal                
+            //  8 - Hydroelectric                
+            //  7 - Solar
+            //  6 - Forest Residue
+            //  5 - Farmed Trees or Switchgrass -- unconfirmed which is which
+            //  4 - Farmed Trees or Switchgrass -- unconfirmed which is which
+            //  3 - Coal Average
+            //  2 - Bituminous Oil
+            //  1 - Crude Oil
+            //  0 - Natural Gas
+
+            double sum = 0;
+            for (int i = 0; i <= 13; i++ )
+            {
+                if (i == 12) { continue; }
+                sum += pathway.LifeCycleResources().ElementAt(i).Value.Value;
+            }
+            return sum;
+        }
+
+        public double getResourceWTPEmissions(IResults pathway, int res_id)
+        {
+            return (pathway.LifeCycleEmissions().ElementAt(res_id).Value.Value * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM);
+        }
+
     }
 }
