@@ -51,14 +51,14 @@ namespace TEAMSModule
                                                   LIQUID_NATURAL_GAS_ID, BIODIESEL_ID, FISCHER_TROPSCH_ID };
 
         // API Controller
-        public APIcalls APIcontroller = new APIcalls();
+        private APIcalls APIcontroller = new APIcalls();
 
         // These are values for the string of text showing what fuel is used
-        public string MainfuelUsed       =   "None Selected";
-        public string auxFuelUsed    =   "None Selected";
+        private string MainfuelUsed       =   "None Selected";
+        private string auxFuelUsed    =   "None Selected";
 
         // The input sheet we are pulling from
-        public TEAMS te;
+        private TEAMS teams_sheet;
 
         /// <summary>
         /// These are all of the variables for values on the results sheet itself, they are being set to a default of 0
@@ -134,17 +134,22 @@ namespace TEAMSModule
 
         #endregion
 
-        // Constructor for this form
-        public GREETFormattedResults(TEAMS t)
+        /// <summary>
+        /// Constructor for the form
+        /// </summary>
+        /// <param name="sheet">Must be passed a valid TEAMS object to manipulate and work with.</param>
+        public GREETFormattedResults(TEAMS sheet)
         {
             // We will use this teams object to pull the GREET values into the TEAMS class, and then reference them here so they can be displayed
-            te = t;
+            teams_sheet = sheet;
             InitializeComponent();
-            setValues();
+            setDefaults();
         }
 
-        // Function that sets everything up at the beginning so that the values are a pleasent default to work on
-        public void setValues()
+        /// <summary>
+        /// Function that sets everything up at the beginning so that the values are a pleasent default to work on
+        /// </summary>
+        private void setDefaults()
         {
             tree_Main_Fuel_Pathways.Select();
             tree_Aux_Fuel_Pathways.Select();
@@ -155,7 +160,7 @@ namespace TEAMSModule
         /// Setup for both engine fuel selectors
         /// </summary>
         #region Fuel Pathways Setup
-        public void BuildingFuelPathways()
+        private void BuildingFuelPathways()
         {
             tree_Main_Fuel_Pathways.Nodes.Clear();
             tree_Aux_Fuel_Pathways.Nodes.Clear();
@@ -204,7 +209,7 @@ namespace TEAMSModule
 
                 IResults pathwayResults = APIcontroller.getPathwayResults(data, path);
 
-                te.GALLONperTrip = APIcontroller.getGallonsPerMMBTU(resourceUsed) * te.MMBTUinperTrip;
+                teams_sheet.GALLONperTrip = APIcontroller.getGallonsPerMMBTU(resourceUsed) * teams_sheet.MMBTUinperTrip;
 
                 //These numbers will be used in calculations below, and are based on whether or not the user has edited GREET resource variables
                 double resourceDensity              =   APIcontroller.getResourceDensity(resourceUsed);
@@ -217,96 +222,96 @@ namespace TEAMSModule
 
                 if (MainfuelUsed.Equals("Conventional Diesel"))
                 {
-                    Array.Copy(te.Diesel, main_fuel_type, te.Diesel.Length);
+                    Array.Copy(teams_sheet.Diesel, main_fuel_type, teams_sheet.Diesel.Length);
                 }
                 else if (MainfuelUsed.Equals("Residual Oil"))
                 {
-                    Array.Copy(te.Residual_Oil, main_fuel_type, te.Residual_Oil.Length);
+                    Array.Copy(teams_sheet.Residual_Oil, main_fuel_type, teams_sheet.Residual_Oil.Length);
                 }
                 else if (MainfuelUsed.Equals("Low-Sulfur Diesel"))
                 {
-                    Array.Copy(te.Ult_Low_Sulf, main_fuel_type, te.Ult_Low_Sulf.Length);
+                    Array.Copy(teams_sheet.Ult_Low_Sulf, main_fuel_type, teams_sheet.Ult_Low_Sulf.Length);
                 }
                 else if (MainfuelUsed.Equals("Liquefied Natural Gas"))
                 {
-                    Array.Copy(te.Natural_Gas, main_fuel_type, te.Natural_Gas.Length);
+                    Array.Copy(teams_sheet.Natural_Gas, main_fuel_type, teams_sheet.Natural_Gas.Length);
                 }
                 else if (MainfuelUsed.Equals("Biodiesel"))
                 {
-                    Array.Copy(te.Biodiesel, main_fuel_type, te.Biodiesel.Length);
+                    Array.Copy(teams_sheet.Biodiesel, main_fuel_type, teams_sheet.Biodiesel.Length);
                 }
                 else
                 {
-                    Array.Copy(te.Fischer, main_fuel_type, te.Fischer.Length);
+                    Array.Copy(teams_sheet.Fischer, main_fuel_type, teams_sheet.Fischer.Length);
                 }
 
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
                 //Total Energy Well To Pump = mmbtu of fuel put into the engine * all sections of energy for what it took to create 1 mmbtu of fuel - the 1 mmbtu of fuel
 
-                TE_WTP = te.MMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults) - 1 - te.MMBTUinperTrip;
+                TE_WTP = teams_sheet.MMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults) - 1 - teams_sheet.MMBTUinperTrip;
 
                 //Total Energy Vessel Operation = mmbtu needed to put into the ship
-                TE_VO = te.MMBTUinperTrip;
+                TE_VO = teams_sheet.MMBTUinperTrip;
                 //Total Energy = Vessel Operation + Well to pump + aux vessel operation + aux well to pump
                 TE_Total = TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
 
                 // TODO: Implement Fossil Fuels and Petroleum Fuels
                 // Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
-                //FF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
+                //FF_WTP = teams_sheet.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 //FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
                 FF_WTP = 0;
                 FF_Total = 0;
 
                 // Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
-                //PF_WTP = te.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+                //PF_WTP = teams_sheet.MMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 //PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;
                 PF_WTP = 0;
                 PF_Total = 0;
 
                 // Volatile Organic Compounds
-                VOC_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * te.MMBTUinperTrip;
-                VOC_VO      =   main_fuel_type[0] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                VOC_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * teams_sheet.MMBTUinperTrip;
+                VOC_VO      =   main_fuel_type[0] * (1 / KWHRS_PER_HPHR) * teams_sheet.KWHOutperTrip;
                 VOC_Total   =   VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
                 // Carbon Monoxide
-                CO_WTP      =   APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * te.MMBTUinperTrip;
-                CO_VO       =   (main_fuel_type[1] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip);
+                CO_WTP      =   APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * teams_sheet.MMBTUinperTrip;
+                CO_VO       =   (main_fuel_type[1] * (1 / KWHRS_PER_HPHR) * teams_sheet.KWHOutperTrip);
                 CO_Total    =   CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
                 // Nitrogen Dioxide
-                NOx_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * te.MMBTUinperTrip;
-                NOx_VO      =   main_fuel_type[2] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                NOx_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * teams_sheet.MMBTUinperTrip;
+                NOx_VO      =   main_fuel_type[2] * (1 / KWHRS_PER_HPHR) * teams_sheet.KWHOutperTrip;
                 NOx_Total   =   NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
                 // Particulate Matter 10
-                PM10_WTP    =   APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * te.MMBTUinperTrip;
-                PM10_VO     =   main_fuel_type[3] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                PM10_WTP    =   APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * teams_sheet.MMBTUinperTrip;
+                PM10_VO     =   main_fuel_type[3] * (1 / KWHRS_PER_HPHR) * teams_sheet.KWHOutperTrip;
                 PM10_Total  =   PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
                 // Particulate Matter 25
-                PM25_WTP    =   APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * te.MMBTUinperTrip;
-                PM25_VO     =   main_fuel_type[4] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                PM25_WTP    =   APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * teams_sheet.MMBTUinperTrip;
+                PM25_VO     =   main_fuel_type[4] * (1 / KWHRS_PER_HPHR) * teams_sheet.KWHOutperTrip;
                 PM25_Total  =   PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 // Sulfur Oxides
-                SOx_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * te.MMBTUinperTrip;
-                SOx_VO      =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * GRAMS_SOX_PER_GRAMS_S * te.GALLONperTrip;
+                SOx_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * teams_sheet.MMBTUinperTrip;
+                SOx_VO      =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * GRAMS_SOX_PER_GRAMS_S * teams_sheet.GALLONperTrip;
                 SOx_Total   =   SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 // Methane
-                CH4_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * te.MMBTUinperTrip;
-                CH4_VO      =   main_fuel_type[5] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                CH4_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * teams_sheet.MMBTUinperTrip;
+                CH4_VO      =   main_fuel_type[5] * (1 / KWHRS_PER_HPHR) * teams_sheet.KWHOutperTrip;
                 CH4_Total   =   CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 // Carbon Dioxide
-                double gramsOfFuel  =   (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * te.MMBTUinperTrip;
-                CO2_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * te.MMBTUinperTrip;
+                double gramsOfFuel  =   (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * teams_sheet.MMBTUinperTrip;
+                CO2_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * teams_sheet.MMBTUinperTrip;
                 CO2_VO      =   gramsOfFuel * resourceCarbonRatio * (44 / 12);
                 CO2_Total   =   CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 //Nitrous Oxide
-                N2O_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * te.MMBTUinperTrip;
-                N2O_VO      =   main_fuel_type[6] * (1 / KWHRS_PER_HPHR) * te.KWHOutperTrip;
+                N2O_WTP     =   APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * teams_sheet.MMBTUinperTrip;
+                N2O_VO      =   main_fuel_type[6] * (1 / KWHRS_PER_HPHR) * teams_sheet.KWHOutperTrip;
                 N2O_Total   =   N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
             setLabels();
@@ -335,90 +340,94 @@ namespace TEAMSModule
 
                 if (auxFuelUsed.Equals("Conventional Diesel"))
                 {
-                    Array.Copy(te.Aux_Diesel, aux_fuel_type, te.Aux_Diesel.Length);
+                    Array.Copy(teams_sheet.Aux_Diesel, aux_fuel_type, teams_sheet.Aux_Diesel.Length);
                 }
                 else if (auxFuelUsed.Equals("Residual Oil"))
                 {
-                    Array.Copy(te.Aux_Residual_Oil, aux_fuel_type, te.Aux_Residual_Oil.Length);
+                    Array.Copy(teams_sheet.Aux_Residual_Oil, aux_fuel_type, teams_sheet.Aux_Residual_Oil.Length);
                 }
                 else if (auxFuelUsed.Equals("Low-Sulfur Diesel"))
                 {
-                    Array.Copy(te.Aux_Ult_Low_Sulf, aux_fuel_type, te.Aux_Ult_Low_Sulf.Length);
+                    Array.Copy(teams_sheet.Aux_Ult_Low_Sulf, aux_fuel_type, teams_sheet.Aux_Ult_Low_Sulf.Length);
                 }
                 else if (auxFuelUsed.Equals("Liquefied Natural Gas"))
                 {
-                    Array.Copy(te.Aux_Natural_Gas, aux_fuel_type, te.Aux_Natural_Gas.Length);
+                    Array.Copy(teams_sheet.Aux_Natural_Gas, aux_fuel_type, teams_sheet.Aux_Natural_Gas.Length);
                 }
                 else if (auxFuelUsed.Equals("Biodiesel"))
                 {
-                    Array.Copy(te.Aux_Biodiesel, aux_fuel_type, te.Aux_Biodiesel.Length);
+                    Array.Copy(teams_sheet.Aux_Biodiesel, aux_fuel_type, teams_sheet.Aux_Biodiesel.Length);
                 }
                 else
                 {
-                    Array.Copy(te.Aux_Fischer, aux_fuel_type, te.Aux_Fischer.Length);
+                    Array.Copy(teams_sheet.Aux_Fischer, aux_fuel_type, teams_sheet.Aux_Fischer.Length);
                 }
 
-                te.AuxEngineGALLONperTrip = (1 / resourceLowerHeatingValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * te.AuxEngineMMBTUinperTrip;
+                teams_sheet.AuxEngineGALLONperTrip = (1 / resourceLowerHeatingValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * teams_sheet.AuxEngineMMBTUinperTrip;
 
-                AUX_TE_WTP = te.AuxEngineMMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults) - 1 - te.AuxEngineMMBTUinperTrip;
+                AUX_TE_WTP = teams_sheet.AuxEngineMMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults) - 1 - teams_sheet.AuxEngineMMBTUinperTrip;
 
-                AUX_TE_VO    =   te.AuxEngineMMBTUinperTrip;
+                AUX_TE_VO    =   teams_sheet.AuxEngineMMBTUinperTrip;
                 TE_Total     =   TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
                 
                 // TODO: Implement Fossil Fuels and Petroleum Fuels
                 // Fossil Fuels in WTP =  mmbtuin * a greet energy WTP value
-                //AUX_FF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
+                //AUX_FF_WTP = teams_sheet.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(0).Value.Value;
                 //FF_Total = FF_WTP + FF_VO + AUX_FF_WTP + AUX_FF_VO;
                 AUX_FF_WTP = 0;
                 FF_Total = 0;
 
                 // Petroleum Fuel in WTP =  mmbtuin * a greet energy WTP value
-                //AUX_PF_WTP = te.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
+                //AUX_PF_WTP = teams_sheet.AuxEngineMMBTUinperTrip * pathwayResults.LifeCycleResourcesGroups(data).ElementAt(2).Value.Value;
                 //PF_Total = PF_WTP + PF_VO + AUX_PF_WTP + AUX_PF_VO;              
                 AUX_PF_WTP = 0;
                 PF_Total = 0;
 
-                AUX_VOC_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * te.MMBTUinperTrip;
-                AUX_VOC_VO   =   aux_fuel_type[0] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_VOC_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * teams_sheet.MMBTUinperTrip;
+                AUX_VOC_VO   =   aux_fuel_type[0] * ( 1 / KWHRS_PER_HPHR ) * teams_sheet.AuxEngineKWHoutperTrip;
                 VOC_Total    =   VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
-                AUX_CO_WTP   =   APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * te.MMBTUinperTrip;
-                AUX_CO_VO    =   aux_fuel_type[1] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_CO_WTP   =   APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * teams_sheet.MMBTUinperTrip;
+                AUX_CO_VO    =   aux_fuel_type[1] * ( 1 / KWHRS_PER_HPHR ) * teams_sheet.AuxEngineKWHoutperTrip;
                 CO_Total     =   CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
-                AUX_NOx_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * te.MMBTUinperTrip;
-                AUX_NOx_VO   =   aux_fuel_type[2] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_NOx_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * teams_sheet.MMBTUinperTrip;
+                AUX_NOx_VO   =   aux_fuel_type[2] * ( 1 / KWHRS_PER_HPHR ) * teams_sheet.AuxEngineKWHoutperTrip;
                 NOx_Total    =   NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
-                AUX_PM10_WTP =   APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * te.MMBTUinperTrip;
-                AUX_PM10_VO  =   aux_fuel_type[3] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_PM10_WTP =   APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * teams_sheet.MMBTUinperTrip;
+                AUX_PM10_VO  =   aux_fuel_type[3] * ( 1 / KWHRS_PER_HPHR ) * teams_sheet.AuxEngineKWHoutperTrip;
                 PM10_Total   =   PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
-                AUX_PM25_WTP =   APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * te.MMBTUinperTrip;
-                AUX_PM25_VO  =   aux_fuel_type[4] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_PM25_WTP =   APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * teams_sheet.MMBTUinperTrip;
+                AUX_PM25_VO  =   aux_fuel_type[4] * ( 1 / KWHRS_PER_HPHR ) * teams_sheet.AuxEngineKWHoutperTrip;
                 PM25_Total   =   PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
-                AUX_SOx_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * te.MMBTUinperTrip;
-                AUX_SOx_VO   =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * ( 1 / GALLONS_PER_CUBIC_METER ) * GRAMS_SOX_PER_GRAMS_S * te.AuxEngineGALLONperTrip;
+                AUX_SOx_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * teams_sheet.MMBTUinperTrip;
+                AUX_SOx_VO   =   resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * ( 1 / GALLONS_PER_CUBIC_METER ) * GRAMS_SOX_PER_GRAMS_S * teams_sheet.AuxEngineGALLONperTrip;
                 SOx_Total    =   SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
-                AUX_CH4_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * te.MMBTUinperTrip;
-                AUX_CH4_VO   =   aux_fuel_type[5] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_CH4_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * teams_sheet.MMBTUinperTrip;
+                AUX_CH4_VO   =   aux_fuel_type[5] * ( 1 / KWHRS_PER_HPHR ) * teams_sheet.AuxEngineKWHoutperTrip;
                 CH4_Total    =   CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
-                double gramsOfFuel   =   (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * te.AuxEngineMMBTUinperTrip;
-                AUX_CO2_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * te.MMBTUinperTrip;
+                double gramsOfFuel   =   (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * teams_sheet.AuxEngineMMBTUinperTrip;
+                AUX_CO2_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * teams_sheet.MMBTUinperTrip;
                 AUX_CO2_VO   =   gramsOfFuel * resourceCarbonRatio * (44 / 12);
                 CO2_Total    =   CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
-                AUX_N2O_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * te.MMBTUinperTrip;
-                AUX_N2O_VO   =   aux_fuel_type[6] * ( 1 / KWHRS_PER_HPHR ) * te.AuxEngineKWHoutperTrip;
+                AUX_N2O_WTP  =   APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * teams_sheet.MMBTUinperTrip;
+                AUX_N2O_VO   =   aux_fuel_type[6] * ( 1 / KWHRS_PER_HPHR ) * teams_sheet.AuxEngineKWHoutperTrip;
                 N2O_Total    =   N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
             setLabels();
         }
 
-
+        /// <summary>
+        /// Parses a double to a string with 2 significant figures after the decimal
+        /// </summary>
+        /// <param name="resource">The value to be parsed</param>
+        /// <returns>The parsed string</returns>
         private String parseResourceToString(double resource)
         {
             if (resource != 0) { return (resource).ToString("#.##"); }
@@ -431,7 +440,7 @@ namespace TEAMSModule
         /// Sets the labels and makes a new graph
         /// </summary>
         #region Set Labels, Make new Graph
-        public void setLabels()
+        private void setLabels()
         {
             /* 
             * Column 1 -- Well to Pump
@@ -562,8 +571,8 @@ namespace TEAMSModule
             label_Aux_Fuel_Type.Text    =   auxFuelUsed;
 
             // Calculating greenhouse gas using Global Warming Potential
-            Total_GHG_WTP    =   (CO2_WTP * te.CO2_GWP) + (CH4_WTP * te.CH4_GWP) + (N2O_WTP * te.N2O_GWP) + (VOC_WTP * te.VOC_GWP) + (CO_WTP * te.CO_GWP) + (NOx_WTP * te.NO2_GWP);
-            Total_GHG_VO     =   (CO2_VO * te.CO2_GWP) + (CH4_VO * te.CH4_GWP) + (N2O_VO * te.N2O_GWP) + (VOC_VO * te.VOC_GWP) + (CO_VO * te.CO_GWP) + (NOx_VO * te.NO2_GWP);
+            Total_GHG_WTP    =   (CO2_WTP * teams_sheet.CO2_GWP) + (CH4_WTP * teams_sheet.CH4_GWP) + (N2O_WTP * teams_sheet.N2O_GWP) + (VOC_WTP * teams_sheet.VOC_GWP) + (CO_WTP * teams_sheet.CO_GWP) + (NOx_WTP * teams_sheet.NO2_GWP);
+            Total_GHG_VO     =   (CO2_VO * teams_sheet.CO2_GWP) + (CH4_VO * teams_sheet.CH4_GWP) + (N2O_VO * teams_sheet.N2O_GWP) + (VOC_VO * teams_sheet.VOC_GWP) + (CO_VO * teams_sheet.CO_GWP) + (NOx_VO * teams_sheet.NO2_GWP);
 
             // Preparing the stacked bar chart information
             double[] total_energy    =   { (TE_WTP + AUX_TE_WTP), (TE_VO + AUX_TE_VO) };     // Resource 0
@@ -606,7 +615,7 @@ namespace TEAMSModule
             string[] seriesArray     =   { "WellToPump", "VesselOperation" };
 
             // Set the title of the graph to the passed in string title.
-            graph.Titles[0].Text     =   te.VesselTypeID + "\nMain Engine: " + MainfuelUsed + "\nAuxiliary Engine: " + auxFuelUsed;
+            graph.Titles[0].Text     =   teams_sheet.VesselTypeID + "\nMain Engine: " + MainfuelUsed + "\nAuxiliary Engine: " + auxFuelUsed;
 
             // Iterate through both of the series.
             for (int i = 0; i < seriesArray.Length; i++)
@@ -699,7 +708,7 @@ namespace TEAMSModule
                 // Add the headers
                 worksheet.Cells[1, 1].Value              =   "Vessel name";
                 worksheet.Cells[1, 1].Style.Font.Bold    =   true;
-                worksheet.Cells[1, 2].Value              =   te.VesselTypeID;
+                worksheet.Cells[1, 2].Value              =   teams_sheet.VesselTypeID;
 
                 worksheet.Cells[2, 2].Value                      =   "Main Engine";
                 worksheet.Cells[2, 2].Style.Font.Bold            =   true;
@@ -828,14 +837,18 @@ namespace TEAMSModule
         }
         #endregion
 
-        // Reset button puts everything back to the original default
+        /// <summary>
+        /// Reloads the form to default inputs.
+        /// </summary>
+        /// <param name="sender">Any object - UNUSED PARAMETER</param>
+        /// <param name="e">Any event arguments - UNUSED PARAMETER</param>
         private void ResetButton_Click(object sender, EventArgs e)
         {
             DialogResult result     =   MessageBox.Show("Are you sure you wish to reset the form?", "Reset Results", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 this.Close();
-                GREETFormattedResults newWindow     =   new GREETFormattedResults(te);
+                GREETFormattedResults newWindow     =   new GREETFormattedResults(teams_sheet);
                 newWindow.Show();
             }
 
