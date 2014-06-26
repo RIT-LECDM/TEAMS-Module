@@ -84,24 +84,38 @@ namespace TEAMS_Plugin
         /// <summary>
         /// Grabs all of the specific types of resources from all resources in GREET that match the main resource ID it is passed
         /// </summary>
-        /// <param name="all_resources"></param>
-        /// <param name="res_id"></param>
-        /// <returns></returns>
+        /// <param name="res_id">The Id of the resource for which you want the specifics</param>
+        /// <returns>An enumerable collection of the specific IResources</returns>
         public IEnumerable<IResource> getSpecificResources(int res_id)
         {
             return getResources().AllValues.Where(item => item.Id == res_id);
         }
 
+        /// <summary>
+        /// Grabs all of the specific pathways that have a specific resource as their product
+        /// </summary>
+        /// <param name="res_id">The Id of the resource for which you want the specific pathways</param>
+        /// <returns>An enumerable collection ofthe specific IPathways</returns>
         public IEnumerable<IPathway> getSpecificPathways(int res_id)
         {
             return getPathways().AllValues.Where(item => item.MainOutputResourceID == res_id);
         }
 
+        /// <summary>
+        /// Gets the main, general fuel used after a specific pathway is selected. i.e. "Conventional Diesel"
+        /// </summary>
+        /// <param name="pathway">The specific pathway selected</param>
+        /// <returns>A strong of the general fuel used</returns>
         public string getFuelUsed(IPathway pathway)
         {
             return getResources().AllValues.Where(item => item.Id == pathway.MainOutputResourceID).ElementAt(0).Name;
         }
 
+        /// <summary>
+        /// Gets preliminary gallons per mmbtu of a resource 
+        /// </summary>
+        /// <param name="resource_used">The resource being used</param>
+        /// <returns>A double representing the gallons per 1 mmbtu of energy</returns>
         public double getGallonsPerMMBTU(IResource resource_used)
         {
             double api_value;
@@ -114,8 +128,19 @@ namespace TEAMS_Plugin
             return ( (1 / api_value) * conversions );
         }
 
+        /// <summary>
+        /// Gets the IResults of a specified pathway from a specified data set.
+        /// </summary>
+        /// <param name="data">A specific data set</param>
+        /// <param name="pathway">The pathway to grab results from</param>
+        /// <returns>IResults from the specified pathway</returns>
         public IResults getPathwayResults(IData data, IPathway pathway) { return pathway.GetUpstreamResults(data).ElementAt(0).Value; }
 
+        /// <summary>
+        /// Grabs the fuel density of the specified resource
+        /// </summary>
+        /// <param name="resource_used">The specified resource</param>
+        /// <returns>A double indicating the density of the resource</returns>
         public double getResourceDensity(IResource resource_used)
         {
             if (resource_used.Density.UserValue == 0)
@@ -124,6 +149,11 @@ namespace TEAMS_Plugin
             { return resource_used.Density.UserValue; }
         }
 
+        /// <summary>
+        /// Grabs the sulfur ratio of the specified resource
+        /// </summary>
+        /// <param name="resource_used">The specified resource</param>
+        /// <returns>A double indicating the sulfur ratio of the resource</returns>
         public double getResourceSulfurRatio(IResource resource_used)
         {
             if (resource_used.SulfurRatio.UserValue == 0)
@@ -132,6 +162,11 @@ namespace TEAMS_Plugin
             { return resource_used.SulfurRatio.UserValue; }
         }
 
+        /// <summary>
+        /// Grabs the lower heating value of the specified resource
+        /// </summary>
+        /// <param name="resource_used">The specified resource</param>
+        /// <returns>A double indicating the lower heating value of the resource</returns>
         public double getResourceLowerHeatingValue(IResource resource_used)
         {
             if (resource_used.LowerHeatingValue.UserValue == 0)
@@ -140,6 +175,11 @@ namespace TEAMS_Plugin
             { return resource_used.LowerHeatingValue.UserValue; }
         }
 
+        /// <summary>
+        /// Grabs the carbon ratio of the specified resource
+        /// </summary>
+        /// <param name="resource_used">The specified resource</param>
+        /// <returns>A double indicating the carbon ratio of the resource</returns>
         public double getResourceCarbonRatio(IResource resource_used)
         {
             if (resource_used.CarbonRatio.UserValue == 0)
@@ -148,6 +188,11 @@ namespace TEAMS_Plugin
             { return resource_used.CarbonRatio.UserValue; }
         }
 
+        /// <summary>
+        /// Sums the total mmbtu amounts of all upstream resources from a specified pathway
+        /// </summary>
+        /// <param name="pathway">The specified pathway</param>
+        /// <returns>A double indicating the sum of all of the emissions.</returns>
         public double getSumAllLifeCycleResources(IResults pathway)
         {
 
@@ -175,6 +220,12 @@ namespace TEAMS_Plugin
             return sum;
         }
 
+        /// <summary>
+        /// Grabs the entire WTP emissions total of a resource in a pathway per 1 mmbtu
+        /// </summary>
+        /// <param name="pathway">The specified pathway</param>
+        /// <param name="res_id">The specified resource ID</param>
+        /// <returns>A double with units g/mmbtu</returns>
         public double getResourceWTPEmissions(IResults pathway, int res_id)
         {
             return (pathway.LifeCycleEmissions().ElementAt(res_id).Value.Value * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM);
