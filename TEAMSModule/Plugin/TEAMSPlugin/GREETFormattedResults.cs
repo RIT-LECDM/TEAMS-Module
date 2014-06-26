@@ -47,15 +47,15 @@ namespace TEAMSModule
         #endregion
 
         // Collection of resource id numbers for use in the tree building selections
-        private int[] resource_ids = new int[6] { CONVENTIONAL_DIESEL_ID, RESIDUAL_OIL_ID, LOW_SULFUR_DIESEL_ID, 
-                                                  LIQUID_NATURAL_GAS_ID, BIODIESEL_ID, FISCHER_TROPSCH_ID };
+        private int[] resource_ids     = new int[6] { CONVENTIONAL_DIESEL_ID, RESIDUAL_OIL_ID, LOW_SULFUR_DIESEL_ID, 
+                                                      LIQUID_NATURAL_GAS_ID, BIODIESEL_ID, FISCHER_TROPSCH_ID };
 
         // API Controller
         private APIcalls APIcontroller = new APIcalls();
 
         // These are values for the string of text showing what fuel is used
         private string MainfuelUsed       =   "None Selected";
-        private string auxFuelUsed    =   "None Selected";
+        private string auxFuelUsed        =   "None Selected";
 
         // The input sheet we are pulling from
         private TEAMS teams_sheet;
