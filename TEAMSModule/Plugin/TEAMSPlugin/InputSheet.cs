@@ -43,7 +43,7 @@ namespace TEAMS_Plugin
         #endregion
 
         // API Controller
-        public APIcalls APIcontroller = new APIcalls();
+        private APIcalls APIcontroller = new APIcalls();
 
         //Used to do the calculations for the model
         #region Input Variables
@@ -578,7 +578,7 @@ namespace TEAMS_Plugin
         #endregion
 
         // The results sheet
-        public GREETFormattedResults gfr;
+        private GREETFormattedResults results_sheet;
 
         public TEAMS()
         {
@@ -591,7 +591,7 @@ namespace TEAMS_Plugin
         /// Calculated values based on the current values of variables in the model
         /// </summary>
         #region Do Calculations
-        public void doCalculations()
+        private void doCalculations()
         {
             // Total Horsepower
             TotalOnboardHP       =   SingleEngineHP * NumberOfEngines;
@@ -665,7 +665,7 @@ namespace TEAMS_Plugin
         /// Changes labels based on updated values from calculation/manual changes
         /// </summary>
         #region Change Results
-        public void changeResults()
+        private void changeResults()
         {
             // 5 
             textBox_Vessel_Type.Text = (string)VesselTypeID;
@@ -838,7 +838,7 @@ namespace TEAMS_Plugin
         /// Sets the variables to their initial default state
         /// </summary>
         #region Use Defaults
-        public void useDefaults()
+        private void useDefaults()
         {
             #region Main Engine Variables
 
@@ -1002,8 +1002,8 @@ namespace TEAMS_Plugin
         private void run_menu_Click(object sender, EventArgs e)
         {
             Recalculate();
-            gfr = new GREETFormattedResults(this);
-            gfr.Show();
+            results_sheet = new GREETFormattedResults(this);
+            results_sheet.Show();
         }
 
         // This will make a new input sheet, so you can perform multiple simulations at one time
@@ -1016,7 +1016,7 @@ namespace TEAMS_Plugin
         // Closes the sheets if you hit the exit button
         private void file_exit_menu_Click(object sender, EventArgs e)
         {
-            gfr.Close();
+            results_sheet.Close();
             this.Close();
         }
 
