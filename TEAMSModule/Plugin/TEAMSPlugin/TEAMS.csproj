@@ -39,6 +39,33 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>EPPlus Binaries\EPPlus.dll</HintPath>
     </Reference>
+    <Reference Include="Greet.ConvenienceLib">
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.ConvenienceLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.DataConverter">
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.DataConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.DataStructureV2">
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.DataStructureV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.DataStructureV3">
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.DataStructureV3.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.Gui">
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.LoggerLib">
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.LoggerLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.Model">
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.UnitLib">
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.UnitLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.UnitLib2">
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.UnitLib2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -86,12 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Interfaces\PlugInsInterfaces.csproj">
-      <Project>{E9F76280-130B-4699-9F1B-768ED383B730}</Project>
-      <Name>PlugInsInterfaces</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CopyrightPage.resx">

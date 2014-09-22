@@ -8,12 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using PlugInsInterfaces.DataTypes.Resource;
-using PlugInsInterfaces.DataTypes;
-using PlugInsInterfaces.DataTypes.Pathway;
-using PlugInsInterfaces.DataTypes.Mix;
-using PlugInsInterfaces.ResultTypes;
-using PlugInsInterfaces.DataTypes.Technology;
+using Greet.DataStructureV3.Interfaces;
+using Greet.Model.Interfaces;
 using TEAMSModule;
 
 namespace TEAMS_Plugin
