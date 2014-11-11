@@ -245,6 +245,7 @@ namespace TEAMSModule
                 //Total Energy Well To Pump = mmbtu of fuel put into the engine * all sections of energy for what it took to create 1 mmbtu of fuel - the 1 mmbtu of fuel
 
                 TE_WTP = teams_sheet.MMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults) - 1 - teams_sheet.MMBTUinperTrip;
+                //TE_WTP = teams_sheet.MMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults);
 
                 //Total Energy Vessel Operation = mmbtu needed to put into the ship
                 TE_VO = teams_sheet.MMBTUinperTrip;
@@ -698,136 +699,138 @@ namespace TEAMSModule
 
             using (ExcelPackage package = new ExcelPackage(newFile))
             {
-                // Add a new Worksheet to the empty workbook
-                ExcelWorksheet worksheet     =   package.Workbook.Worksheets.Add("TEAMS Results");
-                
-                // Add the headers
-                worksheet.Cells[1, 1].Value              =   "Vessel name";
-                worksheet.Cells[1, 1].Style.Font.Bold    =   true;
-                worksheet.Cells[1, 2].Value              =   teams_sheet.VesselTypeID;
-
-                worksheet.Cells[2, 2].Value                      =   "Main Engine";
-                worksheet.Cells[2, 2].Style.Font.Bold            =   true;
-                worksheet.Cells[2, 2].Style.HorizontalAlignment  =   ExcelHorizontalAlignment.Center;
-                worksheet.Cells[2, 2, 2, 3].Merge                =   true;
-
-                worksheet.Cells[2, 4].Value                      =   "Auxiliary Engine";
-                worksheet.Cells[2, 4].Style.Font.Bold            =   true;
-                worksheet.Cells[2, 4].Style.HorizontalAlignment  =   ExcelHorizontalAlignment.Center;
-                worksheet.Cells[2, 4, 2, 5].Merge                =   true;
-
-                worksheet.Cells[3, 1].Value  =   "Results Shown Per Trip";
-                worksheet.Cells[3, 2].Value  =   "Well To Pump";
-                worksheet.Cells[3, 3].Value  =   "Vessel Operation";
-                worksheet.Cells[3, 4].Value  =   "Well To Pump";
-                worksheet.Cells[3, 5].Value  =   "Vessel Operation";
-                worksheet.Cells[3, 6].Value  =   "Total";
-
-                worksheet.Cells["A3:F3"].Style.HorizontalAlignment   =   ExcelHorizontalAlignment.Center;
-                worksheet.Cells["A3:F3"].Style.Border.Bottom.Style   =   ExcelBorderStyle.Thin;
-
-                // Add the data
-
-                worksheet.Cells[4, 1].Value  =   "Total Energy";
-                worksheet.Cells[4, 2].Value  =   TE_WTP;
-                worksheet.Cells[4, 3].Value  =   TE_VO;
-                worksheet.Cells[4, 4].Value  =   AUX_TE_WTP;
-                worksheet.Cells[4, 5].Value  =   AUX_TE_VO;
-                worksheet.Cells[4, 6].Value  =   TE_Total;
-
-                // TODO: Implement Fossil Fuel
-                // worksheet.Cells[5, 1].Value = "Fossil Fuel";
-                worksheet.Cells[5, 2].Value  =   FF_WTP;
-                worksheet.Cells[5, 4].Value  =   AUX_FF_WTP;
-                worksheet.Cells[5, 6].Value  =   FF_Total;
-                
-                // TODO: Implement Petroleum Fuel
-                // worksheet.Cells[6, 1].Value = "Petroleum Fuel";
-                worksheet.Cells[6, 2].Value  =   PF_WTP;
-                worksheet.Cells[6, 4].Value  =   AUX_PF_WTP;
-                worksheet.Cells[6, 6].Value  =   PF_Total;
-
-                worksheet.Cells[9, 1].Value  =   "Emissions";
-
-                worksheet.Cells[10, 1].Value     =   "VOC";
-                worksheet.Cells[10, 2].Value     =   VOC_WTP;
-                worksheet.Cells[10, 3].Value     =   VOC_VO;
-                worksheet.Cells[10, 4].Value     =   AUX_VOC_WTP;
-                worksheet.Cells[10, 5].Value     =   AUX_VOC_VO;
-                worksheet.Cells[10, 6].Value     =   VOC_Total;
-
-                worksheet.Cells[11, 1].Value     =   "CO";
-                worksheet.Cells[11, 2].Value     =   CO_WTP;
-                worksheet.Cells[11, 3].Value     =   CO_VO;
-                worksheet.Cells[11, 4].Value     =   AUX_CO_WTP;
-                worksheet.Cells[11, 5].Value     =   AUX_CO_VO;
-                worksheet.Cells[11, 6].Value     =   CO_Total;
-
-                worksheet.Cells[12, 1].Value     =   "NOx";
-                worksheet.Cells[12, 2].Value     =   NOx_WTP;
-                worksheet.Cells[12, 3].Value     =   NOx_VO;
-                worksheet.Cells[12, 4].Value     =   AUX_NOx_WTP;
-                worksheet.Cells[12, 5].Value     =   AUX_NOx_VO;
-                worksheet.Cells[12, 6].Value     =   NOx_Total;
-
-                worksheet.Cells[13, 1].Value     =   "PM10";
-                worksheet.Cells[13, 2].Value     =   PM10_WTP;
-                worksheet.Cells[13, 3].Value     =   PM10_VO;
-                worksheet.Cells[13, 4].Value     =   AUX_PM10_WTP;
-                worksheet.Cells[13, 5].Value     =   AUX_PM10_VO;
-                worksheet.Cells[13, 6].Value     =   PM10_Total;
-
-                worksheet.Cells[14, 1].Value     =   "PM 2.5";
-                worksheet.Cells[14, 2].Value     =   PM25_WTP;
-                worksheet.Cells[14, 3].Value     =   PM25_VO;
-                worksheet.Cells[14, 4].Value     =   AUX_PM25_WTP;
-                worksheet.Cells[14, 5].Value     =   AUX_PM25_VO;
-                worksheet.Cells[14, 6].Value     =   PM25_Total;
-
-                worksheet.Cells[15, 1].Value     =   "SOx";
-                worksheet.Cells[15, 2].Value     =   SOx_WTP;
-                worksheet.Cells[15, 3].Value     =   SOx_VO;
-                worksheet.Cells[15, 4].Value     =   AUX_SOx_WTP;
-                worksheet.Cells[15, 5].Value     =   AUX_SOx_VO;
-                worksheet.Cells[15, 6].Value     =   SOx_Total;
-
-                worksheet.Cells[16, 1].Value     =   "CH4";
-                worksheet.Cells[16, 2].Value     =   CH4_WTP;
-                worksheet.Cells[16, 3].Value     =   CH4_VO;
-                worksheet.Cells[16, 4].Value     =   AUX_CH4_WTP;
-                worksheet.Cells[16, 5].Value     =   AUX_CH4_VO;
-                worksheet.Cells[16, 6].Value     =   CH4_Total;
-
-                worksheet.Cells[17, 1].Value     =   "CO2";
-                worksheet.Cells[17, 2].Value     =   CO2_WTP;
-                worksheet.Cells[17, 3].Value     =   CO2_VO;
-                worksheet.Cells[17, 4].Value     =   AUX_CO2_WTP;
-                worksheet.Cells[17, 5].Value     =   AUX_CO2_VO;
-                worksheet.Cells[17, 6].Value     =   CO2_Total;
-
-                worksheet.Cells[18, 1].Value     =   "N2O";
-                worksheet.Cells[18, 2].Value     =   N2O_WTP;
-                worksheet.Cells[18, 3].Value     =   N2O_VO;
-                worksheet.Cells[18, 4].Value     =   AUX_N2O_WTP;
-                worksheet.Cells[18, 5].Value     =   AUX_N2O_VO;
-                worksheet.Cells[18, 6].Value     =   N2O_Total;
-
-                worksheet.Cells[20, 1].Value             =   "Main Engine Fuel Type:";
-                worksheet.Cells[20, 1].Style.Font.Bold   =   true;
-                worksheet.Cells[20, 2].Value             =   MainfuelUsed;
-
-                worksheet.Cells[21, 1].Value             =   "Auxiliary Engine Fuel Type:";
-                worksheet.Cells[21, 1].Style.Font.Bold   =   true;
-                worksheet.Cells[21, 2].Value             =   auxFuelUsed;
-
-                // Resize the columns to fit the values
-                worksheet.Cells["A1:F22"].AutoFitColumns();
-
-                // Save the file
-                package.Save();
-
-                MessageBox.Show("Excel spreadsheet saved successfully.", "File Saved");
             }
+            //{
+            //    // Add a new Worksheet to the empty workbook
+            //    ExcelWorksheet worksheet     =   package.Workbook.Worksheets.Add("TEAMS Results");
+                
+            //    // Add the headers
+            //    worksheet.Cells[1, 1].Value              =   "Vessel name";
+            //    worksheet.Cells[1, 1].Style.Font.Bold    =   true;
+            //    worksheet.Cells[1, 2].Value              =   teams_sheet.VesselTypeID;
+
+            //    worksheet.Cells[2, 2].Value                      =   "Main Engine";
+            //    worksheet.Cells[2, 2].Style.Font.Bold            =   true;
+            //    worksheet.Cells[2, 2].Style.HorizontalAlignment  =   ExcelHorizontalAlignment.Center;
+            //    worksheet.Cells[2, 2, 2, 3].Merge                =   true;
+
+            //    worksheet.Cells[2, 4].Value                      =   "Auxiliary Engine";
+            //    worksheet.Cells[2, 4].Style.Font.Bold            =   true;
+            //    worksheet.Cells[2, 4].Style.HorizontalAlignment  =   ExcelHorizontalAlignment.Center;
+            //    worksheet.Cells[2, 4, 2, 5].Merge                =   true;
+
+            //    worksheet.Cells[3, 1].Value  =   "Results Shown Per Trip";
+            //    worksheet.Cells[3, 2].Value  =   "Well To Pump";
+            //    worksheet.Cells[3, 3].Value  =   "Vessel Operation";
+            //    worksheet.Cells[3, 4].Value  =   "Well To Pump";
+            //    worksheet.Cells[3, 5].Value  =   "Vessel Operation";
+            //    worksheet.Cells[3, 6].Value  =   "Total";
+
+            //    worksheet.Cells["A3:F3"].Style.HorizontalAlignment   =   ExcelHorizontalAlignment.Center;
+            //    worksheet.Cells["A3:F3"].Style.Border.Bottom.Style   =   ExcelBorderStyle.Thin;
+
+            //    // Add the data
+
+            //    worksheet.Cells[4, 1].Value  =   "Total Energy";
+            //    worksheet.Cells[4, 2].Value  =   TE_WTP;
+            //    worksheet.Cells[4, 3].Value  =   TE_VO;
+            //    worksheet.Cells[4, 4].Value  =   AUX_TE_WTP;
+            //    worksheet.Cells[4, 5].Value  =   AUX_TE_VO;
+            //    worksheet.Cells[4, 6].Value  =   TE_Total;
+
+            //    // TODO: Implement Fossil Fuel
+            //    // worksheet.Cells[5, 1].Value = "Fossil Fuel";
+            //    worksheet.Cells[5, 2].Value  =   FF_WTP;
+            //    worksheet.Cells[5, 4].Value  =   AUX_FF_WTP;
+            //    worksheet.Cells[5, 6].Value  =   FF_Total;
+                
+            //    // TODO: Implement Petroleum Fuel
+            //    // worksheet.Cells[6, 1].Value = "Petroleum Fuel";
+            //    worksheet.Cells[6, 2].Value  =   PF_WTP;
+            //    worksheet.Cells[6, 4].Value  =   AUX_PF_WTP;
+            //    worksheet.Cells[6, 6].Value  =   PF_Total;
+
+            //    worksheet.Cells[9, 1].Value  =   "Emissions";
+
+            //    worksheet.Cells[10, 1].Value     =   "VOC";
+            //    worksheet.Cells[10, 2].Value     =   VOC_WTP;
+            //    worksheet.Cells[10, 3].Value     =   VOC_VO;
+            //    worksheet.Cells[10, 4].Value     =   AUX_VOC_WTP;
+            //    worksheet.Cells[10, 5].Value     =   AUX_VOC_VO;
+            //    worksheet.Cells[10, 6].Value     =   VOC_Total;
+
+            //    worksheet.Cells[11, 1].Value     =   "CO";
+            //    worksheet.Cells[11, 2].Value     =   CO_WTP;
+            //    worksheet.Cells[11, 3].Value     =   CO_VO;
+            //    worksheet.Cells[11, 4].Value     =   AUX_CO_WTP;
+            //    worksheet.Cells[11, 5].Value     =   AUX_CO_VO;
+            //    worksheet.Cells[11, 6].Value     =   CO_Total;
+
+            //    worksheet.Cells[12, 1].Value     =   "NOx";
+            //    worksheet.Cells[12, 2].Value     =   NOx_WTP;
+            //    worksheet.Cells[12, 3].Value     =   NOx_VO;
+            //    worksheet.Cells[12, 4].Value     =   AUX_NOx_WTP;
+            //    worksheet.Cells[12, 5].Value     =   AUX_NOx_VO;
+            //    worksheet.Cells[12, 6].Value     =   NOx_Total;
+
+            //    worksheet.Cells[13, 1].Value     =   "PM10";
+            //    worksheet.Cells[13, 2].Value     =   PM10_WTP;
+            //    worksheet.Cells[13, 3].Value     =   PM10_VO;
+            //    worksheet.Cells[13, 4].Value     =   AUX_PM10_WTP;
+            //    worksheet.Cells[13, 5].Value     =   AUX_PM10_VO;
+            //    worksheet.Cells[13, 6].Value     =   PM10_Total;
+
+            //    worksheet.Cells[14, 1].Value     =   "PM 2.5";
+            //    worksheet.Cells[14, 2].Value     =   PM25_WTP;
+            //    worksheet.Cells[14, 3].Value     =   PM25_VO;
+            //    worksheet.Cells[14, 4].Value     =   AUX_PM25_WTP;
+            //    worksheet.Cells[14, 5].Value     =   AUX_PM25_VO;
+            //    worksheet.Cells[14, 6].Value     =   PM25_Total;
+
+            //    worksheet.Cells[15, 1].Value     =   "SOx";
+            //    worksheet.Cells[15, 2].Value     =   SOx_WTP;
+            //    worksheet.Cells[15, 3].Value     =   SOx_VO;
+            //    worksheet.Cells[15, 4].Value     =   AUX_SOx_WTP;
+            //    worksheet.Cells[15, 5].Value     =   AUX_SOx_VO;
+            //    worksheet.Cells[15, 6].Value     =   SOx_Total;
+
+            //    worksheet.Cells[16, 1].Value     =   "CH4";
+            //    worksheet.Cells[16, 2].Value     =   CH4_WTP;
+            //    worksheet.Cells[16, 3].Value     =   CH4_VO;
+            //    worksheet.Cells[16, 4].Value     =   AUX_CH4_WTP;
+            //    worksheet.Cells[16, 5].Value     =   AUX_CH4_VO;
+            //    worksheet.Cells[16, 6].Value     =   CH4_Total;
+
+            //    worksheet.Cells[17, 1].Value     =   "CO2";
+            //    worksheet.Cells[17, 2].Value     =   CO2_WTP;
+            //    worksheet.Cells[17, 3].Value     =   CO2_VO;
+            //    worksheet.Cells[17, 4].Value     =   AUX_CO2_WTP;
+            //    worksheet.Cells[17, 5].Value     =   AUX_CO2_VO;
+            //    worksheet.Cells[17, 6].Value     =   CO2_Total;
+
+            //    worksheet.Cells[18, 1].Value     =   "N2O";
+            //    worksheet.Cells[18, 2].Value     =   N2O_WTP;
+            //    worksheet.Cells[18, 3].Value     =   N2O_VO;
+            //    worksheet.Cells[18, 4].Value     =   AUX_N2O_WTP;
+            //    worksheet.Cells[18, 5].Value     =   AUX_N2O_VO;
+            //    worksheet.Cells[18, 6].Value     =   N2O_Total;
+
+            //    worksheet.Cells[20, 1].Value             =   "Main Engine Fuel Type:";
+            //    worksheet.Cells[20, 1].Style.Font.Bold   =   true;
+            //    worksheet.Cells[20, 2].Value             =   MainfuelUsed;
+
+            //    worksheet.Cells[21, 1].Value             =   "Auxiliary Engine Fuel Type:";
+            //    worksheet.Cells[21, 1].Style.Font.Bold   =   true;
+            //    worksheet.Cells[21, 2].Value             =   auxFuelUsed;
+
+            //    // Resize the columns to fit the values
+            //    worksheet.Cells["A1:F22"].AutoFitColumns();
+
+            //    // Save the file
+            //    package.Save();
+
+            //    MessageBox.Show("Excel spreadsheet saved successfully.", "File Saved");
+            //}
 
             
         }
