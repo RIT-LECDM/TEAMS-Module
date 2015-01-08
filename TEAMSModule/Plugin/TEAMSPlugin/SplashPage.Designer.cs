@@ -34,13 +34,14 @@
             // 
             // StartButton
             // 
-            this.StartButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(140)))), ((int)(((byte)(51)))));
+            this.StartButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(184)))), ((int)(((byte)(48)))));
             this.StartButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.StartButton.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartButton.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.StartButton.Location = new System.Drawing.Point(250, 500);
+            this.StartButton.Location = new System.Drawing.Point(333, 615);
+            this.StartButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(200, 50);
+            this.StartButton.Size = new System.Drawing.Size(267, 62);
             this.StartButton.TabIndex = 2;
             this.StartButton.Text = "Start";
             this.StartButton.UseVisualStyleBackColor = false;
@@ -48,17 +49,18 @@
             // 
             // SplashPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(17)))), ((int)(((byte)(59)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(684, 662);
+            this.ClientSize = new System.Drawing.Size(909, 804);
             this.Controls.Add(this.StartButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 700);
-            this.MinimumSize = new System.Drawing.Size(700, 700);
+            this.MaximumSize = new System.Drawing.Size(927, 851);
+            this.MinimumSize = new System.Drawing.Size(927, 851);
             this.Name = "SplashPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TEAMS";

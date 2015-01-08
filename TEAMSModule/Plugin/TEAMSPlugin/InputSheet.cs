@@ -1302,5 +1302,10 @@ namespace TEAMS_Plugin
                 newWindow.Show();
             }
         }
+
+        private void label_Main_Global_Warming_Potentials_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
