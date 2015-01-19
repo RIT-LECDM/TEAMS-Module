@@ -575,12 +575,34 @@ namespace TEAMS_Plugin
 
         // The results sheet
         private GREETFormattedResults results_sheet;
-
+        
+        //Array of the panels
+        Panel[] allPanels = new Panel[6];
+        Label[] allPanelLabels = new Label[6];
         public TEAMS()
         {
             InitializeComponent();
             useDefaults();
             changeResults();
+            setPanelAndLabelArrays();
+
+        }
+
+        private void setPanelAndLabelArrays()
+        {
+            allPanels[0] = panel_Main_Engine_Vars;
+            allPanels[1] = panel_Main_Fuel_Calculations;
+            allPanels[2] = panel_Main_GWPs;
+            allPanels[3] = panel_Main_Trip_Distance_Time;
+            allPanels[4] = panel_Main_Engine_Chars;
+            allPanels[5] = panel_main_engine_inputs;
+
+            allPanelLabels[0] = label_Main_Engine_Vars;
+            allPanelLabels[1] = label_Main_Fuel_Calculations;
+            allPanelLabels[2] = label_Main_Global_Warming_Potentials;
+            allPanelLabels[3] = label_Main_Total_Distance_And_Time;
+            allPanelLabels[4] = label_Main_Engine_Char_Per_Mode;
+            allPanelLabels[5] = label_Main_Engine_Inputs;
         }
 
         /// <summary>
@@ -1303,9 +1325,131 @@ namespace TEAMS_Plugin
             }
         }
 
+
+
+        private void label_Main_Time_Per_Mode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_Main_Engine_Chars_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+        //These are the label clicks, which handles the extension of the panels
+        private void label_Main_Engine_Vars_Click(object sender, EventArgs e)
+        {
+            if (panel_Main_Engine_Vars.Visible == true)
+            {
+                panel_Main_Engine_Vars.Visible = false;
+            }
+            else
+            {
+                panel_Main_Engine_Vars.Visible = true;
+            }
+            extendPanels(label_Main_Engine_Vars, panel_Main_Engine_Vars);
+        }
+
+        private void label_Main_Total_Distance_And_Time_Click(object sender, EventArgs e)
+        {
+
+            if (panel_Main_Trip_Distance_Time.Visible == true)
+            {
+                panel_Main_Trip_Distance_Time.Visible = false;
+            }
+            else
+            {
+                panel_Main_Trip_Distance_Time.Visible = true;
+            }
+            extendPanels(label_Main_Total_Distance_And_Time, panel_Main_Trip_Distance_Time);
+        }
+
+        private void label_Main_Engine_Char_Per_Mode_Click(object sender, EventArgs e)
+        {
+
+            if (panel_Main_Engine_Chars.Visible == true)
+            {
+                panel_Main_Engine_Chars.Visible = false;
+            }
+            else
+            {
+                panel_Main_Engine_Chars.Visible = true;
+            }
+            extendPanels(label_Main_Engine_Char_Per_Mode, panel_Main_Engine_Chars);
+        }
+
+        private void label_Main_Fuel_Calculations_Click(object sender, EventArgs e)
+        {
+
+            if (panel_Main_Fuel_Calculations.Visible == true)
+            {
+                panel_Main_Fuel_Calculations.Visible = false;
+            }
+            else
+            {
+                panel_Main_Fuel_Calculations.Visible = true;
+            }
+            extendPanels((Label)sender, (panel_Main_Fuel_Calculations));
+        }
+
         private void label_Main_Global_Warming_Potentials_Click(object sender, EventArgs e)
         {
 
+            if (panel_Main_GWPs.Visible == true)
+            {
+                panel_Main_GWPs.Visible = false;
+            }
+            else
+            {
+                panel_Main_GWPs.Visible = true;
+            }
+            extendPanels(label_Main_Global_Warming_Potentials, panel_Main_GWPs);
+        }
+
+        private void label_Main_Engine_Inputs_Click(object sender, EventArgs e)
+        {
+            if (panel_main_engine_inputs.Visible == true)
+            {
+                panel_main_engine_inputs.Visible = false;
+            }
+            else
+            {
+                panel_main_engine_inputs.Visible = true;
+            }
+            extendPanels(label_Main_Engine_Inputs, panel_main_engine_inputs);
+        }
+
+        private void extendPanels(Label labelClicked,Panel panelExtending)
+        {
+            foreach (Panel p in allPanels)
+            {
+                if (p != panelExtending && p.Top > panelExtending.Top)
+                {
+                    if(panelExtending.Visible == true)
+                    {
+                        p.Top += panelExtending.Height;
+                    }
+                    else if (panelExtending.Visible == false)
+                    {
+                        p.Top -= panelExtending.Height;
+                    }
+                }
+            }
+
+            foreach (Label l in allPanelLabels)
+            {
+                if (l != labelClicked && l.Top > panelExtending.Top)
+                {
+                    if (panelExtending.Visible == true)
+                    {
+                        l.Top += panelExtending.Height;
+                    }
+                    else if (panelExtending.Visible == false)
+                    {
+                        l.Top -= panelExtending.Height;
+                    }
+                }
+            }
         }
     }
 }
