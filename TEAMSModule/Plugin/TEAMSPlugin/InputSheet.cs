@@ -577,32 +577,45 @@ namespace TEAMS_Plugin
         private GREETFormattedResults results_sheet;
         
         //Array of the panels
-        Panel[] allPanels = new Panel[6];
-        Label[] allPanelLabels = new Label[6];
+        Panel[] allPanels = new Panel[10];
+        Label[] allPanelLabels = new Label[10];
         public TEAMS()
         {
             InitializeComponent();
+            setPanelAndLabelArrays();
             useDefaults();
             changeResults();
-            setPanelAndLabelArrays();
-
         }
-
+        public void initializePanelsAndLabels()
+        {
+            for (int i = 0; i < allPanelLabels.Length; i++)
+            {
+                labelClicked(allPanelLabels.ElementAt(i), allPanels.ElementAt(i));
+            }
+        }
         private void setPanelAndLabelArrays()
         {
             allPanels[0] = panel_Main_Engine_Vars;
-            allPanels[1] = panel_Main_Fuel_Calculations;
-            allPanels[2] = panel_Main_GWPs;
-            allPanels[3] = panel_Main_Trip_Distance_Time;
-            allPanels[4] = panel_Main_Engine_Chars;
+            allPanels[1] = panel_Main_Trip_Distance_Time;
+            allPanels[2] = panel_Main_Engine_Chars;
+            allPanels[3] = panel_Main_Fuel_Calculations;
+            allPanels[4] = panel_Main_GWPs;
             allPanels[5] = panel_main_engine_inputs;
+            allPanels[6] = panel_Aux_Engine_Vars;
+            allPanels[7] = panel_Aux_Engine_Chars;
+            allPanels[8] = panel_Aux_Fuel_Calc;
+            allPanels[9] = panel_Aux_Emissions_Input;
 
             allPanelLabels[0] = label_Main_Engine_Vars;
-            allPanelLabels[1] = label_Main_Fuel_Calculations;
-            allPanelLabels[2] = label_Main_Global_Warming_Potentials;
-            allPanelLabels[3] = label_Main_Total_Distance_And_Time;
-            allPanelLabels[4] = label_Main_Engine_Char_Per_Mode;
+            allPanelLabels[1] = label_Main_Total_Distance_And_Time;
+            allPanelLabels[2] = label_Main_Engine_Char_Per_Mode;
+            allPanelLabels[3] = label_Main_Fuel_Calculations;
+            allPanelLabels[4] = label_Main_Global_Warming_Potentials;
             allPanelLabels[5] = label_Main_Engine_Inputs;
+            allPanelLabels[6] = label_Aux_Engine_Vars;
+            allPanelLabels[7] = label_Aux_Engine_Chars;
+            allPanelLabels[8] = label_Aux_Fuel_Calc;
+            allPanelLabels[9] = label_Aux_Emissions_Calc_Inputs;
         }
 
         /// <summary>
@@ -1015,7 +1028,6 @@ namespace TEAMS_Plugin
         }
         #endregion
 
-
         // Runs the simulation, and opens up the new results windows
         private void run_menu_Click(object sender, EventArgs e)
         {
@@ -1339,93 +1351,52 @@ namespace TEAMS_Plugin
         //These are the label clicks, which handles the extension of the panels
         private void label_Main_Engine_Vars_Click(object sender, EventArgs e)
         {
-            if (panel_Main_Engine_Vars.Visible == true)
-            {
-                panel_Main_Engine_Vars.Visible = false;
-            }
-            else
-            {
-                panel_Main_Engine_Vars.Visible = true;
-            }
-            extendPanels(label_Main_Engine_Vars, panel_Main_Engine_Vars);
+            labelClicked(label_Main_Engine_Vars, panel_Main_Engine_Vars);
         }
 
         private void label_Main_Total_Distance_And_Time_Click(object sender, EventArgs e)
         {
-
-            if (panel_Main_Trip_Distance_Time.Visible == true)
-            {
-                panel_Main_Trip_Distance_Time.Visible = false;
-            }
-            else
-            {
-                panel_Main_Trip_Distance_Time.Visible = true;
-            }
-            extendPanels(label_Main_Total_Distance_And_Time, panel_Main_Trip_Distance_Time);
+            labelClicked(label_Main_Total_Distance_And_Time, panel_Main_Trip_Distance_Time);
         }
 
         private void label_Main_Engine_Char_Per_Mode_Click(object sender, EventArgs e)
         {
-
-            if (panel_Main_Engine_Chars.Visible == true)
-            {
-                panel_Main_Engine_Chars.Visible = false;
-            }
-            else
-            {
-                panel_Main_Engine_Chars.Visible = true;
-            }
-            extendPanels(label_Main_Engine_Char_Per_Mode, panel_Main_Engine_Chars);
+            labelClicked(label_Main_Engine_Char_Per_Mode, panel_Main_Engine_Chars);
         }
 
         private void label_Main_Fuel_Calculations_Click(object sender, EventArgs e)
         {
 
-            if (panel_Main_Fuel_Calculations.Visible == true)
-            {
-                panel_Main_Fuel_Calculations.Visible = false;
-            }
-            else
-            {
-                panel_Main_Fuel_Calculations.Visible = true;
-            }
-            extendPanels((Label)sender, (panel_Main_Fuel_Calculations));
+            labelClicked(label_Main_Fuel_Calculations, panel_Main_Fuel_Calculations);
         }
 
         private void label_Main_Global_Warming_Potentials_Click(object sender, EventArgs e)
         {
 
-            if (panel_Main_GWPs.Visible == true)
-            {
-                panel_Main_GWPs.Visible = false;
-            }
-            else
-            {
-                panel_Main_GWPs.Visible = true;
-            }
-            extendPanels(label_Main_Global_Warming_Potentials, panel_Main_GWPs);
+            labelClicked(label_Main_Global_Warming_Potentials, panel_Main_GWPs);
         }
 
         private void label_Main_Engine_Inputs_Click(object sender, EventArgs e)
         {
-            if (panel_main_engine_inputs.Visible == true)
+            labelClicked(label_Main_Engine_Inputs, panel_main_engine_inputs);
+        }
+
+        private void labelClicked(Label labelClicked, Panel panelExtending)
+        {
+            if (panelExtending.Visible == true)
             {
-                panel_main_engine_inputs.Visible = false;
+                panelExtending.Visible = false;
             }
             else
             {
-                panel_main_engine_inputs.Visible = true;
+                panelExtending.Visible = true;
             }
-            extendPanels(label_Main_Engine_Inputs, panel_main_engine_inputs);
-        }
 
-        private void extendPanels(Label labelClicked,Panel panelExtending)
-        {
             foreach (Panel p in allPanels)
             {
                 if (p != panelExtending && p.Top > panelExtending.Top)
                 {
-                    if(panelExtending.Visible == true)
+                    if (panelExtending.Visible == true)
                     {
                         p.Top += panelExtending.Height;
                     }
@@ -1450,6 +1421,26 @@ namespace TEAMS_Plugin
                     }
                 }
             }
+        }
+
+        private void label_Aux_Engine_Vars_Click(object sender, EventArgs e)
+        {
+            labelClicked(label_Aux_Engine_Vars, panel_Aux_Engine_Vars);
+        }
+
+        private void label_Aux_Engine_Chars_Click(object sender, EventArgs e)
+        {
+            labelClicked(label_Aux_Engine_Chars, panel_Aux_Engine_Chars);
+        }
+
+        private void label_Aux_Fuel_Calc_Click(object sender, EventArgs e)
+        {
+            labelClicked(label_Aux_Fuel_Calc, panel_Aux_Fuel_Calc);
+        }
+
+        private void label_Aux_Emissions_Calc_Inputs_Click(object sender, EventArgs e)
+        {
+            labelClicked(label_Aux_Emissions_Calc_Inputs, panel_Aux_Emissions_Input);
         }
     }
 }
