@@ -40,39 +40,39 @@
       <HintPath>EPPlus Binaries\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="Greet.ConvenienceLib">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.ConvenienceLib.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.ConvenienceLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Greet.DataConverter">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.DataConverter.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.DataConverter.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Greet.DataStructureV2">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.DataStructureV2.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.DataStructureV2.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Greet.DataStructureV3">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.DataStructureV3.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.DataStructureV3.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Greet.Gui">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.Gui.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.Gui.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Greet.LoggerLib">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.LoggerLib.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.LoggerLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Greet.Model">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.Model.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Greet.UnitLib">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.UnitLib.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.UnitLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Greet.UnitLib2">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\2014\Greet.UnitLib2.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.UnitLib2.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
