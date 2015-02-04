@@ -644,6 +644,7 @@ namespace TEAMSModule
 
         private void ExportButton_Click(object sender, EventArgs e)
         {
+            SaveFile = new SaveFileDialog();
             // Create the new file to be saved, use Save Dialog Box.
             SaveFile.Filter = "Excel File|.xlsx";
             SaveFile.Title = "Save TEAMS Results to an Excel File";
