@@ -590,6 +590,7 @@ namespace TEAMS_Plugin
             setResDefaults();
             //initializePanelsAndLabels();
         }
+
         public void initializePanelsAndLabels()
         {
             for (int i = 0; i < allPanelLabels.Length; i++)
@@ -598,6 +599,7 @@ namespace TEAMS_Plugin
                 labelClicked(allPanelLabels.ElementAt(i),allPanels.ElementAt(i));
             }
         }
+
         private void setPanelAndLabelArrays()
         {
             allPanels[0] = panel_Main_Engine_Vars;
