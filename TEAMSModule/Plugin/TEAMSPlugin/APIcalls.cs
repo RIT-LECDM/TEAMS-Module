@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PlugInsInterfaces.DataTypes.Resource;
-using PlugInsInterfaces.DataTypes;
-using PlugInsInterfaces.DataTypes.Pathway;
-using PlugInsInterfaces.DataTypes.Mix;
-using PlugInsInterfaces.ResultTypes;
-using PlugInsInterfaces.DataTypes.Technology;
-
+using Greet.DataStructureV3.Interfaces;
+using Greet.Model.Interfaces;
 namespace TEAMS_Plugin
 {
     public class APIcalls
@@ -120,6 +115,7 @@ namespace TEAMS_Plugin
         {
             double api_value;
             double conversions = GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU;
+
             if (resource_used.LowerHeatingValue.UserValue == 0)
             { api_value = resource_used.LowerHeatingValue.GreetValue; }
             else
@@ -215,7 +211,7 @@ namespace TEAMS_Plugin
             for (int i = 0; i <= 13; i++ )
             {
                 if (i == 12) { continue; }
-                sum += pathway.LifeCycleResources().ElementAt(i).Value.Value;
+               sum += pathway.WellToProductResources().ElementAt(i).Value.Value;
             }
             return sum;
         }
@@ -228,7 +224,7 @@ namespace TEAMS_Plugin
         /// <returns>A double with units g/mmbtu</returns>
         public double getResourceWTPEmissions(IResults pathway, int res_id)
         {
-            return (pathway.LifeCycleEmissions().ElementAt(res_id).Value.Value * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM);
+            return (pathway.WellToProductEmissions().ElementAt(res_id).Value.Value * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM);
         }
 
     }

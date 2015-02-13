@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\..\Documents\Greet\Plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -38,6 +38,15 @@
     <Reference Include="EPPlus, Version=3.1.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>EPPlus Binaries\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.DataStructureV3">
+      <HintPath>..\..\..\Greet_API\Greet.DataStructureV3.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.Model">
+      <HintPath>..\..\..\Greet_API\Greet.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Greet.UnitLib">
+      <HintPath>..\..\..\Greet_API\Greet.UnitLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -88,12 +97,6 @@
     <Folder Include="Core\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Interfaces\PlugInsInterfaces.csproj">
-      <Project>{E9F76280-130B-4699-9F1B-768ED383B730}</Project>
-      <Name>PlugInsInterfaces</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="CopyrightPage.resx">
       <DependentUpon>CopyrightPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +126,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "C:\Users\sln7755\Documents\Greet\Plugins"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

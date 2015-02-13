@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PlugInsInterfaces.PluginTypes;
-using PlugInsInterfaces;
 using System.Reflection;
 using System.Drawing;
 using System.Windows.Forms;
 using TEAMSModule;
+using Greet.DataStructureV3.Interfaces;
+using Greet.Model.Interfaces;
 
 namespace TEAMS_Plugin
 {
