@@ -39,41 +39,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>EPPlus Binaries\EPPlus.dll</HintPath>
     </Reference>
-    <Reference Include="Greet.ConvenienceLib">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.ConvenienceLib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Greet.DataConverter">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.DataConverter.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Greet.DataStructureV2">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.DataStructureV2.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Greet.DataStructureV3">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.DataStructureV3.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Greet.Gui">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.Gui.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Greet.LoggerLib">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.LoggerLib.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Greet_API\Greet.DataStructureV3.dll</HintPath>
     </Reference>
     <Reference Include="Greet.Model">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.Model.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Greet_API\Greet.Model.dll</HintPath>
     </Reference>
     <Reference Include="Greet.UnitLib">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.UnitLib.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Greet.UnitLib2">
-      <HintPath>..\..\..\..\Documents\Greet\Plugins\API\Greet.UnitLib2.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Greet_API\Greet.UnitLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -153,6 +126,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "C:\Users\sln7755\Documents\Greet\Plugins"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
