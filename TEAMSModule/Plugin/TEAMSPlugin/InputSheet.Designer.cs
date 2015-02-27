@@ -141,8 +141,6 @@
             this.label_FF_Total = new System.Windows.Forms.Label();
             this.label_PF_Total = new System.Windows.Forms.Label();
             this.panel_Header = new System.Windows.Forms.Panel();
-            this.ExportButton = new System.Windows.Forms.Button();
-            this.ResetButton2 = new System.Windows.Forms.Button();
             this.label_Aux_Fuel_Header = new System.Windows.Forms.Label();
             this.label_Aux_Fuel_Type = new System.Windows.Forms.Label();
             this.label_Main_Fuel_Header = new System.Windows.Forms.Label();
@@ -409,6 +407,8 @@
             this.file_exit_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.resetToDefaultsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_strip = new System.Windows.Forms.MenuStrip();
+            this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Save_Excel = new System.Windows.Forms.Button();
             this.engine_tabs.SuspendLayout();
             this.tab_Main.SuspendLayout();
             this.Panel_results_chart.SuspendLayout();
@@ -630,7 +630,7 @@
             this.Label_results_chart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(18)))), ((int)(((byte)(163)))));
             this.Label_results_chart.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
             this.Label_results_chart.ForeColor = System.Drawing.Color.Yellow;
-            this.Label_results_chart.Location = new System.Drawing.Point(5, 3085);
+            this.Label_results_chart.Location = new System.Drawing.Point(1, 3082);
             this.Label_results_chart.Margin = new System.Windows.Forms.Padding(0);
             this.Label_results_chart.MinimumSize = new System.Drawing.Size(1210, 18);
             this.Label_results_chart.Name = "Label_results_chart";
@@ -646,7 +646,7 @@
             this.Label_results_spread.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(18)))), ((int)(((byte)(163)))));
             this.Label_results_spread.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
             this.Label_results_spread.ForeColor = System.Drawing.Color.Yellow;
-            this.Label_results_spread.Location = new System.Drawing.Point(5, 2365);
+            this.Label_results_spread.Location = new System.Drawing.Point(1, 2368);
             this.Label_results_spread.Margin = new System.Windows.Forms.Padding(0);
             this.Label_results_spread.MinimumSize = new System.Drawing.Size(1210, 18);
             this.Label_results_spread.Name = "Label_results_spread";
@@ -661,7 +661,7 @@
             this.Panel_results_chart.BackColor = System.Drawing.Color.Silver;
             this.Panel_results_chart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel_results_chart.Controls.Add(this.graph_VO_vs_WTP);
-            this.Panel_results_chart.Location = new System.Drawing.Point(7, 3106);
+            this.Panel_results_chart.Location = new System.Drawing.Point(3, 3103);
             this.Panel_results_chart.Name = "Panel_results_chart";
             this.Panel_results_chart.Size = new System.Drawing.Size(1200, 548);
             this.Panel_results_chart.TabIndex = 386;
@@ -717,7 +717,7 @@
             this.graph_VO_vs_WTP.Legends.Add(legend1);
             this.graph_VO_vs_WTP.Location = new System.Drawing.Point(-1, 20);
             this.graph_VO_vs_WTP.Name = "graph_VO_vs_WTP";
-            this.graph_VO_vs_WTP.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
+            this.graph_VO_vs_WTP.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn100;
             series1.Legend = "Legend";
@@ -744,7 +744,7 @@
             this.Panel_results_spread.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel_results_spread.Controls.Add(this.panel_Table);
             this.Panel_results_spread.Controls.Add(this.panel_Header);
-            this.Panel_results_spread.Location = new System.Drawing.Point(7, 2386);
+            this.Panel_results_spread.Location = new System.Drawing.Point(3, 2389);
             this.Panel_results_spread.Name = "Panel_results_spread";
             this.Panel_results_spread.Size = new System.Drawing.Size(1200, 690);
             this.Panel_results_spread.TabIndex = 384;
@@ -769,11 +769,11 @@
             // 
             this.label_Aux_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_VO.AutoSize = true;
-            this.label_Aux_VO.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_VO.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_VO.Location = new System.Drawing.Point(738, 7);
             this.label_Aux_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_VO.Name = "label_Aux_VO";
-            this.label_Aux_VO.Size = new System.Drawing.Size(207, 17);
+            this.label_Aux_VO.Size = new System.Drawing.Size(197, 19);
             this.label_Aux_VO.TabIndex = 23;
             this.label_Aux_VO.Text = "Aux Engine: Vessel Operation";
             this.label_Aux_VO.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -782,11 +782,11 @@
             // 
             this.label_Aux_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_WTP.AutoSize = true;
-            this.label_Aux_WTP.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_WTP.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_WTP.Location = new System.Drawing.Point(552, 7);
             this.label_Aux_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_WTP.Name = "label_Aux_WTP";
-            this.label_Aux_WTP.Size = new System.Drawing.Size(181, 17);
+            this.label_Aux_WTP.Size = new System.Drawing.Size(173, 19);
             this.label_Aux_WTP.TabIndex = 22;
             this.label_Aux_WTP.Text = "Aux Engine: Well to Pump";
             this.label_Aux_WTP.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -795,11 +795,11 @@
             // 
             this.label_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Total.AutoSize = true;
-            this.label_Total.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Total.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Total.Location = new System.Drawing.Point(968, 7);
             this.label_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Total.Name = "label_Total";
-            this.label_Total.Size = new System.Drawing.Size(41, 17);
+            this.label_Total.Size = new System.Drawing.Size(39, 19);
             this.label_Total.TabIndex = 21;
             this.label_Total.Text = "Total";
             this.label_Total.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -808,11 +808,11 @@
             // 
             this.label_Main_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_VO.AutoSize = true;
-            this.label_Main_VO.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_VO.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_VO.Location = new System.Drawing.Point(328, 7);
             this.label_Main_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_VO.Name = "label_Main_VO";
-            this.label_Main_VO.Size = new System.Drawing.Size(214, 17);
+            this.label_Main_VO.Size = new System.Drawing.Size(204, 19);
             this.label_Main_VO.TabIndex = 20;
             this.label_Main_VO.Text = "Main Engine: Vessel Operation";
             this.label_Main_VO.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -821,11 +821,11 @@
             // 
             this.label_Main_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_WTP.AutoSize = true;
-            this.label_Main_WTP.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_WTP.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_WTP.Location = new System.Drawing.Point(140, 7);
             this.label_Main_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_WTP.Name = "label_Main_WTP";
-            this.label_Main_WTP.Size = new System.Drawing.Size(188, 17);
+            this.label_Main_WTP.Size = new System.Drawing.Size(180, 19);
             this.label_Main_WTP.TabIndex = 19;
             this.label_Main_WTP.Text = "Main Engine: Well to Pump";
             this.label_Main_WTP.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -835,11 +835,11 @@
             this.label_Results_Shown_Per_Trip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Results_Shown_Per_Trip.AutoSize = true;
             this.label_Results_Shown_Per_Trip.BackColor = System.Drawing.Color.Transparent;
-            this.label_Results_Shown_Per_Trip.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Results_Shown_Per_Trip.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Results_Shown_Per_Trip.Location = new System.Drawing.Point(2, -2);
             this.label_Results_Shown_Per_Trip.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Results_Shown_Per_Trip.Name = "label_Results_Shown_Per_Trip";
-            this.label_Results_Shown_Per_Trip.Size = new System.Drawing.Size(98, 34);
+            this.label_Results_Shown_Per_Trip.Size = new System.Drawing.Size(98, 38);
             this.label_Results_Shown_Per_Trip.TabIndex = 18;
             this.label_Results_Shown_Per_Trip.Text = "Results Shown\r\nPer Trip";
             this.label_Results_Shown_Per_Trip.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -853,7 +853,7 @@
             this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
             this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
-            this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 248F));
+            this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
             this.table_Results.Controls.Add(this.label_Aux_TE_VO, 4, 0);
             this.table_Results.Controls.Add(this.label_Aux_N2O_WTP, 3, 12);
             this.table_Results.Controls.Add(this.label_Aux_TE_WTP, 3, 0);
@@ -954,12 +954,12 @@
             // 
             this.label_Aux_TE_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_TE_VO.AutoSize = true;
-            this.label_Aux_TE_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_TE_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_TE_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_TE_VO.Location = new System.Drawing.Point(718, 109);
+            this.label_Aux_TE_VO.Location = new System.Drawing.Point(716, 108);
             this.label_Aux_TE_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_TE_VO.Name = "label_Aux_TE_VO";
-            this.label_Aux_TE_VO.Size = new System.Drawing.Size(70, 15);
+            this.label_Aux_TE_VO.Size = new System.Drawing.Size(76, 16);
             this.label_Aux_TE_VO.TabIndex = 83;
             this.label_Aux_TE_VO.Text = "Aux_TE_VO";
             // 
@@ -967,12 +967,12 @@
             // 
             this.label_Aux_N2O_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_N2O_WTP.AutoSize = true;
-            this.label_Aux_N2O_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_N2O_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_N2O_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_N2O_WTP.Location = new System.Drawing.Point(532, 524);
+            this.label_Aux_N2O_WTP.Location = new System.Drawing.Point(530, 523);
             this.label_Aux_N2O_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_N2O_WTP.Name = "label_Aux_N2O_WTP";
-            this.label_Aux_N2O_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Aux_N2O_WTP.Size = new System.Drawing.Size(98, 16);
             this.label_Aux_N2O_WTP.TabIndex = 82;
             this.label_Aux_N2O_WTP.Text = "Aux_N2O_WTP";
             // 
@@ -980,12 +980,12 @@
             // 
             this.label_Aux_TE_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_TE_WTP.AutoSize = true;
-            this.label_Aux_TE_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_TE_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_TE_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_TE_WTP.Location = new System.Drawing.Point(532, 109);
+            this.label_Aux_TE_WTP.Location = new System.Drawing.Point(530, 108);
             this.label_Aux_TE_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_TE_WTP.Name = "label_Aux_TE_WTP";
-            this.label_Aux_TE_WTP.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_TE_WTP.Size = new System.Drawing.Size(82, 16);
             this.label_Aux_TE_WTP.TabIndex = 19;
             this.label_Aux_TE_WTP.Text = "Aux_TE_WTP";
             // 
@@ -993,12 +993,12 @@
             // 
             this.label_Main_TE_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_TE_VO.AutoSize = true;
-            this.label_Main_TE_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_TE_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_TE_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_TE_VO.Location = new System.Drawing.Point(308, 109);
+            this.label_Main_TE_VO.Location = new System.Drawing.Point(306, 108);
             this.label_Main_TE_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_TE_VO.Name = "label_Main_TE_VO";
-            this.label_Main_TE_VO.Size = new System.Drawing.Size(77, 15);
+            this.label_Main_TE_VO.Size = new System.Drawing.Size(82, 16);
             this.label_Main_TE_VO.TabIndex = 36;
             this.label_Main_TE_VO.Text = "Main_TE_VO";
             // 
@@ -1006,11 +1006,11 @@
             // 
             this.label_Total_Energy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Total_Energy.AutoSize = true;
-            this.label_Total_Energy.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Total_Energy.Location = new System.Drawing.Point(3, 107);
+            this.label_Total_Energy.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Total_Energy.Location = new System.Drawing.Point(3, 105);
             this.label_Total_Energy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Total_Energy.Name = "label_Total_Energy";
-            this.label_Total_Energy.Size = new System.Drawing.Size(83, 17);
+            this.label_Total_Energy.Size = new System.Drawing.Size(86, 19);
             this.label_Total_Energy.TabIndex = 0;
             this.label_Total_Energy.Text = "Total Energy";
             this.label_Total_Energy.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1019,11 +1019,11 @@
             // 
             this.label_Fossil_Fuels.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Fossil_Fuels.AutoSize = true;
-            this.label_Fossil_Fuels.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Fossil_Fuels.Location = new System.Drawing.Point(3, 175);
+            this.label_Fossil_Fuels.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Fossil_Fuels.Location = new System.Drawing.Point(3, 173);
             this.label_Fossil_Fuels.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Fossil_Fuels.Name = "label_Fossil_Fuels";
-            this.label_Fossil_Fuels.Size = new System.Drawing.Size(76, 17);
+            this.label_Fossil_Fuels.Size = new System.Drawing.Size(78, 19);
             this.label_Fossil_Fuels.TabIndex = 1;
             this.label_Fossil_Fuels.Text = "Fossil Fuels";
             this.label_Fossil_Fuels.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1032,11 +1032,11 @@
             // 
             this.label_VOC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_VOC.AutoSize = true;
-            this.label_VOC.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_VOC.Location = new System.Drawing.Point(3, 272);
+            this.label_VOC.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_VOC.Location = new System.Drawing.Point(3, 270);
             this.label_VOC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_VOC.Name = "label_VOC";
-            this.label_VOC.Size = new System.Drawing.Size(40, 17);
+            this.label_VOC.Size = new System.Drawing.Size(41, 19);
             this.label_VOC.TabIndex = 6;
             this.label_VOC.Text = "VOC";
             this.label_VOC.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1045,11 +1045,11 @@
             // 
             this.label_CO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_CO.AutoSize = true;
-            this.label_CO.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CO.Location = new System.Drawing.Point(3, 307);
+            this.label_CO.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CO.Location = new System.Drawing.Point(3, 305);
             this.label_CO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO.Name = "label_CO";
-            this.label_CO.Size = new System.Drawing.Size(29, 17);
+            this.label_CO.Size = new System.Drawing.Size(31, 19);
             this.label_CO.TabIndex = 7;
             this.label_CO.Text = "CO";
             this.label_CO.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1058,11 +1058,11 @@
             // 
             this.label_NOx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_NOx.AutoSize = true;
-            this.label_NOx.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NOx.Location = new System.Drawing.Point(3, 342);
+            this.label_NOx.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NOx.Location = new System.Drawing.Point(3, 340);
             this.label_NOx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NOx.Name = "label_NOx";
-            this.label_NOx.Size = new System.Drawing.Size(37, 17);
+            this.label_NOx.Size = new System.Drawing.Size(40, 19);
             this.label_NOx.TabIndex = 8;
             this.label_NOx.Text = "NOx";
             this.label_NOx.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1071,11 +1071,11 @@
             // 
             this.label_PM10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_PM10.AutoSize = true;
-            this.label_PM10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PM10.Location = new System.Drawing.Point(3, 374);
+            this.label_PM10.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_PM10.Location = new System.Drawing.Point(3, 372);
             this.label_PM10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM10.Name = "label_PM10";
-            this.label_PM10.Size = new System.Drawing.Size(44, 17);
+            this.label_PM10.Size = new System.Drawing.Size(47, 19);
             this.label_PM10.TabIndex = 9;
             this.label_PM10.Text = "PM10";
             this.label_PM10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1084,11 +1084,11 @@
             // 
             this.label_PM25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_PM25.AutoSize = true;
-            this.label_PM25.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PM25.Location = new System.Drawing.Point(3, 407);
+            this.label_PM25.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_PM25.Location = new System.Drawing.Point(3, 405);
             this.label_PM25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM25.Name = "label_PM25";
-            this.label_PM25.Size = new System.Drawing.Size(48, 17);
+            this.label_PM25.Size = new System.Drawing.Size(51, 19);
             this.label_PM25.TabIndex = 10;
             this.label_PM25.Text = "PM2.5";
             this.label_PM25.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1097,11 +1097,11 @@
             // 
             this.label_SOx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_SOx.AutoSize = true;
-            this.label_SOx.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SOx.Location = new System.Drawing.Point(3, 436);
+            this.label_SOx.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_SOx.Location = new System.Drawing.Point(3, 434);
             this.label_SOx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SOx.Name = "label_SOx";
-            this.label_SOx.Size = new System.Drawing.Size(34, 17);
+            this.label_SOx.Size = new System.Drawing.Size(36, 19);
             this.label_SOx.TabIndex = 11;
             this.label_SOx.Text = "SOx";
             this.label_SOx.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1110,11 +1110,11 @@
             // 
             this.label_CH4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_CH4.AutoSize = true;
-            this.label_CH4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CH4.Location = new System.Drawing.Point(3, 465);
+            this.label_CH4.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CH4.Location = new System.Drawing.Point(3, 463);
             this.label_CH4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CH4.Name = "label_CH4";
-            this.label_CH4.Size = new System.Drawing.Size(36, 17);
+            this.label_CH4.Size = new System.Drawing.Size(38, 19);
             this.label_CH4.TabIndex = 12;
             this.label_CH4.Text = "CH4";
             this.label_CH4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1123,11 +1123,11 @@
             // 
             this.label_CO2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_CO2.AutoSize = true;
-            this.label_CO2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CO2.Location = new System.Drawing.Point(3, 493);
+            this.label_CO2.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CO2.Location = new System.Drawing.Point(3, 491);
             this.label_CO2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO2.Name = "label_CO2";
-            this.label_CO2.Size = new System.Drawing.Size(36, 17);
+            this.label_CO2.Size = new System.Drawing.Size(40, 19);
             this.label_CO2.TabIndex = 13;
             this.label_CO2.Text = "CO2";
             this.label_CO2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1136,11 +1136,11 @@
             // 
             this.label_N2O.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_N2O.AutoSize = true;
-            this.label_N2O.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_N2O.Location = new System.Drawing.Point(3, 522);
+            this.label_N2O.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_N2O.Location = new System.Drawing.Point(3, 520);
             this.label_N2O.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_N2O.Name = "label_N2O";
-            this.label_N2O.Size = new System.Drawing.Size(37, 17);
+            this.label_N2O.Size = new System.Drawing.Size(42, 19);
             this.label_N2O.TabIndex = 14;
             this.label_N2O.Text = "N2O";
             this.label_N2O.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1149,12 +1149,12 @@
             // 
             this.label_Main_TE_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_TE_WTP.AutoSize = true;
-            this.label_Main_TE_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_TE_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_TE_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_TE_WTP.Location = new System.Drawing.Point(132, 109);
+            this.label_Main_TE_WTP.Location = new System.Drawing.Point(132, 108);
             this.label_Main_TE_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_TE_WTP.Name = "label_Main_TE_WTP";
-            this.label_Main_TE_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_TE_WTP.Size = new System.Drawing.Size(88, 16);
             this.label_Main_TE_WTP.TabIndex = 18;
             this.label_Main_TE_WTP.Text = "Main_TE_WTP";
             // 
@@ -1162,12 +1162,12 @@
             // 
             this.label_Main_VOC_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_VOC_WTP.AutoSize = true;
-            this.label_Main_VOC_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_VOC_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_VOC_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_VOC_WTP.Location = new System.Drawing.Point(132, 274);
+            this.label_Main_VOC_WTP.Location = new System.Drawing.Point(132, 273);
             this.label_Main_VOC_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_VOC_WTP.Name = "label_Main_VOC_WTP";
-            this.label_Main_VOC_WTP.Size = new System.Drawing.Size(91, 15);
+            this.label_Main_VOC_WTP.Size = new System.Drawing.Size(103, 16);
             this.label_Main_VOC_WTP.TabIndex = 24;
             this.label_Main_VOC_WTP.Text = "Main_VOC_WTP";
             // 
@@ -1175,12 +1175,12 @@
             // 
             this.label_Main_CO_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_CO_WTP.AutoSize = true;
-            this.label_Main_CO_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_CO_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO_WTP.Location = new System.Drawing.Point(132, 309);
+            this.label_Main_CO_WTP.Location = new System.Drawing.Point(132, 308);
             this.label_Main_CO_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO_WTP.Name = "label_Main_CO_WTP";
-            this.label_Main_CO_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_CO_WTP.Size = new System.Drawing.Size(95, 16);
             this.label_Main_CO_WTP.TabIndex = 25;
             this.label_Main_CO_WTP.Text = "Main_CO_WTP";
             // 
@@ -1188,12 +1188,12 @@
             // 
             this.label_Main_NOx_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_NOx_WTP.AutoSize = true;
-            this.label_Main_NOx_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_NOx_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_NOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_NOx_WTP.Location = new System.Drawing.Point(132, 344);
+            this.label_Main_NOx_WTP.Location = new System.Drawing.Point(132, 343);
             this.label_Main_NOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_NOx_WTP.Name = "label_Main_NOx_WTP";
-            this.label_Main_NOx_WTP.Size = new System.Drawing.Size(91, 15);
+            this.label_Main_NOx_WTP.Size = new System.Drawing.Size(102, 16);
             this.label_Main_NOx_WTP.TabIndex = 26;
             this.label_Main_NOx_WTP.Text = "Main_NOx_WTP";
             // 
@@ -1201,12 +1201,12 @@
             // 
             this.label_Main_PM10_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_PM10_WTP.AutoSize = true;
-            this.label_Main_PM10_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_PM10_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM10_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM10_WTP.Location = new System.Drawing.Point(132, 376);
+            this.label_Main_PM10_WTP.Location = new System.Drawing.Point(132, 375);
             this.label_Main_PM10_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM10_WTP.Name = "label_Main_PM10_WTP";
-            this.label_Main_PM10_WTP.Size = new System.Drawing.Size(98, 15);
+            this.label_Main_PM10_WTP.Size = new System.Drawing.Size(108, 16);
             this.label_Main_PM10_WTP.TabIndex = 27;
             this.label_Main_PM10_WTP.Text = "Main_PM10_WTP";
             // 
@@ -1214,12 +1214,12 @@
             // 
             this.label_Main_PM25_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_PM25_WTP.AutoSize = true;
-            this.label_Main_PM25_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_PM25_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM25_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM25_WTP.Location = new System.Drawing.Point(132, 409);
+            this.label_Main_PM25_WTP.Location = new System.Drawing.Point(132, 408);
             this.label_Main_PM25_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM25_WTP.Name = "label_Main_PM25_WTP";
-            this.label_Main_PM25_WTP.Size = new System.Drawing.Size(98, 15);
+            this.label_Main_PM25_WTP.Size = new System.Drawing.Size(108, 16);
             this.label_Main_PM25_WTP.TabIndex = 28;
             this.label_Main_PM25_WTP.Text = "Main_PM25_WTP";
             // 
@@ -1227,12 +1227,12 @@
             // 
             this.label_Main_SOx_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_SOx_WTP.AutoSize = true;
-            this.label_Main_SOx_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_SOx_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_SOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_SOx_WTP.Location = new System.Drawing.Point(132, 438);
+            this.label_Main_SOx_WTP.Location = new System.Drawing.Point(132, 437);
             this.label_Main_SOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_SOx_WTP.Name = "label_Main_SOx_WTP";
-            this.label_Main_SOx_WTP.Size = new System.Drawing.Size(91, 15);
+            this.label_Main_SOx_WTP.Size = new System.Drawing.Size(99, 16);
             this.label_Main_SOx_WTP.TabIndex = 29;
             this.label_Main_SOx_WTP.Text = "Main_SOx_WTP";
             // 
@@ -1240,12 +1240,12 @@
             // 
             this.label_Main_CH4_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_CH4_WTP.AutoSize = true;
-            this.label_Main_CH4_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_CH4_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CH4_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CH4_WTP.Location = new System.Drawing.Point(132, 467);
+            this.label_Main_CH4_WTP.Location = new System.Drawing.Point(132, 466);
             this.label_Main_CH4_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CH4_WTP.Name = "label_Main_CH4_WTP";
-            this.label_Main_CH4_WTP.Size = new System.Drawing.Size(91, 15);
+            this.label_Main_CH4_WTP.Size = new System.Drawing.Size(101, 16);
             this.label_Main_CH4_WTP.TabIndex = 30;
             this.label_Main_CH4_WTP.Text = "Main_CH4_WTP";
             // 
@@ -1253,12 +1253,12 @@
             // 
             this.label_Main_CO2_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_CO2_WTP.AutoSize = true;
-            this.label_Main_CO2_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_CO2_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO2_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO2_WTP.Location = new System.Drawing.Point(132, 495);
+            this.label_Main_CO2_WTP.Location = new System.Drawing.Point(132, 494);
             this.label_Main_CO2_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO2_WTP.Name = "label_Main_CO2_WTP";
-            this.label_Main_CO2_WTP.Size = new System.Drawing.Size(91, 15);
+            this.label_Main_CO2_WTP.Size = new System.Drawing.Size(103, 16);
             this.label_Main_CO2_WTP.TabIndex = 31;
             this.label_Main_CO2_WTP.Text = "Main_CO2_WTP";
             // 
@@ -1266,12 +1266,12 @@
             // 
             this.label_Main_N2O_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_N2O_WTP.AutoSize = true;
-            this.label_Main_N2O_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_N2O_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_N2O_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_N2O_WTP.Location = new System.Drawing.Point(132, 524);
+            this.label_Main_N2O_WTP.Location = new System.Drawing.Point(132, 523);
             this.label_Main_N2O_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_N2O_WTP.Name = "label_Main_N2O_WTP";
-            this.label_Main_N2O_WTP.Size = new System.Drawing.Size(91, 15);
+            this.label_Main_N2O_WTP.Size = new System.Drawing.Size(104, 16);
             this.label_Main_N2O_WTP.TabIndex = 32;
             this.label_Main_N2O_WTP.Text = "Main_N2O_WTP";
             // 
@@ -1279,12 +1279,12 @@
             // 
             this.label_Main_N2O_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_N2O_VO.AutoSize = true;
-            this.label_Main_N2O_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_N2O_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_N2O_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_N2O_VO.Location = new System.Drawing.Point(308, 524);
+            this.label_Main_N2O_VO.Location = new System.Drawing.Point(306, 523);
             this.label_Main_N2O_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_N2O_VO.Name = "label_Main_N2O_VO";
-            this.label_Main_N2O_VO.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_N2O_VO.Size = new System.Drawing.Size(98, 16);
             this.label_Main_N2O_VO.TabIndex = 50;
             this.label_Main_N2O_VO.Text = "Main_N2O_VO";
             // 
@@ -1292,12 +1292,12 @@
             // 
             this.label_Main_CH4_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_CH4_VO.AutoSize = true;
-            this.label_Main_CH4_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_CH4_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CH4_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CH4_VO.Location = new System.Drawing.Point(308, 467);
+            this.label_Main_CH4_VO.Location = new System.Drawing.Point(306, 466);
             this.label_Main_CH4_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CH4_VO.Name = "label_Main_CH4_VO";
-            this.label_Main_CH4_VO.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_CH4_VO.Size = new System.Drawing.Size(95, 16);
             this.label_Main_CH4_VO.TabIndex = 48;
             this.label_Main_CH4_VO.Text = "Main_CH4_VO";
             // 
@@ -1305,12 +1305,12 @@
             // 
             this.label_Main_PM25_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_PM25_VO.AutoSize = true;
-            this.label_Main_PM25_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_PM25_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM25_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM25_VO.Location = new System.Drawing.Point(308, 409);
+            this.label_Main_PM25_VO.Location = new System.Drawing.Point(306, 408);
             this.label_Main_PM25_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM25_VO.Name = "label_Main_PM25_VO";
-            this.label_Main_PM25_VO.Size = new System.Drawing.Size(91, 15);
+            this.label_Main_PM25_VO.Size = new System.Drawing.Size(102, 16);
             this.label_Main_PM25_VO.TabIndex = 46;
             this.label_Main_PM25_VO.Text = "Main_PM25_VO";
             // 
@@ -1318,12 +1318,12 @@
             // 
             this.label_Main_NOx_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_NOx_VO.AutoSize = true;
-            this.label_Main_NOx_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_NOx_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_NOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_NOx_VO.Location = new System.Drawing.Point(308, 344);
+            this.label_Main_NOx_VO.Location = new System.Drawing.Point(306, 343);
             this.label_Main_NOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_NOx_VO.Name = "label_Main_NOx_VO";
-            this.label_Main_NOx_VO.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_NOx_VO.Size = new System.Drawing.Size(96, 16);
             this.label_Main_NOx_VO.TabIndex = 44;
             this.label_Main_NOx_VO.Text = "Main_NOx_VO";
             // 
@@ -1331,12 +1331,12 @@
             // 
             this.label_Main_VOC_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_VOC_VO.AutoSize = true;
-            this.label_Main_VOC_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_VOC_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_VOC_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_VOC_VO.Location = new System.Drawing.Point(308, 274);
+            this.label_Main_VOC_VO.Location = new System.Drawing.Point(306, 273);
             this.label_Main_VOC_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_VOC_VO.Name = "label_Main_VOC_VO";
-            this.label_Main_VOC_VO.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_VOC_VO.Size = new System.Drawing.Size(97, 16);
             this.label_Main_VOC_VO.TabIndex = 42;
             this.label_Main_VOC_VO.Text = "Main_VOC_VO";
             // 
@@ -1344,12 +1344,12 @@
             // 
             this.label_Main_CO_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_CO_VO.AutoSize = true;
-            this.label_Main_CO_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_CO_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO_VO.Location = new System.Drawing.Point(308, 309);
+            this.label_Main_CO_VO.Location = new System.Drawing.Point(306, 308);
             this.label_Main_CO_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO_VO.Name = "label_Main_CO_VO";
-            this.label_Main_CO_VO.Size = new System.Drawing.Size(77, 15);
+            this.label_Main_CO_VO.Size = new System.Drawing.Size(89, 16);
             this.label_Main_CO_VO.TabIndex = 43;
             this.label_Main_CO_VO.Text = "Main_CO_VO";
             // 
@@ -1357,12 +1357,12 @@
             // 
             this.label_Main_PM10_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_PM10_VO.AutoSize = true;
-            this.label_Main_PM10_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_PM10_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM10_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM10_VO.Location = new System.Drawing.Point(308, 376);
+            this.label_Main_PM10_VO.Location = new System.Drawing.Point(306, 375);
             this.label_Main_PM10_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM10_VO.Name = "label_Main_PM10_VO";
-            this.label_Main_PM10_VO.Size = new System.Drawing.Size(91, 15);
+            this.label_Main_PM10_VO.Size = new System.Drawing.Size(102, 16);
             this.label_Main_PM10_VO.TabIndex = 45;
             this.label_Main_PM10_VO.Text = "Main_PM10_VO";
             // 
@@ -1370,12 +1370,12 @@
             // 
             this.label_Main_SOx_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_SOx_VO.AutoSize = true;
-            this.label_Main_SOx_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_SOx_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_SOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_SOx_VO.Location = new System.Drawing.Point(308, 438);
+            this.label_Main_SOx_VO.Location = new System.Drawing.Point(306, 437);
             this.label_Main_SOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_SOx_VO.Name = "label_Main_SOx_VO";
-            this.label_Main_SOx_VO.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_SOx_VO.Size = new System.Drawing.Size(93, 16);
             this.label_Main_SOx_VO.TabIndex = 47;
             this.label_Main_SOx_VO.Text = "Main_SOx_VO";
             // 
@@ -1383,12 +1383,12 @@
             // 
             this.label_Main_CO2_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_CO2_VO.AutoSize = true;
-            this.label_Main_CO2_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_CO2_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO2_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO2_VO.Location = new System.Drawing.Point(308, 495);
+            this.label_Main_CO2_VO.Location = new System.Drawing.Point(306, 494);
             this.label_Main_CO2_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO2_VO.Name = "label_Main_CO2_VO";
-            this.label_Main_CO2_VO.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_CO2_VO.Size = new System.Drawing.Size(97, 16);
             this.label_Main_CO2_VO.TabIndex = 49;
             this.label_Main_CO2_VO.Text = "Main_CO2_VO";
             // 
@@ -1396,12 +1396,12 @@
             // 
             this.label_TE_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_TE_Total.AutoSize = true;
-            this.label_TE_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TE_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TE_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_TE_Total.Location = new System.Drawing.Point(948, 109);
+            this.label_TE_Total.Location = new System.Drawing.Point(946, 108);
             this.label_TE_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_TE_Total.Name = "label_TE_Total";
-            this.label_TE_Total.Size = new System.Drawing.Size(63, 15);
+            this.label_TE_Total.Size = new System.Drawing.Size(54, 16);
             this.label_TE_Total.TabIndex = 54;
             this.label_TE_Total.Text = "TE_Total";
             // 
@@ -1409,12 +1409,12 @@
             // 
             this.label_VOC_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_VOC_Total.AutoSize = true;
-            this.label_VOC_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_VOC_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_VOC_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_VOC_Total.Location = new System.Drawing.Point(948, 274);
+            this.label_VOC_Total.Location = new System.Drawing.Point(946, 273);
             this.label_VOC_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_VOC_Total.Name = "label_VOC_Total";
-            this.label_VOC_Total.Size = new System.Drawing.Size(70, 15);
+            this.label_VOC_Total.Size = new System.Drawing.Size(69, 16);
             this.label_VOC_Total.TabIndex = 60;
             this.label_VOC_Total.Text = "VOC_Total";
             // 
@@ -1422,12 +1422,12 @@
             // 
             this.label_CO_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_CO_Total.AutoSize = true;
-            this.label_CO_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CO_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CO_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_CO_Total.Location = new System.Drawing.Point(948, 309);
+            this.label_CO_Total.Location = new System.Drawing.Point(946, 308);
             this.label_CO_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO_Total.Name = "label_CO_Total";
-            this.label_CO_Total.Size = new System.Drawing.Size(63, 15);
+            this.label_CO_Total.Size = new System.Drawing.Size(61, 16);
             this.label_CO_Total.TabIndex = 61;
             this.label_CO_Total.Text = "CO_Total";
             // 
@@ -1435,12 +1435,12 @@
             // 
             this.label_NOx_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_NOx_Total.AutoSize = true;
-            this.label_NOx_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NOx_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_NOx_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_NOx_Total.Location = new System.Drawing.Point(948, 344);
+            this.label_NOx_Total.Location = new System.Drawing.Point(946, 343);
             this.label_NOx_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NOx_Total.Name = "label_NOx_Total";
-            this.label_NOx_Total.Size = new System.Drawing.Size(70, 15);
+            this.label_NOx_Total.Size = new System.Drawing.Size(68, 16);
             this.label_NOx_Total.TabIndex = 62;
             this.label_NOx_Total.Text = "NOx_Total";
             // 
@@ -1448,12 +1448,12 @@
             // 
             this.label_PM10_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_PM10_Total.AutoSize = true;
-            this.label_PM10_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_PM10_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PM10_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_PM10_Total.Location = new System.Drawing.Point(948, 376);
+            this.label_PM10_Total.Location = new System.Drawing.Point(946, 375);
             this.label_PM10_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM10_Total.Name = "label_PM10_Total";
-            this.label_PM10_Total.Size = new System.Drawing.Size(77, 15);
+            this.label_PM10_Total.Size = new System.Drawing.Size(74, 16);
             this.label_PM10_Total.TabIndex = 63;
             this.label_PM10_Total.Text = "PM10_Total";
             // 
@@ -1461,12 +1461,12 @@
             // 
             this.label_PM25_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_PM25_Total.AutoSize = true;
-            this.label_PM25_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_PM25_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PM25_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_PM25_Total.Location = new System.Drawing.Point(948, 409);
+            this.label_PM25_Total.Location = new System.Drawing.Point(946, 408);
             this.label_PM25_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM25_Total.Name = "label_PM25_Total";
-            this.label_PM25_Total.Size = new System.Drawing.Size(77, 15);
+            this.label_PM25_Total.Size = new System.Drawing.Size(74, 16);
             this.label_PM25_Total.TabIndex = 64;
             this.label_PM25_Total.Text = "PM25_Total";
             // 
@@ -1474,12 +1474,12 @@
             // 
             this.label_SOx_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_SOx_Total.AutoSize = true;
-            this.label_SOx_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_SOx_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_SOx_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_SOx_Total.Location = new System.Drawing.Point(948, 438);
+            this.label_SOx_Total.Location = new System.Drawing.Point(946, 437);
             this.label_SOx_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SOx_Total.Name = "label_SOx_Total";
-            this.label_SOx_Total.Size = new System.Drawing.Size(70, 15);
+            this.label_SOx_Total.Size = new System.Drawing.Size(65, 16);
             this.label_SOx_Total.TabIndex = 65;
             this.label_SOx_Total.Text = "SOx_Total";
             // 
@@ -1487,12 +1487,12 @@
             // 
             this.label_CH4_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_CH4_Total.AutoSize = true;
-            this.label_CH4_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CH4_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CH4_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_CH4_Total.Location = new System.Drawing.Point(948, 467);
+            this.label_CH4_Total.Location = new System.Drawing.Point(946, 466);
             this.label_CH4_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CH4_Total.Name = "label_CH4_Total";
-            this.label_CH4_Total.Size = new System.Drawing.Size(70, 15);
+            this.label_CH4_Total.Size = new System.Drawing.Size(67, 16);
             this.label_CH4_Total.TabIndex = 66;
             this.label_CH4_Total.Text = "CH4_Total";
             // 
@@ -1500,12 +1500,12 @@
             // 
             this.label_CO2_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_CO2_Total.AutoSize = true;
-            this.label_CO2_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CO2_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CO2_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_CO2_Total.Location = new System.Drawing.Point(948, 495);
+            this.label_CO2_Total.Location = new System.Drawing.Point(946, 494);
             this.label_CO2_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO2_Total.Name = "label_CO2_Total";
-            this.label_CO2_Total.Size = new System.Drawing.Size(70, 15);
+            this.label_CO2_Total.Size = new System.Drawing.Size(69, 16);
             this.label_CO2_Total.TabIndex = 67;
             this.label_CO2_Total.Text = "CO2_Total";
             // 
@@ -1513,12 +1513,12 @@
             // 
             this.label_N2O_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_N2O_Total.AutoSize = true;
-            this.label_N2O_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_N2O_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_N2O_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_N2O_Total.Location = new System.Drawing.Point(948, 524);
+            this.label_N2O_Total.Location = new System.Drawing.Point(946, 523);
             this.label_N2O_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_N2O_Total.Name = "label_N2O_Total";
-            this.label_N2O_Total.Size = new System.Drawing.Size(70, 15);
+            this.label_N2O_Total.Size = new System.Drawing.Size(70, 16);
             this.label_N2O_Total.TabIndex = 68;
             this.label_N2O_Total.Text = "N2O_Total";
             // 
@@ -1526,12 +1526,12 @@
             // 
             this.label_Aux_VOC_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_VOC_WTP.AutoSize = true;
-            this.label_Aux_VOC_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_VOC_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_VOC_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_VOC_WTP.Location = new System.Drawing.Point(532, 274);
+            this.label_Aux_VOC_WTP.Location = new System.Drawing.Point(530, 273);
             this.label_Aux_VOC_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_VOC_WTP.Name = "label_Aux_VOC_WTP";
-            this.label_Aux_VOC_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Aux_VOC_WTP.Size = new System.Drawing.Size(97, 16);
             this.label_Aux_VOC_WTP.TabIndex = 74;
             this.label_Aux_VOC_WTP.Text = "Aux_VOC_WTP";
             // 
@@ -1539,12 +1539,12 @@
             // 
             this.label_Aux_CO_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_CO_WTP.AutoSize = true;
-            this.label_Aux_CO_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CO_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO_WTP.Location = new System.Drawing.Point(532, 309);
+            this.label_Aux_CO_WTP.Location = new System.Drawing.Point(530, 308);
             this.label_Aux_CO_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO_WTP.Name = "label_Aux_CO_WTP";
-            this.label_Aux_CO_WTP.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_CO_WTP.Size = new System.Drawing.Size(89, 16);
             this.label_Aux_CO_WTP.TabIndex = 75;
             this.label_Aux_CO_WTP.Text = "Aux_CO_WTP";
             // 
@@ -1552,12 +1552,12 @@
             // 
             this.label_Aux_NOx_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_NOx_WTP.AutoSize = true;
-            this.label_Aux_NOx_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_NOx_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_NOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_NOx_WTP.Location = new System.Drawing.Point(532, 344);
+            this.label_Aux_NOx_WTP.Location = new System.Drawing.Point(530, 343);
             this.label_Aux_NOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_NOx_WTP.Name = "label_Aux_NOx_WTP";
-            this.label_Aux_NOx_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Aux_NOx_WTP.Size = new System.Drawing.Size(96, 16);
             this.label_Aux_NOx_WTP.TabIndex = 76;
             this.label_Aux_NOx_WTP.Text = "Aux_NOx_WTP";
             // 
@@ -1565,12 +1565,12 @@
             // 
             this.label_Aux_PM10_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_PM10_WTP.AutoSize = true;
-            this.label_Aux_PM10_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_PM10_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM10_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM10_WTP.Location = new System.Drawing.Point(532, 376);
+            this.label_Aux_PM10_WTP.Location = new System.Drawing.Point(530, 375);
             this.label_Aux_PM10_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM10_WTP.Name = "label_Aux_PM10_WTP";
-            this.label_Aux_PM10_WTP.Size = new System.Drawing.Size(91, 15);
+            this.label_Aux_PM10_WTP.Size = new System.Drawing.Size(102, 16);
             this.label_Aux_PM10_WTP.TabIndex = 77;
             this.label_Aux_PM10_WTP.Text = "Aux_PM10_WTP";
             // 
@@ -1578,12 +1578,12 @@
             // 
             this.label_Aux_PM25_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_PM25_WTP.AutoSize = true;
-            this.label_Aux_PM25_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_PM25_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM25_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM25_WTP.Location = new System.Drawing.Point(532, 409);
+            this.label_Aux_PM25_WTP.Location = new System.Drawing.Point(530, 408);
             this.label_Aux_PM25_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM25_WTP.Name = "label_Aux_PM25_WTP";
-            this.label_Aux_PM25_WTP.Size = new System.Drawing.Size(91, 15);
+            this.label_Aux_PM25_WTP.Size = new System.Drawing.Size(102, 16);
             this.label_Aux_PM25_WTP.TabIndex = 78;
             this.label_Aux_PM25_WTP.Text = "Aux_PM25_WTP";
             // 
@@ -1591,12 +1591,12 @@
             // 
             this.label_Aux_SOx_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_SOx_WTP.AutoSize = true;
-            this.label_Aux_SOx_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_SOx_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_SOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_SOx_WTP.Location = new System.Drawing.Point(532, 438);
+            this.label_Aux_SOx_WTP.Location = new System.Drawing.Point(530, 437);
             this.label_Aux_SOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_SOx_WTP.Name = "label_Aux_SOx_WTP";
-            this.label_Aux_SOx_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Aux_SOx_WTP.Size = new System.Drawing.Size(93, 16);
             this.label_Aux_SOx_WTP.TabIndex = 79;
             this.label_Aux_SOx_WTP.Text = "Aux_SOx_WTP";
             // 
@@ -1604,12 +1604,12 @@
             // 
             this.label_Aux_CH4_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_CH4_WTP.AutoSize = true;
-            this.label_Aux_CH4_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CH4_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CH4_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CH4_WTP.Location = new System.Drawing.Point(532, 467);
+            this.label_Aux_CH4_WTP.Location = new System.Drawing.Point(530, 466);
             this.label_Aux_CH4_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CH4_WTP.Name = "label_Aux_CH4_WTP";
-            this.label_Aux_CH4_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Aux_CH4_WTP.Size = new System.Drawing.Size(95, 16);
             this.label_Aux_CH4_WTP.TabIndex = 80;
             this.label_Aux_CH4_WTP.Text = "Aux_CH4_WTP";
             // 
@@ -1617,12 +1617,12 @@
             // 
             this.label_Aux_CO2_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_CO2_WTP.AutoSize = true;
-            this.label_Aux_CO2_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CO2_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO2_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO2_WTP.Location = new System.Drawing.Point(532, 495);
+            this.label_Aux_CO2_WTP.Location = new System.Drawing.Point(530, 494);
             this.label_Aux_CO2_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO2_WTP.Name = "label_Aux_CO2_WTP";
-            this.label_Aux_CO2_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Aux_CO2_WTP.Size = new System.Drawing.Size(97, 16);
             this.label_Aux_CO2_WTP.TabIndex = 81;
             this.label_Aux_CO2_WTP.Text = "Aux_CO2_WTP";
             // 
@@ -1630,12 +1630,12 @@
             // 
             this.label_Aux_VOC_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_VOC_VO.AutoSize = true;
-            this.label_Aux_VOC_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_VOC_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_VOC_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_VOC_VO.Location = new System.Drawing.Point(718, 274);
+            this.label_Aux_VOC_VO.Location = new System.Drawing.Point(716, 273);
             this.label_Aux_VOC_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_VOC_VO.Name = "label_Aux_VOC_VO";
-            this.label_Aux_VOC_VO.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_VOC_VO.Size = new System.Drawing.Size(91, 16);
             this.label_Aux_VOC_VO.TabIndex = 90;
             this.label_Aux_VOC_VO.Text = "Aux_VOC_VO";
             // 
@@ -1643,12 +1643,12 @@
             // 
             this.label_Aux_CO_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_CO_VO.AutoSize = true;
-            this.label_Aux_CO_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CO_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO_VO.Location = new System.Drawing.Point(718, 309);
+            this.label_Aux_CO_VO.Location = new System.Drawing.Point(716, 308);
             this.label_Aux_CO_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO_VO.Name = "label_Aux_CO_VO";
-            this.label_Aux_CO_VO.Size = new System.Drawing.Size(70, 15);
+            this.label_Aux_CO_VO.Size = new System.Drawing.Size(83, 16);
             this.label_Aux_CO_VO.TabIndex = 91;
             this.label_Aux_CO_VO.Text = "Aux_CO_VO";
             // 
@@ -1656,12 +1656,12 @@
             // 
             this.label_Aux_NOx_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_NOx_VO.AutoSize = true;
-            this.label_Aux_NOx_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_NOx_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_NOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_NOx_VO.Location = new System.Drawing.Point(718, 344);
+            this.label_Aux_NOx_VO.Location = new System.Drawing.Point(716, 343);
             this.label_Aux_NOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_NOx_VO.Name = "label_Aux_NOx_VO";
-            this.label_Aux_NOx_VO.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_NOx_VO.Size = new System.Drawing.Size(90, 16);
             this.label_Aux_NOx_VO.TabIndex = 92;
             this.label_Aux_NOx_VO.Text = "Aux_NOx_VO";
             // 
@@ -1669,12 +1669,12 @@
             // 
             this.label_Aux_PM10_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_PM10_VO.AutoSize = true;
-            this.label_Aux_PM10_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_PM10_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM10_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM10_VO.Location = new System.Drawing.Point(718, 376);
+            this.label_Aux_PM10_VO.Location = new System.Drawing.Point(716, 375);
             this.label_Aux_PM10_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM10_VO.Name = "label_Aux_PM10_VO";
-            this.label_Aux_PM10_VO.Size = new System.Drawing.Size(84, 15);
+            this.label_Aux_PM10_VO.Size = new System.Drawing.Size(96, 16);
             this.label_Aux_PM10_VO.TabIndex = 93;
             this.label_Aux_PM10_VO.Text = "Aux_PM10_VO";
             // 
@@ -1682,12 +1682,12 @@
             // 
             this.label_Aux_PM25_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_PM25_VO.AutoSize = true;
-            this.label_Aux_PM25_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_PM25_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM25_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM25_VO.Location = new System.Drawing.Point(718, 409);
+            this.label_Aux_PM25_VO.Location = new System.Drawing.Point(716, 408);
             this.label_Aux_PM25_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM25_VO.Name = "label_Aux_PM25_VO";
-            this.label_Aux_PM25_VO.Size = new System.Drawing.Size(84, 15);
+            this.label_Aux_PM25_VO.Size = new System.Drawing.Size(96, 16);
             this.label_Aux_PM25_VO.TabIndex = 94;
             this.label_Aux_PM25_VO.Text = "Aux_PM25_VO";
             // 
@@ -1695,12 +1695,12 @@
             // 
             this.label_Aux_SOx_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_SOx_VO.AutoSize = true;
-            this.label_Aux_SOx_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_SOx_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_SOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_SOx_VO.Location = new System.Drawing.Point(718, 438);
+            this.label_Aux_SOx_VO.Location = new System.Drawing.Point(716, 437);
             this.label_Aux_SOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_SOx_VO.Name = "label_Aux_SOx_VO";
-            this.label_Aux_SOx_VO.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_SOx_VO.Size = new System.Drawing.Size(87, 16);
             this.label_Aux_SOx_VO.TabIndex = 95;
             this.label_Aux_SOx_VO.Text = "Aux_SOx_VO";
             // 
@@ -1708,12 +1708,12 @@
             // 
             this.label_Aux_CH4_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_CH4_VO.AutoSize = true;
-            this.label_Aux_CH4_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CH4_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CH4_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CH4_VO.Location = new System.Drawing.Point(718, 467);
+            this.label_Aux_CH4_VO.Location = new System.Drawing.Point(716, 466);
             this.label_Aux_CH4_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CH4_VO.Name = "label_Aux_CH4_VO";
-            this.label_Aux_CH4_VO.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_CH4_VO.Size = new System.Drawing.Size(89, 16);
             this.label_Aux_CH4_VO.TabIndex = 96;
             this.label_Aux_CH4_VO.Text = "Aux_CH4_VO";
             // 
@@ -1721,12 +1721,12 @@
             // 
             this.label_Aux_CO2_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_CO2_VO.AutoSize = true;
-            this.label_Aux_CO2_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CO2_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO2_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO2_VO.Location = new System.Drawing.Point(718, 495);
+            this.label_Aux_CO2_VO.Location = new System.Drawing.Point(716, 494);
             this.label_Aux_CO2_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO2_VO.Name = "label_Aux_CO2_VO";
-            this.label_Aux_CO2_VO.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_CO2_VO.Size = new System.Drawing.Size(91, 16);
             this.label_Aux_CO2_VO.TabIndex = 97;
             this.label_Aux_CO2_VO.Text = "Aux_CO2_VO";
             // 
@@ -1734,12 +1734,12 @@
             // 
             this.label_Aux_N2O_VO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_N2O_VO.AutoSize = true;
-            this.label_Aux_N2O_VO.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_N2O_VO.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_N2O_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_N2O_VO.Location = new System.Drawing.Point(718, 524);
+            this.label_Aux_N2O_VO.Location = new System.Drawing.Point(716, 523);
             this.label_Aux_N2O_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_N2O_VO.Name = "label_Aux_N2O_VO";
-            this.label_Aux_N2O_VO.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_N2O_VO.Size = new System.Drawing.Size(92, 16);
             this.label_Aux_N2O_VO.TabIndex = 98;
             this.label_Aux_N2O_VO.Text = "Aux_N2O_VO";
             // 
@@ -1747,11 +1747,11 @@
             // 
             this.label_Petroleum_Fuel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Petroleum_Fuel.AutoSize = true;
-            this.label_Petroleum_Fuel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Petroleum_Fuel.Location = new System.Drawing.Point(3, 206);
+            this.label_Petroleum_Fuel.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Petroleum_Fuel.Location = new System.Drawing.Point(3, 204);
             this.label_Petroleum_Fuel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Petroleum_Fuel.Name = "label_Petroleum_Fuel";
-            this.label_Petroleum_Fuel.Size = new System.Drawing.Size(97, 17);
+            this.label_Petroleum_Fuel.Size = new System.Drawing.Size(99, 19);
             this.label_Petroleum_Fuel.TabIndex = 4;
             this.label_Petroleum_Fuel.Text = "Petroleum Fuel";
             this.label_Petroleum_Fuel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1760,11 +1760,11 @@
             // 
             this.label_Emissions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Emissions.AutoSize = true;
-            this.label_Emissions.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Emissions.Location = new System.Drawing.Point(3, 239);
+            this.label_Emissions.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Emissions.Location = new System.Drawing.Point(3, 237);
             this.label_Emissions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Emissions.Name = "label_Emissions";
-            this.label_Emissions.Size = new System.Drawing.Size(75, 17);
+            this.label_Emissions.Size = new System.Drawing.Size(71, 19);
             this.label_Emissions.TabIndex = 5;
             this.label_Emissions.Text = "Emissions";
             this.label_Emissions.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1773,12 +1773,12 @@
             // 
             this.label_Main_FF_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_FF_WTP.AutoSize = true;
-            this.label_Main_FF_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_FF_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_FF_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_FF_WTP.Location = new System.Drawing.Point(132, 177);
+            this.label_Main_FF_WTP.Location = new System.Drawing.Point(132, 176);
             this.label_Main_FF_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_FF_WTP.Name = "label_Main_FF_WTP";
-            this.label_Main_FF_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_FF_WTP.Size = new System.Drawing.Size(87, 16);
             this.label_Main_FF_WTP.TabIndex = 55;
             this.label_Main_FF_WTP.Text = "Main_FF_WTP";
             // 
@@ -1786,12 +1786,12 @@
             // 
             this.label_Main_PF_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Main_PF_WTP.AutoSize = true;
-            this.label_Main_PF_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_PF_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PF_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PF_WTP.Location = new System.Drawing.Point(132, 208);
+            this.label_Main_PF_WTP.Location = new System.Drawing.Point(132, 207);
             this.label_Main_PF_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PF_WTP.Name = "label_Main_PF_WTP";
-            this.label_Main_PF_WTP.Size = new System.Drawing.Size(84, 15);
+            this.label_Main_PF_WTP.Size = new System.Drawing.Size(87, 16);
             this.label_Main_PF_WTP.TabIndex = 58;
             this.label_Main_PF_WTP.Text = "Main_PF_WTP";
             // 
@@ -1799,10 +1799,10 @@
             // 
             this.label_Aux_FF_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_FF_WTP.AutoSize = true;
-            this.label_Aux_FF_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Aux_FF_WTP.Location = new System.Drawing.Point(533, 177);
+            this.label_Aux_FF_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_FF_WTP.Location = new System.Drawing.Point(531, 176);
             this.label_Aux_FF_WTP.Name = "label_Aux_FF_WTP";
-            this.label_Aux_FF_WTP.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_FF_WTP.Size = new System.Drawing.Size(81, 16);
             this.label_Aux_FF_WTP.TabIndex = 101;
             this.label_Aux_FF_WTP.Text = "Aux_FF_WTP";
             this.label_Aux_FF_WTP.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -1811,10 +1811,10 @@
             // 
             this.label_Aux_PF_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Aux_PF_WTP.AutoSize = true;
-            this.label_Aux_PF_WTP.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Aux_PF_WTP.Location = new System.Drawing.Point(533, 208);
+            this.label_Aux_PF_WTP.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_PF_WTP.Location = new System.Drawing.Point(531, 207);
             this.label_Aux_PF_WTP.Name = "label_Aux_PF_WTP";
-            this.label_Aux_PF_WTP.Size = new System.Drawing.Size(77, 15);
+            this.label_Aux_PF_WTP.Size = new System.Drawing.Size(81, 16);
             this.label_Aux_PF_WTP.TabIndex = 102;
             this.label_Aux_PF_WTP.Text = "Aux_PF_WTP";
             // 
@@ -1822,12 +1822,12 @@
             // 
             this.label_FF_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_FF_Total.AutoSize = true;
-            this.label_FF_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_FF_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_FF_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_FF_Total.Location = new System.Drawing.Point(948, 177);
+            this.label_FF_Total.Location = new System.Drawing.Point(946, 176);
             this.label_FF_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_FF_Total.Name = "label_FF_Total";
-            this.label_FF_Total.Size = new System.Drawing.Size(63, 15);
+            this.label_FF_Total.Size = new System.Drawing.Size(53, 16);
             this.label_FF_Total.TabIndex = 99;
             this.label_FF_Total.Text = "FF_Total";
             // 
@@ -1835,12 +1835,12 @@
             // 
             this.label_PF_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_PF_Total.AutoSize = true;
-            this.label_PF_Total.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_PF_Total.Font = new System.Drawing.Font("FuturaExtended", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PF_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_PF_Total.Location = new System.Drawing.Point(948, 208);
+            this.label_PF_Total.Location = new System.Drawing.Point(946, 207);
             this.label_PF_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PF_Total.Name = "label_PF_Total";
-            this.label_PF_Total.Size = new System.Drawing.Size(63, 15);
+            this.label_PF_Total.Size = new System.Drawing.Size(53, 16);
             this.label_PF_Total.TabIndex = 100;
             this.label_PF_Total.Text = "PF_Total";
             // 
@@ -1848,8 +1848,7 @@
             // 
             this.panel_Header.BackColor = System.Drawing.Color.Silver;
             this.panel_Header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Header.Controls.Add(this.ExportButton);
-            this.panel_Header.Controls.Add(this.ResetButton2);
+            this.panel_Header.Controls.Add(this.Save_Excel);
             this.panel_Header.Controls.Add(this.label_Aux_Fuel_Header);
             this.panel_Header.Controls.Add(this.label_Aux_Fuel_Type);
             this.panel_Header.Controls.Add(this.label_Main_Fuel_Header);
@@ -1859,76 +1858,57 @@
             this.panel_Header.Size = new System.Drawing.Size(1200, 57);
             this.panel_Header.TabIndex = 3;
             // 
-            // ExportButton
-            // 
-            this.ExportButton.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExportButton.Location = new System.Drawing.Point(971, 16);
-            this.ExportButton.Name = "ExportButton";
-            this.ExportButton.Size = new System.Drawing.Size(116, 23);
-            this.ExportButton.TabIndex = 5;
-            this.ExportButton.Text = "Save to Excel";
-            this.ExportButton.UseVisualStyleBackColor = true;
-            // 
-            // ResetButton2
-            // 
-            this.ResetButton2.Location = new System.Drawing.Point(1099, 16);
-            this.ResetButton2.Name = "ResetButton2";
-            this.ResetButton2.Size = new System.Drawing.Size(75, 23);
-            this.ResetButton2.TabIndex = 4;
-            this.ResetButton2.Text = "Reset Form";
-            this.ResetButton2.UseVisualStyleBackColor = true;
-            // 
             // label_Aux_Fuel_Header
             // 
             this.label_Aux_Fuel_Header.AutoSize = true;
-            this.label_Aux_Fuel_Header.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Fuel_Header.Font = new System.Drawing.Font("FuturaExtended", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_Fuel_Header.Location = new System.Drawing.Point(524, 8);
             this.label_Aux_Fuel_Header.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_Fuel_Header.Name = "label_Aux_Fuel_Header";
-            this.label_Aux_Fuel_Header.Size = new System.Drawing.Size(166, 40);
+            this.label_Aux_Fuel_Header.Size = new System.Drawing.Size(145, 42);
             this.label_Aux_Fuel_Header.TabIndex = 3;
             this.label_Aux_Fuel_Header.Text = "Aux Fuel:";
             // 
             // label_Aux_Fuel_Type
             // 
             this.label_Aux_Fuel_Type.AutoSize = true;
-            this.label_Aux_Fuel_Type.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Fuel_Type.Font = new System.Drawing.Font("FuturaExtended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_Fuel_Type.Location = new System.Drawing.Point(702, 16);
             this.label_Aux_Fuel_Type.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_Fuel_Type.Name = "label_Aux_Fuel_Type";
-            this.label_Aux_Fuel_Type.Size = new System.Drawing.Size(173, 31);
+            this.label_Aux_Fuel_Type.Size = new System.Drawing.Size(126, 25);
             this.label_Aux_Fuel_Type.TabIndex = 2;
             this.label_Aux_Fuel_Type.Text = "None Selected";
             // 
             // label_Main_Fuel_Header
             // 
             this.label_Main_Fuel_Header.AutoSize = true;
-            this.label_Main_Fuel_Header.Font = new System.Drawing.Font("Times New Roman", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Fuel_Header.Font = new System.Drawing.Font("FuturaExtended", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_Fuel_Header.Location = new System.Drawing.Point(2, 8);
             this.label_Main_Fuel_Header.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_Fuel_Header.Name = "label_Main_Fuel_Header";
-            this.label_Main_Fuel_Header.Size = new System.Drawing.Size(184, 40);
+            this.label_Main_Fuel_Header.Size = new System.Drawing.Size(160, 42);
             this.label_Main_Fuel_Header.TabIndex = 1;
             this.label_Main_Fuel_Header.Text = "Main Fuel:";
             // 
             // label_Main_Fuel_Type
             // 
             this.label_Main_Fuel_Type.AutoSize = true;
-            this.label_Main_Fuel_Type.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Fuel_Type.Font = new System.Drawing.Font("FuturaExtended", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_Fuel_Type.Location = new System.Drawing.Point(190, 16);
             this.label_Main_Fuel_Type.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_Fuel_Type.Name = "label_Main_Fuel_Type";
-            this.label_Main_Fuel_Type.Size = new System.Drawing.Size(173, 31);
+            this.label_Main_Fuel_Type.Size = new System.Drawing.Size(126, 25);
             this.label_Main_Fuel_Type.TabIndex = 0;
             this.label_Main_Fuel_Type.Text = "None Selected";
             // 
             // Label_FuelSelection
             // 
             this.Label_FuelSelection.AutoSize = true;
-            this.Label_FuelSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Label_FuelSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Label_FuelSelection.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
             this.Label_FuelSelection.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label_FuelSelection.Location = new System.Drawing.Point(5, 1982);
+            this.Label_FuelSelection.Location = new System.Drawing.Point(1, 1983);
             this.Label_FuelSelection.Margin = new System.Windows.Forms.Padding(0);
             this.Label_FuelSelection.MinimumSize = new System.Drawing.Size(1210, 18);
             this.Label_FuelSelection.Name = "Label_FuelSelection";
@@ -1946,7 +1926,7 @@
             this.Panel_FuelSelection.Controls.Add(this.tree_Aux_Fuel_Pathways);
             this.Panel_FuelSelection.Controls.Add(this.label_main_engine_fuel);
             this.Panel_FuelSelection.Controls.Add(this.tree_Main_Fuel_Pathways);
-            this.Panel_FuelSelection.Location = new System.Drawing.Point(7, 2001);
+            this.Panel_FuelSelection.Location = new System.Drawing.Point(3, 2002);
             this.Panel_FuelSelection.Name = "Panel_FuelSelection";
             this.Panel_FuelSelection.Size = new System.Drawing.Size(1200, 360);
             this.Panel_FuelSelection.TabIndex = 382;
@@ -1956,10 +1936,10 @@
             // 
             this.Aux_Engine_Fule.AutoSize = true;
             this.Aux_Engine_Fule.BackColor = System.Drawing.Color.Silver;
-            this.Aux_Engine_Fule.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Engine_Fule.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Engine_Fule.Location = new System.Drawing.Point(624, 8);
             this.Aux_Engine_Fule.Name = "Aux_Engine_Fule";
-            this.Aux_Engine_Fule.Size = new System.Drawing.Size(80, 18);
+            this.Aux_Engine_Fule.Size = new System.Drawing.Size(92, 19);
             this.Aux_Engine_Fule.TabIndex = 203;
             this.Aux_Engine_Fule.Text = "Aux Engine";
             // 
@@ -1999,10 +1979,10 @@
             // 
             this.label_main_engine_fuel.AutoSize = true;
             this.label_main_engine_fuel.BackColor = System.Drawing.Color.Silver;
-            this.label_main_engine_fuel.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_main_engine_fuel.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_main_engine_fuel.Location = new System.Drawing.Point(9, 8);
             this.label_main_engine_fuel.Name = "label_main_engine_fuel";
-            this.label_main_engine_fuel.Size = new System.Drawing.Size(86, 18);
+            this.label_main_engine_fuel.Size = new System.Drawing.Size(100, 19);
             this.label_main_engine_fuel.TabIndex = 201;
             this.label_main_engine_fuel.Text = "Main Engine";
             // 
@@ -2041,9 +2021,9 @@
             // label_Aux_Emissions_Calc_Inputs
             // 
             this.label_Aux_Emissions_Calc_Inputs.AutoSize = true;
-            this.label_Aux_Emissions_Calc_Inputs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(101)))), ((int)(((byte)(203)))));
+            this.label_Aux_Emissions_Calc_Inputs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label_Aux_Emissions_Calc_Inputs.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Aux_Emissions_Calc_Inputs.Location = new System.Drawing.Point(3, 1714);
+            this.label_Aux_Emissions_Calc_Inputs.Location = new System.Drawing.Point(1, 954);
             this.label_Aux_Emissions_Calc_Inputs.Margin = new System.Windows.Forms.Padding(0);
             this.label_Aux_Emissions_Calc_Inputs.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Aux_Emissions_Calc_Inputs.Name = "label_Aux_Emissions_Calc_Inputs";
@@ -2056,9 +2036,9 @@
             // label_Aux_Engine_Vars
             // 
             this.label_Aux_Engine_Vars.AutoSize = true;
-            this.label_Aux_Engine_Vars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(232)))), ((int)(((byte)(197)))));
+            this.label_Aux_Engine_Vars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label_Aux_Engine_Vars.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Aux_Engine_Vars.Location = new System.Drawing.Point(3, 1241);
+            this.label_Aux_Engine_Vars.Location = new System.Drawing.Point(1, 152);
             this.label_Aux_Engine_Vars.Margin = new System.Windows.Forms.Padding(0);
             this.label_Aux_Engine_Vars.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Aux_Engine_Vars.Name = "label_Aux_Engine_Vars";
@@ -2083,7 +2063,7 @@
             this.panel_Aux_Fuel_Calc.Controls.Add(this.label_Aux_KHW_Out);
             this.panel_Aux_Fuel_Calc.Controls.Add(this.updown_AUX_KW_HR_Out);
             this.panel_Aux_Fuel_Calc.Controls.Add(this.label_Aux_mmbtu_Out);
-            this.panel_Aux_Fuel_Calc.Location = new System.Drawing.Point(5, 1556);
+            this.panel_Aux_Fuel_Calc.Location = new System.Drawing.Point(3, 1458);
             this.panel_Aux_Fuel_Calc.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Aux_Fuel_Calc.Name = "panel_Aux_Fuel_Calc";
             this.panel_Aux_Fuel_Calc.Size = new System.Drawing.Size(1200, 156);
@@ -2104,10 +2084,10 @@
             // 
             this.label229.AutoSize = true;
             this.label229.BackColor = System.Drawing.Color.Silver;
-            this.label229.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label229.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label229.Location = new System.Drawing.Point(164, 4);
             this.label229.Name = "label229";
-            this.label229.Size = new System.Drawing.Size(174, 18);
+            this.label229.Size = new System.Drawing.Size(202, 19);
             this.label229.TabIndex = 200;
             this.label229.Text = "Baseline Fuel Consumption";
             // 
@@ -2127,7 +2107,7 @@
             this.updown_AUX_MMBTU_Out.BackColor = System.Drawing.SystemColors.Window;
             this.updown_AUX_MMBTU_Out.DecimalPlaces = 2;
             this.updown_AUX_MMBTU_Out.Enabled = false;
-            this.updown_AUX_MMBTU_Out.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_AUX_MMBTU_Out.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_AUX_MMBTU_Out.Location = new System.Drawing.Point(163, 74);
             this.updown_AUX_MMBTU_Out.Maximum = new decimal(new int[] {
             1241513984,
@@ -2136,7 +2116,7 @@
             0});
             this.updown_AUX_MMBTU_Out.Name = "updown_AUX_MMBTU_Out";
             this.updown_AUX_MMBTU_Out.ReadOnly = true;
-            this.updown_AUX_MMBTU_Out.Size = new System.Drawing.Size(179, 22);
+            this.updown_AUX_MMBTU_Out.Size = new System.Drawing.Size(179, 23);
             this.updown_AUX_MMBTU_Out.TabIndex = 195;
             // 
             // updown_AUX_GALLON
@@ -2144,7 +2124,7 @@
             this.updown_AUX_GALLON.BackColor = System.Drawing.SystemColors.Window;
             this.updown_AUX_GALLON.DecimalPlaces = 2;
             this.updown_AUX_GALLON.Enabled = false;
-            this.updown_AUX_GALLON.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_AUX_GALLON.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_AUX_GALLON.Location = new System.Drawing.Point(163, 123);
             this.updown_AUX_GALLON.Maximum = new decimal(new int[] {
             1241513984,
@@ -2153,13 +2133,13 @@
             0});
             this.updown_AUX_GALLON.Name = "updown_AUX_GALLON";
             this.updown_AUX_GALLON.ReadOnly = true;
-            this.updown_AUX_GALLON.Size = new System.Drawing.Size(179, 22);
+            this.updown_AUX_GALLON.Size = new System.Drawing.Size(179, 23);
             this.updown_AUX_GALLON.TabIndex = 198;
             // 
             // updown_Aux_Engine_Efficiency
             // 
             this.updown_Aux_Engine_Efficiency.DecimalPlaces = 2;
-            this.updown_Aux_Engine_Efficiency.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Engine_Efficiency.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Aux_Engine_Efficiency.Location = new System.Drawing.Point(163, 23);
             this.updown_Aux_Engine_Efficiency.Maximum = new decimal(new int[] {
             1000000,
@@ -2172,7 +2152,7 @@
             0,
             0});
             this.updown_Aux_Engine_Efficiency.Name = "updown_Aux_Engine_Efficiency";
-            this.updown_Aux_Engine_Efficiency.Size = new System.Drawing.Size(179, 22);
+            this.updown_Aux_Engine_Efficiency.Size = new System.Drawing.Size(179, 23);
             this.updown_Aux_Engine_Efficiency.TabIndex = 193;
             this.updown_Aux_Engine_Efficiency.Value = new decimal(new int[] {
             10,
@@ -2207,7 +2187,7 @@
             this.updown_AUX_MMBTU_In.BackColor = System.Drawing.SystemColors.Window;
             this.updown_AUX_MMBTU_In.DecimalPlaces = 2;
             this.updown_AUX_MMBTU_In.Enabled = false;
-            this.updown_AUX_MMBTU_In.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_AUX_MMBTU_In.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_AUX_MMBTU_In.Location = new System.Drawing.Point(163, 97);
             this.updown_AUX_MMBTU_In.Maximum = new decimal(new int[] {
             1241513984,
@@ -2216,7 +2196,7 @@
             0});
             this.updown_AUX_MMBTU_In.Name = "updown_AUX_MMBTU_In";
             this.updown_AUX_MMBTU_In.ReadOnly = true;
-            this.updown_AUX_MMBTU_In.Size = new System.Drawing.Size(179, 22);
+            this.updown_AUX_MMBTU_In.Size = new System.Drawing.Size(179, 23);
             this.updown_AUX_MMBTU_In.TabIndex = 196;
             // 
             // label_Aux_KHW_Out
@@ -2235,7 +2215,7 @@
             this.updown_AUX_KW_HR_Out.BackColor = System.Drawing.SystemColors.Window;
             this.updown_AUX_KW_HR_Out.DecimalPlaces = 2;
             this.updown_AUX_KW_HR_Out.Enabled = false;
-            this.updown_AUX_KW_HR_Out.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_AUX_KW_HR_Out.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_AUX_KW_HR_Out.Location = new System.Drawing.Point(163, 49);
             this.updown_AUX_KW_HR_Out.Maximum = new decimal(new int[] {
             1241513984,
@@ -2244,7 +2224,7 @@
             0});
             this.updown_AUX_KW_HR_Out.Name = "updown_AUX_KW_HR_Out";
             this.updown_AUX_KW_HR_Out.ReadOnly = true;
-            this.updown_AUX_KW_HR_Out.Size = new System.Drawing.Size(179, 22);
+            this.updown_AUX_KW_HR_Out.Size = new System.Drawing.Size(179, 23);
             this.updown_AUX_KW_HR_Out.TabIndex = 194;
             // 
             // label_Aux_mmbtu_Out
@@ -2261,9 +2241,9 @@
             // label_Main_Total_Distance_And_Time
             // 
             this.label_Main_Total_Distance_And_Time.AutoSize = true;
-            this.label_Main_Total_Distance_And_Time.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.label_Main_Total_Distance_And_Time.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label_Main_Total_Distance_And_Time.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Total_Distance_And_Time.Location = new System.Drawing.Point(3, 154);
+            this.label_Main_Total_Distance_And_Time.Location = new System.Drawing.Point(0, 1615);
             this.label_Main_Total_Distance_And_Time.Margin = new System.Windows.Forms.Padding(0);
             this.label_Main_Total_Distance_And_Time.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Main_Total_Distance_And_Time.Name = "label_Main_Total_Distance_And_Time";
@@ -2275,15 +2255,15 @@
             // label_Aux_Fuel_Calc
             // 
             this.label_Aux_Fuel_Calc.AutoSize = true;
-            this.label_Aux_Fuel_Calc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(13)))));
+            this.label_Aux_Fuel_Calc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label_Aux_Fuel_Calc.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Aux_Fuel_Calc.Location = new System.Drawing.Point(3, 1536);
+            this.label_Aux_Fuel_Calc.Location = new System.Drawing.Point(1, 1438);
             this.label_Aux_Fuel_Calc.Margin = new System.Windows.Forms.Padding(0);
             this.label_Aux_Fuel_Calc.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Aux_Fuel_Calc.Name = "label_Aux_Fuel_Calc";
             this.label_Aux_Fuel_Calc.Size = new System.Drawing.Size(1210, 22);
             this.label_Aux_Fuel_Calc.TabIndex = 189;
-            this.label_Aux_Fuel_Calc.Text = "Calculation of Auxiliary Fuel Using Conventional Diesel as Baseline Fuel";
+            this.label_Aux_Fuel_Calc.Text = "Auxiliary Engine Fuel Calculations";
             this.label_Aux_Fuel_Calc.Click += new System.EventHandler(this.label_Aux_Fuel_Calc_Click);
             // 
             // panel_Main_Trip_Distance_Time
@@ -2298,7 +2278,7 @@
             this.panel_Main_Trip_Distance_Time.Controls.Add(this.updown_Trip_Time_Minutes);
             this.panel_Main_Trip_Distance_Time.Controls.Add(this.label_Main_Time_Total);
             this.panel_Main_Trip_Distance_Time.Controls.Add(this.updown_Tot_Trip_Hours);
-            this.panel_Main_Trip_Distance_Time.Location = new System.Drawing.Point(6, 175);
+            this.panel_Main_Trip_Distance_Time.Location = new System.Drawing.Point(3, 1636);
             this.panel_Main_Trip_Distance_Time.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Main_Trip_Distance_Time.Name = "panel_Main_Trip_Distance_Time";
             this.panel_Main_Trip_Distance_Time.Size = new System.Drawing.Size(1200, 129);
@@ -2340,7 +2320,7 @@
             // updown_Total_Trip_Distance
             // 
             this.updown_Total_Trip_Distance.DecimalPlaces = 2;
-            this.updown_Total_Trip_Distance.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Total_Trip_Distance.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Total_Trip_Distance.Location = new System.Drawing.Point(190, 20);
             this.updown_Total_Trip_Distance.Maximum = new decimal(new int[] {
             1000000,
@@ -2348,12 +2328,12 @@
             0,
             0});
             this.updown_Total_Trip_Distance.Name = "updown_Total_Trip_Distance";
-            this.updown_Total_Trip_Distance.Size = new System.Drawing.Size(92, 22);
+            this.updown_Total_Trip_Distance.Size = new System.Drawing.Size(92, 23);
             this.updown_Total_Trip_Distance.TabIndex = 125;
             // 
             // updown_Trip_Time_Hours
             // 
-            this.updown_Trip_Time_Hours.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Trip_Time_Hours.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Trip_Time_Hours.Location = new System.Drawing.Point(190, 46);
             this.updown_Trip_Time_Hours.Maximum = new decimal(new int[] {
             1000000,
@@ -2361,12 +2341,12 @@
             0,
             0});
             this.updown_Trip_Time_Hours.Name = "updown_Trip_Time_Hours";
-            this.updown_Trip_Time_Hours.Size = new System.Drawing.Size(92, 22);
+            this.updown_Trip_Time_Hours.Size = new System.Drawing.Size(92, 23);
             this.updown_Trip_Time_Hours.TabIndex = 126;
             // 
             // updown_Trip_Time_Minutes
             // 
-            this.updown_Trip_Time_Minutes.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Trip_Time_Minutes.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Trip_Time_Minutes.Location = new System.Drawing.Point(190, 71);
             this.updown_Trip_Time_Minutes.Maximum = new decimal(new int[] {
             1000000,
@@ -2374,7 +2354,7 @@
             0,
             0});
             this.updown_Trip_Time_Minutes.Name = "updown_Trip_Time_Minutes";
-            this.updown_Trip_Time_Minutes.Size = new System.Drawing.Size(92, 22);
+            this.updown_Trip_Time_Minutes.Size = new System.Drawing.Size(92, 23);
             this.updown_Trip_Time_Minutes.TabIndex = 127;
             // 
             // label_Main_Time_Total
@@ -2393,7 +2373,7 @@
             this.updown_Tot_Trip_Hours.BackColor = System.Drawing.SystemColors.Window;
             this.updown_Tot_Trip_Hours.DecimalPlaces = 2;
             this.updown_Tot_Trip_Hours.Enabled = false;
-            this.updown_Tot_Trip_Hours.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Tot_Trip_Hours.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Tot_Trip_Hours.Location = new System.Drawing.Point(190, 95);
             this.updown_Tot_Trip_Hours.Maximum = new decimal(new int[] {
             1241513984,
@@ -2402,7 +2382,7 @@
             0});
             this.updown_Tot_Trip_Hours.Name = "updown_Tot_Trip_Hours";
             this.updown_Tot_Trip_Hours.ReadOnly = true;
-            this.updown_Tot_Trip_Hours.Size = new System.Drawing.Size(92, 22);
+            this.updown_Tot_Trip_Hours.Size = new System.Drawing.Size(92, 23);
             this.updown_Tot_Trip_Hours.TabIndex = 129;
             // 
             // panel_Aux_Engine_Chars
@@ -2421,7 +2401,7 @@
             this.panel_Aux_Engine_Chars.Controls.Add(this.label_Aux_Active_HP);
             this.panel_Aux_Engine_Chars.Controls.Add(this.updown_Tot_AUX_Energy);
             this.panel_Aux_Engine_Chars.Controls.Add(this.label_Aux_Total_Energy);
-            this.panel_Aux_Engine_Chars.Location = new System.Drawing.Point(6, 1394);
+            this.panel_Aux_Engine_Chars.Location = new System.Drawing.Point(4, 517);
             this.panel_Aux_Engine_Chars.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Aux_Engine_Chars.Name = "panel_Aux_Engine_Chars";
             this.panel_Aux_Engine_Chars.Size = new System.Drawing.Size(1200, 141);
@@ -2463,7 +2443,7 @@
             // updown_Aux_Percent_Trip_Active
             // 
             this.updown_Aux_Percent_Trip_Active.DecimalPlaces = 2;
-            this.updown_Aux_Percent_Trip_Active.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Percent_Trip_Active.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Aux_Percent_Trip_Active.Location = new System.Drawing.Point(391, 11);
             this.updown_Aux_Percent_Trip_Active.Maximum = new decimal(new int[] {
             1000000,
@@ -2471,7 +2451,7 @@
             0,
             0});
             this.updown_Aux_Percent_Trip_Active.Name = "updown_Aux_Percent_Trip_Active";
-            this.updown_Aux_Percent_Trip_Active.Size = new System.Drawing.Size(92, 22);
+            this.updown_Aux_Percent_Trip_Active.Size = new System.Drawing.Size(92, 23);
             this.updown_Aux_Percent_Trip_Active.TabIndex = 132;
             // 
             // updown_AUX_Time_Active
@@ -2479,7 +2459,7 @@
             this.updown_AUX_Time_Active.BackColor = System.Drawing.SystemColors.Window;
             this.updown_AUX_Time_Active.DecimalPlaces = 2;
             this.updown_AUX_Time_Active.Enabled = false;
-            this.updown_AUX_Time_Active.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_AUX_Time_Active.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_AUX_Time_Active.Location = new System.Drawing.Point(391, 35);
             this.updown_AUX_Time_Active.Maximum = new decimal(new int[] {
             1241513984,
@@ -2488,7 +2468,7 @@
             0});
             this.updown_AUX_Time_Active.Name = "updown_AUX_Time_Active";
             this.updown_AUX_Time_Active.ReadOnly = true;
-            this.updown_AUX_Time_Active.Size = new System.Drawing.Size(92, 22);
+            this.updown_AUX_Time_Active.Size = new System.Drawing.Size(92, 23);
             this.updown_AUX_Time_Active.TabIndex = 134;
             // 
             // label_Aux_Time_Active
@@ -2505,7 +2485,7 @@
             // updown_Aux_HP_Load_Factor
             // 
             this.updown_Aux_HP_Load_Factor.DecimalPlaces = 2;
-            this.updown_Aux_HP_Load_Factor.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_HP_Load_Factor.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Aux_HP_Load_Factor.Location = new System.Drawing.Point(391, 60);
             this.updown_Aux_HP_Load_Factor.Maximum = new decimal(new int[] {
             1000000,
@@ -2513,7 +2493,7 @@
             0,
             0});
             this.updown_Aux_HP_Load_Factor.Name = "updown_Aux_HP_Load_Factor";
-            this.updown_Aux_HP_Load_Factor.Size = new System.Drawing.Size(92, 22);
+            this.updown_Aux_HP_Load_Factor.Size = new System.Drawing.Size(92, 23);
             this.updown_Aux_HP_Load_Factor.TabIndex = 136;
             // 
             // label_Aux_HP_Load_Factor
@@ -2532,7 +2512,7 @@
             this.updown_AUX_Active_HP.BackColor = System.Drawing.SystemColors.Window;
             this.updown_AUX_Active_HP.DecimalPlaces = 2;
             this.updown_AUX_Active_HP.Enabled = false;
-            this.updown_AUX_Active_HP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_AUX_Active_HP.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_AUX_Active_HP.Location = new System.Drawing.Point(391, 84);
             this.updown_AUX_Active_HP.Maximum = new decimal(new int[] {
             1241513984,
@@ -2541,7 +2521,7 @@
             0});
             this.updown_AUX_Active_HP.Name = "updown_AUX_Active_HP";
             this.updown_AUX_Active_HP.ReadOnly = true;
-            this.updown_AUX_Active_HP.Size = new System.Drawing.Size(92, 22);
+            this.updown_AUX_Active_HP.Size = new System.Drawing.Size(92, 23);
             this.updown_AUX_Active_HP.TabIndex = 138;
             // 
             // label_Aux_Active_HP
@@ -2560,7 +2540,7 @@
             this.updown_Tot_AUX_Energy.BackColor = System.Drawing.SystemColors.Window;
             this.updown_Tot_AUX_Energy.DecimalPlaces = 2;
             this.updown_Tot_AUX_Energy.Enabled = false;
-            this.updown_Tot_AUX_Energy.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Tot_AUX_Energy.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Tot_AUX_Energy.Location = new System.Drawing.Point(391, 108);
             this.updown_Tot_AUX_Energy.Maximum = new decimal(new int[] {
             1241513984,
@@ -2569,7 +2549,7 @@
             0});
             this.updown_Tot_AUX_Energy.Name = "updown_Tot_AUX_Energy";
             this.updown_Tot_AUX_Energy.ReadOnly = true;
-            this.updown_Tot_AUX_Energy.Size = new System.Drawing.Size(92, 22);
+            this.updown_Tot_AUX_Energy.Size = new System.Drawing.Size(92, 23);
             this.updown_Tot_AUX_Energy.TabIndex = 140;
             // 
             // label_Aux_Total_Energy
@@ -2650,7 +2630,7 @@
             this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_CO);
             this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Res_NOX);
             this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_NOX);
-            this.panel_Aux_Emissions_Input.Location = new System.Drawing.Point(6, 1733);
+            this.panel_Aux_Emissions_Input.Location = new System.Drawing.Point(4, 973);
             this.panel_Aux_Emissions_Input.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Aux_Emissions_Input.Name = "panel_Aux_Emissions_Input";
             this.panel_Aux_Emissions_Input.Size = new System.Drawing.Size(1200, 247);
@@ -2680,7 +2660,7 @@
             // 
             this.Aux_Ult_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Ult_CH4.DecimalPlaces = 3;
-            this.Aux_Ult_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Ult_CH4.Location = new System.Drawing.Point(600, 195);
             this.Aux_Ult_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -2688,14 +2668,14 @@
             542101,
             0});
             this.Aux_Ult_CH4.Name = "Aux_Ult_CH4";
-            this.Aux_Ult_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_CH4.Size = new System.Drawing.Size(97, 23);
             this.Aux_Ult_CH4.TabIndex = 380;
             // 
             // Aux_Ult_N2O
             // 
             this.Aux_Ult_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Ult_N2O.DecimalPlaces = 3;
-            this.Aux_Ult_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Ult_N2O.Location = new System.Drawing.Point(600, 168);
             this.Aux_Ult_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -2703,14 +2683,14 @@
             542101,
             0});
             this.Aux_Ult_N2O.Name = "Aux_Ult_N2O";
-            this.Aux_Ult_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_N2O.Size = new System.Drawing.Size(97, 23);
             this.Aux_Ult_N2O.TabIndex = 379;
             // 
             // Aux_Ult_PM25
             // 
             this.Aux_Ult_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Ult_PM25.DecimalPlaces = 3;
-            this.Aux_Ult_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Ult_PM25.Location = new System.Drawing.Point(600, 142);
             this.Aux_Ult_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -2718,14 +2698,14 @@
             542101,
             0});
             this.Aux_Ult_PM25.Name = "Aux_Ult_PM25";
-            this.Aux_Ult_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_PM25.Size = new System.Drawing.Size(97, 23);
             this.Aux_Ult_PM25.TabIndex = 378;
             // 
             // Aux_Ult_PM10
             // 
             this.Aux_Ult_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Ult_PM10.DecimalPlaces = 3;
-            this.Aux_Ult_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Ult_PM10.Location = new System.Drawing.Point(600, 115);
             this.Aux_Ult_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -2733,14 +2713,14 @@
             542101,
             0});
             this.Aux_Ult_PM10.Name = "Aux_Ult_PM10";
-            this.Aux_Ult_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_PM10.Size = new System.Drawing.Size(97, 23);
             this.Aux_Ult_PM10.TabIndex = 377;
             // 
             // Aux_Ult_VOC
             // 
             this.Aux_Ult_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Ult_VOC.DecimalPlaces = 3;
-            this.Aux_Ult_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Ult_VOC.Location = new System.Drawing.Point(600, 88);
             this.Aux_Ult_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -2748,14 +2728,14 @@
             542101,
             0});
             this.Aux_Ult_VOC.Name = "Aux_Ult_VOC";
-            this.Aux_Ult_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_VOC.Size = new System.Drawing.Size(97, 23);
             this.Aux_Ult_VOC.TabIndex = 376;
             // 
             // Aux_Ult_CO
             // 
             this.Aux_Ult_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Ult_CO.DecimalPlaces = 3;
-            this.Aux_Ult_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Ult_CO.Location = new System.Drawing.Point(600, 62);
             this.Aux_Ult_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -2763,14 +2743,14 @@
             542101,
             0});
             this.Aux_Ult_CO.Name = "Aux_Ult_CO";
-            this.Aux_Ult_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_CO.Size = new System.Drawing.Size(97, 23);
             this.Aux_Ult_CO.TabIndex = 375;
             // 
             // Aux_Ult_NOX
             // 
             this.Aux_Ult_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Ult_NOX.DecimalPlaces = 3;
-            this.Aux_Ult_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Ult_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Ult_NOX.Location = new System.Drawing.Point(600, 36);
             this.Aux_Ult_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -2778,7 +2758,7 @@
             542101,
             0});
             this.Aux_Ult_NOX.Name = "Aux_Ult_NOX";
-            this.Aux_Ult_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Ult_NOX.Size = new System.Drawing.Size(97, 23);
             this.Aux_Ult_NOX.TabIndex = 374;
             // 
             // Aux_Biodiesel_Label
@@ -2795,7 +2775,7 @@
             // 
             this.Aux_Bio_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Bio_CH4.DecimalPlaces = 3;
-            this.Aux_Bio_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Bio_CH4.Location = new System.Drawing.Point(497, 195);
             this.Aux_Bio_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -2803,14 +2783,14 @@
             542101,
             0});
             this.Aux_Bio_CH4.Name = "Aux_Bio_CH4";
-            this.Aux_Bio_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_CH4.Size = new System.Drawing.Size(97, 23);
             this.Aux_Bio_CH4.TabIndex = 372;
             // 
             // Aux_Bio_N2O
             // 
             this.Aux_Bio_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Bio_N2O.DecimalPlaces = 3;
-            this.Aux_Bio_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Bio_N2O.Location = new System.Drawing.Point(497, 168);
             this.Aux_Bio_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -2818,14 +2798,14 @@
             542101,
             0});
             this.Aux_Bio_N2O.Name = "Aux_Bio_N2O";
-            this.Aux_Bio_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_N2O.Size = new System.Drawing.Size(97, 23);
             this.Aux_Bio_N2O.TabIndex = 371;
             // 
             // Aux_Bio_PM25
             // 
             this.Aux_Bio_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Bio_PM25.DecimalPlaces = 3;
-            this.Aux_Bio_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Bio_PM25.Location = new System.Drawing.Point(497, 142);
             this.Aux_Bio_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -2833,14 +2813,14 @@
             542101,
             0});
             this.Aux_Bio_PM25.Name = "Aux_Bio_PM25";
-            this.Aux_Bio_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_PM25.Size = new System.Drawing.Size(97, 23);
             this.Aux_Bio_PM25.TabIndex = 370;
             // 
             // Aux_Bio_PM10
             // 
             this.Aux_Bio_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Bio_PM10.DecimalPlaces = 3;
-            this.Aux_Bio_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Bio_PM10.Location = new System.Drawing.Point(497, 115);
             this.Aux_Bio_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -2848,14 +2828,14 @@
             542101,
             0});
             this.Aux_Bio_PM10.Name = "Aux_Bio_PM10";
-            this.Aux_Bio_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_PM10.Size = new System.Drawing.Size(97, 23);
             this.Aux_Bio_PM10.TabIndex = 369;
             // 
             // Aux_Bio_VOC
             // 
             this.Aux_Bio_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Bio_VOC.DecimalPlaces = 3;
-            this.Aux_Bio_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Bio_VOC.Location = new System.Drawing.Point(497, 88);
             this.Aux_Bio_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -2863,14 +2843,14 @@
             542101,
             0});
             this.Aux_Bio_VOC.Name = "Aux_Bio_VOC";
-            this.Aux_Bio_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_VOC.Size = new System.Drawing.Size(97, 23);
             this.Aux_Bio_VOC.TabIndex = 368;
             // 
             // Aux_Bio_CO
             // 
             this.Aux_Bio_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Bio_CO.DecimalPlaces = 3;
-            this.Aux_Bio_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Bio_CO.Location = new System.Drawing.Point(497, 62);
             this.Aux_Bio_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -2878,14 +2858,14 @@
             542101,
             0});
             this.Aux_Bio_CO.Name = "Aux_Bio_CO";
-            this.Aux_Bio_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_CO.Size = new System.Drawing.Size(97, 23);
             this.Aux_Bio_CO.TabIndex = 367;
             // 
             // Aux_Bio_NOX
             // 
             this.Aux_Bio_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Bio_NOX.DecimalPlaces = 3;
-            this.Aux_Bio_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Bio_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Bio_NOX.Location = new System.Drawing.Point(497, 36);
             this.Aux_Bio_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -2893,7 +2873,7 @@
             542101,
             0});
             this.Aux_Bio_NOX.Name = "Aux_Bio_NOX";
-            this.Aux_Bio_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Bio_NOX.Size = new System.Drawing.Size(97, 23);
             this.Aux_Bio_NOX.TabIndex = 366;
             // 
             // Aux_Fischer_Label
@@ -2910,7 +2890,7 @@
             // 
             this.Aux_Fis_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Fis_CH4.DecimalPlaces = 3;
-            this.Aux_Fis_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Fis_CH4.Location = new System.Drawing.Point(391, 195);
             this.Aux_Fis_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -2918,14 +2898,14 @@
             542101,
             0});
             this.Aux_Fis_CH4.Name = "Aux_Fis_CH4";
-            this.Aux_Fis_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_CH4.Size = new System.Drawing.Size(97, 23);
             this.Aux_Fis_CH4.TabIndex = 364;
             // 
             // Aux_Fis_N2O
             // 
             this.Aux_Fis_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Fis_N2O.DecimalPlaces = 3;
-            this.Aux_Fis_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Fis_N2O.Location = new System.Drawing.Point(391, 168);
             this.Aux_Fis_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -2933,14 +2913,14 @@
             542101,
             0});
             this.Aux_Fis_N2O.Name = "Aux_Fis_N2O";
-            this.Aux_Fis_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_N2O.Size = new System.Drawing.Size(97, 23);
             this.Aux_Fis_N2O.TabIndex = 363;
             // 
             // Aux_Fis_PM25
             // 
             this.Aux_Fis_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Fis_PM25.DecimalPlaces = 3;
-            this.Aux_Fis_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Fis_PM25.Location = new System.Drawing.Point(391, 142);
             this.Aux_Fis_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -2948,14 +2928,14 @@
             542101,
             0});
             this.Aux_Fis_PM25.Name = "Aux_Fis_PM25";
-            this.Aux_Fis_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_PM25.Size = new System.Drawing.Size(97, 23);
             this.Aux_Fis_PM25.TabIndex = 362;
             // 
             // Aux_Fis_PM10
             // 
             this.Aux_Fis_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Fis_PM10.DecimalPlaces = 3;
-            this.Aux_Fis_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Fis_PM10.Location = new System.Drawing.Point(391, 115);
             this.Aux_Fis_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -2963,14 +2943,14 @@
             542101,
             0});
             this.Aux_Fis_PM10.Name = "Aux_Fis_PM10";
-            this.Aux_Fis_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_PM10.Size = new System.Drawing.Size(97, 23);
             this.Aux_Fis_PM10.TabIndex = 361;
             // 
             // Aux_Fis_VOC
             // 
             this.Aux_Fis_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Fis_VOC.DecimalPlaces = 3;
-            this.Aux_Fis_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Fis_VOC.Location = new System.Drawing.Point(391, 88);
             this.Aux_Fis_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -2978,14 +2958,14 @@
             542101,
             0});
             this.Aux_Fis_VOC.Name = "Aux_Fis_VOC";
-            this.Aux_Fis_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_VOC.Size = new System.Drawing.Size(97, 23);
             this.Aux_Fis_VOC.TabIndex = 360;
             // 
             // Aux_Fis_CO
             // 
             this.Aux_Fis_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Fis_CO.DecimalPlaces = 3;
-            this.Aux_Fis_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Fis_CO.Location = new System.Drawing.Point(391, 62);
             this.Aux_Fis_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -2993,14 +2973,14 @@
             542101,
             0});
             this.Aux_Fis_CO.Name = "Aux_Fis_CO";
-            this.Aux_Fis_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_CO.Size = new System.Drawing.Size(97, 23);
             this.Aux_Fis_CO.TabIndex = 359;
             // 
             // Aux_Fis_NOX
             // 
             this.Aux_Fis_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Fis_NOX.DecimalPlaces = 3;
-            this.Aux_Fis_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Fis_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Fis_NOX.Location = new System.Drawing.Point(391, 36);
             this.Aux_Fis_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -3008,7 +2988,7 @@
             542101,
             0});
             this.Aux_Fis_NOX.Name = "Aux_Fis_NOX";
-            this.Aux_Fis_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Fis_NOX.Size = new System.Drawing.Size(97, 23);
             this.Aux_Fis_NOX.TabIndex = 358;
             // 
             // Aux_Natural_Gas_Label
@@ -3025,7 +3005,7 @@
             // 
             this.Aux_Nat_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Nat_CH4.DecimalPlaces = 3;
-            this.Aux_Nat_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Nat_CH4.Location = new System.Drawing.Point(288, 195);
             this.Aux_Nat_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -3033,14 +3013,14 @@
             542101,
             0});
             this.Aux_Nat_CH4.Name = "Aux_Nat_CH4";
-            this.Aux_Nat_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_CH4.Size = new System.Drawing.Size(97, 23);
             this.Aux_Nat_CH4.TabIndex = 356;
             // 
             // Aux_Nat_N2O
             // 
             this.Aux_Nat_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Nat_N2O.DecimalPlaces = 3;
-            this.Aux_Nat_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Nat_N2O.Location = new System.Drawing.Point(288, 168);
             this.Aux_Nat_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -3048,14 +3028,14 @@
             542101,
             0});
             this.Aux_Nat_N2O.Name = "Aux_Nat_N2O";
-            this.Aux_Nat_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_N2O.Size = new System.Drawing.Size(97, 23);
             this.Aux_Nat_N2O.TabIndex = 355;
             // 
             // Aux_Nat_PM25
             // 
             this.Aux_Nat_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Nat_PM25.DecimalPlaces = 3;
-            this.Aux_Nat_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Nat_PM25.Location = new System.Drawing.Point(288, 142);
             this.Aux_Nat_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -3063,14 +3043,14 @@
             542101,
             0});
             this.Aux_Nat_PM25.Name = "Aux_Nat_PM25";
-            this.Aux_Nat_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_PM25.Size = new System.Drawing.Size(97, 23);
             this.Aux_Nat_PM25.TabIndex = 354;
             // 
             // Aux_Nat_PM10
             // 
             this.Aux_Nat_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Nat_PM10.DecimalPlaces = 3;
-            this.Aux_Nat_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Nat_PM10.Location = new System.Drawing.Point(288, 115);
             this.Aux_Nat_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -3078,14 +3058,14 @@
             542101,
             0});
             this.Aux_Nat_PM10.Name = "Aux_Nat_PM10";
-            this.Aux_Nat_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_PM10.Size = new System.Drawing.Size(97, 23);
             this.Aux_Nat_PM10.TabIndex = 353;
             // 
             // Aux_Nat_VOC
             // 
             this.Aux_Nat_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Nat_VOC.DecimalPlaces = 3;
-            this.Aux_Nat_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Nat_VOC.Location = new System.Drawing.Point(288, 88);
             this.Aux_Nat_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -3093,14 +3073,14 @@
             542101,
             0});
             this.Aux_Nat_VOC.Name = "Aux_Nat_VOC";
-            this.Aux_Nat_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_VOC.Size = new System.Drawing.Size(97, 23);
             this.Aux_Nat_VOC.TabIndex = 352;
             // 
             // Aux_Nat_CO
             // 
             this.Aux_Nat_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Nat_CO.DecimalPlaces = 3;
-            this.Aux_Nat_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Nat_CO.Location = new System.Drawing.Point(288, 62);
             this.Aux_Nat_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -3108,14 +3088,14 @@
             542101,
             0});
             this.Aux_Nat_CO.Name = "Aux_Nat_CO";
-            this.Aux_Nat_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_CO.Size = new System.Drawing.Size(97, 23);
             this.Aux_Nat_CO.TabIndex = 351;
             // 
             // Aux_Nat_NOX
             // 
             this.Aux_Nat_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Nat_NOX.DecimalPlaces = 3;
-            this.Aux_Nat_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Nat_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Nat_NOX.Location = new System.Drawing.Point(288, 36);
             this.Aux_Nat_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -3123,7 +3103,7 @@
             542101,
             0});
             this.Aux_Nat_NOX.Name = "Aux_Nat_NOX";
-            this.Aux_Nat_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Nat_NOX.Size = new System.Drawing.Size(97, 23);
             this.Aux_Nat_NOX.TabIndex = 350;
             // 
             // Aux_Diesel_Label
@@ -3140,7 +3120,7 @@
             // 
             this.Aux_Die_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Die_CH4.DecimalPlaces = 3;
-            this.Aux_Die_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Die_CH4.Location = new System.Drawing.Point(185, 195);
             this.Aux_Die_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -3148,14 +3128,14 @@
             542101,
             0});
             this.Aux_Die_CH4.Name = "Aux_Die_CH4";
-            this.Aux_Die_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_CH4.Size = new System.Drawing.Size(97, 23);
             this.Aux_Die_CH4.TabIndex = 348;
             // 
             // Aux_Die_N2O
             // 
             this.Aux_Die_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Die_N2O.DecimalPlaces = 3;
-            this.Aux_Die_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Die_N2O.Location = new System.Drawing.Point(185, 168);
             this.Aux_Die_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -3163,14 +3143,14 @@
             542101,
             0});
             this.Aux_Die_N2O.Name = "Aux_Die_N2O";
-            this.Aux_Die_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_N2O.Size = new System.Drawing.Size(97, 23);
             this.Aux_Die_N2O.TabIndex = 347;
             // 
             // Aux_Die_PM25
             // 
             this.Aux_Die_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Die_PM25.DecimalPlaces = 3;
-            this.Aux_Die_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Die_PM25.Location = new System.Drawing.Point(185, 142);
             this.Aux_Die_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -3178,14 +3158,14 @@
             542101,
             0});
             this.Aux_Die_PM25.Name = "Aux_Die_PM25";
-            this.Aux_Die_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_PM25.Size = new System.Drawing.Size(97, 23);
             this.Aux_Die_PM25.TabIndex = 346;
             // 
             // Aux_Die_PM10
             // 
             this.Aux_Die_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Die_PM10.DecimalPlaces = 3;
-            this.Aux_Die_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Die_PM10.Location = new System.Drawing.Point(185, 115);
             this.Aux_Die_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -3193,14 +3173,14 @@
             542101,
             0});
             this.Aux_Die_PM10.Name = "Aux_Die_PM10";
-            this.Aux_Die_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_PM10.Size = new System.Drawing.Size(97, 23);
             this.Aux_Die_PM10.TabIndex = 345;
             // 
             // Aux_Die_VOC
             // 
             this.Aux_Die_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Die_VOC.DecimalPlaces = 3;
-            this.Aux_Die_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Die_VOC.Location = new System.Drawing.Point(185, 88);
             this.Aux_Die_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -3208,14 +3188,14 @@
             542101,
             0});
             this.Aux_Die_VOC.Name = "Aux_Die_VOC";
-            this.Aux_Die_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_VOC.Size = new System.Drawing.Size(97, 23);
             this.Aux_Die_VOC.TabIndex = 344;
             // 
             // Aux_Die_CO
             // 
             this.Aux_Die_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Die_CO.DecimalPlaces = 3;
-            this.Aux_Die_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Die_CO.Location = new System.Drawing.Point(185, 62);
             this.Aux_Die_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -3223,14 +3203,14 @@
             542101,
             0});
             this.Aux_Die_CO.Name = "Aux_Die_CO";
-            this.Aux_Die_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_CO.Size = new System.Drawing.Size(97, 23);
             this.Aux_Die_CO.TabIndex = 343;
             // 
             // Aux_Die_NOX
             // 
             this.Aux_Die_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Die_NOX.DecimalPlaces = 3;
-            this.Aux_Die_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Die_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Die_NOX.Location = new System.Drawing.Point(185, 36);
             this.Aux_Die_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -3238,14 +3218,14 @@
             542101,
             0});
             this.Aux_Die_NOX.Name = "Aux_Die_NOX";
-            this.Aux_Die_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Die_NOX.Size = new System.Drawing.Size(97, 23);
             this.Aux_Die_NOX.TabIndex = 342;
             // 
             // Aux_Res_CH4
             // 
             this.Aux_Res_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Res_CH4.DecimalPlaces = 2;
-            this.Aux_Res_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Res_CH4.Location = new System.Drawing.Point(81, 194);
             this.Aux_Res_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -3253,17 +3233,17 @@
             542101,
             0});
             this.Aux_Res_CH4.Name = "Aux_Res_CH4";
-            this.Aux_Res_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_CH4.Size = new System.Drawing.Size(97, 23);
             this.Aux_Res_CH4.TabIndex = 298;
             // 
             // label_Aux_CH4
             // 
             this.label_Aux_CH4.AutoSize = true;
             this.label_Aux_CH4.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_CH4.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CH4.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CH4.Location = new System.Drawing.Point(4, 199);
             this.label_Aux_CH4.Name = "label_Aux_CH4";
-            this.label_Aux_CH4.Size = new System.Drawing.Size(34, 18);
+            this.label_Aux_CH4.Size = new System.Drawing.Size(41, 19);
             this.label_Aux_CH4.TabIndex = 297;
             this.label_Aux_CH4.Text = "CH4";
             // 
@@ -3271,7 +3251,7 @@
             // 
             this.Aux_Res_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Res_N2O.DecimalPlaces = 2;
-            this.Aux_Res_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Res_N2O.Location = new System.Drawing.Point(81, 167);
             this.Aux_Res_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -3279,17 +3259,17 @@
             542101,
             0});
             this.Aux_Res_N2O.Name = "Aux_Res_N2O";
-            this.Aux_Res_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_N2O.Size = new System.Drawing.Size(97, 23);
             this.Aux_Res_N2O.TabIndex = 296;
             // 
             // label_Aux_N2O
             // 
             this.label_Aux_N2O.AutoSize = true;
             this.label_Aux_N2O.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_N2O.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_N2O.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_N2O.Location = new System.Drawing.Point(4, 172);
             this.label_Aux_N2O.Name = "label_Aux_N2O";
-            this.label_Aux_N2O.Size = new System.Drawing.Size(35, 18);
+            this.label_Aux_N2O.Size = new System.Drawing.Size(45, 19);
             this.label_Aux_N2O.TabIndex = 295;
             this.label_Aux_N2O.Text = "N2O";
             // 
@@ -3297,7 +3277,7 @@
             // 
             this.Aux_Res_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Res_PM25.DecimalPlaces = 2;
-            this.Aux_Res_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Res_PM25.Location = new System.Drawing.Point(81, 141);
             this.Aux_Res_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -3305,17 +3285,17 @@
             542101,
             0});
             this.Aux_Res_PM25.Name = "Aux_Res_PM25";
-            this.Aux_Res_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_PM25.Size = new System.Drawing.Size(97, 23);
             this.Aux_Res_PM25.TabIndex = 294;
             // 
             // label_Aux_PM25
             // 
             this.label_Aux_PM25.AutoSize = true;
             this.label_Aux_PM25.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_PM25.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_PM25.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM25.Location = new System.Drawing.Point(4, 146);
             this.label_Aux_PM25.Name = "label_Aux_PM25";
-            this.label_Aux_PM25.Size = new System.Drawing.Size(47, 18);
+            this.label_Aux_PM25.Size = new System.Drawing.Size(56, 19);
             this.label_Aux_PM25.TabIndex = 293;
             this.label_Aux_PM25.Text = "PM2.5";
             // 
@@ -3323,7 +3303,7 @@
             // 
             this.Aux_Res_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Res_PM10.DecimalPlaces = 2;
-            this.Aux_Res_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Res_PM10.Location = new System.Drawing.Point(81, 114);
             this.Aux_Res_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -3331,17 +3311,17 @@
             542101,
             0});
             this.Aux_Res_PM10.Name = "Aux_Res_PM10";
-            this.Aux_Res_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_PM10.Size = new System.Drawing.Size(97, 23);
             this.Aux_Res_PM10.TabIndex = 292;
             // 
             // label_Aux_PM10
             // 
             this.label_Aux_PM10.AutoSize = true;
             this.label_Aux_PM10.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_PM10.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_PM10.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM10.Location = new System.Drawing.Point(4, 119);
             this.label_Aux_PM10.Name = "label_Aux_PM10";
-            this.label_Aux_PM10.Size = new System.Drawing.Size(43, 18);
+            this.label_Aux_PM10.Size = new System.Drawing.Size(51, 19);
             this.label_Aux_PM10.TabIndex = 291;
             this.label_Aux_PM10.Text = "PM10";
             // 
@@ -3349,7 +3329,7 @@
             // 
             this.Aux_Res_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Res_VOC.DecimalPlaces = 2;
-            this.Aux_Res_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Res_VOC.Location = new System.Drawing.Point(81, 88);
             this.Aux_Res_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -3357,17 +3337,17 @@
             542101,
             0});
             this.Aux_Res_VOC.Name = "Aux_Res_VOC";
-            this.Aux_Res_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_VOC.Size = new System.Drawing.Size(97, 23);
             this.Aux_Res_VOC.TabIndex = 290;
             // 
             // label_Aux_VOC
             // 
             this.label_Aux_VOC.AutoSize = true;
             this.label_Aux_VOC.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_VOC.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_VOC.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_VOC.Location = new System.Drawing.Point(4, 92);
             this.label_Aux_VOC.Name = "label_Aux_VOC";
-            this.label_Aux_VOC.Size = new System.Drawing.Size(36, 18);
+            this.label_Aux_VOC.Size = new System.Drawing.Size(44, 19);
             this.label_Aux_VOC.TabIndex = 289;
             this.label_Aux_VOC.Text = "VOC";
             // 
@@ -3375,7 +3355,7 @@
             // 
             this.Aux_Res_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Res_CO.DecimalPlaces = 2;
-            this.Aux_Res_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Res_CO.Location = new System.Drawing.Point(81, 61);
             this.Aux_Res_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -3383,17 +3363,17 @@
             542101,
             0});
             this.Aux_Res_CO.Name = "Aux_Res_CO";
-            this.Aux_Res_CO.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_CO.Size = new System.Drawing.Size(97, 23);
             this.Aux_Res_CO.TabIndex = 288;
             // 
             // label_Aux_CO
             // 
             this.label_Aux_CO.AutoSize = true;
             this.label_Aux_CO.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_CO.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_CO.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO.Location = new System.Drawing.Point(4, 66);
             this.label_Aux_CO.Name = "label_Aux_CO";
-            this.label_Aux_CO.Size = new System.Drawing.Size(26, 18);
+            this.label_Aux_CO.Size = new System.Drawing.Size(33, 19);
             this.label_Aux_CO.TabIndex = 287;
             this.label_Aux_CO.Text = "CO";
             // 
@@ -3401,7 +3381,7 @@
             // 
             this.Aux_Res_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Aux_Res_NOX.DecimalPlaces = 2;
-            this.Aux_Res_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aux_Res_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Aux_Res_NOX.Location = new System.Drawing.Point(81, 35);
             this.Aux_Res_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -3409,26 +3389,26 @@
             542101,
             0});
             this.Aux_Res_NOX.Name = "Aux_Res_NOX";
-            this.Aux_Res_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Aux_Res_NOX.Size = new System.Drawing.Size(97, 23);
             this.Aux_Res_NOX.TabIndex = 285;
             // 
             // label_Aux_NOX
             // 
             this.label_Aux_NOX.AutoSize = true;
             this.label_Aux_NOX.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_NOX.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_NOX.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_NOX.Location = new System.Drawing.Point(4, 40);
             this.label_Aux_NOX.Name = "label_Aux_NOX";
-            this.label_Aux_NOX.Size = new System.Drawing.Size(38, 18);
+            this.label_Aux_NOX.Size = new System.Drawing.Size(45, 19);
             this.label_Aux_NOX.TabIndex = 265;
             this.label_Aux_NOX.Text = "NOX";
             // 
             // label_Main_Global_Warming_Potentials
             // 
             this.label_Main_Global_Warming_Potentials.AutoSize = true;
-            this.label_Main_Global_Warming_Potentials.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
+            this.label_Main_Global_Warming_Potentials.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label_Main_Global_Warming_Potentials.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Global_Warming_Potentials.Location = new System.Drawing.Point(3, 732);
+            this.label_Main_Global_Warming_Potentials.Location = new System.Drawing.Point(0, 1766);
             this.label_Main_Global_Warming_Potentials.Margin = new System.Windows.Forms.Padding(0);
             this.label_Main_Global_Warming_Potentials.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Main_Global_Warming_Potentials.Name = "label_Main_Global_Warming_Potentials";
@@ -3450,7 +3430,7 @@
             this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Num_Engines_In_Use);
             this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Engine_Rated_HP);
             this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Total_Onboard_HP);
-            this.panel_Aux_Engine_Vars.Location = new System.Drawing.Point(6, 1260);
+            this.panel_Aux_Engine_Vars.Location = new System.Drawing.Point(4, 171);
             this.panel_Aux_Engine_Vars.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Aux_Engine_Vars.Name = "panel_Aux_Engine_Vars";
             this.panel_Aux_Engine_Vars.Size = new System.Drawing.Size(1200, 113);
@@ -3469,7 +3449,7 @@
             // 
             // updown_Aux_Number_Engines
             // 
-            this.updown_Aux_Number_Engines.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Number_Engines.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Aux_Number_Engines.Location = new System.Drawing.Point(288, 7);
             this.updown_Aux_Number_Engines.Maximum = new decimal(new int[] {
             1000000,
@@ -3482,7 +3462,7 @@
             // 
             // updown_Aux_Engines_In_Use
             // 
-            this.updown_Aux_Engines_In_Use.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Engines_In_Use.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Aux_Engines_In_Use.Location = new System.Drawing.Point(288, 35);
             this.updown_Aux_Engines_In_Use.Maximum = new decimal(new int[] {
             1000000,
@@ -3495,7 +3475,7 @@
             // 
             // updown_Aux_HP_Per_Engine
             // 
-            this.updown_Aux_HP_Per_Engine.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_HP_Per_Engine.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Aux_HP_Per_Engine.Location = new System.Drawing.Point(288, 58);
             this.updown_Aux_HP_Per_Engine.Maximum = new decimal(new int[] {
             1000000,
@@ -3510,7 +3490,7 @@
             // 
             this.updown_Tot_Onboard_AUX_HP.BackColor = System.Drawing.SystemColors.Window;
             this.updown_Tot_Onboard_AUX_HP.Enabled = false;
-            this.updown_Tot_Onboard_AUX_HP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Tot_Onboard_AUX_HP.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Tot_Onboard_AUX_HP.Location = new System.Drawing.Point(288, 83);
             this.updown_Tot_Onboard_AUX_HP.Maximum = new decimal(new int[] {
             1241513984,
@@ -3571,7 +3551,7 @@
             this.panel_Main_GWPs.Controls.Add(this.label_Main_GWP_CH4);
             this.panel_Main_GWPs.Controls.Add(this.updown_CO2_GWP);
             this.panel_Main_GWPs.Controls.Add(this.label_Main_GWP_CO2);
-            this.panel_Main_GWPs.Location = new System.Drawing.Point(6, 752);
+            this.panel_Main_GWPs.Location = new System.Drawing.Point(3, 1786);
             this.panel_Main_GWPs.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Main_GWPs.Name = "panel_Main_GWPs";
             this.panel_Main_GWPs.Size = new System.Drawing.Size(1200, 195);
@@ -3581,7 +3561,7 @@
             // 
             this.updown_NO2_GWP.BackColor = System.Drawing.SystemColors.Window;
             this.updown_NO2_GWP.DecimalPlaces = 2;
-            this.updown_NO2_GWP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_NO2_GWP.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_NO2_GWP.Location = new System.Drawing.Point(79, 139);
             this.updown_NO2_GWP.Maximum = new decimal(new int[] {
             1241513984,
@@ -3589,17 +3569,17 @@
             542101,
             0});
             this.updown_NO2_GWP.Name = "updown_NO2_GWP";
-            this.updown_NO2_GWP.Size = new System.Drawing.Size(97, 22);
+            this.updown_NO2_GWP.Size = new System.Drawing.Size(97, 23);
             this.updown_NO2_GWP.TabIndex = 296;
             // 
             // label_Main_GWP_NOX
             // 
             this.label_Main_GWP_NOX.AutoSize = true;
             this.label_Main_GWP_NOX.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_GWP_NOX.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_NOX.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_GWP_NOX.Location = new System.Drawing.Point(2, 144);
             this.label_Main_GWP_NOX.Name = "label_Main_GWP_NOX";
-            this.label_Main_GWP_NOX.Size = new System.Drawing.Size(38, 18);
+            this.label_Main_GWP_NOX.Size = new System.Drawing.Size(45, 19);
             this.label_Main_GWP_NOX.TabIndex = 295;
             this.label_Main_GWP_NOX.Text = "NOX";
             // 
@@ -3607,7 +3587,7 @@
             // 
             this.updown_CO_GWP.BackColor = System.Drawing.SystemColors.Window;
             this.updown_CO_GWP.DecimalPlaces = 2;
-            this.updown_CO_GWP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_CO_GWP.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_CO_GWP.Location = new System.Drawing.Point(79, 113);
             this.updown_CO_GWP.Maximum = new decimal(new int[] {
             1241513984,
@@ -3615,17 +3595,17 @@
             542101,
             0});
             this.updown_CO_GWP.Name = "updown_CO_GWP";
-            this.updown_CO_GWP.Size = new System.Drawing.Size(97, 22);
+            this.updown_CO_GWP.Size = new System.Drawing.Size(97, 23);
             this.updown_CO_GWP.TabIndex = 294;
             // 
             // label_Main_GWP_CO
             // 
             this.label_Main_GWP_CO.AutoSize = true;
             this.label_Main_GWP_CO.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_GWP_CO.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_CO.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_GWP_CO.Location = new System.Drawing.Point(2, 118);
             this.label_Main_GWP_CO.Name = "label_Main_GWP_CO";
-            this.label_Main_GWP_CO.Size = new System.Drawing.Size(26, 18);
+            this.label_Main_GWP_CO.Size = new System.Drawing.Size(33, 19);
             this.label_Main_GWP_CO.TabIndex = 293;
             this.label_Main_GWP_CO.Text = "CO";
             // 
@@ -3633,7 +3613,7 @@
             // 
             this.updown_VOC_GWP.BackColor = System.Drawing.SystemColors.Window;
             this.updown_VOC_GWP.DecimalPlaces = 2;
-            this.updown_VOC_GWP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_VOC_GWP.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_VOC_GWP.Location = new System.Drawing.Point(79, 86);
             this.updown_VOC_GWP.Maximum = new decimal(new int[] {
             1241513984,
@@ -3641,17 +3621,17 @@
             542101,
             0});
             this.updown_VOC_GWP.Name = "updown_VOC_GWP";
-            this.updown_VOC_GWP.Size = new System.Drawing.Size(97, 22);
+            this.updown_VOC_GWP.Size = new System.Drawing.Size(97, 23);
             this.updown_VOC_GWP.TabIndex = 292;
             // 
             // label_Main_GWP_VOC
             // 
             this.label_Main_GWP_VOC.AutoSize = true;
             this.label_Main_GWP_VOC.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_GWP_VOC.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_VOC.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_GWP_VOC.Location = new System.Drawing.Point(2, 91);
             this.label_Main_GWP_VOC.Name = "label_Main_GWP_VOC";
-            this.label_Main_GWP_VOC.Size = new System.Drawing.Size(36, 18);
+            this.label_Main_GWP_VOC.Size = new System.Drawing.Size(44, 19);
             this.label_Main_GWP_VOC.TabIndex = 291;
             this.label_Main_GWP_VOC.Text = "VOC";
             // 
@@ -3659,7 +3639,7 @@
             // 
             this.updown_N2O_GWP.BackColor = System.Drawing.SystemColors.Window;
             this.updown_N2O_GWP.DecimalPlaces = 2;
-            this.updown_N2O_GWP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_N2O_GWP.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_N2O_GWP.Location = new System.Drawing.Point(79, 60);
             this.updown_N2O_GWP.Maximum = new decimal(new int[] {
             1241513984,
@@ -3667,17 +3647,17 @@
             542101,
             0});
             this.updown_N2O_GWP.Name = "updown_N2O_GWP";
-            this.updown_N2O_GWP.Size = new System.Drawing.Size(97, 22);
+            this.updown_N2O_GWP.Size = new System.Drawing.Size(97, 23);
             this.updown_N2O_GWP.TabIndex = 290;
             // 
             // label_Main_GWP_N2O
             // 
             this.label_Main_GWP_N2O.AutoSize = true;
             this.label_Main_GWP_N2O.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_GWP_N2O.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_N2O.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_GWP_N2O.Location = new System.Drawing.Point(2, 64);
             this.label_Main_GWP_N2O.Name = "label_Main_GWP_N2O";
-            this.label_Main_GWP_N2O.Size = new System.Drawing.Size(35, 18);
+            this.label_Main_GWP_N2O.Size = new System.Drawing.Size(45, 19);
             this.label_Main_GWP_N2O.TabIndex = 289;
             this.label_Main_GWP_N2O.Text = "N2O";
             // 
@@ -3685,7 +3665,7 @@
             // 
             this.updown_CH4_GWP.BackColor = System.Drawing.SystemColors.Window;
             this.updown_CH4_GWP.DecimalPlaces = 2;
-            this.updown_CH4_GWP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_CH4_GWP.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_CH4_GWP.Location = new System.Drawing.Point(79, 33);
             this.updown_CH4_GWP.Maximum = new decimal(new int[] {
             1241513984,
@@ -3693,17 +3673,17 @@
             542101,
             0});
             this.updown_CH4_GWP.Name = "updown_CH4_GWP";
-            this.updown_CH4_GWP.Size = new System.Drawing.Size(97, 22);
+            this.updown_CH4_GWP.Size = new System.Drawing.Size(97, 23);
             this.updown_CH4_GWP.TabIndex = 288;
             // 
             // label_Main_GWP_CH4
             // 
             this.label_Main_GWP_CH4.AutoSize = true;
             this.label_Main_GWP_CH4.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_GWP_CH4.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_CH4.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_GWP_CH4.Location = new System.Drawing.Point(2, 38);
             this.label_Main_GWP_CH4.Name = "label_Main_GWP_CH4";
-            this.label_Main_GWP_CH4.Size = new System.Drawing.Size(34, 18);
+            this.label_Main_GWP_CH4.Size = new System.Drawing.Size(41, 19);
             this.label_Main_GWP_CH4.TabIndex = 287;
             this.label_Main_GWP_CH4.Text = "CH4";
             // 
@@ -3711,7 +3691,7 @@
             // 
             this.updown_CO2_GWP.BackColor = System.Drawing.SystemColors.Window;
             this.updown_CO2_GWP.DecimalPlaces = 2;
-            this.updown_CO2_GWP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_CO2_GWP.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_CO2_GWP.Location = new System.Drawing.Point(79, 7);
             this.updown_CO2_GWP.Maximum = new decimal(new int[] {
             1241513984,
@@ -3719,32 +3699,32 @@
             542101,
             0});
             this.updown_CO2_GWP.Name = "updown_CO2_GWP";
-            this.updown_CO2_GWP.Size = new System.Drawing.Size(97, 22);
+            this.updown_CO2_GWP.Size = new System.Drawing.Size(97, 23);
             this.updown_CO2_GWP.TabIndex = 285;
             // 
             // label_Main_GWP_CO2
             // 
             this.label_Main_GWP_CO2.AutoSize = true;
             this.label_Main_GWP_CO2.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_GWP_CO2.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_GWP_CO2.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_GWP_CO2.Location = new System.Drawing.Point(2, 12);
             this.label_Main_GWP_CO2.Name = "label_Main_GWP_CO2";
-            this.label_Main_GWP_CO2.Size = new System.Drawing.Size(33, 18);
+            this.label_Main_GWP_CO2.Size = new System.Drawing.Size(43, 19);
             this.label_Main_GWP_CO2.TabIndex = 265;
             this.label_Main_GWP_CO2.Text = "CO2";
             // 
             // label_Aux_Engine_Chars
             // 
             this.label_Aux_Engine_Chars.AutoSize = true;
-            this.label_Aux_Engine_Chars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(205)))), ((int)(((byte)(12)))));
+            this.label_Aux_Engine_Chars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label_Aux_Engine_Chars.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Aux_Engine_Chars.Location = new System.Drawing.Point(3, 1375);
+            this.label_Aux_Engine_Chars.Location = new System.Drawing.Point(1, 498);
             this.label_Aux_Engine_Chars.Margin = new System.Windows.Forms.Padding(0);
             this.label_Aux_Engine_Chars.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Aux_Engine_Chars.Name = "label_Aux_Engine_Chars";
             this.label_Aux_Engine_Chars.Size = new System.Drawing.Size(1210, 22);
             this.label_Aux_Engine_Chars.TabIndex = 131;
-            this.label_Aux_Engine_Chars.Text = "Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)";
+            this.label_Aux_Engine_Chars.Text = "Auxiliary Engine Characterization";
             this.label_Aux_Engine_Chars.Click += new System.EventHandler(this.label_Aux_Engine_Chars_Click);
             // 
             // panel_main_engine_inputs
@@ -3807,7 +3787,7 @@
             this.panel_main_engine_inputs.Controls.Add(this.label_Main_Inputs_CO);
             this.panel_main_engine_inputs.Controls.Add(this.Res_NOX);
             this.panel_main_engine_inputs.Controls.Add(this.label_Main_Inputs_NOX);
-            this.panel_main_engine_inputs.Location = new System.Drawing.Point(6, 969);
+            this.panel_main_engine_inputs.Location = new System.Drawing.Point(4, 681);
             this.panel_main_engine_inputs.Margin = new System.Windows.Forms.Padding(2);
             this.panel_main_engine_inputs.Name = "panel_main_engine_inputs";
             this.panel_main_engine_inputs.Size = new System.Drawing.Size(1200, 267);
@@ -3827,7 +3807,7 @@
             // 
             this.Ult_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Ult_CH4.DecimalPlaces = 3;
-            this.Ult_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ult_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ult_CH4.Location = new System.Drawing.Point(600, 207);
             this.Ult_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -3835,14 +3815,14 @@
             542101,
             0});
             this.Ult_CH4.Name = "Ult_CH4";
-            this.Ult_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Ult_CH4.Size = new System.Drawing.Size(97, 23);
             this.Ult_CH4.TabIndex = 340;
             // 
             // Ult_N2O
             // 
             this.Ult_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Ult_N2O.DecimalPlaces = 3;
-            this.Ult_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ult_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ult_N2O.Location = new System.Drawing.Point(600, 180);
             this.Ult_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -3850,14 +3830,14 @@
             542101,
             0});
             this.Ult_N2O.Name = "Ult_N2O";
-            this.Ult_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Ult_N2O.Size = new System.Drawing.Size(97, 23);
             this.Ult_N2O.TabIndex = 339;
             // 
             // Ult_PM25
             // 
             this.Ult_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Ult_PM25.DecimalPlaces = 3;
-            this.Ult_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ult_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ult_PM25.Location = new System.Drawing.Point(600, 154);
             this.Ult_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -3865,14 +3845,14 @@
             542101,
             0});
             this.Ult_PM25.Name = "Ult_PM25";
-            this.Ult_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Ult_PM25.Size = new System.Drawing.Size(97, 23);
             this.Ult_PM25.TabIndex = 338;
             // 
             // Ult_PM10
             // 
             this.Ult_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Ult_PM10.DecimalPlaces = 3;
-            this.Ult_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ult_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ult_PM10.Location = new System.Drawing.Point(600, 127);
             this.Ult_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -3880,14 +3860,14 @@
             542101,
             0});
             this.Ult_PM10.Name = "Ult_PM10";
-            this.Ult_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Ult_PM10.Size = new System.Drawing.Size(97, 23);
             this.Ult_PM10.TabIndex = 337;
             // 
             // Ult_VOC
             // 
             this.Ult_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Ult_VOC.DecimalPlaces = 3;
-            this.Ult_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ult_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ult_VOC.Location = new System.Drawing.Point(600, 100);
             this.Ult_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -3895,14 +3875,14 @@
             542101,
             0});
             this.Ult_VOC.Name = "Ult_VOC";
-            this.Ult_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Ult_VOC.Size = new System.Drawing.Size(97, 23);
             this.Ult_VOC.TabIndex = 336;
             // 
             // Ult_CO
             // 
             this.Ult_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Ult_CO.DecimalPlaces = 3;
-            this.Ult_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ult_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ult_CO.Location = new System.Drawing.Point(600, 74);
             this.Ult_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -3910,14 +3890,14 @@
             542101,
             0});
             this.Ult_CO.Name = "Ult_CO";
-            this.Ult_CO.Size = new System.Drawing.Size(97, 22);
+            this.Ult_CO.Size = new System.Drawing.Size(97, 23);
             this.Ult_CO.TabIndex = 335;
             // 
             // Ult_NOX
             // 
             this.Ult_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Ult_NOX.DecimalPlaces = 3;
-            this.Ult_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ult_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ult_NOX.Location = new System.Drawing.Point(600, 48);
             this.Ult_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -3925,7 +3905,7 @@
             542101,
             0});
             this.Ult_NOX.Name = "Ult_NOX";
-            this.Ult_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Ult_NOX.Size = new System.Drawing.Size(97, 23);
             this.Ult_NOX.TabIndex = 334;
             // 
             // Main_Biodiesel_Label
@@ -3942,7 +3922,7 @@
             // 
             this.Bio_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Bio_CH4.DecimalPlaces = 3;
-            this.Bio_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bio_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bio_CH4.Location = new System.Drawing.Point(497, 207);
             this.Bio_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -3950,14 +3930,14 @@
             542101,
             0});
             this.Bio_CH4.Name = "Bio_CH4";
-            this.Bio_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Bio_CH4.Size = new System.Drawing.Size(97, 23);
             this.Bio_CH4.TabIndex = 332;
             // 
             // Bio_N2O
             // 
             this.Bio_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Bio_N2O.DecimalPlaces = 3;
-            this.Bio_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bio_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bio_N2O.Location = new System.Drawing.Point(497, 180);
             this.Bio_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -3965,14 +3945,14 @@
             542101,
             0});
             this.Bio_N2O.Name = "Bio_N2O";
-            this.Bio_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Bio_N2O.Size = new System.Drawing.Size(97, 23);
             this.Bio_N2O.TabIndex = 331;
             // 
             // Bio_PM25
             // 
             this.Bio_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Bio_PM25.DecimalPlaces = 3;
-            this.Bio_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bio_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bio_PM25.Location = new System.Drawing.Point(497, 154);
             this.Bio_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -3980,14 +3960,14 @@
             542101,
             0});
             this.Bio_PM25.Name = "Bio_PM25";
-            this.Bio_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Bio_PM25.Size = new System.Drawing.Size(97, 23);
             this.Bio_PM25.TabIndex = 330;
             // 
             // Bio_PM10
             // 
             this.Bio_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Bio_PM10.DecimalPlaces = 3;
-            this.Bio_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bio_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bio_PM10.Location = new System.Drawing.Point(497, 127);
             this.Bio_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -3995,14 +3975,14 @@
             542101,
             0});
             this.Bio_PM10.Name = "Bio_PM10";
-            this.Bio_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Bio_PM10.Size = new System.Drawing.Size(97, 23);
             this.Bio_PM10.TabIndex = 329;
             // 
             // Bio_VOC
             // 
             this.Bio_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Bio_VOC.DecimalPlaces = 3;
-            this.Bio_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bio_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bio_VOC.Location = new System.Drawing.Point(497, 100);
             this.Bio_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -4010,14 +3990,14 @@
             542101,
             0});
             this.Bio_VOC.Name = "Bio_VOC";
-            this.Bio_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Bio_VOC.Size = new System.Drawing.Size(97, 23);
             this.Bio_VOC.TabIndex = 328;
             // 
             // Bio_CO
             // 
             this.Bio_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Bio_CO.DecimalPlaces = 3;
-            this.Bio_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bio_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bio_CO.Location = new System.Drawing.Point(497, 74);
             this.Bio_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -4025,14 +4005,14 @@
             542101,
             0});
             this.Bio_CO.Name = "Bio_CO";
-            this.Bio_CO.Size = new System.Drawing.Size(97, 22);
+            this.Bio_CO.Size = new System.Drawing.Size(97, 23);
             this.Bio_CO.TabIndex = 327;
             // 
             // Bio_NOX
             // 
             this.Bio_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Bio_NOX.DecimalPlaces = 3;
-            this.Bio_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bio_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bio_NOX.Location = new System.Drawing.Point(497, 48);
             this.Bio_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -4040,7 +4020,7 @@
             542101,
             0});
             this.Bio_NOX.Name = "Bio_NOX";
-            this.Bio_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Bio_NOX.Size = new System.Drawing.Size(97, 23);
             this.Bio_NOX.TabIndex = 326;
             // 
             // Main_Fischer_Label
@@ -4057,7 +4037,7 @@
             // 
             this.Fis_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Fis_CH4.DecimalPlaces = 3;
-            this.Fis_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fis_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fis_CH4.Location = new System.Drawing.Point(391, 207);
             this.Fis_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -4065,14 +4045,14 @@
             542101,
             0});
             this.Fis_CH4.Name = "Fis_CH4";
-            this.Fis_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Fis_CH4.Size = new System.Drawing.Size(97, 23);
             this.Fis_CH4.TabIndex = 324;
             // 
             // Fis_N2O
             // 
             this.Fis_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Fis_N2O.DecimalPlaces = 3;
-            this.Fis_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fis_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fis_N2O.Location = new System.Drawing.Point(391, 180);
             this.Fis_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -4080,14 +4060,14 @@
             542101,
             0});
             this.Fis_N2O.Name = "Fis_N2O";
-            this.Fis_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Fis_N2O.Size = new System.Drawing.Size(97, 23);
             this.Fis_N2O.TabIndex = 323;
             // 
             // Fis_PM25
             // 
             this.Fis_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Fis_PM25.DecimalPlaces = 3;
-            this.Fis_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fis_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fis_PM25.Location = new System.Drawing.Point(391, 154);
             this.Fis_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -4095,14 +4075,14 @@
             542101,
             0});
             this.Fis_PM25.Name = "Fis_PM25";
-            this.Fis_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Fis_PM25.Size = new System.Drawing.Size(97, 23);
             this.Fis_PM25.TabIndex = 322;
             // 
             // Fis_PM10
             // 
             this.Fis_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Fis_PM10.DecimalPlaces = 3;
-            this.Fis_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fis_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fis_PM10.Location = new System.Drawing.Point(391, 127);
             this.Fis_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -4110,14 +4090,14 @@
             542101,
             0});
             this.Fis_PM10.Name = "Fis_PM10";
-            this.Fis_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Fis_PM10.Size = new System.Drawing.Size(97, 23);
             this.Fis_PM10.TabIndex = 321;
             // 
             // Fis_VOC
             // 
             this.Fis_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Fis_VOC.DecimalPlaces = 3;
-            this.Fis_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fis_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fis_VOC.Location = new System.Drawing.Point(391, 100);
             this.Fis_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -4125,14 +4105,14 @@
             542101,
             0});
             this.Fis_VOC.Name = "Fis_VOC";
-            this.Fis_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Fis_VOC.Size = new System.Drawing.Size(97, 23);
             this.Fis_VOC.TabIndex = 320;
             // 
             // Fis_CO
             // 
             this.Fis_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Fis_CO.DecimalPlaces = 3;
-            this.Fis_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fis_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fis_CO.Location = new System.Drawing.Point(391, 74);
             this.Fis_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -4140,14 +4120,14 @@
             542101,
             0});
             this.Fis_CO.Name = "Fis_CO";
-            this.Fis_CO.Size = new System.Drawing.Size(97, 22);
+            this.Fis_CO.Size = new System.Drawing.Size(97, 23);
             this.Fis_CO.TabIndex = 319;
             // 
             // Fis_NOX
             // 
             this.Fis_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Fis_NOX.DecimalPlaces = 3;
-            this.Fis_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fis_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fis_NOX.Location = new System.Drawing.Point(391, 48);
             this.Fis_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -4155,7 +4135,7 @@
             542101,
             0});
             this.Fis_NOX.Name = "Fis_NOX";
-            this.Fis_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Fis_NOX.Size = new System.Drawing.Size(97, 23);
             this.Fis_NOX.TabIndex = 318;
             // 
             // Main_Natural_Gas_Label
@@ -4172,7 +4152,7 @@
             // 
             this.Nat_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Nat_CH4.DecimalPlaces = 3;
-            this.Nat_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nat_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nat_CH4.Location = new System.Drawing.Point(288, 207);
             this.Nat_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -4180,14 +4160,14 @@
             542101,
             0});
             this.Nat_CH4.Name = "Nat_CH4";
-            this.Nat_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Nat_CH4.Size = new System.Drawing.Size(97, 23);
             this.Nat_CH4.TabIndex = 316;
             // 
             // Nat_N2O
             // 
             this.Nat_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Nat_N2O.DecimalPlaces = 3;
-            this.Nat_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nat_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nat_N2O.Location = new System.Drawing.Point(288, 180);
             this.Nat_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -4195,14 +4175,14 @@
             542101,
             0});
             this.Nat_N2O.Name = "Nat_N2O";
-            this.Nat_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Nat_N2O.Size = new System.Drawing.Size(97, 23);
             this.Nat_N2O.TabIndex = 315;
             // 
             // Nat_PM25
             // 
             this.Nat_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Nat_PM25.DecimalPlaces = 3;
-            this.Nat_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nat_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nat_PM25.Location = new System.Drawing.Point(288, 154);
             this.Nat_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -4210,14 +4190,14 @@
             542101,
             0});
             this.Nat_PM25.Name = "Nat_PM25";
-            this.Nat_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Nat_PM25.Size = new System.Drawing.Size(97, 23);
             this.Nat_PM25.TabIndex = 314;
             // 
             // Nat_PM10
             // 
             this.Nat_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Nat_PM10.DecimalPlaces = 3;
-            this.Nat_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nat_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nat_PM10.Location = new System.Drawing.Point(288, 127);
             this.Nat_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -4225,14 +4205,14 @@
             542101,
             0});
             this.Nat_PM10.Name = "Nat_PM10";
-            this.Nat_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Nat_PM10.Size = new System.Drawing.Size(97, 23);
             this.Nat_PM10.TabIndex = 313;
             // 
             // Nat_VOC
             // 
             this.Nat_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Nat_VOC.DecimalPlaces = 3;
-            this.Nat_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nat_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nat_VOC.Location = new System.Drawing.Point(288, 100);
             this.Nat_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -4240,14 +4220,14 @@
             542101,
             0});
             this.Nat_VOC.Name = "Nat_VOC";
-            this.Nat_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Nat_VOC.Size = new System.Drawing.Size(97, 23);
             this.Nat_VOC.TabIndex = 312;
             // 
             // Nat_CO
             // 
             this.Nat_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Nat_CO.DecimalPlaces = 3;
-            this.Nat_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nat_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nat_CO.Location = new System.Drawing.Point(288, 74);
             this.Nat_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -4255,14 +4235,14 @@
             542101,
             0});
             this.Nat_CO.Name = "Nat_CO";
-            this.Nat_CO.Size = new System.Drawing.Size(97, 22);
+            this.Nat_CO.Size = new System.Drawing.Size(97, 23);
             this.Nat_CO.TabIndex = 311;
             // 
             // Nat_NOX
             // 
             this.Nat_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Nat_NOX.DecimalPlaces = 3;
-            this.Nat_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nat_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nat_NOX.Location = new System.Drawing.Point(288, 48);
             this.Nat_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -4270,7 +4250,7 @@
             542101,
             0});
             this.Nat_NOX.Name = "Nat_NOX";
-            this.Nat_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Nat_NOX.Size = new System.Drawing.Size(97, 23);
             this.Nat_NOX.TabIndex = 310;
             // 
             // Main_Diesel_Label
@@ -4287,7 +4267,7 @@
             // 
             this.Die_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Die_CH4.DecimalPlaces = 3;
-            this.Die_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Die_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Die_CH4.Location = new System.Drawing.Point(185, 207);
             this.Die_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -4295,14 +4275,14 @@
             542101,
             0});
             this.Die_CH4.Name = "Die_CH4";
-            this.Die_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Die_CH4.Size = new System.Drawing.Size(97, 23);
             this.Die_CH4.TabIndex = 308;
             // 
             // Die_N2O
             // 
             this.Die_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Die_N2O.DecimalPlaces = 3;
-            this.Die_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Die_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Die_N2O.Location = new System.Drawing.Point(185, 180);
             this.Die_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -4310,14 +4290,14 @@
             542101,
             0});
             this.Die_N2O.Name = "Die_N2O";
-            this.Die_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Die_N2O.Size = new System.Drawing.Size(97, 23);
             this.Die_N2O.TabIndex = 306;
             // 
             // Die_PM25
             // 
             this.Die_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Die_PM25.DecimalPlaces = 3;
-            this.Die_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Die_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Die_PM25.Location = new System.Drawing.Point(185, 154);
             this.Die_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -4325,14 +4305,14 @@
             542101,
             0});
             this.Die_PM25.Name = "Die_PM25";
-            this.Die_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Die_PM25.Size = new System.Drawing.Size(97, 23);
             this.Die_PM25.TabIndex = 305;
             // 
             // Die_PM10
             // 
             this.Die_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Die_PM10.DecimalPlaces = 3;
-            this.Die_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Die_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Die_PM10.Location = new System.Drawing.Point(185, 127);
             this.Die_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -4340,14 +4320,14 @@
             542101,
             0});
             this.Die_PM10.Name = "Die_PM10";
-            this.Die_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Die_PM10.Size = new System.Drawing.Size(97, 23);
             this.Die_PM10.TabIndex = 304;
             // 
             // Die_VOC
             // 
             this.Die_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Die_VOC.DecimalPlaces = 3;
-            this.Die_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Die_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Die_VOC.Location = new System.Drawing.Point(185, 100);
             this.Die_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -4355,14 +4335,14 @@
             542101,
             0});
             this.Die_VOC.Name = "Die_VOC";
-            this.Die_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Die_VOC.Size = new System.Drawing.Size(97, 23);
             this.Die_VOC.TabIndex = 303;
             // 
             // Die_CO
             // 
             this.Die_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Die_CO.DecimalPlaces = 3;
-            this.Die_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Die_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Die_CO.Location = new System.Drawing.Point(185, 74);
             this.Die_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -4370,14 +4350,14 @@
             542101,
             0});
             this.Die_CO.Name = "Die_CO";
-            this.Die_CO.Size = new System.Drawing.Size(97, 22);
+            this.Die_CO.Size = new System.Drawing.Size(97, 23);
             this.Die_CO.TabIndex = 302;
             // 
             // Die_NOX
             // 
             this.Die_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Die_NOX.DecimalPlaces = 3;
-            this.Die_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Die_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Die_NOX.Location = new System.Drawing.Point(185, 48);
             this.Die_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -4385,7 +4365,7 @@
             542101,
             0});
             this.Die_NOX.Name = "Die_NOX";
-            this.Die_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Die_NOX.Size = new System.Drawing.Size(97, 23);
             this.Die_NOX.TabIndex = 301;
             // 
             // Main_Residual_Oil_Label
@@ -4402,7 +4382,7 @@
             // 
             this.Res_CH4.BackColor = System.Drawing.SystemColors.Window;
             this.Res_CH4.DecimalPlaces = 3;
-            this.Res_CH4.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res_CH4.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Res_CH4.Location = new System.Drawing.Point(79, 207);
             this.Res_CH4.Maximum = new decimal(new int[] {
             1241513984,
@@ -4410,17 +4390,17 @@
             542101,
             0});
             this.Res_CH4.Name = "Res_CH4";
-            this.Res_CH4.Size = new System.Drawing.Size(97, 22);
+            this.Res_CH4.Size = new System.Drawing.Size(97, 23);
             this.Res_CH4.TabIndex = 298;
             // 
             // label_Main_Inputs_CH4
             // 
             this.label_Main_Inputs_CH4.AutoSize = true;
             this.label_Main_Inputs_CH4.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Inputs_CH4.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_CH4.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_Inputs_CH4.Location = new System.Drawing.Point(2, 212);
             this.label_Main_Inputs_CH4.Name = "label_Main_Inputs_CH4";
-            this.label_Main_Inputs_CH4.Size = new System.Drawing.Size(34, 18);
+            this.label_Main_Inputs_CH4.Size = new System.Drawing.Size(41, 19);
             this.label_Main_Inputs_CH4.TabIndex = 297;
             this.label_Main_Inputs_CH4.Text = "CH4";
             // 
@@ -4428,7 +4408,7 @@
             // 
             this.Res_N2O.BackColor = System.Drawing.SystemColors.Window;
             this.Res_N2O.DecimalPlaces = 3;
-            this.Res_N2O.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res_N2O.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Res_N2O.Location = new System.Drawing.Point(79, 180);
             this.Res_N2O.Maximum = new decimal(new int[] {
             1241513984,
@@ -4436,17 +4416,17 @@
             542101,
             0});
             this.Res_N2O.Name = "Res_N2O";
-            this.Res_N2O.Size = new System.Drawing.Size(97, 22);
+            this.Res_N2O.Size = new System.Drawing.Size(97, 23);
             this.Res_N2O.TabIndex = 296;
             // 
             // label_Main_Inputs_N2O
             // 
             this.label_Main_Inputs_N2O.AutoSize = true;
             this.label_Main_Inputs_N2O.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Inputs_N2O.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_N2O.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_Inputs_N2O.Location = new System.Drawing.Point(2, 185);
             this.label_Main_Inputs_N2O.Name = "label_Main_Inputs_N2O";
-            this.label_Main_Inputs_N2O.Size = new System.Drawing.Size(35, 18);
+            this.label_Main_Inputs_N2O.Size = new System.Drawing.Size(45, 19);
             this.label_Main_Inputs_N2O.TabIndex = 295;
             this.label_Main_Inputs_N2O.Text = "N2O";
             // 
@@ -4454,7 +4434,7 @@
             // 
             this.Res_PM25.BackColor = System.Drawing.SystemColors.Window;
             this.Res_PM25.DecimalPlaces = 3;
-            this.Res_PM25.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res_PM25.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Res_PM25.Location = new System.Drawing.Point(79, 154);
             this.Res_PM25.Maximum = new decimal(new int[] {
             1241513984,
@@ -4462,17 +4442,17 @@
             542101,
             0});
             this.Res_PM25.Name = "Res_PM25";
-            this.Res_PM25.Size = new System.Drawing.Size(97, 22);
+            this.Res_PM25.Size = new System.Drawing.Size(97, 23);
             this.Res_PM25.TabIndex = 294;
             // 
             // label_Main_Inputs_PM25
             // 
             this.label_Main_Inputs_PM25.AutoSize = true;
             this.label_Main_Inputs_PM25.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Inputs_PM25.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_PM25.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_Inputs_PM25.Location = new System.Drawing.Point(2, 159);
             this.label_Main_Inputs_PM25.Name = "label_Main_Inputs_PM25";
-            this.label_Main_Inputs_PM25.Size = new System.Drawing.Size(47, 18);
+            this.label_Main_Inputs_PM25.Size = new System.Drawing.Size(56, 19);
             this.label_Main_Inputs_PM25.TabIndex = 293;
             this.label_Main_Inputs_PM25.Text = "PM2.5";
             // 
@@ -4480,7 +4460,7 @@
             // 
             this.Res_PM10.BackColor = System.Drawing.SystemColors.Window;
             this.Res_PM10.DecimalPlaces = 3;
-            this.Res_PM10.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res_PM10.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Res_PM10.Location = new System.Drawing.Point(79, 127);
             this.Res_PM10.Maximum = new decimal(new int[] {
             1241513984,
@@ -4488,17 +4468,17 @@
             542101,
             0});
             this.Res_PM10.Name = "Res_PM10";
-            this.Res_PM10.Size = new System.Drawing.Size(97, 22);
+            this.Res_PM10.Size = new System.Drawing.Size(97, 23);
             this.Res_PM10.TabIndex = 292;
             // 
             // label_Main_Inputs_PM10
             // 
             this.label_Main_Inputs_PM10.AutoSize = true;
             this.label_Main_Inputs_PM10.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Inputs_PM10.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_PM10.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_Inputs_PM10.Location = new System.Drawing.Point(2, 132);
             this.label_Main_Inputs_PM10.Name = "label_Main_Inputs_PM10";
-            this.label_Main_Inputs_PM10.Size = new System.Drawing.Size(43, 18);
+            this.label_Main_Inputs_PM10.Size = new System.Drawing.Size(51, 19);
             this.label_Main_Inputs_PM10.TabIndex = 291;
             this.label_Main_Inputs_PM10.Text = "PM10";
             // 
@@ -4506,7 +4486,7 @@
             // 
             this.Res_VOC.BackColor = System.Drawing.SystemColors.Window;
             this.Res_VOC.DecimalPlaces = 3;
-            this.Res_VOC.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res_VOC.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Res_VOC.Location = new System.Drawing.Point(79, 101);
             this.Res_VOC.Maximum = new decimal(new int[] {
             1241513984,
@@ -4514,17 +4494,17 @@
             542101,
             0});
             this.Res_VOC.Name = "Res_VOC";
-            this.Res_VOC.Size = new System.Drawing.Size(97, 22);
+            this.Res_VOC.Size = new System.Drawing.Size(97, 23);
             this.Res_VOC.TabIndex = 290;
             // 
             // label_Main_Inputs_VOC
             // 
             this.label_Main_Inputs_VOC.AutoSize = true;
             this.label_Main_Inputs_VOC.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Inputs_VOC.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_VOC.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_Inputs_VOC.Location = new System.Drawing.Point(2, 105);
             this.label_Main_Inputs_VOC.Name = "label_Main_Inputs_VOC";
-            this.label_Main_Inputs_VOC.Size = new System.Drawing.Size(36, 18);
+            this.label_Main_Inputs_VOC.Size = new System.Drawing.Size(44, 19);
             this.label_Main_Inputs_VOC.TabIndex = 289;
             this.label_Main_Inputs_VOC.Text = "VOC";
             // 
@@ -4532,7 +4512,7 @@
             // 
             this.Res_CO.BackColor = System.Drawing.SystemColors.Window;
             this.Res_CO.DecimalPlaces = 3;
-            this.Res_CO.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res_CO.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Res_CO.Location = new System.Drawing.Point(79, 74);
             this.Res_CO.Maximum = new decimal(new int[] {
             1241513984,
@@ -4540,17 +4520,17 @@
             542101,
             0});
             this.Res_CO.Name = "Res_CO";
-            this.Res_CO.Size = new System.Drawing.Size(97, 22);
+            this.Res_CO.Size = new System.Drawing.Size(97, 23);
             this.Res_CO.TabIndex = 288;
             // 
             // label_Main_Inputs_CO
             // 
             this.label_Main_Inputs_CO.AutoSize = true;
             this.label_Main_Inputs_CO.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Inputs_CO.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_CO.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_Inputs_CO.Location = new System.Drawing.Point(2, 79);
             this.label_Main_Inputs_CO.Name = "label_Main_Inputs_CO";
-            this.label_Main_Inputs_CO.Size = new System.Drawing.Size(26, 18);
+            this.label_Main_Inputs_CO.Size = new System.Drawing.Size(33, 19);
             this.label_Main_Inputs_CO.TabIndex = 287;
             this.label_Main_Inputs_CO.Text = "CO";
             // 
@@ -4558,7 +4538,7 @@
             // 
             this.Res_NOX.BackColor = System.Drawing.SystemColors.Window;
             this.Res_NOX.DecimalPlaces = 3;
-            this.Res_NOX.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Res_NOX.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Res_NOX.Location = new System.Drawing.Point(79, 48);
             this.Res_NOX.Maximum = new decimal(new int[] {
             1241513984,
@@ -4566,26 +4546,26 @@
             542101,
             0});
             this.Res_NOX.Name = "Res_NOX";
-            this.Res_NOX.Size = new System.Drawing.Size(97, 22);
+            this.Res_NOX.Size = new System.Drawing.Size(97, 23);
             this.Res_NOX.TabIndex = 285;
             // 
             // label_Main_Inputs_NOX
             // 
             this.label_Main_Inputs_NOX.AutoSize = true;
             this.label_Main_Inputs_NOX.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Inputs_NOX.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Inputs_NOX.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_Inputs_NOX.Location = new System.Drawing.Point(2, 53);
             this.label_Main_Inputs_NOX.Name = "label_Main_Inputs_NOX";
-            this.label_Main_Inputs_NOX.Size = new System.Drawing.Size(38, 18);
+            this.label_Main_Inputs_NOX.Size = new System.Drawing.Size(45, 19);
             this.label_Main_Inputs_NOX.TabIndex = 265;
             this.label_Main_Inputs_NOX.Text = "NOX";
             // 
             // label_Main_Engine_Inputs
             // 
             this.label_Main_Engine_Inputs.AutoSize = true;
-            this.label_Main_Engine_Inputs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(101)))), ((int)(((byte)(203)))));
+            this.label_Main_Engine_Inputs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label_Main_Engine_Inputs.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Engine_Inputs.Location = new System.Drawing.Point(3, 949);
+            this.label_Main_Engine_Inputs.Location = new System.Drawing.Point(1, 661);
             this.label_Main_Engine_Inputs.Margin = new System.Windows.Forms.Padding(0);
             this.label_Main_Engine_Inputs.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Main_Engine_Inputs.Name = "label_Main_Engine_Inputs";
@@ -4598,15 +4578,15 @@
             // label_Main_Fuel_Calculations
             // 
             this.label_Main_Fuel_Calculations.AutoSize = true;
-            this.label_Main_Fuel_Calculations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(13)))));
+            this.label_Main_Fuel_Calculations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label_Main_Fuel_Calculations.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Fuel_Calculations.Location = new System.Drawing.Point(3, 515);
+            this.label_Main_Fuel_Calculations.Location = new System.Drawing.Point(0, 1222);
             this.label_Main_Fuel_Calculations.Margin = new System.Windows.Forms.Padding(0);
             this.label_Main_Fuel_Calculations.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Main_Fuel_Calculations.Name = "label_Main_Fuel_Calculations";
             this.label_Main_Fuel_Calculations.Size = new System.Drawing.Size(1210, 22);
             this.label_Main_Fuel_Calculations.TabIndex = 177;
-            this.label_Main_Fuel_Calculations.Text = "Fuel Calculations";
+            this.label_Main_Fuel_Calculations.Text = "Main Engine Fuel Calculations";
             this.label_Main_Fuel_Calculations.Click += new System.EventHandler(this.label_Main_Fuel_Calculations_Click);
             // 
             // label160
@@ -4621,23 +4601,23 @@
             // label_Main_Engine_Char_Per_Mode
             // 
             this.label_Main_Engine_Char_Per_Mode.AutoSize = true;
-            this.label_Main_Engine_Char_Per_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(205)))), ((int)(((byte)(12)))));
+            this.label_Main_Engine_Char_Per_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.label_Main_Engine_Char_Per_Mode.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Engine_Char_Per_Mode.Location = new System.Drawing.Point(3, 306);
+            this.label_Main_Engine_Char_Per_Mode.Location = new System.Drawing.Point(0, 288);
             this.label_Main_Engine_Char_Per_Mode.Margin = new System.Windows.Forms.Padding(0);
             this.label_Main_Engine_Char_Per_Mode.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Main_Engine_Char_Per_Mode.Name = "label_Main_Engine_Char_Per_Mode";
             this.label_Main_Engine_Char_Per_Mode.Size = new System.Drawing.Size(1210, 22);
             this.label_Main_Engine_Char_Per_Mode.TabIndex = 130;
-            this.label_Main_Engine_Char_Per_Mode.Text = "Engine Characterization Per Mode";
+            this.label_Main_Engine_Char_Per_Mode.Text = "Main Engine Characterization Per Mode";
             this.label_Main_Engine_Char_Per_Mode.Click += new System.EventHandler(this.label_Main_Engine_Char_Per_Mode_Click);
             // 
             // label_Main_Engine_Vars
             // 
             this.label_Main_Engine_Vars.AutoSize = true;
-            this.label_Main_Engine_Vars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(232)))), ((int)(((byte)(197)))));
+            this.label_Main_Engine_Vars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label_Main_Engine_Vars.Font = new System.Drawing.Font("Helvetica Neue", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Engine_Vars.Location = new System.Drawing.Point(3, 6);
+            this.label_Main_Engine_Vars.Location = new System.Drawing.Point(0, 4);
             this.label_Main_Engine_Vars.Margin = new System.Windows.Forms.Padding(0);
             this.label_Main_Engine_Vars.MinimumSize = new System.Drawing.Size(1210, 18);
             this.label_Main_Engine_Vars.Name = "label_Main_Engine_Vars";
@@ -4658,7 +4638,7 @@
             this.panel_Main_Engine_Vars.Controls.Add(this.updown_Tot_Onboard_HP);
             this.panel_Main_Engine_Vars.Controls.Add(this.label_Main_Vessel_ID);
             this.panel_Main_Engine_Vars.Controls.Add(this.textBox_Vessel_Type);
-            this.panel_Main_Engine_Vars.Location = new System.Drawing.Point(6, 26);
+            this.panel_Main_Engine_Vars.Location = new System.Drawing.Point(3, 24);
             this.panel_Main_Engine_Vars.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Main_Engine_Vars.Name = "panel_Main_Engine_Vars";
             this.panel_Main_Engine_Vars.Size = new System.Drawing.Size(1200, 126);
@@ -4666,7 +4646,7 @@
             // 
             // updown_Single_Engine_HP
             // 
-            this.updown_Single_Engine_HP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Single_Engine_HP.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Single_Engine_HP.Location = new System.Drawing.Point(173, 63);
             this.updown_Single_Engine_HP.Maximum = new decimal(new int[] {
             1000000,
@@ -4712,7 +4692,7 @@
             // 
             // updown_Number_Of_Engines
             // 
-            this.updown_Number_Of_Engines.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Number_Of_Engines.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Number_Of_Engines.Location = new System.Drawing.Point(173, 37);
             this.updown_Number_Of_Engines.Maximum = new decimal(new int[] {
             1000000,
@@ -4727,7 +4707,7 @@
             // 
             this.updown_Tot_Onboard_HP.BackColor = System.Drawing.SystemColors.Window;
             this.updown_Tot_Onboard_HP.Enabled = false;
-            this.updown_Tot_Onboard_HP.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Tot_Onboard_HP.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Tot_Onboard_HP.Location = new System.Drawing.Point(173, 88);
             this.updown_Tot_Onboard_HP.Maximum = new decimal(new int[] {
             1241513984,
@@ -4752,11 +4732,11 @@
             // 
             // textBox_Vessel_Type
             // 
-            this.textBox_Vessel_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Vessel_Type.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Vessel_Type.Location = new System.Drawing.Point(173, 10);
             this.textBox_Vessel_Type.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Vessel_Type.Name = "textBox_Vessel_Type";
-            this.textBox_Vessel_Type.Size = new System.Drawing.Size(199, 23);
+            this.textBox_Vessel_Type.Size = new System.Drawing.Size(199, 22);
             this.textBox_Vessel_Type.TabIndex = 109;
             // 
             // panel_Main_Engine_Chars
@@ -4810,7 +4790,7 @@
             this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_In_Mode);
             this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_HP_Load_Factor);
             this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Time_Per_Mode);
-            this.panel_Main_Engine_Chars.Location = new System.Drawing.Point(6, 326);
+            this.panel_Main_Engine_Chars.Location = new System.Drawing.Point(3, 308);
             this.panel_Main_Engine_Chars.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Main_Engine_Chars.Name = "panel_Main_Engine_Chars";
             this.panel_Main_Engine_Chars.Size = new System.Drawing.Size(1200, 187);
@@ -4843,7 +4823,7 @@
             this.updown_EP_Total.BackColor = System.Drawing.SystemColors.Window;
             this.updown_EP_Total.DecimalPlaces = 2;
             this.updown_EP_Total.Enabled = false;
-            this.updown_EP_Total.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_EP_Total.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_EP_Total.Location = new System.Drawing.Point(282, 148);
             this.updown_EP_Total.Maximum = new decimal(new int[] {
             1241513984,
@@ -4871,7 +4851,7 @@
             this.updown_EP_Slow_Cruise.BackColor = System.Drawing.SystemColors.Window;
             this.updown_EP_Slow_Cruise.DecimalPlaces = 2;
             this.updown_EP_Slow_Cruise.Enabled = false;
-            this.updown_EP_Slow_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_EP_Slow_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_EP_Slow_Cruise.Location = new System.Drawing.Point(542, 122);
             this.updown_EP_Slow_Cruise.Maximum = new decimal(new int[] {
             1241513984,
@@ -4898,7 +4878,7 @@
             // 
             this.updown_HP_Slow_Cruise.BackColor = System.Drawing.SystemColors.Window;
             this.updown_HP_Slow_Cruise.Enabled = false;
-            this.updown_HP_Slow_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_HP_Slow_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_HP_Slow_Cruise.Location = new System.Drawing.Point(542, 96);
             this.updown_HP_Slow_Cruise.Maximum = new decimal(new int[] {
             1241513984,
@@ -4924,7 +4904,7 @@
             // updown_Horsepower_Slow_Cruise
             // 
             this.updown_Horsepower_Slow_Cruise.DecimalPlaces = 2;
-            this.updown_Horsepower_Slow_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Slow_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Horsepower_Slow_Cruise.Location = new System.Drawing.Point(542, 72);
             this.updown_Horsepower_Slow_Cruise.Maximum = new decimal(new int[] {
             1000000,
@@ -4951,7 +4931,7 @@
             this.updown_Time_Slow_Cruise.BackColor = System.Drawing.SystemColors.Window;
             this.updown_Time_Slow_Cruise.DecimalPlaces = 2;
             this.updown_Time_Slow_Cruise.Enabled = false;
-            this.updown_Time_Slow_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Slow_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Time_Slow_Cruise.Location = new System.Drawing.Point(542, 48);
             this.updown_Time_Slow_Cruise.Maximum = new decimal(new int[] {
             1241513984,
@@ -4977,7 +4957,7 @@
             // updown_Percent_Slow_Cruise
             // 
             this.updown_Percent_Slow_Cruise.DecimalPlaces = 2;
-            this.updown_Percent_Slow_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Slow_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Slow_Cruise.Location = new System.Drawing.Point(542, 22);
             this.updown_Percent_Slow_Cruise.Name = "updown_Percent_Slow_Cruise";
             this.updown_Percent_Slow_Cruise.Size = new System.Drawing.Size(64, 22);
@@ -4999,7 +4979,7 @@
             this.updown_EP_Precautionary.BackColor = System.Drawing.SystemColors.Window;
             this.updown_EP_Precautionary.DecimalPlaces = 2;
             this.updown_EP_Precautionary.Enabled = false;
-            this.updown_EP_Precautionary.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_EP_Precautionary.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_EP_Precautionary.Location = new System.Drawing.Point(451, 122);
             this.updown_EP_Precautionary.Maximum = new decimal(new int[] {
             1241513984,
@@ -5026,7 +5006,7 @@
             // 
             this.updown_HP_Precautionary.BackColor = System.Drawing.SystemColors.Window;
             this.updown_HP_Precautionary.Enabled = false;
-            this.updown_HP_Precautionary.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_HP_Precautionary.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_HP_Precautionary.Location = new System.Drawing.Point(451, 96);
             this.updown_HP_Precautionary.Maximum = new decimal(new int[] {
             1241513984,
@@ -5043,7 +5023,7 @@
             this.updown_EP_Full_Cruise.BackColor = System.Drawing.SystemColors.Window;
             this.updown_EP_Full_Cruise.DecimalPlaces = 2;
             this.updown_EP_Full_Cruise.Enabled = false;
-            this.updown_EP_Full_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_EP_Full_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_EP_Full_Cruise.Location = new System.Drawing.Point(628, 122);
             this.updown_EP_Full_Cruise.Maximum = new decimal(new int[] {
             1241513984,
@@ -5058,7 +5038,7 @@
             // updown_Horsepower_Precautionary
             // 
             this.updown_Horsepower_Precautionary.DecimalPlaces = 2;
-            this.updown_Horsepower_Precautionary.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Precautionary.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Horsepower_Precautionary.Location = new System.Drawing.Point(451, 72);
             this.updown_Horsepower_Precautionary.Maximum = new decimal(new int[] {
             1000000,
@@ -5085,7 +5065,7 @@
             this.updown_Time_Precautionary.BackColor = System.Drawing.SystemColors.Window;
             this.updown_Time_Precautionary.DecimalPlaces = 2;
             this.updown_Time_Precautionary.Enabled = false;
-            this.updown_Time_Precautionary.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Precautionary.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Time_Precautionary.Location = new System.Drawing.Point(451, 48);
             this.updown_Time_Precautionary.Maximum = new decimal(new int[] {
             1241513984,
@@ -5100,7 +5080,7 @@
             // updown_Percent_Precautionary
             // 
             this.updown_Percent_Precautionary.DecimalPlaces = 2;
-            this.updown_Percent_Precautionary.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Precautionary.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Precautionary.Location = new System.Drawing.Point(451, 22);
             this.updown_Percent_Precautionary.Name = "updown_Percent_Precautionary";
             this.updown_Percent_Precautionary.Size = new System.Drawing.Size(68, 22);
@@ -5110,7 +5090,7 @@
             // 
             this.updown_HP_Full_Cruise.BackColor = System.Drawing.SystemColors.Window;
             this.updown_HP_Full_Cruise.Enabled = false;
-            this.updown_HP_Full_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_HP_Full_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_HP_Full_Cruise.Location = new System.Drawing.Point(628, 96);
             this.updown_HP_Full_Cruise.Maximum = new decimal(new int[] {
             1241513984,
@@ -5127,7 +5107,7 @@
             this.updown_EP_Maneuvering.BackColor = System.Drawing.SystemColors.Window;
             this.updown_EP_Maneuvering.DecimalPlaces = 2;
             this.updown_EP_Maneuvering.Enabled = false;
-            this.updown_EP_Maneuvering.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_EP_Maneuvering.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_EP_Maneuvering.Location = new System.Drawing.Point(371, 122);
             this.updown_EP_Maneuvering.Maximum = new decimal(new int[] {
             1241513984,
@@ -5154,7 +5134,7 @@
             // 
             this.updown_HP_Maneuvering.BackColor = System.Drawing.SystemColors.Window;
             this.updown_HP_Maneuvering.Enabled = false;
-            this.updown_HP_Maneuvering.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_HP_Maneuvering.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_HP_Maneuvering.Location = new System.Drawing.Point(371, 96);
             this.updown_HP_Maneuvering.Maximum = new decimal(new int[] {
             1241513984,
@@ -5169,7 +5149,7 @@
             // updown_Horsepower_Full_Cruise
             // 
             this.updown_Horsepower_Full_Cruise.DecimalPlaces = 2;
-            this.updown_Horsepower_Full_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Full_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Horsepower_Full_Cruise.Location = new System.Drawing.Point(628, 72);
             this.updown_Horsepower_Full_Cruise.Maximum = new decimal(new int[] {
             1000000,
@@ -5185,7 +5165,7 @@
             this.updown_Time_Maneuvering.BackColor = System.Drawing.SystemColors.Window;
             this.updown_Time_Maneuvering.DecimalPlaces = 2;
             this.updown_Time_Maneuvering.Enabled = false;
-            this.updown_Time_Maneuvering.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Maneuvering.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Time_Maneuvering.Location = new System.Drawing.Point(371, 48);
             this.updown_Time_Maneuvering.Maximum = new decimal(new int[] {
             1241513984,
@@ -5201,18 +5181,18 @@
             // 
             this.text_Main_Mode_5.BackColor = System.Drawing.Color.Silver;
             this.text_Main_Mode_5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text_Main_Mode_5.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_5.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_Main_Mode_5.Location = new System.Drawing.Point(628, 3);
             this.text_Main_Mode_5.Margin = new System.Windows.Forms.Padding(2);
             this.text_Main_Mode_5.Name = "text_Main_Mode_5";
-            this.text_Main_Mode_5.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_5.Size = new System.Drawing.Size(68, 20);
             this.text_Main_Mode_5.TabIndex = 278;
             this.text_Main_Mode_5.Text = "Mode 5";
             // 
             // updown_Percent_Maneuvering
             // 
             this.updown_Percent_Maneuvering.DecimalPlaces = 2;
-            this.updown_Percent_Maneuvering.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Maneuvering.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Maneuvering.Location = new System.Drawing.Point(371, 22);
             this.updown_Percent_Maneuvering.Name = "updown_Percent_Maneuvering";
             this.updown_Percent_Maneuvering.Size = new System.Drawing.Size(60, 22);
@@ -5223,7 +5203,7 @@
             this.updown_Time_Full_Cruise.BackColor = System.Drawing.SystemColors.Window;
             this.updown_Time_Full_Cruise.DecimalPlaces = 2;
             this.updown_Time_Full_Cruise.Enabled = false;
-            this.updown_Time_Full_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Full_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Time_Full_Cruise.Location = new System.Drawing.Point(628, 48);
             this.updown_Time_Full_Cruise.Maximum = new decimal(new int[] {
             1241513984,
@@ -5249,7 +5229,7 @@
             // updown_Percent_Full_Cruise
             // 
             this.updown_Percent_Full_Cruise.DecimalPlaces = 2;
-            this.updown_Percent_Full_Cruise.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Full_Cruise.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Full_Cruise.Location = new System.Drawing.Point(628, 22);
             this.updown_Percent_Full_Cruise.Name = "updown_Percent_Full_Cruise";
             this.updown_Percent_Full_Cruise.Size = new System.Drawing.Size(55, 22);
@@ -5260,7 +5240,7 @@
             this.updown_EP_Idle.BackColor = System.Drawing.SystemColors.Window;
             this.updown_EP_Idle.DecimalPlaces = 2;
             this.updown_EP_Idle.Enabled = false;
-            this.updown_EP_Idle.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_EP_Idle.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_EP_Idle.Location = new System.Drawing.Point(282, 122);
             this.updown_EP_Idle.Maximum = new decimal(new int[] {
             1241513984,
@@ -5276,11 +5256,11 @@
             // 
             this.text_Main_Mode_4.BackColor = System.Drawing.Color.Silver;
             this.text_Main_Mode_4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text_Main_Mode_4.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_4.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_Main_Mode_4.Location = new System.Drawing.Point(542, 3);
             this.text_Main_Mode_4.Margin = new System.Windows.Forms.Padding(2);
             this.text_Main_Mode_4.Name = "text_Main_Mode_4";
-            this.text_Main_Mode_4.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_4.Size = new System.Drawing.Size(68, 20);
             this.text_Main_Mode_4.TabIndex = 277;
             this.text_Main_Mode_4.Text = "Mode 4";
             // 
@@ -5299,11 +5279,11 @@
             // 
             this.text_Main_Mode_3.BackColor = System.Drawing.Color.Silver;
             this.text_Main_Mode_3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text_Main_Mode_3.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_3.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_Main_Mode_3.Location = new System.Drawing.Point(451, 3);
             this.text_Main_Mode_3.Margin = new System.Windows.Forms.Padding(2);
             this.text_Main_Mode_3.Name = "text_Main_Mode_3";
-            this.text_Main_Mode_3.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_3.Size = new System.Drawing.Size(68, 20);
             this.text_Main_Mode_3.TabIndex = 276;
             this.text_Main_Mode_3.Text = "Mode 3";
             // 
@@ -5311,7 +5291,7 @@
             // 
             this.updown_HP_Idle.BackColor = System.Drawing.SystemColors.Window;
             this.updown_HP_Idle.Enabled = false;
-            this.updown_HP_Idle.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_HP_Idle.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_HP_Idle.Location = new System.Drawing.Point(282, 96);
             this.updown_HP_Idle.Maximum = new decimal(new int[] {
             1241513984,
@@ -5327,18 +5307,18 @@
             // 
             this.text_Main_Mode_2.BackColor = System.Drawing.Color.Silver;
             this.text_Main_Mode_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text_Main_Mode_2.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_2.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_Main_Mode_2.Location = new System.Drawing.Point(371, 3);
             this.text_Main_Mode_2.Margin = new System.Windows.Forms.Padding(2);
             this.text_Main_Mode_2.Name = "text_Main_Mode_2";
-            this.text_Main_Mode_2.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_2.Size = new System.Drawing.Size(68, 20);
             this.text_Main_Mode_2.TabIndex = 275;
             this.text_Main_Mode_2.Text = "Mode 2";
             // 
             // updown_Horsepower_Idle
             // 
             this.updown_Horsepower_Idle.DecimalPlaces = 2;
-            this.updown_Horsepower_Idle.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Idle.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Horsepower_Idle.Location = new System.Drawing.Point(282, 72);
             this.updown_Horsepower_Idle.Maximum = new decimal(new int[] {
             1000000,
@@ -5353,11 +5333,11 @@
             // 
             this.text_Main_Mode_1.BackColor = System.Drawing.Color.Silver;
             this.text_Main_Mode_1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.text_Main_Mode_1.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_Main_Mode_1.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_Main_Mode_1.Location = new System.Drawing.Point(282, 3);
             this.text_Main_Mode_1.Margin = new System.Windows.Forms.Padding(2);
             this.text_Main_Mode_1.Name = "text_Main_Mode_1";
-            this.text_Main_Mode_1.Size = new System.Drawing.Size(68, 18);
+            this.text_Main_Mode_1.Size = new System.Drawing.Size(68, 20);
             this.text_Main_Mode_1.TabIndex = 274;
             this.text_Main_Mode_1.Text = "Mode 1";
             // 
@@ -5366,7 +5346,7 @@
             this.updown_Time_Idle.BackColor = System.Drawing.SystemColors.Window;
             this.updown_Time_Idle.DecimalPlaces = 2;
             this.updown_Time_Idle.Enabled = false;
-            this.updown_Time_Idle.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Time_Idle.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Time_Idle.Location = new System.Drawing.Point(282, 48);
             this.updown_Time_Idle.Maximum = new decimal(new int[] {
             1241513984,
@@ -5381,7 +5361,7 @@
             // updown_Horsepower_Maneuvering
             // 
             this.updown_Horsepower_Maneuvering.DecimalPlaces = 2;
-            this.updown_Horsepower_Maneuvering.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Horsepower_Maneuvering.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Horsepower_Maneuvering.Location = new System.Drawing.Point(371, 72);
             this.updown_Horsepower_Maneuvering.Maximum = new decimal(new int[] {
             1000000,
@@ -5395,7 +5375,7 @@
             // updown_Percent_Idle
             // 
             this.updown_Percent_Idle.DecimalPlaces = 2;
-            this.updown_Percent_Idle.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Percent_Idle.Font = new System.Drawing.Font("FuturaExtended", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updown_Percent_Idle.Location = new System.Drawing.Point(282, 22);
             this.updown_Percent_Idle.Name = "updown_Percent_Idle";
             this.updown_Percent_Idle.Size = new System.Drawing.Size(68, 22);
@@ -5450,7 +5430,7 @@
             this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_GALLON);
             this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_MMBTU_In);
             this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_mmbtu_In);
-            this.panel_Main_Fuel_Calculations.Location = new System.Drawing.Point(6, 535);
+            this.panel_Main_Fuel_Calculations.Location = new System.Drawing.Point(3, 1242);
             this.panel_Main_Fuel_Calculations.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Main_Fuel_Calculations.Name = "panel_Main_Fuel_Calculations";
             this.panel_Main_Fuel_Calculations.Size = new System.Drawing.Size(1200, 195);
@@ -5461,7 +5441,7 @@
             this.label_Main_Percent_11.AutoSize = true;
             this.label_Main_Percent_11.BackColor = System.Drawing.Color.Silver;
             this.label_Main_Percent_11.Font = new System.Drawing.Font("FuturaExtended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Percent_11.Location = new System.Drawing.Point(267, 17);
+            this.label_Main_Percent_11.Location = new System.Drawing.Point(340, 36);
             this.label_Main_Percent_11.Name = "label_Main_Percent_11";
             this.label_Main_Percent_11.Size = new System.Drawing.Size(20, 20);
             this.label_Main_Percent_11.TabIndex = 303;
@@ -5472,7 +5452,7 @@
             this.label_Main_Engine_Efficiency.AutoSize = true;
             this.label_Main_Engine_Efficiency.BackColor = System.Drawing.Color.Silver;
             this.label_Main_Engine_Efficiency.Font = new System.Drawing.Font("FuturaExtended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Engine_Efficiency.Location = new System.Drawing.Point(5, 21);
+            this.label_Main_Engine_Efficiency.Location = new System.Drawing.Point(5, 40);
             this.label_Main_Engine_Efficiency.Name = "label_Main_Engine_Efficiency";
             this.label_Main_Engine_Efficiency.Size = new System.Drawing.Size(121, 20);
             this.label_Main_Engine_Efficiency.TabIndex = 178;
@@ -5483,7 +5463,7 @@
             this.label_Main_KWH_Out.AutoSize = true;
             this.label_Main_KWH_Out.BackColor = System.Drawing.Color.Silver;
             this.label_Main_KWH_Out.Font = new System.Drawing.Font("FuturaExtended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_KWH_Out.Location = new System.Drawing.Point(5, 47);
+            this.label_Main_KWH_Out.Location = new System.Drawing.Point(5, 66);
             this.label_Main_KWH_Out.Name = "label_Main_KWH_Out";
             this.label_Main_KWH_Out.Size = new System.Drawing.Size(101, 20);
             this.label_Main_KWH_Out.TabIndex = 179;
@@ -5494,7 +5474,7 @@
             this.label_Main_mmbtu_Out.AutoSize = true;
             this.label_Main_mmbtu_Out.BackColor = System.Drawing.Color.Silver;
             this.label_Main_mmbtu_Out.Font = new System.Drawing.Font("FuturaExtended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_mmbtu_Out.Location = new System.Drawing.Point(5, 73);
+            this.label_Main_mmbtu_Out.Location = new System.Drawing.Point(5, 92);
             this.label_Main_mmbtu_Out.Name = "label_Main_mmbtu_Out";
             this.label_Main_mmbtu_Out.Size = new System.Drawing.Size(112, 20);
             this.label_Main_mmbtu_Out.TabIndex = 180;
@@ -5503,25 +5483,25 @@
             // updown_Engine_Efficiency
             // 
             this.updown_Engine_Efficiency.DecimalPlaces = 2;
-            this.updown_Engine_Efficiency.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_Engine_Efficiency.Location = new System.Drawing.Point(135, 17);
+            this.updown_Engine_Efficiency.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Engine_Efficiency.Location = new System.Drawing.Point(135, 36);
             this.updown_Engine_Efficiency.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.updown_Engine_Efficiency.Name = "updown_Engine_Efficiency";
-            this.updown_Engine_Efficiency.Size = new System.Drawing.Size(124, 22);
+            this.updown_Engine_Efficiency.Size = new System.Drawing.Size(207, 23);
             this.updown_Engine_Efficiency.TabIndex = 181;
             // 
             // label_Main_Baseline_Fuel_Consumption
             // 
             this.label_Main_Baseline_Fuel_Consumption.AutoSize = true;
             this.label_Main_Baseline_Fuel_Consumption.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Baseline_Fuel_Consumption.Font = new System.Drawing.Font("Bodoni MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Baseline_Fuel_Consumption.Location = new System.Drawing.Point(132, 0);
+            this.label_Main_Baseline_Fuel_Consumption.Font = new System.Drawing.Font("FuturaExtended", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Baseline_Fuel_Consumption.Location = new System.Drawing.Point(132, 19);
             this.label_Main_Baseline_Fuel_Consumption.Name = "label_Main_Baseline_Fuel_Consumption";
-            this.label_Main_Baseline_Fuel_Consumption.Size = new System.Drawing.Size(174, 18);
+            this.label_Main_Baseline_Fuel_Consumption.Size = new System.Drawing.Size(202, 19);
             this.label_Main_Baseline_Fuel_Consumption.TabIndex = 188;
             this.label_Main_Baseline_Fuel_Consumption.Text = "Baseline Fuel Consumption";
             // 
@@ -5530,8 +5510,8 @@
             this.updown_KW_HR_Out.BackColor = System.Drawing.SystemColors.Window;
             this.updown_KW_HR_Out.DecimalPlaces = 2;
             this.updown_KW_HR_Out.Enabled = false;
-            this.updown_KW_HR_Out.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_KW_HR_Out.Location = new System.Drawing.Point(135, 43);
+            this.updown_KW_HR_Out.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_KW_HR_Out.Location = new System.Drawing.Point(135, 62);
             this.updown_KW_HR_Out.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -5539,7 +5519,7 @@
             0});
             this.updown_KW_HR_Out.Name = "updown_KW_HR_Out";
             this.updown_KW_HR_Out.ReadOnly = true;
-            this.updown_KW_HR_Out.Size = new System.Drawing.Size(124, 22);
+            this.updown_KW_HR_Out.Size = new System.Drawing.Size(207, 23);
             this.updown_KW_HR_Out.TabIndex = 182;
             // 
             // label_Main_Gallon
@@ -5547,7 +5527,7 @@
             this.label_Main_Gallon.AutoSize = true;
             this.label_Main_Gallon.BackColor = System.Drawing.Color.Silver;
             this.label_Main_Gallon.Font = new System.Drawing.Font("FuturaExtended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Gallon.Location = new System.Drawing.Point(5, 125);
+            this.label_Main_Gallon.Location = new System.Drawing.Point(5, 144);
             this.label_Main_Gallon.Name = "label_Main_Gallon";
             this.label_Main_Gallon.Size = new System.Drawing.Size(84, 20);
             this.label_Main_Gallon.TabIndex = 187;
@@ -5558,8 +5538,8 @@
             this.updown_MMBTU_Out.BackColor = System.Drawing.SystemColors.Window;
             this.updown_MMBTU_Out.DecimalPlaces = 2;
             this.updown_MMBTU_Out.Enabled = false;
-            this.updown_MMBTU_Out.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_MMBTU_Out.Location = new System.Drawing.Point(135, 69);
+            this.updown_MMBTU_Out.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_MMBTU_Out.Location = new System.Drawing.Point(135, 88);
             this.updown_MMBTU_Out.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -5567,7 +5547,7 @@
             0});
             this.updown_MMBTU_Out.Name = "updown_MMBTU_Out";
             this.updown_MMBTU_Out.ReadOnly = true;
-            this.updown_MMBTU_Out.Size = new System.Drawing.Size(124, 22);
+            this.updown_MMBTU_Out.Size = new System.Drawing.Size(207, 23);
             this.updown_MMBTU_Out.TabIndex = 183;
             // 
             // updown_GALLON
@@ -5575,8 +5555,8 @@
             this.updown_GALLON.BackColor = System.Drawing.SystemColors.Window;
             this.updown_GALLON.DecimalPlaces = 2;
             this.updown_GALLON.Enabled = false;
-            this.updown_GALLON.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_GALLON.Location = new System.Drawing.Point(135, 119);
+            this.updown_GALLON.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_GALLON.Location = new System.Drawing.Point(135, 138);
             this.updown_GALLON.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -5584,7 +5564,7 @@
             0});
             this.updown_GALLON.Name = "updown_GALLON";
             this.updown_GALLON.ReadOnly = true;
-            this.updown_GALLON.Size = new System.Drawing.Size(124, 22);
+            this.updown_GALLON.Size = new System.Drawing.Size(207, 23);
             this.updown_GALLON.TabIndex = 186;
             // 
             // updown_MMBTU_In
@@ -5592,8 +5572,8 @@
             this.updown_MMBTU_In.BackColor = System.Drawing.SystemColors.Window;
             this.updown_MMBTU_In.DecimalPlaces = 2;
             this.updown_MMBTU_In.Enabled = false;
-            this.updown_MMBTU_In.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_MMBTU_In.Location = new System.Drawing.Point(135, 93);
+            this.updown_MMBTU_In.Font = new System.Drawing.Font("FuturaExtended", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_MMBTU_In.Location = new System.Drawing.Point(135, 112);
             this.updown_MMBTU_In.Maximum = new decimal(new int[] {
             1241513984,
             370409800,
@@ -5601,7 +5581,7 @@
             0});
             this.updown_MMBTU_In.Name = "updown_MMBTU_In";
             this.updown_MMBTU_In.ReadOnly = true;
-            this.updown_MMBTU_In.Size = new System.Drawing.Size(124, 22);
+            this.updown_MMBTU_In.Size = new System.Drawing.Size(207, 23);
             this.updown_MMBTU_In.TabIndex = 184;
             // 
             // label_Main_mmbtu_In
@@ -5609,7 +5589,7 @@
             this.label_Main_mmbtu_In.AutoSize = true;
             this.label_Main_mmbtu_In.BackColor = System.Drawing.Color.Silver;
             this.label_Main_mmbtu_In.Font = new System.Drawing.Font("FuturaExtended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_mmbtu_In.Location = new System.Drawing.Point(5, 99);
+            this.label_Main_mmbtu_In.Location = new System.Drawing.Point(5, 118);
             this.label_Main_mmbtu_In.Name = "label_Main_mmbtu_In";
             this.label_Main_mmbtu_In.Size = new System.Drawing.Size(103, 20);
             this.label_Main_mmbtu_In.TabIndex = 185;
@@ -5650,12 +5630,30 @@
             // 
             this.menu_strip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.file_menu,
+            this.calculateToolStripMenuItem,
             this.resetToDefaultsToolStripMenuItem});
             this.menu_strip.Location = new System.Drawing.Point(0, 0);
             this.menu_strip.Name = "menu_strip";
             this.menu_strip.Size = new System.Drawing.Size(1235, 24);
             this.menu_strip.TabIndex = 0;
             this.menu_strip.Text = "menuStrip1";
+            // 
+            // calculateToolStripMenuItem
+            // 
+            this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
+            this.calculateToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.calculateToolStripMenuItem.Text = "Calculate";
+            this.calculateToolStripMenuItem.Click += new System.EventHandler(this.calculateToolStripMenuItem_Click);
+            // 
+            // Save_Excel
+            // 
+            this.Save_Excel.Location = new System.Drawing.Point(909, 8);
+            this.Save_Excel.Name = "Save_Excel";
+            this.Save_Excel.Size = new System.Drawing.Size(126, 23);
+            this.Save_Excel.TabIndex = 4;
+            this.Save_Excel.Text = "Save To Excel";
+            this.Save_Excel.UseVisualStyleBackColor = true;
+            this.Save_Excel.Click += new System.EventHandler(this.Save_Excel_Click);
             // 
             // TEAMS
             // 
@@ -6127,7 +6125,6 @@
         private System.Windows.Forms.Panel Panel_results_chart;
         private System.Windows.Forms.DataVisualization.Charting.Chart graph_VO_vs_WTP;
         private System.Windows.Forms.Panel panel_Header;
-        private System.Windows.Forms.Button ResetButton2;
         private System.Windows.Forms.Label label_Aux_Fuel_Header;
         private System.Windows.Forms.Label label_Aux_Fuel_Type;
         private System.Windows.Forms.Label label_Main_Fuel_Header;
@@ -6209,12 +6206,13 @@
         private System.Windows.Forms.Label label_Aux_PF_WTP;
         private System.Windows.Forms.Label label_FF_Total;
         private System.Windows.Forms.Label label_PF_Total;
-        private System.Windows.Forms.Button ExportButton;
         private System.Windows.Forms.ToolStripMenuItem file_menu;
         private System.Windows.Forms.ToolStripMenuItem file_new_menu;
         private System.Windows.Forms.ToolStripMenuItem file_exit_menu;
         private System.Windows.Forms.ToolStripMenuItem resetToDefaultsToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menu_strip;
+        private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
+        private System.Windows.Forms.Button Save_Excel;
 
 
 

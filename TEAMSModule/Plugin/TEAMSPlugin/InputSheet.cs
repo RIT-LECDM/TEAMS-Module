@@ -12,8 +12,8 @@ using Greet.DataStructureV3.Interfaces;
 using Greet.Model.Interfaces;
 using TEAMSModule;
 using System.Windows.Forms.DataVisualization.Charting;
-using OfficeOpenXml;
-using OfficeOpenXml.Style;
+using Microsoft.Office.Interop.Excel;
+
 namespace TEAMS_Plugin
 {
     public partial class TEAMS : Form
@@ -579,8 +579,8 @@ namespace TEAMS_Plugin
         private GREETFormattedResults results_sheet;
 
         //Array of the panels
-        Panel[] allPanels = new Panel[13];
-        Label[] allPanelLabels = new Label[13];
+        System.Windows.Forms.Panel[] allPanels = new System.Windows.Forms.Panel[13];
+        System.Windows.Forms.Label[] allPanelLabels = new System.Windows.Forms.Label[13];
         public TEAMS()
         {
             InitializeComponent();
@@ -603,29 +603,29 @@ namespace TEAMS_Plugin
         private void setPanelAndLabelArrays()
         {
             allPanels[0] = panel_Main_Engine_Vars;
-            allPanels[1] = panel_Main_Trip_Distance_Time;
+            allPanels[1] = panel_Aux_Engine_Vars;
             allPanels[2] = panel_Main_Engine_Chars;
-            allPanels[3] = panel_Main_Fuel_Calculations;
-            allPanels[4] = panel_Main_GWPs;
-            allPanels[5] = panel_main_engine_inputs;
-            allPanels[6] = panel_Aux_Engine_Vars;
-            allPanels[7] = panel_Aux_Engine_Chars;
-            allPanels[8] = panel_Aux_Fuel_Calc;
-            allPanels[9] = panel_Aux_Emissions_Input;
+            allPanels[3] = panel_Aux_Engine_Chars;
+            allPanels[4] = panel_main_engine_inputs;
+            allPanels[5] = panel_Aux_Emissions_Input;
+            allPanels[6] = panel_Main_Fuel_Calculations;
+            allPanels[7] = panel_Aux_Fuel_Calc;
+            allPanels[8] = panel_Main_Trip_Distance_Time;
+            allPanels[9] = panel_Main_GWPs;
             allPanels[10] = Panel_FuelSelection;
             allPanels[11] = Panel_results_spread;
             allPanels[12] = Panel_results_chart;
 
             allPanelLabels[0] = label_Main_Engine_Vars;
-            allPanelLabels[1] = label_Main_Total_Distance_And_Time;
+            allPanelLabels[1] = label_Aux_Engine_Vars;
             allPanelLabels[2] = label_Main_Engine_Char_Per_Mode;
-            allPanelLabels[3] = label_Main_Fuel_Calculations;
-            allPanelLabels[4] = label_Main_Global_Warming_Potentials;
-            allPanelLabels[5] = label_Main_Engine_Inputs;
-            allPanelLabels[6] = label_Aux_Engine_Vars;
-            allPanelLabels[7] = label_Aux_Engine_Chars;
-            allPanelLabels[8] = label_Aux_Fuel_Calc;
-            allPanelLabels[9] = label_Aux_Emissions_Calc_Inputs;
+            allPanelLabels[3] = label_Aux_Engine_Chars;
+            allPanelLabels[4] = label_Main_Engine_Inputs;
+            allPanelLabels[5] = label_Aux_Emissions_Calc_Inputs;
+            allPanelLabels[6] = label_Main_Fuel_Calculations;
+            allPanelLabels[7] = label_Aux_Fuel_Calc;
+            allPanelLabels[8] = label_Main_Total_Distance_And_Time;
+            allPanelLabels[9] = label_Main_Global_Warming_Potentials;
             allPanelLabels[10] = Label_FuelSelection;
             allPanelLabels[11] = Label_results_spread;
             allPanelLabels[12] = Label_results_chart;
@@ -1358,7 +1358,7 @@ namespace TEAMS_Plugin
 
         //These are the label clicks, which handles the extension of the panels
         #region labelClicks
-        private void labelClicked(Label labelClicked, Panel panelExtending)
+        private void labelClicked(System.Windows.Forms.Label labelClicked, System.Windows.Forms.Panel panelExtending)
         {
             if (panelExtending.Visible == true)
             {
@@ -1369,7 +1369,7 @@ namespace TEAMS_Plugin
                 panelExtending.Visible = true;
             }
 
-            foreach (Panel p in allPanels)
+            foreach (System.Windows.Forms.Panel p in allPanels)
             {
                 if (p != panelExtending && p.Top > panelExtending.Top)
                 {
@@ -1384,7 +1384,7 @@ namespace TEAMS_Plugin
                 }
             }
 
-            foreach (Label l in allPanelLabels)
+            foreach (System.Windows.Forms.Label l in allPanelLabels)
             {
                 if (l != labelClicked && l.Top > panelExtending.Top)
                 {
@@ -1513,7 +1513,7 @@ namespace TEAMS_Plugin
                         {
                             TreeNode pathwayNode = new TreeNode(pathway.Name);
                             pathwayNode.Tag = pathway;
-                            resourceTreeNode.Nodes.Add(pathwayNode);
+                            resourceTreeNode.Nodes.Add(pathwayNode);                            
                         }
                         if (resourceTreeNode.Nodes.Count > 0)
                             tree.Nodes.Add(resourceTreeNode);
@@ -2037,7 +2037,7 @@ namespace TEAMS_Plugin
         /// <param name="graph">The graph to be generated. Note that this should always be the graph from the designer, 'stacked_graph'.
         ///                     If you wish to generate another graph, you will need to do more than pass the graph in as a parameter.</param>
         /// <param name="title">The title of the graph to be displayed.</param>
-        private void Generate_Graph(double[][] resources, Chart graph)
+        private void Generate_Graph(double[][] resources, System.Windows.Forms.DataVisualization.Charting.Chart graph)
         {
             // Matches the series collection already outlined in the designer.
             string[] seriesArray = { "WellToPump", "VesselOperation" };
@@ -2060,212 +2060,7 @@ namespace TEAMS_Plugin
         }
         #endregion
 
-        /// <summary>
-        /// Saves values to an excel sheet, and lets the user pick the file path and name
-        /// </summary>
-        #region Saving for the excel sheet
 
-        // For use during export to excel sheet. Prevents system crashing and gives error source to user.
-        private void exception_Handling(Exception exception)
-        {
-            MessageBox.Show("An error occurred while trying to save the file. Ensure it is not being used by another program and try again.\n" +
-                            "Exception message: " + exception.Message);
-
-        }
-
-        private void ExportButton_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog SaveFile = new SaveFileDialog();
-
-            // Create the new file to be saved, use Save Dialog Box.
-            SaveFile.Filter = "Excel File|.xlsx";
-            SaveFile.Title = "Save TEAMS Results to an Excel File";
-            DialogResult save_result = SaveFile.ShowDialog();
-
-            string filePath = SaveFile.FileName;
-
-            // If user cancels the save, do nothing
-            if (save_result == DialogResult.Cancel)
-            {
-                return;
-            }
-
-            // Error proofing
-            if (filePath == "")
-            {
-                MessageBox.Show("File name cannot be blank.");
-                return;
-            }
-
-            // Handling for when the file exists and is being used by another program.
-            if (File.Exists(filePath))
-            {
-                try
-                {
-                    File.Delete(filePath);
-                }
-                catch (Exception exception)
-                {
-                    exception_Handling(exception);
-                    return;
-                }
-
-                File.Delete(filePath);
-
-            }
-
-            // If the file does not previously exist, but for whatever reason cannot be created,
-            // handle the exception and cancel the export.
-            FileInfo newFile = null;
-            try
-            {
-                newFile = new FileInfo(filePath);
-            }
-            catch (Exception exception)
-            {
-                exception_Handling(exception);
-                return;
-            }
-
-            // If the file could not be created or accessed, return the user to the save menu.
-            if (newFile == null) { ExportButton_Click(sender, e); }
-            ExcelPackage package = new ExcelPackage(newFile);
-            //using (ExcelPackage package = new ExcelPackage(newFile))
-            //{
-            //    // Add a new Worksheet to the empty workbook
-            //    ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("TEAMS Results");
-
-            //    // Add the headers
-            //    worksheet.Cells[1, 1].Value = "Vessel name";
-            //    worksheet.Cells[1, 1].Style.Font.Bold = true;
-            //    worksheet.Cells[1, 2].Value = VesselTypeID;
-
-            //    worksheet.Cells[2, 2].Value = "Main Engine";
-            //    worksheet.Cells[2, 2].Style.Font.Bold = true;
-            //    worksheet.Cells[2, 2].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-            //    worksheet.Cells[2, 2, 2, 3].Merge = true;
-
-            //    worksheet.Cells[2, 4].Value = "Auxiliary Engine";
-            //    worksheet.Cells[2, 4].Style.Font.Bold = true;
-            //    worksheet.Cells[2, 4].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-            //    worksheet.Cells[2, 4, 2, 5].Merge = true;
-
-            //    worksheet.Cells[3, 1].Value = "Results Shown Per Trip";
-            //    worksheet.Cells[3, 2].Value = "Well To Pump";
-            //    worksheet.Cells[3, 3].Value = "Vessel Operation";
-            //    worksheet.Cells[3, 4].Value = "Well To Pump";
-            //    worksheet.Cells[3, 5].Value = "Vessel Operation";
-            //    worksheet.Cells[3, 6].Value = "Total";
-
-            //    worksheet.Cells["A3:F3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-            //    worksheet.Cells["A3:F3"].Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
-
-            //    // Add the data
-
-            //    worksheet.Cells[4, 1].Value = "Total Energy";
-            //    worksheet.Cells[4, 2].Value = TE_WTP;
-            //    worksheet.Cells[4, 3].Value = TE_VO;
-            //    worksheet.Cells[4, 4].Value = AUX_TE_WTP;
-            //    worksheet.Cells[4, 5].Value = AUX_TE_VO;
-            //    worksheet.Cells[4, 6].Value = TE_Total;
-
-            //    // TODO: Implement Fossil Fuel
-            //    // worksheet.Cells[5, 1].Value = "Fossil Fuel";
-            //    worksheet.Cells[5, 2].Value = FF_WTP;
-            //    worksheet.Cells[5, 4].Value = AUX_FF_WTP;
-            //    worksheet.Cells[5, 6].Value = FF_Total;
-
-            //    // TODO: Implement Petroleum Fuel
-            //    // worksheet.Cells[6, 1].Value = "Petroleum Fuel";
-            //    worksheet.Cells[6, 2].Value = PF_WTP;
-            //    worksheet.Cells[6, 4].Value = AUX_PF_WTP;
-            //    worksheet.Cells[6, 6].Value = PF_Total;
-
-            //    worksheet.Cells[9, 1].Value = "Emissions";
-
-            //    worksheet.Cells[10, 1].Value = "VOC";
-            //    worksheet.Cells[10, 2].Value = VOC_WTP;
-            //    worksheet.Cells[10, 3].Value = VOC_VO;
-            //    worksheet.Cells[10, 4].Value = AUX_VOC_WTP;
-            //    worksheet.Cells[10, 5].Value = AUX_VOC_VO;
-            //    worksheet.Cells[10, 6].Value = VOC_Total;
-
-            //    worksheet.Cells[11, 1].Value = "CO";
-            //    worksheet.Cells[11, 2].Value = CO_WTP;
-            //    worksheet.Cells[11, 3].Value = CO_VO;
-            //    worksheet.Cells[11, 4].Value = AUX_CO_WTP;
-            //    worksheet.Cells[11, 5].Value = AUX_CO_VO;
-            //    worksheet.Cells[11, 6].Value = CO_Total;
-
-            //    worksheet.Cells[12, 1].Value = "NOx";
-            //    worksheet.Cells[12, 2].Value = NOx_WTP;
-            //    worksheet.Cells[12, 3].Value = NOx_VO;
-            //    worksheet.Cells[12, 4].Value = AUX_NOx_WTP;
-            //    worksheet.Cells[12, 5].Value = AUX_NOx_VO;
-            //    worksheet.Cells[12, 6].Value = NOx_Total;
-
-            //    worksheet.Cells[13, 1].Value = "PM10";
-            //    worksheet.Cells[13, 2].Value = PM10_WTP;
-            //    worksheet.Cells[13, 3].Value = PM10_VO;
-            //    worksheet.Cells[13, 4].Value = AUX_PM10_WTP;
-            //    worksheet.Cells[13, 5].Value = AUX_PM10_VO;
-            //    worksheet.Cells[13, 6].Value = PM10_Total;
-
-            //    worksheet.Cells[14, 1].Value = "PM 2.5";
-            //    worksheet.Cells[14, 2].Value = PM25_WTP;
-            //    worksheet.Cells[14, 3].Value = PM25_VO;
-            //    worksheet.Cells[14, 4].Value = AUX_PM25_WTP;
-            //    worksheet.Cells[14, 5].Value = AUX_PM25_VO;
-            //    worksheet.Cells[14, 6].Value = PM25_Total;
-
-            //    worksheet.Cells[15, 1].Value = "SOx";
-            //    worksheet.Cells[15, 2].Value = SOx_WTP;
-            //    worksheet.Cells[15, 3].Value = SOx_VO;
-            //    worksheet.Cells[15, 4].Value = AUX_SOx_WTP;
-            //    worksheet.Cells[15, 5].Value = AUX_SOx_VO;
-            //    worksheet.Cells[15, 6].Value = SOx_Total;
-
-            //    worksheet.Cells[16, 1].Value = "CH4";
-            //    worksheet.Cells[16, 2].Value = CH4_WTP;
-            //    worksheet.Cells[16, 3].Value = CH4_VO;
-            //    worksheet.Cells[16, 4].Value = AUX_CH4_WTP;
-            //    worksheet.Cells[16, 5].Value = AUX_CH4_VO;
-            //    worksheet.Cells[16, 6].Value = CH4_Total;
-
-            //    worksheet.Cells[17, 1].Value = "CO2";
-            //    worksheet.Cells[17, 2].Value = CO2_WTP;
-            //    worksheet.Cells[17, 3].Value = CO2_VO;
-            //    worksheet.Cells[17, 4].Value = AUX_CO2_WTP;
-            //    worksheet.Cells[17, 5].Value = AUX_CO2_VO;
-            //    worksheet.Cells[17, 6].Value = CO2_Total;
-
-            //    worksheet.Cells[18, 1].Value = "N2O";
-            //    worksheet.Cells[18, 2].Value = N2O_WTP;
-            //    worksheet.Cells[18, 3].Value = N2O_VO;
-            //    worksheet.Cells[18, 4].Value = AUX_N2O_WTP;
-            //    worksheet.Cells[18, 5].Value = AUX_N2O_VO;
-            //    worksheet.Cells[18, 6].Value = N2O_Total;
-
-            //    worksheet.Cells[20, 1].Value = "Main Engine Fuel Type:";
-            //    worksheet.Cells[20, 1].Style.Font.Bold = true;
-            //    worksheet.Cells[20, 2].Value = MainfuelUsed;
-
-            //    worksheet.Cells[21, 1].Value = "Auxiliary Engine Fuel Type:";
-            //    worksheet.Cells[21, 1].Style.Font.Bold = true;
-            //    worksheet.Cells[21, 2].Value = auxFuelUsed;
-
-            //    // Resize the columns to fit the values
-            //    worksheet.Cells["A1:F22"].AutoFitColumns();
-
-            //    // Save the file
-            //    package.Save();
-
-            //    MessageBox.Show("Excel spreadsheet saved successfully.", "File Saved");
-            //}
-
-
-        }
-        #endregion
 
         /// <summary>
         /// Reloads the form to default inputs.
@@ -2284,6 +2079,160 @@ namespace TEAMS_Plugin
 
         }
 #endregion
+        /// <summary>
+        /// Saves values to an excel sheet, and lets the user pick the file path and name
+        /// </summary>
+        #region Saving for the excel sheet
+        private void Save_Excel_Click(object sender, EventArgs e)
+        {
+            exportToExcel();
+        }
+        // For use during export to excel sheet. Prevents system crashing and gives error source to user.
+        private void exception_Handling(Exception exception)
+        {
+            MessageBox.Show("An error occurred while trying to save the file. Ensure it is not being used by another program and try again.\n" +
+                            "Exception message: " + exception.Message);
 
+        }
+
+        private void exportToExcel()
+        {
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+
+        if (xlApp == null)
+        {
+            Console.WriteLine("EXCEL could not be started. Check that your office installation and project references are correct.");
+            return;
+        }
+        xlApp.Visible = true;
+
+        Workbook wb = xlApp.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
+        Worksheet ws = (Worksheet)wb.Worksheets[1];
+
+        if (ws == null)
+        {
+            Console.WriteLine("Worksheet could not be created. Check that your office installation and project references are correct.");
+        }
+        // Add the headers
+        ws.Cells[1, 1].Value = "Vessel name";
+        ws.Cells[1, 1].Style.Font.Bold = true;
+        ws.Cells[1, 2].Value = VesselTypeID;
+
+        ws.Cells[2, 2].Value = "Main Engine";
+        ws.Cells[2, 2].Style.Font.Bold = true;
+
+        ws.Cells[2, 4].Value = "Auxiliary Engine";
+        ws.Cells[2, 4].Style.Font.Bold = true;
+
+        ws.Cells[3, 1].Value = "Results Shown Per Trip";
+        ws.Cells[3, 2].Value = "Well To Pump";
+        ws.Cells[3, 3].Value = "Vessel Operation";
+        ws.Cells[3, 4].Value = "Well To Pump";
+        ws.Cells[3, 5].Value = "Vessel Operation";
+        ws.Cells[3, 6].Value = "Total";
+
+
+        // Add the data
+
+        ws.Cells[4, 1].Value = "Total Energy";
+        ws.Cells[4, 2].Value = TE_WTP;
+        ws.Cells[4, 3].Value = TE_VO;
+        ws.Cells[4, 4].Value = AUX_TE_WTP;
+        ws.Cells[4, 5].Value = AUX_TE_VO;
+        ws.Cells[4, 6].Value = TE_Total;
+
+        // TODO: Implement Fossil Fuel
+        // ws.Cells[5, 1].Value = "Fossil Fuel";
+        ws.Cells[5, 2].Value = FF_WTP;
+        ws.Cells[5, 4].Value = AUX_FF_WTP;
+        ws.Cells[5, 6].Value = FF_Total;
+
+        // TODO: Implement Petroleum Fuel
+        // ws.Cells[6, 1].Value = "Petroleum Fuel";
+        ws.Cells[6, 2].Value = PF_WTP;
+        ws.Cells[6, 4].Value = AUX_PF_WTP;
+        ws.Cells[6, 6].Value = PF_Total;
+
+        ws.Cells[9, 1].Value = "Emissions";
+
+        ws.Cells[10, 1].Value = "VOC";
+        ws.Cells[10, 2].Value = VOC_WTP;
+        ws.Cells[10, 3].Value = VOC_VO;
+        ws.Cells[10, 4].Value = AUX_VOC_WTP;
+        ws.Cells[10, 5].Value = AUX_VOC_VO;
+        ws.Cells[10, 6].Value = VOC_Total;
+
+        ws.Cells[11, 1].Value = "CO";
+        ws.Cells[11, 2].Value = CO_WTP;
+        ws.Cells[11, 3].Value = CO_VO;
+        ws.Cells[11, 4].Value = AUX_CO_WTP;
+        ws.Cells[11, 5].Value = AUX_CO_VO;
+        ws.Cells[11, 6].Value = CO_Total;
+
+        ws.Cells[12, 1].Value = "NOx";
+        ws.Cells[12, 2].Value = NOx_WTP;
+        ws.Cells[12, 3].Value = NOx_VO;
+        ws.Cells[12, 4].Value = AUX_NOx_WTP;
+        ws.Cells[12, 5].Value = AUX_NOx_VO;
+        ws.Cells[12, 6].Value = NOx_Total;
+
+        ws.Cells[13, 1].Value = "PM10";
+        ws.Cells[13, 2].Value = PM10_WTP;
+        ws.Cells[13, 3].Value = PM10_VO;
+        ws.Cells[13, 4].Value = AUX_PM10_WTP;
+        ws.Cells[13, 5].Value = AUX_PM10_VO;
+        ws.Cells[13, 6].Value = PM10_Total;
+
+        ws.Cells[14, 1].Value = "PM 2.5";
+        ws.Cells[14, 2].Value = PM25_WTP;
+        ws.Cells[14, 3].Value = PM25_VO;
+        ws.Cells[14, 4].Value = AUX_PM25_WTP;
+        ws.Cells[14, 5].Value = AUX_PM25_VO;
+        ws.Cells[14, 6].Value = PM25_Total;
+
+        ws.Cells[15, 1].Value = "SOx";
+        ws.Cells[15, 2].Value = SOx_WTP;
+        ws.Cells[15, 3].Value = SOx_VO;
+        ws.Cells[15, 4].Value = AUX_SOx_WTP;
+        ws.Cells[15, 5].Value = AUX_SOx_VO;
+        ws.Cells[15, 6].Value = SOx_Total;
+
+        ws.Cells[16, 1].Value = "CH4";
+        ws.Cells[16, 2].Value = CH4_WTP;
+        ws.Cells[16, 3].Value = CH4_VO;
+        ws.Cells[16, 4].Value = AUX_CH4_WTP;
+        ws.Cells[16, 5].Value = AUX_CH4_VO;
+        ws.Cells[16, 6].Value = CH4_Total;
+
+        ws.Cells[17, 1].Value = "CO2";
+        ws.Cells[17, 2].Value = CO2_WTP;
+        ws.Cells[17, 3].Value = CO2_VO;
+        ws.Cells[17, 4].Value = AUX_CO2_WTP;
+        ws.Cells[17, 5].Value = AUX_CO2_VO;
+        ws.Cells[17, 6].Value = CO2_Total;
+
+        ws.Cells[18, 1].Value = "N2O";
+        ws.Cells[18, 2].Value = N2O_WTP;
+        ws.Cells[18, 3].Value = N2O_VO;
+        ws.Cells[18, 4].Value = AUX_N2O_WTP;
+        ws.Cells[18, 5].Value = AUX_N2O_VO;
+        ws.Cells[18, 6].Value = N2O_Total;
+
+        ws.Cells[20, 1].Value = "Main Engine Fuel Type:";
+        ws.Cells[20, 1].Style.Font.Bold = true;
+        ws.Cells[20, 2].Value = MainfuelUsed;
+
+        ws.Cells[21, 1].Value = "Auxiliary Engine Fuel Type:";
+        ws.Cells[21, 1].Style.Font.Bold = true;
+        ws.Cells[21, 2].Value = auxFuelUsed;
+        
+    }
+
+        #endregion
+        private void calculateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Recalculate();
+            //changeResults();
+        }
     }
 }
