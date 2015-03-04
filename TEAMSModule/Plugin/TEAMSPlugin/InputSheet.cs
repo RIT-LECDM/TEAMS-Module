@@ -2143,15 +2143,15 @@ namespace TEAMS_Plugin
 
         // TODO: Implement Fossil Fuel
         // ws.Cells[5, 1].Value = "Fossil Fuel";
-        ws.Cells[5, 2].Value = FF_WTP;
-        ws.Cells[5, 4].Value = AUX_FF_WTP;
-        ws.Cells[5, 6].Value = FF_Total;
+       // ws.Cells[5, 2].Value = FF_WTP;
+        //ws.Cells[5, 4].Value = AUX_FF_WTP;
+        //ws.Cells[5, 6].Value = FF_Total;
 
         // TODO: Implement Petroleum Fuel
         // ws.Cells[6, 1].Value = "Petroleum Fuel";
-        ws.Cells[6, 2].Value = PF_WTP;
-        ws.Cells[6, 4].Value = AUX_PF_WTP;
-        ws.Cells[6, 6].Value = PF_Total;
+        //ws.Cells[6, 2].Value = PF_WTP;
+        //ws.Cells[6, 4].Value = AUX_PF_WTP;
+        //ws.Cells[6, 6].Value = PF_Total;
 
         ws.Cells[9, 1].Value = "Emissions";
 
