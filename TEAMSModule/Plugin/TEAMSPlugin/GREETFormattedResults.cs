@@ -11,9 +11,7 @@ using TEAMS_Plugin;
 using Greet.DataStructureV3.Interfaces;
 using Greet.Model.Interfaces;
 using System.Windows.Forms.DataVisualization.Charting;
-using OfficeOpenXml;
 using System.IO;
-using OfficeOpenXml.Style;
 
 namespace TEAMSModule
 {
@@ -697,7 +695,7 @@ namespace TEAMSModule
 
             // If the file could not be created or accessed, return the user to the save menu.
             if (newFile == null) { ExportButton_Click(sender, e); }
-            ExcelPackage package = new ExcelPackage(newFile);
+            //ExcelPackage package = new ExcelPackage(newFile);
             //using (ExcelPackage package = new ExcelPackage(newFile))
             //{
             //    // Add a new Worksheet to the empty workbook

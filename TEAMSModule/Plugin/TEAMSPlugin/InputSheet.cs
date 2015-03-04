@@ -1534,11 +1534,6 @@ namespace TEAMS_Plugin
             tab_Main.AutoScroll = true;
         }
 
-        private void tab_Main_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //All of the results stuff migrated from the old results sheet
         #region Final results calculation
         private void setResDefaults()
