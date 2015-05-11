@@ -588,6 +588,7 @@ namespace TEAMS_Plugin
             useDefaults();
             changeResults();
             setResDefaults();
+            setUpShipsListForTWP();
             //initializePanelsAndLabels();
         }
 
@@ -2081,6 +2082,15 @@ namespace TEAMS_Plugin
         private void Save_Excel_Click(object sender, EventArgs e)
         {
             exportToExcel();
+            //saveTWPRelevantInfo();
+        }
+
+        //Function That Makes list Of Used Cases For Us To use in TWP Calculation
+        private void saveTWPRelevantInfo()
+        {
+            StreamWriter file2 = new StreamWriter(@"TWPTHing.txt");
+            file2.WriteLine("TWP TEXT");
+            file2.Close();
         }
         // For use during export to excel sheet. Prevents system crashing and gives error source to user.
         private void exception_Handling(Exception exception)
@@ -2228,6 +2238,34 @@ namespace TEAMS_Plugin
         {
             Recalculate();
             //changeResults();
+        }
+
+        //This is where we will populate the list of cases from which you can select a ship in the TWP calculation screen
+        private void setUpShipsListForTWP()
+        {
+            String[] shipCaseNames = new String[3];
+            shipCaseNames[0] = "Ship 1";
+            shipCaseNames[1] = "Ship 3";
+            shipCaseNames[2] = "Ship 2";
+            String[] shipCaseNames2 = new String[shipCaseNames.Length];
+            for (int i = 0; i < shipCaseNames.Length;i++ )
+            {
+                shipCaseNames2[i] = shipCaseNames[i]; 
+            }
+            TopShipSelector.DataSource = shipCaseNames;
+            BottomShipSel.DataSource = shipCaseNames2;
+        }
+        //This is where we will do the calculating and changing of outputs after you hit the calculate button
+        private void TWP_CalculateButton_Click(object sender, EventArgs e)
+        {
+            //Set number of years ship is in service
+            int numYearsShipInService = (int)ShipYearsInService_NumUpDown.Value;
+
+            //Do whatever we need to pull numbers
+
+            //Set the labels how we want them for now it's 100 years, and whatever the top selected ship is
+            NumberOfYearsTilCrossLabel.Text = "100";
+            NameOfSuperiorShipLabel.Text = TopShipSelector.SelectedItem.ToString();
         }
     }
 }
