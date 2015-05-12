@@ -38,6 +38,8 @@ namespace TEAMS_Plugin
         // Conventional Diesel Path ID - Used for estimation of fuel gallons for input, does not appear on the results sheet.
         private const int CD_PATH_ID = 40;
 
+        String pathToTWP = Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Greet/Plugins/TWP.txt";
+
         #endregion
 
         // API Controller
@@ -2082,14 +2084,14 @@ namespace TEAMS_Plugin
         private void Save_Excel_Click(object sender, EventArgs e)
         {
             exportToExcel();
-            //saveTWPRelevantInfo();
+            saveTWPRelevantInfo();
         }
 
         //Function That Makes list Of Used Cases For Us To use in TWP Calculation
         private void saveTWPRelevantInfo()
         {
-            StreamWriter file2 = new StreamWriter(@"TWPTHing.txt");
-            file2.WriteLine("TWP TEXT");
+            StreamWriter file2 = new StreamWriter(pathToTWP,true);
+            file2.WriteLine(VesselTypeID+","+CO2_Total);
             file2.Close();
         }
         // For use during export to excel sheet. Prevents system crashing and gives error source to user.
@@ -2243,10 +2245,17 @@ namespace TEAMS_Plugin
         //This is where we will populate the list of cases from which you can select a ship in the TWP calculation screen
         private void setUpShipsListForTWP()
         {
-            String[] shipCaseNames = new String[3];
-            shipCaseNames[0] = "Ship 1";
-            shipCaseNames[1] = "Ship 3";
-            shipCaseNames[2] = "Ship 2";
+            var lineCount = File.ReadLines(pathToTWP).Count();
+
+            StreamReader sr = new StreamReader(pathToTWP);
+            String[] shipCaseNames = new String[lineCount];
+            for (int j = 0; j < lineCount; j++)
+            {
+                String tempCaseNameHolder = sr.ReadLine();
+                String[] tempSeperatedStringHolder = tempCaseNameHolder.Split(',');
+                shipCaseNames[j] = tempSeperatedStringHolder.ElementAt(0);
+                //sr.ReadLine();
+            }
             String[] shipCaseNames2 = new String[shipCaseNames.Length];
             for (int i = 0; i < shipCaseNames.Length;i++ )
             {
