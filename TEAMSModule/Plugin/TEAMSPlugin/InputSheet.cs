@@ -42,6 +42,10 @@ namespace TEAMS_Plugin
 
         #endregion
 
+        //TWP Variables
+        String[] shipCaseNames;
+        double[] shipCO2Values;
+        double[] shipCH4Values;
         // API Controller
         private APIcalls APIcontroller = new APIcalls();
 
@@ -2083,6 +2087,7 @@ namespace TEAMS_Plugin
         #region Saving for the excel sheet
         private void Save_Excel_Click(object sender, EventArgs e)
         {
+            Recalculate();
             exportToExcel();
             saveTWPRelevantInfo();
         }
@@ -2091,15 +2096,14 @@ namespace TEAMS_Plugin
         private void saveTWPRelevantInfo()
         {
             StreamWriter file2 = new StreamWriter(pathToTWP,true);
-            file2.WriteLine(VesselTypeID+","+CO2_Total);
+            file2.WriteLine(VesselTypeID+","+CO2_Total+","+CH4_Total);
             file2.Close();
         }
         // For use during export to excel sheet. Prevents system crashing and gives error source to user.
         private void exception_Handling(Exception exception)
         {
             MessageBox.Show("An error occurred while trying to save the file. Ensure it is not being used by another program and try again.\n" +
-                            "Exception message: " + exception.Message);
-
+                            "Exception message: " + exception.Message); 
         }
 
         private void exportToExcel()
@@ -2248,14 +2252,19 @@ namespace TEAMS_Plugin
             var lineCount = File.ReadLines(pathToTWP).Count();
 
             StreamReader sr = new StreamReader(pathToTWP);
-            String[] shipCaseNames = new String[lineCount];
+            shipCaseNames = new String[lineCount];
+            shipCO2Values = new double[lineCount];
+            shipCH4Values = new double[lineCount];
             for (int j = 0; j < lineCount; j++)
             {
                 String tempCaseNameHolder = sr.ReadLine();
                 String[] tempSeperatedStringHolder = tempCaseNameHolder.Split(',');
                 shipCaseNames[j] = tempSeperatedStringHolder.ElementAt(0);
+                shipCO2Values[j] = Convert.ToDouble(tempSeperatedStringHolder.ElementAt(1));
+                shipCH4Values[j] = Convert.ToDouble(tempSeperatedStringHolder.ElementAt(2));
                 //sr.ReadLine();
             }
+            sr.Close();
             String[] shipCaseNames2 = new String[shipCaseNames.Length];
             for (int i = 0; i < shipCaseNames.Length;i++ )
             {
@@ -2273,7 +2282,7 @@ namespace TEAMS_Plugin
             //Do whatever we need to pull numbers
 
             //Set the labels how we want them for now it's 100 years, and whatever the top selected ship is
-            NumberOfYearsTilCrossLabel.Text = "100";
+            NumberOfYearsTilCrossLabel.Text = shipCO2Values.ElementAt(TopShipSelector.SelectedIndex).ToString();
             NameOfSuperiorShipLabel.Text = TopShipSelector.SelectedItem.ToString();
         }
     }
