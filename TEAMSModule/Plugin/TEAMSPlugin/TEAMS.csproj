@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIcalls.cs" />
+    <Compile Include="TWPCalc.cs" />
     <Compile Include="CopyrightPage.cs">
       <SubType>Form</SubType>
     </Compile>
