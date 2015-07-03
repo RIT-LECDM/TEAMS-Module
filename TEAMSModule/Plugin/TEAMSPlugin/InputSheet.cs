@@ -1816,40 +1816,40 @@ namespace TEAMS_Plugin
                 AUX_PF_WTP = 0;
                 PF_Total = 0;
 
-                AUX_VOC_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * MMBTUinperTrip;
+                AUX_VOC_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * AuxEngineMMBTUinperTrip;
                 AUX_VOC_VO = aux_fuel_type[0] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 VOC_Total = VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
-                AUX_CO_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * MMBTUinperTrip;
+                AUX_CO_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * AuxEngineMMBTUinperTrip;
                 AUX_CO_VO = aux_fuel_type[1] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 CO_Total = CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
-                AUX_NOx_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * MMBTUinperTrip;
+                AUX_NOx_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * AuxEngineMMBTUinperTrip;
                 AUX_NOx_VO = aux_fuel_type[2] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 NOx_Total = NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
-                AUX_PM10_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * MMBTUinperTrip;
+                AUX_PM10_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * AuxEngineMMBTUinperTrip;
                 AUX_PM10_VO = aux_fuel_type[3] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 PM10_Total = PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
-                AUX_PM25_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * MMBTUinperTrip;
+                AUX_PM25_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * AuxEngineMMBTUinperTrip;
                 AUX_PM25_VO = aux_fuel_type[4] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 PM25_Total = PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
-                AUX_SOx_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * MMBTUinperTrip;
+                AUX_SOx_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * AuxEngineMMBTUinperTrip;
                 AUX_SOx_VO = resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * GRAMS_SOX_PER_GRAMS_S * AuxEngineGALLONperTrip;
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
-                AUX_CH4_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * MMBTUinperTrip;
+                AUX_CH4_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * AuxEngineMMBTUinperTrip;
                 AUX_CH4_VO = aux_fuel_type[5] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 double gramsOfFuel = (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * AuxEngineMMBTUinperTrip;
-                AUX_CO2_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * MMBTUinperTrip;
+                AUX_CO2_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * AuxEngineMMBTUinperTrip;
                 AUX_CO2_VO = gramsOfFuel * resourceCarbonRatio * (44 / 12);
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
-                AUX_N2O_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * MMBTUinperTrip;
+                AUX_N2O_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * AuxEngineMMBTUinperTrip;
                 AUX_N2O_VO = aux_fuel_type[6] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
