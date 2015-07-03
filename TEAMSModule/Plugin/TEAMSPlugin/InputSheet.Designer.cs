@@ -82,7 +82,6 @@
             this.label_Aux_TE_WTP = new System.Windows.Forms.Label();
             this.label_Main_TE_VO = new System.Windows.Forms.Label();
             this.label_Total_Energy = new System.Windows.Forms.Label();
-            this.label_Fossil_Fuels = new System.Windows.Forms.Label();
             this.label_VOC = new System.Windows.Forms.Label();
             this.label_CO = new System.Windows.Forms.Label();
             this.label_NOx = new System.Windows.Forms.Label();
@@ -138,14 +137,6 @@
             this.label_Aux_CH4_VO = new System.Windows.Forms.Label();
             this.label_Aux_CO2_VO = new System.Windows.Forms.Label();
             this.label_Aux_N2O_VO = new System.Windows.Forms.Label();
-            this.label_Petroleum_Fuel = new System.Windows.Forms.Label();
-            this.label_Emissions = new System.Windows.Forms.Label();
-            this.label_Main_FF_WTP = new System.Windows.Forms.Label();
-            this.label_Main_PF_WTP = new System.Windows.Forms.Label();
-            this.label_Aux_FF_WTP = new System.Windows.Forms.Label();
-            this.label_Aux_PF_WTP = new System.Windows.Forms.Label();
-            this.label_FF_Total = new System.Windows.Forms.Label();
-            this.label_PF_Total = new System.Windows.Forms.Label();
             this.panel_Header = new System.Windows.Forms.Panel();
             this.Save_Excel = new System.Windows.Forms.Button();
             this.label_Aux_Fuel_Header = new System.Windows.Forms.Label();
@@ -887,84 +878,72 @@
             this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
             this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
-            this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 270F));
+            this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 272F));
             this.table_Results.Controls.Add(this.label_Aux_TE_VO, 4, 0);
-            this.table_Results.Controls.Add(this.label_Aux_N2O_WTP, 3, 12);
+            this.table_Results.Controls.Add(this.label_Aux_N2O_WTP, 3, 9);
             this.table_Results.Controls.Add(this.label_Aux_TE_WTP, 3, 0);
             this.table_Results.Controls.Add(this.label_Main_TE_VO, 2, 0);
             this.table_Results.Controls.Add(this.label_Total_Energy, 0, 0);
-            this.table_Results.Controls.Add(this.label_Fossil_Fuels, 0, 1);
-            this.table_Results.Controls.Add(this.label_VOC, 0, 4);
-            this.table_Results.Controls.Add(this.label_CO, 0, 5);
-            this.table_Results.Controls.Add(this.label_NOx, 0, 6);
-            this.table_Results.Controls.Add(this.label_PM10, 0, 7);
-            this.table_Results.Controls.Add(this.label_PM25, 0, 8);
-            this.table_Results.Controls.Add(this.label_SOx, 0, 9);
-            this.table_Results.Controls.Add(this.label_CH4, 0, 10);
-            this.table_Results.Controls.Add(this.label_CO2, 0, 11);
-            this.table_Results.Controls.Add(this.label_N2O, 0, 12);
+            this.table_Results.Controls.Add(this.label_VOC, 0, 1);
+            this.table_Results.Controls.Add(this.label_CO, 0, 2);
+            this.table_Results.Controls.Add(this.label_NOx, 0, 3);
+            this.table_Results.Controls.Add(this.label_PM10, 0, 4);
+            this.table_Results.Controls.Add(this.label_PM25, 0, 5);
+            this.table_Results.Controls.Add(this.label_SOx, 0, 6);
+            this.table_Results.Controls.Add(this.label_CH4, 0, 7);
+            this.table_Results.Controls.Add(this.label_CO2, 0, 8);
+            this.table_Results.Controls.Add(this.label_N2O, 0, 9);
             this.table_Results.Controls.Add(this.label_Main_TE_WTP, 1, 0);
-            this.table_Results.Controls.Add(this.label_Main_VOC_WTP, 1, 4);
-            this.table_Results.Controls.Add(this.label_Main_CO_WTP, 1, 5);
-            this.table_Results.Controls.Add(this.label_Main_NOx_WTP, 1, 6);
-            this.table_Results.Controls.Add(this.label_Main_PM10_WTP, 1, 7);
-            this.table_Results.Controls.Add(this.label_Main_PM25_WTP, 1, 8);
-            this.table_Results.Controls.Add(this.label_Main_SOx_WTP, 1, 9);
-            this.table_Results.Controls.Add(this.label_Main_CH4_WTP, 1, 10);
-            this.table_Results.Controls.Add(this.label_Main_CO2_WTP, 1, 11);
-            this.table_Results.Controls.Add(this.label_Main_N2O_WTP, 1, 12);
-            this.table_Results.Controls.Add(this.label_Main_N2O_VO, 2, 12);
-            this.table_Results.Controls.Add(this.label_Main_CH4_VO, 2, 10);
-            this.table_Results.Controls.Add(this.label_Main_PM25_VO, 2, 8);
-            this.table_Results.Controls.Add(this.label_Main_NOx_VO, 2, 6);
-            this.table_Results.Controls.Add(this.label_Main_VOC_VO, 2, 4);
-            this.table_Results.Controls.Add(this.label_Main_CO_VO, 2, 5);
-            this.table_Results.Controls.Add(this.label_Main_PM10_VO, 2, 7);
-            this.table_Results.Controls.Add(this.label_Main_SOx_VO, 2, 9);
-            this.table_Results.Controls.Add(this.label_Main_CO2_VO, 2, 11);
+            this.table_Results.Controls.Add(this.label_Main_VOC_WTP, 1, 1);
+            this.table_Results.Controls.Add(this.label_Main_CO_WTP, 1, 2);
+            this.table_Results.Controls.Add(this.label_Main_NOx_WTP, 1, 3);
+            this.table_Results.Controls.Add(this.label_Main_PM10_WTP, 1, 4);
+            this.table_Results.Controls.Add(this.label_Main_PM25_WTP, 1, 5);
+            this.table_Results.Controls.Add(this.label_Main_SOx_WTP, 1, 6);
+            this.table_Results.Controls.Add(this.label_Main_CH4_WTP, 1, 7);
+            this.table_Results.Controls.Add(this.label_Main_CO2_WTP, 1, 8);
+            this.table_Results.Controls.Add(this.label_Main_N2O_WTP, 1, 9);
+            this.table_Results.Controls.Add(this.label_Main_N2O_VO, 2, 9);
+            this.table_Results.Controls.Add(this.label_Main_CH4_VO, 2, 7);
+            this.table_Results.Controls.Add(this.label_Main_PM25_VO, 2, 5);
+            this.table_Results.Controls.Add(this.label_Main_NOx_VO, 2, 3);
+            this.table_Results.Controls.Add(this.label_Main_VOC_VO, 2, 1);
+            this.table_Results.Controls.Add(this.label_Main_CO_VO, 2, 2);
+            this.table_Results.Controls.Add(this.label_Main_PM10_VO, 2, 4);
+            this.table_Results.Controls.Add(this.label_Main_SOx_VO, 2, 6);
+            this.table_Results.Controls.Add(this.label_Main_CO2_VO, 2, 8);
             this.table_Results.Controls.Add(this.label_TE_Total, 5, 0);
-            this.table_Results.Controls.Add(this.label_VOC_Total, 5, 4);
-            this.table_Results.Controls.Add(this.label_CO_Total, 5, 5);
-            this.table_Results.Controls.Add(this.label_NOx_Total, 5, 6);
-            this.table_Results.Controls.Add(this.label_PM10_Total, 5, 7);
-            this.table_Results.Controls.Add(this.label_PM25_Total, 5, 8);
-            this.table_Results.Controls.Add(this.label_SOx_Total, 5, 9);
-            this.table_Results.Controls.Add(this.label_CH4_Total, 5, 10);
-            this.table_Results.Controls.Add(this.label_CO2_Total, 5, 11);
-            this.table_Results.Controls.Add(this.label_N2O_Total, 5, 12);
-            this.table_Results.Controls.Add(this.label_Aux_VOC_WTP, 3, 4);
-            this.table_Results.Controls.Add(this.label_Aux_CO_WTP, 3, 5);
-            this.table_Results.Controls.Add(this.label_Aux_NOx_WTP, 3, 6);
-            this.table_Results.Controls.Add(this.label_Aux_PM10_WTP, 3, 7);
-            this.table_Results.Controls.Add(this.label_Aux_PM25_WTP, 3, 8);
-            this.table_Results.Controls.Add(this.label_Aux_SOx_WTP, 3, 9);
-            this.table_Results.Controls.Add(this.label_Aux_CH4_WTP, 3, 10);
-            this.table_Results.Controls.Add(this.label_Aux_CO2_WTP, 3, 11);
-            this.table_Results.Controls.Add(this.label_Aux_VOC_VO, 4, 4);
-            this.table_Results.Controls.Add(this.label_Aux_CO_VO, 4, 5);
-            this.table_Results.Controls.Add(this.label_Aux_NOx_VO, 4, 6);
-            this.table_Results.Controls.Add(this.label_Aux_PM10_VO, 4, 7);
-            this.table_Results.Controls.Add(this.label_Aux_PM25_VO, 4, 8);
-            this.table_Results.Controls.Add(this.label_Aux_SOx_VO, 4, 9);
-            this.table_Results.Controls.Add(this.label_Aux_CH4_VO, 4, 10);
-            this.table_Results.Controls.Add(this.label_Aux_CO2_VO, 4, 11);
-            this.table_Results.Controls.Add(this.label_Aux_N2O_VO, 4, 12);
-            this.table_Results.Controls.Add(this.label_Petroleum_Fuel, 0, 2);
-            this.table_Results.Controls.Add(this.label_Emissions, 0, 3);
-            this.table_Results.Controls.Add(this.label_Main_FF_WTP, 1, 1);
-            this.table_Results.Controls.Add(this.label_Main_PF_WTP, 1, 2);
-            this.table_Results.Controls.Add(this.label_Aux_FF_WTP, 3, 1);
-            this.table_Results.Controls.Add(this.label_Aux_PF_WTP, 3, 2);
-            this.table_Results.Controls.Add(this.label_FF_Total, 5, 1);
-            this.table_Results.Controls.Add(this.label_PF_Total, 5, 2);
-            this.table_Results.Location = new System.Drawing.Point(-2, 32);
+            this.table_Results.Controls.Add(this.label_VOC_Total, 5, 1);
+            this.table_Results.Controls.Add(this.label_CO_Total, 5, 2);
+            this.table_Results.Controls.Add(this.label_NOx_Total, 5, 3);
+            this.table_Results.Controls.Add(this.label_PM10_Total, 5, 4);
+            this.table_Results.Controls.Add(this.label_PM25_Total, 5, 5);
+            this.table_Results.Controls.Add(this.label_SOx_Total, 5, 6);
+            this.table_Results.Controls.Add(this.label_CH4_Total, 5, 7);
+            this.table_Results.Controls.Add(this.label_CO2_Total, 5, 8);
+            this.table_Results.Controls.Add(this.label_N2O_Total, 5, 9);
+            this.table_Results.Controls.Add(this.label_Aux_VOC_WTP, 3, 1);
+            this.table_Results.Controls.Add(this.label_Aux_CO_WTP, 3, 2);
+            this.table_Results.Controls.Add(this.label_Aux_NOx_WTP, 3, 3);
+            this.table_Results.Controls.Add(this.label_Aux_PM10_WTP, 3, 4);
+            this.table_Results.Controls.Add(this.label_Aux_PM25_WTP, 3, 5);
+            this.table_Results.Controls.Add(this.label_Aux_SOx_WTP, 3, 6);
+            this.table_Results.Controls.Add(this.label_Aux_CH4_WTP, 3, 7);
+            this.table_Results.Controls.Add(this.label_Aux_CO2_WTP, 3, 8);
+            this.table_Results.Controls.Add(this.label_Aux_VOC_VO, 4, 1);
+            this.table_Results.Controls.Add(this.label_Aux_CO_VO, 4, 2);
+            this.table_Results.Controls.Add(this.label_Aux_NOx_VO, 4, 3);
+            this.table_Results.Controls.Add(this.label_Aux_PM10_VO, 4, 4);
+            this.table_Results.Controls.Add(this.label_Aux_PM25_VO, 4, 5);
+            this.table_Results.Controls.Add(this.label_Aux_SOx_VO, 4, 6);
+            this.table_Results.Controls.Add(this.label_Aux_CH4_VO, 4, 7);
+            this.table_Results.Controls.Add(this.label_Aux_CO2_VO, 4, 8);
+            this.table_Results.Controls.Add(this.label_Aux_N2O_VO, 4, 9);
+            this.table_Results.Location = new System.Drawing.Point(2, 34);
             this.table_Results.Margin = new System.Windows.Forms.Padding(2);
             this.table_Results.Name = "table_Results";
-            this.table_Results.RowCount = 13;
-            this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.64646F));
-            this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.35353F));
-            this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.table_Results.RowCount = 10;
+            this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.66667F));
             this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
@@ -981,7 +960,7 @@
             this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
             this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.table_Results.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.table_Results.Size = new System.Drawing.Size(1196, 540);
+            this.table_Results.Size = new System.Drawing.Size(1196, 311);
             this.table_Results.TabIndex = 0;
             // 
             // label_Aux_TE_VO
@@ -990,7 +969,7 @@
             this.label_Aux_TE_VO.AutoSize = true;
             this.label_Aux_TE_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_TE_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_TE_VO.Location = new System.Drawing.Point(696, 108);
+            this.label_Aux_TE_VO.Location = new System.Drawing.Point(694, 12);
             this.label_Aux_TE_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_TE_VO.Name = "label_Aux_TE_VO";
             this.label_Aux_TE_VO.Size = new System.Drawing.Size(81, 16);
@@ -1003,7 +982,7 @@
             this.label_Aux_N2O_WTP.AutoSize = true;
             this.label_Aux_N2O_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_N2O_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_N2O_WTP.Location = new System.Drawing.Point(510, 523);
+            this.label_Aux_N2O_WTP.Location = new System.Drawing.Point(508, 294);
             this.label_Aux_N2O_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_N2O_WTP.Name = "label_Aux_N2O_WTP";
             this.label_Aux_N2O_WTP.Size = new System.Drawing.Size(102, 16);
@@ -1016,7 +995,7 @@
             this.label_Aux_TE_WTP.AutoSize = true;
             this.label_Aux_TE_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_TE_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_TE_WTP.Location = new System.Drawing.Point(510, 108);
+            this.label_Aux_TE_WTP.Location = new System.Drawing.Point(508, 12);
             this.label_Aux_TE_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_TE_WTP.Name = "label_Aux_TE_WTP";
             this.label_Aux_TE_WTP.Size = new System.Drawing.Size(93, 16);
@@ -1029,7 +1008,7 @@
             this.label_Main_TE_VO.AutoSize = true;
             this.label_Main_TE_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_TE_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_TE_VO.Location = new System.Drawing.Point(286, 108);
+            this.label_Main_TE_VO.Location = new System.Drawing.Point(284, 12);
             this.label_Main_TE_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_TE_VO.Name = "label_Main_TE_VO";
             this.label_Main_TE_VO.Size = new System.Drawing.Size(88, 16);
@@ -1041,7 +1020,7 @@
             this.label_Total_Energy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_Total_Energy.AutoSize = true;
             this.label_Total_Energy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Total_Energy.Location = new System.Drawing.Point(3, 106);
+            this.label_Total_Energy.Location = new System.Drawing.Point(3, 10);
             this.label_Total_Energy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Total_Energy.Name = "label_Total_Energy";
             this.label_Total_Energy.Size = new System.Drawing.Size(91, 18);
@@ -1049,25 +1028,12 @@
             this.label_Total_Energy.Text = "Total Energy";
             this.label_Total_Energy.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label_Fossil_Fuels
-            // 
-            this.label_Fossil_Fuels.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Fossil_Fuels.AutoSize = true;
-            this.label_Fossil_Fuels.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Fossil_Fuels.Location = new System.Drawing.Point(3, 174);
-            this.label_Fossil_Fuels.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_Fossil_Fuels.Name = "label_Fossil_Fuels";
-            this.label_Fossil_Fuels.Size = new System.Drawing.Size(88, 18);
-            this.label_Fossil_Fuels.TabIndex = 1;
-            this.label_Fossil_Fuels.Text = "Fossil Fuels";
-            this.label_Fossil_Fuels.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
             // label_VOC
             // 
             this.label_VOC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_VOC.AutoSize = true;
             this.label_VOC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_VOC.Location = new System.Drawing.Point(3, 271);
+            this.label_VOC.Location = new System.Drawing.Point(3, 43);
             this.label_VOC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_VOC.Name = "label_VOC";
             this.label_VOC.Size = new System.Drawing.Size(40, 18);
@@ -1080,7 +1046,7 @@
             this.label_CO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_CO.AutoSize = true;
             this.label_CO.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CO.Location = new System.Drawing.Point(3, 306);
+            this.label_CO.Location = new System.Drawing.Point(3, 78);
             this.label_CO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO.Name = "label_CO";
             this.label_CO.Size = new System.Drawing.Size(31, 18);
@@ -1093,7 +1059,7 @@
             this.label_NOx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_NOx.AutoSize = true;
             this.label_NOx.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NOx.Location = new System.Drawing.Point(3, 341);
+            this.label_NOx.Location = new System.Drawing.Point(3, 113);
             this.label_NOx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NOx.Name = "label_NOx";
             this.label_NOx.Size = new System.Drawing.Size(38, 18);
@@ -1106,7 +1072,7 @@
             this.label_PM10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_PM10.AutoSize = true;
             this.label_PM10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PM10.Location = new System.Drawing.Point(3, 373);
+            this.label_PM10.Location = new System.Drawing.Point(3, 145);
             this.label_PM10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM10.Name = "label_PM10";
             this.label_PM10.Size = new System.Drawing.Size(47, 18);
@@ -1119,7 +1085,7 @@
             this.label_PM25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_PM25.AutoSize = true;
             this.label_PM25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PM25.Location = new System.Drawing.Point(3, 406);
+            this.label_PM25.Location = new System.Drawing.Point(3, 178);
             this.label_PM25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM25.Name = "label_PM25";
             this.label_PM25.Size = new System.Drawing.Size(51, 18);
@@ -1132,7 +1098,7 @@
             this.label_SOx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_SOx.AutoSize = true;
             this.label_SOx.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SOx.Location = new System.Drawing.Point(3, 435);
+            this.label_SOx.Location = new System.Drawing.Point(3, 207);
             this.label_SOx.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SOx.Name = "label_SOx";
             this.label_SOx.Size = new System.Drawing.Size(37, 18);
@@ -1145,7 +1111,7 @@
             this.label_CH4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_CH4.AutoSize = true;
             this.label_CH4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CH4.Location = new System.Drawing.Point(3, 464);
+            this.label_CH4.Location = new System.Drawing.Point(3, 236);
             this.label_CH4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CH4.Name = "label_CH4";
             this.label_CH4.Size = new System.Drawing.Size(38, 18);
@@ -1158,7 +1124,7 @@
             this.label_CO2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_CO2.AutoSize = true;
             this.label_CO2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CO2.Location = new System.Drawing.Point(3, 492);
+            this.label_CO2.Location = new System.Drawing.Point(3, 264);
             this.label_CO2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO2.Name = "label_CO2";
             this.label_CO2.Size = new System.Drawing.Size(39, 18);
@@ -1171,7 +1137,7 @@
             this.label_N2O.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_N2O.AutoSize = true;
             this.label_N2O.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_N2O.Location = new System.Drawing.Point(3, 521);
+            this.label_N2O.Location = new System.Drawing.Point(3, 292);
             this.label_N2O.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_N2O.Name = "label_N2O";
             this.label_N2O.Size = new System.Drawing.Size(39, 18);
@@ -1185,7 +1151,7 @@
             this.label_Main_TE_WTP.AutoSize = true;
             this.label_Main_TE_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_TE_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_TE_WTP.Location = new System.Drawing.Point(123, 108);
+            this.label_Main_TE_WTP.Location = new System.Drawing.Point(122, 12);
             this.label_Main_TE_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_TE_WTP.Name = "label_Main_TE_WTP";
             this.label_Main_TE_WTP.Size = new System.Drawing.Size(100, 16);
@@ -1198,7 +1164,7 @@
             this.label_Main_VOC_WTP.AutoSize = true;
             this.label_Main_VOC_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_VOC_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_VOC_WTP.Location = new System.Drawing.Point(123, 273);
+            this.label_Main_VOC_WTP.Location = new System.Drawing.Point(122, 45);
             this.label_Main_VOC_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_VOC_WTP.Name = "label_Main_VOC_WTP";
             this.label_Main_VOC_WTP.Size = new System.Drawing.Size(110, 16);
@@ -1211,7 +1177,7 @@
             this.label_Main_CO_WTP.AutoSize = true;
             this.label_Main_CO_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO_WTP.Location = new System.Drawing.Point(123, 308);
+            this.label_Main_CO_WTP.Location = new System.Drawing.Point(122, 80);
             this.label_Main_CO_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO_WTP.Name = "label_Main_CO_WTP";
             this.label_Main_CO_WTP.Size = new System.Drawing.Size(101, 16);
@@ -1224,7 +1190,7 @@
             this.label_Main_NOx_WTP.AutoSize = true;
             this.label_Main_NOx_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_NOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_NOx_WTP.Location = new System.Drawing.Point(123, 343);
+            this.label_Main_NOx_WTP.Location = new System.Drawing.Point(122, 115);
             this.label_Main_NOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_NOx_WTP.Name = "label_Main_NOx_WTP";
             this.label_Main_NOx_WTP.Size = new System.Drawing.Size(108, 16);
@@ -1237,7 +1203,7 @@
             this.label_Main_PM10_WTP.AutoSize = true;
             this.label_Main_PM10_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM10_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM10_WTP.Location = new System.Drawing.Point(123, 375);
+            this.label_Main_PM10_WTP.Location = new System.Drawing.Point(122, 147);
             this.label_Main_PM10_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM10_WTP.Name = "label_Main_PM10_WTP";
             this.label_Main_PM10_WTP.Size = new System.Drawing.Size(116, 16);
@@ -1250,7 +1216,7 @@
             this.label_Main_PM25_WTP.AutoSize = true;
             this.label_Main_PM25_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM25_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM25_WTP.Location = new System.Drawing.Point(123, 408);
+            this.label_Main_PM25_WTP.Location = new System.Drawing.Point(122, 180);
             this.label_Main_PM25_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM25_WTP.Name = "label_Main_PM25_WTP";
             this.label_Main_PM25_WTP.Size = new System.Drawing.Size(116, 16);
@@ -1263,7 +1229,7 @@
             this.label_Main_SOx_WTP.AutoSize = true;
             this.label_Main_SOx_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_SOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_SOx_WTP.Location = new System.Drawing.Point(123, 437);
+            this.label_Main_SOx_WTP.Location = new System.Drawing.Point(122, 209);
             this.label_Main_SOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_SOx_WTP.Name = "label_Main_SOx_WTP";
             this.label_Main_SOx_WTP.Size = new System.Drawing.Size(107, 16);
@@ -1276,7 +1242,7 @@
             this.label_Main_CH4_WTP.AutoSize = true;
             this.label_Main_CH4_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CH4_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CH4_WTP.Location = new System.Drawing.Point(123, 466);
+            this.label_Main_CH4_WTP.Location = new System.Drawing.Point(122, 238);
             this.label_Main_CH4_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CH4_WTP.Name = "label_Main_CH4_WTP";
             this.label_Main_CH4_WTP.Size = new System.Drawing.Size(108, 16);
@@ -1289,7 +1255,7 @@
             this.label_Main_CO2_WTP.AutoSize = true;
             this.label_Main_CO2_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO2_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO2_WTP.Location = new System.Drawing.Point(123, 494);
+            this.label_Main_CO2_WTP.Location = new System.Drawing.Point(122, 266);
             this.label_Main_CO2_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO2_WTP.Name = "label_Main_CO2_WTP";
             this.label_Main_CO2_WTP.Size = new System.Drawing.Size(108, 16);
@@ -1302,7 +1268,7 @@
             this.label_Main_N2O_WTP.AutoSize = true;
             this.label_Main_N2O_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_N2O_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_N2O_WTP.Location = new System.Drawing.Point(123, 523);
+            this.label_Main_N2O_WTP.Location = new System.Drawing.Point(122, 294);
             this.label_Main_N2O_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_N2O_WTP.Name = "label_Main_N2O_WTP";
             this.label_Main_N2O_WTP.Size = new System.Drawing.Size(109, 16);
@@ -1315,7 +1281,7 @@
             this.label_Main_N2O_VO.AutoSize = true;
             this.label_Main_N2O_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_N2O_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_N2O_VO.Location = new System.Drawing.Point(286, 523);
+            this.label_Main_N2O_VO.Location = new System.Drawing.Point(284, 294);
             this.label_Main_N2O_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_N2O_VO.Name = "label_Main_N2O_VO";
             this.label_Main_N2O_VO.Size = new System.Drawing.Size(97, 16);
@@ -1328,7 +1294,7 @@
             this.label_Main_CH4_VO.AutoSize = true;
             this.label_Main_CH4_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CH4_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CH4_VO.Location = new System.Drawing.Point(286, 466);
+            this.label_Main_CH4_VO.Location = new System.Drawing.Point(284, 238);
             this.label_Main_CH4_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CH4_VO.Name = "label_Main_CH4_VO";
             this.label_Main_CH4_VO.Size = new System.Drawing.Size(96, 16);
@@ -1341,7 +1307,7 @@
             this.label_Main_PM25_VO.AutoSize = true;
             this.label_Main_PM25_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM25_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM25_VO.Location = new System.Drawing.Point(286, 408);
+            this.label_Main_PM25_VO.Location = new System.Drawing.Point(284, 180);
             this.label_Main_PM25_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM25_VO.Name = "label_Main_PM25_VO";
             this.label_Main_PM25_VO.Size = new System.Drawing.Size(104, 16);
@@ -1354,7 +1320,7 @@
             this.label_Main_NOx_VO.AutoSize = true;
             this.label_Main_NOx_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_NOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_NOx_VO.Location = new System.Drawing.Point(286, 343);
+            this.label_Main_NOx_VO.Location = new System.Drawing.Point(284, 115);
             this.label_Main_NOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_NOx_VO.Name = "label_Main_NOx_VO";
             this.label_Main_NOx_VO.Size = new System.Drawing.Size(96, 16);
@@ -1367,7 +1333,7 @@
             this.label_Main_VOC_VO.AutoSize = true;
             this.label_Main_VOC_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_VOC_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_VOC_VO.Location = new System.Drawing.Point(286, 273);
+            this.label_Main_VOC_VO.Location = new System.Drawing.Point(284, 45);
             this.label_Main_VOC_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_VOC_VO.Name = "label_Main_VOC_VO";
             this.label_Main_VOC_VO.Size = new System.Drawing.Size(98, 16);
@@ -1380,7 +1346,7 @@
             this.label_Main_CO_VO.AutoSize = true;
             this.label_Main_CO_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO_VO.Location = new System.Drawing.Point(286, 308);
+            this.label_Main_CO_VO.Location = new System.Drawing.Point(284, 80);
             this.label_Main_CO_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO_VO.Name = "label_Main_CO_VO";
             this.label_Main_CO_VO.Size = new System.Drawing.Size(89, 16);
@@ -1393,7 +1359,7 @@
             this.label_Main_PM10_VO.AutoSize = true;
             this.label_Main_PM10_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM10_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM10_VO.Location = new System.Drawing.Point(286, 375);
+            this.label_Main_PM10_VO.Location = new System.Drawing.Point(284, 147);
             this.label_Main_PM10_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM10_VO.Name = "label_Main_PM10_VO";
             this.label_Main_PM10_VO.Size = new System.Drawing.Size(104, 16);
@@ -1406,7 +1372,7 @@
             this.label_Main_SOx_VO.AutoSize = true;
             this.label_Main_SOx_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_SOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_SOx_VO.Location = new System.Drawing.Point(286, 437);
+            this.label_Main_SOx_VO.Location = new System.Drawing.Point(284, 209);
             this.label_Main_SOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_SOx_VO.Name = "label_Main_SOx_VO";
             this.label_Main_SOx_VO.Size = new System.Drawing.Size(95, 16);
@@ -1419,7 +1385,7 @@
             this.label_Main_CO2_VO.AutoSize = true;
             this.label_Main_CO2_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO2_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO2_VO.Location = new System.Drawing.Point(286, 494);
+            this.label_Main_CO2_VO.Location = new System.Drawing.Point(284, 266);
             this.label_Main_CO2_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO2_VO.Name = "label_Main_CO2_VO";
             this.label_Main_CO2_VO.Size = new System.Drawing.Size(96, 16);
@@ -1432,7 +1398,7 @@
             this.label_TE_Total.AutoSize = true;
             this.label_TE_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TE_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_TE_Total.Location = new System.Drawing.Point(926, 108);
+            this.label_TE_Total.Location = new System.Drawing.Point(924, 12);
             this.label_TE_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_TE_Total.Name = "label_TE_Total";
             this.label_TE_Total.Size = new System.Drawing.Size(64, 16);
@@ -1445,7 +1411,7 @@
             this.label_VOC_Total.AutoSize = true;
             this.label_VOC_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_VOC_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_VOC_Total.Location = new System.Drawing.Point(926, 273);
+            this.label_VOC_Total.Location = new System.Drawing.Point(924, 45);
             this.label_VOC_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_VOC_Total.Name = "label_VOC_Total";
             this.label_VOC_Total.Size = new System.Drawing.Size(74, 16);
@@ -1458,7 +1424,7 @@
             this.label_CO_Total.AutoSize = true;
             this.label_CO_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CO_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_CO_Total.Location = new System.Drawing.Point(926, 308);
+            this.label_CO_Total.Location = new System.Drawing.Point(924, 80);
             this.label_CO_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO_Total.Name = "label_CO_Total";
             this.label_CO_Total.Size = new System.Drawing.Size(65, 16);
@@ -1471,7 +1437,7 @@
             this.label_NOx_Total.AutoSize = true;
             this.label_NOx_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_NOx_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_NOx_Total.Location = new System.Drawing.Point(926, 343);
+            this.label_NOx_Total.Location = new System.Drawing.Point(924, 115);
             this.label_NOx_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NOx_Total.Name = "label_NOx_Total";
             this.label_NOx_Total.Size = new System.Drawing.Size(72, 16);
@@ -1484,7 +1450,7 @@
             this.label_PM10_Total.AutoSize = true;
             this.label_PM10_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PM10_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_PM10_Total.Location = new System.Drawing.Point(926, 375);
+            this.label_PM10_Total.Location = new System.Drawing.Point(924, 147);
             this.label_PM10_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM10_Total.Name = "label_PM10_Total";
             this.label_PM10_Total.Size = new System.Drawing.Size(80, 16);
@@ -1497,7 +1463,7 @@
             this.label_PM25_Total.AutoSize = true;
             this.label_PM25_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PM25_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_PM25_Total.Location = new System.Drawing.Point(926, 408);
+            this.label_PM25_Total.Location = new System.Drawing.Point(924, 180);
             this.label_PM25_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM25_Total.Name = "label_PM25_Total";
             this.label_PM25_Total.Size = new System.Drawing.Size(80, 16);
@@ -1510,7 +1476,7 @@
             this.label_SOx_Total.AutoSize = true;
             this.label_SOx_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_SOx_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_SOx_Total.Location = new System.Drawing.Point(926, 437);
+            this.label_SOx_Total.Location = new System.Drawing.Point(924, 209);
             this.label_SOx_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SOx_Total.Name = "label_SOx_Total";
             this.label_SOx_Total.Size = new System.Drawing.Size(71, 16);
@@ -1523,7 +1489,7 @@
             this.label_CH4_Total.AutoSize = true;
             this.label_CH4_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CH4_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_CH4_Total.Location = new System.Drawing.Point(926, 466);
+            this.label_CH4_Total.Location = new System.Drawing.Point(924, 238);
             this.label_CH4_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CH4_Total.Name = "label_CH4_Total";
             this.label_CH4_Total.Size = new System.Drawing.Size(72, 16);
@@ -1536,7 +1502,7 @@
             this.label_CO2_Total.AutoSize = true;
             this.label_CO2_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CO2_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_CO2_Total.Location = new System.Drawing.Point(926, 494);
+            this.label_CO2_Total.Location = new System.Drawing.Point(924, 266);
             this.label_CO2_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO2_Total.Name = "label_CO2_Total";
             this.label_CO2_Total.Size = new System.Drawing.Size(72, 16);
@@ -1549,7 +1515,7 @@
             this.label_N2O_Total.AutoSize = true;
             this.label_N2O_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_N2O_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_N2O_Total.Location = new System.Drawing.Point(926, 523);
+            this.label_N2O_Total.Location = new System.Drawing.Point(924, 294);
             this.label_N2O_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_N2O_Total.Name = "label_N2O_Total";
             this.label_N2O_Total.Size = new System.Drawing.Size(73, 16);
@@ -1562,7 +1528,7 @@
             this.label_Aux_VOC_WTP.AutoSize = true;
             this.label_Aux_VOC_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_VOC_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_VOC_WTP.Location = new System.Drawing.Point(510, 273);
+            this.label_Aux_VOC_WTP.Location = new System.Drawing.Point(508, 45);
             this.label_Aux_VOC_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_VOC_WTP.Name = "label_Aux_VOC_WTP";
             this.label_Aux_VOC_WTP.Size = new System.Drawing.Size(103, 16);
@@ -1575,7 +1541,7 @@
             this.label_Aux_CO_WTP.AutoSize = true;
             this.label_Aux_CO_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO_WTP.Location = new System.Drawing.Point(510, 308);
+            this.label_Aux_CO_WTP.Location = new System.Drawing.Point(508, 80);
             this.label_Aux_CO_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO_WTP.Name = "label_Aux_CO_WTP";
             this.label_Aux_CO_WTP.Size = new System.Drawing.Size(94, 16);
@@ -1588,7 +1554,7 @@
             this.label_Aux_NOx_WTP.AutoSize = true;
             this.label_Aux_NOx_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_NOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_NOx_WTP.Location = new System.Drawing.Point(510, 343);
+            this.label_Aux_NOx_WTP.Location = new System.Drawing.Point(508, 115);
             this.label_Aux_NOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_NOx_WTP.Name = "label_Aux_NOx_WTP";
             this.label_Aux_NOx_WTP.Size = new System.Drawing.Size(101, 16);
@@ -1601,7 +1567,7 @@
             this.label_Aux_PM10_WTP.AutoSize = true;
             this.label_Aux_PM10_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM10_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM10_WTP.Location = new System.Drawing.Point(510, 375);
+            this.label_Aux_PM10_WTP.Location = new System.Drawing.Point(508, 147);
             this.label_Aux_PM10_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM10_WTP.Name = "label_Aux_PM10_WTP";
             this.label_Aux_PM10_WTP.Size = new System.Drawing.Size(109, 16);
@@ -1614,7 +1580,7 @@
             this.label_Aux_PM25_WTP.AutoSize = true;
             this.label_Aux_PM25_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM25_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM25_WTP.Location = new System.Drawing.Point(510, 408);
+            this.label_Aux_PM25_WTP.Location = new System.Drawing.Point(508, 180);
             this.label_Aux_PM25_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM25_WTP.Name = "label_Aux_PM25_WTP";
             this.label_Aux_PM25_WTP.Size = new System.Drawing.Size(109, 16);
@@ -1627,7 +1593,7 @@
             this.label_Aux_SOx_WTP.AutoSize = true;
             this.label_Aux_SOx_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_SOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_SOx_WTP.Location = new System.Drawing.Point(510, 437);
+            this.label_Aux_SOx_WTP.Location = new System.Drawing.Point(508, 209);
             this.label_Aux_SOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_SOx_WTP.Name = "label_Aux_SOx_WTP";
             this.label_Aux_SOx_WTP.Size = new System.Drawing.Size(100, 16);
@@ -1640,7 +1606,7 @@
             this.label_Aux_CH4_WTP.AutoSize = true;
             this.label_Aux_CH4_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CH4_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CH4_WTP.Location = new System.Drawing.Point(510, 466);
+            this.label_Aux_CH4_WTP.Location = new System.Drawing.Point(508, 238);
             this.label_Aux_CH4_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CH4_WTP.Name = "label_Aux_CH4_WTP";
             this.label_Aux_CH4_WTP.Size = new System.Drawing.Size(101, 16);
@@ -1653,7 +1619,7 @@
             this.label_Aux_CO2_WTP.AutoSize = true;
             this.label_Aux_CO2_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO2_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO2_WTP.Location = new System.Drawing.Point(510, 494);
+            this.label_Aux_CO2_WTP.Location = new System.Drawing.Point(508, 266);
             this.label_Aux_CO2_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO2_WTP.Name = "label_Aux_CO2_WTP";
             this.label_Aux_CO2_WTP.Size = new System.Drawing.Size(101, 16);
@@ -1666,7 +1632,7 @@
             this.label_Aux_VOC_VO.AutoSize = true;
             this.label_Aux_VOC_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_VOC_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_VOC_VO.Location = new System.Drawing.Point(696, 273);
+            this.label_Aux_VOC_VO.Location = new System.Drawing.Point(694, 45);
             this.label_Aux_VOC_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_VOC_VO.Name = "label_Aux_VOC_VO";
             this.label_Aux_VOC_VO.Size = new System.Drawing.Size(91, 16);
@@ -1679,7 +1645,7 @@
             this.label_Aux_CO_VO.AutoSize = true;
             this.label_Aux_CO_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO_VO.Location = new System.Drawing.Point(696, 308);
+            this.label_Aux_CO_VO.Location = new System.Drawing.Point(694, 80);
             this.label_Aux_CO_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO_VO.Name = "label_Aux_CO_VO";
             this.label_Aux_CO_VO.Size = new System.Drawing.Size(82, 16);
@@ -1692,7 +1658,7 @@
             this.label_Aux_NOx_VO.AutoSize = true;
             this.label_Aux_NOx_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_NOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_NOx_VO.Location = new System.Drawing.Point(696, 343);
+            this.label_Aux_NOx_VO.Location = new System.Drawing.Point(694, 115);
             this.label_Aux_NOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_NOx_VO.Name = "label_Aux_NOx_VO";
             this.label_Aux_NOx_VO.Size = new System.Drawing.Size(89, 16);
@@ -1705,7 +1671,7 @@
             this.label_Aux_PM10_VO.AutoSize = true;
             this.label_Aux_PM10_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM10_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM10_VO.Location = new System.Drawing.Point(696, 375);
+            this.label_Aux_PM10_VO.Location = new System.Drawing.Point(694, 147);
             this.label_Aux_PM10_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM10_VO.Name = "label_Aux_PM10_VO";
             this.label_Aux_PM10_VO.Size = new System.Drawing.Size(97, 16);
@@ -1718,7 +1684,7 @@
             this.label_Aux_PM25_VO.AutoSize = true;
             this.label_Aux_PM25_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM25_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM25_VO.Location = new System.Drawing.Point(696, 408);
+            this.label_Aux_PM25_VO.Location = new System.Drawing.Point(694, 180);
             this.label_Aux_PM25_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM25_VO.Name = "label_Aux_PM25_VO";
             this.label_Aux_PM25_VO.Size = new System.Drawing.Size(97, 16);
@@ -1731,7 +1697,7 @@
             this.label_Aux_SOx_VO.AutoSize = true;
             this.label_Aux_SOx_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_SOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_SOx_VO.Location = new System.Drawing.Point(696, 437);
+            this.label_Aux_SOx_VO.Location = new System.Drawing.Point(694, 209);
             this.label_Aux_SOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_SOx_VO.Name = "label_Aux_SOx_VO";
             this.label_Aux_SOx_VO.Size = new System.Drawing.Size(88, 16);
@@ -1744,7 +1710,7 @@
             this.label_Aux_CH4_VO.AutoSize = true;
             this.label_Aux_CH4_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CH4_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CH4_VO.Location = new System.Drawing.Point(696, 466);
+            this.label_Aux_CH4_VO.Location = new System.Drawing.Point(694, 238);
             this.label_Aux_CH4_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CH4_VO.Name = "label_Aux_CH4_VO";
             this.label_Aux_CH4_VO.Size = new System.Drawing.Size(89, 16);
@@ -1757,7 +1723,7 @@
             this.label_Aux_CO2_VO.AutoSize = true;
             this.label_Aux_CO2_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO2_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO2_VO.Location = new System.Drawing.Point(696, 494);
+            this.label_Aux_CO2_VO.Location = new System.Drawing.Point(694, 266);
             this.label_Aux_CO2_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO2_VO.Name = "label_Aux_CO2_VO";
             this.label_Aux_CO2_VO.Size = new System.Drawing.Size(89, 16);
@@ -1770,113 +1736,12 @@
             this.label_Aux_N2O_VO.AutoSize = true;
             this.label_Aux_N2O_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_N2O_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_N2O_VO.Location = new System.Drawing.Point(696, 523);
+            this.label_Aux_N2O_VO.Location = new System.Drawing.Point(694, 294);
             this.label_Aux_N2O_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_N2O_VO.Name = "label_Aux_N2O_VO";
             this.label_Aux_N2O_VO.Size = new System.Drawing.Size(90, 16);
             this.label_Aux_N2O_VO.TabIndex = 98;
             this.label_Aux_N2O_VO.Text = "Aux_N2O_VO";
-            // 
-            // label_Petroleum_Fuel
-            // 
-            this.label_Petroleum_Fuel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Petroleum_Fuel.AutoSize = true;
-            this.label_Petroleum_Fuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Petroleum_Fuel.Location = new System.Drawing.Point(3, 205);
-            this.label_Petroleum_Fuel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_Petroleum_Fuel.Name = "label_Petroleum_Fuel";
-            this.label_Petroleum_Fuel.Size = new System.Drawing.Size(108, 18);
-            this.label_Petroleum_Fuel.TabIndex = 4;
-            this.label_Petroleum_Fuel.Text = "Petroleum Fuel";
-            this.label_Petroleum_Fuel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label_Emissions
-            // 
-            this.label_Emissions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Emissions.AutoSize = true;
-            this.label_Emissions.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Emissions.Location = new System.Drawing.Point(3, 238);
-            this.label_Emissions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_Emissions.Name = "label_Emissions";
-            this.label_Emissions.Size = new System.Drawing.Size(78, 18);
-            this.label_Emissions.TabIndex = 5;
-            this.label_Emissions.Text = "Emissions";
-            this.label_Emissions.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label_Main_FF_WTP
-            // 
-            this.label_Main_FF_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Main_FF_WTP.AutoSize = true;
-            this.label_Main_FF_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_FF_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_FF_WTP.Location = new System.Drawing.Point(123, 176);
-            this.label_Main_FF_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_Main_FF_WTP.Name = "label_Main_FF_WTP";
-            this.label_Main_FF_WTP.Size = new System.Drawing.Size(98, 16);
-            this.label_Main_FF_WTP.TabIndex = 55;
-            this.label_Main_FF_WTP.Text = "Main_FF_WTP";
-            // 
-            // label_Main_PF_WTP
-            // 
-            this.label_Main_PF_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Main_PF_WTP.AutoSize = true;
-            this.label_Main_PF_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_PF_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PF_WTP.Location = new System.Drawing.Point(123, 207);
-            this.label_Main_PF_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_Main_PF_WTP.Name = "label_Main_PF_WTP";
-            this.label_Main_PF_WTP.Size = new System.Drawing.Size(99, 16);
-            this.label_Main_PF_WTP.TabIndex = 58;
-            this.label_Main_PF_WTP.Text = "Main_PF_WTP";
-            // 
-            // label_Aux_FF_WTP
-            // 
-            this.label_Aux_FF_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Aux_FF_WTP.AutoSize = true;
-            this.label_Aux_FF_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Aux_FF_WTP.Location = new System.Drawing.Point(511, 176);
-            this.label_Aux_FF_WTP.Name = "label_Aux_FF_WTP";
-            this.label_Aux_FF_WTP.Size = new System.Drawing.Size(91, 16);
-            this.label_Aux_FF_WTP.TabIndex = 101;
-            this.label_Aux_FF_WTP.Text = "Aux_FF_WTP";
-            this.label_Aux_FF_WTP.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // label_Aux_PF_WTP
-            // 
-            this.label_Aux_PF_WTP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Aux_PF_WTP.AutoSize = true;
-            this.label_Aux_PF_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Aux_PF_WTP.Location = new System.Drawing.Point(511, 207);
-            this.label_Aux_PF_WTP.Name = "label_Aux_PF_WTP";
-            this.label_Aux_PF_WTP.Size = new System.Drawing.Size(92, 16);
-            this.label_Aux_PF_WTP.TabIndex = 102;
-            this.label_Aux_PF_WTP.Text = "Aux_PF_WTP";
-            // 
-            // label_FF_Total
-            // 
-            this.label_FF_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_FF_Total.AutoSize = true;
-            this.label_FF_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_FF_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_FF_Total.Location = new System.Drawing.Point(926, 176);
-            this.label_FF_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_FF_Total.Name = "label_FF_Total";
-            this.label_FF_Total.Size = new System.Drawing.Size(62, 16);
-            this.label_FF_Total.TabIndex = 99;
-            this.label_FF_Total.Text = "FF_Total";
-            // 
-            // label_PF_Total
-            // 
-            this.label_PF_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_PF_Total.AutoSize = true;
-            this.label_PF_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PF_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_PF_Total.Location = new System.Drawing.Point(926, 207);
-            this.label_PF_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_PF_Total.Name = "label_PF_Total";
-            this.label_PF_Total.Size = new System.Drawing.Size(63, 16);
-            this.label_PF_Total.TabIndex = 100;
-            this.label_PF_Total.Text = "PF_Total";
             // 
             // panel_Header
             // 
@@ -6418,7 +6283,6 @@
         private System.Windows.Forms.Label label_Aux_TE_WTP;
         private System.Windows.Forms.Label label_Main_TE_VO;
         private System.Windows.Forms.Label label_Total_Energy;
-        private System.Windows.Forms.Label label_Fossil_Fuels;
         private System.Windows.Forms.Label label_VOC;
         private System.Windows.Forms.Label label_CO;
         private System.Windows.Forms.Label label_NOx;
@@ -6474,14 +6338,6 @@
         private System.Windows.Forms.Label label_Aux_CH4_VO;
         private System.Windows.Forms.Label label_Aux_CO2_VO;
         private System.Windows.Forms.Label label_Aux_N2O_VO;
-        private System.Windows.Forms.Label label_Petroleum_Fuel;
-        private System.Windows.Forms.Label label_Emissions;
-        private System.Windows.Forms.Label label_Main_FF_WTP;
-        private System.Windows.Forms.Label label_Main_PF_WTP;
-        private System.Windows.Forms.Label label_Aux_FF_WTP;
-        private System.Windows.Forms.Label label_Aux_PF_WTP;
-        private System.Windows.Forms.Label label_FF_Total;
-        private System.Windows.Forms.Label label_PF_Total;
         private System.Windows.Forms.ToolStripMenuItem file_menu;
         private System.Windows.Forms.ToolStripMenuItem file_new_menu;
         private System.Windows.Forms.ToolStripMenuItem file_exit_menu;

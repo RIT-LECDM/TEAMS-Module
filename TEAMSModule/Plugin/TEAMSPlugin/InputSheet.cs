@@ -12,7 +12,7 @@ using Greet.DataStructureV3.Interfaces;
 using Greet.Model.Interfaces;
 using TEAMSModule;
 using System.Windows.Forms.DataVisualization.Charting;
-using Microsoft.Office.Interop.Excel;
+//using Microsoft.Office.Interop.Excel;
 
 namespace TEAMS_Plugin
 {
@@ -594,7 +594,7 @@ namespace TEAMS_Plugin
             useDefaults();
             changeResults();
             setResDefaults();
-            setUpShipsListForTWP();
+           // setUpShipsListForTWP();
             //initializePanelsAndLabels();
         }
 
@@ -1884,13 +1884,13 @@ namespace TEAMS_Plugin
 
             // Fossil Fuel
             //label_Main_FF_WTP.Text = parseResourceToString(FF_WTP) + " mmbtu/trip";
-            label_Fossil_Fuels.Text = "";
-            label_Main_FF_WTP.Text = "";
+            //label_Fossil_Fuels.Text = "";
+            //label_Main_FF_WTP.Text = "";
 
             // Petroleum Fuel
             //label_Main_PF_WTP.Text = parseResourceToString(PF_WTP) + " mmbtu/trip";
-            label_Petroleum_Fuel.Text = "";
-            label_Main_PF_WTP.Text = "";
+            //label_Petroleum_Fuel.Text = "";
+            //label_Main_PF_WTP.Text = "";
 
 
             /***************
@@ -1946,11 +1946,11 @@ namespace TEAMS_Plugin
 
             // Fossil Fuel Aux WTP
             //label_Aux_FF_WTP.Text     =   parseResourceToString(AUX_FF_WTP) + " mmbtu/trip";
-            label_Aux_FF_WTP.Text = "";
+            //label_Aux_FF_WTP.Text = "";
 
             // Petroleum Fuel Total
             //label_Aux_PF_WTP.Text     =   parseResourceToString(AUX_PF_WTP) + " mmbtu/trip";
-            label_Aux_PF_WTP.Text = "";
+            //label_Aux_PF_WTP.Text = "";
 
             // Column 4 -- Aux Engine Vessel Operations
             label_Aux_TE_VO.Text = parseResourceToString(AUX_TE_VO) + " mmbtu/trip";
@@ -1976,11 +1976,11 @@ namespace TEAMS_Plugin
              ***********************************************************/
             // Fossil Fuel Total
             //label_FF_Total.Text     =   parseResourceToString(FF_Total) + " mmbtu/trip";
-            label_FF_Total.Text = "";
+            //label_FF_Total.Text = "";
 
             // Petroleum Fuel Total
             //label_PF_Total.Text     =   parseResourceToString(PF_Total) + " mmbtu/trip";
-            label_PF_Total.Text = "";
+            //label_PF_Total.Text = "";
 
             /***************
              * EMISSIONS
@@ -2088,7 +2088,7 @@ namespace TEAMS_Plugin
         private void Save_Excel_Click(object sender, EventArgs e)
         {
             Recalculate();
-            exportToExcel();
+            //exportToExcel();
             saveTWPRelevantInfo();
         }
 
@@ -2106,138 +2106,138 @@ namespace TEAMS_Plugin
                             "Exception message: " + exception.Message); 
         }
 
-        private void exportToExcel()
-        {
-            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+    //    private void exportToExcel()
+    //    {
+    //        //Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
 
-        if (xlApp == null)
-        {
-            Console.WriteLine("EXCEL could not be started. Check that your office installation and project references are correct.");
-            return;
-        }
-        xlApp.Visible = true;
+    //    if (xlApp == null)
+    //    {
+    //        Console.WriteLine("EXCEL could not be started. Check that your office installation and project references are correct.");
+    //        return;
+    //    }
+    //    xlApp.Visible = true;
 
-        Workbook wb = xlApp.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
-        Worksheet ws = (Worksheet)wb.Worksheets[1];
+    //    Workbook wb = xlApp.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
+    //    Worksheet ws = (Worksheet)wb.Worksheets[1];
 
-        if (ws == null)
-        {
-            Console.WriteLine("Worksheet could not be created. Check that your office installation and project references are correct.");
-        }
-        // Add the headers
-        ws.Cells[1, 1].Value = "Vessel name";
-        ws.Cells[1, 1].Style.Font.Bold = true;
-        ws.Cells[1, 2].Value = VesselTypeID;
+    //    if (ws == null)
+    //    {
+    //        Console.WriteLine("Worksheet could not be created. Check that your office installation and project references are correct.");
+    //    }
+    //    // Add the headers
+    //    ws.Cells[1, 1].Value = "Vessel name";
+    //    ws.Cells[1, 1].Style.Font.Bold = true;
+    //    ws.Cells[1, 2].Value = VesselTypeID;
 
-        ws.Cells[2, 2].Value = "Main Engine";
-        ws.Cells[2, 2].Style.Font.Bold = true;
+    //    ws.Cells[2, 2].Value = "Main Engine";
+    //    ws.Cells[2, 2].Style.Font.Bold = true;
 
-        ws.Cells[2, 4].Value = "Auxiliary Engine";
-        ws.Cells[2, 4].Style.Font.Bold = true;
+    //    ws.Cells[2, 4].Value = "Auxiliary Engine";
+    //    ws.Cells[2, 4].Style.Font.Bold = true;
 
-        ws.Cells[3, 1].Value = "Results Shown Per Trip";
-        ws.Cells[3, 2].Value = "Well To Pump";
-        ws.Cells[3, 3].Value = "Vessel Operation";
-        ws.Cells[3, 4].Value = "Well To Pump";
-        ws.Cells[3, 5].Value = "Vessel Operation";
-        ws.Cells[3, 6].Value = "Total";
+    //    ws.Cells[3, 1].Value = "Results Shown Per Trip";
+    //    ws.Cells[3, 2].Value = "Well To Pump";
+    //    ws.Cells[3, 3].Value = "Vessel Operation";
+    //    ws.Cells[3, 4].Value = "Well To Pump";
+    //    ws.Cells[3, 5].Value = "Vessel Operation";
+    //    ws.Cells[3, 6].Value = "Total";
 
 
-        // Add the data
+    //    // Add the data
 
-        ws.Cells[4, 1].Value = "Total Energy";
-        ws.Cells[4, 2].Value = TE_WTP;
-        ws.Cells[4, 3].Value = TE_VO;
-        ws.Cells[4, 4].Value = AUX_TE_WTP;
-        ws.Cells[4, 5].Value = AUX_TE_VO;
-        ws.Cells[4, 6].Value = TE_Total;
+    //    ws.Cells[4, 1].Value = "Total Energy";
+    //    ws.Cells[4, 2].Value = TE_WTP;
+    //    ws.Cells[4, 3].Value = TE_VO;
+    //    ws.Cells[4, 4].Value = AUX_TE_WTP;
+    //    ws.Cells[4, 5].Value = AUX_TE_VO;
+    //    ws.Cells[4, 6].Value = TE_Total;
 
-        // TODO: Implement Fossil Fuel
-        // ws.Cells[5, 1].Value = "Fossil Fuel";
-       // ws.Cells[5, 2].Value = FF_WTP;
-        //ws.Cells[5, 4].Value = AUX_FF_WTP;
-        //ws.Cells[5, 6].Value = FF_Total;
+    //    // TODO: Implement Fossil Fuel
+    //    // ws.Cells[5, 1].Value = "Fossil Fuel";
+    //   // ws.Cells[5, 2].Value = FF_WTP;
+    //    //ws.Cells[5, 4].Value = AUX_FF_WTP;
+    //    //ws.Cells[5, 6].Value = FF_Total;
 
-        // TODO: Implement Petroleum Fuel
-        // ws.Cells[6, 1].Value = "Petroleum Fuel";
-        //ws.Cells[6, 2].Value = PF_WTP;
-        //ws.Cells[6, 4].Value = AUX_PF_WTP;
-        //ws.Cells[6, 6].Value = PF_Total;
+    //    // TODO: Implement Petroleum Fuel
+    //    // ws.Cells[6, 1].Value = "Petroleum Fuel";
+    //    //ws.Cells[6, 2].Value = PF_WTP;
+    //    //ws.Cells[6, 4].Value = AUX_PF_WTP;
+    //    //ws.Cells[6, 6].Value = PF_Total;
 
-        ws.Cells[9, 1].Value = "Emissions";
+    //    ws.Cells[9, 1].Value = "Emissions";
 
-        ws.Cells[10, 1].Value = "VOC";
-        ws.Cells[10, 2].Value = VOC_WTP;
-        ws.Cells[10, 3].Value = VOC_VO;
-        ws.Cells[10, 4].Value = AUX_VOC_WTP;
-        ws.Cells[10, 5].Value = AUX_VOC_VO;
-        ws.Cells[10, 6].Value = VOC_Total;
+    //    ws.Cells[10, 1].Value = "VOC";
+    //    ws.Cells[10, 2].Value = VOC_WTP;
+    //    ws.Cells[10, 3].Value = VOC_VO;
+    //    ws.Cells[10, 4].Value = AUX_VOC_WTP;
+    //    ws.Cells[10, 5].Value = AUX_VOC_VO;
+    //    ws.Cells[10, 6].Value = VOC_Total;
 
-        ws.Cells[11, 1].Value = "CO";
-        ws.Cells[11, 2].Value = CO_WTP;
-        ws.Cells[11, 3].Value = CO_VO;
-        ws.Cells[11, 4].Value = AUX_CO_WTP;
-        ws.Cells[11, 5].Value = AUX_CO_VO;
-        ws.Cells[11, 6].Value = CO_Total;
+    //    ws.Cells[11, 1].Value = "CO";
+    //    ws.Cells[11, 2].Value = CO_WTP;
+    //    ws.Cells[11, 3].Value = CO_VO;
+    //    ws.Cells[11, 4].Value = AUX_CO_WTP;
+    //    ws.Cells[11, 5].Value = AUX_CO_VO;
+    //    ws.Cells[11, 6].Value = CO_Total;
 
-        ws.Cells[12, 1].Value = "NOx";
-        ws.Cells[12, 2].Value = NOx_WTP;
-        ws.Cells[12, 3].Value = NOx_VO;
-        ws.Cells[12, 4].Value = AUX_NOx_WTP;
-        ws.Cells[12, 5].Value = AUX_NOx_VO;
-        ws.Cells[12, 6].Value = NOx_Total;
+    //    ws.Cells[12, 1].Value = "NOx";
+    //    ws.Cells[12, 2].Value = NOx_WTP;
+    //    ws.Cells[12, 3].Value = NOx_VO;
+    //    ws.Cells[12, 4].Value = AUX_NOx_WTP;
+    //    ws.Cells[12, 5].Value = AUX_NOx_VO;
+    //    ws.Cells[12, 6].Value = NOx_Total;
 
-        ws.Cells[13, 1].Value = "PM10";
-        ws.Cells[13, 2].Value = PM10_WTP;
-        ws.Cells[13, 3].Value = PM10_VO;
-        ws.Cells[13, 4].Value = AUX_PM10_WTP;
-        ws.Cells[13, 5].Value = AUX_PM10_VO;
-        ws.Cells[13, 6].Value = PM10_Total;
+    //    ws.Cells[13, 1].Value = "PM10";
+    //    ws.Cells[13, 2].Value = PM10_WTP;
+    //    ws.Cells[13, 3].Value = PM10_VO;
+    //    ws.Cells[13, 4].Value = AUX_PM10_WTP;
+    //    ws.Cells[13, 5].Value = AUX_PM10_VO;
+    //    ws.Cells[13, 6].Value = PM10_Total;
 
-        ws.Cells[14, 1].Value = "PM 2.5";
-        ws.Cells[14, 2].Value = PM25_WTP;
-        ws.Cells[14, 3].Value = PM25_VO;
-        ws.Cells[14, 4].Value = AUX_PM25_WTP;
-        ws.Cells[14, 5].Value = AUX_PM25_VO;
-        ws.Cells[14, 6].Value = PM25_Total;
+    //    ws.Cells[14, 1].Value = "PM 2.5";
+    //    ws.Cells[14, 2].Value = PM25_WTP;
+    //    ws.Cells[14, 3].Value = PM25_VO;
+    //    ws.Cells[14, 4].Value = AUX_PM25_WTP;
+    //    ws.Cells[14, 5].Value = AUX_PM25_VO;
+    //    ws.Cells[14, 6].Value = PM25_Total;
 
-        ws.Cells[15, 1].Value = "SOx";
-        ws.Cells[15, 2].Value = SOx_WTP;
-        ws.Cells[15, 3].Value = SOx_VO;
-        ws.Cells[15, 4].Value = AUX_SOx_WTP;
-        ws.Cells[15, 5].Value = AUX_SOx_VO;
-        ws.Cells[15, 6].Value = SOx_Total;
+    //    ws.Cells[15, 1].Value = "SOx";
+    //    ws.Cells[15, 2].Value = SOx_WTP;
+    //    ws.Cells[15, 3].Value = SOx_VO;
+    //    ws.Cells[15, 4].Value = AUX_SOx_WTP;
+    //    ws.Cells[15, 5].Value = AUX_SOx_VO;
+    //    ws.Cells[15, 6].Value = SOx_Total;
 
-        ws.Cells[16, 1].Value = "CH4";
-        ws.Cells[16, 2].Value = CH4_WTP;
-        ws.Cells[16, 3].Value = CH4_VO;
-        ws.Cells[16, 4].Value = AUX_CH4_WTP;
-        ws.Cells[16, 5].Value = AUX_CH4_VO;
-        ws.Cells[16, 6].Value = CH4_Total;
+    //    ws.Cells[16, 1].Value = "CH4";
+    //    ws.Cells[16, 2].Value = CH4_WTP;
+    //    ws.Cells[16, 3].Value = CH4_VO;
+    //    ws.Cells[16, 4].Value = AUX_CH4_WTP;
+    //    ws.Cells[16, 5].Value = AUX_CH4_VO;
+    //    ws.Cells[16, 6].Value = CH4_Total;
 
-        ws.Cells[17, 1].Value = "CO2";
-        ws.Cells[17, 2].Value = CO2_WTP;
-        ws.Cells[17, 3].Value = CO2_VO;
-        ws.Cells[17, 4].Value = AUX_CO2_WTP;
-        ws.Cells[17, 5].Value = AUX_CO2_VO;
-        ws.Cells[17, 6].Value = CO2_Total;
+    //    ws.Cells[17, 1].Value = "CO2";
+    //    ws.Cells[17, 2].Value = CO2_WTP;
+    //    ws.Cells[17, 3].Value = CO2_VO;
+    //    ws.Cells[17, 4].Value = AUX_CO2_WTP;
+    //    ws.Cells[17, 5].Value = AUX_CO2_VO;
+    //    ws.Cells[17, 6].Value = CO2_Total;
 
-        ws.Cells[18, 1].Value = "N2O";
-        ws.Cells[18, 2].Value = N2O_WTP;
-        ws.Cells[18, 3].Value = N2O_VO;
-        ws.Cells[18, 4].Value = AUX_N2O_WTP;
-        ws.Cells[18, 5].Value = AUX_N2O_VO;
-        ws.Cells[18, 6].Value = N2O_Total;
+    //    ws.Cells[18, 1].Value = "N2O";
+    //    ws.Cells[18, 2].Value = N2O_WTP;
+    //    ws.Cells[18, 3].Value = N2O_VO;
+    //    ws.Cells[18, 4].Value = AUX_N2O_WTP;
+    //    ws.Cells[18, 5].Value = AUX_N2O_VO;
+    //    ws.Cells[18, 6].Value = N2O_Total;
 
-        ws.Cells[20, 1].Value = "Main Engine Fuel Type:";
-        ws.Cells[20, 1].Style.Font.Bold = true;
-        ws.Cells[20, 2].Value = MainfuelUsed;
+    //    ws.Cells[20, 1].Value = "Main Engine Fuel Type:";
+    //    ws.Cells[20, 1].Style.Font.Bold = true;
+    //    ws.Cells[20, 2].Value = MainfuelUsed;
 
-        ws.Cells[21, 1].Value = "Auxiliary Engine Fuel Type:";
-        ws.Cells[21, 1].Style.Font.Bold = true;
-        ws.Cells[21, 2].Value = auxFuelUsed;
+    //    ws.Cells[21, 1].Value = "Auxiliary Engine Fuel Type:";
+    //    ws.Cells[21, 1].Style.Font.Bold = true;
+    //    ws.Cells[21, 2].Value = auxFuelUsed;
         
-    }
+    //}
 
         #endregion
         private void calculateToolStripMenuItem_Click(object sender, EventArgs e)
