@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEAMS", "Plugin\TEAMSPlugin\TEAMS.csproj", "{AD91D8FB-3C8A-46AA-86C8-3BF6831B0D25}"
 EndProject
 Global

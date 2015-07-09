@@ -34,6 +34,10 @@
     <ApplicationIcon>
     </ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Greet.DataStructureV3">
       <HintPath>..\..\..\Greet_API\Greet.DataStructureV3.dll</HintPath>
@@ -57,6 +61,176 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="APIcalls.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\Algorithm.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\BinaryTree\BinarySearchTreeBase\BinarySearchTreeBase.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\BinaryTree\BinarySearchTreeBase\BinaryTreeNodeBase.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\BinaryTree\RedBlackTree\RedBlackTree.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\BinaryTree\RedBlackTree\RedBlackTreeNode.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\Encoder\Bin2Hex.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\FastSearchList.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\FileIO.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\FileSelector.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\Pair.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\StreamHelper.cs" />
+    <Compile Include="ExcelLibrary\CodeLib\TextEncoding.cs" />
+    <Compile Include="ExcelLibrary\DataSetHelper.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\ByteOrderMarks.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\CompoundDocument.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\CompoundDocument_Read.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\CompoundDocument_Write.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\CompoundFileHeader.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\DirectoryEntry.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\DirectoryTree.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\EntryType.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\FileHeader.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\MasterSectorAllocation.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\NodeColor.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\SectorAllocation.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\ShortSectorAllocation.cs" />
+    <Compile Include="ExcelLibrary\Office\CompoundDocumentFormat\SID.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Enums\BlipSignature.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Enums\BlipType.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Enums\EscherRecordType.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Enums\PropertyIDs.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Enums\ShapeFlag.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Enums\ShapeType.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecord.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\EscherRecord.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtAlignRule.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtAnchor.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtArcRule.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBlip.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBlipBitmapDIB.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBlipBitmapJPEG.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBlipBitmapPNG.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBlipEnd.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBlipMetafileEMF.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBlipMetafilePICT.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBlipMetafileWMF.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBlipStart.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBSE.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtBstoreContainer.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtCalloutRule.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtChildAnchor.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtClientAnchor.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtClientData.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtClientRule.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtClientTextbox.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtCLSID.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtColorMRU.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtColorScheme.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtConnectorRule.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtContainer.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtDeletedPspl.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtDg.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtDgContainer.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtDgg.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtDggContainer.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtOleObject.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtOPT.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtRegroupItems.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtSelection.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtSolverContainer.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtSp.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtSpContainer.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtSpgr.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtSpgrContainer.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtSplitMenuColors.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\EscherRecords\MsofbtTextbox.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Extended\MsofbtBSE.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Extended\MsofbtContainer.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Extended\MsofbtDgg.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Extended\MsofbtDggContainer.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Extended\MsofbtOPT.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\Extended\MsofbtSp.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryDrawingFormat\ShapeProperty.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\CellFormatCollection.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\ColorPalette.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Decode\StringDecoder.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Decode\WorkbookDecoder.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Decode\WorksheetDecoder.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Encode\WorkbookEncoder.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Encode\WorkSheetEncoder.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Enums\ErrorCode.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Enums\RecordType.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Enums\StreamType.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Enums\SubRecordType.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\BOOLERR.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\EXTSST.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\FORMULA.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\MSOCONTAINER.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\MULRK.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\OBJ.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\PALETTE.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\SST.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\StringOffset.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Extended\XF.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Record.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\ARRAY.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\BACKUP.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\BITMAP.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\BLANK.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\BOF.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\BOOKBOOL.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\BOOLERR.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\BOTTOMMARGIN.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\BOUNDSHEET.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\CALCCOUNT.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\CALCMODE.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\CellValue.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\CODEPAGE.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\COLINFO.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\CONTINUE.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\DATEMODE.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\DBCELL.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\DEFCOLWIDTH.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\DIMENSIONS.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\EOF.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\EXTSST.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\FONT.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\FORMAT.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\FORMULA.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\LABELSST.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\MSOCONTAINER.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\MSODRAWING.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\MSODRAWINGGROUP.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\MSODRAWINGSELECTION.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\MULBLANK.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\MULRK.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\NUMBER.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\OBJ.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\PALETTE.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\Record.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\RK.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\ROW.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\RSTRING.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\SST.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\STANDARDWIDTH.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\STRING.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\WINDOW1.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\Records\XF.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\RichTextFormat.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\SharedResource.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\SubRecord.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\SubRecords\ClipboardFormat.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\SubRecords\CommonObjectData.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\SubRecords\End.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\SubRecords\GroupMarker.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\SubRecords\PictureOption.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\BinaryFileFormat\SubRecords\SubRecord.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\Cell.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\CellAnchor.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\CellCollection.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\CellFormat\CellFormat.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\CellFormat\CellFormatType.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\CellStyle.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\ColumnWidth.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\Enums\SheetType.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\Image.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\Picture.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\Row.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\Workbook.cs" />
+    <Compile Include="ExcelLibrary\Office\Excel\SpreadSheet\Worksheet.cs" />
     <Compile Include="TWPCalc.cs" />
     <Compile Include="CopyrightPage.cs">
       <SubType>Form</SubType>
@@ -113,41 +287,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ExcelLibrary\ExcelLibrary.csproj" />
+    <Content Include="ExcelLibrary\Office\Excel\readme.txt" />
+    <Content Include="ExcelLibrary\Office\Excel\Tool\MetaData\EscherRecordTypes.txt" />
+    <Content Include="ExcelLibrary\Office\Excel\Tool\MetaData\ExcelRecords.xml" />
+    <Content Include="ExcelLibrary\Office\Excel\Tool\MetaData\Record Identifier.txt" />
     <Content Include="images\icon.png" />
     <Content Include="images\SpreaderIcon.ico" />
     <Content Include="images\TEAMS.jpg" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>5</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>7</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

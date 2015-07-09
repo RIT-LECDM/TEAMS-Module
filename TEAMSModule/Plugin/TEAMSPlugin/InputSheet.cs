@@ -12,8 +12,7 @@ using Greet.DataStructureV3.Interfaces;
 using Greet.Model.Interfaces;
 using TEAMSModule;
 using System.Windows.Forms.DataVisualization.Charting;
-//using Microsoft.Office.Interop.Excel;
-
+using ExcelLibrary.SpreadSheet;
 namespace TEAMS_Plugin
 {
     public partial class TEAMS : Form
@@ -594,7 +593,7 @@ namespace TEAMS_Plugin
             useDefaults();
             changeResults();
             setResDefaults();
-           // setUpShipsListForTWP();
+            // setUpShipsListForTWP();
             //initializePanelsAndLabels();
         }
 
@@ -603,7 +602,7 @@ namespace TEAMS_Plugin
             for (int i = 0; i < allPanelLabels.Length; i++)
             {
                 //labelClicked(allPanelLabels.ElementAt(i), allPanels.ElementAt(i));
-                labelClicked(allPanelLabels.ElementAt(i),allPanels.ElementAt(i));
+                labelClicked(allPanelLabels.ElementAt(i), allPanels.ElementAt(i));
             }
         }
 
@@ -1520,7 +1519,7 @@ namespace TEAMS_Plugin
                         {
                             TreeNode pathwayNode = new TreeNode(pathway.Name);
                             pathwayNode.Tag = pathway;
-                            resourceTreeNode.Nodes.Add(pathwayNode);                            
+                            resourceTreeNode.Nodes.Add(pathwayNode);
                         }
                         if (resourceTreeNode.Nodes.Count > 0)
                             tree.Nodes.Add(resourceTreeNode);
@@ -1639,7 +1638,6 @@ namespace TEAMS_Plugin
                 MainfuelUsed = APIcontroller.getFuelUsed(path);
 
                 IResults pathwayResults = APIcontroller.getPathwayResults(data, path);
-
                 GALLONperTrip = APIcontroller.getGallonsPerMMBTU(resourceUsed) * MMBTUinperTrip;
 
                 //These numbers will be used in calculations below, and are based on whether or not the user has edited GREET resource variables
@@ -1675,7 +1673,17 @@ namespace TEAMS_Plugin
                 {
                     Array.Copy(Fischer, main_fuel_type, Fischer.Length);
                 }
-
+                double[] adjustedPathwayResults = new double[9];
+                for (int j = 0; j < 9; j++)
+                {
+                    for (int i = 0; i < pathwayResults.WellToProductEmissions().Values.Count; i++)
+                    {
+                        if (pathwayResults.WellToProductEmissions().Values.ElementAt(i).SpecieID == j + 1)
+                        {
+                            adjustedPathwayResults[j] = APIcontroller.getResourceWTPEmissions(pathwayResults, i);
+                        }
+                    }
+                }
                 //These should be relatively accurate no matter what, since it's a total energy and not the different engines
                 //Total Energy Well To Pump = mmbtu of fuel put into the engine * all sections of energy for what it took to create 1 mmbtu of fuel - the 1 mmbtu of fuel
 
@@ -1701,48 +1709,48 @@ namespace TEAMS_Plugin
                 PF_Total = 0;
 
                 // Volatile Organic Compounds
-                VOC_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * MMBTUinperTrip;
+                VOC_WTP = adjustedPathwayResults[0] * MMBTUinperTrip;
                 VOC_VO = main_fuel_type[0] * (1 / KWHRS_PER_HPHR) * KWHOutperTrip;
                 VOC_Total = VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
                 // Carbon Monoxide
-                CO_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * MMBTUinperTrip;
+                CO_WTP = adjustedPathwayResults[1] * MMBTUinperTrip;
                 CO_VO = (main_fuel_type[1] * (1 / KWHRS_PER_HPHR) * KWHOutperTrip);
                 CO_Total = CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
                 // Nitrogen Dioxide
-                NOx_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * MMBTUinperTrip;
+                NOx_WTP = adjustedPathwayResults[2] * MMBTUinperTrip;
                 NOx_VO = main_fuel_type[2] * (1 / KWHRS_PER_HPHR) * KWHOutperTrip;
                 NOx_Total = NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
                 // Particulate Matter 10
-                PM10_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * MMBTUinperTrip;
+                PM10_WTP = adjustedPathwayResults[3] * MMBTUinperTrip;
                 PM10_VO = main_fuel_type[3] * (1 / KWHRS_PER_HPHR) * KWHOutperTrip;
                 PM10_Total = PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
                 // Particulate Matter 25
-                PM25_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * MMBTUinperTrip;
+                PM25_WTP = adjustedPathwayResults[4] * MMBTUinperTrip;
                 PM25_VO = main_fuel_type[4] * (1 / KWHRS_PER_HPHR) * KWHOutperTrip;
                 PM25_Total = PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
                 // Sulfur Oxides
-                SOx_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * MMBTUinperTrip;
+                SOx_WTP = adjustedPathwayResults[5] * MMBTUinperTrip;
                 SOx_VO = resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * GRAMS_SOX_PER_GRAMS_S * GALLONperTrip;
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
                 // Methane
-                CH4_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * MMBTUinperTrip;
+                CH4_WTP = adjustedPathwayResults[6] * MMBTUinperTrip;
                 CH4_VO = main_fuel_type[5] * (1 / KWHRS_PER_HPHR) * KWHOutperTrip;
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 // Carbon Dioxide
                 double gramsOfFuel = (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * MMBTUinperTrip;
-                CO2_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * MMBTUinperTrip;
+                CO2_WTP = adjustedPathwayResults[8] * MMBTUinperTrip;
                 CO2_VO = gramsOfFuel * resourceCarbonRatio * (44 / 12);
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
                 //Nitrous Oxide
-                N2O_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * MMBTUinperTrip;
+                N2O_WTP = adjustedPathwayResults[7] * MMBTUinperTrip;
                 N2O_VO = main_fuel_type[6] * (1 / KWHRS_PER_HPHR) * KWHOutperTrip;
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
@@ -1795,6 +1803,17 @@ namespace TEAMS_Plugin
                 {
                     Array.Copy(Aux_Fischer, aux_fuel_type, Aux_Fischer.Length);
                 }
+                double[] adjustedPathwayResults = new double[9];
+                for (int j = 0; j < 9; j++)
+                {
+                    for (int i = 0; i < pathwayResults.WellToProductEmissions().Values.Count; i++)
+                    {
+                        if (pathwayResults.WellToProductEmissions().Values.ElementAt(i).SpecieID == j + 1)
+                        {
+                            adjustedPathwayResults[j] = APIcontroller.getResourceWTPEmissions(pathwayResults, i);
+                        }
+                    }
+                }
 
                 AuxEngineGALLONperTrip = (1 / resourceLowerHeatingValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * AuxEngineMMBTUinperTrip;
 
@@ -1816,40 +1835,40 @@ namespace TEAMS_Plugin
                 AUX_PF_WTP = 0;
                 PF_Total = 0;
 
-                AUX_VOC_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 0) * AuxEngineMMBTUinperTrip;
+                AUX_VOC_WTP = adjustedPathwayResults[0] * AuxEngineMMBTUinperTrip;
                 AUX_VOC_VO = aux_fuel_type[0] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 VOC_Total = VOC_WTP + VOC_VO + AUX_VOC_WTP + AUX_VOC_VO;
 
-                AUX_CO_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 1) * AuxEngineMMBTUinperTrip;
+                AUX_CO_WTP = adjustedPathwayResults[1] * AuxEngineMMBTUinperTrip;
                 AUX_CO_VO = aux_fuel_type[1] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 CO_Total = CO_WTP + CO_VO + AUX_CO_WTP + AUX_CO_VO;
 
-                AUX_NOx_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 2) * AuxEngineMMBTUinperTrip;
+                AUX_NOx_WTP = adjustedPathwayResults[2] * AuxEngineMMBTUinperTrip;
                 AUX_NOx_VO = aux_fuel_type[2] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 NOx_Total = NOx_WTP + NOx_VO + AUX_NOx_WTP + AUX_NOx_VO;
 
-                AUX_PM10_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 3) * AuxEngineMMBTUinperTrip;
+                AUX_PM10_WTP = adjustedPathwayResults[3] * AuxEngineMMBTUinperTrip;
                 AUX_PM10_VO = aux_fuel_type[3] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 PM10_Total = PM10_WTP + PM10_VO + AUX_PM10_WTP + AUX_PM10_VO;
 
-                AUX_PM25_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 4) * AuxEngineMMBTUinperTrip;
+                AUX_PM25_WTP = adjustedPathwayResults[4] * AuxEngineMMBTUinperTrip;
                 AUX_PM25_VO = aux_fuel_type[4] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 PM25_Total = PM25_WTP + PM25_VO + AUX_PM25_WTP + AUX_PM25_VO;
 
-                AUX_SOx_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 5) * AuxEngineMMBTUinperTrip;
+                AUX_SOx_WTP = adjustedPathwayResults[5] * AuxEngineMMBTUinperTrip;
                 AUX_SOx_VO = resourceDensity * resourceSulfurRatio * GRAMS_PER_KILOGRAM * (1 / GALLONS_PER_CUBIC_METER) * GRAMS_SOX_PER_GRAMS_S * AuxEngineGALLONperTrip;
                 SOx_Total = SOx_WTP + SOx_VO + AUX_SOx_WTP + AUX_SOx_VO;
 
-                AUX_CH4_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 6) * AuxEngineMMBTUinperTrip;
+                AUX_CH4_WTP = adjustedPathwayResults[6] * AuxEngineMMBTUinperTrip;
                 AUX_CH4_VO = aux_fuel_type[5] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 CH4_Total = CH4_WTP + CH4_VO + AUX_CH4_WTP + AUX_CH4_VO;
 
                 double gramsOfFuel = (1 / resourceLowerHeatingValue) * resourceDensity * JOULES_PER_MMBTU * GRAMS_PER_KILOGRAM * AuxEngineMMBTUinperTrip;
-                AUX_CO2_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 8) * AuxEngineMMBTUinperTrip;
+                AUX_CO2_WTP = adjustedPathwayResults[8] * AuxEngineMMBTUinperTrip;
                 AUX_CO2_VO = gramsOfFuel * resourceCarbonRatio * (44 / 12);
                 CO2_Total = CO2_WTP + CO2_VO + AUX_CO2_WTP + AUX_CO2_VO;
 
-                AUX_N2O_WTP = APIcontroller.getResourceWTPEmissions(pathwayResults, 7) * AuxEngineMMBTUinperTrip;
+                AUX_N2O_WTP = adjustedPathwayResults[7] * AuxEngineMMBTUinperTrip;
                 AUX_N2O_VO = aux_fuel_type[6] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
@@ -2088,156 +2107,139 @@ namespace TEAMS_Plugin
         private void Save_Excel_Click(object sender, EventArgs e)
         {
             Recalculate();
-            //exportToExcel();
+            exportToExcel();
             saveTWPRelevantInfo();
         }
 
         //Function That Makes list Of Used Cases For Us To use in TWP Calculation
         private void saveTWPRelevantInfo()
         {
-            StreamWriter file2 = new StreamWriter(pathToTWP,true);
-            file2.WriteLine(VesselTypeID+","+CO2_Total+","+CH4_Total);
+            StreamWriter file2 = new StreamWriter(pathToTWP, true);
+            file2.WriteLine(VesselTypeID + "," + CO2_Total + "," + CH4_Total);
             file2.Close();
         }
         // For use during export to excel sheet. Prevents system crashing and gives error source to user.
         private void exception_Handling(Exception exception)
         {
             MessageBox.Show("An error occurred while trying to save the file. Ensure it is not being used by another program and try again.\n" +
-                            "Exception message: " + exception.Message); 
+                            "Exception message: " + exception.Message);
         }
 
-    //    private void exportToExcel()
-    //    {
-    //        //Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+        private void exportToExcel()
+        {
 
-    //    if (xlApp == null)
-    //    {
-    //        Console.WriteLine("EXCEL could not be started. Check that your office installation and project references are correct.");
-    //        return;
-    //    }
-    //    xlApp.Visible = true;
+            string filePath = Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Greet/Plugins/GreetExport.xls";
+            Workbook wb = new Workbook();
+            Worksheet ws = new Worksheet("First Sheet");
 
-    //    Workbook wb = xlApp.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
-    //    Worksheet ws = (Worksheet)wb.Worksheets[1];
+            // Add the headers
+            ws.Cells[1, 1] = new Cell("Vessel name");
+            ws.Cells[1, 2] = new Cell(VesselTypeID);
 
-    //    if (ws == null)
-    //    {
-    //        Console.WriteLine("Worksheet could not be created. Check that your office installation and project references are correct.");
-    //    }
-    //    // Add the headers
-    //    ws.Cells[1, 1].Value = "Vessel name";
-    //    ws.Cells[1, 1].Style.Font.Bold = true;
-    //    ws.Cells[1, 2].Value = VesselTypeID;
+            ws.Cells[2, 2] = new Cell("Main Engine");
 
-    //    ws.Cells[2, 2].Value = "Main Engine";
-    //    ws.Cells[2, 2].Style.Font.Bold = true;
+            ws.Cells[2, 4] = new Cell("Auxiliary Engine");
 
-    //    ws.Cells[2, 4].Value = "Auxiliary Engine";
-    //    ws.Cells[2, 4].Style.Font.Bold = true;
+            ws.Cells[3, 1] = new Cell("Results Shown Per Trip");
+            ws.Cells[3, 2] = new Cell("Well To Pump");
+            ws.Cells[3, 3] = new Cell("Vessel Operation");
+            ws.Cells[3, 4] = new Cell("Well To Pump");
+            ws.Cells[3, 5] = new Cell("Vessel Operation");
+            ws.Cells[3, 6] = new Cell("Total");
 
-    //    ws.Cells[3, 1].Value = "Results Shown Per Trip";
-    //    ws.Cells[3, 2].Value = "Well To Pump";
-    //    ws.Cells[3, 3].Value = "Vessel Operation";
-    //    ws.Cells[3, 4].Value = "Well To Pump";
-    //    ws.Cells[3, 5].Value = "Vessel Operation";
-    //    ws.Cells[3, 6].Value = "Total";
+            // Add the data
+            ws.Cells[4, 1] = new Cell("Total Energy");
+            ws.Cells[4, 2] = new Cell(TE_WTP);
+            ws.Cells[4, 3] = new Cell(TE_VO);
+            ws.Cells[4, 4] = new Cell(AUX_TE_WTP);
+            ws.Cells[4, 5] = new Cell(AUX_TE_VO);
+            ws.Cells[4, 6] = new Cell(TE_Total);
 
+            // TODO: Implement Fossil Fuel
+            // ws.Cells[5, 1] = new Cell( "Fossil Fuel");
+            // ws.Cells[5, 2] = new Cell( FF_WTP;
+            //ws.Cells[5, 4] = new Cell( AUX_FF_WTP;
+            //ws.Cells[5, 6] = new Cell( FF_Total;
 
-    //    // Add the data
+            // TODO: Implement Petroleum Fuel
+            // ws.Cells[6, 1] = new Cell( "Petroleum Fuel");
+            //ws.Cells[6, 2] = new Cell( PF_WTP;
+            //ws.Cells[6, 4] = new Cell( AUX_PF_WTP;
+            //ws.Cells[6, 6] = new Cell( PF_Total;
 
-    //    ws.Cells[4, 1].Value = "Total Energy";
-    //    ws.Cells[4, 2].Value = TE_WTP;
-    //    ws.Cells[4, 3].Value = TE_VO;
-    //    ws.Cells[4, 4].Value = AUX_TE_WTP;
-    //    ws.Cells[4, 5].Value = AUX_TE_VO;
-    //    ws.Cells[4, 6].Value = TE_Total;
+            ws.Cells[9, 1] = new Cell("Emissions");
 
-    //    // TODO: Implement Fossil Fuel
-    //    // ws.Cells[5, 1].Value = "Fossil Fuel";
-    //   // ws.Cells[5, 2].Value = FF_WTP;
-    //    //ws.Cells[5, 4].Value = AUX_FF_WTP;
-    //    //ws.Cells[5, 6].Value = FF_Total;
+            ws.Cells[10, 1] = new Cell("VOC");
+            ws.Cells[10, 2] = new Cell(VOC_WTP);
+            ws.Cells[10, 3] = new Cell(VOC_VO);
+            ws.Cells[10, 4] = new Cell(AUX_VOC_WTP);
+            ws.Cells[10, 5] = new Cell(AUX_VOC_VO);
+            ws.Cells[10, 6] = new Cell(VOC_Total);
 
-    //    // TODO: Implement Petroleum Fuel
-    //    // ws.Cells[6, 1].Value = "Petroleum Fuel";
-    //    //ws.Cells[6, 2].Value = PF_WTP;
-    //    //ws.Cells[6, 4].Value = AUX_PF_WTP;
-    //    //ws.Cells[6, 6].Value = PF_Total;
+            ws.Cells[11, 1] = new Cell("CO");
+            ws.Cells[11, 2] = new Cell(CO_WTP);
+            ws.Cells[11, 3] = new Cell(CO_VO);
+            ws.Cells[11, 4] = new Cell(AUX_CO_WTP);
+            ws.Cells[11, 5] = new Cell(AUX_CO_VO);
+            ws.Cells[11, 6] = new Cell(CO_Total);
 
-    //    ws.Cells[9, 1].Value = "Emissions";
+            ws.Cells[12, 1] = new Cell("NOx");
+            ws.Cells[12, 2] = new Cell(NOx_WTP);
+            ws.Cells[12, 3] = new Cell(NOx_VO);
+            ws.Cells[12, 4] = new Cell(AUX_NOx_WTP);
+            ws.Cells[12, 5] = new Cell(AUX_NOx_VO);
+            ws.Cells[12, 6] = new Cell(NOx_Total);
 
-    //    ws.Cells[10, 1].Value = "VOC";
-    //    ws.Cells[10, 2].Value = VOC_WTP;
-    //    ws.Cells[10, 3].Value = VOC_VO;
-    //    ws.Cells[10, 4].Value = AUX_VOC_WTP;
-    //    ws.Cells[10, 5].Value = AUX_VOC_VO;
-    //    ws.Cells[10, 6].Value = VOC_Total;
+            ws.Cells[13, 1] = new Cell("PM10");
+            ws.Cells[13, 2] = new Cell(PM10_WTP);
+            ws.Cells[13, 3] = new Cell(PM10_VO);
+            ws.Cells[13, 4] = new Cell(AUX_PM10_WTP);
+            ws.Cells[13, 5] = new Cell(AUX_PM10_VO);
+            ws.Cells[13, 6] = new Cell(PM10_Total);
 
-    //    ws.Cells[11, 1].Value = "CO";
-    //    ws.Cells[11, 2].Value = CO_WTP;
-    //    ws.Cells[11, 3].Value = CO_VO;
-    //    ws.Cells[11, 4].Value = AUX_CO_WTP;
-    //    ws.Cells[11, 5].Value = AUX_CO_VO;
-    //    ws.Cells[11, 6].Value = CO_Total;
+            ws.Cells[14, 1] = new Cell("PM 2.5");
+            ws.Cells[14, 2] = new Cell(PM25_WTP);
+            ws.Cells[14, 3] = new Cell(PM25_VO);
+            ws.Cells[14, 4] = new Cell(AUX_PM25_WTP);
+            ws.Cells[14, 5] = new Cell(AUX_PM25_VO);
+            ws.Cells[14, 6] = new Cell(PM25_Total);
 
-    //    ws.Cells[12, 1].Value = "NOx";
-    //    ws.Cells[12, 2].Value = NOx_WTP;
-    //    ws.Cells[12, 3].Value = NOx_VO;
-    //    ws.Cells[12, 4].Value = AUX_NOx_WTP;
-    //    ws.Cells[12, 5].Value = AUX_NOx_VO;
-    //    ws.Cells[12, 6].Value = NOx_Total;
+            ws.Cells[15, 1] = new Cell("SOx");
+            ws.Cells[15, 2] = new Cell(SOx_WTP);
+            ws.Cells[15, 3] = new Cell(SOx_VO);
+            ws.Cells[15, 4] = new Cell(AUX_SOx_WTP);
+            ws.Cells[15, 5] = new Cell(AUX_SOx_VO);
+            ws.Cells[15, 6] = new Cell(SOx_Total);
 
-    //    ws.Cells[13, 1].Value = "PM10";
-    //    ws.Cells[13, 2].Value = PM10_WTP;
-    //    ws.Cells[13, 3].Value = PM10_VO;
-    //    ws.Cells[13, 4].Value = AUX_PM10_WTP;
-    //    ws.Cells[13, 5].Value = AUX_PM10_VO;
-    //    ws.Cells[13, 6].Value = PM10_Total;
+            ws.Cells[16, 1] = new Cell("CH4");
+            ws.Cells[16, 2] = new Cell(CH4_WTP);
+            ws.Cells[16, 3] = new Cell(CH4_VO);
+            ws.Cells[16, 4] = new Cell(AUX_CH4_WTP);
+            ws.Cells[16, 5] = new Cell(AUX_CH4_VO);
+            ws.Cells[16, 6] = new Cell(CH4_Total);
 
-    //    ws.Cells[14, 1].Value = "PM 2.5";
-    //    ws.Cells[14, 2].Value = PM25_WTP;
-    //    ws.Cells[14, 3].Value = PM25_VO;
-    //    ws.Cells[14, 4].Value = AUX_PM25_WTP;
-    //    ws.Cells[14, 5].Value = AUX_PM25_VO;
-    //    ws.Cells[14, 6].Value = PM25_Total;
+            ws.Cells[17, 1] = new Cell("CO2");
+            ws.Cells[17, 2] = new Cell(CO2_WTP);
+            ws.Cells[17, 3] = new Cell(CO2_VO);
+            ws.Cells[17, 4] = new Cell(AUX_CO2_WTP);
+            ws.Cells[17, 5] = new Cell(AUX_CO2_VO);
+            ws.Cells[17, 6] = new Cell(CO2_Total);
 
-    //    ws.Cells[15, 1].Value = "SOx";
-    //    ws.Cells[15, 2].Value = SOx_WTP;
-    //    ws.Cells[15, 3].Value = SOx_VO;
-    //    ws.Cells[15, 4].Value = AUX_SOx_WTP;
-    //    ws.Cells[15, 5].Value = AUX_SOx_VO;
-    //    ws.Cells[15, 6].Value = SOx_Total;
+            ws.Cells[18, 1] = new Cell("N2O");
+            ws.Cells[18, 2] = new Cell(N2O_WTP);
+            ws.Cells[18, 3] = new Cell(N2O_VO);
+            ws.Cells[18, 4] = new Cell(AUX_N2O_WTP);
+            ws.Cells[18, 5] = new Cell(AUX_N2O_VO);
+            ws.Cells[18, 6] = new Cell(N2O_Total);
 
-    //    ws.Cells[16, 1].Value = "CH4";
-    //    ws.Cells[16, 2].Value = CH4_WTP;
-    //    ws.Cells[16, 3].Value = CH4_VO;
-    //    ws.Cells[16, 4].Value = AUX_CH4_WTP;
-    //    ws.Cells[16, 5].Value = AUX_CH4_VO;
-    //    ws.Cells[16, 6].Value = CH4_Total;
+            ws.Cells[20, 1] = new Cell("Main Engine Fuel Type:");
+            ws.Cells[20, 2] = new Cell(MainfuelUsed);
 
-    //    ws.Cells[17, 1].Value = "CO2";
-    //    ws.Cells[17, 2].Value = CO2_WTP;
-    //    ws.Cells[17, 3].Value = CO2_VO;
-    //    ws.Cells[17, 4].Value = AUX_CO2_WTP;
-    //    ws.Cells[17, 5].Value = AUX_CO2_VO;
-    //    ws.Cells[17, 6].Value = CO2_Total;
-
-    //    ws.Cells[18, 1].Value = "N2O";
-    //    ws.Cells[18, 2].Value = N2O_WTP;
-    //    ws.Cells[18, 3].Value = N2O_VO;
-    //    ws.Cells[18, 4].Value = AUX_N2O_WTP;
-    //    ws.Cells[18, 5].Value = AUX_N2O_VO;
-    //    ws.Cells[18, 6].Value = N2O_Total;
-
-    //    ws.Cells[20, 1].Value = "Main Engine Fuel Type:";
-    //    ws.Cells[20, 1].Style.Font.Bold = true;
-    //    ws.Cells[20, 2].Value = MainfuelUsed;
-
-    //    ws.Cells[21, 1].Value = "Auxiliary Engine Fuel Type:";
-    //    ws.Cells[21, 1].Style.Font.Bold = true;
-    //    ws.Cells[21, 2].Value = auxFuelUsed;
-        
-    //}
+            ws.Cells[21, 1] = new Cell("Auxiliary Engine Fuel Type:");
+            ws.Cells[21, 2] = new Cell(auxFuelUsed);
+            wb.Worksheets.Add(ws);
+            wb.Save(filePath);
+        }
 
         #endregion
         private void calculateToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2266,9 +2268,9 @@ namespace TEAMS_Plugin
             }
             sr.Close();
             String[] shipCaseNames2 = new String[shipCaseNames.Length];
-            for (int i = 0; i < shipCaseNames.Length;i++ )
+            for (int i = 0; i < shipCaseNames.Length; i++)
             {
-                shipCaseNames2[i] = shipCaseNames[i]; 
+                shipCaseNames2[i] = shipCaseNames[i];
             }
             TopShipSelector.DataSource = shipCaseNames;
             BottomShipSel.DataSource = shipCaseNames2;
