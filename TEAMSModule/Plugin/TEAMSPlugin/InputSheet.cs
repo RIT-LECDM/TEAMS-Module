@@ -636,78 +636,147 @@ namespace TEAMS_Plugin
             allPanelLabels[11] = Label_results_spread;
             allPanelLabels[12] = Label_results_chart;
         }
-
+        
         /// <summary>
         /// Calculated values based on the current values of variables in the model
         /// </summary>
         #region Do Calculations
         private void doCalculations()
         {
-            // Total Horsepower
-            TotalOnboardHP = SingleEngineHP * NumberOfEngines;
-            // Total Trip Time
-            TotalTripTimeHours = TripTimeHours + (TripTimeMinutes / 60);
+            if (IncludeAux.Checked == true)
+            {
+                // Total Horsepower
+                TotalOnboardHP = SingleEngineHP * NumberOfEngines;
+                // Total Trip Time
+                TotalTripTimeHours = TripTimeHours + (TripTimeMinutes / 60);
 
-            // Time in Stage of Transit
-            TimeInIdle = (POTIdle / 100) * TotalTripTimeHours;
-            TimeInManeuvering = (POTManeuvering / 100) * TotalTripTimeHours;
-            TimeInPrecautionary = (POTPrecautionary / 100) * TotalTripTimeHours;
-            TimeInSlowCruise = (POTSlowCruise / 100) * TotalTripTimeHours;
-            TimeInFullCruise = (POTFullCruise / 100) * TotalTripTimeHours;
+                // Time in Stage of Transit
+                TimeInIdle = (POTIdle / 100) * TotalTripTimeHours;
+                TimeInManeuvering = (POTManeuvering / 100) * TotalTripTimeHours;
+                TimeInPrecautionary = (POTPrecautionary / 100) * TotalTripTimeHours;
+                TimeInSlowCruise = (POTSlowCruise / 100) * TotalTripTimeHours;
+                TimeInFullCruise = (POTFullCruise / 100) * TotalTripTimeHours;
 
-            // Horsepower Per Engine in a given mode
-            HPPEIdle = (HPLFIdle / 100) * SingleEngineHP;
-            HPPEManeuvering = (HPLFManeuvering / 100) * SingleEngineHP;
-            HPPEPrecautionary = (HPLFPrecautionary / 100) * SingleEngineHP;
-            HPPESlowCruise = (HPLFSlowCruise / 100) * SingleEngineHP;
-            HPPEFullCruise = (HPLFFullCruise / 100) * SingleEngineHP;
+                // Horsepower Per Engine in a given mode
+                HPPEIdle = (HPLFIdle / 100) * SingleEngineHP;
+                HPPEManeuvering = (HPLFManeuvering / 100) * SingleEngineHP;
+                HPPEPrecautionary = (HPLFPrecautionary / 100) * SingleEngineHP;
+                HPPESlowCruise = (HPLFSlowCruise / 100) * SingleEngineHP;
+                HPPEFullCruise = (HPLFFullCruise / 100) * SingleEngineHP;
 
-            // Energy Production (in KWH for all engines) in a given mode
-            EPIdle = NumberOfEngines * HPPEIdle * TimeInIdle * KWperHP;
-            EPManeuvering = NumberOfEngines * HPPEManeuvering * TimeInManeuvering * KWperHP;
-            EPPrecautionary = NumberOfEngines * HPPEPrecautionary * TimeInPrecautionary * KWperHP;
-            EPSlowCruise = NumberOfEngines * HPPESlowCruise * TimeInSlowCruise * KWperHP;
-            EPFullCruise = NumberOfEngines * HPPEFullCruise * TimeInFullCruise * KWperHP;
+                // Energy Production (in KWH for all engines) in a given mode
+                EPIdle = NumberOfEngines * HPPEIdle * TimeInIdle * KWperHP;
+                EPManeuvering = NumberOfEngines * HPPEManeuvering * TimeInManeuvering * KWperHP;
+                EPPrecautionary = NumberOfEngines * HPPEPrecautionary * TimeInPrecautionary * KWperHP;
+                EPSlowCruise = NumberOfEngines * HPPESlowCruise * TimeInSlowCruise * KWperHP;
+                EPFullCruise = NumberOfEngines * HPPEFullCruise * TimeInFullCruise * KWperHP;
 
-            // Energy Production Total
-            EPTotal = EPIdle + EPManeuvering + EPPrecautionary + EPSlowCruise + EPFullCruise;
+                // Energy Production Total
+                EPTotal = EPIdle + EPManeuvering + EPPrecautionary + EPSlowCruise + EPFullCruise;
 
-            // Kilowat Hours out Per Trip
-            KWHOutperTrip = EPTotal;
+                // Kilowat Hours out Per Trip
+                KWHOutperTrip = EPTotal;
 
-            // Million BTUs of Energy needed to power the trip
-            MMBTUoutperTrip = (KWHOutperTrip * BTUperKWH) / BTUS_PER_MMBTU;
+                // Million BTUs of Energy needed to power the trip
+                MMBTUoutperTrip = (KWHOutperTrip * BTUperKWH) / BTUS_PER_MMBTU;
 
-            // Million BTUs of Energy to put into the system to get the MMBTU's required as output
-            MMBTUinperTrip = MMBTUoutperTrip * (100 / EngineEfficiency);
+                // Million BTUs of Energy to put into the system to get the MMBTU's required as output
+                MMBTUinperTrip = MMBTUoutperTrip * (100 / EngineEfficiency);
 
-            // Gallons of fuel per trip if it were powered by conventional diesel
-            GALLONperTrip = (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * MMBTUinperTrip;
+                // Gallons of fuel per trip if it were powered by conventional diesel
+                GALLONperTrip = (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * MMBTUinperTrip;
 
-            // Total Horsepower of Auxiliary engines
-            TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
+                // Total Horsepower of Auxiliary engines
+                TotalOnboardAUxHP = NumberOfAuxiliaryEnginesInUse * AuxiliaryEnginesRatedHPperEngine;
 
-            // Time auxiliary engines are active in hours
-            TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
+                // Time auxiliary engines are active in hours
+                TimeAuxActiveHours = (PercentOfTripAuxiliaryIsActive / 100) * TotalTripTimeHours;
 
-            // Active Horsepower per Auxiliary engine
-            ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
+                // Active Horsepower per Auxiliary engine
+                ActiveHPPerAuxEngine = (HPLoadFactorSingleEngine / 100) * AuxiliaryEnginesRatedHPperEngine;
 
-            // Total auxiliary engine production
-            TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
+                // Total auxiliary engine production
+                TotalAuxEnergyProduction = NumberOfAuxiliaryEnginesInUse * ActiveHPPerAuxEngine * TimeAuxActiveHours * KWperHP;
 
-            // Aux Engine Kilowat Hours out per trip
-            AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
+                // Aux Engine Kilowat Hours out per trip
+                AuxEngineKWHoutperTrip = TotalAuxEnergyProduction;
 
-            // Auxiliary Engine million BTUs of energy to power the trip
-            AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / BTUS_PER_MMBTU;
+                // Auxiliary Engine million BTUs of energy to power the trip
+                AuxEngineMMBTUoutperTrip = (AuxEngineKWHoutperTrip * BTUperKWH) / BTUS_PER_MMBTU;
 
-            // Auxiliary Engine million BTUs of energy to put in to the engine in order to get the needed energy out
-            AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
+                // Auxiliary Engine million BTUs of energy to put in to the engine in order to get the needed energy out
+                AuxEngineMMBTUinperTrip = AuxEngineMMBTUoutperTrip * (100 / AuxiliaryEngineEfficiency);
 
-            // Auxiliary Engine gallons of fuel per trip if it were using conventional diesel
-            AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * AuxEngineMMBTUinperTrip;
+                // Auxiliary Engine gallons of fuel per trip if it were using conventional diesel
+                AuxEngineGALLONperTrip = (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * AuxEngineMMBTUinperTrip;
+            }
+            else if (IncludeAux.Checked == false)
+            {
+                // Total Horsepower
+                TotalOnboardHP = SingleEngineHP * NumberOfEngines;
+                // Total Trip Time
+                TotalTripTimeHours = TripTimeHours + (TripTimeMinutes / 60);
 
+                // Time in Stage of Transit
+                TimeInIdle = (POTIdle / 100) * TotalTripTimeHours;
+                TimeInManeuvering = (POTManeuvering / 100) * TotalTripTimeHours;
+                TimeInPrecautionary = (POTPrecautionary / 100) * TotalTripTimeHours;
+                TimeInSlowCruise = (POTSlowCruise / 100) * TotalTripTimeHours;
+                TimeInFullCruise = (POTFullCruise / 100) * TotalTripTimeHours;
+
+                // Horsepower Per Engine in a given mode
+                HPPEIdle = (HPLFIdle / 100) * SingleEngineHP;
+                HPPEManeuvering = (HPLFManeuvering / 100) * SingleEngineHP;
+                HPPEPrecautionary = (HPLFPrecautionary / 100) * SingleEngineHP;
+                HPPESlowCruise = (HPLFSlowCruise / 100) * SingleEngineHP;
+                HPPEFullCruise = (HPLFFullCruise / 100) * SingleEngineHP;
+
+                // Energy Production (in KWH for all engines) in a given mode
+                EPIdle = NumberOfEngines * HPPEIdle * TimeInIdle * KWperHP;
+                EPManeuvering = NumberOfEngines * HPPEManeuvering * TimeInManeuvering * KWperHP;
+                EPPrecautionary = NumberOfEngines * HPPEPrecautionary * TimeInPrecautionary * KWperHP;
+                EPSlowCruise = NumberOfEngines * HPPESlowCruise * TimeInSlowCruise * KWperHP;
+                EPFullCruise = NumberOfEngines * HPPEFullCruise * TimeInFullCruise * KWperHP;
+
+                // Energy Production Total
+                EPTotal = EPIdle + EPManeuvering + EPPrecautionary + EPSlowCruise + EPFullCruise;
+
+                // Kilowat Hours out Per Trip
+                KWHOutperTrip = EPTotal;
+
+                // Million BTUs of Energy needed to power the trip
+                MMBTUoutperTrip = (KWHOutperTrip * BTUperKWH) / BTUS_PER_MMBTU;
+
+                // Million BTUs of Energy to put into the system to get the MMBTU's required as output
+                MMBTUinperTrip = MMBTUoutperTrip * (100 / EngineEfficiency);
+
+                // Gallons of fuel per trip if it were powered by conventional diesel
+                GALLONperTrip = (1 / conventionalDieselBTUperGal) * BTUS_PER_MMBTU * MMBTUinperTrip;
+
+                // Total Horsepower of Auxiliary engines
+                TotalOnboardAUxHP = 0;
+
+                // Time auxiliary engines are active in hours
+                TimeAuxActiveHours = 0;
+
+                // Active Horsepower per Auxiliary engine
+                ActiveHPPerAuxEngine = 0;
+
+                // Total auxiliary engine production
+                TotalAuxEnergyProduction = 0;
+
+                // Aux Engine Kilowat Hours out per trip
+                AuxEngineKWHoutperTrip = 0;
+
+                // Auxiliary Engine million BTUs of energy to power the trip
+                AuxEngineMMBTUoutperTrip = 0;
+
+                // Auxiliary Engine million BTUs of energy to put in to the engine in order to get the needed energy out
+                AuxEngineMMBTUinperTrip = 0;
+
+                // Auxiliary Engine gallons of fuel per trip if it were using conventional diesel
+                AuxEngineGALLONperTrip = 0;
+            }
         }
         #endregion
 
@@ -1756,7 +1825,7 @@ namespace TEAMS_Plugin
             }
             setLabels();
         }
-        private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
+        private void tView2Select()
         {
             Recalculate();
             Object tag = tree_Aux_Fuel_Pathways.SelectedNode.Tag;
@@ -1817,7 +1886,7 @@ namespace TEAMS_Plugin
 
                 AuxEngineGALLONperTrip = (1 / resourceLowerHeatingValue) * GALLONS_PER_CUBIC_METER * JOULES_PER_MMBTU * AuxEngineMMBTUinperTrip;
 
-                AUX_TE_WTP = AuxEngineMMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults) - 1 - AuxEngineMMBTUinperTrip;
+                AUX_TE_WTP = AuxEngineMMBTUinperTrip * APIcontroller.getSumAllLifeCycleResources(pathwayResults) - AuxEngineMMBTUinperTrip;
 
                 AUX_TE_VO = AuxEngineMMBTUinperTrip;
                 TE_Total = TE_WTP + TE_VO + AUX_TE_WTP + AUX_TE_VO;
@@ -1873,6 +1942,10 @@ namespace TEAMS_Plugin
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
             }
             setLabels();
+        }
+        private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            tView2Select();
         }
 
         /// <summary>
@@ -2286,6 +2359,11 @@ namespace TEAMS_Plugin
             //Set the labels how we want them for now it's 100 years, and whatever the top selected ship is
             NumberOfYearsTilCrossLabel.Text = shipCO2Values.ElementAt(TopShipSelector.SelectedIndex).ToString();
             NameOfSuperiorShipLabel.Text = TopShipSelector.SelectedItem.ToString();
+        }
+
+        private void IncludeAux_CheckedChanged(object sender, EventArgs e)
+        {
+            tView2Select();
         }
     }
 }
