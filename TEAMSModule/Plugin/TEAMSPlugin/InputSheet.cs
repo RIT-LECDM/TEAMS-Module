@@ -1656,7 +1656,9 @@ namespace TEAMS_Plugin
         public double N2O_WTP = 0;
         public double N2O_VO = 0;
         public double N2O_Total = 0;
-
+        public double ADJ_CO2 = 0;
+        public double ADJ_CH4 = 0;
+        public double ADJ_N2O = 0;
         // Auxillary Engine Variables
         public double AUX_TE_WTP = 0;
         public double AUX_TE_VO = 0;
@@ -1822,6 +1824,10 @@ namespace TEAMS_Plugin
                 N2O_WTP = adjustedPathwayResults[7] * MMBTUinperTrip;
                 N2O_VO = main_fuel_type[6] * (1 / KWHRS_PER_HPHR) * KWHOutperTrip;
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
+
+                ADJ_CO2 = CO2_Total * CO2_GWP;
+                ADJ_CH4 = CH4_Total * CH4_GWP;
+                ADJ_N2O = N2O_Total * N2O_GWP;
             }
             setLabels();
         }
@@ -1940,6 +1946,10 @@ namespace TEAMS_Plugin
                 AUX_N2O_WTP = adjustedPathwayResults[7] * AuxEngineMMBTUinperTrip;
                 AUX_N2O_VO = aux_fuel_type[6] * (1 / KWHRS_PER_HPHR) * AuxEngineKWHoutperTrip;
                 N2O_Total = N2O_WTP + N2O_VO + AUX_N2O_WTP + AUX_N2O_VO;
+
+                ADJ_CO2 = CO2_Total * CO2_GWP;
+                ADJ_CH4 = CH4_Total * CH4_GWP;
+                ADJ_N2O = N2O_Total * N2O_GWP;
             }
             setLabels();
         }
@@ -2087,7 +2097,9 @@ namespace TEAMS_Plugin
             label_CH4_Total.Text = parseResourceToString(CH4_Total) + " g/trip";
             label_CO2_Total.Text = parseResourceToString(CO2_Total) + " g/trip";
             label_N2O_Total.Text = parseResourceToString(N2O_Total) + " g/trip";
-
+            Adj_GHG_CO2.Text = parseResourceToString(ADJ_CO2);
+            Adj_GHG_CH4.Text = parseResourceToString(ADJ_CH4);
+            Adj_GHG_N20.Text = parseResourceToString(ADJ_N2O);
             // Title
             label_Main_Fuel_Type.Text = MainfuelUsed;
             label_Aux_Fuel_Type.Text = auxFuelUsed;
