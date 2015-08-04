@@ -1696,6 +1696,10 @@ namespace TEAMS_Plugin
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            tViewSelect();
+        }
+        private void tViewSelect()
+        {
             Recalculate();
             Object tag = tree_Main_Fuel_Pathways.SelectedNode.Tag;
             if (tag is IPathway)
@@ -1831,7 +1835,7 @@ namespace TEAMS_Plugin
             }
             setLabels();
         }
-        private void tView2Select()
+        private void tViewSelect2()
         {
             Recalculate();
             Object tag = tree_Aux_Fuel_Pathways.SelectedNode.Tag;
@@ -1955,7 +1959,7 @@ namespace TEAMS_Plugin
         }
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            tView2Select();
+            tViewSelect2();
         }
 
         /// <summary>
@@ -2331,6 +2335,8 @@ namespace TEAMS_Plugin
         {
             Recalculate();
             //changeResults();
+            tViewSelect();
+            tViewSelect2();
         }
 
         //This is where we will populate the list of cases from which you can select a ship in the TWP calculation screen
@@ -2375,7 +2381,8 @@ namespace TEAMS_Plugin
 
         private void IncludeAux_CheckedChanged(object sender, EventArgs e)
         {
-            tView2Select();
+            tViewSelect();
+            tViewSelect2();
         }
     }
 }
