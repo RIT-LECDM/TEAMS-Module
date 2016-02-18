@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using Greet.DataStructureV3.Interfaces;
+using Greet.DataStructureV4.Interfaces;
 using Greet.Model.Interfaces;
 using TEAMSModule;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -1753,7 +1753,7 @@ namespace TEAMS_Plugin
                 {
                     for (int i = 0; i < pathwayResults.WellToProductEmissions().Values.Count; i++)
                     {
-                        if (pathwayResults.WellToProductEmissions().Values.ElementAt(i).SpecieID == j + 1)
+                        if (pathwayResults.WellToProductEmissions().Values.ElementAt(i).SpecieId == j + 1)
                         {
                             adjustedPathwayResults[j] = APIcontroller.getResourceWTPEmissions(pathwayResults, i);
                         }
@@ -1887,7 +1887,7 @@ namespace TEAMS_Plugin
                 {
                     for (int i = 0; i < pathwayResults.WellToProductEmissions().Values.Count; i++)
                     {
-                        if (pathwayResults.WellToProductEmissions().Values.ElementAt(i).SpecieID == j + 1)
+                        if (pathwayResults.WellToProductEmissions().Values.ElementAt(i).SpecieId == j + 1)
                         {
                             adjustedPathwayResults[j] = APIcontroller.getResourceWTPEmissions(pathwayResults, i);
                         }

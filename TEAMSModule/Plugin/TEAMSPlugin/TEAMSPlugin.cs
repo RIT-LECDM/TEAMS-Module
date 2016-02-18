@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Drawing;
 using System.Windows.Forms;
 using TEAMSModule;
-using Greet.DataStructureV3.Interfaces;
+using Greet.DataStructureV4.Interfaces;
 using Greet.Model.Interfaces;
 
 namespace TEAMS_Plugin

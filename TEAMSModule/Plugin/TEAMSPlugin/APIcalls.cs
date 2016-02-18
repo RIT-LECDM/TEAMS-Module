@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Greet.DataStructureV3.Interfaces;
+using Greet.DataStructureV4.Interfaces;
 using Greet.Model.Interfaces;
 namespace TEAMS_Plugin
 {

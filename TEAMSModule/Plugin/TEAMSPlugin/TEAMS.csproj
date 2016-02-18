@@ -10,17 +10,19 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TEAMSModule</RootNamespace>
     <AssemblyName>TEAMS</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\Documents\Greet\Plugins\</OutputPath>
+    <OutputPath>..\..\..\..\..\Greet\Plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>
@@ -39,14 +42,14 @@
     </Win32Resource>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Greet.DataStructureV3">
-      <HintPath>..\..\..\Greet_API\Greet.DataStructureV3.dll</HintPath>
+    <Reference Include="Greet.DataStructureV4">
+      <HintPath>..\..\..\..\..\Greet\Plugins\API\2015\Greet.DataStructureV4.dll</HintPath>
     </Reference>
     <Reference Include="Greet.Model">
-      <HintPath>..\..\..\Greet_API\Greet.Model.dll</HintPath>
+      <HintPath>..\..\..\..\..\Greet\Plugins\API\2015\Greet.Model.dll</HintPath>
     </Reference>
-    <Reference Include="Greet.UnitLib">
-      <HintPath>..\..\..\Greet_API\Greet.UnitLib.dll</HintPath>
+    <Reference Include="Greet.UnitLib3">
+      <HintPath>..\..\..\..\..\Greet\Plugins\API\2015\Greet.UnitLib3.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
