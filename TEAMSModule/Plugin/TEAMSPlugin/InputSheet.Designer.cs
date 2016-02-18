@@ -63,7 +63,7 @@
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TEAMS));
             this.engine_tabs = new System.Windows.Forms.TabControl();
-            this.tab_Main = new System.Windows.Forms.TabPage();
+            this.teams_tab = new System.Windows.Forms.TabPage();
             this.Label_results_chart = new System.Windows.Forms.Label();
             this.Label_results_spread = new System.Windows.Forms.Label();
             this.Panel_results_chart = new System.Windows.Forms.Panel();
@@ -137,6 +137,12 @@
             this.label_Aux_CH4_VO = new System.Windows.Forms.Label();
             this.label_Aux_CO2_VO = new System.Windows.Forms.Label();
             this.label_Aux_N2O_VO = new System.Windows.Forms.Label();
+            this.Adj_GHG_N20 = new System.Windows.Forms.Label();
+            this.Adj_GHG_CH4 = new System.Windows.Forms.Label();
+            this.Adj_GHG_CO2 = new System.Windows.Forms.Label();
+            this.Adj_GHG_CO2_Label = new System.Windows.Forms.Label();
+            this.Adj_GHG_CH4_Label = new System.Windows.Forms.Label();
+            this.N20_Adj_Label = new System.Windows.Forms.Label();
             this.panel_Header = new System.Windows.Forms.Panel();
             this.IncludeAux = new System.Windows.Forms.CheckBox();
             this.Save_Excel = new System.Windows.Forms.Button();
@@ -247,15 +253,6 @@
             this.Aux_Res_NOX = new System.Windows.Forms.NumericUpDown();
             this.label_Aux_NOX = new System.Windows.Forms.Label();
             this.label_Main_Global_Warming_Potentials = new System.Windows.Forms.Label();
-            this.panel_Aux_Engine_Vars = new System.Windows.Forms.Panel();
-            this.label_Aux_Num_Engines_Onboard = new System.Windows.Forms.Label();
-            this.updown_Aux_Number_Engines = new System.Windows.Forms.NumericUpDown();
-            this.updown_Aux_Engines_In_Use = new System.Windows.Forms.NumericUpDown();
-            this.updown_Aux_HP_Per_Engine = new System.Windows.Forms.NumericUpDown();
-            this.updown_Tot_Onboard_AUX_HP = new System.Windows.Forms.NumericUpDown();
-            this.label_Aux_Num_Engines_In_Use = new System.Windows.Forms.Label();
-            this.label_Aux_Engine_Rated_HP = new System.Windows.Forms.Label();
-            this.label_Aux_Total_Onboard_HP = new System.Windows.Forms.Label();
             this.panel_Main_GWPs = new System.Windows.Forms.Panel();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
@@ -272,6 +269,61 @@
             this.updown_CO2_GWP = new System.Windows.Forms.NumericUpDown();
             this.label_Main_GWP_CO2 = new System.Windows.Forms.Label();
             this.label_Aux_Engine_Chars = new System.Windows.Forms.Label();
+            this.label_Main_Engine_Inputs = new System.Windows.Forms.Label();
+            this.label_Main_Fuel_Calculations = new System.Windows.Forms.Label();
+            this.label160 = new System.Windows.Forms.Label();
+            this.label_Main_Engine_Char_Per_Mode = new System.Windows.Forms.Label();
+            this.label_Main_Engine_Vars = new System.Windows.Forms.Label();
+            this.panel_Main_Fuel_Calculations = new System.Windows.Forms.Panel();
+            this.label_Main_Percent_11 = new System.Windows.Forms.Label();
+            this.label_Main_Engine_Efficiency = new System.Windows.Forms.Label();
+            this.label_Main_KWH_Out = new System.Windows.Forms.Label();
+            this.label_Main_mmbtu_Out = new System.Windows.Forms.Label();
+            this.updown_Engine_Efficiency = new System.Windows.Forms.NumericUpDown();
+            this.label_Main_Baseline_Fuel_Consumption = new System.Windows.Forms.Label();
+            this.updown_KW_HR_Out = new System.Windows.Forms.NumericUpDown();
+            this.label_Main_Gallon = new System.Windows.Forms.Label();
+            this.updown_MMBTU_Out = new System.Windows.Forms.NumericUpDown();
+            this.updown_GALLON = new System.Windows.Forms.NumericUpDown();
+            this.updown_MMBTU_In = new System.Windows.Forms.NumericUpDown();
+            this.label_Main_mmbtu_In = new System.Windows.Forms.Label();
+            this.TWP_Tab = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.NameOfSuperiorShipLabel = new System.Windows.Forms.Label();
+            this.NumberOfYearsTilCrossLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BttomViableLabel = new System.Windows.Forms.Label();
+            this.GraphPanel = new System.Windows.Forms.Panel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ShipSelectionPanel = new System.Windows.Forms.Panel();
+            this.BottomShipSel = new System.Windows.Forms.ComboBox();
+            this.TWP_CalculateButton = new System.Windows.Forms.Button();
+            this.YearsInServiceLabel = new System.Windows.Forms.Label();
+            this.ShipYearsInService_NumUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Blackbar = new System.Windows.Forms.PictureBox();
+            this.TopShipSelector = new System.Windows.Forms.ComboBox();
+            this.TWPlabel = new System.Windows.Forms.Label();
+            this.MEV_Tab = new System.Windows.Forms.TabPage();
+            this.panel_Main_Engine_Vars = new System.Windows.Forms.Panel();
+            this.updown_Single_Engine_HP = new System.Windows.Forms.NumericUpDown();
+            this.label_Main_Num_Engines = new System.Windows.Forms.Label();
+            this.label_Main_Single_Engine_HP = new System.Windows.Forms.Label();
+            this.label_Main_Total_HP = new System.Windows.Forms.Label();
+            this.updown_Number_Of_Engines = new System.Windows.Forms.NumericUpDown();
+            this.updown_Tot_Onboard_HP = new System.Windows.Forms.NumericUpDown();
+            this.label_Main_Vessel_ID = new System.Windows.Forms.Label();
+            this.textBox_Vessel_Type = new System.Windows.Forms.TextBox();
+            this.AEV_Tab = new System.Windows.Forms.TabPage();
+            this.panel_Aux_Engine_Vars = new System.Windows.Forms.Panel();
+            this.label_Aux_Num_Engines_Onboard = new System.Windows.Forms.Label();
+            this.updown_Aux_Number_Engines = new System.Windows.Forms.NumericUpDown();
+            this.updown_Aux_Engines_In_Use = new System.Windows.Forms.NumericUpDown();
+            this.updown_Aux_HP_Per_Engine = new System.Windows.Forms.NumericUpDown();
+            this.updown_Tot_Onboard_AUX_HP = new System.Windows.Forms.NumericUpDown();
+            this.label_Aux_Num_Engines_In_Use = new System.Windows.Forms.Label();
+            this.label_Aux_Engine_Rated_HP = new System.Windows.Forms.Label();
+            this.label_Aux_Total_Onboard_HP = new System.Windows.Forms.Label();
+            this.UIME_Tab = new System.Windows.Forms.TabPage();
             this.panel_main_engine_inputs = new System.Windows.Forms.Panel();
             this.Main_ULSD_Label = new System.Windows.Forms.Label();
             this.Ult_CH4 = new System.Windows.Forms.NumericUpDown();
@@ -328,20 +380,7 @@
             this.label_Main_Inputs_CO = new System.Windows.Forms.Label();
             this.Res_NOX = new System.Windows.Forms.NumericUpDown();
             this.label_Main_Inputs_NOX = new System.Windows.Forms.Label();
-            this.label_Main_Engine_Inputs = new System.Windows.Forms.Label();
-            this.label_Main_Fuel_Calculations = new System.Windows.Forms.Label();
-            this.label160 = new System.Windows.Forms.Label();
-            this.label_Main_Engine_Char_Per_Mode = new System.Windows.Forms.Label();
-            this.label_Main_Engine_Vars = new System.Windows.Forms.Label();
-            this.panel_Main_Engine_Vars = new System.Windows.Forms.Panel();
-            this.updown_Single_Engine_HP = new System.Windows.Forms.NumericUpDown();
-            this.label_Main_Num_Engines = new System.Windows.Forms.Label();
-            this.label_Main_Single_Engine_HP = new System.Windows.Forms.Label();
-            this.label_Main_Total_HP = new System.Windows.Forms.Label();
-            this.updown_Number_Of_Engines = new System.Windows.Forms.NumericUpDown();
-            this.updown_Tot_Onboard_HP = new System.Windows.Forms.NumericUpDown();
-            this.label_Main_Vessel_ID = new System.Windows.Forms.Label();
-            this.textBox_Vessel_Type = new System.Windows.Forms.TextBox();
+            this.MEC_Tab = new System.Windows.Forms.TabPage();
             this.panel_Main_Engine_Chars = new System.Windows.Forms.Panel();
             this.label_Main_Energy_Total = new System.Windows.Forms.Label();
             this.label_Main_Percent_10 = new System.Windows.Forms.Label();
@@ -390,35 +429,7 @@
             this.label_Main_Percent_In_Mode = new System.Windows.Forms.Label();
             this.label_Main_HP_Load_Factor = new System.Windows.Forms.Label();
             this.label_Main_Time_Per_Mode = new System.Windows.Forms.Label();
-            this.panel_Main_Fuel_Calculations = new System.Windows.Forms.Panel();
-            this.label_Main_Percent_11 = new System.Windows.Forms.Label();
-            this.label_Main_Engine_Efficiency = new System.Windows.Forms.Label();
-            this.label_Main_KWH_Out = new System.Windows.Forms.Label();
-            this.label_Main_mmbtu_Out = new System.Windows.Forms.Label();
-            this.updown_Engine_Efficiency = new System.Windows.Forms.NumericUpDown();
-            this.label_Main_Baseline_Fuel_Consumption = new System.Windows.Forms.Label();
-            this.updown_KW_HR_Out = new System.Windows.Forms.NumericUpDown();
-            this.label_Main_Gallon = new System.Windows.Forms.Label();
-            this.updown_MMBTU_Out = new System.Windows.Forms.NumericUpDown();
-            this.updown_GALLON = new System.Windows.Forms.NumericUpDown();
-            this.updown_MMBTU_In = new System.Windows.Forms.NumericUpDown();
-            this.label_Main_mmbtu_In = new System.Windows.Forms.Label();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.NameOfSuperiorShipLabel = new System.Windows.Forms.Label();
-            this.NumberOfYearsTilCrossLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.BttomViableLabel = new System.Windows.Forms.Label();
-            this.GraphPanel = new System.Windows.Forms.Panel();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ShipSelectionPanel = new System.Windows.Forms.Panel();
-            this.BottomShipSel = new System.Windows.Forms.ComboBox();
-            this.TWP_CalculateButton = new System.Windows.Forms.Button();
-            this.YearsInServiceLabel = new System.Windows.Forms.Label();
-            this.ShipYearsInService_NumUpDown = new System.Windows.Forms.NumericUpDown();
-            this.Blackbar = new System.Windows.Forms.PictureBox();
-            this.TopShipSelector = new System.Windows.Forms.ComboBox();
-            this.TWPlabel = new System.Windows.Forms.Label();
+            this.AEC_Tab = new System.Windows.Forms.TabPage();
             this.file_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.file_new_menu = new System.Windows.Forms.ToolStripMenuItem();
             this.file_exit_menu = new System.Windows.Forms.ToolStripMenuItem();
@@ -426,14 +437,9 @@
             this.menu_strip = new System.Windows.Forms.MenuStrip();
             this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.Adj_GHG_CO2 = new System.Windows.Forms.Label();
-            this.Adj_GHG_CH4 = new System.Windows.Forms.Label();
-            this.Adj_GHG_N20 = new System.Windows.Forms.Label();
-            this.Adj_GHG_CO2_Label = new System.Windows.Forms.Label();
-            this.Adj_GHG_CH4_Label = new System.Windows.Forms.Label();
-            this.N20_Adj_Label = new System.Windows.Forms.Label();
+            this.UIA_Tab = new System.Windows.Forms.TabPage();
             this.engine_tabs.SuspendLayout();
-            this.tab_Main.SuspendLayout();
+            this.teams_tab.SuspendLayout();
             this.Panel_results_chart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.graph_VO_vs_WTP)).BeginInit();
             this.Panel_results_spread.SuspendLayout();
@@ -501,11 +507,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_VOC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_CO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_NOX)).BeginInit();
-            this.panel_Aux_Engine_Vars.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Number_Engines)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engines_In_Use)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Per_Engine)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_AUX_HP)).BeginInit();
             this.panel_Main_GWPs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_NO2_GWP)).BeginInit();
@@ -514,6 +515,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.updown_N2O_GWP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_CH4_GWP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_CO2_GWP)).BeginInit();
+            this.panel_Main_Fuel_Calculations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Engine_Efficiency)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_KW_HR_Out)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_MMBTU_Out)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_GALLON)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_MMBTU_In)).BeginInit();
+            this.TWP_Tab.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.GraphPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.ShipSelectionPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ShipYearsInService_NumUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Blackbar)).BeginInit();
+            this.MEV_Tab.SuspendLayout();
+            this.panel_Main_Engine_Vars.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Single_Engine_HP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Number_Of_Engines)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_HP)).BeginInit();
+            this.AEV_Tab.SuspendLayout();
+            this.panel_Aux_Engine_Vars.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Number_Engines)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engines_In_Use)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Per_Engine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_AUX_HP)).BeginInit();
+            this.UIME_Tab.SuspendLayout();
             this.panel_main_engine_inputs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ult_CH4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ult_N2O)).BeginInit();
@@ -557,10 +583,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Res_VOC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Res_CO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Res_NOX)).BeginInit();
-            this.panel_Main_Engine_Vars.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Single_Engine_HP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Number_Of_Engines)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_HP)).BeginInit();
+            this.MEC_Tab.SuspendLayout();
             this.panel_Main_Engine_Chars.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updown_EP_Total)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_EP_Slow_Cruise)).BeginInit();
@@ -588,26 +611,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Idle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Maneuvering)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Idle)).BeginInit();
-            this.panel_Main_Fuel_Calculations.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Engine_Efficiency)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_KW_HR_Out)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_MMBTU_Out)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_GALLON)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_MMBTU_In)).BeginInit();
-            this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.GraphPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            this.ShipSelectionPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ShipYearsInService_NumUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Blackbar)).BeginInit();
+            this.AEC_Tab.SuspendLayout();
             this.menu_strip.SuspendLayout();
+            this.UIA_Tab.SuspendLayout();
             this.SuspendLayout();
             // 
             // engine_tabs
             // 
-            this.engine_tabs.Controls.Add(this.tab_Main);
-            this.engine_tabs.Controls.Add(this.tabPage1);
+            this.engine_tabs.Controls.Add(this.teams_tab);
+            this.engine_tabs.Controls.Add(this.TWP_Tab);
+            this.engine_tabs.Controls.Add(this.MEV_Tab);
+            this.engine_tabs.Controls.Add(this.AEV_Tab);
+            this.engine_tabs.Controls.Add(this.MEC_Tab);
+            this.engine_tabs.Controls.Add(this.AEC_Tab);
+            this.engine_tabs.Controls.Add(this.UIME_Tab);
+            this.engine_tabs.Controls.Add(this.UIA_Tab);
             this.engine_tabs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.engine_tabs.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.engine_tabs.Location = new System.Drawing.Point(0, 28);
@@ -616,45 +634,39 @@
             this.engine_tabs.Size = new System.Drawing.Size(1233, 778);
             this.engine_tabs.TabIndex = 1;
             // 
-            // tab_Main
+            // teams_tab
             // 
-            this.tab_Main.AutoScroll = true;
-            this.tab_Main.BackColor = System.Drawing.Color.Silver;
-            this.tab_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tab_Main.Controls.Add(this.Label_results_chart);
-            this.tab_Main.Controls.Add(this.Label_results_spread);
-            this.tab_Main.Controls.Add(this.Panel_results_chart);
-            this.tab_Main.Controls.Add(this.Panel_results_spread);
-            this.tab_Main.Controls.Add(this.Label_FuelSelection);
-            this.tab_Main.Controls.Add(this.Panel_FuelSelection);
-            this.tab_Main.Controls.Add(this.label_Aux_Emissions_Calc_Inputs);
-            this.tab_Main.Controls.Add(this.label_Aux_Engine_Vars);
-            this.tab_Main.Controls.Add(this.panel_Aux_Fuel_Calc);
-            this.tab_Main.Controls.Add(this.label_Main_Total_Distance_And_Time);
-            this.tab_Main.Controls.Add(this.label_Aux_Fuel_Calc);
-            this.tab_Main.Controls.Add(this.panel_Main_Trip_Distance_Time);
-            this.tab_Main.Controls.Add(this.panel_Aux_Engine_Chars);
-            this.tab_Main.Controls.Add(this.label25);
-            this.tab_Main.Controls.Add(this.panel_Aux_Emissions_Input);
-            this.tab_Main.Controls.Add(this.label_Main_Global_Warming_Potentials);
-            this.tab_Main.Controls.Add(this.panel_Aux_Engine_Vars);
-            this.tab_Main.Controls.Add(this.panel_Main_GWPs);
-            this.tab_Main.Controls.Add(this.label_Aux_Engine_Chars);
-            this.tab_Main.Controls.Add(this.panel_main_engine_inputs);
-            this.tab_Main.Controls.Add(this.label_Main_Engine_Inputs);
-            this.tab_Main.Controls.Add(this.label_Main_Fuel_Calculations);
-            this.tab_Main.Controls.Add(this.label160);
-            this.tab_Main.Controls.Add(this.label_Main_Engine_Char_Per_Mode);
-            this.tab_Main.Controls.Add(this.label_Main_Engine_Vars);
-            this.tab_Main.Controls.Add(this.panel_Main_Engine_Vars);
-            this.tab_Main.Controls.Add(this.panel_Main_Engine_Chars);
-            this.tab_Main.Controls.Add(this.panel_Main_Fuel_Calculations);
-            this.tab_Main.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab_Main.Location = new System.Drawing.Point(4, 22);
-            this.tab_Main.Name = "tab_Main";
-            this.tab_Main.Size = new System.Drawing.Size(1225, 752);
-            this.tab_Main.TabIndex = 4;
-            this.tab_Main.Text = "TEAMS";
+            this.teams_tab.AutoScroll = true;
+            this.teams_tab.BackColor = System.Drawing.Color.Silver;
+            this.teams_tab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.teams_tab.Controls.Add(this.Label_results_chart);
+            this.teams_tab.Controls.Add(this.Label_results_spread);
+            this.teams_tab.Controls.Add(this.Panel_results_chart);
+            this.teams_tab.Controls.Add(this.Panel_results_spread);
+            this.teams_tab.Controls.Add(this.Label_FuelSelection);
+            this.teams_tab.Controls.Add(this.Panel_FuelSelection);
+            this.teams_tab.Controls.Add(this.label_Aux_Emissions_Calc_Inputs);
+            this.teams_tab.Controls.Add(this.label_Aux_Engine_Vars);
+            this.teams_tab.Controls.Add(this.panel_Aux_Fuel_Calc);
+            this.teams_tab.Controls.Add(this.label_Main_Total_Distance_And_Time);
+            this.teams_tab.Controls.Add(this.label_Aux_Fuel_Calc);
+            this.teams_tab.Controls.Add(this.panel_Main_Trip_Distance_Time);
+            this.teams_tab.Controls.Add(this.label25);
+            this.teams_tab.Controls.Add(this.label_Main_Global_Warming_Potentials);
+            this.teams_tab.Controls.Add(this.panel_Main_GWPs);
+            this.teams_tab.Controls.Add(this.label_Aux_Engine_Chars);
+            this.teams_tab.Controls.Add(this.label_Main_Engine_Inputs);
+            this.teams_tab.Controls.Add(this.label_Main_Fuel_Calculations);
+            this.teams_tab.Controls.Add(this.label160);
+            this.teams_tab.Controls.Add(this.label_Main_Engine_Char_Per_Mode);
+            this.teams_tab.Controls.Add(this.label_Main_Engine_Vars);
+            this.teams_tab.Controls.Add(this.panel_Main_Fuel_Calculations);
+            this.teams_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teams_tab.Location = new System.Drawing.Point(4, 22);
+            this.teams_tab.Name = "teams_tab";
+            this.teams_tab.Size = new System.Drawing.Size(1225, 752);
+            this.teams_tab.TabIndex = 4;
+            this.teams_tab.Text = "TEAMS";
             // 
             // Label_results_chart
             // 
@@ -885,7 +897,7 @@
             this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 223F));
             this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
             this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 229F));
-            this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 276F));
+            this.table_Results.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 282F));
             this.table_Results.Controls.Add(this.label_Aux_TE_VO, 4, 0);
             this.table_Results.Controls.Add(this.label_Aux_N2O_WTP, 3, 9);
             this.table_Results.Controls.Add(this.label_Aux_TE_WTP, 3, 0);
@@ -982,7 +994,7 @@
             this.label_Aux_TE_VO.AutoSize = true;
             this.label_Aux_TE_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_TE_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_TE_VO.Location = new System.Drawing.Point(690, 1);
+            this.label_Aux_TE_VO.Location = new System.Drawing.Point(684, 1);
             this.label_Aux_TE_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_TE_VO.Name = "label_Aux_TE_VO";
             this.label_Aux_TE_VO.Size = new System.Drawing.Size(81, 1);
@@ -995,7 +1007,7 @@
             this.label_Aux_N2O_WTP.AutoSize = true;
             this.label_Aux_N2O_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_N2O_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_N2O_WTP.Location = new System.Drawing.Point(504, 224);
+            this.label_Aux_N2O_WTP.Location = new System.Drawing.Point(498, 224);
             this.label_Aux_N2O_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_N2O_WTP.Name = "label_Aux_N2O_WTP";
             this.label_Aux_N2O_WTP.Size = new System.Drawing.Size(102, 16);
@@ -1008,7 +1020,7 @@
             this.label_Aux_TE_WTP.AutoSize = true;
             this.label_Aux_TE_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_TE_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_TE_WTP.Location = new System.Drawing.Point(504, 1);
+            this.label_Aux_TE_WTP.Location = new System.Drawing.Point(498, 1);
             this.label_Aux_TE_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_TE_WTP.Name = "label_Aux_TE_WTP";
             this.label_Aux_TE_WTP.Size = new System.Drawing.Size(93, 1);
@@ -1021,7 +1033,7 @@
             this.label_Main_TE_VO.AutoSize = true;
             this.label_Main_TE_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_TE_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_TE_VO.Location = new System.Drawing.Point(280, 1);
+            this.label_Main_TE_VO.Location = new System.Drawing.Point(274, 1);
             this.label_Main_TE_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_TE_VO.Name = "label_Main_TE_VO";
             this.label_Main_TE_VO.Size = new System.Drawing.Size(88, 1);
@@ -1164,7 +1176,7 @@
             this.label_Main_TE_WTP.AutoSize = true;
             this.label_Main_TE_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_TE_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_TE_WTP.Location = new System.Drawing.Point(121, 1);
+            this.label_Main_TE_WTP.Location = new System.Drawing.Point(118, 1);
             this.label_Main_TE_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_TE_WTP.Name = "label_Main_TE_WTP";
             this.label_Main_TE_WTP.Size = new System.Drawing.Size(100, 1);
@@ -1177,7 +1189,7 @@
             this.label_Main_VOC_WTP.AutoSize = true;
             this.label_Main_VOC_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_VOC_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_VOC_WTP.Location = new System.Drawing.Point(121, -25);
+            this.label_Main_VOC_WTP.Location = new System.Drawing.Point(118, -25);
             this.label_Main_VOC_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_VOC_WTP.Name = "label_Main_VOC_WTP";
             this.label_Main_VOC_WTP.Size = new System.Drawing.Size(110, 16);
@@ -1190,7 +1202,7 @@
             this.label_Main_CO_WTP.AutoSize = true;
             this.label_Main_CO_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO_WTP.Location = new System.Drawing.Point(121, 10);
+            this.label_Main_CO_WTP.Location = new System.Drawing.Point(118, 10);
             this.label_Main_CO_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO_WTP.Name = "label_Main_CO_WTP";
             this.label_Main_CO_WTP.Size = new System.Drawing.Size(101, 16);
@@ -1203,7 +1215,7 @@
             this.label_Main_NOx_WTP.AutoSize = true;
             this.label_Main_NOx_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_NOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_NOx_WTP.Location = new System.Drawing.Point(121, 45);
+            this.label_Main_NOx_WTP.Location = new System.Drawing.Point(118, 45);
             this.label_Main_NOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_NOx_WTP.Name = "label_Main_NOx_WTP";
             this.label_Main_NOx_WTP.Size = new System.Drawing.Size(108, 16);
@@ -1216,7 +1228,7 @@
             this.label_Main_PM10_WTP.AutoSize = true;
             this.label_Main_PM10_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM10_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM10_WTP.Location = new System.Drawing.Point(121, 77);
+            this.label_Main_PM10_WTP.Location = new System.Drawing.Point(118, 77);
             this.label_Main_PM10_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM10_WTP.Name = "label_Main_PM10_WTP";
             this.label_Main_PM10_WTP.Size = new System.Drawing.Size(116, 16);
@@ -1229,7 +1241,7 @@
             this.label_Main_PM25_WTP.AutoSize = true;
             this.label_Main_PM25_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM25_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM25_WTP.Location = new System.Drawing.Point(121, 110);
+            this.label_Main_PM25_WTP.Location = new System.Drawing.Point(118, 110);
             this.label_Main_PM25_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM25_WTP.Name = "label_Main_PM25_WTP";
             this.label_Main_PM25_WTP.Size = new System.Drawing.Size(116, 16);
@@ -1242,7 +1254,7 @@
             this.label_Main_SOx_WTP.AutoSize = true;
             this.label_Main_SOx_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_SOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_SOx_WTP.Location = new System.Drawing.Point(121, 139);
+            this.label_Main_SOx_WTP.Location = new System.Drawing.Point(118, 139);
             this.label_Main_SOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_SOx_WTP.Name = "label_Main_SOx_WTP";
             this.label_Main_SOx_WTP.Size = new System.Drawing.Size(107, 16);
@@ -1255,7 +1267,7 @@
             this.label_Main_CH4_WTP.AutoSize = true;
             this.label_Main_CH4_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CH4_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CH4_WTP.Location = new System.Drawing.Point(121, 168);
+            this.label_Main_CH4_WTP.Location = new System.Drawing.Point(118, 168);
             this.label_Main_CH4_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CH4_WTP.Name = "label_Main_CH4_WTP";
             this.label_Main_CH4_WTP.Size = new System.Drawing.Size(108, 16);
@@ -1268,7 +1280,7 @@
             this.label_Main_CO2_WTP.AutoSize = true;
             this.label_Main_CO2_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO2_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO2_WTP.Location = new System.Drawing.Point(121, 196);
+            this.label_Main_CO2_WTP.Location = new System.Drawing.Point(118, 196);
             this.label_Main_CO2_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO2_WTP.Name = "label_Main_CO2_WTP";
             this.label_Main_CO2_WTP.Size = new System.Drawing.Size(108, 16);
@@ -1281,7 +1293,7 @@
             this.label_Main_N2O_WTP.AutoSize = true;
             this.label_Main_N2O_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_N2O_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_N2O_WTP.Location = new System.Drawing.Point(121, 224);
+            this.label_Main_N2O_WTP.Location = new System.Drawing.Point(118, 224);
             this.label_Main_N2O_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_N2O_WTP.Name = "label_Main_N2O_WTP";
             this.label_Main_N2O_WTP.Size = new System.Drawing.Size(109, 16);
@@ -1294,7 +1306,7 @@
             this.label_Main_N2O_VO.AutoSize = true;
             this.label_Main_N2O_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_N2O_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_N2O_VO.Location = new System.Drawing.Point(280, 224);
+            this.label_Main_N2O_VO.Location = new System.Drawing.Point(274, 224);
             this.label_Main_N2O_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_N2O_VO.Name = "label_Main_N2O_VO";
             this.label_Main_N2O_VO.Size = new System.Drawing.Size(97, 16);
@@ -1307,7 +1319,7 @@
             this.label_Main_CH4_VO.AutoSize = true;
             this.label_Main_CH4_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CH4_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CH4_VO.Location = new System.Drawing.Point(280, 168);
+            this.label_Main_CH4_VO.Location = new System.Drawing.Point(274, 168);
             this.label_Main_CH4_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CH4_VO.Name = "label_Main_CH4_VO";
             this.label_Main_CH4_VO.Size = new System.Drawing.Size(96, 16);
@@ -1320,7 +1332,7 @@
             this.label_Main_PM25_VO.AutoSize = true;
             this.label_Main_PM25_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM25_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM25_VO.Location = new System.Drawing.Point(280, 110);
+            this.label_Main_PM25_VO.Location = new System.Drawing.Point(274, 110);
             this.label_Main_PM25_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM25_VO.Name = "label_Main_PM25_VO";
             this.label_Main_PM25_VO.Size = new System.Drawing.Size(104, 16);
@@ -1333,7 +1345,7 @@
             this.label_Main_NOx_VO.AutoSize = true;
             this.label_Main_NOx_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_NOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_NOx_VO.Location = new System.Drawing.Point(280, 45);
+            this.label_Main_NOx_VO.Location = new System.Drawing.Point(274, 45);
             this.label_Main_NOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_NOx_VO.Name = "label_Main_NOx_VO";
             this.label_Main_NOx_VO.Size = new System.Drawing.Size(96, 16);
@@ -1346,7 +1358,7 @@
             this.label_Main_VOC_VO.AutoSize = true;
             this.label_Main_VOC_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_VOC_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_VOC_VO.Location = new System.Drawing.Point(280, -25);
+            this.label_Main_VOC_VO.Location = new System.Drawing.Point(274, -25);
             this.label_Main_VOC_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_VOC_VO.Name = "label_Main_VOC_VO";
             this.label_Main_VOC_VO.Size = new System.Drawing.Size(98, 16);
@@ -1359,7 +1371,7 @@
             this.label_Main_CO_VO.AutoSize = true;
             this.label_Main_CO_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO_VO.Location = new System.Drawing.Point(280, 10);
+            this.label_Main_CO_VO.Location = new System.Drawing.Point(274, 10);
             this.label_Main_CO_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO_VO.Name = "label_Main_CO_VO";
             this.label_Main_CO_VO.Size = new System.Drawing.Size(89, 16);
@@ -1372,7 +1384,7 @@
             this.label_Main_PM10_VO.AutoSize = true;
             this.label_Main_PM10_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_PM10_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_PM10_VO.Location = new System.Drawing.Point(280, 77);
+            this.label_Main_PM10_VO.Location = new System.Drawing.Point(274, 77);
             this.label_Main_PM10_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_PM10_VO.Name = "label_Main_PM10_VO";
             this.label_Main_PM10_VO.Size = new System.Drawing.Size(104, 16);
@@ -1385,7 +1397,7 @@
             this.label_Main_SOx_VO.AutoSize = true;
             this.label_Main_SOx_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_SOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_SOx_VO.Location = new System.Drawing.Point(280, 139);
+            this.label_Main_SOx_VO.Location = new System.Drawing.Point(274, 139);
             this.label_Main_SOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_SOx_VO.Name = "label_Main_SOx_VO";
             this.label_Main_SOx_VO.Size = new System.Drawing.Size(95, 16);
@@ -1398,7 +1410,7 @@
             this.label_Main_CO2_VO.AutoSize = true;
             this.label_Main_CO2_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Main_CO2_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Main_CO2_VO.Location = new System.Drawing.Point(280, 196);
+            this.label_Main_CO2_VO.Location = new System.Drawing.Point(274, 196);
             this.label_Main_CO2_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Main_CO2_VO.Name = "label_Main_CO2_VO";
             this.label_Main_CO2_VO.Size = new System.Drawing.Size(96, 16);
@@ -1411,7 +1423,7 @@
             this.label_TE_Total.AutoSize = true;
             this.label_TE_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TE_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_TE_Total.Location = new System.Drawing.Point(920, 1);
+            this.label_TE_Total.Location = new System.Drawing.Point(914, 1);
             this.label_TE_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_TE_Total.Name = "label_TE_Total";
             this.label_TE_Total.Size = new System.Drawing.Size(64, 1);
@@ -1424,7 +1436,7 @@
             this.label_VOC_Total.AutoSize = true;
             this.label_VOC_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_VOC_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_VOC_Total.Location = new System.Drawing.Point(920, -25);
+            this.label_VOC_Total.Location = new System.Drawing.Point(914, -25);
             this.label_VOC_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_VOC_Total.Name = "label_VOC_Total";
             this.label_VOC_Total.Size = new System.Drawing.Size(74, 16);
@@ -1437,7 +1449,7 @@
             this.label_CO_Total.AutoSize = true;
             this.label_CO_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CO_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_CO_Total.Location = new System.Drawing.Point(920, 10);
+            this.label_CO_Total.Location = new System.Drawing.Point(914, 10);
             this.label_CO_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO_Total.Name = "label_CO_Total";
             this.label_CO_Total.Size = new System.Drawing.Size(65, 16);
@@ -1450,7 +1462,7 @@
             this.label_NOx_Total.AutoSize = true;
             this.label_NOx_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_NOx_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_NOx_Total.Location = new System.Drawing.Point(920, 45);
+            this.label_NOx_Total.Location = new System.Drawing.Point(914, 45);
             this.label_NOx_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_NOx_Total.Name = "label_NOx_Total";
             this.label_NOx_Total.Size = new System.Drawing.Size(72, 16);
@@ -1463,7 +1475,7 @@
             this.label_PM10_Total.AutoSize = true;
             this.label_PM10_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PM10_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_PM10_Total.Location = new System.Drawing.Point(920, 77);
+            this.label_PM10_Total.Location = new System.Drawing.Point(914, 77);
             this.label_PM10_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM10_Total.Name = "label_PM10_Total";
             this.label_PM10_Total.Size = new System.Drawing.Size(80, 16);
@@ -1476,7 +1488,7 @@
             this.label_PM25_Total.AutoSize = true;
             this.label_PM25_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_PM25_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_PM25_Total.Location = new System.Drawing.Point(920, 110);
+            this.label_PM25_Total.Location = new System.Drawing.Point(914, 110);
             this.label_PM25_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_PM25_Total.Name = "label_PM25_Total";
             this.label_PM25_Total.Size = new System.Drawing.Size(80, 16);
@@ -1489,7 +1501,7 @@
             this.label_SOx_Total.AutoSize = true;
             this.label_SOx_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_SOx_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_SOx_Total.Location = new System.Drawing.Point(920, 139);
+            this.label_SOx_Total.Location = new System.Drawing.Point(914, 139);
             this.label_SOx_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_SOx_Total.Name = "label_SOx_Total";
             this.label_SOx_Total.Size = new System.Drawing.Size(71, 16);
@@ -1502,7 +1514,7 @@
             this.label_CH4_Total.AutoSize = true;
             this.label_CH4_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CH4_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_CH4_Total.Location = new System.Drawing.Point(920, 168);
+            this.label_CH4_Total.Location = new System.Drawing.Point(914, 168);
             this.label_CH4_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CH4_Total.Name = "label_CH4_Total";
             this.label_CH4_Total.Size = new System.Drawing.Size(72, 16);
@@ -1515,7 +1527,7 @@
             this.label_CO2_Total.AutoSize = true;
             this.label_CO2_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CO2_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_CO2_Total.Location = new System.Drawing.Point(920, 196);
+            this.label_CO2_Total.Location = new System.Drawing.Point(914, 196);
             this.label_CO2_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_CO2_Total.Name = "label_CO2_Total";
             this.label_CO2_Total.Size = new System.Drawing.Size(72, 16);
@@ -1528,7 +1540,7 @@
             this.label_N2O_Total.AutoSize = true;
             this.label_N2O_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_N2O_Total.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_N2O_Total.Location = new System.Drawing.Point(920, 224);
+            this.label_N2O_Total.Location = new System.Drawing.Point(914, 224);
             this.label_N2O_Total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_N2O_Total.Name = "label_N2O_Total";
             this.label_N2O_Total.Size = new System.Drawing.Size(73, 16);
@@ -1541,7 +1553,7 @@
             this.label_Aux_VOC_WTP.AutoSize = true;
             this.label_Aux_VOC_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_VOC_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_VOC_WTP.Location = new System.Drawing.Point(504, -25);
+            this.label_Aux_VOC_WTP.Location = new System.Drawing.Point(498, -25);
             this.label_Aux_VOC_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_VOC_WTP.Name = "label_Aux_VOC_WTP";
             this.label_Aux_VOC_WTP.Size = new System.Drawing.Size(103, 16);
@@ -1554,7 +1566,7 @@
             this.label_Aux_CO_WTP.AutoSize = true;
             this.label_Aux_CO_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO_WTP.Location = new System.Drawing.Point(504, 10);
+            this.label_Aux_CO_WTP.Location = new System.Drawing.Point(498, 10);
             this.label_Aux_CO_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO_WTP.Name = "label_Aux_CO_WTP";
             this.label_Aux_CO_WTP.Size = new System.Drawing.Size(94, 16);
@@ -1567,7 +1579,7 @@
             this.label_Aux_NOx_WTP.AutoSize = true;
             this.label_Aux_NOx_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_NOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_NOx_WTP.Location = new System.Drawing.Point(504, 45);
+            this.label_Aux_NOx_WTP.Location = new System.Drawing.Point(498, 45);
             this.label_Aux_NOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_NOx_WTP.Name = "label_Aux_NOx_WTP";
             this.label_Aux_NOx_WTP.Size = new System.Drawing.Size(101, 16);
@@ -1580,7 +1592,7 @@
             this.label_Aux_PM10_WTP.AutoSize = true;
             this.label_Aux_PM10_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM10_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM10_WTP.Location = new System.Drawing.Point(504, 77);
+            this.label_Aux_PM10_WTP.Location = new System.Drawing.Point(498, 77);
             this.label_Aux_PM10_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM10_WTP.Name = "label_Aux_PM10_WTP";
             this.label_Aux_PM10_WTP.Size = new System.Drawing.Size(109, 16);
@@ -1593,7 +1605,7 @@
             this.label_Aux_PM25_WTP.AutoSize = true;
             this.label_Aux_PM25_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM25_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM25_WTP.Location = new System.Drawing.Point(504, 110);
+            this.label_Aux_PM25_WTP.Location = new System.Drawing.Point(498, 110);
             this.label_Aux_PM25_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM25_WTP.Name = "label_Aux_PM25_WTP";
             this.label_Aux_PM25_WTP.Size = new System.Drawing.Size(109, 16);
@@ -1606,7 +1618,7 @@
             this.label_Aux_SOx_WTP.AutoSize = true;
             this.label_Aux_SOx_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_SOx_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_SOx_WTP.Location = new System.Drawing.Point(504, 139);
+            this.label_Aux_SOx_WTP.Location = new System.Drawing.Point(498, 139);
             this.label_Aux_SOx_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_SOx_WTP.Name = "label_Aux_SOx_WTP";
             this.label_Aux_SOx_WTP.Size = new System.Drawing.Size(100, 16);
@@ -1619,7 +1631,7 @@
             this.label_Aux_CH4_WTP.AutoSize = true;
             this.label_Aux_CH4_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CH4_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CH4_WTP.Location = new System.Drawing.Point(504, 168);
+            this.label_Aux_CH4_WTP.Location = new System.Drawing.Point(498, 168);
             this.label_Aux_CH4_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CH4_WTP.Name = "label_Aux_CH4_WTP";
             this.label_Aux_CH4_WTP.Size = new System.Drawing.Size(101, 16);
@@ -1632,7 +1644,7 @@
             this.label_Aux_CO2_WTP.AutoSize = true;
             this.label_Aux_CO2_WTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO2_WTP.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO2_WTP.Location = new System.Drawing.Point(504, 196);
+            this.label_Aux_CO2_WTP.Location = new System.Drawing.Point(498, 196);
             this.label_Aux_CO2_WTP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO2_WTP.Name = "label_Aux_CO2_WTP";
             this.label_Aux_CO2_WTP.Size = new System.Drawing.Size(101, 16);
@@ -1645,7 +1657,7 @@
             this.label_Aux_VOC_VO.AutoSize = true;
             this.label_Aux_VOC_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_VOC_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_VOC_VO.Location = new System.Drawing.Point(690, -25);
+            this.label_Aux_VOC_VO.Location = new System.Drawing.Point(684, -25);
             this.label_Aux_VOC_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_VOC_VO.Name = "label_Aux_VOC_VO";
             this.label_Aux_VOC_VO.Size = new System.Drawing.Size(91, 16);
@@ -1658,7 +1670,7 @@
             this.label_Aux_CO_VO.AutoSize = true;
             this.label_Aux_CO_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO_VO.Location = new System.Drawing.Point(690, 10);
+            this.label_Aux_CO_VO.Location = new System.Drawing.Point(684, 10);
             this.label_Aux_CO_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO_VO.Name = "label_Aux_CO_VO";
             this.label_Aux_CO_VO.Size = new System.Drawing.Size(82, 16);
@@ -1671,7 +1683,7 @@
             this.label_Aux_NOx_VO.AutoSize = true;
             this.label_Aux_NOx_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_NOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_NOx_VO.Location = new System.Drawing.Point(690, 45);
+            this.label_Aux_NOx_VO.Location = new System.Drawing.Point(684, 45);
             this.label_Aux_NOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_NOx_VO.Name = "label_Aux_NOx_VO";
             this.label_Aux_NOx_VO.Size = new System.Drawing.Size(89, 16);
@@ -1684,7 +1696,7 @@
             this.label_Aux_PM10_VO.AutoSize = true;
             this.label_Aux_PM10_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM10_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM10_VO.Location = new System.Drawing.Point(690, 77);
+            this.label_Aux_PM10_VO.Location = new System.Drawing.Point(684, 77);
             this.label_Aux_PM10_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM10_VO.Name = "label_Aux_PM10_VO";
             this.label_Aux_PM10_VO.Size = new System.Drawing.Size(97, 16);
@@ -1697,7 +1709,7 @@
             this.label_Aux_PM25_VO.AutoSize = true;
             this.label_Aux_PM25_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_PM25_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_PM25_VO.Location = new System.Drawing.Point(690, 110);
+            this.label_Aux_PM25_VO.Location = new System.Drawing.Point(684, 110);
             this.label_Aux_PM25_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_PM25_VO.Name = "label_Aux_PM25_VO";
             this.label_Aux_PM25_VO.Size = new System.Drawing.Size(97, 16);
@@ -1710,7 +1722,7 @@
             this.label_Aux_SOx_VO.AutoSize = true;
             this.label_Aux_SOx_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_SOx_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_SOx_VO.Location = new System.Drawing.Point(690, 139);
+            this.label_Aux_SOx_VO.Location = new System.Drawing.Point(684, 139);
             this.label_Aux_SOx_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_SOx_VO.Name = "label_Aux_SOx_VO";
             this.label_Aux_SOx_VO.Size = new System.Drawing.Size(88, 16);
@@ -1723,7 +1735,7 @@
             this.label_Aux_CH4_VO.AutoSize = true;
             this.label_Aux_CH4_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CH4_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CH4_VO.Location = new System.Drawing.Point(690, 168);
+            this.label_Aux_CH4_VO.Location = new System.Drawing.Point(684, 168);
             this.label_Aux_CH4_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CH4_VO.Name = "label_Aux_CH4_VO";
             this.label_Aux_CH4_VO.Size = new System.Drawing.Size(89, 16);
@@ -1736,7 +1748,7 @@
             this.label_Aux_CO2_VO.AutoSize = true;
             this.label_Aux_CO2_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_CO2_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_CO2_VO.Location = new System.Drawing.Point(690, 196);
+            this.label_Aux_CO2_VO.Location = new System.Drawing.Point(684, 196);
             this.label_Aux_CO2_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_CO2_VO.Name = "label_Aux_CO2_VO";
             this.label_Aux_CO2_VO.Size = new System.Drawing.Size(89, 16);
@@ -1749,12 +1761,90 @@
             this.label_Aux_N2O_VO.AutoSize = true;
             this.label_Aux_N2O_VO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Aux_N2O_VO.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label_Aux_N2O_VO.Location = new System.Drawing.Point(690, 224);
+            this.label_Aux_N2O_VO.Location = new System.Drawing.Point(684, 224);
             this.label_Aux_N2O_VO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_Aux_N2O_VO.Name = "label_Aux_N2O_VO";
             this.label_Aux_N2O_VO.Size = new System.Drawing.Size(90, 16);
             this.label_Aux_N2O_VO.TabIndex = 98;
             this.label_Aux_N2O_VO.Text = "Aux_N2O_VO";
+            // 
+            // Adj_GHG_N20
+            // 
+            this.Adj_GHG_N20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Adj_GHG_N20.AutoSize = true;
+            this.Adj_GHG_N20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Adj_GHG_N20.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Adj_GHG_N20.Location = new System.Drawing.Point(914, 307);
+            this.Adj_GHG_N20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Adj_GHG_N20.Name = "Adj_GHG_N20";
+            this.Adj_GHG_N20.Size = new System.Drawing.Size(96, 16);
+            this.Adj_GHG_N20.TabIndex = 101;
+            this.Adj_GHG_N20.Text = "Adj_GHG_N20";
+            // 
+            // Adj_GHG_CH4
+            // 
+            this.Adj_GHG_CH4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Adj_GHG_CH4.AutoSize = true;
+            this.Adj_GHG_CH4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Adj_GHG_CH4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Adj_GHG_CH4.Location = new System.Drawing.Point(914, 280);
+            this.Adj_GHG_CH4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Adj_GHG_CH4.Name = "Adj_GHG_CH4";
+            this.Adj_GHG_CH4.Size = new System.Drawing.Size(98, 16);
+            this.Adj_GHG_CH4.TabIndex = 100;
+            this.Adj_GHG_CH4.Text = "Adj_GHG_CH4";
+            // 
+            // Adj_GHG_CO2
+            // 
+            this.Adj_GHG_CO2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Adj_GHG_CO2.AutoSize = true;
+            this.Adj_GHG_CO2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Adj_GHG_CO2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Adj_GHG_CO2.Location = new System.Drawing.Point(914, 251);
+            this.Adj_GHG_CO2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Adj_GHG_CO2.Name = "Adj_GHG_CO2";
+            this.Adj_GHG_CO2.Size = new System.Drawing.Size(98, 16);
+            this.Adj_GHG_CO2.TabIndex = 99;
+            this.Adj_GHG_CO2.Text = "Adj_GHG_CO2";
+            // 
+            // Adj_GHG_CO2_Label
+            // 
+            this.Adj_GHG_CO2_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Adj_GHG_CO2_Label.AutoSize = true;
+            this.Adj_GHG_CO2_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Adj_GHG_CO2_Label.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Adj_GHG_CO2_Label.Location = new System.Drawing.Point(684, 251);
+            this.Adj_GHG_CO2_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Adj_GHG_CO2_Label.Name = "Adj_GHG_CO2_Label";
+            this.Adj_GHG_CO2_Label.Size = new System.Drawing.Size(148, 16);
+            this.Adj_GHG_CO2_Label.TabIndex = 102;
+            this.Adj_GHG_CO2_Label.Text = "CO2 Adjusted For GWP";
+            // 
+            // Adj_GHG_CH4_Label
+            // 
+            this.Adj_GHG_CH4_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Adj_GHG_CH4_Label.AutoSize = true;
+            this.Adj_GHG_CH4_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Adj_GHG_CH4_Label.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Adj_GHG_CH4_Label.Location = new System.Drawing.Point(684, 280);
+            this.Adj_GHG_CH4_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Adj_GHG_CH4_Label.Name = "Adj_GHG_CH4_Label";
+            this.Adj_GHG_CH4_Label.Size = new System.Drawing.Size(148, 16);
+            this.Adj_GHG_CH4_Label.TabIndex = 103;
+            this.Adj_GHG_CH4_Label.Text = "CH4 Adjusted For GWP";
+            // 
+            // N20_Adj_Label
+            // 
+            this.N20_Adj_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.N20_Adj_Label.AutoSize = true;
+            this.N20_Adj_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.N20_Adj_Label.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.N20_Adj_Label.Location = new System.Drawing.Point(684, 307);
+            this.N20_Adj_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.N20_Adj_Label.Name = "N20_Adj_Label";
+            this.N20_Adj_Label.Size = new System.Drawing.Size(149, 16);
+            this.N20_Adj_Label.TabIndex = 104;
+            this.N20_Adj_Label.Text = "N2O Adjusted For GWP";
             // 
             // panel_Header
             // 
@@ -2335,7 +2425,7 @@
             this.panel_Aux_Engine_Chars.Controls.Add(this.label_Aux_Active_HP);
             this.panel_Aux_Engine_Chars.Controls.Add(this.updown_Tot_AUX_Energy);
             this.panel_Aux_Engine_Chars.Controls.Add(this.label_Aux_Total_Energy);
-            this.panel_Aux_Engine_Chars.Location = new System.Drawing.Point(3, 516);
+            this.panel_Aux_Engine_Chars.Location = new System.Drawing.Point(0, 0);
             this.panel_Aux_Engine_Chars.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Aux_Engine_Chars.Name = "panel_Aux_Engine_Chars";
             this.panel_Aux_Engine_Chars.Size = new System.Drawing.Size(1200, 141);
@@ -2564,7 +2654,7 @@
             this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_CO);
             this.panel_Aux_Emissions_Input.Controls.Add(this.Aux_Res_NOX);
             this.panel_Aux_Emissions_Input.Controls.Add(this.label_Aux_NOX);
-            this.panel_Aux_Emissions_Input.Location = new System.Drawing.Point(3, 969);
+            this.panel_Aux_Emissions_Input.Location = new System.Drawing.Point(0, 0);
             this.panel_Aux_Emissions_Input.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Aux_Emissions_Input.Name = "panel_Aux_Emissions_Input";
             this.panel_Aux_Emissions_Input.Size = new System.Drawing.Size(1200, 247);
@@ -3352,123 +3442,6 @@
             this.label_Main_Global_Warming_Potentials.Text = "Global Warming Potentials";
             this.label_Main_Global_Warming_Potentials.Click += new System.EventHandler(this.label_Main_Global_Warming_Potentials_Click);
             // 
-            // panel_Aux_Engine_Vars
-            // 
-            this.panel_Aux_Engine_Vars.BackColor = System.Drawing.Color.Silver;
-            this.panel_Aux_Engine_Vars.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Num_Engines_Onboard);
-            this.panel_Aux_Engine_Vars.Controls.Add(this.updown_Aux_Number_Engines);
-            this.panel_Aux_Engine_Vars.Controls.Add(this.updown_Aux_Engines_In_Use);
-            this.panel_Aux_Engine_Vars.Controls.Add(this.updown_Aux_HP_Per_Engine);
-            this.panel_Aux_Engine_Vars.Controls.Add(this.updown_Tot_Onboard_AUX_HP);
-            this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Num_Engines_In_Use);
-            this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Engine_Rated_HP);
-            this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Total_Onboard_HP);
-            this.panel_Aux_Engine_Vars.Location = new System.Drawing.Point(4, 171);
-            this.panel_Aux_Engine_Vars.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_Aux_Engine_Vars.Name = "panel_Aux_Engine_Vars";
-            this.panel_Aux_Engine_Vars.Size = new System.Drawing.Size(1200, 113);
-            this.panel_Aux_Engine_Vars.TabIndex = 318;
-            // 
-            // label_Aux_Num_Engines_Onboard
-            // 
-            this.label_Aux_Num_Engines_Onboard.AutoSize = true;
-            this.label_Aux_Num_Engines_Onboard.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_Num_Engines_Onboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Aux_Num_Engines_Onboard.Location = new System.Drawing.Point(0, 7);
-            this.label_Aux_Num_Engines_Onboard.Name = "label_Aux_Num_Engines_Onboard";
-            this.label_Aux_Num_Engines_Onboard.Size = new System.Drawing.Size(274, 20);
-            this.label_Aux_Num_Engines_Onboard.TabIndex = 127;
-            this.label_Aux_Num_Engines_Onboard.Text = "Number of OnBoard Auxillary Engines";
-            // 
-            // updown_Aux_Number_Engines
-            // 
-            this.updown_Aux_Number_Engines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_Aux_Number_Engines.Location = new System.Drawing.Point(288, 7);
-            this.updown_Aux_Number_Engines.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.updown_Aux_Number_Engines.Name = "updown_Aux_Number_Engines";
-            this.updown_Aux_Number_Engines.Size = new System.Drawing.Size(92, 20);
-            this.updown_Aux_Number_Engines.TabIndex = 123;
-            // 
-            // updown_Aux_Engines_In_Use
-            // 
-            this.updown_Aux_Engines_In_Use.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_Aux_Engines_In_Use.Location = new System.Drawing.Point(288, 35);
-            this.updown_Aux_Engines_In_Use.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.updown_Aux_Engines_In_Use.Name = "updown_Aux_Engines_In_Use";
-            this.updown_Aux_Engines_In_Use.Size = new System.Drawing.Size(92, 20);
-            this.updown_Aux_Engines_In_Use.TabIndex = 124;
-            // 
-            // updown_Aux_HP_Per_Engine
-            // 
-            this.updown_Aux_HP_Per_Engine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_Aux_HP_Per_Engine.Location = new System.Drawing.Point(288, 58);
-            this.updown_Aux_HP_Per_Engine.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.updown_Aux_HP_Per_Engine.Name = "updown_Aux_HP_Per_Engine";
-            this.updown_Aux_HP_Per_Engine.Size = new System.Drawing.Size(92, 20);
-            this.updown_Aux_HP_Per_Engine.TabIndex = 125;
-            // 
-            // updown_Tot_Onboard_AUX_HP
-            // 
-            this.updown_Tot_Onboard_AUX_HP.BackColor = System.Drawing.SystemColors.Window;
-            this.updown_Tot_Onboard_AUX_HP.Enabled = false;
-            this.updown_Tot_Onboard_AUX_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_Tot_Onboard_AUX_HP.Location = new System.Drawing.Point(288, 83);
-            this.updown_Tot_Onboard_AUX_HP.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.updown_Tot_Onboard_AUX_HP.Name = "updown_Tot_Onboard_AUX_HP";
-            this.updown_Tot_Onboard_AUX_HP.ReadOnly = true;
-            this.updown_Tot_Onboard_AUX_HP.Size = new System.Drawing.Size(92, 20);
-            this.updown_Tot_Onboard_AUX_HP.TabIndex = 126;
-            // 
-            // label_Aux_Num_Engines_In_Use
-            // 
-            this.label_Aux_Num_Engines_In_Use.AutoSize = true;
-            this.label_Aux_Num_Engines_In_Use.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_Num_Engines_In_Use.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Aux_Num_Engines_In_Use.Location = new System.Drawing.Point(0, 35);
-            this.label_Aux_Num_Engines_In_Use.Name = "label_Aux_Num_Engines_In_Use";
-            this.label_Aux_Num_Engines_In_Use.Size = new System.Drawing.Size(252, 20);
-            this.label_Aux_Num_Engines_In_Use.TabIndex = 128;
-            this.label_Aux_Num_Engines_In_Use.Text = "Number of Auxillary Engines in use";
-            // 
-            // label_Aux_Engine_Rated_HP
-            // 
-            this.label_Aux_Engine_Rated_HP.AutoSize = true;
-            this.label_Aux_Engine_Rated_HP.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_Engine_Rated_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Aux_Engine_Rated_HP.Location = new System.Drawing.Point(0, 61);
-            this.label_Aux_Engine_Rated_HP.Name = "label_Aux_Engine_Rated_HP";
-            this.label_Aux_Engine_Rated_HP.Size = new System.Drawing.Size(283, 20);
-            this.label_Aux_Engine_Rated_HP.TabIndex = 129;
-            this.label_Aux_Engine_Rated_HP.Text = "Auxillary Engine Rated HP (per engine)";
-            // 
-            // label_Aux_Total_Onboard_HP
-            // 
-            this.label_Aux_Total_Onboard_HP.AutoSize = true;
-            this.label_Aux_Total_Onboard_HP.BackColor = System.Drawing.Color.Silver;
-            this.label_Aux_Total_Onboard_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Aux_Total_Onboard_HP.Location = new System.Drawing.Point(0, 84);
-            this.label_Aux_Total_Onboard_HP.Name = "label_Aux_Total_Onboard_HP";
-            this.label_Aux_Total_Onboard_HP.Size = new System.Drawing.Size(284, 20);
-            this.label_Aux_Total_Onboard_HP.TabIndex = 130;
-            this.label_Aux_Total_Onboard_HP.Text = "Total OnBoard Aux Engine HP (In Use)";
-            // 
             // panel_Main_GWPs
             // 
             this.panel_Main_GWPs.BackColor = System.Drawing.Color.Silver;
@@ -3681,6 +3654,727 @@
             this.label_Aux_Engine_Chars.Text = "Auxiliary Engine Characterization";
             this.label_Aux_Engine_Chars.Click += new System.EventHandler(this.label_Aux_Engine_Chars_Click);
             // 
+            // label_Main_Engine_Inputs
+            // 
+            this.label_Main_Engine_Inputs.AutoSize = true;
+            this.label_Main_Engine_Inputs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label_Main_Engine_Inputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label_Main_Engine_Inputs.Location = new System.Drawing.Point(0, 660);
+            this.label_Main_Engine_Inputs.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Main_Engine_Inputs.MinimumSize = new System.Drawing.Size(1210, 18);
+            this.label_Main_Engine_Inputs.Name = "label_Main_Engine_Inputs";
+            this.label_Main_Engine_Inputs.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_Main_Engine_Inputs.Size = new System.Drawing.Size(1210, 24);
+            this.label_Main_Engine_Inputs.TabIndex = 274;
+            this.label_Main_Engine_Inputs.Text = "User Inputs For Main Engine Emissions Calculations - g/hp-hr(out)";
+            this.label_Main_Engine_Inputs.Click += new System.EventHandler(this.label_Main_Engine_Inputs_Click);
+            // 
+            // label_Main_Fuel_Calculations
+            // 
+            this.label_Main_Fuel_Calculations.AutoSize = true;
+            this.label_Main_Fuel_Calculations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label_Main_Fuel_Calculations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label_Main_Fuel_Calculations.Location = new System.Drawing.Point(1, 1223);
+            this.label_Main_Fuel_Calculations.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Main_Fuel_Calculations.MinimumSize = new System.Drawing.Size(1210, 18);
+            this.label_Main_Fuel_Calculations.Name = "label_Main_Fuel_Calculations";
+            this.label_Main_Fuel_Calculations.Size = new System.Drawing.Size(1210, 24);
+            this.label_Main_Fuel_Calculations.TabIndex = 177;
+            this.label_Main_Fuel_Calculations.Text = "Main Engine Fuel Calculations";
+            this.label_Main_Fuel_Calculations.Click += new System.EventHandler(this.label_Main_Fuel_Calculations_Click);
+            // 
+            // label160
+            // 
+            this.label160.AutoSize = true;
+            this.label160.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label160.Location = new System.Drawing.Point(7, 457);
+            this.label160.Name = "label160";
+            this.label160.Size = new System.Drawing.Size(0, 16);
+            this.label160.TabIndex = 137;
+            // 
+            // label_Main_Engine_Char_Per_Mode
+            // 
+            this.label_Main_Engine_Char_Per_Mode.AutoSize = true;
+            this.label_Main_Engine_Char_Per_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.label_Main_Engine_Char_Per_Mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label_Main_Engine_Char_Per_Mode.Location = new System.Drawing.Point(0, 287);
+            this.label_Main_Engine_Char_Per_Mode.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Main_Engine_Char_Per_Mode.MinimumSize = new System.Drawing.Size(1210, 18);
+            this.label_Main_Engine_Char_Per_Mode.Name = "label_Main_Engine_Char_Per_Mode";
+            this.label_Main_Engine_Char_Per_Mode.Size = new System.Drawing.Size(1210, 24);
+            this.label_Main_Engine_Char_Per_Mode.TabIndex = 130;
+            this.label_Main_Engine_Char_Per_Mode.Text = "Main Engine Characterization Per Mode";
+            this.label_Main_Engine_Char_Per_Mode.Click += new System.EventHandler(this.label_Main_Engine_Char_Per_Mode_Click);
+            // 
+            // label_Main_Engine_Vars
+            // 
+            this.label_Main_Engine_Vars.AutoSize = true;
+            this.label_Main_Engine_Vars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label_Main_Engine_Vars.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label_Main_Engine_Vars.Location = new System.Drawing.Point(0, 4);
+            this.label_Main_Engine_Vars.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Main_Engine_Vars.MinimumSize = new System.Drawing.Size(1210, 18);
+            this.label_Main_Engine_Vars.Name = "label_Main_Engine_Vars";
+            this.label_Main_Engine_Vars.Size = new System.Drawing.Size(1210, 24);
+            this.label_Main_Engine_Vars.TabIndex = 34;
+            this.label_Main_Engine_Vars.Text = "Main Engine Variables ";
+            this.label_Main_Engine_Vars.Click += new System.EventHandler(this.label_Main_Engine_Vars_Click);
+            // 
+            // panel_Main_Fuel_Calculations
+            // 
+            this.panel_Main_Fuel_Calculations.BackColor = System.Drawing.Color.Silver;
+            this.panel_Main_Fuel_Calculations.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_Percent_11);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_Engine_Efficiency);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_KWH_Out);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_mmbtu_Out);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_Engine_Efficiency);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_Baseline_Fuel_Consumption);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_KW_HR_Out);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_Gallon);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_MMBTU_Out);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_GALLON);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_MMBTU_In);
+            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_mmbtu_In);
+            this.panel_Main_Fuel_Calculations.Location = new System.Drawing.Point(3, 1243);
+            this.panel_Main_Fuel_Calculations.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Main_Fuel_Calculations.Name = "panel_Main_Fuel_Calculations";
+            this.panel_Main_Fuel_Calculations.Size = new System.Drawing.Size(1200, 195);
+            this.panel_Main_Fuel_Calculations.TabIndex = 271;
+            // 
+            // label_Main_Percent_11
+            // 
+            this.label_Main_Percent_11.AutoSize = true;
+            this.label_Main_Percent_11.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Percent_11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Percent_11.Location = new System.Drawing.Point(340, 36);
+            this.label_Main_Percent_11.Name = "label_Main_Percent_11";
+            this.label_Main_Percent_11.Size = new System.Drawing.Size(23, 20);
+            this.label_Main_Percent_11.TabIndex = 303;
+            this.label_Main_Percent_11.Text = "%";
+            // 
+            // label_Main_Engine_Efficiency
+            // 
+            this.label_Main_Engine_Efficiency.AutoSize = true;
+            this.label_Main_Engine_Efficiency.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Engine_Efficiency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Engine_Efficiency.Location = new System.Drawing.Point(5, 40);
+            this.label_Main_Engine_Efficiency.Name = "label_Main_Engine_Efficiency";
+            this.label_Main_Engine_Efficiency.Size = new System.Drawing.Size(131, 20);
+            this.label_Main_Engine_Efficiency.TabIndex = 178;
+            this.label_Main_Engine_Efficiency.Text = "Engine Efficiency";
+            // 
+            // label_Main_KWH_Out
+            // 
+            this.label_Main_KWH_Out.AutoSize = true;
+            this.label_Main_KWH_Out.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_KWH_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_KWH_Out.Location = new System.Drawing.Point(5, 66);
+            this.label_Main_KWH_Out.Name = "label_Main_KWH_Out";
+            this.label_Main_KWH_Out.Size = new System.Drawing.Size(96, 20);
+            this.label_Main_KWH_Out.TabIndex = 179;
+            this.label_Main_KWH_Out.Text = "KWh out/trip";
+            // 
+            // label_Main_mmbtu_Out
+            // 
+            this.label_Main_mmbtu_Out.AutoSize = true;
+            this.label_Main_mmbtu_Out.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_mmbtu_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_mmbtu_Out.Location = new System.Drawing.Point(5, 92);
+            this.label_Main_mmbtu_Out.Name = "label_Main_mmbtu_Out";
+            this.label_Main_mmbtu_Out.Size = new System.Drawing.Size(111, 20);
+            this.label_Main_mmbtu_Out.TabIndex = 180;
+            this.label_Main_mmbtu_Out.Text = "mmbtu out/trip";
+            // 
+            // updown_Engine_Efficiency
+            // 
+            this.updown_Engine_Efficiency.DecimalPlaces = 2;
+            this.updown_Engine_Efficiency.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Engine_Efficiency.Location = new System.Drawing.Point(135, 36);
+            this.updown_Engine_Efficiency.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.updown_Engine_Efficiency.Name = "updown_Engine_Efficiency";
+            this.updown_Engine_Efficiency.Size = new System.Drawing.Size(207, 21);
+            this.updown_Engine_Efficiency.TabIndex = 181;
+            // 
+            // label_Main_Baseline_Fuel_Consumption
+            // 
+            this.label_Main_Baseline_Fuel_Consumption.AutoSize = true;
+            this.label_Main_Baseline_Fuel_Consumption.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Baseline_Fuel_Consumption.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Baseline_Fuel_Consumption.Location = new System.Drawing.Point(132, 19);
+            this.label_Main_Baseline_Fuel_Consumption.Name = "label_Main_Baseline_Fuel_Consumption";
+            this.label_Main_Baseline_Fuel_Consumption.Size = new System.Drawing.Size(214, 18);
+            this.label_Main_Baseline_Fuel_Consumption.TabIndex = 188;
+            this.label_Main_Baseline_Fuel_Consumption.Text = "Baseline Fuel Consumption";
+            // 
+            // updown_KW_HR_Out
+            // 
+            this.updown_KW_HR_Out.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_KW_HR_Out.DecimalPlaces = 2;
+            this.updown_KW_HR_Out.Enabled = false;
+            this.updown_KW_HR_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_KW_HR_Out.Location = new System.Drawing.Point(135, 62);
+            this.updown_KW_HR_Out.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.updown_KW_HR_Out.Name = "updown_KW_HR_Out";
+            this.updown_KW_HR_Out.ReadOnly = true;
+            this.updown_KW_HR_Out.Size = new System.Drawing.Size(207, 21);
+            this.updown_KW_HR_Out.TabIndex = 182;
+            // 
+            // label_Main_Gallon
+            // 
+            this.label_Main_Gallon.AutoSize = true;
+            this.label_Main_Gallon.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Gallon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Gallon.Location = new System.Drawing.Point(5, 144);
+            this.label_Main_Gallon.Name = "label_Main_Gallon";
+            this.label_Main_Gallon.Size = new System.Drawing.Size(77, 20);
+            this.label_Main_Gallon.TabIndex = 187;
+            this.label_Main_Gallon.Text = "gallon/trip";
+            // 
+            // updown_MMBTU_Out
+            // 
+            this.updown_MMBTU_Out.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_MMBTU_Out.DecimalPlaces = 2;
+            this.updown_MMBTU_Out.Enabled = false;
+            this.updown_MMBTU_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_MMBTU_Out.Location = new System.Drawing.Point(135, 88);
+            this.updown_MMBTU_Out.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.updown_MMBTU_Out.Name = "updown_MMBTU_Out";
+            this.updown_MMBTU_Out.ReadOnly = true;
+            this.updown_MMBTU_Out.Size = new System.Drawing.Size(207, 21);
+            this.updown_MMBTU_Out.TabIndex = 183;
+            // 
+            // updown_GALLON
+            // 
+            this.updown_GALLON.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_GALLON.DecimalPlaces = 2;
+            this.updown_GALLON.Enabled = false;
+            this.updown_GALLON.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_GALLON.Location = new System.Drawing.Point(135, 138);
+            this.updown_GALLON.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.updown_GALLON.Name = "updown_GALLON";
+            this.updown_GALLON.ReadOnly = true;
+            this.updown_GALLON.Size = new System.Drawing.Size(207, 21);
+            this.updown_GALLON.TabIndex = 186;
+            // 
+            // updown_MMBTU_In
+            // 
+            this.updown_MMBTU_In.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_MMBTU_In.DecimalPlaces = 2;
+            this.updown_MMBTU_In.Enabled = false;
+            this.updown_MMBTU_In.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_MMBTU_In.Location = new System.Drawing.Point(135, 112);
+            this.updown_MMBTU_In.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.updown_MMBTU_In.Name = "updown_MMBTU_In";
+            this.updown_MMBTU_In.ReadOnly = true;
+            this.updown_MMBTU_In.Size = new System.Drawing.Size(207, 21);
+            this.updown_MMBTU_In.TabIndex = 184;
+            // 
+            // label_Main_mmbtu_In
+            // 
+            this.label_Main_mmbtu_In.AutoSize = true;
+            this.label_Main_mmbtu_In.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_mmbtu_In.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_mmbtu_In.Location = new System.Drawing.Point(5, 118);
+            this.label_Main_mmbtu_In.Name = "label_Main_mmbtu_In";
+            this.label_Main_mmbtu_In.Size = new System.Drawing.Size(100, 20);
+            this.label_Main_mmbtu_In.TabIndex = 185;
+            this.label_Main_mmbtu_In.Text = "mmbtu in/trip";
+            // 
+            // TWP_Tab
+            // 
+            this.TWP_Tab.Controls.Add(this.panel1);
+            this.TWP_Tab.Controls.Add(this.GraphPanel);
+            this.TWP_Tab.Controls.Add(this.ShipSelectionPanel);
+            this.TWP_Tab.Location = new System.Drawing.Point(4, 22);
+            this.TWP_Tab.Name = "TWP_Tab";
+            this.TWP_Tab.Padding = new System.Windows.Forms.Padding(3);
+            this.TWP_Tab.Size = new System.Drawing.Size(1225, 752);
+            this.TWP_Tab.TabIndex = 5;
+            this.TWP_Tab.Text = "TWP";
+            this.TWP_Tab.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.NameOfSuperiorShipLabel);
+            this.panel1.Controls.Add(this.NumberOfYearsTilCrossLabel);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.BttomViableLabel);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Location = new System.Drawing.Point(813, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(406, 316);
+            this.panel1.TabIndex = 1;
+            // 
+            // NameOfSuperiorShipLabel
+            // 
+            this.NameOfSuperiorShipLabel.AutoSize = true;
+            this.NameOfSuperiorShipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameOfSuperiorShipLabel.Location = new System.Drawing.Point(4, 111);
+            this.NameOfSuperiorShipLabel.Name = "NameOfSuperiorShipLabel";
+            this.NameOfSuperiorShipLabel.Size = new System.Drawing.Size(139, 20);
+            this.NameOfSuperiorShipLabel.TabIndex = 4;
+            this.NameOfSuperiorShipLabel.Text = "Name Of The Ship";
+            // 
+            // NumberOfYearsTilCrossLabel
+            // 
+            this.NumberOfYearsTilCrossLabel.AutoSize = true;
+            this.NumberOfYearsTilCrossLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumberOfYearsTilCrossLabel.Location = new System.Drawing.Point(4, 39);
+            this.NumberOfYearsTilCrossLabel.Name = "NumberOfYearsTilCrossLabel";
+            this.NumberOfYearsTilCrossLabel.Size = new System.Drawing.Size(139, 20);
+            this.NumberOfYearsTilCrossLabel.TabIndex = 3;
+            this.NumberOfYearsTilCrossLabel.Text = "Name Of The Ship";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(272, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Ship That Is Superior After Crossover";
+            // 
+            // BttomViableLabel
+            // 
+            this.BttomViableLabel.AutoSize = true;
+            this.BttomViableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BttomViableLabel.Location = new System.Drawing.Point(4, 16);
+            this.BttomViableLabel.Name = "BttomViableLabel";
+            this.BttomViableLabel.Size = new System.Drawing.Size(243, 20);
+            this.BttomViableLabel.TabIndex = 0;
+            this.BttomViableLabel.Text = "Number Of Years Until Crossover";
+            // 
+            // GraphPanel
+            // 
+            this.GraphPanel.BackColor = System.Drawing.Color.Silver;
+            this.GraphPanel.Controls.Add(this.chart1);
+            this.GraphPanel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.GraphPanel.Location = new System.Drawing.Point(3, 325);
+            this.GraphPanel.Name = "GraphPanel";
+            this.GraphPanel.Size = new System.Drawing.Size(1216, 421);
+            this.GraphPanel.TabIndex = 1;
+            // 
+            // chart1
+            // 
+            chartArea2.AxisX.Minimum = 0D;
+            chartArea2.AxisX.Title = "Time (Years)";
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.Title = "TWP (Ratio)";
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(0, 4);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series3.BorderWidth = 4;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Pulse";
+            series4.BorderWidth = 4;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Continuous";
+            series5.BorderWidth = 4;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "Service Life";
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(1213, 414);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "TWP";
+            this.chart1.Titles.Add(title2);
+            // 
+            // ShipSelectionPanel
+            // 
+            this.ShipSelectionPanel.BackColor = System.Drawing.Color.Silver;
+            this.ShipSelectionPanel.Controls.Add(this.BottomShipSel);
+            this.ShipSelectionPanel.Controls.Add(this.TWP_CalculateButton);
+            this.ShipSelectionPanel.Controls.Add(this.YearsInServiceLabel);
+            this.ShipSelectionPanel.Controls.Add(this.ShipYearsInService_NumUpDown);
+            this.ShipSelectionPanel.Controls.Add(this.Blackbar);
+            this.ShipSelectionPanel.Controls.Add(this.TopShipSelector);
+            this.ShipSelectionPanel.Controls.Add(this.TWPlabel);
+            this.ShipSelectionPanel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ShipSelectionPanel.Location = new System.Drawing.Point(3, 3);
+            this.ShipSelectionPanel.Name = "ShipSelectionPanel";
+            this.ShipSelectionPanel.Size = new System.Drawing.Size(804, 316);
+            this.ShipSelectionPanel.TabIndex = 0;
+            // 
+            // BottomShipSel
+            // 
+            this.BottomShipSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BottomShipSel.FormattingEnabled = true;
+            this.BottomShipSel.Location = new System.Drawing.Point(214, 169);
+            this.BottomShipSel.Name = "BottomShipSel";
+            this.BottomShipSel.Size = new System.Drawing.Size(416, 21);
+            this.BottomShipSel.Sorted = true;
+            this.BottomShipSel.TabIndex = 7;
+            // 
+            // TWP_CalculateButton
+            // 
+            this.TWP_CalculateButton.Location = new System.Drawing.Point(358, 274);
+            this.TWP_CalculateButton.Name = "TWP_CalculateButton";
+            this.TWP_CalculateButton.Size = new System.Drawing.Size(124, 23);
+            this.TWP_CalculateButton.TabIndex = 6;
+            this.TWP_CalculateButton.Text = "Calculate TWP";
+            this.TWP_CalculateButton.UseVisualStyleBackColor = true;
+            this.TWP_CalculateButton.Click += new System.EventHandler(this.TWP_CalculateButton_Click);
+            // 
+            // YearsInServiceLabel
+            // 
+            this.YearsInServiceLabel.AutoSize = true;
+            this.YearsInServiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearsInServiceLabel.Location = new System.Drawing.Point(3, 16);
+            this.YearsInServiceLabel.Name = "YearsInServiceLabel";
+            this.YearsInServiceLabel.Size = new System.Drawing.Size(249, 20);
+            this.YearsInServiceLabel.TabIndex = 5;
+            this.YearsInServiceLabel.Text = "Years Of Service For Each Vessel";
+            // 
+            // ShipYearsInService_NumUpDown
+            // 
+            this.ShipYearsInService_NumUpDown.Location = new System.Drawing.Point(9, 39);
+            this.ShipYearsInService_NumUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.ShipYearsInService_NumUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.ShipYearsInService_NumUpDown.Name = "ShipYearsInService_NumUpDown";
+            this.ShipYearsInService_NumUpDown.Size = new System.Drawing.Size(120, 20);
+            this.ShipYearsInService_NumUpDown.TabIndex = 4;
+            this.ShipYearsInService_NumUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // Blackbar
+            // 
+            this.Blackbar.BackColor = System.Drawing.Color.Black;
+            this.Blackbar.Location = new System.Drawing.Point(184, 157);
+            this.Blackbar.Name = "Blackbar";
+            this.Blackbar.Size = new System.Drawing.Size(473, 5);
+            this.Blackbar.TabIndex = 2;
+            this.Blackbar.TabStop = false;
+            // 
+            // TopShipSelector
+            // 
+            this.TopShipSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TopShipSelector.FormattingEnabled = true;
+            this.TopShipSelector.Location = new System.Drawing.Point(214, 128);
+            this.TopShipSelector.Name = "TopShipSelector";
+            this.TopShipSelector.Size = new System.Drawing.Size(416, 21);
+            this.TopShipSelector.Sorted = true;
+            this.TopShipSelector.TabIndex = 1;
+            // 
+            // TWPlabel
+            // 
+            this.TWPlabel.AutoSize = true;
+            this.TWPlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TWPlabel.Location = new System.Drawing.Point(105, 147);
+            this.TWPlabel.Name = "TWPlabel";
+            this.TWPlabel.Size = new System.Drawing.Size(73, 24);
+            this.TWPlabel.TabIndex = 0;
+            this.TWPlabel.Text = "TWP =";
+            // 
+            // MEV_Tab
+            // 
+            this.MEV_Tab.Controls.Add(this.panel_Main_Engine_Vars);
+            this.MEV_Tab.Location = new System.Drawing.Point(4, 22);
+            this.MEV_Tab.Name = "MEV_Tab";
+            this.MEV_Tab.Size = new System.Drawing.Size(1225, 752);
+            this.MEV_Tab.TabIndex = 6;
+            this.MEV_Tab.Text = "Main Engine Variables";
+            this.MEV_Tab.UseVisualStyleBackColor = true;
+            // 
+            // panel_Main_Engine_Vars
+            // 
+            this.panel_Main_Engine_Vars.BackColor = System.Drawing.Color.Silver;
+            this.panel_Main_Engine_Vars.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Main_Engine_Vars.Controls.Add(this.updown_Single_Engine_HP);
+            this.panel_Main_Engine_Vars.Controls.Add(this.label_Main_Num_Engines);
+            this.panel_Main_Engine_Vars.Controls.Add(this.label_Main_Single_Engine_HP);
+            this.panel_Main_Engine_Vars.Controls.Add(this.label_Main_Total_HP);
+            this.panel_Main_Engine_Vars.Controls.Add(this.updown_Number_Of_Engines);
+            this.panel_Main_Engine_Vars.Controls.Add(this.updown_Tot_Onboard_HP);
+            this.panel_Main_Engine_Vars.Controls.Add(this.label_Main_Vessel_ID);
+            this.panel_Main_Engine_Vars.Controls.Add(this.textBox_Vessel_Type);
+            this.panel_Main_Engine_Vars.Location = new System.Drawing.Point(0, 0);
+            this.panel_Main_Engine_Vars.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Main_Engine_Vars.Name = "panel_Main_Engine_Vars";
+            this.panel_Main_Engine_Vars.Size = new System.Drawing.Size(1200, 126);
+            this.panel_Main_Engine_Vars.TabIndex = 267;
+            // 
+            // updown_Single_Engine_HP
+            // 
+            this.updown_Single_Engine_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Single_Engine_HP.Location = new System.Drawing.Point(173, 63);
+            this.updown_Single_Engine_HP.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.updown_Single_Engine_HP.Name = "updown_Single_Engine_HP";
+            this.updown_Single_Engine_HP.Size = new System.Drawing.Size(92, 20);
+            this.updown_Single_Engine_HP.TabIndex = 106;
+            // 
+            // label_Main_Num_Engines
+            // 
+            this.label_Main_Num_Engines.AutoSize = true;
+            this.label_Main_Num_Engines.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Num_Engines.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Num_Engines.Location = new System.Drawing.Point(0, 39);
+            this.label_Main_Num_Engines.Name = "label_Main_Num_Engines";
+            this.label_Main_Num_Engines.Size = new System.Drawing.Size(145, 20);
+            this.label_Main_Num_Engines.TabIndex = 101;
+            this.label_Main_Num_Engines.Text = "Number of Engines";
+            // 
+            // label_Main_Single_Engine_HP
+            // 
+            this.label_Main_Single_Engine_HP.AutoSize = true;
+            this.label_Main_Single_Engine_HP.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Single_Engine_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Single_Engine_HP.Location = new System.Drawing.Point(0, 65);
+            this.label_Main_Single_Engine_HP.Name = "label_Main_Single_Engine_HP";
+            this.label_Main_Single_Engine_HP.Size = new System.Drawing.Size(133, 20);
+            this.label_Main_Single_Engine_HP.TabIndex = 103;
+            this.label_Main_Single_Engine_HP.Text = "Single Engine HP";
+            // 
+            // label_Main_Total_HP
+            // 
+            this.label_Main_Total_HP.AutoSize = true;
+            this.label_Main_Total_HP.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Total_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Total_HP.Location = new System.Drawing.Point(0, 91);
+            this.label_Main_Total_HP.Name = "label_Main_Total_HP";
+            this.label_Main_Total_HP.Size = new System.Drawing.Size(142, 20);
+            this.label_Main_Total_HP.TabIndex = 104;
+            this.label_Main_Total_HP.Text = "Total On Board HP";
+            // 
+            // updown_Number_Of_Engines
+            // 
+            this.updown_Number_Of_Engines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Number_Of_Engines.Location = new System.Drawing.Point(173, 37);
+            this.updown_Number_Of_Engines.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.updown_Number_Of_Engines.Name = "updown_Number_Of_Engines";
+            this.updown_Number_Of_Engines.Size = new System.Drawing.Size(92, 20);
+            this.updown_Number_Of_Engines.TabIndex = 105;
+            // 
+            // updown_Tot_Onboard_HP
+            // 
+            this.updown_Tot_Onboard_HP.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_Tot_Onboard_HP.Enabled = false;
+            this.updown_Tot_Onboard_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Tot_Onboard_HP.Location = new System.Drawing.Point(173, 88);
+            this.updown_Tot_Onboard_HP.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.updown_Tot_Onboard_HP.Name = "updown_Tot_Onboard_HP";
+            this.updown_Tot_Onboard_HP.ReadOnly = true;
+            this.updown_Tot_Onboard_HP.Size = new System.Drawing.Size(92, 20);
+            this.updown_Tot_Onboard_HP.TabIndex = 107;
+            // 
+            // label_Main_Vessel_ID
+            // 
+            this.label_Main_Vessel_ID.AutoSize = true;
+            this.label_Main_Vessel_ID.BackColor = System.Drawing.Color.Silver;
+            this.label_Main_Vessel_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Main_Vessel_ID.Location = new System.Drawing.Point(0, 12);
+            this.label_Main_Vessel_ID.Name = "label_Main_Vessel_ID";
+            this.label_Main_Vessel_ID.Size = new System.Drawing.Size(116, 20);
+            this.label_Main_Vessel_ID.TabIndex = 108;
+            this.label_Main_Vessel_ID.Text = "Vessel Type ID";
+            // 
+            // textBox_Vessel_Type
+            // 
+            this.textBox_Vessel_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Vessel_Type.Location = new System.Drawing.Point(173, 10);
+            this.textBox_Vessel_Type.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_Vessel_Type.Name = "textBox_Vessel_Type";
+            this.textBox_Vessel_Type.Size = new System.Drawing.Size(199, 20);
+            this.textBox_Vessel_Type.TabIndex = 109;
+            // 
+            // AEV_Tab
+            // 
+            this.AEV_Tab.Controls.Add(this.panel_Aux_Engine_Vars);
+            this.AEV_Tab.Location = new System.Drawing.Point(4, 22);
+            this.AEV_Tab.Name = "AEV_Tab";
+            this.AEV_Tab.Size = new System.Drawing.Size(1225, 752);
+            this.AEV_Tab.TabIndex = 7;
+            this.AEV_Tab.Text = "Aux Engine Variables";
+            this.AEV_Tab.UseVisualStyleBackColor = true;
+            // 
+            // panel_Aux_Engine_Vars
+            // 
+            this.panel_Aux_Engine_Vars.BackColor = System.Drawing.Color.Silver;
+            this.panel_Aux_Engine_Vars.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Num_Engines_Onboard);
+            this.panel_Aux_Engine_Vars.Controls.Add(this.updown_Aux_Number_Engines);
+            this.panel_Aux_Engine_Vars.Controls.Add(this.updown_Aux_Engines_In_Use);
+            this.panel_Aux_Engine_Vars.Controls.Add(this.updown_Aux_HP_Per_Engine);
+            this.panel_Aux_Engine_Vars.Controls.Add(this.updown_Tot_Onboard_AUX_HP);
+            this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Num_Engines_In_Use);
+            this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Engine_Rated_HP);
+            this.panel_Aux_Engine_Vars.Controls.Add(this.label_Aux_Total_Onboard_HP);
+            this.panel_Aux_Engine_Vars.Location = new System.Drawing.Point(2, 2);
+            this.panel_Aux_Engine_Vars.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_Aux_Engine_Vars.Name = "panel_Aux_Engine_Vars";
+            this.panel_Aux_Engine_Vars.Size = new System.Drawing.Size(1200, 113);
+            this.panel_Aux_Engine_Vars.TabIndex = 318;
+            // 
+            // label_Aux_Num_Engines_Onboard
+            // 
+            this.label_Aux_Num_Engines_Onboard.AutoSize = true;
+            this.label_Aux_Num_Engines_Onboard.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Num_Engines_Onboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Num_Engines_Onboard.Location = new System.Drawing.Point(0, 7);
+            this.label_Aux_Num_Engines_Onboard.Name = "label_Aux_Num_Engines_Onboard";
+            this.label_Aux_Num_Engines_Onboard.Size = new System.Drawing.Size(274, 20);
+            this.label_Aux_Num_Engines_Onboard.TabIndex = 127;
+            this.label_Aux_Num_Engines_Onboard.Text = "Number of OnBoard Auxillary Engines";
+            // 
+            // updown_Aux_Number_Engines
+            // 
+            this.updown_Aux_Number_Engines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Number_Engines.Location = new System.Drawing.Point(288, 7);
+            this.updown_Aux_Number_Engines.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.updown_Aux_Number_Engines.Name = "updown_Aux_Number_Engines";
+            this.updown_Aux_Number_Engines.Size = new System.Drawing.Size(92, 20);
+            this.updown_Aux_Number_Engines.TabIndex = 123;
+            // 
+            // updown_Aux_Engines_In_Use
+            // 
+            this.updown_Aux_Engines_In_Use.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_Engines_In_Use.Location = new System.Drawing.Point(288, 35);
+            this.updown_Aux_Engines_In_Use.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.updown_Aux_Engines_In_Use.Name = "updown_Aux_Engines_In_Use";
+            this.updown_Aux_Engines_In_Use.Size = new System.Drawing.Size(92, 20);
+            this.updown_Aux_Engines_In_Use.TabIndex = 124;
+            // 
+            // updown_Aux_HP_Per_Engine
+            // 
+            this.updown_Aux_HP_Per_Engine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Aux_HP_Per_Engine.Location = new System.Drawing.Point(288, 58);
+            this.updown_Aux_HP_Per_Engine.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.updown_Aux_HP_Per_Engine.Name = "updown_Aux_HP_Per_Engine";
+            this.updown_Aux_HP_Per_Engine.Size = new System.Drawing.Size(92, 20);
+            this.updown_Aux_HP_Per_Engine.TabIndex = 125;
+            // 
+            // updown_Tot_Onboard_AUX_HP
+            // 
+            this.updown_Tot_Onboard_AUX_HP.BackColor = System.Drawing.SystemColors.Window;
+            this.updown_Tot_Onboard_AUX_HP.Enabled = false;
+            this.updown_Tot_Onboard_AUX_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updown_Tot_Onboard_AUX_HP.Location = new System.Drawing.Point(288, 83);
+            this.updown_Tot_Onboard_AUX_HP.Maximum = new decimal(new int[] {
+            1241513984,
+            370409800,
+            542101,
+            0});
+            this.updown_Tot_Onboard_AUX_HP.Name = "updown_Tot_Onboard_AUX_HP";
+            this.updown_Tot_Onboard_AUX_HP.ReadOnly = true;
+            this.updown_Tot_Onboard_AUX_HP.Size = new System.Drawing.Size(92, 20);
+            this.updown_Tot_Onboard_AUX_HP.TabIndex = 126;
+            // 
+            // label_Aux_Num_Engines_In_Use
+            // 
+            this.label_Aux_Num_Engines_In_Use.AutoSize = true;
+            this.label_Aux_Num_Engines_In_Use.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Num_Engines_In_Use.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Num_Engines_In_Use.Location = new System.Drawing.Point(0, 35);
+            this.label_Aux_Num_Engines_In_Use.Name = "label_Aux_Num_Engines_In_Use";
+            this.label_Aux_Num_Engines_In_Use.Size = new System.Drawing.Size(252, 20);
+            this.label_Aux_Num_Engines_In_Use.TabIndex = 128;
+            this.label_Aux_Num_Engines_In_Use.Text = "Number of Auxillary Engines in use";
+            // 
+            // label_Aux_Engine_Rated_HP
+            // 
+            this.label_Aux_Engine_Rated_HP.AutoSize = true;
+            this.label_Aux_Engine_Rated_HP.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Engine_Rated_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Engine_Rated_HP.Location = new System.Drawing.Point(0, 61);
+            this.label_Aux_Engine_Rated_HP.Name = "label_Aux_Engine_Rated_HP";
+            this.label_Aux_Engine_Rated_HP.Size = new System.Drawing.Size(283, 20);
+            this.label_Aux_Engine_Rated_HP.TabIndex = 129;
+            this.label_Aux_Engine_Rated_HP.Text = "Auxillary Engine Rated HP (per engine)";
+            // 
+            // label_Aux_Total_Onboard_HP
+            // 
+            this.label_Aux_Total_Onboard_HP.AutoSize = true;
+            this.label_Aux_Total_Onboard_HP.BackColor = System.Drawing.Color.Silver;
+            this.label_Aux_Total_Onboard_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Aux_Total_Onboard_HP.Location = new System.Drawing.Point(0, 84);
+            this.label_Aux_Total_Onboard_HP.Name = "label_Aux_Total_Onboard_HP";
+            this.label_Aux_Total_Onboard_HP.Size = new System.Drawing.Size(284, 20);
+            this.label_Aux_Total_Onboard_HP.TabIndex = 130;
+            this.label_Aux_Total_Onboard_HP.Text = "Total OnBoard Aux Engine HP (In Use)";
+            // 
+            // UIME_Tab
+            // 
+            this.UIME_Tab.Controls.Add(this.panel_main_engine_inputs);
+            this.UIME_Tab.Location = new System.Drawing.Point(4, 22);
+            this.UIME_Tab.Name = "UIME_Tab";
+            this.UIME_Tab.Padding = new System.Windows.Forms.Padding(3);
+            this.UIME_Tab.Size = new System.Drawing.Size(1225, 752);
+            this.UIME_Tab.TabIndex = 8;
+            this.UIME_Tab.Text = "User Inputs: Main Engine";
+            this.UIME_Tab.UseVisualStyleBackColor = true;
+            // 
             // panel_main_engine_inputs
             // 
             this.panel_main_engine_inputs.AutoScroll = true;
@@ -3741,7 +4435,7 @@
             this.panel_main_engine_inputs.Controls.Add(this.label_Main_Inputs_CO);
             this.panel_main_engine_inputs.Controls.Add(this.Res_NOX);
             this.panel_main_engine_inputs.Controls.Add(this.label_Main_Inputs_NOX);
-            this.panel_main_engine_inputs.Location = new System.Drawing.Point(5, 680);
+            this.panel_main_engine_inputs.Location = new System.Drawing.Point(5, 5);
             this.panel_main_engine_inputs.Margin = new System.Windows.Forms.Padding(2);
             this.panel_main_engine_inputs.Name = "panel_main_engine_inputs";
             this.panel_main_engine_inputs.Size = new System.Drawing.Size(1200, 267);
@@ -4514,184 +5208,15 @@
             this.label_Main_Inputs_NOX.TabIndex = 265;
             this.label_Main_Inputs_NOX.Text = "NOX";
             // 
-            // label_Main_Engine_Inputs
+            // MEC_Tab
             // 
-            this.label_Main_Engine_Inputs.AutoSize = true;
-            this.label_Main_Engine_Inputs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label_Main_Engine_Inputs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Engine_Inputs.Location = new System.Drawing.Point(0, 660);
-            this.label_Main_Engine_Inputs.Margin = new System.Windows.Forms.Padding(0);
-            this.label_Main_Engine_Inputs.MinimumSize = new System.Drawing.Size(1210, 18);
-            this.label_Main_Engine_Inputs.Name = "label_Main_Engine_Inputs";
-            this.label_Main_Engine_Inputs.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label_Main_Engine_Inputs.Size = new System.Drawing.Size(1210, 24);
-            this.label_Main_Engine_Inputs.TabIndex = 274;
-            this.label_Main_Engine_Inputs.Text = "User Inputs For Main Engine Emissions Calculations - g/hp-hr(out)";
-            this.label_Main_Engine_Inputs.Click += new System.EventHandler(this.label_Main_Engine_Inputs_Click);
-            // 
-            // label_Main_Fuel_Calculations
-            // 
-            this.label_Main_Fuel_Calculations.AutoSize = true;
-            this.label_Main_Fuel_Calculations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.label_Main_Fuel_Calculations.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Fuel_Calculations.Location = new System.Drawing.Point(1, 1223);
-            this.label_Main_Fuel_Calculations.Margin = new System.Windows.Forms.Padding(0);
-            this.label_Main_Fuel_Calculations.MinimumSize = new System.Drawing.Size(1210, 18);
-            this.label_Main_Fuel_Calculations.Name = "label_Main_Fuel_Calculations";
-            this.label_Main_Fuel_Calculations.Size = new System.Drawing.Size(1210, 24);
-            this.label_Main_Fuel_Calculations.TabIndex = 177;
-            this.label_Main_Fuel_Calculations.Text = "Main Engine Fuel Calculations";
-            this.label_Main_Fuel_Calculations.Click += new System.EventHandler(this.label_Main_Fuel_Calculations_Click);
-            // 
-            // label160
-            // 
-            this.label160.AutoSize = true;
-            this.label160.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label160.Location = new System.Drawing.Point(7, 457);
-            this.label160.Name = "label160";
-            this.label160.Size = new System.Drawing.Size(0, 16);
-            this.label160.TabIndex = 137;
-            // 
-            // label_Main_Engine_Char_Per_Mode
-            // 
-            this.label_Main_Engine_Char_Per_Mode.AutoSize = true;
-            this.label_Main_Engine_Char_Per_Mode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.label_Main_Engine_Char_Per_Mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Engine_Char_Per_Mode.Location = new System.Drawing.Point(0, 287);
-            this.label_Main_Engine_Char_Per_Mode.Margin = new System.Windows.Forms.Padding(0);
-            this.label_Main_Engine_Char_Per_Mode.MinimumSize = new System.Drawing.Size(1210, 18);
-            this.label_Main_Engine_Char_Per_Mode.Name = "label_Main_Engine_Char_Per_Mode";
-            this.label_Main_Engine_Char_Per_Mode.Size = new System.Drawing.Size(1210, 24);
-            this.label_Main_Engine_Char_Per_Mode.TabIndex = 130;
-            this.label_Main_Engine_Char_Per_Mode.Text = "Main Engine Characterization Per Mode";
-            this.label_Main_Engine_Char_Per_Mode.Click += new System.EventHandler(this.label_Main_Engine_Char_Per_Mode_Click);
-            // 
-            // label_Main_Engine_Vars
-            // 
-            this.label_Main_Engine_Vars.AutoSize = true;
-            this.label_Main_Engine_Vars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label_Main_Engine_Vars.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label_Main_Engine_Vars.Location = new System.Drawing.Point(0, 4);
-            this.label_Main_Engine_Vars.Margin = new System.Windows.Forms.Padding(0);
-            this.label_Main_Engine_Vars.MinimumSize = new System.Drawing.Size(1210, 18);
-            this.label_Main_Engine_Vars.Name = "label_Main_Engine_Vars";
-            this.label_Main_Engine_Vars.Size = new System.Drawing.Size(1210, 24);
-            this.label_Main_Engine_Vars.TabIndex = 34;
-            this.label_Main_Engine_Vars.Text = "Main Engine Variables ";
-            this.label_Main_Engine_Vars.Click += new System.EventHandler(this.label_Main_Engine_Vars_Click);
-            // 
-            // panel_Main_Engine_Vars
-            // 
-            this.panel_Main_Engine_Vars.BackColor = System.Drawing.Color.Silver;
-            this.panel_Main_Engine_Vars.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Main_Engine_Vars.Controls.Add(this.updown_Single_Engine_HP);
-            this.panel_Main_Engine_Vars.Controls.Add(this.label_Main_Num_Engines);
-            this.panel_Main_Engine_Vars.Controls.Add(this.label_Main_Single_Engine_HP);
-            this.panel_Main_Engine_Vars.Controls.Add(this.label_Main_Total_HP);
-            this.panel_Main_Engine_Vars.Controls.Add(this.updown_Number_Of_Engines);
-            this.panel_Main_Engine_Vars.Controls.Add(this.updown_Tot_Onboard_HP);
-            this.panel_Main_Engine_Vars.Controls.Add(this.label_Main_Vessel_ID);
-            this.panel_Main_Engine_Vars.Controls.Add(this.textBox_Vessel_Type);
-            this.panel_Main_Engine_Vars.Location = new System.Drawing.Point(3, 24);
-            this.panel_Main_Engine_Vars.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_Main_Engine_Vars.Name = "panel_Main_Engine_Vars";
-            this.panel_Main_Engine_Vars.Size = new System.Drawing.Size(1200, 126);
-            this.panel_Main_Engine_Vars.TabIndex = 267;
-            // 
-            // updown_Single_Engine_HP
-            // 
-            this.updown_Single_Engine_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_Single_Engine_HP.Location = new System.Drawing.Point(173, 63);
-            this.updown_Single_Engine_HP.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.updown_Single_Engine_HP.Name = "updown_Single_Engine_HP";
-            this.updown_Single_Engine_HP.Size = new System.Drawing.Size(92, 20);
-            this.updown_Single_Engine_HP.TabIndex = 106;
-            // 
-            // label_Main_Num_Engines
-            // 
-            this.label_Main_Num_Engines.AutoSize = true;
-            this.label_Main_Num_Engines.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Num_Engines.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Num_Engines.Location = new System.Drawing.Point(0, 39);
-            this.label_Main_Num_Engines.Name = "label_Main_Num_Engines";
-            this.label_Main_Num_Engines.Size = new System.Drawing.Size(145, 20);
-            this.label_Main_Num_Engines.TabIndex = 101;
-            this.label_Main_Num_Engines.Text = "Number of Engines";
-            // 
-            // label_Main_Single_Engine_HP
-            // 
-            this.label_Main_Single_Engine_HP.AutoSize = true;
-            this.label_Main_Single_Engine_HP.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Single_Engine_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Single_Engine_HP.Location = new System.Drawing.Point(0, 65);
-            this.label_Main_Single_Engine_HP.Name = "label_Main_Single_Engine_HP";
-            this.label_Main_Single_Engine_HP.Size = new System.Drawing.Size(133, 20);
-            this.label_Main_Single_Engine_HP.TabIndex = 103;
-            this.label_Main_Single_Engine_HP.Text = "Single Engine HP";
-            // 
-            // label_Main_Total_HP
-            // 
-            this.label_Main_Total_HP.AutoSize = true;
-            this.label_Main_Total_HP.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Total_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Total_HP.Location = new System.Drawing.Point(0, 91);
-            this.label_Main_Total_HP.Name = "label_Main_Total_HP";
-            this.label_Main_Total_HP.Size = new System.Drawing.Size(142, 20);
-            this.label_Main_Total_HP.TabIndex = 104;
-            this.label_Main_Total_HP.Text = "Total On Board HP";
-            // 
-            // updown_Number_Of_Engines
-            // 
-            this.updown_Number_Of_Engines.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_Number_Of_Engines.Location = new System.Drawing.Point(173, 37);
-            this.updown_Number_Of_Engines.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.updown_Number_Of_Engines.Name = "updown_Number_Of_Engines";
-            this.updown_Number_Of_Engines.Size = new System.Drawing.Size(92, 20);
-            this.updown_Number_Of_Engines.TabIndex = 105;
-            // 
-            // updown_Tot_Onboard_HP
-            // 
-            this.updown_Tot_Onboard_HP.BackColor = System.Drawing.SystemColors.Window;
-            this.updown_Tot_Onboard_HP.Enabled = false;
-            this.updown_Tot_Onboard_HP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_Tot_Onboard_HP.Location = new System.Drawing.Point(173, 88);
-            this.updown_Tot_Onboard_HP.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.updown_Tot_Onboard_HP.Name = "updown_Tot_Onboard_HP";
-            this.updown_Tot_Onboard_HP.ReadOnly = true;
-            this.updown_Tot_Onboard_HP.Size = new System.Drawing.Size(92, 20);
-            this.updown_Tot_Onboard_HP.TabIndex = 107;
-            // 
-            // label_Main_Vessel_ID
-            // 
-            this.label_Main_Vessel_ID.AutoSize = true;
-            this.label_Main_Vessel_ID.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Vessel_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Vessel_ID.Location = new System.Drawing.Point(0, 12);
-            this.label_Main_Vessel_ID.Name = "label_Main_Vessel_ID";
-            this.label_Main_Vessel_ID.Size = new System.Drawing.Size(116, 20);
-            this.label_Main_Vessel_ID.TabIndex = 108;
-            this.label_Main_Vessel_ID.Text = "Vessel Type ID";
-            // 
-            // textBox_Vessel_Type
-            // 
-            this.textBox_Vessel_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Vessel_Type.Location = new System.Drawing.Point(173, 10);
-            this.textBox_Vessel_Type.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_Vessel_Type.Name = "textBox_Vessel_Type";
-            this.textBox_Vessel_Type.Size = new System.Drawing.Size(199, 20);
-            this.textBox_Vessel_Type.TabIndex = 109;
+            this.MEC_Tab.Controls.Add(this.panel_Main_Engine_Chars);
+            this.MEC_Tab.Location = new System.Drawing.Point(4, 22);
+            this.MEC_Tab.Name = "MEC_Tab";
+            this.MEC_Tab.Size = new System.Drawing.Size(1225, 752);
+            this.MEC_Tab.TabIndex = 9;
+            this.MEC_Tab.Text = "Main Characteristics";
+            this.MEC_Tab.UseVisualStyleBackColor = true;
             // 
             // panel_Main_Engine_Chars
             // 
@@ -4744,7 +5269,7 @@
             this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Percent_In_Mode);
             this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_HP_Load_Factor);
             this.panel_Main_Engine_Chars.Controls.Add(this.label_Main_Time_Per_Mode);
-            this.panel_Main_Engine_Chars.Location = new System.Drawing.Point(4, 307);
+            this.panel_Main_Engine_Chars.Location = new System.Drawing.Point(2, 2);
             this.panel_Main_Engine_Chars.Margin = new System.Windows.Forms.Padding(2);
             this.panel_Main_Engine_Chars.Name = "panel_Main_Engine_Chars";
             this.panel_Main_Engine_Chars.Size = new System.Drawing.Size(1200, 187);
@@ -5368,399 +5893,15 @@
             this.label_Main_Time_Per_Mode.TabIndex = 132;
             this.label_Main_Time_Per_Mode.Text = "Time Per Mode (hours)";
             // 
-            // panel_Main_Fuel_Calculations
+            // AEC_Tab
             // 
-            this.panel_Main_Fuel_Calculations.BackColor = System.Drawing.Color.Silver;
-            this.panel_Main_Fuel_Calculations.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_Percent_11);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_Engine_Efficiency);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_KWH_Out);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_mmbtu_Out);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_Engine_Efficiency);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_Baseline_Fuel_Consumption);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_KW_HR_Out);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_Gallon);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_MMBTU_Out);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_GALLON);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.updown_MMBTU_In);
-            this.panel_Main_Fuel_Calculations.Controls.Add(this.label_Main_mmbtu_In);
-            this.panel_Main_Fuel_Calculations.Location = new System.Drawing.Point(3, 1243);
-            this.panel_Main_Fuel_Calculations.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_Main_Fuel_Calculations.Name = "panel_Main_Fuel_Calculations";
-            this.panel_Main_Fuel_Calculations.Size = new System.Drawing.Size(1200, 195);
-            this.panel_Main_Fuel_Calculations.TabIndex = 271;
-            // 
-            // label_Main_Percent_11
-            // 
-            this.label_Main_Percent_11.AutoSize = true;
-            this.label_Main_Percent_11.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Percent_11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Percent_11.Location = new System.Drawing.Point(340, 36);
-            this.label_Main_Percent_11.Name = "label_Main_Percent_11";
-            this.label_Main_Percent_11.Size = new System.Drawing.Size(23, 20);
-            this.label_Main_Percent_11.TabIndex = 303;
-            this.label_Main_Percent_11.Text = "%";
-            // 
-            // label_Main_Engine_Efficiency
-            // 
-            this.label_Main_Engine_Efficiency.AutoSize = true;
-            this.label_Main_Engine_Efficiency.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Engine_Efficiency.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Engine_Efficiency.Location = new System.Drawing.Point(5, 40);
-            this.label_Main_Engine_Efficiency.Name = "label_Main_Engine_Efficiency";
-            this.label_Main_Engine_Efficiency.Size = new System.Drawing.Size(131, 20);
-            this.label_Main_Engine_Efficiency.TabIndex = 178;
-            this.label_Main_Engine_Efficiency.Text = "Engine Efficiency";
-            // 
-            // label_Main_KWH_Out
-            // 
-            this.label_Main_KWH_Out.AutoSize = true;
-            this.label_Main_KWH_Out.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_KWH_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_KWH_Out.Location = new System.Drawing.Point(5, 66);
-            this.label_Main_KWH_Out.Name = "label_Main_KWH_Out";
-            this.label_Main_KWH_Out.Size = new System.Drawing.Size(96, 20);
-            this.label_Main_KWH_Out.TabIndex = 179;
-            this.label_Main_KWH_Out.Text = "KWh out/trip";
-            // 
-            // label_Main_mmbtu_Out
-            // 
-            this.label_Main_mmbtu_Out.AutoSize = true;
-            this.label_Main_mmbtu_Out.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_mmbtu_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_mmbtu_Out.Location = new System.Drawing.Point(5, 92);
-            this.label_Main_mmbtu_Out.Name = "label_Main_mmbtu_Out";
-            this.label_Main_mmbtu_Out.Size = new System.Drawing.Size(111, 20);
-            this.label_Main_mmbtu_Out.TabIndex = 180;
-            this.label_Main_mmbtu_Out.Text = "mmbtu out/trip";
-            // 
-            // updown_Engine_Efficiency
-            // 
-            this.updown_Engine_Efficiency.DecimalPlaces = 2;
-            this.updown_Engine_Efficiency.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_Engine_Efficiency.Location = new System.Drawing.Point(135, 36);
-            this.updown_Engine_Efficiency.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.updown_Engine_Efficiency.Name = "updown_Engine_Efficiency";
-            this.updown_Engine_Efficiency.Size = new System.Drawing.Size(207, 21);
-            this.updown_Engine_Efficiency.TabIndex = 181;
-            // 
-            // label_Main_Baseline_Fuel_Consumption
-            // 
-            this.label_Main_Baseline_Fuel_Consumption.AutoSize = true;
-            this.label_Main_Baseline_Fuel_Consumption.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Baseline_Fuel_Consumption.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Baseline_Fuel_Consumption.Location = new System.Drawing.Point(132, 19);
-            this.label_Main_Baseline_Fuel_Consumption.Name = "label_Main_Baseline_Fuel_Consumption";
-            this.label_Main_Baseline_Fuel_Consumption.Size = new System.Drawing.Size(214, 18);
-            this.label_Main_Baseline_Fuel_Consumption.TabIndex = 188;
-            this.label_Main_Baseline_Fuel_Consumption.Text = "Baseline Fuel Consumption";
-            // 
-            // updown_KW_HR_Out
-            // 
-            this.updown_KW_HR_Out.BackColor = System.Drawing.SystemColors.Window;
-            this.updown_KW_HR_Out.DecimalPlaces = 2;
-            this.updown_KW_HR_Out.Enabled = false;
-            this.updown_KW_HR_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_KW_HR_Out.Location = new System.Drawing.Point(135, 62);
-            this.updown_KW_HR_Out.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.updown_KW_HR_Out.Name = "updown_KW_HR_Out";
-            this.updown_KW_HR_Out.ReadOnly = true;
-            this.updown_KW_HR_Out.Size = new System.Drawing.Size(207, 21);
-            this.updown_KW_HR_Out.TabIndex = 182;
-            // 
-            // label_Main_Gallon
-            // 
-            this.label_Main_Gallon.AutoSize = true;
-            this.label_Main_Gallon.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_Gallon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_Gallon.Location = new System.Drawing.Point(5, 144);
-            this.label_Main_Gallon.Name = "label_Main_Gallon";
-            this.label_Main_Gallon.Size = new System.Drawing.Size(77, 20);
-            this.label_Main_Gallon.TabIndex = 187;
-            this.label_Main_Gallon.Text = "gallon/trip";
-            // 
-            // updown_MMBTU_Out
-            // 
-            this.updown_MMBTU_Out.BackColor = System.Drawing.SystemColors.Window;
-            this.updown_MMBTU_Out.DecimalPlaces = 2;
-            this.updown_MMBTU_Out.Enabled = false;
-            this.updown_MMBTU_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_MMBTU_Out.Location = new System.Drawing.Point(135, 88);
-            this.updown_MMBTU_Out.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.updown_MMBTU_Out.Name = "updown_MMBTU_Out";
-            this.updown_MMBTU_Out.ReadOnly = true;
-            this.updown_MMBTU_Out.Size = new System.Drawing.Size(207, 21);
-            this.updown_MMBTU_Out.TabIndex = 183;
-            // 
-            // updown_GALLON
-            // 
-            this.updown_GALLON.BackColor = System.Drawing.SystemColors.Window;
-            this.updown_GALLON.DecimalPlaces = 2;
-            this.updown_GALLON.Enabled = false;
-            this.updown_GALLON.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_GALLON.Location = new System.Drawing.Point(135, 138);
-            this.updown_GALLON.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.updown_GALLON.Name = "updown_GALLON";
-            this.updown_GALLON.ReadOnly = true;
-            this.updown_GALLON.Size = new System.Drawing.Size(207, 21);
-            this.updown_GALLON.TabIndex = 186;
-            // 
-            // updown_MMBTU_In
-            // 
-            this.updown_MMBTU_In.BackColor = System.Drawing.SystemColors.Window;
-            this.updown_MMBTU_In.DecimalPlaces = 2;
-            this.updown_MMBTU_In.Enabled = false;
-            this.updown_MMBTU_In.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updown_MMBTU_In.Location = new System.Drawing.Point(135, 112);
-            this.updown_MMBTU_In.Maximum = new decimal(new int[] {
-            1241513984,
-            370409800,
-            542101,
-            0});
-            this.updown_MMBTU_In.Name = "updown_MMBTU_In";
-            this.updown_MMBTU_In.ReadOnly = true;
-            this.updown_MMBTU_In.Size = new System.Drawing.Size(207, 21);
-            this.updown_MMBTU_In.TabIndex = 184;
-            // 
-            // label_Main_mmbtu_In
-            // 
-            this.label_Main_mmbtu_In.AutoSize = true;
-            this.label_Main_mmbtu_In.BackColor = System.Drawing.Color.Silver;
-            this.label_Main_mmbtu_In.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Main_mmbtu_In.Location = new System.Drawing.Point(5, 118);
-            this.label_Main_mmbtu_In.Name = "label_Main_mmbtu_In";
-            this.label_Main_mmbtu_In.Size = new System.Drawing.Size(100, 20);
-            this.label_Main_mmbtu_In.TabIndex = 185;
-            this.label_Main_mmbtu_In.Text = "mmbtu in/trip";
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.GraphPanel);
-            this.tabPage1.Controls.Add(this.ShipSelectionPanel);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1225, 752);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "TWP";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.NameOfSuperiorShipLabel);
-            this.panel1.Controls.Add(this.NumberOfYearsTilCrossLabel);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.BttomViableLabel);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(813, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(406, 316);
-            this.panel1.TabIndex = 1;
-            // 
-            // NameOfSuperiorShipLabel
-            // 
-            this.NameOfSuperiorShipLabel.AutoSize = true;
-            this.NameOfSuperiorShipLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameOfSuperiorShipLabel.Location = new System.Drawing.Point(4, 111);
-            this.NameOfSuperiorShipLabel.Name = "NameOfSuperiorShipLabel";
-            this.NameOfSuperiorShipLabel.Size = new System.Drawing.Size(139, 20);
-            this.NameOfSuperiorShipLabel.TabIndex = 4;
-            this.NameOfSuperiorShipLabel.Text = "Name Of The Ship";
-            // 
-            // NumberOfYearsTilCrossLabel
-            // 
-            this.NumberOfYearsTilCrossLabel.AutoSize = true;
-            this.NumberOfYearsTilCrossLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberOfYearsTilCrossLabel.Location = new System.Drawing.Point(4, 39);
-            this.NumberOfYearsTilCrossLabel.Name = "NumberOfYearsTilCrossLabel";
-            this.NumberOfYearsTilCrossLabel.Size = new System.Drawing.Size(139, 20);
-            this.NumberOfYearsTilCrossLabel.TabIndex = 3;
-            this.NumberOfYearsTilCrossLabel.Text = "Name Of The Ship";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(272, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ship That Is Superior After Crossover";
-            // 
-            // BttomViableLabel
-            // 
-            this.BttomViableLabel.AutoSize = true;
-            this.BttomViableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BttomViableLabel.Location = new System.Drawing.Point(4, 16);
-            this.BttomViableLabel.Name = "BttomViableLabel";
-            this.BttomViableLabel.Size = new System.Drawing.Size(243, 20);
-            this.BttomViableLabel.TabIndex = 0;
-            this.BttomViableLabel.Text = "Number Of Years Until Crossover";
-            // 
-            // GraphPanel
-            // 
-            this.GraphPanel.BackColor = System.Drawing.Color.Silver;
-            this.GraphPanel.Controls.Add(this.chart1);
-            this.GraphPanel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.GraphPanel.Location = new System.Drawing.Point(3, 325);
-            this.GraphPanel.Name = "GraphPanel";
-            this.GraphPanel.Size = new System.Drawing.Size(1216, 421);
-            this.GraphPanel.TabIndex = 1;
-            // 
-            // chart1
-            // 
-            chartArea2.AxisX.Minimum = 0D;
-            chartArea2.AxisX.Title = "Time (Years)";
-            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.AxisY.Title = "TWP (Ratio)";
-            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(0, 4);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series3.BorderWidth = 4;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Pulse";
-            series4.BorderWidth = 4;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Continuous";
-            series5.BorderWidth = 4;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.Name = "Service Life";
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
-            this.chart1.Series.Add(series5);
-            this.chart1.Size = new System.Drawing.Size(1213, 414);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "TWP";
-            this.chart1.Titles.Add(title2);
-            // 
-            // ShipSelectionPanel
-            // 
-            this.ShipSelectionPanel.BackColor = System.Drawing.Color.Silver;
-            this.ShipSelectionPanel.Controls.Add(this.BottomShipSel);
-            this.ShipSelectionPanel.Controls.Add(this.TWP_CalculateButton);
-            this.ShipSelectionPanel.Controls.Add(this.YearsInServiceLabel);
-            this.ShipSelectionPanel.Controls.Add(this.ShipYearsInService_NumUpDown);
-            this.ShipSelectionPanel.Controls.Add(this.Blackbar);
-            this.ShipSelectionPanel.Controls.Add(this.TopShipSelector);
-            this.ShipSelectionPanel.Controls.Add(this.TWPlabel);
-            this.ShipSelectionPanel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ShipSelectionPanel.Location = new System.Drawing.Point(3, 3);
-            this.ShipSelectionPanel.Name = "ShipSelectionPanel";
-            this.ShipSelectionPanel.Size = new System.Drawing.Size(804, 316);
-            this.ShipSelectionPanel.TabIndex = 0;
-            // 
-            // BottomShipSel
-            // 
-            this.BottomShipSel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.BottomShipSel.FormattingEnabled = true;
-            this.BottomShipSel.Location = new System.Drawing.Point(214, 169);
-            this.BottomShipSel.Name = "BottomShipSel";
-            this.BottomShipSel.Size = new System.Drawing.Size(416, 21);
-            this.BottomShipSel.Sorted = true;
-            this.BottomShipSel.TabIndex = 7;
-            // 
-            // TWP_CalculateButton
-            // 
-            this.TWP_CalculateButton.Location = new System.Drawing.Point(358, 274);
-            this.TWP_CalculateButton.Name = "TWP_CalculateButton";
-            this.TWP_CalculateButton.Size = new System.Drawing.Size(124, 23);
-            this.TWP_CalculateButton.TabIndex = 6;
-            this.TWP_CalculateButton.Text = "Calculate TWP";
-            this.TWP_CalculateButton.UseVisualStyleBackColor = true;
-            this.TWP_CalculateButton.Click += new System.EventHandler(this.TWP_CalculateButton_Click);
-            // 
-            // YearsInServiceLabel
-            // 
-            this.YearsInServiceLabel.AutoSize = true;
-            this.YearsInServiceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearsInServiceLabel.Location = new System.Drawing.Point(3, 16);
-            this.YearsInServiceLabel.Name = "YearsInServiceLabel";
-            this.YearsInServiceLabel.Size = new System.Drawing.Size(249, 20);
-            this.YearsInServiceLabel.TabIndex = 5;
-            this.YearsInServiceLabel.Text = "Years Of Service For Each Vessel";
-            // 
-            // ShipYearsInService_NumUpDown
-            // 
-            this.ShipYearsInService_NumUpDown.Location = new System.Drawing.Point(9, 39);
-            this.ShipYearsInService_NumUpDown.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.ShipYearsInService_NumUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.ShipYearsInService_NumUpDown.Name = "ShipYearsInService_NumUpDown";
-            this.ShipYearsInService_NumUpDown.Size = new System.Drawing.Size(120, 20);
-            this.ShipYearsInService_NumUpDown.TabIndex = 4;
-            this.ShipYearsInService_NumUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // Blackbar
-            // 
-            this.Blackbar.BackColor = System.Drawing.Color.Black;
-            this.Blackbar.Location = new System.Drawing.Point(184, 157);
-            this.Blackbar.Name = "Blackbar";
-            this.Blackbar.Size = new System.Drawing.Size(473, 5);
-            this.Blackbar.TabIndex = 2;
-            this.Blackbar.TabStop = false;
-            // 
-            // TopShipSelector
-            // 
-            this.TopShipSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TopShipSelector.FormattingEnabled = true;
-            this.TopShipSelector.Location = new System.Drawing.Point(214, 128);
-            this.TopShipSelector.Name = "TopShipSelector";
-            this.TopShipSelector.Size = new System.Drawing.Size(416, 21);
-            this.TopShipSelector.Sorted = true;
-            this.TopShipSelector.TabIndex = 1;
-            // 
-            // TWPlabel
-            // 
-            this.TWPlabel.AutoSize = true;
-            this.TWPlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TWPlabel.Location = new System.Drawing.Point(105, 147);
-            this.TWPlabel.Name = "TWPlabel";
-            this.TWPlabel.Size = new System.Drawing.Size(73, 24);
-            this.TWPlabel.TabIndex = 0;
-            this.TWPlabel.Text = "TWP =";
+            this.AEC_Tab.Controls.Add(this.panel_Aux_Engine_Chars);
+            this.AEC_Tab.Location = new System.Drawing.Point(4, 22);
+            this.AEC_Tab.Name = "AEC_Tab";
+            this.AEC_Tab.Size = new System.Drawing.Size(1225, 752);
+            this.AEC_Tab.TabIndex = 10;
+            this.AEC_Tab.Text = "Aux Characteristics";
+            this.AEC_Tab.UseVisualStyleBackColor = true;
             // 
             // file_menu
             // 
@@ -5812,83 +5953,15 @@
             this.calculateToolStripMenuItem.Text = "Calculate";
             this.calculateToolStripMenuItem.Click += new System.EventHandler(this.calculateToolStripMenuItem_Click);
             // 
-            // Adj_GHG_CO2
+            // UIA_Tab
             // 
-            this.Adj_GHG_CO2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Adj_GHG_CO2.AutoSize = true;
-            this.Adj_GHG_CO2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adj_GHG_CO2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Adj_GHG_CO2.Location = new System.Drawing.Point(920, 251);
-            this.Adj_GHG_CO2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Adj_GHG_CO2.Name = "Adj_GHG_CO2";
-            this.Adj_GHG_CO2.Size = new System.Drawing.Size(98, 16);
-            this.Adj_GHG_CO2.TabIndex = 99;
-            this.Adj_GHG_CO2.Text = "Adj_GHG_CO2";
-            // 
-            // Adj_GHG_CH4
-            // 
-            this.Adj_GHG_CH4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Adj_GHG_CH4.AutoSize = true;
-            this.Adj_GHG_CH4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adj_GHG_CH4.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Adj_GHG_CH4.Location = new System.Drawing.Point(920, 280);
-            this.Adj_GHG_CH4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Adj_GHG_CH4.Name = "Adj_GHG_CH4";
-            this.Adj_GHG_CH4.Size = new System.Drawing.Size(98, 16);
-            this.Adj_GHG_CH4.TabIndex = 100;
-            this.Adj_GHG_CH4.Text = "Adj_GHG_CH4";
-            // 
-            // Adj_GHG_N20
-            // 
-            this.Adj_GHG_N20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Adj_GHG_N20.AutoSize = true;
-            this.Adj_GHG_N20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adj_GHG_N20.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Adj_GHG_N20.Location = new System.Drawing.Point(920, 307);
-            this.Adj_GHG_N20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Adj_GHG_N20.Name = "Adj_GHG_N20";
-            this.Adj_GHG_N20.Size = new System.Drawing.Size(96, 16);
-            this.Adj_GHG_N20.TabIndex = 101;
-            this.Adj_GHG_N20.Text = "Adj_GHG_N20";
-            // 
-            // Adj_GHG_CO2_Label
-            // 
-            this.Adj_GHG_CO2_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Adj_GHG_CO2_Label.AutoSize = true;
-            this.Adj_GHG_CO2_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adj_GHG_CO2_Label.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Adj_GHG_CO2_Label.Location = new System.Drawing.Point(690, 251);
-            this.Adj_GHG_CO2_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Adj_GHG_CO2_Label.Name = "Adj_GHG_CO2_Label";
-            this.Adj_GHG_CO2_Label.Size = new System.Drawing.Size(148, 16);
-            this.Adj_GHG_CO2_Label.TabIndex = 102;
-            this.Adj_GHG_CO2_Label.Text = "CO2 Adjusted For GWP";
-            // 
-            // Adj_GHG_CH4_Label
-            // 
-            this.Adj_GHG_CH4_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Adj_GHG_CH4_Label.AutoSize = true;
-            this.Adj_GHG_CH4_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Adj_GHG_CH4_Label.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Adj_GHG_CH4_Label.Location = new System.Drawing.Point(690, 280);
-            this.Adj_GHG_CH4_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Adj_GHG_CH4_Label.Name = "Adj_GHG_CH4_Label";
-            this.Adj_GHG_CH4_Label.Size = new System.Drawing.Size(148, 16);
-            this.Adj_GHG_CH4_Label.TabIndex = 103;
-            this.Adj_GHG_CH4_Label.Text = "CH4 Adjusted For GWP";
-            // 
-            // N20_Adj_Label
-            // 
-            this.N20_Adj_Label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.N20_Adj_Label.AutoSize = true;
-            this.N20_Adj_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.N20_Adj_Label.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.N20_Adj_Label.Location = new System.Drawing.Point(690, 307);
-            this.N20_Adj_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.N20_Adj_Label.Name = "N20_Adj_Label";
-            this.N20_Adj_Label.Size = new System.Drawing.Size(149, 16);
-            this.N20_Adj_Label.TabIndex = 104;
-            this.N20_Adj_Label.Text = "N2O Adjusted For GWP";
+            this.UIA_Tab.Controls.Add(this.panel_Aux_Emissions_Input);
+            this.UIA_Tab.Location = new System.Drawing.Point(4, 22);
+            this.UIA_Tab.Name = "UIA_Tab";
+            this.UIA_Tab.Size = new System.Drawing.Size(1225, 752);
+            this.UIA_Tab.TabIndex = 11;
+            this.UIA_Tab.Text = "User Inputs: Aux Engine";
+            this.UIA_Tab.UseVisualStyleBackColor = true;
             // 
             // TEAMS
             // 
@@ -5910,8 +5983,8 @@
             this.Text = "TEAMS";
             this.Shown += new System.EventHandler(this.TEAMS_Shown);
             this.engine_tabs.ResumeLayout(false);
-            this.tab_Main.ResumeLayout(false);
-            this.tab_Main.PerformLayout();
+            this.teams_tab.ResumeLayout(false);
+            this.teams_tab.PerformLayout();
             this.Panel_results_chart.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.graph_VO_vs_WTP)).EndInit();
             this.Panel_results_spread.ResumeLayout(false);
@@ -5987,12 +6060,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_VOC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_CO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Aux_Res_NOX)).EndInit();
-            this.panel_Aux_Engine_Vars.ResumeLayout(false);
-            this.panel_Aux_Engine_Vars.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Number_Engines)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engines_In_Use)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Per_Engine)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_AUX_HP)).EndInit();
             this.panel_Main_GWPs.ResumeLayout(false);
             this.panel_Main_GWPs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -6002,6 +6069,36 @@
             ((System.ComponentModel.ISupportInitialize)(this.updown_N2O_GWP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_CH4_GWP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_CO2_GWP)).EndInit();
+            this.panel_Main_Fuel_Calculations.ResumeLayout(false);
+            this.panel_Main_Fuel_Calculations.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Engine_Efficiency)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_KW_HR_Out)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_MMBTU_Out)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_GALLON)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_MMBTU_In)).EndInit();
+            this.TWP_Tab.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.GraphPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.ShipSelectionPanel.ResumeLayout(false);
+            this.ShipSelectionPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ShipYearsInService_NumUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Blackbar)).EndInit();
+            this.MEV_Tab.ResumeLayout(false);
+            this.panel_Main_Engine_Vars.ResumeLayout(false);
+            this.panel_Main_Engine_Vars.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Single_Engine_HP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Number_Of_Engines)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_HP)).EndInit();
+            this.AEV_Tab.ResumeLayout(false);
+            this.panel_Aux_Engine_Vars.ResumeLayout(false);
+            this.panel_Aux_Engine_Vars.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Number_Engines)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_Engines_In_Use)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Aux_HP_Per_Engine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_AUX_HP)).EndInit();
+            this.UIME_Tab.ResumeLayout(false);
             this.panel_main_engine_inputs.ResumeLayout(false);
             this.panel_main_engine_inputs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ult_CH4)).EndInit();
@@ -6046,11 +6143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Res_VOC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Res_CO)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Res_NOX)).EndInit();
-            this.panel_Main_Engine_Vars.ResumeLayout(false);
-            this.panel_Main_Engine_Vars.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Single_Engine_HP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Number_Of_Engines)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Tot_Onboard_HP)).EndInit();
+            this.MEC_Tab.ResumeLayout(false);
             this.panel_Main_Engine_Chars.ResumeLayout(false);
             this.panel_Main_Engine_Chars.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updown_EP_Total)).EndInit();
@@ -6079,24 +6172,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.updown_Time_Idle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Horsepower_Maneuvering)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updown_Percent_Idle)).EndInit();
-            this.panel_Main_Fuel_Calculations.ResumeLayout(false);
-            this.panel_Main_Fuel_Calculations.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_Engine_Efficiency)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_KW_HR_Out)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_MMBTU_Out)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_GALLON)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updown_MMBTU_In)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.GraphPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            this.ShipSelectionPanel.ResumeLayout(false);
-            this.ShipSelectionPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ShipYearsInService_NumUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Blackbar)).EndInit();
+            this.AEC_Tab.ResumeLayout(false);
             this.menu_strip.ResumeLayout(false);
             this.menu_strip.PerformLayout();
+            this.UIA_Tab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6200,7 +6279,7 @@
         private System.Windows.Forms.Label label_Aux_Percent_2;
         private System.Windows.Forms.Label label_Aux_Percent_1;
         private System.Windows.Forms.Label label_Aux_Percent_3;
-        private System.Windows.Forms.TabPage tab_Main;
+        private System.Windows.Forms.TabPage teams_tab;
         private System.Windows.Forms.Label label_Main_Total_Distance_And_Time;
         private System.Windows.Forms.Panel panel_Main_Trip_Distance_Time;
         private System.Windows.Forms.Label label_Main_Total_Trip_Distance;
@@ -6450,7 +6529,7 @@
         private System.Windows.Forms.Button Save_Excel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage TWP_Tab;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel GraphPanel;
         private System.Windows.Forms.Panel ShipSelectionPanel;
@@ -6474,6 +6553,12 @@
         private System.Windows.Forms.Label Adj_GHG_CO2_Label;
         private System.Windows.Forms.Label Adj_GHG_CH4_Label;
         private System.Windows.Forms.Label N20_Adj_Label;
+        private System.Windows.Forms.TabPage MEV_Tab;
+        private System.Windows.Forms.TabPage AEV_Tab;
+        private System.Windows.Forms.TabPage UIME_Tab;
+        private System.Windows.Forms.TabPage MEC_Tab;
+        private System.Windows.Forms.TabPage AEC_Tab;
+        private System.Windows.Forms.TabPage UIA_Tab;
 
 
 

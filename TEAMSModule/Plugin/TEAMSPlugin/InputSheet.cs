@@ -1606,7 +1606,7 @@ namespace TEAMS_Plugin
         private void TEAMS_Shown(object sender, EventArgs e)
         {
             initializePanelsAndLabels();
-            tab_Main.AutoScroll = true;
+            teams_tab.AutoScroll = true;
         }
 
         //All of the results stuff migrated from the old results sheet
