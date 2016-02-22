@@ -597,15 +597,6 @@ namespace TEAMS_Plugin
             //initializePanelsAndLabels();
         }
 
-        public void initializePanelsAndLabels()
-        {
-            for (int i = 0; i < allPanelLabels.Length; i++)
-            {
-                //labelClicked(allPanelLabels.ElementAt(i), allPanels.ElementAt(i));
-                labelClicked(allPanelLabels.ElementAt(i), allPanels.ElementAt(i));
-            }
-        }
-
         private void setPanelAndLabelArrays()
         {
             allPanels[0] = panel_Main_Engine_Vars;
@@ -621,20 +612,6 @@ namespace TEAMS_Plugin
             allPanels[10] = Panel_FuelSelection;
             allPanels[11] = Panel_results_spread;
             allPanels[12] = Panel_results_chart;
-
-            allPanelLabels[0] = label_Main_Engine_Vars;
-            allPanelLabels[1] = label_Aux_Engine_Vars;
-            allPanelLabels[2] = label_Main_Engine_Char_Per_Mode;
-            allPanelLabels[3] = label_Aux_Engine_Chars;
-            allPanelLabels[4] = label_Main_Engine_Inputs;
-            allPanelLabels[5] = label_Aux_Emissions_Calc_Inputs;
-            allPanelLabels[6] = label_Main_Fuel_Calculations;
-            allPanelLabels[7] = label_Aux_Fuel_Calc;
-            allPanelLabels[8] = label_Main_Total_Distance_And_Time;
-            allPanelLabels[9] = label_Main_Global_Warming_Potentials;
-            allPanelLabels[10] = Label_FuelSelection;
-            allPanelLabels[11] = Label_results_spread;
-            allPanelLabels[12] = Label_results_chart;
         }
         
         /// <summary>
@@ -1431,121 +1408,6 @@ namespace TEAMS_Plugin
             }
         }
 
-        //These are the label clicks, which handles the extension of the panels
-        #region labelClicks
-        private void labelClicked(System.Windows.Forms.Label labelClicked, System.Windows.Forms.Panel panelExtending)
-        {
-            if (panelExtending.Visible == true)
-            {
-                panelExtending.Visible = false;
-            }
-            else
-            {
-                panelExtending.Visible = true;
-            }
-
-            foreach (System.Windows.Forms.Panel p in allPanels)
-            {
-                if (p != panelExtending && p.Top > panelExtending.Top)
-                {
-                    if (panelExtending.Visible == true)
-                    {
-                        p.Top += panelExtending.Height;
-                    }
-                    else if (panelExtending.Visible == false)
-                    {
-                        p.Top -= panelExtending.Height;
-                    }
-                }
-            }
-
-            foreach (System.Windows.Forms.Label l in allPanelLabels)
-            {
-                if (l != labelClicked && l.Top > panelExtending.Top)
-                {
-                    if (panelExtending.Visible == true)
-                    {
-                        l.Top += panelExtending.Height;
-                    }
-                    else if (panelExtending.Visible == false)
-                    {
-                        l.Top -= panelExtending.Height;
-                    }
-                }
-            }
-        }
-
-        private void label_Main_Engine_Vars_Click(object sender, EventArgs e)
-        {
-            labelClicked(label_Main_Engine_Vars, panel_Main_Engine_Vars);
-        }
-
-        private void label_Main_Total_Distance_And_Time_Click(object sender, EventArgs e)
-        {
-            labelClicked(label_Main_Total_Distance_And_Time, panel_Main_Trip_Distance_Time);
-        }
-
-        private void label_Main_Engine_Char_Per_Mode_Click(object sender, EventArgs e)
-        {
-            labelClicked(label_Main_Engine_Char_Per_Mode, panel_Main_Engine_Chars);
-        }
-
-        private void label_Main_Fuel_Calculations_Click(object sender, EventArgs e)
-        {
-
-            labelClicked(label_Main_Fuel_Calculations, panel_Main_Fuel_Calculations);
-        }
-
-        private void label_Main_Global_Warming_Potentials_Click(object sender, EventArgs e)
-        {
-
-            labelClicked(label_Main_Global_Warming_Potentials, panel_Main_GWPs);
-        }
-
-        private void label_Main_Engine_Inputs_Click(object sender, EventArgs e)
-        {
-            labelClicked(label_Main_Engine_Inputs, panel_main_engine_inputs);
-        }
-
-
-        private void label_Aux_Engine_Vars_Click(object sender, EventArgs e)
-        {
-            labelClicked(label_Aux_Engine_Vars, panel_Aux_Engine_Vars);
-        }
-
-        private void label_Aux_Engine_Chars_Click(object sender, EventArgs e)
-        {
-            labelClicked(label_Aux_Engine_Chars, panel_Aux_Engine_Chars);
-        }
-
-        private void label_Aux_Fuel_Calc_Click(object sender, EventArgs e)
-        {
-            labelClicked(label_Aux_Fuel_Calc, panel_Aux_Fuel_Calc);
-        }
-
-        private void label_Aux_Emissions_Calc_Inputs_Click(object sender, EventArgs e)
-        {
-            labelClicked(label_Aux_Emissions_Calc_Inputs, panel_Aux_Emissions_Input);
-        }
-
-        private void Label_FuelSelection_Click(object sender, EventArgs e)
-        {
-            labelClicked(Label_FuelSelection, Panel_FuelSelection);
-
-        }
-        private void Label_results_spread_Click(object sender, EventArgs e)
-        {
-            labelClicked(Label_results_spread, Panel_results_spread);
-        }
-
-        private void Label_results_chart_Click(object sender, EventArgs e)
-        {
-            labelClicked(Label_results_chart, Panel_results_chart);
-        }
-
-
-        #endregion
-
         #region Results Constants
 
         // Grams per 1 Kilogram
@@ -1605,8 +1467,6 @@ namespace TEAMS_Plugin
 
         private void TEAMS_Shown(object sender, EventArgs e)
         {
-            initializePanelsAndLabels();
-            teams_tab.AutoScroll = true;
         }
 
         //All of the results stuff migrated from the old results sheet
@@ -2383,6 +2243,12 @@ namespace TEAMS_Plugin
         {
             tViewSelect();
             tViewSelect2();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Here is where we need to establish some kind of loader for a previously saved set of inputs for TEAMS
+            //First things first is that we're gonna need a file open dialog
         }
     }
 }
