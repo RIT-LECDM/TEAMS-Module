@@ -2076,6 +2076,12 @@ namespace TEAMS_Plugin
 
         private void exportToExcel()
         {
+   // Displays a SaveFileDialog so the user can save the Image
+   // assigned to Button2.
+   SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+   saveFileDialog1.Filter = "Spreadsheet|*.xls";
+   saveFileDialog1.Title = "Save Simulation Results";
+   saveFileDialog1.ShowDialog();
 
             string filePath = Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Greet/Plugins/GreetExport.xls";
             Workbook wb = new Workbook();
@@ -2187,7 +2193,7 @@ namespace TEAMS_Plugin
             ws.Cells[21, 1] = new Cell("Auxiliary Engine Fuel Type:");
             ws.Cells[21, 2] = new Cell(auxFuelUsed);
             wb.Worksheets.Add(ws);
-            wb.Save(filePath);
+            wb.Save(saveFileDialog1.FileName);
         }
 
         #endregion
