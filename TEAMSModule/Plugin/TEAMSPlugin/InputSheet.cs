@@ -1099,6 +1099,182 @@ namespace TEAMS_Plugin
         }
         #endregion
 
+        #region Save Current Inputs
+        private void saveCurrentInputs()
+        {
+            #region Main Engine Variables
+
+            SaveFileDialog saveFileDialog2 = new SaveFileDialog();
+            saveFileDialog2.Filter = "TEAMS|*.TEAMS";
+            saveFileDialog2.Title = "Save Simulation Inputs";
+            saveFileDialog2.ShowDialog();
+            string filename = saveFileDialog2.FileName;
+            BinaryWriter writ = new BinaryWriter(File.Open(filename, FileMode.Create));
+            Recalculate();
+            // Main Engine Variables
+            writ.Write(VesselTypeID);
+            writ.Write(NumberOfEngines);
+            writ.Close();
+            //NumberOfEngines;
+            //NumberOfEngines;
+            //SingleEngineHP;
+
+            //// Trip Distance and Time
+            //TotalTripDistanceInMiles;
+            //TripTimeHours;
+            //TripTimeMinutes;
+
+            //// Engine Charicterization Per Mode
+            //// POT  -   Percent Of Trip, Time in mode is measured in hours
+            //// HPLF -   Horse Power Load Factor (Single engine)
+            //// HPPE -   Horse Power Per Engine
+            //// EP   -   Energy Production in KWH for all engines
+            //POTIdle;
+            //POTManeuvering;
+            //POTPrecautionary;
+            //POTSlowCruise;
+            //POTFullCruise;
+            //HPLFIdle;
+            //HPLFManeuvering;
+            //HPLFPrecautionary;
+            //HPLFSlowCruise;
+            //HPLFFullCruise;
+
+            //// Calculation of all Fuels
+            //EngineEfficiency;
+
+            //Res_NOX_gphphr_out;
+            //Res_CO_gphphr_out;
+            //Res_VOC_gphphr_out;
+            //Res_PM10_gphphr_out;
+            //Res_PM25_gphphr_out;    // Left as same as PM10 for now, per Jamie's request
+            //Res_N2O_gphphr_out;
+            //Res_CH4_gphphr_out;
+
+            //Die_NOX_gphphr_out;
+            //Die_CO_gphphr_out;
+            //Die_VOC_gphphr_out;
+            //Die_PM10_gphphr_out;
+            //Die_PM25_gphphr_out;
+            //Die_N2O_gphphr_out;
+            //Die_CH4_gphphr_out;
+
+            //Nat_NOX_gphphr_out;
+            //Nat_CO_gphphr_out;
+            //Nat_VOC_gphphr_out;
+            //Nat_PM10_gphphr_out;
+            //Nat_PM25_gphphr_out;
+            //Nat_N2O_gphphr_out;
+            //Nat_CH4_gphphr_out;
+
+            //Fis_NOX_gphphr_out;
+            //Fis_CO_gphphr_out;
+            //Fis_VOC_gphphr_out;
+            //Fis_PM10_gphphr_out;
+            //Fis_PM25_gphphr_out;
+            //Fis_N2O_gphphr_out;
+            //Fis_CH4_gphphr_out;
+
+            //Bio_NOX_gphphr_out;
+            //Bio_CO_gphphr_out;
+            //Bio_VOC_gphphr_out;
+            //Bio_PM10_gphphr_out;
+            //Bio_PM25_gphphr_out;
+            //Bio_N2O_gphphr_out;
+            //Bio_CH4_gphphr_out;
+
+            //Ult_NOX_gphphr_out;
+            //Ult_CO_gphphr_out;
+            //Ult_VOC_gphphr_out;
+            //Ult_PM10_gphphr_out;
+            //Ult_PM25_gphphr_out;
+            //Ult_N2O_gphphr_out;
+            //Ult_CH4_gphphr_out;
+
+            //// Global Warming Potential
+            //CO2_GWP;
+            //CH4_GWP;
+            //N2O_GWP;
+            //VOC_GWP;
+            //CO_GWP;
+            //NO2_GWP;
+            //#endregion
+
+            //#region Auxiliary Engine Variables
+
+            //// Auxiliary Engine Variables
+            //NumberOfOnBoardAuxiliaryEngines;
+            //NumberOfAuxiliaryEnginesInUse;
+            //AuxiliaryEnginesRatedHPperEngine;
+
+            //// Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
+            //PercentOfTripAuxiliaryIsActive;
+            //HPLoadFactorSingleEngine;
+
+            //// Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
+            //AuxiliaryEngineEfficiency;
+
+            //Aux_Res_NOX_gphphr_out;
+            //Aux_Res_CO_gphphr_out;
+            //Aux_Res_VOC_gphphr_out;
+            //Aux_Res_PM10_gphphr_out;
+            //Aux_Res_PM25_gphphr_out;
+            //Aux_Res_N2O_gphphr_out;
+            //Aux_Res_CH4_gphphr_out;
+
+            //Aux_Die_NOX_gphphr_out;
+            //Aux_Die_CO_gphphr_out;
+            //Aux_Die_VOC_gphphr_out;
+            //Aux_Die_PM10_gphphr_out;
+            //Aux_Die_PM25_gphphr_out;
+            //Aux_Die_N2O_gphphr_out;
+            //Aux_Die_CH4_gphphr_out;
+
+            //Aux_Nat_NOX_gphphr_out;
+            //Aux_Nat_CO_gphphr_out;
+            //Aux_Nat_VOC_gphphr_out;
+            //Aux_Nat_PM10_gphphr_out;
+            //Aux_Nat_PM25_gphphr_out;
+            //Aux_Nat_N2O_gphphr_out;
+            //Aux_Nat_CH4_gphphr_out;
+
+            //Aux_Fis_NOX_gphphr_out;
+            //Aux_Fis_CO_gphphr_out;
+            //Aux_Fis_VOC_gphphr_out;
+            //Aux_Fis_PM10_gphphr_out;
+            //Aux_Fis_PM25_gphphr_out;
+            //Aux_Fis_N2O_gphphr_out;
+            //Aux_Fis_CH4_gphphr_out;
+
+            //Aux_Bio_NOX_gphphr_out;
+            //Aux_Bio_CO_gphphr_out;
+            //Aux_Bio_VOC_gphphr_out;
+            //Aux_Bio_PM10_gphphr_out;
+            //Aux_Bio_PM25_gphphr_out;
+            //Aux_Bio_N2O_gphphr_out;
+            //Aux_Bio_CH4_gphphr_out;
+
+            //Aux_Ult_NOX_gphphr_out;
+            //Aux_Ult_CO_gphphr_out;
+            //Aux_Ult_VOC_gphphr_out;
+            //Aux_Ult_PM10_gphphr_out;
+            //Aux_Ult_PM25_gphphr_out;
+            //Aux_Ult_N2O_gphphr_out;
+            //Aux_Ult_CH4_gphphr_out;
+
+            #endregion
+        }
+        #endregion
+        #region Open New File
+        private void openNewFile()
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "TEAMS|*.TEAMS";
+            ofd.Title = "Open Existing Simulation";
+            ofd.ShowDialog();
+            string filename = ofd.FileName;
+        }
+#endregion
         // Runs the simulation, and opens up the new results windows
         private void run_menu_Click(object sender, EventArgs e)
         {
@@ -1968,6 +2144,12 @@ namespace TEAMS_Plugin
             label_Main_Fuel_Type.Text = MainfuelUsed;
             label_Aux_Fuel_Type.Text = auxFuelUsed;
 
+            if ((label_Main_Fuel_Type.Text != "None Selected") && (label_Aux_Fuel_Type.Text != "None Selected"))
+            {
+                Save_Excel.Enabled = true;
+                IncludeAux.Enabled = true;
+            }
+
             // Calculating greenhouse gas using Global Warming Potential
             Total_GHG_WTP = (CO2_WTP * CO2_GWP) + (CH4_WTP * CH4_GWP) + (N2O_WTP * N2O_GWP) + (VOC_WTP * VOC_GWP) + (CO_WTP * CO_GWP) + (NOx_WTP * NO2_GWP);
             Total_GHG_VO = (CO2_VO * CO2_GWP) + (CH4_VO * CH4_GWP) + (N2O_VO * N2O_GWP) + (VOC_VO * VOC_GWP) + (CO_VO * CO_GWP) + (NOx_VO * NO2_GWP);
@@ -2076,14 +2258,11 @@ namespace TEAMS_Plugin
 
         private void exportToExcel()
         {
-   // Displays a SaveFileDialog so the user can save the Image
-   // assigned to Button2.
-   SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-   saveFileDialog1.Filter = "Spreadsheet|*.xls";
-   saveFileDialog1.Title = "Save Simulation Results";
-   saveFileDialog1.ShowDialog();
-
-            string filePath = Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "/Greet/Plugins/GreetExport.xls";
+           SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+           saveFileDialog1.Filter = "Spreadsheet|*.xls";
+           saveFileDialog1.Title = "Save Simulation Results";
+           saveFileDialog1.ShowDialog();
+     
             Workbook wb = new Workbook();
             Worksheet ws = new Worksheet("First Sheet");
 
@@ -2193,7 +2372,10 @@ namespace TEAMS_Plugin
             ws.Cells[21, 1] = new Cell("Auxiliary Engine Fuel Type:");
             ws.Cells[21, 2] = new Cell(auxFuelUsed);
             wb.Worksheets.Add(ws);
-            wb.Save(saveFileDialog1.FileName);
+            if(saveFileDialog1.FileName != "")
+            {
+                wb.Save(saveFileDialog1.FileName);
+            }
         }
 
         #endregion
@@ -2229,20 +2411,20 @@ namespace TEAMS_Plugin
             {
                 shipCaseNames2[i] = shipCaseNames[i];
             }
-            TopShipSelector.DataSource = shipCaseNames;
-            BottomShipSel.DataSource = shipCaseNames2;
+            //TopShipSelector.DataSource = shipCaseNames;
+            //BottomShipSel.DataSource = shipCaseNames2;
         }
         //This is where we will do the calculating and changing of outputs after you hit the calculate button
         private void TWP_CalculateButton_Click(object sender, EventArgs e)
         {
             //Set number of years ship is in service
-            int numYearsShipInService = (int)ShipYearsInService_NumUpDown.Value;
+            //int numYearsShipInService = (int)ShipYearsInService_NumUpDown.Value;
 
-            //Do whatever we need to pull numbers
+            ////Do whatever we need to pull numbers
 
-            //Set the labels how we want them for now it's 100 years, and whatever the top selected ship is
-            NumberOfYearsTilCrossLabel.Text = shipCO2Values.ElementAt(TopShipSelector.SelectedIndex).ToString();
-            NameOfSuperiorShipLabel.Text = TopShipSelector.SelectedItem.ToString();
+            ////Set the labels how we want them for now it's 100 years, and whatever the top selected ship is
+            //NumberOfYearsTilCrossLabel.Text = shipCO2Values.ElementAt(TopShipSelector.SelectedIndex).ToString();
+            //NameOfSuperiorShipLabel.Text = TopShipSelector.SelectedItem.ToString();
         }
 
         private void IncludeAux_CheckedChanged(object sender, EventArgs e)
@@ -2255,6 +2437,13 @@ namespace TEAMS_Plugin
         {
             //Here is where we need to establish some kind of loader for a previously saved set of inputs for TEAMS
             //First things first is that we're gonna need a file open dialog
+            openNewFile();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Here is where we are gonna have the saving of the current inputs
+            saveCurrentInputs();
         }
     }
 }
