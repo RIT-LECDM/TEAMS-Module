@@ -2673,11 +2673,6 @@
             0,
             0,
             0});
-            this.updown_Aux_Engine_Efficiency.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
             this.updown_Aux_Engine_Efficiency.Name = "updown_Aux_Engine_Efficiency";
             this.updown_Aux_Engine_Efficiency.Size = new System.Drawing.Size(179, 21);
             this.updown_Aux_Engine_Efficiency.TabIndex = 193;

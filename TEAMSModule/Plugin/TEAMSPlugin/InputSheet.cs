@@ -1111,158 +1111,144 @@ namespace TEAMS_Plugin
             string filename = saveFileDialog2.FileName;
             BinaryWriter writ = new BinaryWriter(File.Open(filename, FileMode.Create));
             Recalculate();
-            // Main Engine Variables
+            //Engine Variables
             writ.Write(VesselTypeID);
-            writ.Write(NumberOfEngines);
-            writ.Close();
-            //NumberOfEngines;
-            //NumberOfEngines;
-            //SingleEngineHP;
-
-            //// Trip Distance and Time
-            //TotalTripDistanceInMiles;
-            //TripTimeHours;
-            //TripTimeMinutes;
-
-            //// Engine Charicterization Per Mode
-            //// POT  -   Percent Of Trip, Time in mode is measured in hours
-            //// HPLF -   Horse Power Load Factor (Single engine)
-            //// HPPE -   Horse Power Per Engine
-            //// EP   -   Energy Production in KWH for all engines
-            //POTIdle;
-            //POTManeuvering;
-            //POTPrecautionary;
-            //POTSlowCruise;
-            //POTFullCruise;
-            //HPLFIdle;
-            //HPLFManeuvering;
-            //HPLFPrecautionary;
-            //HPLFSlowCruise;
-            //HPLFFullCruise;
-
-            //// Calculation of all Fuels
-            //EngineEfficiency;
-
-            //Res_NOX_gphphr_out;
-            //Res_CO_gphphr_out;
-            //Res_VOC_gphphr_out;
-            //Res_PM10_gphphr_out;
-            //Res_PM25_gphphr_out;    // Left as same as PM10 for now, per Jamie's request
-            //Res_N2O_gphphr_out;
-            //Res_CH4_gphphr_out;
-
-            //Die_NOX_gphphr_out;
-            //Die_CO_gphphr_out;
-            //Die_VOC_gphphr_out;
-            //Die_PM10_gphphr_out;
-            //Die_PM25_gphphr_out;
-            //Die_N2O_gphphr_out;
-            //Die_CH4_gphphr_out;
-
-            //Nat_NOX_gphphr_out;
-            //Nat_CO_gphphr_out;
-            //Nat_VOC_gphphr_out;
-            //Nat_PM10_gphphr_out;
-            //Nat_PM25_gphphr_out;
-            //Nat_N2O_gphphr_out;
-            //Nat_CH4_gphphr_out;
-
-            //Fis_NOX_gphphr_out;
-            //Fis_CO_gphphr_out;
-            //Fis_VOC_gphphr_out;
-            //Fis_PM10_gphphr_out;
-            //Fis_PM25_gphphr_out;
-            //Fis_N2O_gphphr_out;
-            //Fis_CH4_gphphr_out;
-
-            //Bio_NOX_gphphr_out;
-            //Bio_CO_gphphr_out;
-            //Bio_VOC_gphphr_out;
-            //Bio_PM10_gphphr_out;
-            //Bio_PM25_gphphr_out;
-            //Bio_N2O_gphphr_out;
-            //Bio_CH4_gphphr_out;
-
-            //Ult_NOX_gphphr_out;
-            //Ult_CO_gphphr_out;
-            //Ult_VOC_gphphr_out;
-            //Ult_PM10_gphphr_out;
-            //Ult_PM25_gphphr_out;
-            //Ult_N2O_gphphr_out;
-            //Ult_CH4_gphphr_out;
-
-            //// Global Warming Potential
-            //CO2_GWP;
-            //CH4_GWP;
-            //N2O_GWP;
-            //VOC_GWP;
-            //CO_GWP;
-            //NO2_GWP;
-            //#endregion
-
-            //#region Auxiliary Engine Variables
+            writ.Write((int)NumberOfEngines);
+            writ.Write(SingleEngineHP);
 
             //// Auxiliary Engine Variables
-            //NumberOfOnBoardAuxiliaryEngines;
-            //NumberOfAuxiliaryEnginesInUse;
-            //AuxiliaryEnginesRatedHPperEngine;
+            writ.Write(NumberOfOnBoardAuxiliaryEngines);
+            writ.Write(NumberOfAuxiliaryEnginesInUse);
+            writ.Write(AuxiliaryEnginesRatedHPperEngine);
 
-            //// Auxiliary Engine Characterization (Conventional Diesel as Baseline Fuel)
-            //PercentOfTripAuxiliaryIsActive;
-            //HPLoadFactorSingleEngine;
+            writ.Write(TotalTripDistanceInMiles);
+            writ.Write(TripTimeHours);
+            writ.Write(TripTimeMinutes);
 
-            //// Calculation of Auxiliary Engine Fuel use Using Conventional Diesel as Baseline Fuel
-            //AuxiliaryEngineEfficiency;
+            writ.Write(POTIdle);
+            writ.Write(POTManeuvering);
+            writ.Write(POTPrecautionary);
+            writ.Write(POTSlowCruise);
+            writ.Write(POTFullCruise);
+            writ.Write(HPLFIdle);
+            writ.Write(HPLFManeuvering);
+            writ.Write(HPLFPrecautionary);
+            writ.Write(HPLFSlowCruise);
+            writ.Write(HPLFFullCruise);
 
-            //Aux_Res_NOX_gphphr_out;
-            //Aux_Res_CO_gphphr_out;
-            //Aux_Res_VOC_gphphr_out;
-            //Aux_Res_PM10_gphphr_out;
-            //Aux_Res_PM25_gphphr_out;
-            //Aux_Res_N2O_gphphr_out;
-            //Aux_Res_CH4_gphphr_out;
+            writ.Write(EngineEfficiency);
 
-            //Aux_Die_NOX_gphphr_out;
-            //Aux_Die_CO_gphphr_out;
-            //Aux_Die_VOC_gphphr_out;
-            //Aux_Die_PM10_gphphr_out;
-            //Aux_Die_PM25_gphphr_out;
-            //Aux_Die_N2O_gphphr_out;
-            //Aux_Die_CH4_gphphr_out;
+            writ.Write(Res_NOX_gphphr_out);
+            writ.Write(Res_CO_gphphr_out);
+            writ.Write(Res_VOC_gphphr_out);
+            writ.Write(Res_PM10_gphphr_out);
+            writ.Write(Res_PM25_gphphr_out);
+            writ.Write(Res_N2O_gphphr_out);
+            writ.Write(Res_CH4_gphphr_out);
 
-            //Aux_Nat_NOX_gphphr_out;
-            //Aux_Nat_CO_gphphr_out;
-            //Aux_Nat_VOC_gphphr_out;
-            //Aux_Nat_PM10_gphphr_out;
-            //Aux_Nat_PM25_gphphr_out;
-            //Aux_Nat_N2O_gphphr_out;
-            //Aux_Nat_CH4_gphphr_out;
+            writ.Write(Die_NOX_gphphr_out);
+            writ.Write(Die_CO_gphphr_out);
+            writ.Write(Die_VOC_gphphr_out);
+            writ.Write(Die_PM10_gphphr_out);
+            writ.Write(Die_PM25_gphphr_out);
+            writ.Write(Die_N2O_gphphr_out);
+            writ.Write(Die_CH4_gphphr_out);
 
-            //Aux_Fis_NOX_gphphr_out;
-            //Aux_Fis_CO_gphphr_out;
-            //Aux_Fis_VOC_gphphr_out;
-            //Aux_Fis_PM10_gphphr_out;
-            //Aux_Fis_PM25_gphphr_out;
-            //Aux_Fis_N2O_gphphr_out;
-            //Aux_Fis_CH4_gphphr_out;
+            writ.Write(Nat_NOX_gphphr_out);
+            writ.Write(Nat_CO_gphphr_out);
+            writ.Write(Nat_VOC_gphphr_out);
+            writ.Write(Nat_PM10_gphphr_out);
+            writ.Write(Nat_PM25_gphphr_out);
+            writ.Write(Nat_N2O_gphphr_out);
+            writ.Write(Nat_CH4_gphphr_out);
 
-            //Aux_Bio_NOX_gphphr_out;
-            //Aux_Bio_CO_gphphr_out;
-            //Aux_Bio_VOC_gphphr_out;
-            //Aux_Bio_PM10_gphphr_out;
-            //Aux_Bio_PM25_gphphr_out;
-            //Aux_Bio_N2O_gphphr_out;
-            //Aux_Bio_CH4_gphphr_out;
+            writ.Write(Fis_NOX_gphphr_out);
+            writ.Write(Fis_CO_gphphr_out);
+            writ.Write(Fis_VOC_gphphr_out);
+            writ.Write(Fis_PM10_gphphr_out);
+            writ.Write(Fis_PM25_gphphr_out);
+            writ.Write(Fis_N2O_gphphr_out);
+            writ.Write(Fis_CH4_gphphr_out);
 
-            //Aux_Ult_NOX_gphphr_out;
-            //Aux_Ult_CO_gphphr_out;
-            //Aux_Ult_VOC_gphphr_out;
-            //Aux_Ult_PM10_gphphr_out;
-            //Aux_Ult_PM25_gphphr_out;
-            //Aux_Ult_N2O_gphphr_out;
-            //Aux_Ult_CH4_gphphr_out;
+            writ.Write(Bio_NOX_gphphr_out);
+            writ.Write(Bio_CO_gphphr_out);
+            writ.Write(Bio_VOC_gphphr_out);
+            writ.Write(Bio_PM10_gphphr_out);
+            writ.Write(Bio_PM25_gphphr_out);
+            writ.Write(Bio_N2O_gphphr_out);
+            writ.Write(Bio_CH4_gphphr_out);
+
+            writ.Write(Ult_NOX_gphphr_out);
+            writ.Write(Ult_CO_gphphr_out);
+            writ.Write(Ult_VOC_gphphr_out);
+            writ.Write(Ult_PM10_gphphr_out);
+            writ.Write(Ult_PM25_gphphr_out);
+            writ.Write(Ult_N2O_gphphr_out);
+            writ.Write(Ult_CH4_gphphr_out);
+
+            writ.Write(CO2_GWP);
+            writ.Write(CH4_GWP);
+            writ.Write(N2O_GWP);
+            writ.Write(VOC_GWP);
+            writ.Write(CO_GWP);
+            writ.Write(NO2_GWP);
+
+            writ.Write(PercentOfTripAuxiliaryIsActive);
+            writ.Write(HPLoadFactorSingleEngine);
+
+            writ.Write(AuxiliaryEngineEfficiency);
+
+            writ.Write(Aux_Res_NOX_gphphr_out);
+            writ.Write(Aux_Res_CO_gphphr_out);
+            writ.Write(Aux_Res_VOC_gphphr_out);
+            writ.Write(Aux_Res_PM10_gphphr_out);
+            writ.Write(Aux_Res_PM25_gphphr_out);
+            writ.Write(Aux_Res_N2O_gphphr_out);
+            writ.Write(Aux_Res_CH4_gphphr_out);
+
+            writ.Write(Aux_Die_NOX_gphphr_out);
+            writ.Write(Aux_Die_CO_gphphr_out);
+            writ.Write(Aux_Die_VOC_gphphr_out);
+            writ.Write(Aux_Die_PM10_gphphr_out);
+            writ.Write(Aux_Die_PM25_gphphr_out);
+            writ.Write(Aux_Die_N2O_gphphr_out);
+            writ.Write(Aux_Die_CH4_gphphr_out);
+
+            writ.Write(Aux_Nat_NOX_gphphr_out);
+            writ.Write(Aux_Nat_CO_gphphr_out);
+            writ.Write(Aux_Nat_VOC_gphphr_out);
+            writ.Write(Aux_Nat_PM10_gphphr_out);
+            writ.Write(Aux_Nat_PM25_gphphr_out);
+            writ.Write(Aux_Nat_N2O_gphphr_out);
+            writ.Write(Aux_Nat_CH4_gphphr_out);
+
+            writ.Write(Aux_Fis_NOX_gphphr_out);
+            writ.Write(Aux_Fis_CO_gphphr_out);
+            writ.Write(Aux_Fis_VOC_gphphr_out);
+            writ.Write(Aux_Fis_PM10_gphphr_out);
+            writ.Write(Aux_Fis_PM25_gphphr_out);
+            writ.Write(Aux_Fis_N2O_gphphr_out);
+            writ.Write(Aux_Fis_CH4_gphphr_out);
+
+            writ.Write(Aux_Bio_NOX_gphphr_out);
+            writ.Write(Aux_Bio_CO_gphphr_out);
+            writ.Write(Aux_Bio_VOC_gphphr_out);
+            writ.Write(Aux_Bio_PM10_gphphr_out);
+            writ.Write(Aux_Bio_PM25_gphphr_out);
+            writ.Write(Aux_Bio_N2O_gphphr_out);
+            writ.Write(Aux_Bio_CH4_gphphr_out);
+
+            writ.Write(Aux_Ult_NOX_gphphr_out);
+            writ.Write(Aux_Ult_CO_gphphr_out);
+            writ.Write(Aux_Ult_VOC_gphphr_out);
+            writ.Write(Aux_Ult_PM10_gphphr_out);
+            writ.Write(Aux_Ult_PM25_gphphr_out);
+            writ.Write(Aux_Ult_N2O_gphphr_out);
+            writ.Write(Aux_Ult_CH4_gphphr_out);
 
             #endregion
+            writ.Close();
+
         }
         #endregion
         #region Open New File
@@ -1273,8 +1259,145 @@ namespace TEAMS_Plugin
             ofd.Title = "Open Existing Simulation";
             ofd.ShowDialog();
             string filename = ofd.FileName;
+            BinaryReader read = new BinaryReader(File.Open(filename, FileMode.Open));
+
+            //Engine Variables
+            VesselTypeID = read.ReadString();
+            NumberOfEngines = read.ReadInt32();
+            SingleEngineHP = read.ReadInt32();
+            NumberOfOnBoardAuxiliaryEngines = read.ReadInt32();
+            NumberOfAuxiliaryEnginesInUse = read.ReadInt32();
+            AuxiliaryEnginesRatedHPperEngine = read.ReadInt32();
+
+            TotalTripDistanceInMiles = read.ReadDouble();
+            TripTimeHours = read.ReadDouble();
+            TripTimeMinutes = read.ReadDouble();
+
+            POTIdle = read.ReadDouble();
+            POTManeuvering = read.ReadDouble();
+            POTPrecautionary = read.ReadDouble();
+            POTSlowCruise = read.ReadDouble();
+            POTFullCruise = read.ReadDouble();
+            HPLFIdle = read.ReadDouble();
+            HPLFManeuvering = read.ReadDouble();
+            HPLFPrecautionary = read.ReadDouble();
+            HPLFSlowCruise = read.ReadDouble();
+            HPLFFullCruise = read.ReadDouble();
+
+            EngineEfficiency = read.ReadDouble();
+
+            Res_NOX_gphphr_out = read.ReadDouble();
+            Res_CO_gphphr_out = read.ReadDouble();
+            Res_VOC_gphphr_out = read.ReadDouble();
+            Res_PM10_gphphr_out = read.ReadDouble();
+            Res_PM25_gphphr_out = read.ReadDouble();
+            Res_N2O_gphphr_out = read.ReadDouble();
+            Res_CH4_gphphr_out = read.ReadDouble();
+
+            Die_NOX_gphphr_out = read.ReadDouble();
+            Die_CO_gphphr_out = read.ReadDouble();
+            Die_VOC_gphphr_out = read.ReadDouble();
+            Die_PM10_gphphr_out = read.ReadDouble();
+            Die_PM25_gphphr_out = read.ReadDouble();
+            Die_N2O_gphphr_out = read.ReadDouble();
+            Die_CH4_gphphr_out = read.ReadDouble();
+
+            Nat_NOX_gphphr_out = read.ReadDouble();
+            Nat_CO_gphphr_out = read.ReadDouble();
+            Nat_VOC_gphphr_out = read.ReadDouble();
+            Nat_PM10_gphphr_out = read.ReadDouble();
+            Nat_PM25_gphphr_out = read.ReadDouble();
+            Nat_N2O_gphphr_out = read.ReadDouble();
+            Nat_CH4_gphphr_out = read.ReadDouble();
+
+            Fis_NOX_gphphr_out = read.ReadDouble();
+            Fis_CO_gphphr_out = read.ReadDouble();
+            Fis_VOC_gphphr_out = read.ReadDouble();
+            Fis_PM10_gphphr_out = read.ReadDouble();
+            Fis_PM25_gphphr_out = read.ReadDouble();
+            Fis_N2O_gphphr_out = read.ReadDouble();
+            Fis_CH4_gphphr_out = read.ReadDouble();
+
+            Bio_NOX_gphphr_out = read.ReadDouble();
+            Bio_CO_gphphr_out = read.ReadDouble();
+            Bio_VOC_gphphr_out = read.ReadDouble();
+            Bio_PM10_gphphr_out = read.ReadDouble();
+            Bio_PM25_gphphr_out = read.ReadDouble();
+            Bio_N2O_gphphr_out = read.ReadDouble();
+            Bio_CH4_gphphr_out = read.ReadDouble();
+
+            Ult_NOX_gphphr_out = read.ReadDouble();
+            Ult_CO_gphphr_out = read.ReadDouble();
+            Ult_VOC_gphphr_out = read.ReadDouble();
+            Ult_PM10_gphphr_out = read.ReadDouble();
+            Ult_PM25_gphphr_out = read.ReadDouble();
+            Ult_N2O_gphphr_out = read.ReadDouble();
+            Ult_CH4_gphphr_out = read.ReadDouble();
+
+            CO2_GWP = read.ReadDouble();
+            CH4_GWP = read.ReadDouble();
+            N2O_GWP = read.ReadDouble();
+            VOC_GWP = read.ReadDouble();
+            CO_GWP = read.ReadDouble();
+            NO2_GWP = read.ReadDouble();
+            #endregion
+
+            PercentOfTripAuxiliaryIsActive = read.ReadDouble();
+            HPLoadFactorSingleEngine = read.ReadDouble();
+
+            AuxiliaryEngineEfficiency = read.ReadDouble();
+
+            Aux_Res_NOX_gphphr_out = read.ReadDouble();
+            Aux_Res_CO_gphphr_out = read.ReadDouble();
+            Aux_Res_VOC_gphphr_out = read.ReadDouble();
+            Aux_Res_PM10_gphphr_out = read.ReadDouble();
+            Aux_Res_PM25_gphphr_out = read.ReadDouble();
+            Aux_Res_N2O_gphphr_out = read.ReadDouble();
+            Aux_Res_CH4_gphphr_out = read.ReadDouble();
+
+            Aux_Die_NOX_gphphr_out = read.ReadDouble();
+            Aux_Die_CO_gphphr_out = read.ReadDouble();
+            Aux_Die_VOC_gphphr_out = read.ReadDouble();
+            Aux_Die_PM10_gphphr_out = read.ReadDouble();
+            Aux_Die_PM25_gphphr_out = read.ReadDouble();
+            Aux_Die_N2O_gphphr_out = read.ReadDouble();
+            Aux_Die_CH4_gphphr_out = read.ReadDouble();
+
+            Aux_Nat_NOX_gphphr_out = read.ReadDouble();
+            Aux_Nat_CO_gphphr_out = read.ReadDouble();
+            Aux_Nat_VOC_gphphr_out = read.ReadDouble();
+            Aux_Nat_PM10_gphphr_out = read.ReadDouble();
+            Aux_Nat_PM25_gphphr_out = read.ReadDouble();
+            Aux_Nat_N2O_gphphr_out = read.ReadDouble();
+            Aux_Nat_CH4_gphphr_out = read.ReadDouble();
+
+            Aux_Fis_NOX_gphphr_out = read.ReadDouble();
+            Aux_Fis_CO_gphphr_out = read.ReadDouble();
+            Aux_Fis_VOC_gphphr_out = read.ReadDouble();
+            Aux_Fis_PM10_gphphr_out = read.ReadDouble();
+            Aux_Fis_PM25_gphphr_out = read.ReadDouble();
+            Aux_Fis_N2O_gphphr_out = read.ReadDouble();
+            Aux_Fis_CH4_gphphr_out = read.ReadDouble();
+
+            Aux_Bio_NOX_gphphr_out = read.ReadDouble();
+            Aux_Bio_CO_gphphr_out = read.ReadDouble();
+            Aux_Bio_VOC_gphphr_out = read.ReadDouble();
+            Aux_Bio_PM10_gphphr_out = read.ReadDouble();
+            Aux_Bio_PM25_gphphr_out = read.ReadDouble();
+            Aux_Bio_N2O_gphphr_out = read.ReadDouble();
+            Aux_Bio_CH4_gphphr_out = read.ReadDouble();
+
+            Aux_Ult_NOX_gphphr_out = read.ReadDouble();
+            Aux_Ult_CO_gphphr_out = read.ReadDouble();
+            Aux_Ult_VOC_gphphr_out = read.ReadDouble();
+            Aux_Ult_PM10_gphphr_out = read.ReadDouble();
+            Aux_Ult_PM25_gphphr_out = read.ReadDouble();
+            Aux_Ult_N2O_gphphr_out = read.ReadDouble();
+            Aux_Ult_CH4_gphphr_out = read.ReadDouble();
+            read.Close();
+            changeResults();
+            Recalculate();
         }
-#endregion
         // Runs the simulation, and opens up the new results windows
         private void run_menu_Click(object sender, EventArgs e)
         {
